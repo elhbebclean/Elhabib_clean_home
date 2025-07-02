@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>شركة الحبيب لتنظيف المنازل | خصم 15% لأول مرة</title>
-  <meta name="description" content="نحن شركة الحبيب كلين نقدم خدمات تنظيف منازل احترافية في القاهرة والمعادي وأكتوبر. خصومات حصرية لأول مرة وعروض شهرية. اتصل الآن!">
-  <meta name="keywords" content="تنظيف منازل, تنظيف شقق, شركة تنظيف في القاهرة, الحبيب كلين, تنظيف احترافي, تنظيف بعد التشطيب, تنظيف المعادي">
-  <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta
+    name="description"
+    content="نحن شركة الحبيب كلين نقدم خدمات تنظيف منازل احترافية في القاهرة والمعادي وأكتوبر. خصومات حصرية لأول مرة وعروض شهرية. اتصل الآن!"
+  />
+  <meta
+    name="keywords"
+    content="تنظيف منازل, تنظيف شقق, شركة تنظيف في القاهرة, الحبيب كلين, تنظيف احترافي, تنظيف بعد التشطيب, تنظيف المعادي"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
     body {
@@ -38,6 +44,10 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      opacity: 0.9;
     }
     .btn-call {
       background: #28a745;
@@ -56,11 +66,66 @@
       max-width: 600px;
       height: 300px;
       border: 0;
+      border-radius: 8px;
+    }
+    .description-section {
+      margin-top: 40px;
+      text-align: right;
+      padding: 0 20px;
+      direction: rtl;
+    }
+    .description-section h2 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    .description-section p {
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .social-icons {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .social-icons a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .social-icons img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      object-fit: contain;
+      background-color: white;
+    }
+    .social-icons span {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .btn {
+        width: 80%;
+        padding: 15px 0;
+        font-size: 18px;
+      }
+      .description-section {
+        padding: 0 10px;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>شركة الحبيب لخدمات التنظيف</h1>
     <p>خدمة تنظيف منازل، مكاتب، شقق مفروشة، بعد التشطيب والمزيد.</p>
@@ -70,24 +135,120 @@
     <h2>🎯 خصم 15% لأول مرة و50% للعملاء المنتظمين</h2>
     <p>احجز الآن واستفد من عروضنا الخاصة.</p>
 
-    <!-- زر الاتصال -->
-    <a href="call-thanks.html" class="btn btn-call">📞 اتصل الآن</a>
+    <!-- زر الاتصال يوجه لصفحة الشكر -->
+    <a
+      href="call-thanks.html"
+      class="btn btn-call"
+      aria-label="اتصل الآن"
+      >📞 اتصل الآن</a
+    >
 
-    <!-- زر واتساب -->
-    <a href="https://elhbebclean.github.io/thankyou-page222/" class="btn btn-whatsapp">💬 تواصل واتساب</a>
+    <!-- زر واتساب يوجه لصفحة الشكر -->
+    <a
+      href="https://elhbebclean.github.io/thankyou-page222/"
+      class="btn btn-whatsapp"
+      aria-label="تواصل واتساب"
+      target="_blank"
+      rel="noopener"
+      >💬 تواصل واتساب</a
+    >
 
-    <!-- خريطة جوجل -->
-    <iframe 
+    <div class="description-section">
+      <h2>خدمات شركة الحبيب كلين</h2>
+      <p>
+        في <strong>الحبيب كلين</strong>، ندرك أن منزلك أو مكتبك هو مساحتك الخاصة التي تستحق أقصى درجات العناية
+        والنظافة. لهذا السبب، نقدم مجموعة شاملة من خدمات التنظيف الاحترافية المصممة لتلبية جميع
+        احتياجاتك، مع الالتزام بأعلى معايير الجودة والدقة.
+      </p>
+      <p>
+        سواء كنت تبحث عن <strong>تنظيف شامل للمنازل والشقق</strong>، أو تحتاج إلى مساعدة في <strong>تنظيف
+          المكاتب</strong> لضمان بيئة عمل صحية ومنتجة، فإن فريقنا المدرب والمجهز بأحدث الأدوات والمواد
+        الصديقة للبيئة مستعد لخدمتك. نفخر بوجود <strong>عاملات نظافة نسائية مدربات</strong> يحرصن على أدق
+        التفاصيل لتقديم خدمة ممتازة.
+      </p>
+      <p>
+        كما نتخصص في <strong>جلي وتلميع الرخام</strong> لإعادة لمعانه وبريقه الأصلي، وخدمات <strong>تلميع
+          الباركيه بالشمع</strong> لحماية أرضياتك الخشبية وإضافة طبقة من الجمال والحماية. بالإضافة إلى
+        ذلك، نقدم خدمات <strong>تنظيف الشقق المفروشة</strong> لضمان جاهزيتها وراحتك، وخدمات <strong>التنظيف
+          بعد التشطيب</strong> التي تُعيد البريق لمساحتك بعد أعمال البناء أو التجديد، مزيلين كل آثار الغبار
+        والأوساخ بفعالية.
+      </p>
+      <p>
+        نحن في الحبيب كلين نضمن لك تجربة نظافة لا مثيل لها، تعيد لمساحتك رونقها وتجدد حيويتها. دعنا نهتم
+        بالتفاصيل، واستمتع ببيئة نظيفة ومنعشة تستحقها.
+      </p>
+    </div>
+
+    <div class="social-icons" role="list">
+      <a
+        href="https://www.facebook.com/share/1A8fNfYBiR/"
+        target="_blank"
+        rel="noopener"
+        aria-label="تابعنا على فيسبوك"
+        role="listitem"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+          alt="فيسبوك"
+        />
+        <span>فيسبوك</span>
+      </a>
+
+      <a
+        href="https://www.youtube.com/@Elhbeb"
+        target="_blank"
+        rel="noopener"
+        aria-label="قناتنا على يوتيوب"
+        role="listitem"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+          alt="يوتيوب"
+          style="border-radius: 8px; height: 35px;"
+        />
+        <span>يوتيوب</span>
+      </a>
+
+      <a
+        href="https://g.co/kgs/aNcqU5J"
+        target="_blank"
+        rel="noopener"
+        aria-label="ملفنا التجاري على جوجل ماب"
+        role="listitem"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Google_Maps_icon_%282020%29.svg"
+          alt="جوجل ماب"
+          style="border-radius: 8px;"
+        />
+        <span>جوجل ماب</span>
+      </a>
+
+      <a
+        href="https://g.page/r/CQ0zGxJWtM32EBE/review"
+        target="_blank"
+        rel="noopener"
+        aria-label="اترك تقييماً على جوجل ماب"
+        role="listitem"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Reviews_icon.svg"
+          alt="تقييمات جوجل ماب"
+          style="border-radius: 8px;"
+        />
+        <span>تقييماتنا</span>
+      </a>
+    </div>
+
+    <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.6684200198915!2d31.249907615117185!3d30.016492681894116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cf4e0d5a12b%3A0x1cf9fc4e90a248c3!2zMTA1INin2YTYqtmD2YjZitmEINio2YbYqtmK2Kkg2YXYrdin2YHYuNipINin2YTYqtmD2KfYqg!5e0!3m2!1sar!2seg!4v1719853412364!5m2!1sar!2seg"
       allowfullscreen
       loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+      referrerpolicy="no-referrer-when-downgrade"
+      title="موقع شركة الحبيب كلين على خرائط جوجل"
+    ></iframe>
   </main>
 
-  <footer>
-    &copy; 2025 الحبيب كلين - جميع الحقوق محفوظة.
-  </footer>
-
+  <footer>© 2025 الحبيب كلين - جميع الحقوق محفوظة.</footer>
 </body>
 </html>
