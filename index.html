@@ -20,6 +20,13 @@
     body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; text-align: center; }
     header { background: #007bff; color: white; padding: 30px 10px; }
     header h1 { margin: 0; font-size: 28px; }
+    nav { margin-top: 15px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
     .btn {
       display: inline-block; margin: 10px 5px; padding: 15px 25px;
       border-radius: 6px; color: white; text-decoration: none;
@@ -35,6 +42,34 @@
     ul { padding-right: 20px; }
     footer { margin: 40px 0 10px; font-size: 14px; color: #777; text-align: center; }
     footer a { color: #007bff; text-decoration: none; margin-right: 10px; }
+
+    /* زر واتساب دائم */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+    #whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-decoration: none;
+      z-index: 999;
+      animation: pulse 1.5s ease-in-out infinite;
+      animation-delay: 5s;
+    }
+    #whatsapp-fixed:hover {
+      background-color: #1ebea5;
+      animation: none;
+    }
   </style>
 </head>
 
@@ -42,6 +77,12 @@
   <header>
     <h1>شركة الحبيب لخدمات التنظيف</h1>
     <p>احجز الآن وسنصل إليك فورًا إذا أردت ✅</p>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="services.html">الخدمات</a>
+      <a href="contact.html">اتصل بنا</a>
+      <a href="privacy.html">الخصوصية</a>
+    </nav>
     <a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank" rel="noopener" class="btn btn-review">
       ⭐ شاهد آراء عملائنا على Google Maps
     </a>
@@ -58,7 +99,6 @@
         ✅ <strong>ما هو التنظيف العميق؟</strong><br>
         التنظيف العميق مش مجرد كنس ومسح سطحي، هو عملية تنظيف شاملة ومركّزة بتستهدف الأماكن اللي عادة ما بيتنظفش يوميًا. بنرجّع المكان جديد كأنه لسه متشطب!
       </p>
-
       <p><strong>✅ ماذا تشمل الخدمة بالتفصيل؟</strong></p>
       <ul>
         <li>🛋️ تنظيف كل غرفة: إزالة الأتربة من الحوائط والسقف، مسح الأرضيات، وتنظيف المفروشات.</li>
@@ -117,5 +157,8 @@
     &copy; 2025 الحبيب كلين - جميع الحقوق محفوظة. |
     <a href="privacy.html">سياسة الخصوصية</a>
   </footer>
+
+  <!-- زر واتساب دائم -->
+  <a href="https://elhbebclean.github.io/thankyou-page222/" id="whatsapp-fixed">💬 واتساب</a>
 </body>
 </html>
