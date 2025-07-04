@@ -1,4 +1,3 @@
 User-agent: *
-Disallow:
-
+Allow: /
 Sitemap: https://elhbebclean.github.io/Elhabib_clean_home/sitemap.xml
