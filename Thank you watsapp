@@ -24,7 +24,7 @@
     gtag('config', 'AW-16529004339');
   </script>
 
-  <!-- Event snippet for تتبع الواتساب conversion page -->
+  <!-- Event snippet for تتبع الواتساب -->
   <script>
     gtag('event', 'conversion', {'send_to': 'AW-16529004339/TVoiCNOO2ewaELOu0sk9'});
   </script>
