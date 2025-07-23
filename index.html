@@ -43,7 +43,6 @@
     .btn-call { background: #28a745; }
     .btn-whatsapp { background: #25d366; }
     .btn-review { background: #ffc107; color: #000; }
-
     main { padding: 30px 15px; max-width: 900px; margin: auto; text-align: right; }
     iframe { width: 100%; height: 315px; margin: 20px 0; border: none; border-radius: 10px; }
     section { margin: 40px 0; line-height: 1.8; }
@@ -55,7 +54,7 @@
     /* زر واتساب عائم */
     #whatsapp-fixed {
       position: fixed;
-      bottom: 20px;
+      bottom: 80px; /* رفع الزر عن أسفل الصفحة لترك مساحة لزر التطبيق */
       right: 20px;
       background-color: #25d366;
       color: white;
@@ -65,17 +64,18 @@
       text-decoration: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       z-index: 999;
+      transition: background-color 0.3s ease;
     }
     #whatsapp-fixed:hover {
       background-color: #1ebea5;
     }
 
-    /* زر تحميل التطبيق العائم */
-    #app-fixed {
+    /* زر تحميل التطبيق عائم */
+    #app-download-fixed {
       position: fixed;
       bottom: 20px;
-      left: 20px;
-      background-color: #4CAF50;
+      right: 20px;
+      background-color: #007bff; /* لون أزرق مميز */
       color: white;
       padding: 12px 20px;
       border-radius: 50px;
@@ -83,10 +83,19 @@
       text-decoration: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       z-index: 999;
-      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
     }
-    #app-fixed:hover {
-      background-color: #45a049;
+    #app-download-fixed:hover {
+      background-color: #0056b3;
+    }
+    #app-download-fixed svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
     }
   </style>
 </head>
@@ -112,10 +121,78 @@
     </a>
   </header>
 
+  <main>
+    <h2>🎯 خصم 15% لأول مرة و50% للعملاء المنتظمين!</h2>
+    <a href="call-thanks.html" class="btn btn-call">📞 اتصل الآن</a>
+    <a href="thankyou-whatsapp.html" class="btn btn-whatsapp">💬 واتساب سريع</a>
+
+    <section>
+      <h2>🧼 خدمة التنظيف العميق من الحبيب كلين – نظافة من الجذور ✨</h2>
+      <ul>
+        <li>🛋 تنظيف الغرف: الأرضيات، الحوائط، الأسقف، المفروشات</li>
+        <li>🧽 المطبخ: الدهون، الشفاط، الأجهزة، الرخام</li>
+        <li>🚽 الحمام: تعقيم شامل، تنظيف المرايات، السيراميك</li>
+        <li>🪑 تلميع النجف، الأبواب، الشبابيك، إزالة البقع</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🏗 تنظيف ما بعد التشطيب - بدقة احترافية</h2>
+      <ul>
+        <li>🧹 إزالة مخلفات الدهانات، الجبس، الأسمنت</li>
+        <li>🚿 تنظيف وتعقيم الحمامات والمطابخ</li>
+        <li>🪟 تلميع الزجاج، الألوميتال، الأرضيات بجميع أنواعها</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💎 مميزاتنا:</h2>
+      <ul>
+        <li>✅ فريق نسائي محترف وملتزم</li>
+        <li>✅ معدات متطورة ومواد تنظيف آمنة 100%</li>
+        <li>✅ مرونة في المواعيد وتغطية القاهرة والجيزة وأكتوبر</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📹 شاهد أعمالنا على أرض الواقع</h2>
+      <iframe src="https://www.youtube.com/embed/o8OtxpTAJVM" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VV4WatGKIeI" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/zac0LMpHCGI" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/5-oMyRN1pUI" allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2>📸 صور من أعمالنا</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+        <img src="./IMG_٢٠٢٥٠٧٠٤_٠٣٤٥٤٣.jpg" style="width: 280px; border-radius: 10px;">
+        <img src="./IMG_٢٠٢٥٠٧٠٤_٠٣٤٦١٦.jpg" style="width: 280px; border-radius: 10px;">
+        <img src="./FB_IMG_1737376286871.jpg" style="width: 280px; border-radius: 10px;">
+        <img src="./FB_IMG_1737376278247.jpg" style="width: 280px; border-radius: 10px;">
+        <img src="./file_00000000dda461fdaee166e6e4076454.png" style="width: 280px; border-radius: 10px;">
+      </div>
+    </section>
+
+    <section>
+      <h2>📍 موقعنا على الخريطة</h2>
+      <iframe src="https://www.google.com/maps?q=1+شارع+وادي+النيل,+المعادي,+القاهرة&output=embed" allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 الحبيب كلين - جميع الحقوق محفوظة |
+    <a href="privacy.html">سياسة الخصوصية</a>
+  </footer>
+
   <!-- زر واتساب عائم -->
   <a id="whatsapp-fixed" href="thankyou-whatsapp.html">💬 واتساب</a>
 
-  <!-- زر تحميل التطبيق العائم -->
-  <a id="app-fixed" href="app/index.html">📱 حمّل تطبيقنا</a>
+  <!-- زر تحميل التطبيق عائم -->
+  <a id="app-download-fixed" href="app/index.html" title="حمّل تطبيقنا">
+    📱 حمّل تطبيقنا
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm5 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+    </svg>
+  </a>
 </body>
 </html>
