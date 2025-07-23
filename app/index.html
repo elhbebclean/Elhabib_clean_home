@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Habib Clean</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4CAF50">
+  <link rel="icon" href="icon.png">
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; text-align: center;}
+    header {background: #4CAF50; color: #fff; padding: 20px; font-size: 1.5em;}
+    .offer {background: #fff3cd; margin: 10px; padding: 15px; border: 1px solid #ffeeba; border-radius: 8px; color: #856404; font-weight: bold;}
+    .services {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px;}
+    .service-card {background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .buttons button, .offer button {display: block; width: 90%; margin: 10px auto; padding: 15px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em;}
+    .buttons button:hover, .offer button:hover {background: #45a049;}
+    form {background: #fff; margin: 20px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    input, select {width: 90%; margin: 10px auto; padding: 10px; border: 1px solid #ccc; border-radius: 5px;}
+    footer {margin-top: 20px; padding: 10px; background: #f1f1f1; color: #333;}
+  </style>
+  <!-- كود تتبع Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16529004339');
+  </script>
+</head>
+<body>
+  <header>El Habib Clean - تنظيف منزلك بأعلى جودة</header>
 
+  <div class="offer">
+    خصم 15% لأول مرة و50% للعملاء المنتظمين!
+    <button onclick="scrollToBooking()">احجز العرض الآن</button>
+  </div>
+
+  <section class="services">
+    <div class="service-card">
+      <h3>التنظيف العميق</h3>
+      <p>نظافة شاملة لكل أركان المنزل باستخدام أحدث المعدات.</p>
+      <button onclick="bookNow('التنظيف العميق')">احجز الآن</button>
+    </div>
+    <div class="service-card">
+      <h3>تنظيف بعد التشطيب</h3>
+      <p>إزالة الغبار وآثار الدهانات وتجهيز منزلك للسكن.</p>
+      <button onclick="bookNow('تنظيف بعد التشطيب')">احجز الآن</button>
+    </div>
+    <div class="service-card">
+      <h3>تنظيف الشقق المفروشة</h3>
+      <p>تعقيم شامل للشقق وتجديد الأثاث.</p>
+      <button onclick="bookNow('تنظيف الشقق المفروشة')">احجز الآن</button>
+    </div>
+  </section>
+
+  <form id="bookingForm">
+    <h2>احجز خدمتك الآن</h2>
+    <input type="text" id="name" placeholder="الاسم" required>
+    <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+    <select id="service">
+      <option value="التنظيف العميق">التنظيف العميق</option>
+      <option value="تنظيف بعد التشطيب">تنظيف بعد التشطيب</option>
+      <option value="تنظيف الشقق المفروشة">تنظيف الشقق المفروشة</option>
+    </select>
+    <button type="submit">إرسال الحجز</button>
+  </form>
+
+  <div class="buttons">
+    <button onclick="window.location.href='https://wa.me/201016961497'">تواصل عبر واتساب</button>
+    <button onclick="window.location.href='tel:+201016961497'">اتصال مباشر</button>
+    <button onclick="window.location.href='https://wa.me/201016961497?text=محتاج+خدمة+طارئة+من+El+Habib+Clean'">طلب خدمة طارئة</button>
+    <button onclick="window.location.href='https://g.co/kgs/aNcqU5J'">افتح خريطتي</button>
+  </div>
+
+  <footer>
+    العنوان: 105 وادي النيل، المعادي<br>
+    جميع الحقوق محفوظة © 2025 El Habib Clean
+  </footer>
+
+  <script>
+    function bookNow(service) {
+      document.getElementById('service').value = service;
+      scrollToBooking();
+    }
+    function scrollToBooking() {
+      document.getElementById('bookingForm').scrollIntoView({behavior: 'smooth'});
+    }
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      gtag('event', 'conversion', {'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9'});
+      window.location.href = 'https://elhabib-clean.carrd.co/thanks';
+    });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
