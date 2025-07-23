@@ -8,18 +8,23 @@
   <meta name="theme-color" content="#4CAF50">
   <link rel="icon" href="icon.png">
   <style>
-    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; text-align: center;}
-    header {background: #4CAF50; color: #fff; padding: 20px; font-size: 1.5em;}
-    .offer {background: #fff3cd; margin: 10px; padding: 15px; border: 1px solid #ffeeba; border-radius: 8px; color: #856404; font-weight: bold;}
+    body {font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f4f6f8; color: #333; direction: rtl;}
+    header {background: #4CAF50; color: #fff; padding: 20px; text-align: center; font-size: 1.6em; font-weight: bold;}
+    .install-banner {background: #fff; padding: 10px; text-align: center; color: #4CAF50; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
+    .install-banner button {background: #4CAF50; color: #fff; border: none; padding: 8px 16px; margin-top: 5px; border-radius: 5px; cursor: pointer;}
+    .offer {background: #fff3cd; margin: 15px; padding: 15px; border-radius: 10px; color: #856404; border: 1px solid #ffeeba; text-align: center;}
     .services {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px;}
-    .service-card {background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-    .buttons button, .offer button {display: block; width: 90%; margin: 10px auto; padding: 15px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em;}
-    .buttons button:hover, .offer button:hover {background: #45a049;}
-    form {background: #fff; margin: 20px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .service-card {background: #fff; padding: 15px; border-radius: 12px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); text-align: center;}
+    .service-card h3 {color: #4CAF50; margin-bottom: 10px;}
+    .service-card img {width: 60px; height: 60px; margin-bottom: 10px;}
+    .service-card p {margin: 5px 0; font-size: 0.9em; color: #555;}
+    form {background: #fff; margin: 20px; padding: 15px; border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); text-align: center;}
     input, select {width: 90%; margin: 10px auto; padding: 10px; border: 1px solid #ccc; border-radius: 5px;}
-    footer {margin-top: 20px; padding: 10px; background: #f1f1f1; color: #333;}
+    button {cursor: pointer;}
+    .buttons button {width: 90%; margin: 10px auto; padding: 14px; background: #4CAF50; color: white; border: none; border-radius: 8px; font-size: 1em;}
+    .buttons button:hover {background: #45a049;}
+    footer {margin-top: 30px; padding: 15px; background: #f1f1f1; color: #555; font-size: 0.9em; text-align: center;}
   </style>
-  <!-- كود تتبع Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -29,7 +34,13 @@
   </script>
 </head>
 <body>
-  <header>El Habib Clean - تنظيف منزلك بأعلى جودة</header>
+  <div class="install-banner">
+    حمّل تطبيقنا لتجربة أسرع وأسهل!
+    <br>
+    <button onclick="installApp()">تثبيت الآن</button>
+  </div>
+
+  <header>El Habib Clean - نظافة بلا حدود</header>
 
   <div class="offer">
     خصم 15% لأول مرة و50% للعملاء المنتظمين!
@@ -38,19 +49,39 @@
 
   <section class="services">
     <div class="service-card">
+      <img src="icons/deep-clean.png" alt="التنظيف العميق">
       <h3>التنظيف العميق</h3>
-      <p>نظافة شاملة لكل أركان المنزل باستخدام أحدث المعدات.</p>
+      <p>تنظيف شامل لكل الأركان باستخدام أجهزة متقدمة وتعقيم كامل للأسطح.</p>
+      <p>نزيل الأوساخ العنيدة ونلمّع الباركيه بالشمع ونعيد بريق الرخام.</p>
       <button onclick="bookNow('التنظيف العميق')">احجز الآن</button>
     </div>
     <div class="service-card">
+      <img src="icons/post-renovation.png" alt="تنظيف بعد التشطيب">
       <h3>تنظيف بعد التشطيب</h3>
-      <p>إزالة الغبار وآثار الدهانات وتجهيز منزلك للسكن.</p>
+      <p>خبراء في إزالة آثار الجبس والدهانات والسليكون بعد التجهيز.</p>
+      <p>إزالة الاستيكرات المنتهية من شبابيك الألوميتال بدون خدوش.</p>
       <button onclick="bookNow('تنظيف بعد التشطيب')">احجز الآن</button>
     </div>
     <div class="service-card">
+      <img src="icons/furnished.png" alt="تنظيف الشقق المفروشة">
       <h3>تنظيف الشقق المفروشة</h3>
-      <p>تعقيم شامل للشقق وتجديد الأثاث.</p>
+      <p>تعقيم وتجديد شامل للأثاث والمفروشات وإزالة الأتربة العميقة.</p>
+      <p>أجهزة بخار لإزالة الروائح العالقة وتلميع الأرضيات.</p>
       <button onclick="bookNow('تنظيف الشقق المفروشة')">احجز الآن</button>
+    </div>
+    <div class="service-card">
+      <img src="icons/offices.png" alt="تنظيف المكاتب">
+      <h3>تنظيف المكاتب</h3>
+      <p>تنظيف يومي أو دوري للمكاتب مع تعقيم شامل للأسطح.</p>
+      <p>نضمن بيئة عمل صحية ومنظمة لفريقك وزوّارك.</p>
+      <button onclick="bookNow('تنظيف المكاتب')">احجز الآن</button>
+    </div>
+    <div class="service-card">
+      <img src="icons/carpet.png" alt="تنظيف السجاد">
+      <h3>تنظيف السجاد</h3>
+      <p>إزالة البقع الصعبة باستخدام تقنيات الغسيل بالبخار.</p>
+      <p>استعادة ألوان السجاد والحفاظ على أليافه.</p>
+      <button onclick="bookNow('تنظيف السجاد')">احجز الآن</button>
     </div>
   </section>
 
@@ -62,14 +93,16 @@
       <option value="التنظيف العميق">التنظيف العميق</option>
       <option value="تنظيف بعد التشطيب">تنظيف بعد التشطيب</option>
       <option value="تنظيف الشقق المفروشة">تنظيف الشقق المفروشة</option>
+      <option value="تنظيف المكاتب">تنظيف المكاتب</option>
+      <option value="تنظيف السجاد">تنظيف السجاد</option>
     </select>
     <button type="submit">إرسال الحجز</button>
   </form>
 
   <div class="buttons">
-    <button onclick="window.location.href='https://wa.me/201016961497'">تواصل عبر واتساب</button>
-    <button onclick="window.location.href='tel:+201016961497'">اتصال مباشر</button>
-    <button onclick="window.location.href='https://wa.me/201016961497?text=محتاج+خدمة+طارئة+من+El+Habib+Clean'">طلب خدمة طارئة</button>
+    <button onclick="redirectToThanks()">تواصل عبر واتساب</button>
+    <button onclick="redirectToThanks()">اتصال مباشر</button>
+    <button onclick="redirectToThanks()">طلب خدمة طارئة</button>
     <button onclick="window.location.href='https://g.co/kgs/aNcqU5J'">افتح خريطتي</button>
   </div>
 
@@ -79,6 +112,19 @@
   </footer>
 
   <script>
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+    function installApp() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(() => deferredPrompt = null);
+      } else {
+        alert('أضف التطبيق من خيارات المتصفح.');
+      }
+    }
     function bookNow(service) {
       document.getElementById('service').value = service;
       scrollToBooking();
@@ -91,6 +137,10 @@
       gtag('event', 'conversion', {'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9'});
       window.location.href = 'https://elhabib-clean.carrd.co/thanks';
     });
+    function redirectToThanks() {
+      gtag('event', 'conversion', {'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9'});
+      window.location.href = 'https://elhabib-clean.carrd.co/thanks';
+    }
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js');
     }
