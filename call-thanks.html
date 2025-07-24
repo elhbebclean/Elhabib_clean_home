@@ -15,30 +15,27 @@
   <meta property="og:url" content="https://elhbebclean.github.io/Elhabib_clean_home/call-thanks.html" />
   <meta property="og:image" content="https://elhbebclean.github.io/Elhabib_clean_home/logo.png" />
 
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-  </script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Google Ads tag -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    // Google Ads
     gtag('config', 'AW-16529004339');
-    // Google Analytics 4
-    gtag('config', 'G-FV8YFK9EMY');
+  </script>
 
-    // Event snippet for تتبع الاتصال المباشر
-    gtag('event', 'conversion', {'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9'});
+  <!-- Event snippet for تتبع الاتصال المباشر -->
+  <script>
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
+      'event_callback': function() {
+        window.location.href = "tel:01016961497";
+      }
+    });
+    // التحويل الاحتياطي لو لم تُستدعَ callback
+    setTimeout(function() {
+      window.location.href = "tel:01016961497";
+    }, 3000);
   </script>
 
   <style>
@@ -65,20 +62,9 @@
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <h1>✅ شكراً لتواصلك معنا!</h1>
   <p>سيتم تحويلك الآن لاتصال مباشر بخدمة العملاء.</p>
-
-  <!-- التحويل التلقائي -->
-  <script>
-    setTimeout(function(){
-      window.location.href = "tel:01016961497";
-    }, 4000); // زودنا المهلة لـ 4 ثواني لضمان تسجيل الإحالة
-  </script>
 
   <!-- رابط خريطة Google -->
   <h2 style="margin-top: 40px;">📍 موقعنا على Google Maps</h2>
@@ -92,5 +78,6 @@
     تنظيف محترف, الحبيب كلين, خدمات تنظيف مصر, تنظيف غرف, تنظيف مفروشات, تنظيف سجاد,
     الحبيب كلين اتصال, حجز تنظيف منازل, رقم شركة تنظيف في القاهرة
   </div>
+
 </body>
 </html>
