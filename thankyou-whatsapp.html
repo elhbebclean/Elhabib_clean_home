@@ -15,22 +15,28 @@
   <meta property="og:url" content="https://elhbebclean.github.io/Elhabib_clean_home/thankyou-whatsapp.html" />
   <meta property="og:image" content="https://elhbebclean.github.io/Elhabib_clean_home/logo.png" />
 
-  <!-- Google Ads tag (gtag.js) -->
+  <!-- Google Ads & GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV8YFK9EMY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
+    // Google Ads
     gtag('config', 'AW-16529004339');
-  </script>
 
-  <!-- Google Analytics 4 (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV8YFK9EMY"></script>
-  <script>
+    // Google Analytics 4
     gtag('config', 'G-FV8YFK9EMY');
+
+    // إضافة بيانات الإحالات المحسّنة
+    gtag('set', 'user_data', {
+      "email": "sseka2187@gmail.com",
+      "phone_number": "201016961497"
+    });
   </script>
 
-  <!-- Event snippet for تتبع الواتساب -->
+  <!-- Event snippet لتتبع الواتساب -->
   <script>
     gtag('event', 'conversion', {
       'send_to': 'AW-16529004339/TVoiCNOO2ewaELOu0sk9',
@@ -38,7 +44,6 @@
         window.location.href = "https://wa.me/201016961497";
       }
     });
-    // التحويل الاحتياطي لو لم تُستدعَ callback
     setTimeout(function() {
       window.location.href = "https://wa.me/201016961497";
     }, 3000);
