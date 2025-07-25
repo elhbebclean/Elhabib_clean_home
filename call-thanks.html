@@ -16,45 +16,17 @@
   })(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="شركة الحبيب لتنظيف المنازل - تم تحويلك للاتصال" />
-  <meta property="og:description" content="تواصل معنا الآن لحجز التنظيف العميق أو بعد التشطيب.">
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elhbebclean.github.io/Elhabib_clean_home/call-thanks.html" />
-  <meta property="og:image" content="https://elhbebclean.github.io/Elhabib_clean_home/logo.png" />
-
-  <!-- Google Ads & GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV8YFK9EMY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    // Google Ads
-    gtag('config', 'AW-16529004339');
-
-    // Google Analytics 4
-    gtag('config', 'G-FV8YFK9EMY');
-
-    // بيانات الإحالات المحسّنة
-    gtag('set', 'user_data', {
-      "email": "sseka2187@gmail.com",
-      "phone_number": "201016961497"
-    });
-  </script>
-
   <!-- Event snippet لتتبع الاتصال -->
   <script>
-    gtag('event', 'conversion', {
-      'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
-      'event_callback': function() {
-        window.location.href = "tel:01016961497";
-      }
+    // إرسال حدث الإحالة الناجحة عبر Google Tag Manager
+    dataLayer.push({
+      'event': 'conversion_call'
     });
+
+    // تحويل الاتصال بعد 7 ثوانٍ
     setTimeout(function() {
       window.location.href = "tel:01016961497";
-    }, 7000); // مهلة 7 ثوانٍ
+    }, 7000);
   </script>
 
   <style>
