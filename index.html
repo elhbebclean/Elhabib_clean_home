@@ -16,6 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://elhbebclean.github.io/Elhabib_clean_home/">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Open Graph -->
   <meta property="og:title" content="تنظيف منازل في المعادي والقاهرة | Elhabib Clean - خصم 15%">
@@ -157,19 +158,6 @@
       <h2>📍 موقعنا على الخريطة</h2>
       <iframe src="https://www.google.com/maps?q=1+شارع+وادي+النيل,+المعادي,+القاهرة&output=embed" title="موقع شركة الحبيب كلين على الخريطة" allowfullscreen></iframe>
     </section>
-
-    <!-- قسم آراء العملاء -->
-    <section>
-      <h2>💬 ماذا يقول عملاؤنا؟</h2>
-      <blockquote>"خدمة ممتازة! فريق محترف وتنظيف رائع." – أحمد</blockquote>
-      <blockquote>"أفضل شركة تنظيف تعاملت معها. أنصح بها." – سارة</blockquote>
-    </section>
-
-    <!-- قسم نداء الفعل -->
-    <section>
-      <h2>هل أنت جاهز لتنظيف منزلك الآن؟</h2>
-      <a href="thankyou-whatsapp.html" class="btn btn-whatsapp">💬 احجز تنظيفك عبر واتساب</a>
-    </section>
   </main>
 
   <footer>
@@ -187,5 +175,32 @@
       <path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm5 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
     </svg>
   </a>
+
+  <!-- كود تتبع التحويلات للأزرار -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // تتبع زر الاتصال
+      var callButton = document.querySelector('.btn-call');
+      if (callButton) {
+        callButton.addEventListener('click', function () {
+          dataLayer.push({
+            'event': 'conversion',
+            'conversion_type': 'call_click'
+          });
+        });
+      }
+
+      // تتبع زر الواتساب
+      var whatsappButton = document.querySelectorAll('.btn-whatsapp, #whatsapp-fixed');
+      whatsappButton.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          dataLayer.push({
+            'event': 'conversion',
+            'conversion_type': 'whatsapp_click'
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
