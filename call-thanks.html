@@ -5,37 +5,40 @@
   <title>تم التحويل للاتصال - شركة الحبيب لتنظيف المنازل</title>
   <meta name="description" content="شكراً لتواصلك معنا في شركة الحبيب لتنظيف المنازل. جاري تحويلك إلى الاتصال المباشر بخدمة العملاء.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="canonical" href="https://elhbebclean.github.io/Elhabib_clean_home/call-thanks.html" />
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://elhbebclean.github.io/Elhabib_clean_home/call-thanks.html">
 
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+  </script>
   <!-- End Google Tag Manager -->
 
   <script>
+    // استخراج gclid من الرابط
     function getParam(p) {
       var url = new URL(window.location.href);
       return url.searchParams.get(p);
     }
     var gclid = getParam('gclid');
 
+    // إرسال بيانات الإحالة المحسنة إلى GTM
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      'event': 'conversion_call',
-      'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
-      'value': 1.0,
-      'currency': 'EGP',
-      'user_data': {
-        'phone_number': '01016961497',
-        'gclid': gclid
-      }
+      'event': 'Watsaaaassap',  // مطابق للـ Trigger في GTM
+      'phone_number': '01016961497',
+      'gclid': gclid
     });
 
-    // تحويل بعد 7 ثوانٍ للاتصال
+    // التحويل التلقائي بعد 7 ثوانٍ للاتصال
     setTimeout(function() {
       window.location.href = "tel:01016961497";
     }, 7000);
