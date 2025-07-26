@@ -18,12 +18,11 @@
 
   <!-- Event snippet لتتبع الاتصال -->
   <script>
-    // إرسال حدث الإحالة الناجحة عبر Google Tag Manager
-    dataLayer.push({
-      'event': 'conversion_call'
-    });
-
-    // تحويل الاتصال بعد 7 ثوانٍ
+    if (window.dataLayer) {
+      dataLayer.push({
+        'event': 'conversion_call'
+      });
+    }
     setTimeout(function() {
       window.location.href = "tel:01016961497";
     }, 7000);
