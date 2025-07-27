@@ -13,6 +13,15 @@
   })(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- Google Ads Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16529004339');
+  </script>
+
   <meta charset="UTF-8">
   <title>تنظيف منازل في المعادي والقاهرة | Elhabib Clean - خصم 15%</title>
   <meta name="description" content="Elhabib Clean تقدم خدمات تنظيف منازل، تنظيف بعد التشطيب، وتعقيم شامل في المعادي والقاهرة. خصم 15% لأول مرة - احجز عبر واتساب الآن!">
@@ -127,6 +136,18 @@
     }
     var gclid = getParam('gclid');
 
+    // إرسال إحالة ناجحة مباشرة لجوجل أدز
+    function sendGoogleAdsConversion(conversionType) {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
+        'value': 1.0,
+        'currency': 'EGP',
+        'event_callback': function() {
+          console.log(conversionType + ' conversion sent to Google Ads');
+        }
+      });
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
       var callButton = document.querySelector('.btn-call');
       if (callButton) {
@@ -139,6 +160,7 @@
               'gclid': gclid
             }
           });
+          sendGoogleAdsConversion('call_click'); // إرسال إحالة ناجحة مباشر
         });
       }
 
@@ -153,6 +175,7 @@
               'gclid': gclid
             }
           });
+          sendGoogleAdsConversion('whatsapp_click'); // إرسال إحالة ناجحة مباشر
         });
       });
     });
