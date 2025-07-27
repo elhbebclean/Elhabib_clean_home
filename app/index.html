@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Habib Clean - تطبيق الحبيب كلين</title>
@@ -19,31 +29,44 @@
     .buttons button, .offer button {display: block; width: 90%; margin: 10px auto; padding: 15px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background 0.3s;}
     .buttons button:hover, .offer button:hover {background: #388e3c;}
     footer {margin-top: 20px; padding: 15px; background: #f1f1f1; color: #555; font-size: 0.9em;}
+
+    #app-download-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    #app-download-fixed:hover {background-color: #0056b3;}
   </style>
 
-  <!-- تتبع Google Ads -->
+  <!-- Google Ads Tracking -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-16529004339');
-
-    // حفظ gclid
-    (function() {
-      function getParam(name) {
-        const url = new URL(window.location.href);
-        return url.searchParams.get(name);
-      }
-      const gclid = getParam('gclid');
-      if (gclid) {
-        document.cookie = "gclid=" + gclid + "; path=/; max-age=" + 60*60*24*90;
-      }
-    })();
   </script>
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header>تطبيق الحبيب كلين - نظافة منزلك في لمسة</header>
 
   <div class="offer">
@@ -59,25 +82,14 @@
     </div>
     <div class="service-card">
       <h3>تنظيف بعد التشطيب</h3>
-      <p>إزالة آثار الجبس والدهانات وتنظيف احترافي للأرضيات والزجاج.</p>
+      <p>خبراء في إزالة آثار الجبس والدهانات وبقايا مواد البناء.</p>
       <button onclick="bookNow('تنظيف بعد التشطيب')">احجز الآن</button>
-    </div>
-    <div class="service-card">
-      <h3>تنظيف الشقق المفروشة</h3>
-      <p>تعقيم شامل وتجديد الأثاث والمفروشات لضمان بيئة صحية.</p>
-      <button onclick="bookNow('تنظيف الشقق المفروشة')">احجز الآن</button>
-    </div>
-    <div class="service-card">
-      <h3>خدمات التنظيف الطارئة</h3>
-      <p>استجابة سريعة لجميع حالات التنظيف الطارئة.</p>
-      <button onclick="goToWhatsapp()">طلب خدمة طارئة</button>
     </div>
   </section>
 
   <div class="buttons">
-    <button onclick="goToWhatsapp()">تواصل عبر واتساب</button>
-    <button onclick="goToCall()">اتصال مباشر</button>
-    <button onclick="window.location.href='../app/index.html'">تنزيل التطبيق</button>
+    <button onclick="window.location.href='../thankyou-whatsapp.html'">تواصل عبر واتساب</button>
+    <button onclick="window.location.href='../call-thanks.html'">اتصال مباشر</button>
   </div>
 
   <footer>
@@ -85,37 +97,12 @@
     جميع الحقوق محفوظة © 2025 El Habib Clean
   </footer>
 
+  <!-- زر تحميل التطبيق -->
+  <a id="app-download-fixed" href="app-download.html">📱 حمّل تطبيقنا</a>
+
   <script>
     function bookNow(service) {
-      alert("تم اختيار الخدمة: " + service);
-      goToWhatsapp();
-    }
-
-    function scrollToBooking() {
-      window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
-    }
-
-    function getGclid() {
-      const match = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
-      return match ? match[2] : null;
-    }
-
-    function goToWhatsapp() {
-      dataLayer.push({
-        'event': 'conversion',
-        'conversion_type': 'whatsapp_click',
-        'gclid': getGclid()
-      });
       window.location.href = '../thankyou-whatsapp.html';
-    }
-
-    function goToCall() {
-      dataLayer.push({
-        'event': 'conversion',
-        'conversion_type': 'call_click',
-        'gclid': getGclid()
-      });
-      window.location.href = '../call-thanks.html';
     }
   </script>
 </body>
