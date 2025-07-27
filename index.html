@@ -121,6 +121,20 @@
     </svg>
   </a>
 
+  <!-- كود حفظ gclid -->
+  <script>
+    (function() {
+      function getParam(name) {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+      }
+      const gclid = getParam('gclid');
+      if (gclid) {
+        document.cookie = "gclid=" + gclid + "; path=/; max-age=" + 60*60*24*90;
+      }
+    })();
+  </script>
+
   <script>
     function getParam(p) {
       var url = new URL(window.location.href);
