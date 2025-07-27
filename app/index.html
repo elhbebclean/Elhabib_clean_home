@@ -18,19 +18,28 @@
     .service-card p {color: #555; line-height: 1.6;}
     .buttons button, .offer button {display: block; width: 90%; margin: 10px auto; padding: 15px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background 0.3s;}
     .buttons button:hover, .offer button:hover {background: #388e3c;}
-    form {background: white; margin: 20px; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: right;}
-    form h2 {color: #4CAF50; margin-bottom: 15px;}
-    input, select {width: 95%; margin: 10px 0; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em;}
     footer {margin-top: 20px; padding: 15px; background: #f1f1f1; color: #555; font-size: 0.9em;}
   </style>
 
-  <!-- كود تتبع Google Ads -->
+  <!-- تتبع Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-16529004339');
+
+    // حفظ gclid
+    (function() {
+      function getParam(name) {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+      }
+      const gclid = getParam('gclid');
+      if (gclid) {
+        document.cookie = "gclid=" + gclid + "; path=/; max-age=" + 60*60*24*90;
+      }
+    })();
   </script>
 </head>
 
@@ -45,43 +54,30 @@
   <section class="services">
     <div class="service-card">
       <h3>التنظيف العميق</h3>
-      <p>تنظيف شامل لكل الأركان باستخدام أحدث المعدات والمواد الآمنة. يشمل الأرضيات، الجدران، المطابخ، الحمامات، الأثاث، الشبابيك، والمزيد.</p>
+      <p>تنظيف شامل لكل الأركان باستخدام أحدث المعدات والمواد الآمنة.</p>
       <button onclick="bookNow('التنظيف العميق')">احجز الآن</button>
     </div>
     <div class="service-card">
       <h3>تنظيف بعد التشطيب</h3>
-      <p>خبراء في إزالة آثار الجبس، الدهانات، السليكون، وبقايا مواد البناء. تنظيف احترافي للألوميتال والزجاج، مع تلميع الأرضيات لجميع أنواعها.</p>
+      <p>إزالة آثار الجبس والدهانات وتنظيف احترافي للأرضيات والزجاج.</p>
       <button onclick="bookNow('تنظيف بعد التشطيب')">احجز الآن</button>
     </div>
     <div class="service-card">
       <h3>تنظيف الشقق المفروشة</h3>
-      <p>تعقيم شامل للشقق وتجديد الأثاث والمفروشات. إزالة الروائح، تنظيف المفروشات، وتعقيم كل الغرف لضمان بيئة صحية وآمنة.</p>
+      <p>تعقيم شامل وتجديد الأثاث والمفروشات لضمان بيئة صحية.</p>
       <button onclick="bookNow('تنظيف الشقق المفروشة')">احجز الآن</button>
     </div>
     <div class="service-card">
       <h3>خدمات التنظيف الطارئة</h3>
-      <p>استجابة سريعة لجميع حالات التنظيف الطارئة. تواصل معنا في أي وقت، وسنكون عندك فورًا بخدمة متميزة.</p>
-      <button onclick="window.location.href='../thankyou-whatsapp.html'">طلب خدمة طارئة</button>
+      <p>استجابة سريعة لجميع حالات التنظيف الطارئة.</p>
+      <button onclick="goToWhatsapp()">طلب خدمة طارئة</button>
     </div>
   </section>
 
-  <form id="bookingForm">
-    <h2>احجز خدمتك الآن</h2>
-    <input type="text" id="name" placeholder="الاسم" required>
-    <input type="tel" id="phone" placeholder="رقم الهاتف" required>
-    <select id="service">
-      <option value="التنظيف العميق">التنظيف العميق</option>
-      <option value="تنظيف بعد التشطيب">تنظيف بعد التشطيب</option>
-      <option value="تنظيف الشقق المفروشة">تنظيف الشقق المفروشة</option>
-      <option value="خدمات التنظيف الطارئة">خدمات التنظيف الطارئة</option>
-    </select>
-    <button type="submit">إرسال الحجز</button>
-  </form>
-
   <div class="buttons">
-    <button onclick="window.location.href='../thankyou-whatsapp.html'">تواصل عبر واتساب</button>
-    <button onclick="window.location.href='../call-thanks.html'">اتصال مباشر</button>
-    <button onclick="window.location.href='https://maps.app.goo.gl/wkatbwKjdm4J5vp48'">افتح خريطتي</button>
+    <button onclick="goToWhatsapp()">تواصل عبر واتساب</button>
+    <button onclick="goToCall()">اتصال مباشر</button>
+    <button onclick="window.location.href='../app/index.html'">تنزيل التطبيق</button>
   </div>
 
   <footer>
@@ -91,19 +87,35 @@
 
   <script>
     function bookNow(service) {
-      document.getElementById('service').value = service;
-      scrollToBooking();
+      alert("تم اختيار الخدمة: " + service);
+      goToWhatsapp();
     }
+
     function scrollToBooking() {
-      document.getElementById('bookingForm').scrollIntoView({behavior: 'smooth'});
+      window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
     }
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      gtag('event', 'conversion', {'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9'});
+
+    function getGclid() {
+      const match = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
+      return match ? match[2] : null;
+    }
+
+    function goToWhatsapp() {
+      dataLayer.push({
+        'event': 'conversion',
+        'conversion_type': 'whatsapp_click',
+        'gclid': getGclid()
+      });
       window.location.href = '../thankyou-whatsapp.html';
-    });
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
+    }
+
+    function goToCall() {
+      dataLayer.push({
+        'event': 'conversion',
+        'conversion_type': 'call_click',
+        'gclid': getGclid()
+      });
+      window.location.href = '../call-thanks.html';
     }
   </script>
 </body>
