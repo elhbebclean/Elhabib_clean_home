@@ -23,6 +23,7 @@
   <!-- End Google Tag Manager -->
 
   <script>
+    // استرجاع gclid من الرابط أو الكوكي
     function getParam(name) {
       const url = new URL(window.location.href);
       return url.searchParams.get(name);
@@ -30,7 +31,7 @@
     function getGclid() {
       let gclid = getParam('gclid');
       if (gclid) {
-        document.cookie = "gclid=" + gclid + "; path=/; max-age=" + 60*60*24*90;
+        document.cookie = "gclid=" + gclid + "; path=/; max-age=" + 60*60*24*90; // حفظه 90 يوم
         return gclid;
       } else {
         const match = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
@@ -39,15 +40,20 @@
     }
     const gclid = getGclid();
 
+    // إرسال بيانات الإحالة المحسّنة
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'event': 'conversion_whatsapp',
       'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
-      'phone_number': '01016961497',
-      'gclid': gclid
+      'value': 1.0,
+      'currency': 'EGP',
+      'user_data': {
+        'phone_number': '201016961497', // بصيغة دولية
+        'gclid': gclid
+      }
     });
 
-    // تحويل تلقائي إلى واتساب بعد 7 ثوانٍ
+    // التحويل التلقائي إلى واتساب بعد 7 ثوانٍ
     setTimeout(function() {
       window.location.href = "https://wa.me/201016961497";
     }, 7000);
