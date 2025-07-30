@@ -28,7 +28,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-16529004339');
 
     // Conversion event for Call Thank You Page
@@ -49,7 +48,7 @@
     function getGclid() {
       let gclid = getParam('gclid');
       if (gclid) {
-        document.cookie = "gclid=" + gclid + "; path=/; max-age=" + 60*60*24*90; // حفظه 90 يوم
+        document.cookie = "gclid=" + gclid + "; path=/; max-age=" + 60*60*24*90;
         return gclid;
       } else {
         const match = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
@@ -63,14 +62,14 @@
     window.dataLayer.push({
       'event': 'conversion_call',
       'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
-      'phone_number': '201016961497', // صيغة دولية لدعم Enhanced Conversions
+      'phone_number': '201016961497',
       'gclid': gclid
     });
 
-    // التحويل التلقائي بعد 7 ثوانٍ للاتصال
+    // التحويل التلقائي بعد 4 ثوانٍ للاتصال
     setTimeout(function() {
       window.location.href = "tel:01016961497";
-    }, 7000);
+    }, 4000);
   </script>
 
   <style>
