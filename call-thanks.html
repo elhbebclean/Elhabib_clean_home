@@ -29,14 +29,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-16529004339');
-
-    // Conversion event for Call Thank You Page
-    gtag('event', 'conversion', {
-        'send_to': 'AW-16529004339/5VobCPyJwfsaELOu0sk9',
-        'value': 100.00,
-        'currency': 'EGP',
-        'transaction_id': ''
-    });
   </script>
 
   <script>
@@ -57,14 +49,32 @@
     }
     const gclid = getGclid();
 
-    // إرسال بيانات الإحالة المحسّنة
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      'event': 'conversion_call',
-      'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
-      'phone_number': '201016961497',
-      'gclid': gclid
-    });
+    // دالة لتحويل البيانات إلى SHA256 قبل الإرسال لجوجل
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message.trim().toLowerCase());
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    // إرسال بيانات التحويل + الإحالات المحسّنة
+    async function sendConversion() {
+      const phone = '201016961497'; // رقم الهاتف الدولي بدون +
+      const phoneHash = await sha256(phone);
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16529004339/5VobCPyJwfsaELOu0sk9', // Label الخاص بإحالة Call Thank You Page
+        'value': 100.00,
+        'currency': 'EGP',
+        'transaction_id': '',
+        'user_data': {
+          'phone_number': phoneHash,
+          'gclid': gclid
+        }
+      });
+    }
+
+    sendConversion();
 
     // التحويل التلقائي بعد 4 ثوانٍ للاتصال
     setTimeout(function() {
