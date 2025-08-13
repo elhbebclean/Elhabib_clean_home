@@ -30,6 +30,14 @@
     gtag('js', new Date());
     gtag('config', 'AW-16529004339');
   </script>
+
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background-color: #f9f9f9; }
+    h1 { color: #28a745; font-size: 28px; }
+    p { font-size: 18px; margin-bottom: 20px; }
+    a.map-link { display: inline-block; margin-top: 25px; font-size: 18px; color: #007bff; text-decoration: underline; }
+    a.call-now { display: inline-block; margin-top: 30px; font-size: 18px; color: white; background: #28a745; padding: 12px 25px; border-radius: 6px; text-decoration: none; }
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -47,15 +55,6 @@
     اضغط هنا لفتح موقعنا على Google Maps مباشرة
   </a>
 
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background-color: #f9f9f9; }
-    h1 { color: #28a745; font-size: 28px; }
-    p { font-size: 18px; margin-bottom: 20px; }
-    a.map-link { display: inline-block; margin-top: 25px; font-size: 18px; color: #007bff; text-decoration: underline; }
-    a.call-now { display: inline-block; margin-top: 30px; font-size: 18px; color: white; background: #28a745; padding: 12px 25px; border-radius: 6px; text-decoration: none; }
-  </style>
-
-  <!-- إرسال الإحالة المحسّنة ثم الاتصال -->
   <script>
     // تنظيف الرقم ثم SHA-256
     async function sha256Digits(message) {
@@ -91,26 +90,46 @@
         const phoneForHash = '201016961497';
         const phoneHash = await sha256Digits(phoneForHash);
 
-        const conversionLabel = 'OIQ7COaD0ewaELOu0sk9';
+        const conversionLabel = 'OIQ7COaD0ewaELOu0sk9'; // ضع هنا الـ Label الخاص بالتحويل
+        const sendTo = 'AW-16529004339/' + conversionLabel;
+        const redirectTel = "tel:01016961497";
 
+        // Fallback redirect in case callback never fires (e.g., 3.5s)
+        const fallbackTimeout = 3500;
+        let redirected = false;
+        const doRedirect = () => {
+          if (!redirected) {
+            redirected = true;
+            window.location.href = redirectTel;
+          }
+        };
+
+        // Set fallback
+        const fbTimer = setTimeout(doRedirect, fallbackTimeout);
+
+        // Send conversion with event_callback
         gtag('event', 'conversion', {
-          'send_to': 'AW-16529004339/' + conversionLabel,
+          'send_to': sendTo,
           'value': 100.00,
           'currency': 'EGP',
           'user_data': {
             'phone_number': phoneHash,
             'gclid': gclid
+          },
+          'event_callback': function() {
+            clearTimeout(fbTimer);
+            doRedirect();
           }
         });
 
-        await new Promise(res => setTimeout(res, 1000));
       } catch (err) {
         console.warn('conversion send failed', err);
-      } finally {
+        // لو حصل خطأ نروح للاتصال فورًا
         window.location.href = "tel:01016961497";
       }
     }
 
+    // نفّذ الإرسال ثم الاتصال
     sendConversionAndCall();
   </script>
 </body>
