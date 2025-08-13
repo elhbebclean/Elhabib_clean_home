@@ -90,12 +90,12 @@
         const phoneForHash = '201016961497';
         const phoneHash = await sha256Digits(phoneForHash);
 
-        const conversionLabel = 'OIQ7COaD0ewaELOu0sk9'; // ضع هنا الـ Label الخاص بالتحويل
+        const conversionLabel = 'OIQ7COaD0ewaELOu0sk9'; // Label الخاص بالتحويل (موجود عندك)
         const sendTo = 'AW-16529004339/' + conversionLabel;
         const redirectTel = "tel:01016961497";
 
-        // Fallback redirect in case callback never fires (e.g., 3.5s)
-        const fallbackTimeout = 3500;
+        // Fallback redirect in case callback never fires (6s)
+        const fallbackTimeout = 6000;
         let redirected = false;
         const doRedirect = () => {
           if (!redirected) {
