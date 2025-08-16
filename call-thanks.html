@@ -8,7 +8,68 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://elhbebclean.github.io/Elhabib_clean_home/call-thanks.html">
 
-  <!-- Google Tag Manager -->
+  <!-- مهم: نعرّف dataLayer مبكّر -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  <!-- ---------- سكربت يلتقط الرقم ويعمل هاش ويدفعه للـ dataLayer ---------- -->
+  <script>
+    (function(){
+      // مساعدة لالتقاط باراميتر من الرابط
+      function getParam(name) {
+        try { return (new URL(window.location.href)).searchParams.get(name); } catch(e) { return null; }
+      }
+
+      // التقط الرقم من ?phone= أو من sessionStorage
+      var phone = getParam('phone') || null;
+      try {
+        if (!phone && sessionStorage.getItem && sessionStorage.getItem('userPhone')) {
+          phone = sessionStorage.getItem('userPhone');
+        }
+      } catch(e){ phone = phone || null; }
+
+      if (!phone) {
+        // لا ندفع أي user_data فاضي — نترك dataLayer كما هو
+        window.customerPhone = null;
+        return;
+      }
+
+      // تنظيف الرقم: ارقام فقط
+      phone = String(phone).replace(/\D+/g,'').trim();
+      if (!phone) { window.customerPhone = null; return; }
+      window.customerPhone = phone;
+
+      // SHA-256 helper -> hex
+      async function sha256Hex(s){
+        const enc = new TextEncoder().encode(String(s));
+        const buf = await crypto.subtle.digest('SHA-256', enc);
+        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+      }
+
+      // احسب الهَش وادفعه فورًا للـ dataLayer (قبل تحميل GTM tags)
+      (async function pushHash(){
+        try {
+          const phoneHash = await sha256Hex(phone);
+          // دفع user_data بصيغة متعارف عليها
+          window.dataLayer.push({
+            'event': 'enhanced_conv_ready',
+            'user_data': {
+              'phone_number': phoneHash
+            }
+          });
+          // خزّن الرقم خام للاستخدام لاحقاً (اختياري)
+          try { sessionStorage.setItem('userPhone', phone); } catch(e){}
+          console.log('Pushed enhanced_conv_ready with phone hash to dataLayer');
+        } catch(err) {
+          console.warn('Failed to push enhanced conv data', err);
+        }
+      })();
+    })();
+  </script>
+  <!-- --------------------------------------------------------------------- -->
+
+  <!-- Google Tag Manager (gtm.js) / Google Ads - يبقى بعد دفع dataLayer -->
   <script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[];
@@ -20,13 +81,11 @@
       f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KLM4RMFM');
   </script>
-  <!-- End Google Tag Manager -->
 
-  <!-- Google Ads Conversion Tracking -->
+  <!-- Google Ads gtag (يبقى بعد الـ dataLayer وGTM) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){window.dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-16529004339');
   </script>
@@ -40,158 +99,90 @@
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- GTM noscript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h1>✅ شكراً لتواصلك معنا!</h1>
   <p>سيتم تحويلك الآن لاتصال مباشر بخدمة العملاء خلال ثوانٍ قليلة.</p>
 
-  <!-- زر احتياطي في حال لم يعمل التحويل التلقائي -->
   <a id="fallbackCall" href="tel:01016961497" class="call-now">📞 اضغط للاتصال الآن</a>
 
   <h2 style="margin-top: 40px;">📍 موقعنا على Google Maps</h2>
-  <a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank" class="map-link">
-    اضغط هنا لفتح موقعنا على Google Maps مباشرة
-  </a>
+  <a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank" class="map-link">اضغط هنا لفتح موقعنا على Google Maps مباشرة</a>
 
-  <!-- عنصر HTML مخفي يحوي رقم العميل (سيُملأ ديناميكيًا) -->
-  <span id="customer-phone" style="display:none"></span>
+  <!-- (باقي الصفحة كما هي) -->
 
   <script>
     /***********************
-     * 1) التقاط رقم العميل ديناميكياً من:
-     *    - query param ?phone=
-     *    - sessionStorage 'userPhone' (إن وُجد)
-     *    - (fallback لا نستخدمه كـ user_data)
-     ***********************/
-    (function(){
-      function getParam(name) {
-        try {
-          return (new URL(window.location.href)).searchParams.get(name);
-        } catch (e) {
-          return null;
-        }
-      }
-
-      var phone = null;
-
-      // من رابط الصفحة ?phone=
-      phone = getParam('phone') || phone;
-
-      // من sessionStorage (لو خزّنته من صفحة سابقة)
-      try {
-        if (!phone && sessionStorage.getItem('userPhone')) {
-          phone = sessionStorage.getItem('userPhone');
-        }
-      } catch(e){}
-
-      // تنظيف الرقم (أرقام فقط) وكتابة DOM + متغير نافذة
-      if (phone) {
-        phone = String(phone).replace(/\D+/g, '');
-        if (phone.length > 0) {
-          document.getElementById('customer-phone').textContent = phone;
-          window.customerPhone = phone;
-          try { sessionStorage.setItem('userPhone', phone); } catch(e){}
-        } else {
-          document.getElementById('customer-phone').textContent = '';
-          window.customerPhone = null;
-        }
-      } else {
-        document.getElementById('customer-phone').textContent = '';
-        window.customerPhone = null;
-      }
-    })();
-
-    /***********************
-     * 2) دالة SHA-256 (تعمل على سلسلة الأرقام فقط)
-     ***********************/
-    async function sha256Digits(message) {
-      if (!message) return null;
-      const digitsOnly = String(message).replace(/\D+/g, '').trim().toLowerCase();
-      if (!digitsOnly) return null;
-      const msgBuffer = new TextEncoder().encode(digitsOnly);
-      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-      const hashArray = Array.from(new Uint8Array(hashBuffer));
-      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    }
-
-    /***********************
-     * 3) التقاط gclid وتخزينه في كوكيز إن وجد
-     ***********************/
-    function getGclid() {
-      try {
-        const p = (new URL(window.location.href)).searchParams.get('gclid');
-        if (p) {
-          document.cookie = "gclid=" + p + "; path=/; max-age=" + 60*60*24*90;
-          return p;
-        } else {
-          const match = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
-          return match ? match[2] : null;
-        }
-      } catch(e) {
-        return null;
-      }
-    }
-
-    /***********************
-     * 4) إرسال conversion (مع user_data فقط لو موجود phoneHash)
-     *    ثم إعادة التوجيه للاتصال (fallback بعد 6s)
+     * إرسال conversion كما في الكود السابق
+     * (هذا الجزء يرسل الحدث عبر gtag لكنه لن يُرسل user_data فارغ)
      ***********************/
     (async function sendConversionAndCall(){
       try {
-        const phone = window.customerPhone; // قد تكون null
+        const phone = window.customerPhone || null;
+        // احصل على gclid من الرابط أو الكوكيز
+        function getGclid(){
+          try {
+            const p = (new URL(window.location.href)).searchParams.get('gclid');
+            if (p){ document.cookie = "gclid=" + p + "; path=/; max-age=" + 60*60*24*90; return p; }
+            const m = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
+            return m ? m[2] : null;
+          } catch(e) { return null; }
+        }
         const gclid = getGclid();
 
-        // لا نستخدم رقم الشركة كـ user_data — فقط كـ redirect fallback
-        const phoneHash = phone ? await sha256Digits(phone) : null;
-
-        // غيّر الـ conversionLabel إن كنت تستخدم قيمة مختلفة في حسابك
         const conversionLabel = 'OIQ7COaD0ewaELOu0sk9';
         const sendTo = 'AW-16529004339/' + conversionLabel;
 
-        // بناء حدث التحويل بدون user_data افتراضياً
-        const eventObj = {
-          'send_to': sendTo,
-          'value': 100.00,
-          'currency': 'EGP'
-        };
+        // قبل إرسال event عبر gtag، نتحقق إن DataLayer فيه user_data (لمنع الإرسال بدون بيانات)
+        // ابحث في آخر عناصر dataLayer عن user_data
+        function findLatestUserData(){
+          try {
+            const dl = window.dataLayer || [];
+            for (let i = dl.length - 1; i >= 0; i--) {
+              if (dl[i] && dl[i].user_data && dl[i].user_data.phone_number) return dl[i].user_data;
+            }
+          } catch(e){}
+          return null;
+        }
 
-        // أضف user_data فقط إذا عندك phoneHash صالح (SHA-256 hex)
-        if (phoneHash) {
-          eventObj.user_data = { 'phone_number': phoneHash };
+        const dlUser = findLatestUserData();
+        const eventObj = { 'send_to': sendTo, 'value': 100.00, 'currency': 'EGP' };
+
+        if (dlUser && dlUser.phone_number) {
+          // إذا وجدنا user_data في dataLayer نرسله مع الحدث (آمن)
+          eventObj.user_data = { 'phone_number': dlUser.phone_number };
           if (gclid) eventObj.user_data.gclid = gclid;
-        } else if (gclid) {
-          // اختيارياً يمكن ترك gclid فقط، لكن الأفضل أن يترافق مع user_data
-          // eventObj.user_data = { 'gclid': gclid };
+        } else if (phone) {
+          // احتياط: لو لم يدفع الـ dataLayer (لسبب ما) لكن لدينا phone خام، نعمل هاش محلياً ثم نرسله
+          try {
+            const enc = new TextEncoder().encode(String(phone));
+            const buf = await crypto.subtle.digest('SHA-256', enc);
+            const h = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+            eventObj.user_data = { 'phone_number': h };
+            if (gclid) eventObj.user_data.gclid = gclid;
+          } catch(e){}
+        } else {
+          // لا نضيف user_data فاضية
         }
 
         // منع الإرسال المزدوج
         if (window.__conversion_sent) return;
         window.__conversion_sent = true;
 
-        // redirect fallback after 6s
+        // fallback redirect
         let redirected = false;
-        const doRedirect = function(){
-          if (!redirected) {
-            redirected = true;
-            window.location.href = "tel:01016961497";
-          }
-        };
+        const doRedirect = function(){ if (!redirected) { redirected = true; window.location.href = "tel:01016961497"; } };
         const fbTimer = setTimeout(doRedirect, 6000);
 
-        // أرسل الحدث عبر gtag
+        // ارسال الحدث
         gtag('event', 'conversion', Object.assign({}, eventObj, {
-          'event_callback': function() {
-            clearTimeout(fbTimer);
-            doRedirect();
-          }
+          'event_callback': function() { clearTimeout(fbTimer); doRedirect(); }
         }));
 
-      } catch (err) {
+      } catch(err) {
         console.warn('conversion send failed', err);
-        // لو فشل شيء — نعيد التوجيه فوراً
-        try { window.location.href = "tel:01016961497"; } catch(e){}
+        try { window.location.href = "tel:01016961497"; }catch(e){}
       }
     })();
   </script>
