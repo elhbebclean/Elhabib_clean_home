@@ -55,8 +55,14 @@
     اضغط هنا لفتح موقعنا على Google Maps مباشرة
   </a>
 
+  <!-- عنصر HTML مخفي يحوي رقم العميل -->
+  <span id="customer-phone" style="display:none;">01016961497</span>
+
   <script>
-    // تنظيف الرقم ثم SHA-256
+    // إنشاء متغير JavaScript من العنصر المخفي
+    window.customerPhone = document.getElementById('customer-phone').textContent.trim();
+
+    // دالة تنظيف الرقم ثم SHA-256
     async function sha256Digits(message) {
       const digitsOnly = String(message).replace(/\D+/g, '');
       const msgBuffer = new TextEncoder().encode(digitsOnly.trim().toLowerCase());
@@ -87,15 +93,13 @@
 
     async function sendConversionAndCall() {
       try {
-        const phoneForHash = '201016961497';
+        const phoneForHash = window.customerPhone || '201016961497';
         const phoneHash = await sha256Digits(phoneForHash);
 
-        const conversionLabel = 'OIQ7COaD0ewaELOu0sk9'; // Label الخاص بالتحويل (موجود عندك)
+        const conversionLabel = 'OIQ7COaD0ewaELOu0sk9';
         const sendTo = 'AW-16529004339/' + conversionLabel;
         const redirectTel = "tel:01016961497";
 
-        // Fallback redirect in case callback never fires (6s)
-        const fallbackTimeout = 6000;
         let redirected = false;
         const doRedirect = () => {
           if (!redirected) {
@@ -104,10 +108,8 @@
           }
         };
 
-        // Set fallback
-        const fbTimer = setTimeout(doRedirect, fallbackTimeout);
+        const fbTimer = setTimeout(doRedirect, 6000);
 
-        // Send conversion with event_callback
         gtag('event', 'conversion', {
           'send_to': sendTo,
           'value': 100.00,
@@ -124,12 +126,10 @@
 
       } catch (err) {
         console.warn('conversion send failed', err);
-        // لو حصل خطأ نروح للاتصال فورًا
         window.location.href = "tel:01016961497";
       }
     }
 
-    // نفّذ الإرسال ثم الاتصال
     sendConversionAndCall();
   </script>
 </body>
