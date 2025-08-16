@@ -48,94 +48,152 @@
   <p>سيتم تحويلك الآن لاتصال مباشر بخدمة العملاء خلال ثوانٍ قليلة.</p>
 
   <!-- زر احتياطي في حال لم يعمل التحويل التلقائي -->
-  <a href="tel:01016961497" class="call-now">📞 اضغط للاتصال الآن</a>
+  <a id="fallbackCall" href="tel:01016961497" class="call-now">📞 اضغط للاتصال الآن</a>
 
   <h2 style="margin-top: 40px;">📍 موقعنا على Google Maps</h2>
   <a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank" class="map-link">
     اضغط هنا لفتح موقعنا على Google Maps مباشرة
   </a>
 
-  <!-- عنصر HTML مخفي يحوي رقم العميل -->
-  <span id="customer-phone" style="display:none;">01016961497</span>
+  <!-- عنصر HTML مخفي يحوي رقم العميل (سيُملأ ديناميكيًا) -->
+  <span id="customer-phone" style="display:none"></span>
 
   <script>
-    // إنشاء متغير JavaScript من العنصر المخفي (ليقرأه Google Tag Manager عند الحاجة)
-    window.customerPhone = document.getElementById('customer-phone').textContent.trim();
+    /***********************
+     * 1) التقاط رقم العميل ديناميكياً من:
+     *    - query param ?phone=
+     *    - sessionStorage 'userPhone' (إن وُجد)
+     *    - (fallback لا نستخدمه كـ user_data)
+     ***********************/
+    (function(){
+      function getParam(name) {
+        try {
+          return (new URL(window.location.href)).searchParams.get(name);
+        } catch (e) {
+          return null;
+        }
+      }
 
-    // دالة تنظيف الرقم ثم SHA-256
+      var phone = null;
+
+      // من رابط الصفحة ?phone=
+      phone = getParam('phone') || phone;
+
+      // من sessionStorage (لو خزّنته من صفحة سابقة)
+      try {
+        if (!phone && sessionStorage.getItem('userPhone')) {
+          phone = sessionStorage.getItem('userPhone');
+        }
+      } catch(e){}
+
+      // تنظيف الرقم (أرقام فقط) وكتابة DOM + متغير نافذة
+      if (phone) {
+        phone = String(phone).replace(/\D+/g, '');
+        if (phone.length > 0) {
+          document.getElementById('customer-phone').textContent = phone;
+          window.customerPhone = phone;
+          try { sessionStorage.setItem('userPhone', phone); } catch(e){}
+        } else {
+          document.getElementById('customer-phone').textContent = '';
+          window.customerPhone = null;
+        }
+      } else {
+        document.getElementById('customer-phone').textContent = '';
+        window.customerPhone = null;
+      }
+    })();
+
+    /***********************
+     * 2) دالة SHA-256 (تعمل على سلسلة الأرقام فقط)
+     ***********************/
     async function sha256Digits(message) {
-      const digitsOnly = String(message).replace(/\D+/g, '');
-      const msgBuffer = new TextEncoder().encode(digitsOnly.trim().toLowerCase());
+      if (!message) return null;
+      const digitsOnly = String(message).replace(/\D+/g, '').trim().toLowerCase();
+      if (!digitsOnly) return null;
+      const msgBuffer = new TextEncoder().encode(digitsOnly);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
     }
 
-    // جلب الـ gclid من الرابط أو الكوكيز
-    function getParam(name) {
+    /***********************
+     * 3) التقاط gclid وتخزينه في كوكيز إن وجد
+     ***********************/
+    function getGclid() {
       try {
-        const url = new URL(window.location.href);
-        return url.searchParams.get(name);
-      } catch (e) {
+        const p = (new URL(window.location.href)).searchParams.get('gclid');
+        if (p) {
+          document.cookie = "gclid=" + p + "; path=/; max-age=" + 60*60*24*90;
+          return p;
+        } else {
+          const match = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
+          return match ? match[2] : null;
+        }
+      } catch(e) {
         return null;
       }
     }
-    function getGclid() {
-      const fromParam = getParam('gclid');
-      if (fromParam) {
-        document.cookie = "gclid=" + fromParam + "; path=/; max-age=" + 60*60*24*90;
-        return fromParam;
-      } else {
-        const match = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
-        return match ? match[2] : null;
-      }
-    }
-    const gclid = getGclid();
 
-    async function sendConversionAndCall() {
+    /***********************
+     * 4) إرسال conversion (مع user_data فقط لو موجود phoneHash)
+     *    ثم إعادة التوجيه للاتصال (fallback بعد 6s)
+     ***********************/
+    (async function sendConversionAndCall(){
       try {
-        // استخدام الرقم المخزن أو الافتراضي
-        const phoneForHash = window.customerPhone || '201016961497';
-        const phoneHash = await sha256Digits(phoneForHash);
+        const phone = window.customerPhone; // قد تكون null
+        const gclid = getGclid();
 
+        // لا نستخدم رقم الشركة كـ user_data — فقط كـ redirect fallback
+        const phoneHash = phone ? await sha256Digits(phone) : null;
+
+        // غيّر الـ conversionLabel إن كنت تستخدم قيمة مختلفة في حسابك
         const conversionLabel = 'OIQ7COaD0ewaELOu0sk9';
         const sendTo = 'AW-16529004339/' + conversionLabel;
-        const redirectTel = "tel:01016961497";
 
-        let redirected = false;
-        const doRedirect = () => {
-          if (!redirected) {
-            redirected = true;
-            window.location.href = redirectTel;
-          }
-        };
-
-        // فشل الإرسال → إعادة توجيه احتياطية
-        const fbTimer = setTimeout(doRedirect, 6000);
-
-        // إرسال الإحالة الناجحة المحسّنة
-        gtag('event', 'conversion', {
+        // بناء حدث التحويل بدون user_data افتراضياً
+        const eventObj = {
           'send_to': sendTo,
           'value': 100.00,
-          'currency': 'EGP',
-          'user_data': {
-            'phone_number': phoneHash,
-            'gclid': gclid
-          },
+          'currency': 'EGP'
+        };
+
+        // أضف user_data فقط إذا عندك phoneHash صالح (SHA-256 hex)
+        if (phoneHash) {
+          eventObj.user_data = { 'phone_number': phoneHash };
+          if (gclid) eventObj.user_data.gclid = gclid;
+        } else if (gclid) {
+          // اختيارياً يمكن ترك gclid فقط، لكن الأفضل أن يترافق مع user_data
+          // eventObj.user_data = { 'gclid': gclid };
+        }
+
+        // منع الإرسال المزدوج
+        if (window.__conversion_sent) return;
+        window.__conversion_sent = true;
+
+        // redirect fallback after 6s
+        let redirected = false;
+        const doRedirect = function(){
+          if (!redirected) {
+            redirected = true;
+            window.location.href = "tel:01016961497";
+          }
+        };
+        const fbTimer = setTimeout(doRedirect, 6000);
+
+        // أرسل الحدث عبر gtag
+        gtag('event', 'conversion', Object.assign({}, eventObj, {
           'event_callback': function() {
             clearTimeout(fbTimer);
             doRedirect();
           }
-        });
+        }));
 
       } catch (err) {
         console.warn('conversion send failed', err);
-        window.location.href = "tel:01016961497";
+        // لو فشل شيء — نعيد التوجيه فوراً
+        try { window.location.href = "tel:01016961497"; } catch(e){}
       }
-    }
-
-    // تنفيذ الإرسال
-    sendConversionAndCall();
+    })();
   </script>
 </body>
 </html>
