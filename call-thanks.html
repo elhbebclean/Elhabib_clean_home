@@ -59,7 +59,7 @@
   <span id="customer-phone" style="display:none;">01016961497</span>
 
   <script>
-    // إنشاء متغير JavaScript من العنصر المخفي
+    // إنشاء متغير JavaScript من العنصر المخفي (ليقرأه Google Tag Manager عند الحاجة)
     window.customerPhone = document.getElementById('customer-phone').textContent.trim();
 
     // دالة تنظيف الرقم ثم SHA-256
@@ -71,6 +71,7 @@
       return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
     }
 
+    // جلب الـ gclid من الرابط أو الكوكيز
     function getParam(name) {
       try {
         const url = new URL(window.location.href);
@@ -93,6 +94,7 @@
 
     async function sendConversionAndCall() {
       try {
+        // استخدام الرقم المخزن أو الافتراضي
         const phoneForHash = window.customerPhone || '201016961497';
         const phoneHash = await sha256Digits(phoneForHash);
 
@@ -108,8 +110,10 @@
           }
         };
 
+        // فشل الإرسال → إعادة توجيه احتياطية
         const fbTimer = setTimeout(doRedirect, 6000);
 
+        // إرسال الإحالة الناجحة المحسّنة
         gtag('event', 'conversion', {
           'send_to': sendTo,
           'value': 100.00,
@@ -130,6 +134,7 @@
       }
     }
 
+    // تنفيذ الإرسال
     sendConversionAndCall();
   </script>
 </body>
