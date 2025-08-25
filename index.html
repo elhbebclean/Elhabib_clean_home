@@ -112,8 +112,8 @@ img, iframe { loading:lazy; }
 
 <main>
 <h2>🎯 خصم 15% لأول مرة و50% للعملاء المنتظمين!</h2>
-<!-- روابط توجه لصفحات الشكر -->
-<a href="call-thanks.html" class="btn btn-call" aria-label="اتصال الآن بشركة تنظيف منازل بالقاهرة ElHabib Clean">📞 اتصل الآن</a>
+<!-- تم تعديل رابط زر الاتصال فقط لإضافة src=callbtn -->
+<a href="call-thanks.html?src=callbtn" class="btn btn-call" aria-label="اتصال الآن بشركة تنظيف منازل بالقاهرة ElHabib Clean">📞 اتصل الآن</a>
 <a href="thankyou-whatsapp.html" class="btn btn-whatsapp" aria-label="تواصل واتساب مع شركة تنظيف منازل بالقاهرة ElHabib Clean">💬 واتساب سريع</a>
 
 <section>
@@ -200,47 +200,31 @@ img, iframe { loading:lazy; }
 
 <script>
 /* نحتفظ بقراءة gclid لتحويله إلى صفحات الشكر إذا أردت لاحقًا،
-   ونخزن نية التحويل في localStorage عند الضغط على الزر.
-   صفحة الشكر سَتتحقق من هذا المفتاح قبل تسجيل التحويل النهائي. */
+   لكن لا نسجّل أي إحالة من هنا — التسجيل سيتم في صفحات الشكر */
+function getParam(p) {
+  var url = new URL(window.location.href);
+  return url.searchParams.get(p);
+}
+var gclid = getParam('gclid');
 
-(function(){
-  function getParam(p){
-    try {
-      var url = new URL(window.location.href);
-      return url.searchParams.get(p);
-    } catch(e){ return null; }
-  }
-  var gclid = getParam('gclid') || null;
+document.addEventListener("DOMContentLoaded", function () {
+  // تحسينات إمكانية الوصول وSEO (تبقى كما هي)
+  try {
+    var callButton = document.querySelector('.btn-call');
+    if (callButton) callButton.setAttribute('aria-label','اتصال الآن بشركة تنظيف منازل بالقاهرة ElHabib Clean');
 
-  function markConversionIntent(type){
-    try {
-      var payload = {
-        type: type,              // 'whatsapp' أو 'call'
-        gclid: gclid,            // أو null
-        ts: Date.now()
-      };
-      localStorage.setItem('elb_last_action', JSON.stringify(payload));
-    } catch(e){ console.warn('localStorage error', e); }
-  }
-
-  document.addEventListener('DOMContentLoaded', function(){
-    var callBtn = document.querySelector('.btn-call');
-    if(callBtn){
-      callBtn.addEventListener('click', function(){
-        markConversionIntent('call');
-        // الرابط في href سيأخذ الزائر لصفحة الشكر
-      });
-    }
-
-    var whatsappBtns = document.querySelectorAll('.btn-whatsapp, #whatsapp-fixed');
-    whatsappBtns.forEach(function(btn){
-      btn.addEventListener('click', function(){
-        markConversionIntent('whatsapp');
-        // الرابط في href سيأخذ الزائر لصفحة الشكر
-      });
+    document.querySelectorAll('.btn-whatsapp, #whatsapp-fixed').forEach(function(el){
+      el.setAttribute('aria-label','تواصل واتساب مع شركة تنظيف منازل بالقاهرة ElHabib Clean');
+      el.setAttribute('title','واتساب شركة تنظيف منازل بالقاهرة');
     });
-  });
-})();
+
+    document.querySelectorAll('section img').forEach(function(img,idx){
+      if(!img.getAttribute('alt')){
+        img.setAttribute('alt','أعمال تنظيف منازل - ElHabib Clean - صورة رقم '+(idx+1));
+      }
+    });
+  } catch(e){}
+});
 </script>
 
 </body>
