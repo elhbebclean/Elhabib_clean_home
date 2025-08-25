@@ -8,81 +8,95 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://elhbebclean.github.io/Elhabib_clean_home/call-thanks.html">
 
-  <!-- مهم: نعرّف dataLayer مبكّر -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-  </script>
+  <!-- تعريف مبكر للـ dataLayer -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
 
-  <!-- ---------- سكربت يلتقط الرقم ويعمل هاش ويدفعه للـ dataLayer ---------- -->
+  <!-- التحقق من طريقة الوصول للصفحة -->
   <script>
     (function(){
-      // مساعدة لالتقاط باراميتر من الرابط
       function getParam(name) {
         try { return (new URL(window.location.href)).searchParams.get(name); } catch(e) { return null; }
       }
 
-      // التقط الرقم من ?phone= أو من sessionStorage
-      var phone = getParam('phone') || null;
-      try {
-        if (!phone && sessionStorage.getItem && sessionStorage.getItem('userPhone')) {
-          phone = sessionStorage.getItem('userPhone');
-        }
-      } catch(e){ phone = phone || null; }
+      // شرط 1: باراميتر src=callbtn
+      var srcOk = getParam('src') === 'callbtn';
 
-      if (!phone) {
-        // لا ندفع أي user_data فاضي — نترك dataLayer كما هو
-        window.customerPhone = null;
-        return;
+      // شرط 2: referrer من نفس الدومين وجاي من الصفحة الرئيسية
+      var refOk = false;
+      try {
+        if (document.referrer) {
+          var refUrl = new URL(document.referrer);
+          var sameHost = (refUrl.hostname === location.hostname);
+          var path = refUrl.pathname || '/';
+          // الصفحة الرئيسية لديك إما index.html أو الجذر /Elhabib_clean_home/
+          var isHome = /index\.html$/i.test(path) || /\/Elhabib_clean_home\/?$/i.test(path);
+          refOk = sameHost && isHome;
+        }
+      } catch(e){ refOk = false; }
+
+      // شرط 3: فلاج في السيشن ستوريدج (اختياري للاستخدام مستقبلاً)
+      var ssOk = false;
+      try { ssOk = sessionStorage.getItem('from_call_btn') === '1'; } catch(e){}
+
+      // النتيجة النهائية: لازم واحد على الأقل
+      window.__eligible_for_conversion = !!(srcOk || refOk || ssOk);
+    })();
+  </script>
+
+  <!-- سكربت هاش رقم الهاتف ودفعه للـ dataLayer (Enhanced Conversions) -->
+  <script>
+    (function(){
+      function getParam(name) {
+        try { return (new URL(window.location.href)).searchParams.get(name); } catch(e) { return null; }
       }
 
-      // تنظيف الرقم: ارقام فقط
+      // نلتقط ?phone= أو من sessionStorage
+      var phone = getParam('phone') || null;
+      try {
+        if (!phone && sessionStorage.getItem) {
+          phone = sessionStorage.getItem('userPhone') || null;
+        }
+      } catch(e){}
+
+      if (!phone) { window.customerPhone = null; return; }
+
       phone = String(phone).replace(/\D+/g,'').trim();
       if (!phone) { window.customerPhone = null; return; }
       window.customerPhone = phone;
 
-      // SHA-256 helper -> hex
       async function sha256Hex(s){
         const enc = new TextEncoder().encode(String(s));
         const buf = await crypto.subtle.digest('SHA-256', enc);
         return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
       }
 
-      // احسب الهَش وادفعه فورًا للـ dataLayer (قبل تحميل GTM tags)
       (async function pushHash(){
         try {
           const phoneHash = await sha256Hex(phone);
-          // دفع user_data بصيغة متعارف عليها
           window.dataLayer.push({
             'event': 'enhanced_conv_ready',
-            'user_data': {
-              'phone_number': phoneHash
-            }
+            'user_data': { 'phone_number': phoneHash }
           });
-          // خزّن الرقم خام للاستخدام لاحقاً (اختياري)
           try { sessionStorage.setItem('userPhone', phone); } catch(e){}
-          console.log('Pushed enhanced_conv_ready with phone hash to dataLayer');
         } catch(err) {
           console.warn('Failed to push enhanced conv data', err);
         }
       })();
     })();
   </script>
-  <!-- --------------------------------------------------------------------- -->
 
-  <!-- Google Tag Manager (gtm.js) / Google Ads - يبقى بعد دفع dataLayer -->
+  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[];
       w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KLM4RMFM');
   </script>
 
-  <!-- Google Ads gtag (يبقى بعد الـ dataLayer وGTM) -->
+  <!-- Google Ads gtag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
   <script>
     function gtag(){window.dataLayer.push(arguments);}
@@ -110,17 +124,16 @@
   <h2 style="margin-top: 40px;">📍 موقعنا على Google Maps</h2>
   <a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank" class="map-link">اضغط هنا لفتح موقعنا على Google Maps مباشرة</a>
 
-  <!-- (باقي الصفحة كما هي) -->
-
   <script>
-    /***********************
-     * إرسال conversion كما في الكود السابق
-     * (هذا الجزء يرسل الحدث عبر gtag لكنه لن يُرسل user_data فارغ)
-     ***********************/
     (async function sendConversionAndCall(){
       try {
-        const phone = window.customerPhone || null;
-        // احصل على gclid من الرابط أو الكوكيز
+        // لو الوصول للصفحة غير مؤهل ما نبعتش إحالة
+        if (!window.__eligible_for_conversion) {
+          console.warn('Visit not eligible for conversion (opened directly or from unknown source).');
+          // ما فيش تحويل تلقائي، نخلي الزائر يستخدم زر الاتصال اليدوي
+          return;
+        }
+
         function getGclid(){
           try {
             const p = (new URL(window.location.href)).searchParams.get('gclid');
@@ -134,8 +147,6 @@
         const conversionLabel = 'OIQ7COaD0ewaELOu0sk9';
         const sendTo = 'AW-16529004339/' + conversionLabel;
 
-        // قبل إرسال event عبر gtag، نتحقق إن DataLayer فيه user_data (لمنع الإرسال بدون بيانات)
-        // ابحث في آخر عناصر dataLayer عن user_data
         function findLatestUserData(){
           try {
             const dl = window.dataLayer || [];
@@ -146,15 +157,14 @@
           return null;
         }
 
+        const phone = window.customerPhone || null;
         const dlUser = findLatestUserData();
         const eventObj = { 'send_to': sendTo, 'value': 100.00, 'currency': 'EGP' };
 
         if (dlUser && dlUser.phone_number) {
-          // إذا وجدنا user_data في dataLayer نرسله مع الحدث (آمن)
           eventObj.user_data = { 'phone_number': dlUser.phone_number };
           if (gclid) eventObj.user_data.gclid = gclid;
         } else if (phone) {
-          // احتياط: لو لم يدفع الـ dataLayer (لسبب ما) لكن لدينا phone خام، نعمل هاش محلياً ثم نرسله
           try {
             const enc = new TextEncoder().encode(String(phone));
             const buf = await crypto.subtle.digest('SHA-256', enc);
@@ -162,20 +172,15 @@
             eventObj.user_data = { 'phone_number': h };
             if (gclid) eventObj.user_data.gclid = gclid;
           } catch(e){}
-        } else {
-          // لا نضيف user_data فاضية
         }
 
-        // منع الإرسال المزدوج
         if (window.__conversion_sent) return;
         window.__conversion_sent = true;
 
-        // fallback redirect
         let redirected = false;
         const doRedirect = function(){ if (!redirected) { redirected = true; window.location.href = "tel:01016961497"; } };
         const fbTimer = setTimeout(doRedirect, 6000);
 
-        // ارسال الحدث
         gtag('event', 'conversion', Object.assign({}, eventObj, {
           'event_callback': function() { clearTimeout(fbTimer); doRedirect(); }
         }));
