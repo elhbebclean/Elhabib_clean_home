@@ -47,38 +47,33 @@ window.dataLayer = window.dataLayer || [];
   window.__eligible_for_conversion = srcOk || refOk;
 })();
 
-// إطلاق التريجر قبل إرسال الحدث
-window.dataLayer.push({'event':'EV - whatsapp_conversion_fired'});
+// إطلاق التريجر وإرسال الحدث
+if(window.__eligible_for_conversion){
+  window.dataLayer.push({'event':'EV - whatsapp_conversion_fired'});
 
-// حدث التحويل و إعادة التوجيه
-(async function(){
-  if(!window.__eligible_for_conversion){
-    console.warn('الزيارة غير مؤهلة لتسجيل التحويل (واتساب)');
-    return;
-  }
+  (async function(){
+    const phone = '201016961497';
+    async function sha256Hex(s){
+      const enc = new TextEncoder().encode(String(s));
+      const buf = await crypto.subtle.digest('SHA-256', enc);
+      return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+    }
+    const phoneHash = await sha256Hex(phone);
+    const gclid = (new URL(window.location.href)).searchParams.get('gclid') || 
+                  (document.cookie.match(/(^| )gclid=([^;]+)/) ? document.cookie.match(/(^| )gclid=([^;]+)/)[2] : null);
 
-  const phone = '201016961497';
-  async function sha256Hex(s){
-    const enc = new TextEncoder().encode(String(s));
-    const buf = await crypto.subtle.digest('SHA-256', enc);
-    return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
-  }
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
+      'value': 1.0,
+      'currency': 'EGP',
+      'user_data': { 'phone_number': phoneHash, 'gclid': gclid }
+    });
 
-  const phoneHash = await sha256Hex(phone);
-  const gclid = (new URL(window.location.href)).searchParams.get('gclid') || 
-                (document.cookie.match(/(^| )gclid=([^;]+)/) ? document.cookie.match(/(^| )gclid=([^;]+)/)[2] : null);
-
-  // إرسال حدث التحويل إلى Google Ads
-  gtag('event', 'conversion', {
-    'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
-    'value': 1.0,
-    'currency': 'EGP',
-    'user_data': { 'phone_number': phoneHash, 'gclid': gclid }
-  });
-
-  // إعادة التوجيه بعد 3.5 ثانية
-  setTimeout(()=>{ window.location.href='https://wa.me/201016961497'; }, 3500);
-})();
+    setTimeout(()=>{ window.location.href='https://wa.me/201016961497'; }, 3500);
+  })();
+}else{
+  console.warn('الزيارة غير مؤهلة لتسجيل التحويل (واتساب)');
+}
 </script>
 </body>
 </html>
