@@ -96,7 +96,7 @@
     })(window,document,'script','dataLayer','GTM-KLM4RMFM');
   </script>
 
-  <!-- Google Ads gtag -->
+  <!-- Google Ads gtag (مسموح إبقاؤه، لكن التحويل الآن عبر dataLayer event) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
   <script>
     function gtag(){window.dataLayer.push(arguments);}
@@ -125,71 +125,85 @@
   <a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank" class="map-link">اضغط هنا لفتح موقعنا على Google Maps مباشرة</a>
 
   <script>
-    (async function sendConversionAndCall(){
-      try {
-        // لو الوصول للصفحة غير مؤهل ما نبعتش إحالة
-        if (!window.__eligible_for_conversion) {
-          console.warn('Visit not eligible for conversion (opened directly or from unknown source).');
-          // ما فيش تحويل تلقائي، نخلي الزائر يستخدم زر الاتصال اليدوي
-          return;
-        }
-
-        function getGclid(){
-          try {
-            const p = (new URL(window.location.href)).searchParams.get('gclid');
-            if (p){ document.cookie = "gclid=" + p + "; path=/; max-age=" + 60*60*24*90; return p; }
-            const m = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
-            return m ? m[2] : null;
-          } catch(e) { return null; }
-        }
-        const gclid = getGclid();
-
-        const conversionLabel = 'OIQ7COaD0ewaELOu0sk9';
-        const sendTo = 'AW-16529004339/' + conversionLabel;
-
-        function findLatestUserData(){
-          try {
-            const dl = window.dataLayer || [];
-            for (let i = dl.length - 1; i >= 0; i--) {
-              if (dl[i] && dl[i].user_data && dl[i].user_data.phone_number) return dl[i].user_data;
-            }
-          } catch(e){}
-          return null;
-        }
-
-        const phone = window.customerPhone || null;
-        const dlUser = findLatestUserData();
-        const eventObj = { 'send_to': sendTo, 'value': 100.00, 'currency': 'EGP' };
-
-        if (dlUser && dlUser.phone_number) {
-          eventObj.user_data = { 'phone_number': dlUser.phone_number };
-          if (gclid) eventObj.user_data.gclid = gclid;
-        } else if (phone) {
-          try {
-            const enc = new TextEncoder().encode(String(phone));
-            const buf = await crypto.subtle.digest('SHA-256', enc);
-            const h = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
-            eventObj.user_data = { 'phone_number': h };
-            if (gclid) eventObj.user_data.gclid = gclid;
-          } catch(e){}
-        }
-
-        if (window.__conversion_sent) return;
-        window.__conversion_sent = true;
-
-        let redirected = false;
-        const doRedirect = function(){ if (!redirected) { redirected = true; window.location.href = "tel:01016961497"; } };
-        const fbTimer = setTimeout(doRedirect, 6000);
-
-        gtag('event', 'conversion', Object.assign({}, eventObj, {
-          'event_callback': function() { clearTimeout(fbTimer); doRedirect(); }
-        }));
-
-      } catch(err) {
-        console.warn('conversion send failed', err);
-        try { window.location.href = "tel:01016961497"; }catch(e){}
+  (async function sendConversionAndCall(){
+    try {
+      // إذا الدخول غير مؤهل: لا نرسل تحويل ونتوقف
+      if (!window.__eligible_for_conversion) {
+        console.warn('Visit not eligible for conversion (opened directly or from unknown source).');
+        return;
       }
-    })();
+
+      // قراءة gclid من الـ URL أو الكوكي
+      function getGclid(){
+        try {
+          const p = (new URL(window.location.href)).searchParams.get('gclid');
+          if (p){ document.cookie = "gclid=" + p + "; path=/; max-age=" + 60*60*24*90; return p; }
+          const m = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
+          return m ? m[2] : null;
+        } catch(e) { return null; }
+      }
+      const gclid = getGclid();
+
+      // إيجاد آخر user_data في dataLayer (إن وُجد)
+      function findLatestUserData(){
+        try {
+          const dl = window.dataLayer || [];
+          for (let i = dl.length - 1; i >= 0; i--) {
+            if (dl[i] && dl[i].user_data && dl[i].user_data.phone_number) return dl[i].user_data;
+          }
+        } catch(e){}
+        return null;
+      }
+
+      const phone = window.customerPhone || null;
+      const dlUser = findLatestUserData();
+
+      // جهّز payload للـ dataLayer event (اسم الحدث يتطابق مع التريجر في GTM)
+      const payload = {
+        event: 'call_conversion_fired', // تأكد أن التريجر في GTM يستمع لهذا الاسم
+        send_to: 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
+        value: 100.00,
+        currency: 'EGP'
+      };
+
+      if (dlUser && dlUser.phone_number) {
+        // إذا كان هناك user_data جاهز (هاش الهاتف) استخدمه
+        payload.user_data = dlUser;
+        if (gclid) payload.user_data.gclid = gclid;
+      } else if (phone) {
+        // لو لدينا رقم غير مشفر، هشّه وادخله
+        try {
+          const enc = new TextEncoder().encode(String(phone));
+          const buf = await crypto.subtle.digest('SHA-256', enc);
+          const h = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+          payload.user_data = { phone_number: h };
+          if (gclid) payload.user_data.gclid = gclid;
+        } catch(e){}
+      }
+
+      // منع الارسال المكرر
+      if (window.__conversion_sent) return;
+      window.__conversion_sent = true;
+
+      // دفع الحدث إلى dataLayer — GTM سيلتقطه ويشغّل الـ Tag المناسب
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(payload);
+
+      // امسح الفلاجز لتجنب تكرار التسجيل عند إعادة التحميل أو الرجوع
+      try {
+        sessionStorage.removeItem('from_call_btn');
+        // لو خزّنت userPhone وتريد الاحتفاظ به لعمليات لاحقة فاحتفظ، وإلا امسحه:
+        // sessionStorage.removeItem('userPhone');
+      } catch(e){}
+
+      // إعادة التوجّه للاتصال كنسخة احتياطية بعد وقت قصير
+      setTimeout(function(){ window.location.href = "tel:01016961497"; }, 1500);
+
+    } catch(err) {
+      console.warn('conversion send failed', err);
+      try { window.location.href = "tel:01016961497"; }catch(e){}
+    }
+  })();
   </script>
 </body>
 </html>
