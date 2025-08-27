@@ -202,8 +202,10 @@ img, iframe { loading:lazy; }
 /* نحتفظ بقراءة gclid لتحويله إلى صفحات الشكر إذا أردت لاحقًا،
    لكن لا نسجّل أي إحالة من هنا — التسجيل سيتم في صفحات الشكر */
 function getParam(p) {
-  var url = new URL(window.location.href);
-  return url.searchParams.get(p);
+  try {
+    var url = new URL(window.location.href);
+    return url.searchParams.get(p);
+  } catch(e) { return null; }
 }
 var gclid = getParam('gclid');
 
@@ -226,6 +228,83 @@ document.addEventListener("DOMContentLoaded", function () {
   } catch(e){}
 });
 </script>
+
+<!-- ==== إضافة سكربت التأكد من إرسال src/gclid/sessionStorage عند الضغط على الأزرار ==== -->
+<script>
+(function(){
+  // Helper: get param from current URL
+  function getParam(name){
+    try{ return (new URL(window.location.href)).searchParams.get(name); }catch(e){return null;}
+  }
+
+  // Append params to URL (keeps existing search)
+  function appendParams(url, params){
+    try{
+      var u = new URL(url, location.origin);
+      Object.keys(params).forEach(function(k){ if(params[k] !== null && params[k] !== undefined) u.searchParams.set(k, params[k]); });
+      return u.href;
+    }catch(e){ return url; }
+  }
+
+  // Read gclid from page if present, else from cookie
+  function readGclid(){
+    var g = getParam('gclid');
+    if(g) return g;
+    var m = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));
+    return m ? m[2] : null;
+  }
+
+  var gclidVal = readGclid();
+
+  // Handle whatsapp links/buttons
+  function protectWhatsappLinks(){
+    var selector = 'a.btn-whatsapp, a#whatsapp-fixed, a[href*="thankyou-whatsapp.html"]';
+    document.querySelectorAll(selector).forEach(function(a){
+      var href = a.getAttribute('href') || '';
+      // only process thankyou-whatsapp.html links
+      if(href.indexOf('thankyou-whatsapp.html') === -1) return;
+
+      // Update href immediately to include src and gclid (so middle-click or direct navigation gets params)
+      var newHref = appendParams(href, { src: 'whatsapp', gclid: gclidVal });
+      a.setAttribute('href', newHref);
+
+      // On click: set session flag (double check on thankyou page)
+      a.addEventListener('click', function(e){
+        try{ sessionStorage.setItem('from_whatsapp_btn', '1'); }catch(err){}
+        // ensure the href includes the params at moment of click
+        a.setAttribute('href', appendParams(href, { src: 'whatsapp', gclid: gclidVal }));
+        // allow normal navigation
+      });
+    });
+  }
+
+  // Handle call links/buttons
+  function protectCallLinks(){
+    var selector = 'a.btn-call, a[href*="call-thanks.html"]';
+    document.querySelectorAll(selector).forEach(function(a){
+      var href = a.getAttribute('href') || '';
+      if(href.indexOf('call-thanks.html') === -1) return;
+
+      // Update href right away (add gclid if available; src already present on call button)
+      var newHref = appendParams(href, { gclid: gclidVal });
+      a.setAttribute('href', newHref);
+
+      a.addEventListener('click', function(){
+        try{ sessionStorage.setItem('from_call_btn','1'); }catch(err){}
+        a.setAttribute('href', appendParams(href, { gclid: gclidVal }));
+      });
+    });
+  }
+
+  // Run on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function(){ protectWhatsappLinks(); protectCallLinks(); });
+  } else {
+    protectWhatsappLinks(); protectCallLinks();
+  }
+})();
+</script>
+<!-- ==== نهاية السكربت ==== -->
 
 </body>
 </html>
