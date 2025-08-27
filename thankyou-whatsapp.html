@@ -38,16 +38,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
 
-  // إطلاق حدث التحويل في GTM
-  dataLayer.push({'event':'whatsapp_conversion_fired'});
+  // التأكد أن التحويل لم يُسجّل مسبقاً
+  if(!localStorage.getItem('whatsapp_conversion_done')){
+    
+    // إطلاق حدث التحويل في GTM
+    dataLayer.push({'event':'whatsapp_conversion_fired'});
 
-  // إطلاق Google Ads Conversion باستخدام gtag
-  if(typeof gtag === 'function'){
-    gtag('event', 'conversion', {
-      'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
-      'value': 1.0,
-      'currency': 'EGP'
-    });
+    // إطلاق Google Ads Conversion باستخدام gtag
+    if(typeof gtag === 'function'){
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
+        'value': 1.0,
+        'currency': 'EGP'
+      });
+    }
+
+    // حفظ العلم لتجنب التكرار
+    localStorage.setItem('whatsapp_conversion_done', 'true');
   }
 
   // إعادة التوجيه بعد ثانيتين
