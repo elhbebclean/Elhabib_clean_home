@@ -47,8 +47,13 @@ window.dataLayer = window.dataLayer || [];
   window.__eligible_for_conversion = srcOk || refOk;
 })();
 
-// إطلاق التريجر وإرسال الحدث
-if(window.__eligible_for_conversion){
+// دفع الحدث بعد تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function() {
+  if(!window.__eligible_for_conversion){
+    console.warn('الزيارة غير مؤهلة لتسجيل التحويل (واتساب)');
+    return;
+  }
+
   window.dataLayer.push({'event':'EV - whatsapp_conversion_fired'});
 
   (async function(){
@@ -58,10 +63,12 @@ if(window.__eligible_for_conversion){
       const buf = await crypto.subtle.digest('SHA-256', enc);
       return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
     }
+
     const phoneHash = await sha256Hex(phone);
     const gclid = (new URL(window.location.href)).searchParams.get('gclid') || 
                   (document.cookie.match(/(^| )gclid=([^;]+)/) ? document.cookie.match(/(^| )gclid=([^;]+)/)[2] : null);
 
+    // إرسال حدث التحويل إلى Google Ads
     gtag('event', 'conversion', {
       'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
       'value': 1.0,
@@ -69,11 +76,10 @@ if(window.__eligible_for_conversion){
       'user_data': { 'phone_number': phoneHash, 'gclid': gclid }
     });
 
+    // إعادة التوجيه بعد 3.5 ثانية
     setTimeout(()=>{ window.location.href='https://wa.me/201016961497'; }, 3500);
   })();
-}else{
-  console.warn('الزيارة غير مؤهلة لتسجيل التحويل (واتساب)');
-}
+});
 </script>
 </body>
 </html>
