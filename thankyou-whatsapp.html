@@ -39,6 +39,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script>
 window.dataLayer = window.dataLayer || [];
 
+function gtag(){dataLayer.push(arguments);}
+
+// تأكد من تعريف gtag قبل استخدامه
+gtag('js', new Date());
+gtag('config', 'AW-16529004339');
+
 // تحقق من مصدر التحويل
 (function(){
   function getParam(name){ try{ return (new URL(window.location.href)).searchParams.get(name); }catch(e){return null;} }
@@ -65,11 +71,9 @@ window.dataLayer = window.dataLayer || [];
   const gclid = (new URL(window.location.href)).searchParams.get('gclid') || 
                 (document.cookie.match(/(^| )gclid=([^;]+)/) ? document.cookie.match(/(^| )gclid=([^;]+)/)[2] : null);
 
-  // إرسال حدث التحويل للـ GTM Data Layer
-  window.dataLayer.push({
-    'event': 'whatsapp_conversion_fired',
-    'conversion_id': 'AW-16529004339',
-    'conversion_label': 'G1k-CLeXxsMaELOu0sk9',
+  // إرسال حدث التحويل إلى Google Ads بعد التأكد من تهيئة gtag
+  gtag('event', 'conversion', {
+    'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
     'value': 1.0,
     'currency': 'EGP',
     'user_data': { 'phone_number': phoneHash, 'gclid': gclid }
