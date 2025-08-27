@@ -32,16 +32,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
 <h1>✅ شكراً لتواصلك معنا عبر الهاتف!</h1>
 <p>سيتم تحويلك الآن للاتصال مباشرة مع فريق ElHabib Clean.</p>
-<a href="tel:01016961497" class="button" id="manualCall">اضغط هنا إذا لم يتم الاتصال</a>
+<a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال</a>
 
 <script>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
-  
-  // منع التكرار
-  if(!window.callConversionFired){
-    window.callConversionFired = true;
 
+  // تحقق إذا تم تسجيل التحويل سابقًا
+  if(!localStorage.getItem('call_conversion_done')){
     // إطلاق حدث التحويل في GTM
     dataLayer.push({'event':'call_conversion_fired'});
 
@@ -54,17 +52,12 @@ window.addEventListener('load', function(){
       });
     }
 
-    // إعادة التوجيه بعد 2-3 ثواني
-    setTimeout(()=>{ window.location.href='tel:01016961497'; }, 2500);
+    // وضع علامة لتجنب التكرار
+    localStorage.setItem('call_conversion_done', 'true');
   }
 
-  // منع التكرار عند الضغط على الزر
-  document.getElementById('manualCall').addEventListener('click', function(e){
-    if(window.callConversionFired){
-      e.preventDefault(); // يمنع التكرار
-      window.location.href='tel:01016961497';
-    }
-  });
+  // إعادة التوجيه بعد ثانيتين
+  setTimeout(()=>{ window.location.href='tel:01016961497'; }, 2000);
 });
 </script>
 </body>
