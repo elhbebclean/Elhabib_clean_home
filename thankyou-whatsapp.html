@@ -37,10 +37,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
-  // إرسال حدث التحويل
-  dataLayer.push({'event':'EV - whatsapp_conversion_fired'});
 
-  // إعادة التوجيه بعد 2 ثانية
+  // إطلاق حدث التحويل في GTM
+  dataLayer.push({'event':'whatsapp_conversion_fired'});
+
+  // إطلاق Google Ads Conversion باستخدام gtag
+  if(typeof gtag === 'function'){
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
+      'value': 1.0,
+      'currency': 'EGP'
+    });
+  }
+
+  // إعادة التوجيه بعد ثانيتين
   setTimeout(()=>{ window.location.href='https://wa.me/201016961497'; }, 2000);
 });
 </script>
