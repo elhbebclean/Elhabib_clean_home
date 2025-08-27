@@ -2,8 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>تم التحويل إلى واتساب - شركة الحبيب لتنظيف المنازل</title>
-<meta name="description" content="شكراً لتواصلك معنا في شركة الحبيب لتنظيف المنازل. تم تحويلك إلى فريق الدعم على واتساب.">
+<title>تم التحويل إلى واتساب - ElHabib Clean</title>
+<meta name="description" content="شكراً لتواصلك معنا. جارٍ تحويلك إلى واتساب."/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 
@@ -11,7 +11,7 @@
 <script>
 (function(w,d,s,l,i){
   w[l]=w[l]||[];
-  w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
   var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
   j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
   f.parentNode.insertBefore(j,f);
@@ -19,11 +19,10 @@
 </script>
 
 <style>
-body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background-color: #f9f9f9; }
+body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background: #f9f9f9; }
 h1 { color: #25D366; font-size: 28px; }
 p { font-size: 18px; }
-a.button { display: inline-block; margin-top: 20px; padding: 12px 20px; background-color: #25D366; color: white; text-decoration: none; font-size: 18px; border-radius: 8px; }
-a.map-link { display: inline-block; margin-top: 25px; font-size: 18px; color: #007bff; text-decoration: underline; }
+a.button { display:inline-block; margin-top:20px; padding:12px 20px; background:#25D366; color:white; text-decoration:none; font-size:18px; border-radius:8px; }
 </style>
 </head>
 <body>
@@ -33,30 +32,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 <h1>✅ شكراً لتواصلك معنا عبر واتساب!</h1>
-<p>سيتم تحويلك الآن لمحادثة مباشرة على واتساب مع فريق الحبيب كلين.</p>
+<p>سيتم تحويلك الآن لمحادثة مباشرة على واتساب مع فريق ElHabib Clean.</p>
 
 <a href="https://wa.me/201016961497" class="button" target="_blank">اضغط هنا إذا لم يتم التحويل</a>
-
-<h2 style="margin-top: 40px;">📍 موقعنا على Google Maps</h2>
-<a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank" class="map-link">
-اضغط هنا لفتح موقعنا على Google Maps مباشرة
-</a>
 
 <script>
 window.dataLayer = window.dataLayer || [];
 
-// eligibility check: visit from WhatsApp button or from main page
+// تحقق من مصدر التحويل
 (function(){
   function getParam(name){ try{ return (new URL(window.location.href)).searchParams.get(name); }catch(e){return null;} }
   const srcOk = getParam('src')==='whatsapp';
-  const refOk = document.referrer.includes(location.hostname + '/Elhabib_clean_home/');
+  const refOk = document.referrer.includes(location.hostname);
   window.__eligible_for_conversion = srcOk || refOk;
 })();
 
-// Enhanced conversion & redirect
+// حدث التحويل و إعادة التوجيه
 (async function(){
   if(!window.__eligible_for_conversion){
-    console.warn('Visit not eligible for conversion (واتساب)');
+    console.warn('الزيارة غير مؤهلة لتسجيل التحويل (واتساب)');
     return;
   }
 
@@ -71,7 +65,7 @@ window.dataLayer = window.dataLayer || [];
   const gclid = (new URL(window.location.href)).searchParams.get('gclid') || 
                 (document.cookie.match(/(^| )gclid=([^;]+)/) ? document.cookie.match(/(^| )gclid=([^;]+)/)[2] : null);
 
-  // Google Ads conversion event
+  // إرسال حدث التحويل إلى Google Ads
   gtag('event', 'conversion', {
     'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
     'value': 1.0,
@@ -79,9 +73,8 @@ window.dataLayer = window.dataLayer || [];
     'user_data': { 'phone_number': phoneHash, 'gclid': gclid }
   });
 
-  // redirect after short delay
+  // إعادة التوجيه بعد 3.5 ثانية
   setTimeout(()=>{ window.location.href='https://wa.me/201016961497'; }, 3500);
-
 })();
 </script>
 </body>
