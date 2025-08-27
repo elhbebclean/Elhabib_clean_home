@@ -65,15 +65,17 @@ window.dataLayer = window.dataLayer || [];
   const gclid = (new URL(window.location.href)).searchParams.get('gclid') || 
                 (document.cookie.match(/(^| )gclid=([^;]+)/) ? document.cookie.match(/(^| )gclid=([^;]+)/)[2] : null);
 
-  // إرسال حدث التحويل إلى Google Ads
-  gtag('event', 'conversion', {
-    'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
+  // إرسال حدث التحويل للـ GTM Data Layer
+  window.dataLayer.push({
+    'event': 'call_conversion_fired',
+    'conversion_id': 'AW-16529004339',
+    'conversion_label': 'G1k-CLeXxsMaELOu0sk9',
     'value': 1.0,
     'currency': 'EGP',
     'user_data': { 'phone_number': phoneHash, 'gclid': gclid }
   });
 
-  // إعادة التوجيه تلقائياً بعد 3 ثوانٍ إلى رقم الهاتف
+  // إعادة التوجيه تلقائياً بعد 3 ثواني
   setTimeout(()=>{ window.location.href='tel:01016961497'; }, 3000);
 })();
 </script>
