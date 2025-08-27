@@ -1,168 +1,81 @@
-!DOCTYPE html>  <html lang="ar" dir="rtl">  
-<head>  
-  <meta charset="UTF-8">  
-  <title>تم التحويل للاتصال - شركة الحبيب لتنظيف المنازل</title>  
-  <meta name="description" content="شكراً لتواصلك معنا في شركة الحبيب لتنظيف المنازل. جاري تحويلك إلى الاتصال المباشر بخدمة العملاء.">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <meta name="robots" content="noindex, nofollow">  
-  <link rel="canonical" href="https://elhbebclean.github.io/Elhabib_clean_home/call-thanks.html">    <!-- تعريف مبكر للـ dataLayer -->    <script>window.dataLayer = window.dataLayer || [];</script>    <!-- التحقق من طريقة الوصول للصفحة -->    <script>  
-    (function(){  
-      function getParam(name) {  
-        try { return (new URL(window.location.href)).searchParams.get(name); } catch(e) { return null; }  
-      }  
-  
-      // شرط 1: باراميتر src=callbtn  
-      var srcOk = getParam('src') === 'callbtn';  
-  
-      // شرط 2: referrer من نفس الدومين وجاي من الصفحة الرئيسية  
-      var refOk = false;  
-      try {  
-        if (document.referrer) {  
-          var refUrl = new URL(document.referrer);  
-          var sameHost = (refUrl.hostname === location.hostname);  
-          var path = refUrl.pathname || '/';  
-          // الصفحة الرئيسية لديك إما index.html أو الجذر /Elhabib_clean_home/  
-          var isHome = /index\.html$/i.test(path) || /\/Elhabib_clean_home\/?$/i.test(path);  
-          refOk = sameHost && isHome;  
-        }  
-      } catch(e){ refOk = false; }  
-  
-      // شرط 3: فلاج في السيشن ستوريدج (اختياري للاستخدام مستقبلاً)  
-      var ssOk = false;  
-      try { ssOk = sessionStorage.getItem('from_call_btn') === '1'; } catch(e){}  
-  
-      // النتيجة النهائية: لازم واحد على الأقل  
-      window.__eligible_for_conversion = !!(srcOk || refOk || ssOk);  
-    })();  
-  </script>    <!-- سكربت هاش رقم الهاتف ودفعه للـ dataLayer (Enhanced Conversions) -->    <script>  
-    (function(){  
-      function getParam(name) {  
-        try { return (new URL(window.location.href)).searchParams.get(name); } catch(e) { return null; }  
-      }  
-  
-      // نلتقط ?phone= أو من sessionStorage  
-      var phone = getParam('phone') || null;  
-      try {  
-        if (!phone && sessionStorage.getItem) {  
-          phone = sessionStorage.getItem('userPhone') || null;  
-        }  
-      } catch(e){}  
-  
-      if (!phone) { window.customerPhone = null; return; }  
-  
-      phone = String(phone).replace(/\D+/g,'').trim();  
-      if (!phone) { window.customerPhone = null; return; }  
-      window.customerPhone = phone;  
-  
-      async function sha256Hex(s){  
-        const enc = new TextEncoder().encode(String(s));  
-        const buf = await crypto.subtle.digest('SHA-256', enc);  
-        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');  
-      }  
-  
-      (async function pushHash(){  
-        try {  
-          const phoneHash = await sha256Hex(phone);  
-          window.dataLayer.push({  
-            'event': 'enhanced_conv_ready',  
-            'user_data': { 'phone_number': phoneHash }  
-          });  
-          try { sessionStorage.setItem('userPhone', phone); } catch(e){}  
-        } catch(err) {  
-          console.warn('Failed to push enhanced conv data', err);  
-        }  
-      })();  
-    })();  
-  </script>    <!-- Google Tag Manager -->    <script>  
-    (function(w,d,s,l,i){  
-      w[l]=w[l]||[];  
-      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});  
-      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';  
-      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;  
-      f.parentNode.insertBefore(j,f);  
-    })(window,document,'script','dataLayer','GTM-KLM4RMFM');  
-  </script>    <!-- Google Ads gtag -->    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>    <script>  
-    function gtag(){window.dataLayer.push(arguments);}  
-    gtag('js', new Date());  
-    gtag('config', 'AW-16529004339');  
-  </script>    <style>  
-    body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background-color: #f9f9f9; }  
-    h1 { color: #28a745; font-size: 28px; }  
-    p { font-size: 18px; margin-bottom: 20px; }  
-    a.map-link { display: inline-block; margin-top: 25px; font-size: 18px; color: #007bff; text-decoration: underline; }  
-    a.call-now { display: inline-block; margin-top: 30px; font-size: 18px; color: white; background: #28a745; padding: 12px 25px; border-radius: 6px; text-decoration: none; }  
-  </style>  </head>  
-<body>  
-  <!-- GTM noscript -->  
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>    <h1>✅ شكراً لتواصلك معنا!</h1>  
-  <p>سيتم تحويلك الآن لاتصال مباشر بخدمة العملاء خلال ثوانٍ قليلة.</p>  <a id="fallbackCall" href="tel:01016961497" class="call-now">📞 اضغط للاتصال الآن</a>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تم الاتصال - ElHabib Clean</title>
+<meta name="description" content="شكراً لتواصلك معنا. جاري تجهيز الاتصال مع فريق ElHabib Clean.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 
-  <h2 style="margin-top: 40px;">📍 موقعنا على Google Maps</h2>  
-  <a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank" class="map-link">اضغط هنا لفتح موقعنا على Google Maps مباشرة</a>    <script>  
-    (async function sendConversionAndCall(){  
-      try {  
-        // لو الوصول للصفحة غير مؤهل ما نبعتش إحالة  
-        if (!window.__eligible_for_conversion) {  
-          console.warn('Visit not eligible for conversion (opened directly or from unknown source).');  
-          // ما فيش تحويل تلقائي، نخلي الزائر يستخدم زر الاتصال اليدوي  
-          return;  
-        }  
-  
-        function getGclid(){  
-          try {  
-            const p = (new URL(window.location.href)).searchParams.get('gclid');  
-            if (p){ document.cookie = "gclid=" + p + "; path=/; max-age=" + 60*60*24*90; return p; }  
-            const m = document.cookie.match(new RegExp('(^| )gclid=([^;]+)'));  
-            return m ? m[2] : null;  
-          } catch(e) { return null; }  
-        }  
-        const gclid = getGclid();  
-  
-        const conversionLabel = 'OIQ7COaD0ewaELOu0sk9';  
-        const sendTo = 'AW-16529004339/' + conversionLabel;  
-  
-        function findLatestUserData(){  
-          try {  
-            const dl = window.dataLayer || [];  
-            for (let i = dl.length - 1; i >= 0; i--) {  
-              if (dl[i] && dl[i].user_data && dl[i].user_data.phone_number) return dl[i].user_data;  
-            }  
-          } catch(e){}  
-          return null;  
-        }  
-  
-        const phone = window.customerPhone || null;  
-        const dlUser = findLatestUserData();  
-        const eventObj = { 'send_to': sendTo, 'value': 100.00, 'currency': 'EGP' };  
-  
-        if (dlUser && dlUser.phone_number) {  
-          eventObj.user_data = { 'phone_number': dlUser.phone_number };  
-          if (gclid) eventObj.user_data.gclid = gclid;  
-        } else if (phone) {  
-          try {  
-            const enc = new TextEncoder().encode(String(phone));  
-            const buf = await crypto.subtle.digest('SHA-256', enc);  
-            const h = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');  
-            eventObj.user_data = { 'phone_number': h };  
-            if (gclid) eventObj.user_data.gclid = gclid;  
-          } catch(e){}  
-        }  
-  
-        if (window.__conversion_sent) return;  
-        window.__conversion_sent = true;  
-  
-        let redirected = false;  
-        const doRedirect = function(){ if (!redirected) { redirected = true; window.location.href = "tel:01016961497"; } };  
-        const fbTimer = setTimeout(doRedirect, 6000);  
-  
-        gtag('event', 'conversion', Object.assign({}, eventObj, {  
-          'event_callback': function() { clearTimeout(fbTimer); doRedirect(); }  
-        }));  
-  
-      } catch(err) {  
-        console.warn('conversion send failed', err);  
-        try { window.location.href = "tel:01016961497"; }catch(e){}  
-      }  
-    })();  
-  </script>  </body>  
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KLM4RMFM');
+</script>
+
+<style>
+body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background: #f9f9f9; }
+h1 { color: #28a745; font-size: 28px; }
+p { font-size: 18px; }
+a.button { display:inline-block; margin-top:20px; padding:12px 20px; background:#28a745; color:white; text-decoration:none; font-size:18px; border-radius:8px; }
+</style>
+</head>
+<body>
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<h1>✅ شكراً لاتصالك بنا!</h1>
+<p>سيتم تجهيز الاتصال مع فريق ElHabib Clean فوراً.</p>
+
+<a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال تلقائياً</a>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+// تحقق من مصدر التحويل
+(function(){
+  function getParam(name){ try{ return (new URL(window.location.href)).searchParams.get(name); }catch(e){return null;} }
+  const srcOk = getParam('src')==='callbtn';
+  const refOk = document.referrer.includes(location.hostname);
+  window.__eligible_for_conversion = srcOk || refOk;
+})();
+
+// حدث التحويل و إعادة التوجيه
+(async function(){
+  if(!window.__eligible_for_conversion){
+    console.warn('الزيارة غير مؤهلة لتسجيل التحويل (مكالمة)');
+    return;
+  }
+
+  const phone = '01016961497';
+  async function sha256Hex(s){
+    const enc = new TextEncoder().encode(String(s));
+    const buf = await crypto.subtle.digest('SHA-256', enc);
+    return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  }
+
+  const phoneHash = await sha256Hex(phone);
+  const gclid = (new URL(window.location.href)).searchParams.get('gclid') || 
+                (document.cookie.match(/(^| )gclid=([^;]+)/) ? document.cookie.match(/(^| )gclid=([^;]+)/)[2] : null);
+
+  // إرسال حدث التحويل إلى Google Ads
+  gtag('event', 'conversion', {
+    'send_to': 'AW-16529004339/G1k-CLeXxsMaELOu0sk9',
+    'value': 1.0,
+    'currency': 'EGP',
+    'user_data': { 'phone_number': phoneHash, 'gclid': gclid }
+  });
+
+  // إعادة التوجيه تلقائياً بعد ثواني إلى رقم الهاتف
+  setTimeout(()=>{ window.location.href='tel:01016961497'; }, 3000);
+})();
+</script>
+</body>
 </html>
