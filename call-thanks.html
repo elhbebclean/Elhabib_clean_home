@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>تم الاتصال بنا - ElHabib Clean</title>
+<title>تم التحويل إلى الاتصال - ElHabib Clean</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 
@@ -19,9 +19,9 @@
 
 <style>
 body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background: #f9f9f9; }
-h1 { color: #007BFF; font-size: 28px; }
+h1 { color: #007bff; font-size: 28px; }
 p { font-size: 18px; }
-a.button { display:inline-block; margin-top:20px; padding:12px 20px; background:#007BFF; color:white; text-decoration:none; font-size:18px; border-radius:8px; }
+a.button { display:inline-block; margin-top:20px; padding:12px 20px; background:#007bff; color:white; text-decoration:none; font-size:18px; border-radius:8px; }
 </style>
 </head>
 <body>
@@ -30,25 +30,18 @@ a.button { display:inline-block; margin-top:20px; padding:12px 20px; background:
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
-<h1>✅ شكراً لتواصلك معنا!</h1>
-<p>لقد تم تسجيل طلب الاتصال الخاص بك وسيقوم فريق ElHabib Clean بالتواصل معك قريباً.</p>
-<a href="tel:01016961497" class="button">اتصل بنا مرة أخرى</a>
+<h1>✅ شكراً لتواصلك معنا عبر الهاتف!</h1>
+<p>سيتم تحويلك الآن للاتصال مباشرة مع فريق ElHabib Clean.</p>
+<a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال</a>
 
 <script>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
+  // إرسال حدث التحويل
+  dataLayer.push({'event':'EV - call_conversion_fired'});
 
-  // إطلاق حدث التحويل في GTM
-  dataLayer.push({'event':'call_conversion_fired'});
-
-  // إطلاق Google Ads Conversion باستخدام gtag
-  if(typeof gtag === 'function'){
-    gtag('event', 'conversion', {
-      'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
-      'value': 1.0,
-      'currency': 'EGP'
-    });
-  }
+  // إعادة التوجيه بعد 4 ثواني
+  setTimeout(()=>{ window.location.href='tel:01016961497'; }, 4000);
 });
 </script>
 </body>
