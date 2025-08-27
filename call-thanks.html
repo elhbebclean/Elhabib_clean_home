@@ -38,4 +38,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
 
-  // إطلاق حدث
+  // إطلاق حدث التحويل في GTM
+  dataLayer.push({'event':'call_conversion_fired'});
+
+  // إطلاق Google Ads Conversion باستخدام gtag
+  if(typeof gtag === 'function'){
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
+      'value': 1.0,
+      'currency': 'EGP'
+    });
+  }
+
+  // إعادة التوجيه بعد ثانيتين
+  setTimeout(()=>{ window.location.href='tel:01016961497'; }, 2000);
+});
+</script>
+</body>
+</html>
