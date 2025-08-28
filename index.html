@@ -152,7 +152,6 @@ img, iframe { loading:lazy; }
 <iframe src="https://www.youtube.com/embed/zac0LMpHCGI" allowfullscreen></iframe>
 <iframe src="https://www.youtube.com/embed/5-oMyRN1pUI" allowfullscreen></iframe>
 </section>
-
 <section>
 <h2>📸 صور من أعمالنا</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
@@ -209,18 +208,28 @@ function getParam(p) {
 var gclid = getParam('gclid');
 
 document.addEventListener("DOMContentLoaded", function () {
-  // ضبط aria-labels وأسماء الصور
   try {
+    // ضبط أزرار الاتصال
     var callButton = document.querySelector('#btn-call');
-    if (callButton) callButton.href = "call-thanks.html" + (gclid ? "?gclid="+gclid+"&src=callbtn" : "?src=callbtn");
+    if (callButton) {
+      callButton.href = "call-thanks.html" + (gclid ? "?gclid="+gclid+"&src=callbtn" : "?src=callbtn");
+      callButton.addEventListener('click', function(){
+        dataLayer.push({event: 'call_button_click'});
+      });
+    }
 
+    // ضبط أزرار واتساب
     var whatsappButtons = document.querySelectorAll('#btn-whatsapp, #whatsapp-fixed');
     whatsappButtons.forEach(function(el){
       el.href = "thankyou-whatsapp.html" + (gclid ? "?gclid="+gclid : "");
       el.setAttribute('aria-label','تواصل واتساب مع شركة تنظيف منازل بالقاهرة ElHabib Clean');
       el.setAttribute('title','واتساب شركة تنظيف منازل بالقاهرة');
+      el.addEventListener('click', function(){
+        dataLayer.push({event: 'whatsapp_button_click'});
+      });
     });
 
+    // ضبط صور SEO
     document.querySelectorAll('section img').forEach(function(img,idx){
       if(!img.getAttribute('alt')){
         img.setAttribute('alt','أعمال تنظيف منازل - ElHabib Clean - صورة رقم '+(idx+1));
@@ -231,4 +240,4 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 </body>
-</html>
+  </html>
