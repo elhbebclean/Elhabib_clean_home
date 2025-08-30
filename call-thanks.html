@@ -38,12 +38,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
 
-  // تحقق إذا تم تسجيل التحويل سابقًا
+  // تحقق إذا تم تسجيل التحويل سابقًا لتجنب التكرار
   if(!localStorage.getItem('call_conversion_done')){
-    // إطلاق حدث التحويل في GTM
-    dataLayer.push({'event':'call_conversion_fired'});
+    
+    // إطلاق الحدث الخاص بالاتصال لـ GTM
+    dataLayer.push({'event':'EV - call_conversion_fired'});
 
-    // إطلاق Google Ads Conversion باستخدام gtag
+    // إطلاق Google Ads Conversion عبر gtag
     if(typeof gtag === 'function'){
       gtag('event', 'conversion', {
         'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
@@ -52,11 +53,11 @@ window.addEventListener('load', function(){
       });
     }
 
-    // وضع علامة لتجنب التكرار
+    // حفظ علامة لتجنب التكرار
     localStorage.setItem('call_conversion_done', 'true');
   }
 
-  // إعادة التوجيه بعد ثانيتين
+  // إعادة التوجيه للاتصال بعد ثانيتين
   setTimeout(()=>{ window.location.href='tel:01016961497'; }, 2000);
 });
 </script>
