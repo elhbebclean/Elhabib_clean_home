@@ -38,8 +38,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
 
-  // تحقق إذا تم تسجيل التحويل سابقًا لتجنب التكرار
-  if(!localStorage.getItem('call_conversion_done')){
+  // تحقق إذا تم تسجيل التحويل سابقًا لتجنب التكرار (تم تغيير localStorage إلى sessionStorage)
+  if(!sessionStorage.getItem('call_conversion_done')){
     
     // إطلاق الحدث الخاص بالاتصال لـ GTM
     dataLayer.push({'event':'call_conversion_fired'}); // تم تعديل الاسم ليتطابق مع Trigger
@@ -53,8 +53,8 @@ window.addEventListener('load', function(){
       });
     }
 
-    // حفظ علامة لتجنب التكرار
-    localStorage.setItem('call_conversion_done', 'true');
+    // حفظ علامة لتجنب التكرار خلال الجلسة
+    sessionStorage.setItem('call_conversion_done', 'true');
   }
 
   // إعادة التوجيه للاتصال بعد 5 ثواني للسماح للـ Tags بالعمل
