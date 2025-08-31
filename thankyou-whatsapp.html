@@ -38,8 +38,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
 
-  // التأكد أن التحويل لم يُسجّل مسبقاً
-  if(!localStorage.getItem('whatsapp_conversion_done')){
+  // التأكد أن التحويل لم يُسجّل مسبقاً خلال الجلسة (تم تعديل localStorage إلى sessionStorage)
+  if(!sessionStorage.getItem('whatsapp_conversion_done')){
     
     // إطلاق حدث التحويل في GTM
     dataLayer.push({'event':'whatsapp_conversion_fired'});
@@ -53,8 +53,8 @@ window.addEventListener('load', function(){
       });
     }
 
-    // حفظ العلم لتجنب التكرار
-    localStorage.setItem('whatsapp_conversion_done', 'true');
+    // حفظ العلم لتجنب التكرار خلال الجلسة
+    sessionStorage.setItem('whatsapp_conversion_done', 'true');
   }
 
   // إعادة التوجيه بعد ثانيتين
