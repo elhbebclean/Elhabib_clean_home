@@ -42,7 +42,7 @@
   <meta name="twitter:title" content="شركة تنظيف منازل بالقاهرة | ElHabib Clean">
   <meta name="twitter:description" content="أفضل خدمة تنظيف عميق وتنظيف بعد التشطيب في القاهرة والجيزة. خصومات وواتساب مباشر.">
 
-  <!-- LocalBusiness Structured Data (unchanged) -->
+  <!-- LocalBusiness Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,7 +63,7 @@
   }
   </script>
 
-  <!-- FAQ Structured Data (unchanged) -->
+  <!-- FAQ Structured Data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -76,178 +76,203 @@
   }
   </script>
 
-  <!-- رابط للـ CSS الخارجي (لو حطيت styles.css في نفس الفولدر) -->
+  <!-- CSS الخارجي -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- طارئ: بعض قواعد CSS الأساسية لو لم يكن styles.css مرفوع بعد -->
   <style>
-    /* Minimal fallback styling to avoid broken look until styles.css uploaded */
     body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; color:#333; text-align:center; }
-    .hero { padding:80px 20px; color:#fff; position:relative; background:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('banner.jpg') center/cover no-repeat; }
-    .hero h1 { font-size:2rem; margin-bottom:10px; }
-    .hero p { font-size:1.1rem; margin-bottom:16px; }
-    .btn { display:inline-block; padding:10px 18px; border-radius:8px; text-decoration:none; color:#fff; font-weight:bold; margin:6px; }
-    .btn-call { background:#007bff; } .btn-whatsapp { background:#25d366; }
-    header, section, footer { padding: 20px; }
+    .hero {
+      position: relative;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 60px 12px 90px;
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                  url('https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/banner.jpg.jpg') center/cover no-repeat;
+      background-size: cover;
+      background-attachment: scroll;
+      overflow: hidden;
+    }
+    .hero h1 { font-size:22px; margin-bottom:12px; text-shadow:1px 1px 1px rgba(0,0,0,0.3); }
+    .hero p { font-size:15px; margin-bottom:18px; text-shadow:1px 1px 1px rgba(0,0,0,0.2); }
+    .btn { display:inline-block; padding:12px 20px; border-radius:25px; font-weight:700; text-decoration:none; color:#fff; transition: all .12s ease; }
+    .btn-call { background:#007bff; } .btn-call:hover { background:#0056b3; }
+    .btn-whatsapp { background:#25d366; } .btn-whatsapp:hover { background:#1da851; }
   </style>
 
 </head>
 <body>
-  <!-- GTM noscript -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- HERO (أول جزء ظاهر مع جزء من الصفحة تحت) -->
-  <section class="hero" id="hero">
-    <div class="hero-content" style="max-width:1100px;margin:auto;">
-      <h1>✨ خلي بيتك يلمع مع <strong>ElHabib Clean</strong></h1>
-      <p>تنظيف عميق، تنظيف بعد التشطيب، تعقيم شامل — <strong>خصم 15%</strong> لأول مرة و<strong>50%</strong> للعملاء المنتظمين.</p>
-      <div style="margin-top:18px;">
-        <a id="btn-call" href="call-thanks.html" class="btn btn-call" aria-label="اتصال الآن">📞 اتصل الآن</a>
-        <a id="btn-whatsapp" href="thankyou-whatsapp.html" class="btn btn-whatsapp" aria-label="واتساب سريع">💬 احجز عبر واتساب</a>
-      </div>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content" style="max-width:1100px;margin:auto;">
+    <h1>✨ خلي بيتك يلمع مع <strong>ElHabib Clean</strong></h1>
+    <p>تنظيف عميق، تنظيف بعد التشطيب، تعقيم شامل — <strong>خصم 15%</strong> لأول مرة و<strong>50%</strong> للعملاء المنتظمين.</p>
+    <div style="margin-top:18px;">
+      <a id="btn-call" href="call-thanks.html" class="btn btn-call" aria-label="اتصال الآن">📞 اتصل الآن</a>
+      <a id="btn-whatsapp" href="thankyou-whatsapp.html" class="btn btn-whatsapp" aria-label="واتساب سريع">💬 احجز عبر واتساب</a>
     </div>
+  </div>
+  <div style="position:absolute; left:50%; transform:translateX(-50%); bottom: -24px; font-size:26px; cursor:pointer;"
+       onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">⬇️</div>
+</section>
 
-    <!-- السهم المتحرك ليُشِير أن هناك محتوى تحت -->
-    <div style="position:absolute; left:50%; transform:translateX(-50%); bottom: -24px; font-size:26px; cursor:pointer;"
-         onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">⬇️</div>
+<!-- Header -->
+<header style="background:#007bff;color:#fff;padding:18px;">
+  <div style="max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+    <div style="text-align:right;">
+      <h2 style="margin:0;font-size:20px;">ElHabib Clean</h2>
+      <div style="font-size:14px;opacity:.95;">احجز الآن وسنصل إليك فورًا</div>
+    </div>
+    <nav aria-label="القوائم" style="direction:rtl;">
+      <a href="index.html" style="color:#fff;margin:0 8px;text-decoration:none;font-weight:bold;">الرئيسية</a>
+      <a href="services.html" style="color:#fff;margin:0 8px;text-decoration:none;font-weight:bold;">الخدمات</a>
+      <a href="contact.html" style="color:#fff;margin:0 8px;text-decoration:none;font-weight:bold;">اتصل بنا</a>
+      <a href="privacy.html" style="color:#fff;margin:0 8px;text-decoration:none;font-weight:bold;">الخصوصية</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" style="max-width:1100px;margin:30px auto;padding:0 16px;text-align:right;">
+
+  <!-- Promo line -->
+  <div style="text-align:center;margin-bottom:18px;">
+    <strong style="color:#007bff;font-size:18px;">🎯 خصم 15% لأول مرة | 50% للعملاء المنتظمين</strong>
+  </div>
+
+  <!-- Services -->
+  <section id="services" style="background:#fff;border-radius:10px;padding:28px;margin-bottom:28px;">
+    <h2 style="color:#007bff;margin-bottom:12px;">خدماتنا</h2>
+    <ul style="list-style:none;padding-right:0;line-height:1.9;">
+      <li>🧼 تنظيف عميق لكل المنزل (أرضيات، مفروشات، مطابخ، حمامات)</li>
+      <li>🏗 تنظيف ما بعد التشطيب وإزالة مخلفات البناء</li>
+      <li>🛋 تنظيف الشقق المفروشة وتلميع الأسطح</li>
+      <li>🏢 خدمات للشركات والمكاتب وتنظيف دوري</li>
+    </ul>
   </section>
 
-  <!-- Header nav (بعد الهيرو حتى يظل ظاهر الجزء من الصفحة) -->
-  <header style="background:#007bff;color:#fff;padding:18px;">
-    <div style="max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">
-      <div style="text-align:right;">
-        <h2 style="margin:0;font-size:20px;">ElHabib Clean</h2>
-        <div style="font-size:14px;opacity:.95;">احجز الآن وسنصل إليك فورًا</div>
-      </div>
-      <nav aria-label="القوائم" style="direction:rtl;">
-        <a href="index.html" style="color:#fff;margin:0 8px;text-decoration:none;font-weight:bold;">الرئيسية</a>
-        <a href="services.html" style="color:#fff;margin:0 8px;text-decoration:none;font-weight:bold;">الخدمات</a>
-        <a href="contact.html" style="color:#fff;margin:0 8px;text-decoration:none;font-weight:bold;">اتصل بنا</a>
-        <a href="privacy.html" style="color:#fff;margin:0 8px;text-decoration:none;font-weight:bold;">الخصوصية</a>
-      </nav>
+  <!-- Videos -->
+  <section style="margin-bottom:28px;">
+    <h2 style="color:#007bff;margin-bottom:12px;">شاهد أعمالنا</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;">
+      <iframe src="https://www.youtube.com/embed/o8OtxpTAJVM" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VV4WatGKIeI" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/zac0LMpHCGI" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/5-oMyRN1pUI" allowfullscreen></iframe>
     </div>
-  </header>
+  </section>
 
-  <main id="main" style="max-width:1100px;margin:30px auto;padding:0 16px;text-align:right;">
-
-    <!-- Promo line -->
-    <div style="text-align:center;margin-bottom:18px;">
-      <strong style="color:#007bff;font-size:18px;">🎯 خصم 15% لأول مرة | 50% للعملاء المنتظمين</strong>
+  <!-- Gallery -->
+  <section style="margin-bottom:28px;">
+    <h2 style="color:#007bff;margin-bottom:12px;">صور من أعمالنا</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+      <img src="./IMG_٢٠٢٥٠٧٠٤_٠٣٤٥٤٣.jpg" alt="أعمال تنظيف - 1" style="width:280px;border-radius:10px;">
+      <img src="./IMG_٢٠٢٥٠٧٠٤_٠٣٤٦١٦.jpg" alt="أعمال تنظيف - 2" style="width:280px;border-radius:10px;">
+      <img src="./FB_IMG_1737376286871.jpg" alt="أعمال تنظيف - 3" style="width:280px;border-radius:10px;">
+      <img src="./FB_IMG_1737376278247.jpg" alt="أعمال تنظيف - 4" style="width:280px;border-radius:10px;">
+      <img src="./file_00000000dda461fdaee166e6e4076454.png" alt="أعمال تنظيف - 5" style="width:280px;border-radius:10px;">
     </div>
+  </section>
 
-    <!-- Services -->
-    <section id="services" style="background:#fff;border-radius:10px;padding:28px;margin-bottom:28px;">
-      <h2 style="color:#007bff;margin-bottom:12px;">خدماتنا</h2>
-      <ul style="list-style:none;padding-right:0;line-height:1.9;">
-        <li>🧼 تنظيف عميق لكل المنزل (أرضيات، مفروشات، مطابخ، حمامات)</li>
-        <li>🏗 تنظيف ما بعد التشطيب وإزالة مخلفات البناء</li>
-        <li>🛋 تنظيف الشقق المفروشة وتلميع الأسطح</li>
-        <li>🏢 خدمات للشركات والمكاتب وتنظيف دوري</li>
-      </ul>
-    </section>
+  <!-- Map -->
+  <section style="margin-bottom:28px;">
+    <h2 style="color:#007bff;margin-bottom:12px;">📍 موقعنا على الخريطة</h2>
+    <iframe src="https://www.google.com/maps?q=1+شارع+وادي+النيل,+المعادي,+القاهرة&output=embed" style="width:100%;height:360px;border:0;border-radius:8px;" allowfullscreen></iframe>
+    <div style="text-align:center;margin-top:8px;">
+      <a href="https://g.co/kgs/aNcqU5J" target="_blank" style="color:#007bff;text-decoration:underline;font-weight:bold;">افتح في خرائط Google</a>
+    </div>
+  </section>
 
-    <!-- Videos -->
-    <section style="margin-bottom:28px;">
-      <h2 style="color:#007bff;margin-bottom:12px;">شاهد أعمالنا</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;">
-        <iframe src="https://www.youtube.com/embed/o8OtxpTAJVM" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/VV4WatGKIeI" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/zac0LMpHCGI" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/5-oMyRN1pUI" allowfullscreen></iframe>
+  <!-- Google Reviews -->
+  <section style="margin-bottom:28px;background:#fff;border-radius:10px;padding:20px;border:1px solid #eee;">
+    <h2 style="color:#007bff;margin-bottom:12px;">⭐ تقييمات عملائنا على Google</h2>
+    <div style="display:flex;flex-direction:column;gap:14px;text-align:right;">
+      <blockquote style="border-right:4px solid #007bff;padding-right:12px;font-style:italic;">
+        "خدمة ممتازة، فريق محترف ووصلوا في الوقت المحدد. أنصح بشدة!" – عميل من المعادي
+      </blockquote>
+      <blockquote style="border-right:4px solid #007bff;padding-right:12px;font-style:italic;">
+        "نظيف جدًا وسريع. بعد التشطيب البيت أصبح يلمع." – عميل من القاهرة الجديدة
+      </blockquote>
+      <blockquote style="border-right:4px solid #007bff;padding-right:12px;font-style:italic;">
+        "تعقيم شامل والمعدات كانت حديثة وآمنة. تجربة رائعة!" – عميل من 6 أكتوبر
+      </blockquote>
+      <div style="text-align:center;margin-top:8px;">
+        <a href="https://g.co/kgs/aNcqU5J" target="_blank" style="color:#007bff;text-decoration:underline;font-weight:bold;">اطلع على جميع التقييمات على Google</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Gallery -->
-    <section style="margin-bottom:28px;">
-      <h2 style="color:#007bff;margin-bottom:12px;">صور من أعمالنا</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-        <img src="./IMG_٢٠٢٥٠٧٠٤_٠٣٤٥٤٣.jpg" alt="أعمال تنظيف - 1" style="width:280px;border-radius:10px;">
-        <img src="./IMG_٢٠٢٥٠٧٠٤_٠٣٤٦١٦.jpg" alt="أعمال تنظيف - 2" style="width:280px;border-radius:10px;">
-        <img src="./FB_IMG_1737376286871.jpg" alt="أعمال تنظيف - 3" style="width:280px;border-radius:10px;">
-        <img src="./FB_IMG_1737376278247.jpg" alt="أعمال تنظيف - 4" style="width:280px;border-radius:10px;">
-        <img src="./file_00000000dda461fdaee166e6e4076454.png" alt="أعمال تنظيف - 5" style="width:280px;border-radius:10px;">
-      </div>
-    </section>
+  <!-- SEO intro -->
+  <section class="seo-intro" aria-label="شركة تنظيف منازل بالقاهرة" style="background:#fff;border:1px solid #eee;border-radius:10px;padding:18px;margin-bottom:28px;">
+    <h1 style="margin-top:0;font-size:18px;">شركة تنظيف منازل بالقاهرة – تنظيف عميق وبعد التشطيب | ElHabib Clean</h1>
+    <p>تبحث عن <strong>شركة تنظيف منازل بالقاهرة</strong> تقدم <strong>تنظيف عميق</strong> و<strong>تنظيف بعد التشطيب</strong> للشقق والمنازل؟ مع <strong>ElHabib Clean</strong> ستحصل على فريق محترف، معدات آمنة، وتعقيم شامل في <strong>القاهرة</strong> و<strong>الجيزة</strong> و<strong>6 أكتوبر</strong>. احجز الآن عبر <a href="thankyou-whatsapp.html" class="btn btn-whatsapp">واتساب 01016961497</a> أو اتصال مباشر.</p>
+    <ul style="text-align:right;padding-right:16px;">
+      <li>خدمة تنظيف مفروش للشقق والسكن الجديد.</li>
+      <li>إزالة الأتربة والبقع وتلميع الأرضيات والنوافذ.</li>
+      <li>أسعار تنافسية وخصم 15% لأول مرة و50% للعملاء المنتظمين.</li>
+    </ul>
+  </section>
 
-    <!-- Map -->
-    <section style="margin-bottom:28px;">
-      <h2 style="color:#007bff;margin-bottom:12px;">📍 موقعنا على الخريطة</h2>
-      <iframe src="https://www.google.com/maps?q=1+شارع+وادي+النيل,+المعادي,+القاهرة&output=embed" style="width:100%;height:360px;border:0;border-radius:8px;" allowfullscreen></iframe>
-    </section>
+</main>
 
-    <!-- SEO intro (rich content) -->
-    <section class="seo-intro" aria-label="شركة تنظيف منازل بالقاهرة" style="background:#fff;border:1px solid #eee;border-radius:10px;padding:18px;margin-bottom:28px;">
-      <h1 style="margin-top:0;font-size:18px;">شركة تنظيف منازل بالقاهرة – تنظيف عميق وبعد التشطيب | ElHabib Clean</h1>
-      <p>تبحث عن <strong>شركة تنظيف منازل بالقاهرة</strong> تقدم <strong>تنظيف عميق</strong> و<strong>تنظيف بعد التشطيب</strong> للشقق والمنازل؟ مع <strong>ElHabib Clean</strong> ستحصل على فريق محترف، معدات آمنة، وتعقيم شامل في <strong>القاهرة</strong> و<strong>الجيزة</strong> و<strong>6 أكتوبر</strong>. احجز الآن عبر <a href="thankyou-whatsapp.html" class="btn btn-whatsapp">واتساب 01016961497</a> أو اتصال مباشر.</p>
-      <ul style="text-align:right;padding-right:16px;">
-        <li>خدمة تنظيف مفروش للشقق والسكن الجديد.</li>
-        <li>إزالة الأتربة والبقع وتلميع الأرضيات والنوافذ.</li>
-        <li>أسعار تنافسية وخصم 15% لأول مرة و50% للعملاء المنتظمين.</li>
-      </ul>
-    </section>
+<!-- Footer -->
+<footer style="text-align:center;padding:22px 10px;color:#777;">
+  &copy; 2025 ElHabib Clean - جميع الحقوق محفوظة |
+  <a href="privacy.html" style="color:#007bff;text-decoration:none;">سياسة الخصوصية</a>
+</footer>
 
-  </main>
+<!-- Floating buttons -->
+<a id="whatsapp-fixed" href="thankyou-whatsapp.html" aria-label="تواصل واتساب" style="position:fixed;bottom:80px;right:20px;background:#25d366;color:#fff;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 6px 18px rgba(0,0,0,0.2);z-index:999;">💬 واتساب</a>
 
-  <!-- Footer -->
-  <footer style="text-align:center;padding:22px 10px;color:#777;">
-    &copy; 2025 ElHabib Clean - جميع الحقوق محفوظة |
-    <a href="privacy.html" style="color:#007bff;text-decoration:none;">سياسة الخصوصية</a>
-  </footer>
+<a id="app-download-fixed" href="app/index.html" title="حمّل تطبيقنا" style="position:fixed;bottom:20px;right:20px;background:#007bff;color:#fff;padding:12px 16px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 6px 18px rgba(0,0,0,0.15);z-index:998;">
+  📱 حمّل تطبيقنا
+</a>
 
-  <!-- Floating buttons -->
-  <a id="whatsapp-fixed" href="thankyou-whatsapp.html" aria-label="تواصل واتساب" style="position:fixed;bottom:80px;right:20px;background:#25d366;color:#fff;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 6px 18px rgba(0,0,0,0.2);z-index:999;">💬 واتساب</a>
+<!-- Scripts -->
+<script>
+  function getParam(p) {
+    try { var url = new URL(window.location.href); return url.searchParams.get(p); } catch(e){ return null; }
+  }
+  var gclid = getParam('gclid');
 
-  <a id="app-download-fixed" href="app/index.html" title="حمّل تطبيقنا" style="position:fixed;bottom:20px;right:20px;background:#007bff;color:#fff;padding:12px 16px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 6px 18px rgba(0,0,0,0.15);z-index:998;">
-    📱 حمّل تطبيقنا
-  </a>
+  document.addEventListener("DOMContentLoaded", function () {
+    try {
+      var callButton = document.querySelector('#btn-call') || document.querySelector('.btn-call');
+      if (callButton) callButton.href = "call-thanks.html" + (gclid ? "?gclid="+encodeURIComponent(gclid)+"&src=callbtn" : "?src=callbtn");
 
-  <!-- Scripts -->
-  <script>
-    // قراءة gclid من الرابط
-    function getParam(p) {
-      try {
-        var url = new URL(window.location.href);
-        return url.searchParams.get(p);
-      } catch(e) { return null; }
-    }
-    var gclid = getParam('gclid');
+      var whatsappButtons = document.querySelectorAll('#btn-whatsapp, #whatsapp-fixed, .btn-whatsapp');
+      whatsappButtons.forEach(function(el){
+        el.href = "thankyou-whatsapp.html" + (gclid ? "?gclid="+encodeURIComponent(gclid) : "");
+        el.setAttribute('aria-label','تواصل واتساب مع شركة تنظيف منازل بالقاهرة ElHabib Clean');
+        el.setAttribute('title','واتساب شركة تنظيف منازل بالقاهرة');
+      });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      try {
-        var callButton = document.querySelector('#btn-call') || document.querySelector('.btn-call');
-        if (callButton) callButton.href = "call-thanks.html" + (gclid ? "?gclid="+encodeURIComponent(gclid)+"&src=callbtn" : "?src=callbtn");
-
-        var whatsappButtons = document.querySelectorAll('#btn-whatsapp, #whatsapp-fixed, .btn-whatsapp');
-        whatsappButtons.forEach(function(el){
-          el.href = "thankyou-whatsapp.html" + (gclid ? "?gclid="+encodeURIComponent(gclid) : "");
-          el.setAttribute('aria-label','تواصل واتساب مع شركة تنظيف منازل بالقاهرة ElHabib Clean');
-          el.setAttribute('title','واتساب شركة تنظيف منازل بالقاهرة');
+      if (callButton) {
+        callButton.addEventListener('click', function(){
+          window.dataLayer = window.dataLayer || [];
+          dataLayer.push({'event':'call_conversion_fired'});
         });
+      }
+      whatsappButtons.forEach(function(el){
+        el.addEventListener('click', function(){
+          window.dataLayer = window.dataLayer || [];
+          dataLayer.push({'event':'whatsapp_conversion_fired'});
+        });
+      });
 
-        // تتبع ضغط أزرار الاتصال والواتساب عبر dataLayer (متوافق مع GTM)
-        if (callButton) {
-          callButton.addEventListener('click', function(){
-            window.dataLayer = window.dataLayer || [];
-            dataLayer.push({'event':'call_conversion_fired'});
-          });
+      document.querySelectorAll('img').forEach(function(img,idx){
+        if(!img.getAttribute('alt')){
+          img.setAttribute('alt','أعمال تنظيف منازل - ElHabib Clean - صورة رقم '+(idx+1));
         }
-        whatsappButtons.forEach(function(el){
-          el.addEventListener('click', function(){
-            window.dataLayer = window.dataLayer || [];
-            dataLayer.push({'event':'whatsapp_conversion_fired'});
-          });
-        });
+      });
+    } catch(e){}
+  });
+</script>
 
-        // إضافة alt تلقائي للصور إذا مفقود
-        document.querySelectorAll('img').forEach(function(img,idx){
-          if(!img.getAttribute('alt')) {
-            img.setAttribute('alt','أعمال تنظيف منازل - ElHabib Clean - صورة رقم '+(idx+1));
-          }
-        });
-      } catch(e){}
-    });
-  </script>
-
-  <!-- End body -->
 </body>
 </html>
