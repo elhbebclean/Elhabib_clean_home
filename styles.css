@@ -1,8 +1,8 @@
-/* Hero — نسخة نهائية وسريعة للهاتف مع صورة من المستودع */
+/* Hero — نسخة نهائية سريعة وجذابة مع صورة GitHub */
 .hero {
   background: 
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url('https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/banner.jpg.jpg') center/cover no-repeat; /* رابط مباشر للصورة */
+    url('https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/banner.jpg.jpg') center/cover no-repeat;
   position: relative;
   color: #fff;
   padding: 60px 12px 90px;
