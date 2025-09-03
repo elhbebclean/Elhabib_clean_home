@@ -1,8 +1,8 @@
-/* Hero — نسخة نهائية جذابة وسريعة للهاتف */
+/* Hero — نسخة نهائية وسريعة للهاتف مع صورة من المستودع */
 .hero {
   background: 
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url('banner.jpg.jpg') center/cover no-repeat; /* الصورة الأصلية */
+    url('https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/banner.jpg.jpg') center/cover no-repeat; /* رابط مباشر للصورة */
   position: relative;
   color: #fff;
   padding: 60px 12px 90px;
@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   background-color: #007bff; /* لون احتياطي */
-  background-attachment: scroll; /* إزالة Parallax لتحسين الأداء على الهاتف */
+  background-attachment: scroll; /* إزالة Parallax للهاتف */
   background-size: cover;
   overflow: hidden;
 }
@@ -24,13 +24,13 @@
   margin: auto;
   opacity: 0;
   animation: fadeIn 0.5s forwards;
-  will-change: opacity, transform; /* تحسين أداء الحركة */
+  will-change: opacity, transform;
 }
 
 .hero h1 {
   font-size: 22px;
   margin-bottom: 12px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.3); /* خفيف للسرعة */
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
   animation-delay: 0.3s;
 }
 
@@ -59,7 +59,7 @@
   text-decoration: none;
   color: #fff;
   transition: all .12s ease;
-  touch-action: manipulation; /* تسريع الاستجابة لللمس */
+  touch-action: manipulation;
 }
 
 .btn-call { background:#007bff; }
@@ -68,11 +68,8 @@
 .btn-whatsapp { background:#25d366; }
 .btn-whatsapp:hover { background:#1da851; }
 
-/* Fade-in Animation */
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 /* Responsive إضافي للهاتف الصغير */
