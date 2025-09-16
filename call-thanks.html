@@ -38,20 +38,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
 
-  // تحقق إذا تم تسجيل التحويل سابقًا لتجنب التكرار (تم تغيير localStorage إلى sessionStorage)
+  // تحقق إذا تم تسجيل التحويل سابقًا لتجنب التكرار
   if(!sessionStorage.getItem('call_conversion_done')){
-    
     // إطلاق الحدث الخاص بالاتصال لـ GTM
-    dataLayer.push({'event':'call_conversion_fired'}); // تم تعديل الاسم ليتطابق مع Trigger
-
-    // إطلاق Google Ads Conversion عبر gtag
-    if(typeof gtag === 'function'){
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
-        'value': 1.0,
-        'currency': 'EGP'
-      });
-    }
+    dataLayer.push({'event':'call_conversion_fired'});
 
     // حفظ علامة لتجنب التكرار خلال الجلسة
     sessionStorage.setItem('call_conversion_done', 'true');
