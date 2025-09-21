@@ -17,6 +17,15 @@
 })(window,document,'script','dataLayer','GTM-KLM4RMFM');
 </script>
 
+<!-- Global site tag (gtag.js) - Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16529004339');
+</script>
+
 <style>
 body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background: #f9f9f9; }
 h1 { color: #007bff; font-size: 28px; }
@@ -36,18 +45,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
 <script>
 window.addEventListener('load', function(){
-  window.dataLayer = window.dataLayer || [];
+  // تسجيل الإحالة مباشرة في Google Ads
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9'
+  });
 
-  // تحقق إذا تم تسجيل التحويل سابقًا لتجنب التكرار
-  if(!sessionStorage.getItem('call_conversion_done')){
-    // إطلاق الحدث الخاص بالاتصال لـ GTM
-    dataLayer.push({'event':'call_conversion_fired'});
-
-    // حفظ علامة لتجنب التكرار خلال الجلسة
-    sessionStorage.setItem('call_conversion_done', 'true');
-  }
-
-  // إعادة التوجيه للاتصال بعد 5 ثواني للسماح للـ Tags بالعمل
+  // إعادة التوجيه للاتصال بعد 5 ثواني
   setTimeout(()=>{ window.location.href='tel:01016961497'; }, 5000);
 });
 </script>
