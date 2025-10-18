@@ -27,10 +27,15 @@
 </script>
 
 <style>
-body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background: #f9f9f9; }
-h1 { color: #007bff; font-size: 28px; }
-p { font-size: 18px; }
+body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background: #f9f9f9; color:#333; line-height:1.8; }
+h1 { color: #007bff; font-size: 28px; margin-bottom:15px; }
+p { font-size: 18px; margin:10px 0; }
 a.button { display:inline-block; margin-top:20px; padding:12px 20px; background:#007bff; color:white; text-decoration:none; font-size:18px; border-radius:8px; }
+a.button:hover { background:#0056b3; }
+section { max-width:700px; margin:auto; text-align:right; background:white; padding:25px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); margin-top:30px; }
+ul { list-style: none; padding: 0; }
+ul li::before { content:"✅ "; color:#28a745; }
+footer { margin-top:30px; font-size:14px; color:#666; }
 </style>
 </head>
 <body>
@@ -40,8 +45,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 <h1>✅ شكراً لتواصلك معنا عبر الهاتف!</h1>
-<p>سيتم تحويلك الآن للاتصال مباشرة مع فريق ElHabib Clean.</p>
+<p>سيتم تحويلك الآن للاتصال مباشرة مع فريق <strong>ElHabib Clean</strong>.</p>
 <a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال</a>
+
+<!-- ✅ محتوى مضاف لتحسين تقييم الصفحة -->
+<section>
+  <h2>📞 تم تسجيل طلبك بنجاح</h2>
+  <p>
+    فريق <strong>ElHabib Clean</strong> سيقوم بالرد عليك خلال دقائق لتأكيد تفاصيل الخدمة المطلوبة.  
+    نحن نعمل يوميًا في جميع مناطق القاهرة والجيزة والمعادي و6 أكتوبر لتوفير أعلى جودة تنظيف منزلي وشامل.
+  </p>
+
+  <h3>🧽 خدماتنا الأكثر طلبًا</h3>
+  <ul>
+    <li>تنظيف بعد التشطيب وإزالة بقايا الدهانات والغبار.</li>
+    <li>تنظيف عميق للمنازل والشقق المفروشة.</li>
+    <li>تعقيم الأسطح باستخدام مواد آمنة على الأطفال.</li>
+    <li>تلميع وجلي الرخام والبورسلين.</li>
+  </ul>
+
+  <h3>✨ نصائح بعد الحجز</h3>
+  <p>
+    قبل وصول الفريق، يُفضل ترتيب الأدوات الشخصية الهامة، وترك مساحة كافية للحركة داخل الغرف.  
+    كما يُنصح بفتح النوافذ أثناء التنظيف لتجديد الهواء وتحسين النتيجة النهائية.
+  </p>
+
+  <h3>🔗 روابط مفيدة</h3>
+  <ul>
+    <li><a href="index.html">العودة إلى الصفحة الرئيسية</a></li>
+    <li><a href="services.html">شاهد جميع خدماتنا</a></li>
+    <li><a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank">موقعنا على Google Maps</a></li>
+  </ul>
+</section>
+
+<footer>
+&copy; 2025 ElHabib Clean - جميع الحقوق محفوظة |
+<a href="privacy.html">سياسة الخصوصية</a>
+</footer>
 
 <script>
 window.addEventListener('load', function(){
