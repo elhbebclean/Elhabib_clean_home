@@ -48,7 +48,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <p>سيتم تحويلك الآن للاتصال مباشرة مع فريق <strong>ElHabib Clean</strong>.</p>
 <a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال</a>
 
-<!-- ✅ محتوى مضاف لتحسين تقييم الصفحة -->
 <section>
   <h2>📞 تم تسجيل طلبك بنجاح</h2>
   <p>
@@ -85,7 +84,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
 <script>
 window.addEventListener('load', function(){
-  // تسجيل الإحالة مباشرة في Google Ads
+
+  // ✅ إضافة GA4 purchase
+  gtag('event', 'purchase', {
+    value: 1.0,
+    currency: 'EGP'
+  });
+
+  // تسجيل الإحالة في Google Ads
   gtag('event', 'conversion', {
       'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9'
   });
