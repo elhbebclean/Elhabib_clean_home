@@ -75,9 +75,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <p>سيتم تحويلك الآن لمحادثة مباشرة على واتساب مع فريق <strong>ElHabib Clean</strong>.<br>
 نحن جاهزون للرد على جميع استفساراتك فوراً.</p>
 <a href="https://wa.me/201016961497" class="button" target="_blank">اضغط هنا إذا لم يتم التحويل</a>
+
 <script>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
+
+  // ✅ إضافة GA4 purchase
+  if(typeof gtag === 'function'){
+    gtag('event', 'purchase', {
+      value: 1.0,
+      currency: 'EGP'
+    });
+  }
 
   // التحقق من عدم تسجيل التحويل مسبقاً خلال الجلسة
   if(!sessionStorage.getItem('whatsapp_conversion_done')){
