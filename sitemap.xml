@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
   <!-- الصفحة الرئيسية -->
   <url>
@@ -9,28 +10,28 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://elhbebclean.github.io/Elhabib_clean_home/images/IMG_٢٠٢٥٠٧٠٤_٠٣٤٥٤٣.jpg</image:loc>
-      <image:caption>أعمال تنظيف منازل - ElHabib Clean - صورة 1</image:caption>
+      <image:loc>https://elhbebclean.github.io/Elhabib_clean_home/images/clean-home-1.jpg</image:loc>
+      <image:caption>أعمال تنظيف منازل - ElHabib Clean</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://elhbebclean.github.io/Elhabib_clean_home/images/IMG_٢٠٢٥٠٧٠٤_٠٣٤٦١٦.jpg</image:loc>
-      <image:caption>أعمال تنظيف منازل - ElHabib Clean - صورة 2</image:caption>
+      <image:loc>https://elhbebclean.github.io/Elhabib_clean_home/images/clean-home-2.jpg</image:loc>
+      <image:caption>فريق الحبيب كلين أثناء العمل</image:caption>
     </image:image>
   </url>
 
-  <!-- صفحة الخدمات -->
+  <!-- خدمات التنظيف -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/services.html</loc>
     <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://elhbebclean.github.io/Elhabib_clean_home/images/services-thumbnail.jpg</image:loc>
-      <image:caption>خدمات الحبيب كلين - تنظيف منازل، فلل، شركات</image:caption>
+      <image:loc>https://elhbebclean.github.io/Elhabib_clean_home/images/service-thumbnail.jpg</image:loc>
+      <image:caption>خدمات التنظيف – الحبيب كلين</image:caption>
     </image:image>
   </url>
 
-  <!-- صفحة اتصل بنا -->
+  <!-- اتصل بنا -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/contact.html</loc>
     <lastmod>2025-11-29</lastmod>
@@ -38,7 +39,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- صفحة شكراً للاتصال -->
+  <!-- صفحات الشكر -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/call-thanks.html</loc>
     <lastmod>2025-11-29</lastmod>
@@ -46,7 +47,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- صفحة شكراً للواتساب -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/thankyou-whatsapp.html</loc>
     <lastmod>2025-11-29</lastmod>
@@ -54,7 +54,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- سياسة الخصوصية -->
+  <!-- صفحة الخصوصية -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/privacy.html</loc>
     <lastmod>2025-11-29</lastmod>
@@ -62,32 +62,73 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- صفحة المدونة الرئيسية -->
+  <!-- المدونة -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/blog/index.html</loc>
     <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- مثال صفحة مقال في المدونة -->
+  <!-- مقالات المدونة -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/blog/blog1-تنظيف-بعد-التشطيب.html</loc>
     <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <image:image>
       <image:loc>https://elhbebclean.github.io/Elhabib_clean_home/images/blog1-thumbnail.jpg</image:loc>
       <image:caption>تنظيف بعد التشطيب – الحبيب كلين</image:caption>
     </image:image>
+    <!-- فيديوهات -->
+    <video:video>
+      <video:content_loc>https://www.youtube.com/embed/VIDEO_ID_1</video:content_loc>
+      <video:title>تنظيف بعد التشطيب فيديو 1</video:title>
+      <video:description>تعلم خطوات تنظيف المنزل بعد التشطيب مع الحبيب كلين</video:description>
+    </video:video>
+    <video:video>
+      <video:content_loc>https://www.youtube.com/embed/VIDEO_ID_2</video:content_loc>
+      <video:title>تنظيف بعد التشطيب فيديو 2</video:title>
+      <video:description>نصائح عملية لتنظيف بعد التشطيب من الحبيب كلين</video:description>
+    </video:video>
+    <video:video>
+      <video:content_loc>https://www.youtube.com/embed/VIDEO_ID_3</video:content_loc>
+      <video:title>تنظيف بعد التشطيب فيديو 3</video:title>
+      <video:description>إزالة الجبس والدهانات والأتربة بطريقة احترافية</video:description>
+    </video:video>
   </url>
 
-  <!-- صفحة تطبيق أو إضافات أخرى -->
+  <url>
+    <loc>https://elhbebclean.github.io/Elhabib_clean_home/blog/blog2-تنظيف-المطابخ.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://elhbebclean.github.io/Elhabib_clean_home/images/blog2-thumbnail.jpg</image:loc>
+      <image:caption>تنظيف المطابخ – الحبيب كلين</image:caption>
+    </image:image>
+    <!-- فيديوهات -->
+    <video:video>
+      <video:content_loc>https://www.youtube.com/embed/VIDEO_ID_4</video:content_loc>
+      <video:title>تنظيف المطابخ فيديو 1</video:title>
+      <video:description>طرق تنظيف المطابخ العميق مع الحبيب كلين</video:description>
+    </video:video>
+  </url>
+
+  <!-- تطبيق الحبيب كلين -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/app/index.html</loc>
     <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- ملفك التجاري (Google Maps) -->
+  <url>
+    <loc>https://g.page/habib-clean?share</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
