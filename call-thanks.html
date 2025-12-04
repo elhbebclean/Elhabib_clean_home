@@ -85,6 +85,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script>
 window.addEventListener('load', function(){
 
+  // ✅ إضافة Enhanced Conversions باستخدام رقم الهاتف
+  gtag('set', 'user_data', {
+    phone_number: '01016961497'
+  });
+
   // ✅ إضافة GA4 purchase
   gtag('event', 'purchase', {
     value: 1.0,
