@@ -1,4 +1,6 @@
-# robots.txt – موقع الحبيب كلين (نسخة محسنة SEO)
+# robots.txt – موقع الحبيب كلين
+# السماح لجميع محركات البحث بفهرسة الموقع باستثناء الملفات المهمة فقط
+
 User-agent: *
 Disallow: /admin/
 Disallow: /scripts/
@@ -10,4 +12,5 @@ Allow: /
 Allow: /images/
 Allow: /videos/
 
-Sitemap: https://elhbebclean.github.io/Elhabib_clean_home/sitemap.xml
+# رابط Sitemap XML
+Sitemap: https://elhbebclean.github.io/sitemap.xml
