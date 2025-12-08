@@ -3,58 +3,97 @@
         xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
 
+  <!-- الصفحة الرئيسية -->
   <url>
-    <loc>https://elhbebclean.github.io/Elhabib_clean_home/</loc>
-    <lastmod>2025-12-07</lastmod>
+    <loc>https://elhbebclean.github.io/Elhabib_clean_home/index.html</loc>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+
+    <!-- فيديوهات الصفحة الرئيسية -->
+    <video:video>
+      <video:thumbnail_loc>https://elhbebclean.github.io/Elhabib_clean_home/images/home-cleaning.jpg</video:thumbnail_loc>
+      <video:title>فيديو تنظيف عميق للمنزل</video:title>
+      <video:description>خدمة تنظيف احترافية للمنازل والشقق</video:description>
+      <video:content_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:player_loc>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://elhbebclean.github.io/Elhabib_clean_home/images/floor-polish.jpg</video:thumbnail_loc>
+      <video:title>فيديو تلميع الأرضيات</video:title>
+      <video:description>خدمة تلميع الرخام والسيراميك والباركيه</video:description>
+      <video:content_loc>https://www.youtube.com/embed/4Wvpi-Vq0FI</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/4Wvpi-Vq0FI</video:player_loc>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://elhbebclean.github.io/Elhabib_clean_home/images/post-renovation.jpg</video:thumbnail_loc>
+      <video:title>فيديو تنظيف بعد التشطيب</video:title>
+      <video:description>إزالة بقايا الأسمنت والدهانات بعد التشطيب</video:description>
+      <video:content_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:player_loc>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://elhbebclean.github.io/Elhabib_clean_home/images/furniture-cleaning.jpg</video:thumbnail_loc>
+      <video:title>فيديو تنظيف المفروشات والسجاد</video:title>
+      <video:description>غسيل وتعقيم المفروشات والكنب والستائر</video:description>
+      <video:content_loc>https://www.youtube.com/embed/5B5yFhxZjSM</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/5B5yFhxZjSM</video:player_loc>
+    </video:video>
   </url>
 
+  <!-- صفحة الخدمات -->
   <url>
-    <loc>https://elhbebclean.github.io/Elhabib_clean_home/services.html</loc>
-    <lastmod>2025-12-07</lastmod>
+    <loc>https://elhbebclean.github.io/Elhabib_clean_home/service.html</loc>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- صفحة اتصل بنا -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/contact.html</loc>
-    <lastmod>2025-12-07</lastmod>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- سياسة الخصوصية -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/privacy.html</loc>
-    <lastmod>2025-12-07</lastmod>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
+  <!-- مدونة -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/blog/index.html</loc>
-    <lastmod>2025-12-07</lastmod>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/blog/blog1-تنظيف-بعد-التشطيب.html</loc>
-    <lastmod>2025-12-07</lastmod>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/blog/blog2-تنظيف-المطابخ.html</loc>
-    <lastmod>2025-12-07</lastmod>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- صفحة التطبيق أو إضافية -->
   <url>
     <loc>https://elhbebclean.github.io/Elhabib_clean_home/app/index.html</loc>
-    <lastmod>2025-12-07</lastmod>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
