@@ -6,12 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 
-<!-- SEO داخلي -->
 <meta name="description" content="شكراً لتواصلك مع ElHabib Clean. سيتم تحويلك الآن للاتصال مباشرة مع فريق الدعم.">
-<meta property="og:title" content="ElHabib Clean - تحويل إلى اتصال">
-<meta property="og:description" content="سيتم الآن تحويلك للاتصال مع فريق ElHabib Clean مباشرة.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ar_AR">
 
 <!-- Google Tag Manager -->
 <script>
@@ -21,80 +16,87 @@
   var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),
       dl=l!='dataLayer'?'&l='+l:'';
-  j.async=true; 
+  j.async=true;
   j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
   f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KLM4RMFM');
 </script>
 
 <style>
-body { font-family: 'Cairo', Arial, sans-serif; text-align: center; padding: 50px 25px; background: #f8f9fa; line-height: 1.8; }
-h1 { color: #007bff; font-size: 28px; margin-bottom: 15px; }
-p { font-size: 18px; color: #444; }
-a.button { display: inline-block; margin-top: 20px; padding: 12px 20px; background: #007bff; color: white; text-decoration: none; font-size: 18px; border-radius: 8px; }
-a.button:hover { background: #0056b3; }
-footer { margin-top: 30px; font-size: 14px; color: #666; }
+body {
+  font-family: Cairo, Arial, sans-serif;
+  text-align: center;
+  padding: 50px 25px;
+  background: #f8f9fa;
+  line-height: 1.8;
+}
+h1 {
+  color: #28a745;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+p {
+  font-size: 18px;
+  color: #444;
+}
+a.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 24px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 8px;
+}
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #666;
+}
 </style>
 </head>
+
 <body>
+
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
-<h1>✅ شكراً لتواصلك معنا عبر الهاتف!</h1>
-<p>سيتم تحويلك الآن للاتصال مباشرة مع فريق <strong>ElHabib Clean</strong>.</p>
-<a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال</a>
+<h1>✅ تم استلام اتصالك بنجاح</h1>
+<p>سيتم الآن تحويلك للاتصال مباشرة مع فريق <strong>ElHabib Clean</strong>.</p>
+
+<a href="tel:01016961497" class="button">
+اضغط هنا إذا لم يتم الاتصال تلقائيًا
+</a>
 
 <script>
-window.addEventListener('load', function(){
-  window.dataLayer = window.dataLayer || [];
+window.dataLayer = window.dataLayer || [];
 
-  // ✅ Enhanced Conversions باستخدام رقم الهاتف
-  if(typeof gtag === 'function'){
-    gtag('set', 'user_data', {
-      phone_number: '01016961497'
-    });
-  }
+window.addEventListener('load', function () {
 
-  // ✅ GA4 purchase event
-  if(typeof gtag === 'function'){
-    gtag('event', 'purchase', {
-      value: 1.0,
-      currency: 'EGP'
-    });
-  }
+  /* 🔥 Event واحد فقط لتسجيل الإحالة */
+  dataLayer.push({
+    event: 'call_thank_you'
+  });
 
-  // ✅ تسجيل التحويل مرة واحدة لكل جلسة
-  if(!sessionStorage.getItem('call_conversion_done')){
-
-    // Push DataLayer event
-    dataLayer.push({'event':'call_conversion_fired'});
-
-    // تسجيل التحويل في Google Ads بنفس Label القديم
-    if(typeof gtag === 'function'){
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
-        'value': 1.0,
-        'currency': 'EGP'
-      });
-    }
-
-    // منع التكرار داخل نفس الجلسة
-    sessionStorage.setItem('call_conversion_done', 'true');
-  }
-
-  // ✅ إعادة التوجيه بعد 5 ثواني لضمان تسجيل الحدث
-  setTimeout(() => {
+  /* ⏱️ تأخير بسيط ثم التحويل للاتصال */
+  setTimeout(function () {
     window.location.href = 'tel:01016961497';
-  }, 5000);
+  }, 4000);
+
 });
 </script>
 
 <footer>
-<p>© 2025 ElHabib Clean. جميع الحقوق محفوظة.</p>
-<p>العنوان: 1 شارع وادي النيل، المعادي – القاهرة<br>
-هاتف: <a href="tel:01016961497" style="color:#007bff; text-decoration:none;">01016961497</a></p>
+  <p>© 2025 ElHabib Clean – جميع الحقوق محفوظة</p>
+  <p>
+    العنوان: 1 شارع وادي النيل، المعادي – القاهرة<br>
+    هاتف: <a href="tel:01016961497" style="color:#007bff;text-decoration:none;">
+    01016961497
+    </a>
+  </p>
 </footer>
 
 </body>
