@@ -5,7 +5,6 @@
 <title>تم التحويل إلى الاتصال - ElHabib Clean</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-
 <meta name="description" content="شكراً لتواصلك مع ElHabib Clean. سيتم تحويلك الآن للاتصال مباشرة مع فريق الدعم.">
 
 <!-- Google Tag Manager -->
@@ -58,7 +57,6 @@ footer {
 </head>
 
 <body>
-
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -78,7 +76,17 @@ window.addEventListener('load', function () {
 
   // ✅ تسجيل التحويل مرة واحدة لكل جلسة فقط
   if(!sessionStorage.getItem('call_conversion_done')){
-    dataLayer.push({ event: 'call_thank_you' });
+
+    // إرسال الإشارة إلى Google Tag Manager
+    dataLayer.push({ 
+      'event': 'call_thank_you',
+      'conversion_value': 200, // قيمة الإحالة حسب إعدادك
+      'currency': 'EGP'
+    });
+
+    // إرسال الإحالة إلى Google Ads مباشرة (إذا لم يتم تتبعها عبر GTM)
+    gtag('event', 'conversion', {'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9'});
+
     sessionStorage.setItem('call_conversion_done', 'true');
   }
 
