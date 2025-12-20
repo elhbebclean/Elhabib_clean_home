@@ -57,6 +57,7 @@ footer {
 </head>
 
 <body>
+
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -72,29 +73,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script>
 window.dataLayer = window.dataLayer || [];
 
-window.addEventListener('load', function () {
-
-  // ✅ تسجيل التحويل مرة واحدة لكل جلسة فقط
+// دفع الحدث قبل أي redirect
+function pushCallConversion() {
   if(!sessionStorage.getItem('call_conversion_done')){
-
-    // إرسال الإشارة إلى Google Tag Manager
-    dataLayer.push({ 
-      'event': 'call_thank_you',
-      'conversion_value': 200, // قيمة الإحالة حسب إعدادك
-      'currency': 'EGP'
-    });
-
-    // إرسال الإحالة إلى Google Ads مباشرة (إذا لم يتم تتبعها عبر GTM)
-    gtag('event', 'conversion', {'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9'});
-
+    dataLayer.push({ event: 'call_thank_you' });
     sessionStorage.setItem('call_conversion_done', 'true');
+    console.log('✅ Call conversion pushed to dataLayer');
+  } else {
+    console.log('⚠️ Call conversion already pushed this session');
   }
+}
 
-  // ⏱️ تحويل تلقائي بعد 4 ثواني
+window.addEventListener('load', function () {
+  pushCallConversion();
+
+  // تحويل تلقائي بعد 3 ثواني للهاتف
   setTimeout(function () {
     window.location.href = 'tel:01016961497';
-  }, 4000);
-
+  }, 3000);
 });
 </script>
 
