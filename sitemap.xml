@@ -4,42 +4,42 @@
         xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
 
   <url>
-    <loc>https://elhbebclean.github.io/</loc>
+    <loc>https://habib-clean.com/</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://elhbebclean.github.io/services.html</loc>
+    <loc>https://habib-clean.com/services.html</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://elhbebclean.github.io/contact.html</loc>
+    <loc>https://habib-clean.com/contact.html</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://elhbebclean.github.io/privacy.html</loc>
+    <loc>https://habib-clean.com/privacy.html</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://elhbebclean.github.io/blog/index.html</loc>
+    <loc>https://habib-clean.com/blog/index.html</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://elhbebclean.github.io/blog/blog1-cleaning-after-finishing.html</loc>
+    <loc>https://habib-clean.com/blog/blog1-cleaning-after-finishing.html</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -50,7 +50,7 @@
   </url>
 
   <url>
-    <loc>https://elhbebclean.github.io/blog/blog2-kitchen-cleaning.html</loc>
+    <loc>https://habib-clean.com/blog/blog2-kitchen-cleaning.html</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -61,7 +61,7 @@
   </url>
 
   <url>
-    <loc>https://elhbebclean.github.io/app/index.html</loc>
+    <loc>https://habib-clean.com/app/index.html</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
