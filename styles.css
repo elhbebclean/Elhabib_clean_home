@@ -7,13 +7,14 @@ body {
   background: #f9f9f9;
   color: #333;
   text-align: center;
+  text-rendering: optimizeSpeed;
 }
 
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; padding: 0; margin: 0; }
 
 /* =========================
-   Hero Section
+   Hero Section - Optimized for LCP
 ========================= */
 .hero {
   position: relative;
@@ -24,18 +25,22 @@ ul { list-style: none; padding: 0; margin: 0; }
   align-items: center;
   color: #fff;
   padding: 60px 12px 90px;
-  background:
+  /* إضافة لون احتياطي سريع */
+  background-color: #007bff; 
+  background-image:
     linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-    url('https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/banner.jpg.jpg')
-    center / cover no-repeat;
+    url('https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/banner.jpg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
 .hero .hero-content {
   max-width: 1100px;
   margin: auto;
-  opacity: 0;
-  animation: fadeIn .5s forwards;
+  opacity: 1; /* ظهور فوري للنص لتقليل زمن التفاعل */
+  animation: fadeIn .3s forwards;
 }
 
 .hero h1 {
@@ -67,13 +72,12 @@ ul { list-style: none; padding: 0; margin: 0; }
   font-weight: 700;
   color: #fff;
   transition: background .15s ease, transform .1s ease;
+  display: inline-block;
 }
 
 .btn:hover { transform: translateY(-1px); }
-
 .btn-call { background:#007bff; }
 .btn-call:hover { background:#0056b3; }
-
 .btn-whatsapp { background:#25d366; }
 .btn-whatsapp:hover { background:#1da851; }
 
@@ -85,7 +89,6 @@ header {
   color:#fff;
   padding:18px;
 }
-
 header h2 { margin:0; font-size:20px; }
 header nav a { margin:0 8px; font-weight:bold; }
 
@@ -98,33 +101,23 @@ main {
   padding:0 16px;
   text-align:right;
 }
-
 section { margin-bottom:30px; }
-
-section h2 {
-  color:#007bff;
-  margin-bottom:12px;
-}
-
+section h2 { color:#007bff; margin-bottom:12px; }
 .seo-intro {
   background:#fff;
   border:1px solid #eee;
   border-radius:10px;
   padding:18px;
 }
-
-section ul {
-  padding-right:16px;
-  line-height:1.9;
-}
-
+section ul { padding-right:16px; line-height:1.9; }
 section img {
   width:280px;
   border-radius:10px;
+  content-visibility: auto; /* تحسين أداء تحميل الصور */
 }
 
 /* =========================
-   Map Section (NEW)
+   Map Section
 ========================= */
 .map-section {
   background:#fff;
@@ -132,19 +125,8 @@ section img {
   padding:28px 18px;
   box-shadow:0 8px 22px rgba(0,0,0,.08);
 }
-
-.map-title {
-  color:#007bff;
-  font-size:22px;
-  margin-bottom:8px;
-}
-
-.map-desc {
-  font-size:14px;
-  color:#555;
-  margin-bottom:18px;
-}
-
+.map-title { color:#007bff; font-size:22px; margin-bottom:8px; }
+.map-desc { font-size:14px; color:#555; margin-bottom:18px; }
 .map-container {
   max-width:1000px;
   height:340px;
@@ -153,13 +135,7 @@ section img {
   overflow:hidden;
   box-shadow:0 6px 18px rgba(0,0,0,.12);
 }
-
-.map-container iframe {
-  width:100%;
-  height:100%;
-  border:0;
-}
-
+.map-container iframe { width:100%; height:100%; border:0; }
 .map-btn {
   display:inline-block;
   margin-top:18px;
@@ -170,15 +146,10 @@ section img {
   font-weight:700;
 }
 
-.map-btn:hover { background:#0056b3; }
-
 /* =========================
    Footer
 ========================= */
-footer {
-  padding:22px 10px;
-  color:#777;
-}
+footer { padding:22px 10px; color:#777; }
 
 /* =========================
    Floating Buttons
@@ -193,8 +164,8 @@ footer {
   padding:12px 16px;
   box-shadow:0 6px 18px rgba(0,0,0,.2);
   z-index:999;
+  will-change: transform;
 }
-
 #whatsapp-fixed { background:#25d366; bottom:80px; }
 #app-download-fixed { background:#007bff; bottom:20px; }
 
@@ -209,7 +180,6 @@ footer {
 @media (max-width:600px) {
   .map-container { height:260px; }
 }
-
 @media (max-width:400px) {
   .hero h1 { font-size:20px; }
   .hero p { font-size:14px; }
