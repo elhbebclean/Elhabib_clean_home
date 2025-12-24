@@ -6,14 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 
-<!-- SEO داخلي -->
-<meta name="description" content="شكراً لتواصلك مع ElHabib Clean. سيتم تحويلك الآن إلى واتساب للتحدث مباشرة مع فريق الدعم.">
-<meta property="og:title" content="ElHabib Clean - تحويل إلى واتساب">
-<meta property="og:description" content="يتم الآن تحويلك إلى واتساب للتحدث مع فريق ElHabib Clean.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ar_AR">
-
-<!-- Google Tag Manager -->
 <script>
 (function(w,d,s,l,i){
   w[l]=w[l]||[];
@@ -27,19 +19,19 @@
 })(window,document,'script','dataLayer','GTM-KLM4RMFM');
 </script>
 
-<!-- Event snippet for Call – Thank You Page conversion page -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
 <script>
-  gtag('event', 'conversion', {'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9'});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16529004339');
 </script>
 
-
-  
 <style>
 body { font-family: 'Cairo', Arial, sans-serif; text-align: center; padding: 50px 25px; background: #f8f9fa; line-height: 1.8; }
 h1 { color: #25D366; font-size: 30px; margin-bottom: 15px; }
 p { font-size: 18px; color: #444; }
 a.button { display: inline-block; margin-top: 25px; padding: 14px 26px; background: #25D366; color: white; text-decoration: none; font-size: 18px; border-radius: 10px; transition: all 0.3s ease; }
-a.button:hover { background: #1EBE5D; }
 footer { margin-top: 40px; font-size: 15px; color: #666; }
 </style>
 </head>
@@ -50,60 +42,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 <h1>✅ شكراً لتواصلك معنا عبر واتساب!</h1>
-<p>سيتم تحويلك الآن لمحادثة مباشرة على واتساب مع فريق <strong>ElHabib Clean</strong>.<br>
-نحن جاهزون للرد على جميع استفساراتك فوراً.</p>
-<a href="https://wa.me/201016961497" class="button" target="_blank">اضغط هنا إذا لم يتم التحويل</a>
+<p>سيتم تحويلك الآن لمحادثة مباشرة على واتساب...</p>
+<a href="https://wa.me/201016961497" class="button">اضغط هنا إذا لم يتم التحويل</a>
 
 <script>
 window.addEventListener('load', function(){
   window.dataLayer = window.dataLayer || [];
 
-  // ✅ Enhanced Conversions باستخدام رقم الهاتف
-  if(typeof gtag === 'function'){
-    gtag('set', 'user_data', {
-      phone_number: '01016961497'
-    });
-  }
-
-  // ✅ GA4 purchase event
-  if(typeof gtag === 'function'){
-    gtag('event', 'purchase', {
-      value: 1.0,
-      currency: 'EGP'
-    });
-  }
-
-  // ✅ تسجيل التحويل مرة واحدة لكل جلسة
   if(!sessionStorage.getItem('whatsapp_conversion_done')){
+    
+    // 1. إرسال الحدث لـ GTM و GA4
+    dataLayer.push({
+      'event': 'whatsapp_conversion_fired',
+      'conversion_type': 'whatsapp'
+    });
 
-    // Push DataLayer event
-    dataLayer.push({'event':'whatsapp_conversion_fired'});
-
-    // تسجيل التحويل في Google Ads
+    // 2. إرسال التحويل المباشر لجوجل أدز باستخدام الـ Label الناجح عندك
     if(typeof gtag === 'function'){
       gtag('event', 'conversion', {
-        'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9', // نفس Label القديم لضمان ظهور الإحالات
+        'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
         'value': 1.0,
         'currency': 'EGP'
       });
     }
 
-    // منع التكرار داخل نفس الجلسة
     sessionStorage.setItem('whatsapp_conversion_done', 'true');
   }
 
-  // ✅ إعادة التوجيه بعد 5 ثواني لضمان تسجيل الحدث
+  // التحويل بعد 4 ثوانٍ لضمان خروج الإشارة
   setTimeout(() => {
     window.location.href = 'https://wa.me/201016961497';
-  }, 5000);
+  }, 4000);
 });
 </script>
-
-<footer>
-<p>© 2025 ElHabib Clean. جميع الحقوق محفوظة.</p>
-<p>العنوان: 1 شارع وادي النيل، المعادي – القاهرة<br>
-هاتف: <a href="tel:01016961497" style="color:#25D366; text-decoration:none;">01016961497</a></p>
-</footer>
-
 </body>
 </html>
