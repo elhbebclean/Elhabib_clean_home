@@ -5,9 +5,7 @@
 <title>تم التحويل إلى الاتصال - ElHabib Clean</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="شكراً لتواصلك مع ElHabib Clean. سيتم تحويلك الآن للاتصال مباشرة مع فريق الدعم.">
 
-<!-- Google Tag Manager -->
 <script>
 (function(w,d,s,l,i){
   w[l]=w[l]||[];
@@ -21,79 +19,43 @@
 })(window,document,'script','dataLayer','GTM-KLM4RMFM');
 </script>
 
-<!-- Event snippet for Call – Thank You Page conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9'});
-</script>
-
-  
 <style>
-body {
-  font-family: Cairo, Arial, sans-serif;
-  text-align: center;
-  padding: 50px 25px;
-  background: #f8f9fa;
-  line-height: 1.8;
-}
-h1 {
-  color: #28a745;
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-p {
-  font-size: 18px;
-  color: #444;
-}
-a.button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 24px;
-  background: #007bff;
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 8px;
-}
-footer {
-  margin-top: 40px;
-  font-size: 14px;
-  color: #666;
-}
+body { font-family: Cairo, Arial, sans-serif; text-align: center; padding: 50px 25px; background: #f8f9fa; line-height: 1.8; }
+h1 { color: #28a745; font-size: 28px; margin-bottom: 15px; }
+p { font-size: 18px; color: #444; }
+a.button { display: inline-block; margin-top: 25px; padding: 14px 24px; background: #007bff; color: #fff; text-decoration: none; font-size: 18px; border-radius: 8px; }
+footer { margin-top: 40px; font-size: 14px; color: #666; }
 </style>
 </head>
 
 <body>
-
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
-<h1>✅ تم استلام اتصالك بنجاح</h1>
+<h1>✅ تم استلام طلبك بنجاح</h1>
 <p>سيتم الآن تحويلك للاتصال مباشرة مع فريق <strong>ElHabib Clean</strong>.</p>
 
-<a href="tel:01016961497" class="button">
-اضغط هنا إذا لم يتم الاتصال تلقائيًا
-</a>
+<a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال تلقائيًا</a>
 
 <script>
 window.dataLayer = window.dataLayer || [];
 
-// دفع الحدث قبل أي redirect
 function pushCallConversion() {
+  // التأكد من إرسال الحدث بالاسم الذي ينتظره جوجل أدز في صورتك
   if(!sessionStorage.getItem('call_conversion_done')){
-    dataLayer.push({ event: 'call_thank_you' });
+    dataLayer.push({ 
+      'event': 'thankyou_call_lead' 
+    });
     sessionStorage.setItem('call_conversion_done', 'true');
-    console.log('✅ Call conversion pushed to dataLayer');
-  } else {
-    console.log('⚠️ Call conversion already pushed this session');
+    console.log('✅ Event thankyou_call_lead pushed successfully');
   }
 }
 
 window.addEventListener('load', function () {
   pushCallConversion();
-
-  // تحويل تلقائي بعد 3 ثواني للهاتف
+  // تحويل العميل للاتصال بعد 3 ثواني لضمان وصول البيانات لجوجل
   setTimeout(function () {
     window.location.href = 'tel:01016961497';
   }, 3000);
@@ -102,12 +64,7 @@ window.addEventListener('load', function () {
 
 <footer>
   <p>© 2025 ElHabib Clean – جميع الحقوق محفوظة</p>
-  <p>
-    العنوان: 1 شارع وادي النيل، المعادي – القاهرة<br>
-    هاتف: <a href="tel:01016961497" style="color:#007bff;text-decoration:none;">
-    01016961497
-    </a>
-  </p>
+  <p>هاتف: <a href="tel:01016961497" style="color:#007bff;text-decoration:none;">01016961497</a></p>
 </footer>
 
 </body>
