@@ -28,7 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Habib Clean",
-    "image": "https://habib-clean.com/banner.jpg.jpg",
+    "image": "https://habib-clean.com/FB_IMG_1737376278247.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1 شارع وادي النيل",
@@ -100,10 +100,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-align:right; 
   }
 
-  /* القسم الذي تظهر فيه الصورة المكررة banner.jpg.jpg */
+  /* تعديل البنر - حذف الصورة الثقيلة واستبدالها بلون متدرج سريع */
   .hero {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-      url('banner.jpg.jpg') center/cover no-repeat;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
     color:#fff;
     padding:120px 20px;
     border-radius:10px;
@@ -116,8 +115,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     align-items: center;
   }
   
-  .hero h2 { font-size:36px; margin-bottom:15px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
-  .hero p { font-size:20px; margin-bottom:20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+  .hero h2 { font-size:36px; margin-bottom:15px; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
+  .hero p { font-size:20px; margin-bottom:20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
 
   #whatsapp-fixed {
     position:fixed;
@@ -210,7 +209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="privacy.html">الخصوصية</a>
     <a href="/blog/">المدونة</a>
   </nav>
-  <a href="https://maps.app.goo.gl/wkatbwKjdm4J5vp48" target="_blank" class="btn btn-review">
+  <a href="http://googleusercontent.com/maps.google.com/5" target="_blank" class="btn btn-review">
     ⭐ شاهد آراء عملائنا على Google Maps
   </a>
 </header>
@@ -334,9 +333,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="our-work" style="text-align:center; padding:20px;">
       <h2 style="color:#007bff;">شاهد جودة خدماتنا الحقيقية بالصور</h2>
       <div style="display:flex;flex-wrap:wrap;gap:15px;justify-content:center;">
-        <img src="FB_IMG_1737376278247.jpg" alt="تنظيف منازل بالقاهرة" style="width:280px;border-radius:10px;">
-        <img src="IMG_٢٠٢٥٠٧٠٤_٠٣٤٦١٦.jpg" alt="تنظيف بعد التشطيب" style="width:280px;border-radius:10px;">
-        <img src="FB_IMG_1737376286871.jpg" alt="تلميع أرضيات" style="width:280px;border-radius:10px;">
+        <img src="FB_IMG_1737376278247.jpg" loading="lazy" width="280" height="210" alt="تنظيف منازل بالقاهرة" style="border-radius:10px;">
+        <img src="IMG_٢٠٢٥٠٧٠٤_٠٣٤٦١٦.jpg" loading="lazy" width="280" height="210" alt="تنظيف بعد التشطيب" style="border-radius:10px;">
+        <img src="FB_IMG_1737376286871.jpg" loading="lazy" width="280" height="210" alt="تلميع أرضيات" style="border-radius:10px;">
+        <img src="IMG_٢٠٢٥٠٧٠٤_٠٣٤٥٤٣.jpg" loading="lazy" width="280" height="210" alt="تعقيم منازل" style="border-radius:10px;">
       </div>
     </div>
 
@@ -424,16 +424,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <section>
     <h2>📹 شاهد فيديو من أعمالنا السابقة</h2>
     <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/o8OtxpTAJVM" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/VV4WatGKIeI" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/zac0LMpHCGI" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/5-oMyRN1pUI" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o8OtxpTAJVM" loading="lazy" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VV4WatGKIeI" loading="lazy" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/zac0LMpHCGI" loading="lazy" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/5-oMyRN1pUI" loading="lazy" allowfullscreen></iframe>
     </div>
   </section>
 
   <section>
     <h2>📍 موقعنا الجغرافي على خرائط جوجل</h2>
-    <iframe src="https://www.google.com/maps?q=Habib%20clean&z=16&output=embed"></iframe>
+    <iframe src="http://googleusercontent.com/maps.google.com/6" loading="lazy"></iframe>
   </section>
 
   <section class="reviews-cta">
