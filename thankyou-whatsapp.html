@@ -1,102 +1,64 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>جاري تحويلك إلى واتساب... | الحبيب كلين</title>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-16529004339');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16529004339');
+    </script>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #333;
-    overflow: hidden;
-}
-.container {
-    text-align: center;
-    background: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    max-width: 400px;
-    width: 90%;
-}
-h1 { color: #25d366; font-size: 24px; margin-bottom: 10px; }
-p { font-size: 18px; margin: 15px 0; color: #666; }
-.countdown {
-    font-size: 60px;
-    font-weight: bold;
-    color: #007bff;
-    margin: 20px 0;
-}
-.btn-manual {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 30px;
-    background-color: #25d366;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-    transition: 0.3s;
-}
-.btn-manual:hover {
-    transform: scale(1.05);
-    background-color: #1ebe57;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تم استلام طلبك | الحبيب كلين</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f8f9fa; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; direction: rtl; }
+        .success-box { text-align: center; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-top: 8px solid #28a745; max-width: 450px; width: 90%; }
+        .check-icon { font-size: 70px; color: #28a745; margin-bottom: 20px; }
+        h1 { color: #333; font-size: 28px; margin-bottom: 10px; }
+        p { color: #666; font-size: 18px; margin-bottom: 25px; }
+        .btn-home { display: inline-block; padding: 12px 30px; background: #007bff; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; }
+    </style>
+
+    <script>
+      // إرسال البيانات لـ GTM و GA4 و Google Ads في نفس الوقت
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'whatsapp_thank_you' // الاسم المطابق لصورك
+      });
+
+      // إرسال حدث التحويل لجوجل أدز مع القيمة المالية
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16529004339/whatsapp_thank_you', 
+          'value': 25.0, // القيمة المحددة في حسابك
+          'currency': 'EGP'
+      });
+    </script>
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<div class="container">
-    <h1>شكراً لثقتك بنا! ✅</h1>
-    <p>جاري تحويلك الآن للتحدث مع خدمة العملاء عبر واتساب...</p>
-    
-    <div class="countdown" id="timer">3</div>
-    
-    <p>إذا لم يتم تحويلك تلقائياً، اضغط هنا:</p>
-    <a href="https://wa.me/201016961497" class="btn-manual" onclick="recordConversion()">تحدث معنا الآن عبر واتساب</a>
-</div>
+    <div class="success-box">
+        <div class="check-icon">✅</div>
+        <h1>شكراً لك!</h1>
+        <p>تم تسجيل طلبك بنجاح.. جاري تحويلك الآن لتأكيد الموعد عبر الواتساب مع فريق الحبيب كلين.</p>
+        <a href="https://habib-clean.com/" class="btn-home">العودة للرئيسية</a>
+    </div>
 
-<script>
-var count = 3;
-var timerElement = document.getElementById('timer');
-
-// دالة تسجيل إحالة Google Ads
-function recordConversion() {
-    gtag('event', 'conversion', {'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9'});
-}
-
-// العداد التنازلي
-var countdown = setInterval(function() {
-    count--;
-    timerElement.innerHTML = count;
-    
-    if (count <= 0) {
-        clearInterval(countdown);
-        // تسجيل إحالة قبل التحويل
-        recordConversion();
-        // تحويل المستخدم
-        window.location.href = "https://wa.me/201016961497";
-    }
-}, 1000);
-</script>
+    <script>
+        // التوجيه للواتساب بعد 3 ثواني لضمان تسجيل البيانات
+        setTimeout(function() {
+            window.location.href = "https://wa.me/201016961497";
+        }, 3000);
+    </script>
 </body>
 </html>
