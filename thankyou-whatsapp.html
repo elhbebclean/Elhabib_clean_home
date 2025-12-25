@@ -6,16 +6,28 @@
     <title>جاري تحويلك... | الحبيب كلين</title>
     
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
+      // ربط الحساب الأساسي
       gtag('config', 'AW-16529004339');
       
-      // إرسال الإحالات فوراً
-      gtag('event', 'conversion', {'send_to': 'AW-16529004339/whatsapp_thank_you', 'value': 25.0, 'currency': 'EGP'});
-      window.dataLayer.push({'event': 'whatsapp_thank_you'});
+      // مقتطف حدث الإحالة الناجحة للواتساب (المعدل بالـ Label الصحيح)
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16529004339/j5-LCP_XkqEaEMPr_M09', // المعرف والملصق الخاص بك من جوجل أدز
+          'value': 25.0,
+          'currency': 'EGP'
+      });
+
+      // إرسال حدث إضافي للـ DataLayer (اختياري لـ GA4)
+      window.dataLayer.push({
+          'event': 'whatsapp_conversion',
+          'conversion_value': 25.0
+      });
     </script>
 
     <style>
@@ -44,7 +56,7 @@
     </div>
 
     <script>
-        // التحويل التلقائي مع ضمان وقت كافٍ للـ Tags
+        // التحويل التلقائي بعد 4 ثوانٍ لضمان إرسال أكواد التتبع بنجاح
         setTimeout(function() {
             window.location.href = "https://wa.me/201016961497";
         }, 4000);
