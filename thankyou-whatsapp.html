@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جاري تحويلك... | الحبيب كلين</title>
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-16529004339');
+      
+      // إرسال الإحالات فوراً
+      gtag('event', 'conversion', {'send_to': 'AW-16529004339/whatsapp_thank_you', 'value': 25.0, 'currency': 'EGP'});
+      window.dataLayer.push({'event': 'whatsapp_thank_you'});
     </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تم استلام طلبك | الحبيب كلين</title>
-    <meta name="robots" content="noindex, nofollow">
 
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; direction: rtl; }
-        .success-box { text-align: center; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-top: 8px solid #28a745; max-width: 450px; width: 90%; }
-        h1 { color: #333; font-size: 26px; }
-        .btn { display: inline-block; margin-top: 25px; padding: 12px 35px; background: #007bff; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; }
+        :root { --primary-color: #28a745; --blue-color: #007bff; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f7f6; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; direction: rtl; }
+        .card { background: white; padding: 40px; border-radius: 25px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); text-align: center; max-width: 400px; width: 90%; position: relative; overflow: hidden; }
+        .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--primary-color); }
+        .icon-circle { width: 80px; height: 80px; background: #e8f5e9; color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; margin: 0 auto 20px; }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid var(--blue-color); border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 20px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        h1 { color: #333; font-size: 24px; margin: 10px 0; }
+        p { color: #777; font-size: 16px; margin-bottom: 20px; }
+        .btn { display: inline-block; padding: 12px 25px; background: var(--blue-color); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,123,255,0.3); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,123,255,0.4); }
     </style>
-
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      // تشغيل إحالة GA4 (whatsapp_thank_you)
-      window.dataLayer.push({
-        'event': 'whatsapp_thank_you' 
-      });
-
-      // تشغيل إحالة جوجل أدز المباشرة (WhatsApp - Thank You Page)
-      gtag('event', 'conversion', {
-          'send_to': 'AW-16529004339/whatsapp_thank_you',
-          'value': 25.0,
-          'currency': 'EGP'
-      });
-    </script>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <div class="success-box">
-        <div style="font-size: 60px;">✅</div>
-        <h1>شكراً لك!</h1>
-        <p>جاري تحويلك الآن للواتساب لتأكيد الموعد..</p>
-        <a href="https://habib-clean.com/" class="btn">العودة للرئيسية</a>
+    <div class="card">
+        <div class="icon-circle">✓</div>
+        <h1>تم تسجيل طلبك!</h1>
+        <p>ثوانٍ قليلة وسنحولك لمحادثة الواتساب لتأكيد التفاصيل.</p>
+        <div class="loader"></div>
+        <a href="https://wa.me/201016961497" class="btn">تحدث معنا الآن</a>
     </div>
 
     <script>
-        // مهلة 4 ثوانٍ لضمان إرسال جميع البيانات قبل التحويل
+        // التحويل التلقائي مع ضمان وقت كافٍ للـ Tags
         setTimeout(function() {
             window.location.href = "https://wa.me/201016961497";
         }, 4000);
