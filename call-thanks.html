@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>تم التحويل إلى الاتصال - ElHabib Clean</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <title>تم التحويل إلى الاتصال - ElHabib Clean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
 
-<script>
-(function(w,d,s,l,i){
-  w[l]=w[l]||[];
-  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-  var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer'?'&l='+l:'';
-  j.async=true;
-  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-  f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KLM4RMFM');
-</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
 
-<style>
-body { font-family: Cairo, Arial, sans-serif; text-align: center; padding: 50px 25px; background: #f8f9fa; line-height: 1.8; }
-h1 { color: #28a745; font-size: 28px; margin-bottom: 15px; }
-p { font-size: 18px; color: #444; }
-a.button { display: inline-block; margin-top: 25px; padding: 14px 24px; background: #007bff; color: #fff; text-decoration: none; font-size: 18px; border-radius: 8px; }
-footer { margin-top: 40px; font-size: 14px; color: #666; }
-</style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16529004339');
+    </script>
+
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; text-align: center; padding: 50px 25px; background: #f8f9fa; line-height: 1.8; }
+        h1 { color: #28a745; font-size: 28px; margin-bottom: 15px; }
+        p { font-size: 18px; color: #444; }
+        .button { display: inline-block; margin-top: 25px; padding: 14px 24px; background: #007bff; color: #fff; text-decoration: none; font-size: 18px; border-radius: 8px; font-weight: bold; }
+        footer { margin-top: 40px; font-size: 14px; color: #666; }
+    </style>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      // إرسال حدث GA4
+      window.dataLayer.push({ 
+        'event': 'thankyou_call_lead' 
+      });
+
+      // إرسال إحالة جوجل أدز المباشرة (OIQ7COaD0ewaELOu0sk9) بقيمة 200 ج.م
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
+          'value': 200.0,
+          'currency': 'EGP'
+      });
+    </script>
 </head>
 
 <body>
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<h1>✅ تم استلام طلبك بنجاح</h1>
-<p>سيتم الآن تحويلك للاتصال مباشرة مع فريق <strong>ElHabib Clean</strong>.</p>
+    <h1>✅ تم استلام طلبك بنجاح</h1>
+    <p>سيتم الآن تحويلك للاتصال مباشرة مع فريق <strong>ElHabib Clean</strong>.</p>
 
-<a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال تلقائيًا</a>
+    <a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال تلقائيًا</a>
 
-<script>
-window.dataLayer = window.dataLayer || [];
+    <script>
+        // التحويل للاتصال بعد 4 ثوانٍ لضمان إرسال البيانات
+        setTimeout(function () {
+            window.location.href = 'tel:01016961497';
+        }, 4000);
+    </script>
 
-function pushCallConversion() {
-  // التأكد من إرسال الحدث بالاسم الذي ينتظره جوجل أدز في صورتك
-  if(!sessionStorage.getItem('call_conversion_done')){
-    dataLayer.push({ 
-      'event': 'thankyou_call_lead' 
-    });
-    sessionStorage.setItem('call_conversion_done', 'true');
-    console.log('✅ Event thankyou_call_lead pushed successfully');
-  }
-}
-
-window.addEventListener('load', function () {
-  pushCallConversion();
-  // تحويل العميل للاتصال بعد 3 ثواني لضمان وصول البيانات لجوجل
-  setTimeout(function () {
-    window.location.href = 'tel:01016961497';
-  }, 3000);
-});
-</script>
-
-<footer>
-  <p>© 2025 ElHabib Clean – جميع الحقوق محفوظة</p>
-  <p>هاتف: <a href="tel:01016961497" style="color:#007bff;text-decoration:none;">01016961497</a></p>
-</footer>
-
+    <footer>
+      <p>© 2025 ElHabib Clean – جميع الحقوق محفوظة</p>
+    </footer>
 </body>
 </html>
