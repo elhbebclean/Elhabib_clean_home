@@ -21,25 +21,24 @@
     <meta name="robots" content="noindex, nofollow">
 
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f8f9fa; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; direction: rtl; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; direction: rtl; }
         .success-box { text-align: center; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-top: 8px solid #28a745; max-width: 450px; width: 90%; }
-        .check-icon { font-size: 70px; color: #28a745; margin-bottom: 20px; }
-        h1 { color: #333; font-size: 28px; margin-bottom: 10px; }
-        p { color: #666; font-size: 18px; margin-bottom: 25px; }
-        .btn-home { display: inline-block; padding: 12px 30px; background: #007bff; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; }
+        h1 { color: #333; font-size: 26px; }
+        .btn { display: inline-block; margin-top: 25px; padding: 12px 35px; background: #007bff; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; }
     </style>
 
     <script>
-      // إرسال البيانات لـ GTM و GA4 و Google Ads في نفس الوقت
       window.dataLayer = window.dataLayer || [];
+
+      // تشغيل إحالة GA4 (whatsapp_thank_you)
       window.dataLayer.push({
-        'event': 'whatsapp_thank_you' // الاسم المطابق لصورك
+        'event': 'whatsapp_thank_you' 
       });
 
-      // إرسال حدث التحويل لجوجل أدز مع القيمة المالية
+      // تشغيل إحالة جوجل أدز المباشرة (WhatsApp - Thank You Page)
       gtag('event', 'conversion', {
-          'send_to': 'AW-16529004339/whatsapp_thank_you', 
-          'value': 25.0, // القيمة المحددة في حسابك
+          'send_to': 'AW-16529004339/whatsapp_thank_you',
+          'value': 25.0,
           'currency': 'EGP'
       });
     </script>
@@ -48,17 +47,17 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="success-box">
-        <div class="check-icon">✅</div>
+        <div style="font-size: 60px;">✅</div>
         <h1>شكراً لك!</h1>
-        <p>تم تسجيل طلبك بنجاح.. جاري تحويلك الآن لتأكيد الموعد عبر الواتساب مع فريق الحبيب كلين.</p>
-        <a href="https://habib-clean.com/" class="btn-home">العودة للرئيسية</a>
+        <p>جاري تحويلك الآن للواتساب لتأكيد الموعد..</p>
+        <a href="https://habib-clean.com/" class="btn">العودة للرئيسية</a>
     </div>
 
     <script>
-        // التوجيه للواتساب بعد 3 ثواني لضمان تسجيل البيانات
+        // مهلة 4 ثوانٍ لضمان إرسال جميع البيانات قبل التحويل
         setTimeout(function() {
             window.location.href = "https://wa.me/201016961497";
-        }, 3000);
+        }, 4000);
     </script>
 </body>
 </html>
