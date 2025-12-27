@@ -537,27 +537,25 @@ document.addEventListener("DOMContentLoaded", function(){
 </script>
 <section style="background: #fdfdfd; padding: 20px 10px; border-radius: 15px; margin-top: 25px; border: 1px dashed #007bff;">
     
-    <div style="text-align: right; margin-bottom: 20px;">
-        <p style="font-size: 18px; font-weight: bold; color: #333; line-height: 1.6;">
-            ⭐ يمكنك رؤية موقعنا على 
-            <a href="http://googleusercontent.com/maps.google.com/5" target="_blank" style="color: #007bff; text-decoration: none; border-bottom: 2px solid #007bff;">جوجل ماب</a> 
-            لرؤية صور أعمالنا السابقة، أو زيارة 
-            <a href="https://youtube.com/@elhbeb?si=-2qu-QyArKC9jnMo" target="_blank" style="color: #ff0000; text-decoration: none; border-bottom: 2px solid #ff0000;">قناتنا على اليوتيوب</a> 
-            لمتابعة فيديوهات الشغل أول بأول.
-        </p>
-    </div>
+<div id="floating-call-btn" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; line-height: 0;">
+    <a href="call-thanks.html" aria-label="اتصل بنا" 
+       style="background-color: #007bff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-decoration: none; transition: transform 0.3s ease;">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+    </a>
+</div>
 
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-        
-        <div style="width: 100%; max-width: 300px; aspect-ratio: 9/16; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/B7BJOEUEIqw" frameborder="0" allowfullscreen loading="lazy"></iframe>
-        </div>
-
-        <div style="width: 100%; max-width: 500px; aspect-ratio: 16/9; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/t_lN65LWpqE" frameborder="0" allowfullscreen loading="lazy"></iframe>
-        </div>
-
-    </div>
-</section>
+<style>
+    /* تأثير نبضي خفيف لا يجهد معالج الموبايل */
+    #floating-call-btn {
+        animation: quick-pulse 2s infinite;
+    }
+    @keyframes quick-pulse {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+        70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+    }
+</style>    
 </body>
 </html>
