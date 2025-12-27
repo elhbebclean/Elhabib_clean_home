@@ -7,29 +7,6 @@
     
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      // ربط الحساب الأساسي
-      gtag('config', 'AW-16529004339');
-      
-      // مقتطف حدث الإحالة الناجحة للواتساب (المعدل بالـ Label الصحيح)
-      gtag('event', 'conversion', {
-          'send_to': 'AW-16529004339/j5-LCP_XkqEaEMPr_M09', // المعرف والملصق الخاص بك من جوجل أدز
-          'value': 25.0,
-          'currency': 'EGP'
-      });
-
-      // إرسال حدث إضافي للـ DataLayer (اختياري لـ GA4)
-      window.dataLayer.push({
-          'event': 'whatsapp_conversion',
-          'conversion_value': 25.0
-      });
-    </script>
-
     <style>
         :root { --primary-color: #28a745; --blue-color: #007bff; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f7f6; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; direction: rtl; }
@@ -41,7 +18,6 @@
         h1 { color: #333; font-size: 24px; margin: 10px 0; }
         p { color: #777; font-size: 16px; margin-bottom: 20px; }
         .btn { display: inline-block; padding: 12px 25px; background: var(--blue-color); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,123,255,0.3); }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,123,255,0.4); }
     </style>
 </head>
 <body>
@@ -54,12 +30,12 @@
         <div class="loader"></div>
         <a href="https://wa.me/201016961497" class="btn">تحدث معنا الآن</a>
     </div>
-<script>
-    // التحويل التلقائي بعد 5 ثوانٍ (5000 مللي ثانية) لضمان تسجيل الإحالة في جوجل أدز
-    setTimeout(function() {
-        window.location.href = "https://wa.me/201016961497";
-    }, 5000); 
-</script>
-  
+
+    <script>
+        // التحويل بعد 5 ثواني لضمان وصول بيانات GTM للسيرفر
+        setTimeout(function() {
+            window.location.href = "https://wa.me/201016961497";
+        }, 5000); 
+    </script>
 </body>
 </html>
