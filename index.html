@@ -42,159 +42,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   </script>
 
-  <style>
-  body { 
-    font-family: Arial, sans-serif; 
-    margin:0; 
-    background:#f9f9f9; 
-    color:#333; 
-    text-align:center;
-    line-height: 1.6;
-  }
-  
-  header { 
-    background:#007bff; 
-    color:white; 
-    padding:30px 10px; 
-  }
-  
-  header h1 { 
-    margin:0; 
-    font-size:28px; 
-  }
-  
-  nav { 
-    margin-top:10px; 
-  }
-  
-  nav a { 
-    color:white; 
-    text-decoration:none; 
-    margin:0 10px; 
-    font-weight:bold; 
-    font-size:16px; 
-  }
-
-  .btn { 
-    display:inline-block; 
-    margin:10px 5px; 
-    padding:15px 25px; 
-    border-radius:6px; 
-    color:white; 
-    text-decoration:none; 
-    font-weight:bold; 
-    font-size:16px; 
-    cursor:pointer; 
-    position: relative;
-    z-index: 999;
-  }
-  
-  .btn-call { background:#28a745; }
-  .btn-whatsapp { background:#25d366; }
-  .btn-review { background:#ffc107; color:#000; }
-
-  main { 
-    padding:30px 15px; 
-    max-width:900px; 
-    margin:auto; 
-    text-align:right; 
-  }
-
-  /* تعديل البنر - حذف الصورة الثقيلة واستبدالها بلون متدرج سريع */
-  .hero {
-    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-    color:#fff;
-    padding:120px 20px;
-    border-radius:10px;
-    text-align:center;
-    margin-bottom: 25px;
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
+<style>
+  body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; color:#333; text-align:center; line-height: 1.6; }
+  header { background:#007bff; color:white; padding:30px 10px; }
+  header h1 { margin:0; font-size:28px; }
+  nav a { color:white; text-decoration:none; margin:0 10px; font-weight:bold; font-size:16px; }
+  .btn { display:inline-block; margin:10px 5px; padding:15px 25px; border-radius:6px; color:white; text-decoration:none; font-weight:bold; font-size:16px; cursor:pointer; position: relative; z-index: 999; }
+  .btn-call { background:#28a745; } .btn-whatsapp { background:#25d366; } .btn-review { background:#ffc107; color:#000; }
+  main { padding:30px 15px; max-width:900px; margin:auto; text-align:right; }
+  .hero { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color:#fff; padding:120px 20px; border-radius:10px; text-align:center; margin-bottom: 25px; min-height: 350px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
   .hero h2 { font-size:36px; margin-bottom:15px; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
-  .hero p { font-size:20px; margin-bottom:20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
-
-  #whatsapp-fixed {
-    position:fixed;
-    bottom:80px;
-    right:20px;
-    background-color:#25d366;
-    color:white;
-    padding:12px 20px;
-    border-radius:50px;
-    font-weight:bold;
-    text-decoration:none;
-    box-shadow:0 4px 8px rgba(0,0,0,0.2);
-    z-index:9999;
-  }
-
-  #app-download-fixed {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background-color:#007bff;
-    color:white;
-    padding:12px 20px;
-    border-radius:50px;
-    font-weight:bold;
-    text-decoration:none;
-    box-shadow:0 4px 8px rgba(0,0,0,0.2);
-    z-index:9999;
-  }
-
-  section { 
-    margin-bottom: 30px; 
-    background: #fff; 
-    padding: 30px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    clear: both;
-  }
-  
-  section iframe { 
-    width:100%; 
-    height:400px; 
-    border:none; 
-    border-radius:10px; 
-    margin-bottom:20px; 
-  }
-  
+  section { margin-bottom: 30px; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); clear: both; }
   h3 { color:#007bff; margin-top:25px; font-size: 22px; border-right: 4px solid #007bff; padding-right: 10px; }
   ul li { margin-bottom:12px; line-height:1.8; text-align:right; list-style: none; }
   ul li::before { content: "✅ "; }
-
-  .video-grid { 
-    display:flex; 
-    flex-wrap:wrap; 
-    gap:16px; 
-    justify-content:center; 
-  }
-  
-  .video-grid iframe { 
-    flex: 1 1 320px; 
-    max-width:560px; 
-    height:315px; 
-  }
-  
-  .about-content h2, .services-details h2, #seo-content h2 {
-    color: #007bff;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 15px;
-    font-size: 26px;
-  }
-  
-  footer {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    margin-top: 50px;
-  }
-  </style>
-
+  .video-grid { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; }
+  .video-grid iframe { flex: 1 1 320px; max-width:560px; height:315px; border-radius:10px; border:none; }
+  .about-content h2, .services-details h2, #seo-content h2 { color: #007bff; border-bottom: 2px solid #eee; padding-bottom: 15px; font-size: 26px; }
+  footer { background: #333; color: #fff; padding: 20px; margin-top: 50px; }
+  #whatsapp-fixed { position:fixed; bottom:80px; right:20px; background-color:#25d366; color:white; padding:12px 20px; border-radius:50px; font-weight:bold; text-decoration:none; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:9999; }
+  #app-download-fixed { position:fixed; bottom:20px; right:20px; background-color:#007bff; color:white; padding:12px 20px; border-radius:50px; font-weight:bold; text-decoration:none; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:9999; }
+  #floating-call-btn { position: fixed; bottom: 20px; left: 20px; z-index: 1000; animation: quick-pulse 2s infinite; }
+  @keyframes quick-pulse { 0% { transform: scale(1); } 70% { transform: scale(1.05); } 100% { transform: scale(1); } }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -233,19 +103,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div style="text-align: right; margin-bottom: 10px;">
         <p style="font-size: 16px; font-weight: bold; color: #333;">
             ⭐ أعمالنا على 
-            <a href="https://maps.google.com/?cid=17784068785319916301&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #007bff; text-decoration: none;">جوجل ماب</a> 
+            <a href="https://maps.app.goo.gl/96HByGq6K8H9k8S88" target="_blank" style="color: #007bff; text-decoration: none;">جوجل ماب</a> 
             وقناتنا على 
             <a href="https://youtube.com/@elhbeb" target="_blank" style="color: #ff0000; text-decoration: none;">اليوتيوب</a>.
         </p>
     </div>
-
     <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
         <div style="width: 100%; max-width: 260px; position: relative; padding-bottom: 177.7%; height: 0; border-radius: 10px; overflow: hidden; background: #eee;">
-            <iframe title="تنظيف منازل فيديو طولي" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/B7BJOEUEIqw?controls=1&rel=0" loading="lazy" allowfullscreen></iframe>
+            <iframe title="فيديو تنظيف طولي الحبيب كلين" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/B7BJOEUEIqw?controls=1&rel=0" loading="lazy" allowfullscreen></iframe>
         </div>
-
         <div style="width: 100%; max-width: 400px; position: relative; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; background: #eee;">
-            <iframe title="تنظيف منازل فيديو عرضي" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/t_lN65LWpqE?controls=1&rel=0" loading="lazy" allowfullscreen></iframe>
+            <iframe title="فيديو تنظيف عرضي الحبيب كلين" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/t_lN65LWpqE?controls=1&rel=0" loading="lazy" allowfullscreen></iframe>
         </div>
     </div>
 </section>
@@ -441,30 +309,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p>ج: نعم، السعر المتفق عليه يشمل كافة الأدوات والمواد والعمالة.</p>
   </section>
 
-  <section>
-    <h2>📹 شاهد فيديو من أعمالنا السابقة</h2>
+ <section>
+    <h2 style="text-align:center;">📹 شاهد المزيد من أعمالنا السابقة</h2>
     <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/o8OtxpTAJVM" loading="lazy" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/VV4WatGKIeI" loading="lazy" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/zac0LMpHCGI" loading="lazy" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/5-oMyRN1pUI" loading="lazy" allowfullscreen></iframe>
+      <iframe title="أعمال تنظيف سابقة 1" src="https://www.youtube.com/embed/o8OtxpTAJVM" loading="lazy" allowfullscreen></iframe>
+      <iframe title="أعمال تنظيف سابقة 2" src="https://www.youtube.com/embed/VV4WatGKIeI" loading="lazy" allowfullscreen></iframe>
+      <iframe title="أعمال تنظيف سابقة 3" src="https://www.youtube.com/embed/zac0LMpHCGI" loading="lazy" allowfullscreen></iframe>
+      <iframe title="أعمال تنظيف سابقة 4" src="https://www.youtube.com/embed/5-oMyRN1pUI" loading="lazy" allowfullscreen></iframe>
     </div>
-  </section>
-
-  <!-- الخريطة -->
-<section>
-  <h2>📍 موقعنا على الخريطة</h2>
-  <iframe
-    src="https://www.google.com/maps?q=Habib%20clean&z=16&output=embed"
-    loading="lazy"
-    width="100%"
-    height="350"
-    style="border:0;"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen
-  ></iframe>
 </section>
-
+  
+  <!-- الخريطة -->
+<section style="text-align:center; padding: 40px 20px;">
+  <h2 style="color:#007bff; margin-bottom:20px;">📍 موقعنا على الخريطة</h2>
+  <p style="font-size:18px; margin-bottom:25px;">تفضل بزيارتنا في مقرنا بالمعادي أو شاهد موقعنا بدقة عبر جوجل ماب</p>
+  <a href="https://maps.app.goo.gl/96HByGq6K8H9k8S88" target="_blank" 
+     style="background:#4285F4; color:white; padding:15px 30px; border-radius:50px; text-decoration:none; font-weight:bold; display:inline-flex; align-items:center; gap:10px; box-shadow:0 4px 12px rgba(66,133,244,0.3);">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    فتح موقعنا في Google Maps
+  </a>
+</section>
 
   <section class="reviews-cta">
     <h2>آراء العملاء الحقيقية حول خدمات الحبيب كلين</h2>
