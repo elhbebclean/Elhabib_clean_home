@@ -14,14 +14,15 @@
     :root { --gold: #b8860b; --dark-blue: #1a2a3a; --success: #25D366; --warning: #d9534f; }
     body{margin:0;font-family:'Tajawal',sans-serif;line-height:1.8;color:#333;background:#fdfdfd;text-align:right;}
     
-    /* تنسيق زر العودة للرئيسية */
-    .top-nav { position: absolute; top: 20px; right: 20px; z-index: 100; }
-    .btn-home { background: rgba(255,255,255,0.2); color: #fff; padding: 8px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; border: 1px solid #fff; transition: 0.3s; }
-    .btn-home:hover { background: #fff; color: var(--dark-blue); }
+    /* القائمة الجديدة المتكاملة */
+    .top-nav { position: absolute; top: 0; left: 0; right: 0; z-index: 100; background: rgba(0,0,0,0.3); padding: 15px 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+    .top-nav a { color: #fff; text-decoration: none; font-weight: bold; font-size: 15px; transition: 0.3s; padding: 5px 10px; border-radius: 5px; }
+    .top-nav a:hover { color: var(--gold); background: rgba(255,255,255,0.1); }
+    .nav-app { border: 1px solid var(--gold); color: var(--gold) !important; }
 
-    header{position:relative; height:80vh; overflow:hidden; display: flex; align-items: center; justify-content: center; background: #000;}
-    .hero-slide{position:absolute; inset:0; width:100%; height:100%; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070'); background-size:cover; background-position:center; opacity: 0.6;}
-    .hero-content{position:relative; z-index:10; text-align:center; color:#fff; padding:0 20px; max-width: 900px;}
+    header{position:relative; height:85vh; overflow:hidden; display: flex; align-items: center; justify-content: center; background: #000;}
+    .hero-slide{position:absolute; inset:0; width:100%; height:100%; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070'); background-size:cover; background-position:center; opacity: 0.5;}
+    .hero-content{position:relative; z-index:10; text-align:center; color:#fff; padding:0 20px; max-width: 900px; margin-top: 50px;}
     .hero-content h1{font-size:42px; font-weight:900; margin-bottom:10px; color: var(--gold);}
     .hero-content p{font-size:22px; margin-bottom:30px; font-weight: 500;}
     
@@ -31,9 +32,7 @@
     .btn-call{background: #fff; color: var(--dark-blue); box-shadow: 0 4px 15px rgba(255,255,255,0.2);}
     
     .container{max-width:1000px; margin:auto; padding:40px 20px;}
-    
     .warning-box{background: #fff5f5; border: 2px dashed var(--warning); padding: 20px; border-radius: 15px; text-align: center; margin-bottom: 30px; color: #a94442;}
-
     .section-title{text-align: center; margin-bottom: 40px;}
     .section-title h2{font-size: 32px; color: var(--dark-blue); position: relative; display: inline-block; padding-bottom: 10px;}
     .section-title h2::after{content: ''; width: 60px; height: 4px; background: var(--gold); position: absolute; bottom: 0; right: 50%; transform: translateX(50%);}
@@ -51,9 +50,14 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header>
-  <div class="top-nav">
-      <a href="index.html" class="btn-home">🏠 الرئيسية</a>
-  </div>
+  <nav class="top-nav">
+      <a href="https://habib-clean.com/">الرئيسية</a>
+      <a href="https://habib-clean.com/services.html">الخدمات</a>
+      <a href="https://habib-clean.com/contact.html">اتصل بنا</a>
+      <a href="https://habib-clean.com/blog/">المدونة</a>
+      <a href="https://habib-clean.com/privacy.html">الخصوصية</a>
+      <a href="https://habib-clean.com/app/index.html" class="nav-app">📱 حمّل التطبيق</a>
+  </nav>
 
   <div class="hero-slide"></div>
   <div class="hero-content">
