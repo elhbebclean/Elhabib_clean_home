@@ -461,25 +461,42 @@
 </div>
 
 <script>
+// 1. وظيفة لجلب المعلمات من الرابط (مثل gclid)
 function getParam(p){
   var url = new URL(window.location.href);
   return url.searchParams.get(p);
 }
-var gclid = getParam('gclid');
 
 document.addEventListener("DOMContentLoaded", function(){
   try {
-    var callButton = document.getElementById('btn-call');
-    var whatsappButtons = document.querySelectorAll('#btn-whatsapp,#whatsapp-fixed');
+    // 2. توليد رقم تعريفي عشوائي للعميل (customerID)
+    var customerID = Math.floor(Math.random() * 1000000);
+    var gclid = getParam('gclid');
+    
+    // تجهيز الإضافة للرابط (ID + GCLID لو موجود)
+    var queryParams = "?id=" + customerID + (gclid ? "&gclid=" + gclid : "");
 
-    if(callButton){
-      callButton.href = "call-thanks.html" + (gclid ? "?gclid="+gclid : "");
-    }
-
-    whatsappButtons.forEach(function(el){
-      el.href = "thankyou-whatsapp.html" + (gclid ? "?gclid="+gclid : "");
+    // 3. تحديث كافة أزرار الاتصال (بما فيها الزر العائم)
+    var callButtons = document.querySelectorAll('a[href*="call-thanks.html"]');
+    callButtons.forEach(function(btn) {
+      btn.href = "https://habib-clean.com/call-thanks.html" + queryParams;
     });
-  } catch(e){}
+
+    // 4. تحديث كافة أزرار الواتساب
+    var whatsappButtons = document.querySelectorAll('a[href*="thankyou-whatsapp.html"]');
+    whatsappButtons.forEach(function(btn) {
+      btn.href = "https://habib-clean.com/thankyou-whatsapp.html" + queryParams;
+    });
+
+    // 5. إضافة وظيفة منع الفتح المباشر لضمان تسجيل التحويل
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('a');
+      if (el && (el.href.includes('call-thanks.html') || el.href.includes('thankyou-whatsapp.html'))) {
+        // نترك الرابط يعمل طبيعي بعد أن تم تحديثه بالأعلى
+      }
+    });
+
+  } catch(e) { console.log("Error updating links: ", e); }
 });
 </script>
 </body>
