@@ -16,15 +16,6 @@
   gtag('config', 'AW-16529004339');
 </script>
 
-<script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-</script>
-
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -459,9 +450,7 @@
         </svg>
     </a>
 </div>
-
 <script>
-// 1. وظيفة لجلب المعلمات من الرابط (مثل gclid)
 function getParam(p){
   var url = new URL(window.location.href);
   return url.searchParams.get(p);
@@ -469,34 +458,33 @@ function getParam(p){
 
 document.addEventListener("DOMContentLoaded", function(){
   try {
-    // 2. توليد رقم تعريفي عشوائي للعميل (customerID)
+    // 1. توليد الـ ID
     var customerID = Math.floor(Math.random() * 1000000);
     var gclid = getParam('gclid');
     
-    // تجهيز الإضافة للرابط (ID + GCLID لو موجود)
+    // 2. إرسال الـ ID لـ GA4 و GTM فوراً (عشان العداد ينطق)
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'customer_id_generated',
+      'customer_id': customerID
+    });
+
+    // 3. تجهيز الرابط
     var queryParams = "?id=" + customerID + (gclid ? "&gclid=" + gclid : "");
 
-    // 3. تحديث كافة أزرار الاتصال (بما فيها الزر العائم)
+    // 4. تحديث أزرار الاتصال
     var callButtons = document.querySelectorAll('a[href*="call-thanks.html"]');
     callButtons.forEach(function(btn) {
       btn.href = "https://habib-clean.com/call-thanks.html" + queryParams;
     });
 
-    // 4. تحديث كافة أزرار الواتساب
+    // 5. تحديث أزرار الواتساب
     var whatsappButtons = document.querySelectorAll('a[href*="thankyou-whatsapp.html"]');
     whatsappButtons.forEach(function(btn) {
       btn.href = "https://habib-clean.com/thankyou-whatsapp.html" + queryParams;
     });
 
-    // 5. إضافة وظيفة منع الفتح المباشر لضمان تسجيل التحويل
-    document.addEventListener('click', function(e) {
-      var el = e.target.closest('a');
-      if (el && (el.href.includes('call-thanks.html') || el.href.includes('thankyou-whatsapp.html'))) {
-        // نترك الرابط يعمل طبيعي بعد أن تم تحديثه بالأعلى
-      }
-    });
-
-  } catch(e) { console.log("Error updating links: ", e); }
+  } catch(e) { console.log("Error: ", e); }
 });
 </script>
 </body>
