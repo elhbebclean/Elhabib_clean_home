@@ -456,6 +456,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </a>
 </div>
 <script>
+// 1. دالة ذكية لجلب الـ GCLID من الرابط
 function getParam(p){
   var url = new URL(window.location.href);
   return url.searchParams.get(p);
@@ -463,33 +464,45 @@ function getParam(p){
 
 document.addEventListener("DOMContentLoaded", function(){
   try {
-    // 1. توليد الـ ID
+    // 2. توليد الـ ID العشوائي (عشان شغلك الشخصي)
     var customerID = Math.floor(Math.random() * 1000000);
+    
+    // 3. صيد الـ GCLID من الرابط
     var gclid = getParam('gclid');
     
-    // 2. إرسال الـ ID لـ GA4 و GTM فوراً (عشان العداد ينطق)
+    // حفظ الـ GCLID في ذاكرة المتصفح (عشان لو العميل قلب في الموقع ميتوهش)
+    if (gclid) {
+      sessionStorage.setItem('gclid_val', gclid);
+    } else {
+      gclid = sessionStorage.getItem('gclid_val');
+    }
+
+    // 4. إرسال البيانات للـ DataLayer (لتحسين أداء GTM و GA4)
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'event': 'customer_id_generated',
-      'customer_id': customerID
+      'customer_id': customerID,
+      'gclid': gclid || ""
     });
 
-    // 3. تجهيز الرابط
+    // 5. تجهيز الرابط النهائي (اللي هيروح لصفحة الشكر)
     var queryParams = "?id=" + customerID + (gclid ? "&gclid=" + gclid : "");
 
-    // 4. تحديث أزرار الاتصال
+    // 6. تحديث أزرار الاتصال (تحديث ذكي يمنع تكرار الرابط)
     var callButtons = document.querySelectorAll('a[href*="call-thanks.html"]');
     callButtons.forEach(function(btn) {
       btn.href = "https://habib-clean.com/call-thanks.html" + queryParams;
     });
 
-    // 5. تحديث أزرار الواتساب
+    // 7. تحديث أزرار الواتساب (تحديث ذكي يمنع تكرار الرابط)
     var whatsappButtons = document.querySelectorAll('a[href*="thankyou-whatsapp.html"]');
     whatsappButtons.forEach(function(btn) {
       btn.href = "https://habib-clean.com/thankyou-whatsapp.html" + queryParams;
     });
 
-  } catch(e) { console.log("Error: ", e); }
+    console.log("Habib Clean System: GCLID Captured -> " + gclid);
+
+  } catch(e) { console.log("System Error: ", e); }
 });
 </script>
 </body>
