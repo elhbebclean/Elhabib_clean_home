@@ -27,22 +27,6 @@
         .button { display: inline-block; margin-top: 25px; padding: 14px 24px; background: #007bff; color: #fff; text-decoration: none; font-size: 18px; border-radius: 8px; font-weight: bold; }
         footer { margin-top: 40px; font-size: 14px; color: #666; }
     </style>
-
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      // إرسال حدث GA4
-      window.dataLayer.push({ 
-        'event': 'thankyou_call_lead' 
-      });
-
-      // إرسال إحالة جوجل أدز المباشرة (OIQ7COaD0ewaELOu0sk9) بقيمة 200 ج.م
-      gtag('event', 'conversion', {
-          'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
-          'value': 200.0,
-          'currency': 'EGP'
-      });
-    </script>
 </head>
 
 <body>
@@ -54,14 +38,42 @@
     <a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال تلقائيًا</a>
 
     <script>
-        // التحويل للاتصال بعد 4 ثوانٍ لضمان إرسال البيانات
+      (function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var gclid = urlParams.get('gclid');
+
+        // 1. إرسال التحويل لجوجل أدز فوراً
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
+            'value': 200.0,
+            'currency': 'EGP'
+        });
+
+        // 2. إرسال البيانات لـ Make (شيت التجميع)
+        if (gclid) {
+          var makeUrl = "https://hook.eu1.make.com/eozh2hwrnwdnr9ot9h7itdp41epe05u4";
+          
+          fetch(makeUrl, {
+            method: 'POST',
+            mode: 'no-cors', // لضمان السرعة وعدم التعارض
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              "gclid": gclid,
+              "source": "Phone Call",
+              "date": new Date().toLocaleString()
+            })
+          });
+        }
+
+        // 3. التحويل للاتصال بعد 3 ثوانٍ
         setTimeout(function () {
             window.location.href = 'tel:01016961497';
-        }, 4000);
+        }, 3000);
+      })();
     </script>
 
     <footer>
-      <p>© 2025 ElHabib Clean – جميع الحقوق محفوظة</p>
+      <p>© 2026 ElHabib Clean – جميع الحقوق محفوظة</p>
     </footer>
 </body>
 </html>
