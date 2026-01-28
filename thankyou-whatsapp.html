@@ -12,11 +12,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      // ربط الـ ID الصحيح من حسابك
       gtag('config', 'AW-16529004339');
 
-      // إرسال حدث الإحالة بالبيانات الجديدة التي استخرجتها
+      // إرسال حدث الإحالة الخاص بالواتساب
       gtag('event', 'conversion', {
           'send_to': 'AW-16529004339/RXAHCNLQl9gbELOu0sk9',
           'value': 150.0,
@@ -49,10 +47,31 @@
     </div>
 
     <script>
-        // التحويل التلقائي بعد 4 ثوانٍ (كافية جداً لموقعك السريع 96)
+      (function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var gclid = urlParams.get('gclid');
+
+        // إرسال البيانات لـ Make (شيت التجميع)
+        if (gclid) {
+          var makeUrl = "https://hook.eu1.make.com/eozh2hwrnwdnr9ot9h7itdp41epe05u4";
+          
+          fetch(makeUrl, {
+            method: 'POST',
+            mode: 'no-cors', 
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              "gclid": gclid,
+              "source": "WhatsApp Message",
+              "date": new Date().toLocaleString()
+            })
+          });
+        }
+
+        // التحويل التلقائي للواتساب بعد 3 ثوانٍ
         setTimeout(function() {
             window.location.href = "https://wa.me/201016961497";
-        }, 4000); 
+        }, 3000); 
+      })();
     </script>
 </body>
 </html>
