@@ -14,7 +14,7 @@
       gtag('js', new Date());
       gtag('config', 'AW-16529004339');
 
-      // إرسال حدث الإحالة الخاص بالواتساب
+      // إرسال حدث الإحالة الخاص بالواتساب لجوجل أدز
       gtag('event', 'conversion', {
           'send_to': 'AW-16529004339/RXAHCNLQl9gbELOu0sk9',
           'value': 150.0,
@@ -48,29 +48,31 @@
 
     <script>
       (function() {
+        // 1. استخراج الـ GCLID من الرابط
         var urlParams = new URLSearchParams(window.location.search);
         var gclid = urlParams.get('gclid');
 
-        // إرسال البيانات لـ Make (شيت التجميع)
+        // 2. إرسال البيانات لـ Make.com إذا وُجد الجكليد
         if (gclid) {
           var makeUrl = "https://hook.eu1.make.com/eozh2hwrnwdnr9ot9h7itdp41epe05u4";
           
           fetch(makeUrl, {
             method: 'POST',
-            mode: 'no-cors', 
+            // شيلنا no-cors عشان البيانات توصل كاملة
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               "gclid": gclid,
               "source": "WhatsApp Message",
-              "date": new Date().toLocaleString()
+              "page": window.location.pathname,
+              "date": new Date().toLocaleString('en-US', { timeZone: 'Africa/Cairo' })
             })
-          });
+          }).catch(function(err) { console.log("Error sending to Make"); });
         }
 
-        // التحويل التلقائي للواتساب بعد 3 ثوانٍ
+        // 3. التحويل التلقائي للواتساب بعد 3.5 ثانية (لضمان الإرسال)
         setTimeout(function() {
             window.location.href = "https://wa.me/201016961497";
-        }, 3000); 
+        }, 3500); 
       })();
     </script>
 </body>
