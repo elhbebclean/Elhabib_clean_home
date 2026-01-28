@@ -55,20 +55,20 @@
           
           fetch(makeUrl, {
             method: 'POST',
-            mode: 'no-cors', // لضمان السرعة وعدم التعارض
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               "gclid": gclid,
               "source": "Phone Call",
-              "date": new Date().toLocaleString()
+              "page": window.location.pathname,
+              "date": new Date().toLocaleString('en-US', { timeZone: 'Africa/Cairo' })
             })
-          });
+          }).catch(err => console.log('Error'));
         }
 
-        // 3. التحويل للاتصال بعد 3 ثوانٍ
+        // 3. التحويل للاتصال بعد 3.5 ثانية لضمان الإرسال
         setTimeout(function () {
             window.location.href = 'tel:01016961497';
-        }, 3000);
+        }, 3500);
       })();
     </script>
 
