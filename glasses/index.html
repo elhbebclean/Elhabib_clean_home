@@ -3,45 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نظارة التصوير الذكية HD | حبيب شوب</title>
+    <title>جهاز ألعاب الطيبين GS5 | استرجع ذكرياتك بجودة HD</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; text-align: center; }
-        .card { max-width: 500px; margin: 20px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .price { color: #e44d26; font-size: 28px; font-weight: bold; margin: 15px 0; }
-        input, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
-        .btn { background: #25d366; color: white; border: none; padding: 18px; width: 100%; font-size: 20px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: 0.3s; }
-        .btn:hover { background: #128c7e; }
-        .features { text-align: right; margin: 20px 0; line-height: 1.8; list-style: none; padding-right: 10px; }
+        /* حافظنا على التنسيق اللي تحبه مع لمسات تناسب الألعاب */
+        body { font-family: Arial, sans-serif; background: #0f172a; margin: 0; padding: 0; text-align: center; color: #fff; }
+        .card { max-width: 500px; margin: 20px auto; background: #1e293b; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #334155; }
+        h2 { color: #38bdf8; }
+        .price { color: #4ade80; font-size: 32px; font-weight: bold; margin: 15px 0; }
+        .old-price { text-decoration: line-through; color: #94a3b8; font-size: 18px; }
+        input, textarea, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #334155; border-radius: 8px; box-sizing: border-box; font-size: 16px; background: #0f172a; color: #fff; }
+        .btn { background: #2563eb; color: white; border: none; padding: 18px; width: 100%; font-size: 20px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39); }
+        .btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+        .features { text-align: right; margin: 20px 0; line-height: 1.8; list-style: none; padding-right: 10px; color: #cbd5e1; }
+        .badge { background: #e11d48; color: white; padding: 5px 10px; border-radius: 5px; font-size: 14px; display: inline-block; margin-bottom: 10px; }
     </style>
 </head>
 <body>
     <div class="card">
-        <h2>نظارة التصوير الذكية HD الأصلية 😎</h2>
-        <p>سجل أجمل لحظاتك بوضوح تام وبلمسة واحدة</p>
+        <div class="badge">🔥 الأكثر مبيعاً في السعودية</div>
+        <h2>جهاز ألعاب الطيبين GS5 المطور 🎮</h2>
+        <p>استرجع أجمل ذكريات الطفولة مع أكثر من 500 لعبة كلاسيكية (ماريو، كونترا، تانك) بتصميم عصري رهيب!</p>
         
-        <div class="price">عرض خاص: 1499 ج.م</div>
+        <div class="price">
+            <span class="old-price">280 ريال</span><br>
+            180 ريال فقط!
+        </div>
         
         <ul class="features">
-            <li>✅ تصوير فيديو وصور جودة عالية HD</li>
-            <li>✅ ميكروفون مدمج لتسجيل صوت نقي</li>
-            <li>✅ تصميم رياضي أنيق وخفيف الوزن</li>
-            <li>✅ شحن سريع والدفع عند الاستلام</li>
+            <li>✅ أكثر من 500 لعبة زمان في جهاز واحد</li>
+            <li>✅ يدين تحكم مجانية للعب المزدوج مع العائلة</li>
+            <li>✅ تشغيل فوري (وصل وشغل) على أي تلفزيون</li>
+            <li>✅ جودة HD وتصميم شيك يشبه PS5</li>
+            <li>✅ الدفع عند الاستلام في جميع مدن المملكة</li>
         </ul>
 
         <form action="https://formspree.io/f/xreaojav" method="POST">
-            <input type="text" name="name" placeholder="الاسم بالكامل" required>
-            <input type="tel" name="phone" placeholder="رقم الهاتف (واتساب)" required>
-            <textarea name="address" placeholder="العنوان بالتفصيل" required></textarea>
+            <input type="text" name="name" placeholder="الاسم الكريم" required>
             
-            <input type="hidden" name="_next" value="https://habib-clean.com/glasses/thanks.html">
+            <input type="tel" name="phone" placeholder="رقم الجوال (05xxxxxxxx)" pattern="[0-5]{2}[0-9]{8}" title="يرجى إدخال رقم جوال سعودي صحيح" required>
             
-            <button type="submit" class="btn">تأكيد طلب الشراء الآن 🛒</button>
+            <select name="city" required>
+                <option value="" disabled selected>اختر المدينة</option>
+                <option value="الرياض">الرياض</option>
+                <option value="جدة">جدة</option>
+                <option value="الدمام">الدمام</option>
+                <option value="مكة المكرمة">مكة المكرمة</option>
+                <option value="المدينة المنورة">المدينة المنورة</option>
+                <option value="القصيم">القصيم</option>
+                <option value="أبها">أبها</option>
+                <option value="أخرى">مدينة أخرى</option>
+            </select>
+
+            <textarea name="address" placeholder="الحي واسم الشارع بالتفصيل" required></textarea>
+            
+            <input type="hidden" name="_next" value="https://elhbebclean.github.io/Elhabib_clean_home/thanks.html">
+            
+            <button type="submit" class="btn">أكد طلبي الآن - الدفع عند الاستلام 🚚</button>
         </form>
     </div>
 
-    <div style="margin-top: 20px; font-size: 14px; color: #666;">
-        <a href="/privacy.html" style="text-decoration: none; color: #666;">سياسة الخصوصية</a> | 
-        <a href="/services.html" style="text-decoration: none; color: #666;">اتصل بنا</a>
+    <div style="margin-top: 20px; font-size: 14px; color: #94a3b8;">
+        جميع الحقوق محفوظة © 2026 - متجر الحبيب
     </div>
 </body>
 </html>
