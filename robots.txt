@@ -1,16 +1,30 @@
-# robots.txt – موقع الحبيب كلين
-# السماح لجميع محركات البحث بفهرسة الموقع باستثناء الملفات المهمة فقط
+# ========================================================
+# robots.txt – شركة الحبيب كلين (Habib Clean)
+# النسخة المحسنة للأرشفة السريعة ودعم الذكاء الاصطناعي 2026
+# ========================================================
 
 User-agent: *
+# منع العناكب من الدخول للملفات الحساسة لزيادة الأمان وسرعة الفحص
 Disallow: /admin/
 Disallow: /scripts/
 Disallow: /temp/
 Disallow: /backup/
 Disallow: /private/
+Disallow: /config/
 
+# السماح الكامل للمحتوى والصور والفيديوهات لضمان ظهورها في نتائج البحث
 Allow: /
 Allow: /images/
 Allow: /videos/
+Allow: /blog/
+Allow: /services.html
+Allow: /habib-marble-master.html
 
-# رابط Sitemap XML
-Sitemap: https://elhbebclean.github.io/sitemap.xml
+# السماح لبوتات الذكاء الاصطناعي (ChatGPT & Google Gemini) بقراءة موقعك لترشيحه للعملاء
+User-agent: GPTBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# رابط Sitemap XML الصحيح (الدومين الرسمي)
+Sitemap: https://habib-clean.com/sitemap.xml
