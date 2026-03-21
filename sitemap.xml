@@ -3,68 +3,84 @@
         xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
 
+  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://habib-clean.com/</loc>
-    <lastmod>2025-12-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- صفحة جلي الرخام والحجر الهاشمي (المهمة جداً للأرشفة) -->
+  <url>
+    <loc>https://habib-clean.com/habib-marble-master.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- صفحة الخدمات العامة -->
   <url>
     <loc>https://habib-clean.com/services.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- صفحة اتصل بنا -->
   <url>
     <loc>https://habib-clean.com/contact.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <url>
-    <loc>https://habib-clean.com/privacy.html</loc>
-    <lastmod>2025-12-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
+  <!-- المدونة الرئيسية -->
   <url>
     <loc>https://habib-clean.com/blog/index.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- مقال التنظيف بعد التشطيب -->
   <url>
     <loc>https://habib-clean.com/blog/blog1-cleaning-after-finishing.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <video:video>
       <video:content_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:content_loc>
-      <video:title>تنظيف بعد التشطيب</video:title>
+      <video:title>تنظيف بعد التشطيب بالقاهرة</video:title>
     </video:video>
   </url>
 
+  <!-- مقال تنظيف المطابخ -->
   <url>
     <loc>https://habib-clean.com/blog/blog2-kitchen-cleaning.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <video:video>
       <video:content_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:content_loc>
-      <video:title>تنظيف المطابخ</video:title>
+      <video:title>دليل تنظيف المطابخ العميق</video:title>
     </video:video>
   </url>
 
+  <!-- تطبيق الحبيب -->
   <url>
     <loc>https://habib-clean.com/app/index.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- سياسة الخصوصية -->
+  <url>
+    <loc>https://habib-clean.com/privacy.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
