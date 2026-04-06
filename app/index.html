@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -9,50 +8,138 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KLM4RMFM');
   </script>
-  <!-- End Google Tag Manager -->
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شركة El Habib Clean لتنظيف المنازل - خدمات احترافية</title>
-  <meta name="description" content="شركة El Habib Clean تقدم خدمات تنظيف منازل احترافية بأسعار منافسة. احصل على خصم 15% لأول مرة وخصم 50% لعملائنا الدائمين. تواصل معنا الآن.">
+  <title>HABIB CLEAN APP | بوابتك الحصرية لرفاهية المساكن</title>
+  <meta name="description" content="تطبيق El Habib Clean الرسمي. بوابتك الحصرية لحجز خدمات العناية بالقصور والفيلات، جلي الرخام بالألماس، والتعقيم الفندقي الشامل بلمسة واحدة. بروتوكول ترحيب خاص ومزايا استثنائية لشركائنا المستديمين.">
+  
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#4CAF50">
+  <meta name="theme-color" content="#1a1a1a">
   <link rel="icon" href="icon.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
   <style>
-    body {font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background: #f1f5f9; text-align: center; color: #333;}
-    header {background: #4CAF50; color: white; padding: 20px; font-size: 1.8em; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
-    .offer {background: #fff3cd; margin: 15px; padding: 15px; border: 1px solid #ffeeba; border-radius: 8px; color: #856404; font-size: 1.1em; font-weight: bold;}
-    .services {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px; padding: 0;}
-    .service-card {background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); text-align: right;}
-    .service-card h3 {color: #4CAF50; margin-top: 0;}
-    .service-card p {color: #555; line-height: 1.6;}
-    .buttons button, .offer button {display: block; width: 90%; margin: 10px auto; padding: 15px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background 0.3s;}
-    .buttons button:hover, .offer button:hover {background: #388e3c;}
-    footer {margin-top: 20px; padding: 15px; background: #f1f1f1; color: #555; font-size: 0.9em;}
+    :root {
+        --primary-dark: #1a1a1a;
+        --secondary-dark: #2c2c2c;
+        --gold-accent: #c5a059;
+        --gold-muted: rgba(197, 160, 89, 0.4);
+        --white: #ffffff;
+        --light-bg: #f9f9f9;
+        --text-muted: #aaaaaa;
+    }
+
+    body {
+        font-family: 'Cairo', sans-serif; 
+        margin: 0; 
+        padding: 0; 
+        background: var(--primary-dark); 
+        text-align: center; 
+        color: var(--white);
+        line-height: 1.8;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+        background: linear-gradient(135deg, var(--primary-dark) 0%, #2c2c2c 100%);
+        color: var(--gold-accent); 
+        padding: 50px 20px 30px; 
+        font-family: 'Playfair Display', serif;
+        font-size: 26px; 
+        font-weight: bold; 
+        border-bottom: 3px solid var(--gold-accent);
+        letter-spacing: 2px;
+    }
+
+    header p { font-weight: 300; font-size: 18px; color: var(--text-muted); margin-top: 10px; }
+
+    .offer {
+        background: rgba(255, 255, 255, 0.03); 
+        margin: 30px 20px; 
+        padding: 30px; 
+        border: 1px solid var(--gold-accent); 
+        color: var(--white); 
+        font-size: 1.1em; 
+        font-weight: 400;
+        letter-spacing: 0.5px;
+    }
+
+    .offer strong { color: var(--gold-accent); font-weight: 700; font-size: 1.2em; }
+
+    .services {
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 25px; 
+        margin: 30px 20px;
+    }
+
+    .service-card {
+        background: rgba(255, 255, 255, 0.03); 
+        padding: 40px; 
+        border: 1px solid rgba(197, 160, 89, 0.2);
+        border-right: 4px solid var(--gold-accent);
+        text-align: right;
+        transition: 0.4s ease;
+        border-radius: 0; /* Sharp Edges for Elite look */
+    }
+
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(197, 160, 89, 0.05); border-color: var(--gold-accent); }
+
+    .service-card h3 { color: var(--white); margin-top: 0; font-weight: 700; font-size: 22px; }
+    .service-card p { color: #ccc; font-size: 16px; font-weight: 300; }
+
+    .btn-action {
+        display: block; 
+        width: 100%; 
+        padding: 18px; 
+        background: transparent; 
+        color: var(--gold-accent); 
+        border: 1px solid var(--gold-accent); 
+        cursor: pointer; 
+        font-size: 16px; 
+        font-weight: 600;
+        transition: 0.3s ease;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    .btn-action:hover { background: var(--gold-accent); color: var(--primary-dark); }
+
+    .buttons-group { padding: 30px 20px; display: flex; flex-direction: column; gap: 20px; }
+
+    footer {
+        margin-top: 50px; 
+        padding: 60px 20px 40px; 
+        background: #0d0d0d; 
+        color: #666; 
+        font-size: 0.8em;
+        border-top: 1px solid #333;
+    }
+
+    footer strong { display: block; color: var(--gold-accent); font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 15px; letter-spacing: 2px; }
 
     #app-download-fixed {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #007bff;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
+        position: fixed;
+        bottom: 25px;
+        left: 20px;
+        background-color: var(--primary-dark);
+        color: var(--gold-accent);
+        padding: 15px 25px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        border: 1px solid var(--gold-accent);
     }
-    #app-download-fixed:hover {background-color: #0056b3;}
   </style>
 
-  <!-- Google Ads Tracking -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -63,48 +150,45 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <header>تطبيق الحبيب كلين - نظافة منزلك في لمسة</header>
+  <header>
+      HABIB CLEAN APP
+      <p>نعتني بتفاصيل مسكنك، لنتيح لك مساحة للإبداع.</p>
+  </header>
 
   <div class="offer">
-    خصم 15% لأول مرة وخصم 50% لعملائنا الدائمين!
-    <button onclick="scrollToBooking()">احجز العرض الآن</button>
+    بروتوكول ترحيب خاص بامتياز <strong>15%</strong> لأول زيارة<br>
+    ومزايا استثنائية لشركائنا المستديمين
+    <a href="../thankyou-whatsapp.html" class="btn-action" style="margin-top: 25px;">تفعيل المزايا الآن</a>
   </div>
 
   <section class="services">
     <div class="service-card">
-      <h3>التنظيف العميق</h3>
-      <p>تنظيف شامل لكل الأركان باستخدام أحدث المعدات والمواد الآمنة.</p>
-      <button onclick="bookNow('التنظيف العميق')">احجز الآن</button>
+      <h3>التجديد العميق (VIP)</h3>
+      <p>بروتوكول تعقيم فندقي متكامل، يعيد الحياة للقطع الفنية والمفروشات النادرة بأحدث التقنيات الألمانية.</p>
+      <a href="../thankyou-whatsapp.html" class="btn-action">حجز المعاينة الخاصة</a>
     </div>
     <div class="service-card">
-      <h3>تنظيف بعد التشطيب</h3>
-      <p>خبراء في إزالة آثار الجبس والدهانات وبقايا مواد البناء.</p>
-      <button onclick="bookNow('تنظيف بعد التشطيب')">احجز الآن</button>
+      <h3>التجهيز المعماري</h3>
+      <p>دقة متناهية في إزالة آثار المواد الإنشائية والدهانات، لتسليم مسكنك كلوحة فنية جاهزة للعيش.</p>
+      <a href="../thankyou-whatsapp.html" class="btn-action">حجز المعاينة الخاصة</a>
     </div>
   </section>
 
-  <div class="buttons">
-    <button onclick="window.location.href='../thankyou-whatsapp.html'">تواصل عبر واتساب</button>
-    <button onclick="window.location.href='../call-thanks.html'">اتصال مباشر</button>
+  <div class="buttons-group">
+    <a href="../thankyou-whatsapp.html" class="btn-action" style="background: var(--gold-accent); color: var(--primary-dark);">المراسلة الخاصة عبر واتساب</a>
+    <a href="../call-thanks.html" class="btn-action">طلب اتصال من خبير الخدمة</a>
   </div>
 
   <footer>
-    العنوان: 105 وادي النيل، المعادي<br>
-    جميع الحقوق محفوظة © 2025 <strong>El Habib Clean</strong>. جميع الحقوق محفوظة.
+    <strong>HABIB CLEAN</strong>
+    المقر الرئيسي: 105 وادي النيل، المعادي، جمهورية مصر العربية<br>
+    © جميع الحقوق محفوظة لشركة الحبيب كلين | خبرة 15 عاماً في العناية الاستثنائية
   </footer>
 
-  <!-- زر تحميل التطبيق -->
-  <a id="app-download-fixed" href="app-download.html">📱 حمّل تطبيقنا</a>
+  <a id="app-download-fixed" href="app-download.html">📱 تثبيت التطبيق الحصري</a>
 
-  <script>
-    function bookNow(service) {
-      window.location.href = '../thankyou-whatsapp.html';
-    }
-  </script>
 </body>
 </html>
