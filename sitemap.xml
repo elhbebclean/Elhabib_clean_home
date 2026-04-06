@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
 
   <url>
@@ -8,6 +7,13 @@
     <lastmod>2026-04-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/B0eld3fTiwA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>شركة الحبيب كلين لخدمات النظافة الفندقية بالقاهرة</video:title>
+      <video:description>شاهد استعراض كامل لخدماتنا في تنظيف القصور والفيلات وجلي الرخام بأحدث المعدات.</video:description>
+      <video:content_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:player_loc>
+    </video:video>
   </url>
 
   <url>
@@ -15,38 +21,24 @@
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://habib-clean.com/service.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://habib-clean.com/contact.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://habib-clean.com/blog/index.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/o8OtxpTAJVM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>احترافية جلي وتلميع الرخام الإيطالي - الحبيب كلين</video:title>
+      <video:description>فيديو توضيحي لعملية جلي الرخام بالألماس وإعادته لحالته الأصلية بموقع العمل بالمعادي.</video:description>
+      <video:content_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:player_loc>
+    </video:video>
   </url>
 
   <url>
     <loc>https://habib-clean.com/blog/post-construction-cleaning-guide.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.90</priority>
     <video:video>
-      <video:thumbnail_loc>https://img.youtube.com/vi/B0eld3fTiwA/hqdefault.jpg</video:thumbnail_loc>
-      <video:title>دليل تجهيز الفيلات بعد التشطيب بالقاهرة</video:title>
-      <video:description>شاهد كيف تقوم شركة الحبيب كلين بتجهيز المساكن الفاخرة بعد أعمال البناء والدهانات.</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/B0eld3fTiwA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>تجهيز الفيلات بعد الدهانات والتشطيب - الحبيب كلين</video:title>
+      <video:description>شاهد كيف نزيل بقايا الأسمنت والدهانات من الأرضيات والنوافذ بدقة متناهية.</video:description>
       <video:content_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:player_loc>
     </video:video>
@@ -56,21 +48,18 @@
     <loc>https://habib-clean.com/blog/normal-vs-deep-cleaning.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
     <video:video>
-      <video:thumbnail_loc>https://img.youtube.com/vi/o8OtxpTAJVM/hqdefault.jpg</video:thumbnail_loc>
-      <video:title>الفرق بين التنظيف العادي والعميق للفيلات</video:title>
-      <video:description>شرح مفصل لمعايير التنظيف الفندقي العميق من خبراء الحبيب كلين.</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/o8OtxpTAJVM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>تقنية التنظيف العميق بالبخار للمفروشات والقصور</video:title>
+      <video:description>تعرف على الفرق بين التنظيف التقليدي والتعقيم الاحترافي بالبخار الجاف.</video:description>
       <video:content_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:player_loc>
     </video:video>
   </url>
 
-  <url>
-    <loc>https://habib-clean.com/privacy.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <url><loc>https://habib-clean.com/service.html</loc><priority>0.85</priority></url>
+  <url><loc>https://habib-clean.com/contact.html</loc><priority>0.70</priority></url>
+  <url><loc>https://habib-clean.com/privacy.html</loc><priority>0.30</priority></url>
 
 </urlset>
