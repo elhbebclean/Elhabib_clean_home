@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>تم التحويل إلى الاتصال - ElHabib Clean</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
+
+    <meta charset="UTF-8">
+    <title>جاري تحويل اتصالك | HABIB CLEAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
     <script>
@@ -21,35 +23,97 @@
     </script>
 
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; text-align: center; padding: 50px 25px; background: #f8f9fa; line-height: 1.8; }
-        h1 { color: #28a745; font-size: 28px; margin-bottom: 15px; }
-        p { font-size: 18px; color: #444; }
-        .button { display: inline-block; margin-top: 25px; padding: 14px 24px; background: #007bff; color: #fff; text-decoration: none; font-size: 18px; border-radius: 8px; font-weight: bold; }
-        footer { margin-top: 40px; font-size: 14px; color: #666; }
+        :root {
+            --primary-dark: #1a1a1a;
+            --gold-accent: #c5a059;
+            --white: #ffffff;
+        }
+
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            text-align: center; 
+            padding: 80px 25px; 
+            background: var(--primary-dark); 
+            color: var(--white);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid var(--gold-accent);
+            padding: 50px 30px;
+        }
+
+        h1 { 
+            color: var(--gold-accent); 
+            font-size: clamp(24px, 5vw, 32px); 
+            margin-bottom: 20px; 
+            font-weight: 700;
+        }
+
+        p { font-size: 18px; color: #ccc; font-weight: 300; }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #333;
+            border-top: 3px solid var(--gold-accent);
+            border-radius: 50%;
+            display: inline-block;
+            animation: spin 1s linear infinite;
+            margin: 30px 0;
+        }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .button { 
+            display: inline-block; 
+            margin-top: 25px; 
+            padding: 15px 35px; 
+            background: transparent; 
+            color: var(--gold-accent); 
+            text-decoration: none; 
+            font-size: 18px; 
+            border: 1px solid var(--gold-accent);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        
+        .button:hover { background: var(--gold-accent); color: var(--primary-dark); }
+
+        footer { margin-top: 60px; font-size: 14px; color: #666; letter-spacing: 1px; }
     </style>
 </head>
 
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <h1>✅ تم استلام طلبك بنجاح</h1>
-    <p>سيتم الآن تحويلك للاتصال مباشرة مع فريق <strong>ElHabib Clean</strong>.</p>
+    <div class="container">
+        <h1>إجراء الاتصال المباشر</h1>
+        <p>نقدر ثقتك في <strong>Habib Clean</strong>.</p>
+        <p>جاري تحويلك الآن للتواصل مع خبير الخدمة المباشر...</p>
 
-    <a href="tel:01016961497" class="button">اضغط هنا إذا لم يتم الاتصال تلقائيًا</a>
+        <div class="loader"></div>
+
+        <br>
+        <a href="tel:01016961497" class="button">الاتصال الآن مباشرة</a>
+    </div>
 
     <script>
       (function() {
         var urlParams = new URLSearchParams(window.location.search);
         var gclid = urlParams.get('gclid');
 
-        // 1. إرسال التحويل لجوجل أدز فوراً
+        // 1. إرسال التحويل لجوجل أدز (البيانات الأصلية محفوظة بدقة)
         gtag('event', 'conversion', {
             'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
             'value': 200.0,
             'currency': 'EGP'
         });
 
-        // 2. إرسال البيانات لـ Make (شيت التجميع)
+        // 2. إرسال البيانات لـ Make (Webhook) - محفوظة كما هي
         if (gclid) {
           var makeUrl = "https://hook.eu1.make.com/eozh2hwrnwdnr9ot9h7itdp41epe05u4";
           
@@ -62,10 +126,10 @@
               "page": window.location.pathname,
               "date": new Date().toLocaleString('en-US', { timeZone: 'Africa/Cairo' })
             })
-          }).catch(err => console.log('Error'));
+          }).catch(err => console.log('System Handshake Error'));
         }
 
-        // 3. التحويل للاتصال بعد 3.5 ثانية لضمان الإرسال
+        // 3. التحويل التلقائي للاتصال بعد 3.5 ثانية لضمان نجاح الـ Tracking
         setTimeout(function () {
             window.location.href = 'tel:01016961497';
         }, 3500);
@@ -73,7 +137,7 @@
     </script>
 
     <footer>
-      <p>© 2026 ElHabib Clean – جميع الحقوق محفوظة</p>
+      <p>© 2026 HABIB CLEAN | EXCELLENCE IN CARE</p>
     </footer>
 </body>
 </html>
