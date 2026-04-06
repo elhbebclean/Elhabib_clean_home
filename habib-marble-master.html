@@ -16,75 +16,76 @@
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
         :root { 
-            --gold: #b8860b; 
-            --gold-light: #daa520;
-            --dark-blue: #0a192f; 
-            --light-gray: #f4f4f4; 
-            --success: #25D366; 
+            --gold-accent: #c5a059; 
+            --primary-dark: #1a1a1a; 
+            --light-bg: #f9f9f9; 
             --white: #ffffff; 
+            --text-dark: #333;
         }
         * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { margin: 0; font-family: 'Tajawal', sans-serif; line-height: 1.8; color: #333; background: #fff; text-align: right; overflow-x: hidden; }
+        body { margin: 0; font-family: 'Cairo', sans-serif; line-height: 1.8; color: var(--text-dark); background: var(--light-bg); text-align: right; overflow-x: hidden; }
         
         /* Navigation */
-        .top-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 25, 47, 0.95); padding: 15px 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; border-bottom: 2px solid var(--gold); backdrop-filter: blur(10px); }
-        .top-nav a { color: #fff; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.3s; padding: 5px 10px; }
-        .top-nav a:hover { color: var(--gold); }
+        .top-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(26, 26, 26, 0.98); padding: 15px 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; border-bottom: 1px solid var(--gold-accent); backdrop-filter: blur(10px); }
+        .top-nav a { color: #fff; text-decoration: none; font-weight: 400; font-size: 16px; transition: 0.3s; padding: 5px 10px; letter-spacing: 0.5px; }
+        .top-nav a:hover { color: var(--gold-accent); }
 
         /* Hero Section */
-        header { position: relative; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000; }
-        .hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070'); background-size: cover; background-position: center; opacity: 0.5; filter: brightness(0.5); }
+        header { position: relative; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--primary-dark); border-bottom: 3px solid var(--gold-accent); }
+        .hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070'); background-size: cover; background-position: center; opacity: 0.4; filter: grayscale(40%) contrast(1.2); }
         .hero-content { position: relative; z-index: 10; text-align: center; color: #fff; padding: 0 20px; max-width: 1000px; }
-        .hero-content h1 { font-size: clamp(32px, 7vw, 60px); font-weight: 900; margin-bottom: 20px; color: var(--gold); text-shadow: 0 4px 15px rgba(0,0,0,0.8); line-height: 1.2; }
-        .hero-content p { font-size: clamp(18px, 3vw, 26px); margin-bottom: 40px; color: #e0e0e0; font-weight: 400; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 7vw, 60px); font-weight: 700; margin-bottom: 20px; color: var(--gold-accent); text-shadow: 0 4px 15px rgba(0,0,0,0.8); line-height: 1.3; letter-spacing: 1px; }
+        .hero-content p { font-size: clamp(18px, 3vw, 24px); margin-bottom: 40px; color: #e0e0e0; font-weight: 300; }
 
         .btn-box { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .btn { padding: 20px 45px; border-radius: 50px; text-decoration: none; font-weight: 900; font-size: 22px; transition: 0.4s all; cursor: pointer; border: none; }
-        .btn:hover { transform: translateY(-7px); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
-        .btn-whatsapp { background: var(--success); color: #fff; }
-        .btn-call { background: var(--gold); color: #fff; }
+        .btn { padding: 18px 45px; border-radius: 0; text-decoration: none; font-weight: 600; font-size: 20px; transition: 0.4s all; cursor: pointer; border: 1px solid var(--gold-accent); letter-spacing: 1px; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .btn-whatsapp { background: var(--gold-accent); color: #fff; }
+        .btn-whatsapp:hover { background: var(--primary-dark); color: var(--gold-accent); }
+        .btn-call { background: transparent; color: var(--gold-accent); }
+        .btn-call:hover { background: var(--gold-accent); color: #fff; }
 
         /* Content Sections */
         .container { max-width: 1250px; margin: auto; padding: 100px 20px; }
-        .main-title { font-size: clamp(30px, 5vw, 42px); font-weight: 900; color: var(--dark-blue); text-align: center; margin-bottom: 20px; }
-        .main-title::after { content: ''; display: block; width: 120px; height: 5px; background: var(--gold); margin: 20px auto; border-radius: 10px; }
+        .main-title { font-size: clamp(28px, 5vw, 40px); font-weight: 700; color: var(--primary-dark); text-align: center; margin-bottom: 20px; }
+        .main-title::after { content: ''; display: block; width: 80px; height: 3px; background: var(--gold-accent); margin: 20px auto; }
         
-        .section-desc { text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 21px; color: #666; }
+        .section-desc { text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 20px; color: #555; font-weight: 400; }
 
         .rich-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .rich-card { background: var(--white); padding: 50px 35px; border-radius: 25px; border: 1px solid #eee; transition: 0.4s; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
-        .rich-card:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .rich-card h3 { font-size: 26px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .rich-card { background: var(--white); padding: 50px 35px; border-radius: 0; border: 1px solid #eaeaea; transition: 0.4s; position: relative; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.02); border-right: 3px solid var(--gold-accent); }
+        .rich-card:hover { border-color: var(--gold-accent); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .rich-card h3 { font-size: 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; color: var(--primary-dark); font-weight: 700; }
         
         /* Video System */
-        .video-container { position: relative; width: 100%; max-width: 300px; margin: 30px auto; border-radius: 30px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.3); background: #000; border: 4px solid var(--gold); }
+        .video-container { position: relative; width: 100%; max-width: 300px; margin: 30px auto; border-radius: 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: #000; border: 2px solid var(--gold-accent); }
         .video-container iframe { width: 100%; aspect-ratio: 9/16; border: none; display: block; }
         
         /* Pricing UI */
-        .price-insight { background: linear-gradient(135deg, #fffdf0 0%, #fff9e6 100%); padding: 60px; border-radius: 30px; border: 2px solid var(--gold); text-align: center; margin: 80px 0; position: relative; }
-        .price-insight h3 { font-size: 32px; color: var(--dark-blue); margin-bottom: 20px; }
-        .price-insight p { font-size: 22px; color: #555; margin-bottom: 30px; }
+        .price-insight { background: var(--white); padding: 60px; border-radius: 0; border: 1px solid var(--gold-accent); text-align: center; margin: 80px 0; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+        .price-insight h3 { font-size: 30px; color: var(--primary-dark); margin-bottom: 20px; font-weight: 700; }
+        .price-insight p { font-size: 20px; color: #555; margin-bottom: 30px; font-weight: 400; }
 
         /* Gallery */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
-        .project-img { width: 100%; height: 320px; object-fit: cover; border-radius: 20px; transition: 0.6s; filter: grayscale(20%); border: 2px solid transparent; }
-        .project-img:hover { filter: grayscale(0%); transform: scale(1.03); border-color: var(--gold); }
+        .project-img { width: 100%; height: 320px; object-fit: cover; border-radius: 0; transition: 0.5s; filter: grayscale(15%); border: 1px solid #eaeaea; }
+        .project-img:hover { filter: grayscale(0%); transform: scale(1.02); border-color: var(--gold-accent); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
         /* Floating Contact */
-        .floating-wa { position: fixed; bottom: 35px; left: 35px; background: var(--success); color: #fff; padding: 18px 35px; border-radius: 60px; text-decoration: none; font-weight: 900; z-index: 1000; box-shadow: 0 15px 35px rgba(0,0,0,0.3); font-size: 20px; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
-        .floating-wa:hover { transform: scale(1.1); background: #1eb954; }
+        .floating-wa { position: fixed; bottom: 35px; left: 35px; background: var(--gold-accent); color: #fff; padding: 15px 30px; border-radius: 0; text-decoration: none; font-weight: 600; z-index: 1000; box-shadow: 0 10px 25px rgba(0,0,0,0.2); font-size: 18px; display: flex; align-items: center; gap: 10px; transition: 0.3s; border: 1px solid var(--gold-accent); letter-spacing: 0.5px; }
+        .floating-wa:hover { transform: scale(1.05); background: var(--primary-dark); color: var(--gold-accent); }
 
-        footer { background: #050505; color: #888; padding: 100px 20px; text-align: center; border-top: 5px solid var(--gold); }
-        footer strong { color: var(--gold); font-size: 28px; display: block; margin-bottom: 15px; }
+        footer { background: var(--primary-dark); color: #aaa; padding: 80px 20px; text-align: center; border-top: 2px solid var(--gold-accent); }
+        footer strong { color: var(--gold-accent); font-size: 28px; display: block; margin-bottom: 15px; font-family: 'Playfair Display', serif; letter-spacing: 3px; }
 
         @media (max-width: 768px) {
             .top-nav { padding: 10px; gap: 10px; }
-            .top-nav a { font-size: 13px; }
-            .floating-wa { left: 50%; transform: translateX(-50%); width: 90%; justify-content: center; bottom: 20px; font-size: 17px; }
+            .top-nav a { font-size: 14px; }
+            .floating-wa { left: 50%; transform: translateX(-50%); width: 90%; justify-content: center; bottom: 20px; font-size: 16px; }
             .price-insight { padding: 40px 20px; }
         }
     </style>
@@ -103,11 +104,11 @@
 
   <div class="hero-slide"></div>
   <div class="hero-content">
-      <h1>Habib Marble: فن إحياء الرخام وتجميل واجهات القصور</h1>
+      <h1>HABIB MARBLE</h1>
       <p>نحن لا نرمم الأسطح، بل نعيد كتابة قصة الفخامة في منزلك. جلي رخام إيطالي بالألماس وتوريد أرقى أنواع الحجر الهاشمي في مصر.</p>
       <div class="btn-box">
-          <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn btn-whatsapp" id="wa-main">📱 معاينة عبر واتساب</a>
-          <a href="https://habib-clean.com/call-thanks.html" class="btn btn-call" id="call-main">📞 اطلب الخبير الهندسي</a>
+          <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn btn-whatsapp" id="wa-main">الاستشارة الخاصة عبر واتساب</a>
+          <a href="https://habib-clean.com/call-thanks.html" class="btn btn-call" id="call-main">طلب المعاينة الهندسية</a>
       </div>
   </div>
 </header>
@@ -115,55 +116,55 @@
 <main class="container">
     
     <section id="marble">
-        <h2 class="main-title">جلي وتلميع الرخام الإيطالي (نظام الكريستال)</h2>
+        <h2 class="main-title">جلي وتلميع الرخام الإيطالي</h2>
         <p class="section-desc">هل فقد الرخام بريقه؟ في Habib Marble نستخدم المدرسة الإيطالية في الجلي بـ 7 مراحل من أقراص الألماس لإزالة الخدوش، ثم التلميع بمادة الكريستال السائل لضمان لمعة المرآة.</p>
         
         <div class="rich-grid">
             <article class="rich-card">
-                <h3>💎 معالجة الثقوب بالجولي</h3>
+                <h3>✨ معالجة الثقوب بالجولي</h3>
                 <p>نستخدم مادة الجولي الإيطالية الملونة بنفس درجة عروق الرخام لسد المسام والكسور تماماً، مما يجعل الأرضية قطعة واحدة متصلة.</p>
                 <div class="video-container">
                     <iframe data-src="https://www.youtube.com/embed/kYw1kfDoQO4" class="lazy-video" title="فيديو جلي الرخام بالألماس" allowfullscreen></iframe>
                 </div>
             </article>
             <article class="rich-card">
-                <h3>💎 تلميع الدرج والحوائط</h3>
+                <h3>✨ تلميع الدرج والحوائط</h3>
                 <p>متخصصون في تلميع درج السلم الرخامي والمطابخ والقدد الرخامية باستخدام معدات صغيرة دقيقة تصل لأصعب الزوايا.</p>
             </article>
             <article class="rich-card">
-                <h3>💎 عزل الرخام ضد البقع</h3>
+                <h3>✨ عزل الرخام ضد البقع</h3>
                 <p>نطبق طبقة "النانو سيلر" التي تحمي الرخام من امتصاص القهوة والزيوت والسوائل، مما يحافظ على بريقه لسنوات طويلة.</p>
             </article>
         </div>
     </section>
 
     <div class="price-insight">
-        <h3>💰 احصل على السعر العادل لمشروعك</h3>
-        <p>أسعار جلي الرخام تبدأ من تقييم الحالة والمساحة. تواصل معنا الآن لإرسال فني متخصص للمعاينة المجانية داخل القاهرة والجيزة.</p>
-        <a href="https://habib-clean.com/thankyou-whatsapp.html" style="background: var(--dark-blue); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 900; display: inline-block;">ارسل الموقع والصور الآن</a>
+        <h3>التقييم الاحترافي لمشروعك</h3>
+        <p>أسعار جلي الرخام تُحدد بدقة بعد تقييم الحالة والمساحة. تواصل معنا الآن لترتيب معاينة مجانية داخل القاهرة والجيزة بواسطة خبرائنا.</p>
+        <a href="https://habib-clean.com/thankyou-whatsapp.html" style="background: var(--primary-dark); color: var(--gold-accent); padding: 18px 45px; border-radius: 0; text-decoration: none; font-weight: 600; display: inline-block; border: 1px solid var(--gold-accent); transition: 0.3s;" onmouseover="this.style.background='var(--gold-accent)'; this.style.color='#fff';" onmouseout="this.style.background='var(--primary-dark)'; this.style.color='var(--gold-accent)';">إرسال تفاصيل المشروع</a>
     </div>
 
     <section id="stone">
-        <h2 class="main-title">واجهات الحجر الهاشمي والمايكا الملكية</h2>
+        <h2 class="main-title">واجهات الحجر الهاشمي الملكية</h2>
         <p class="section-desc">نقدم أرقى حلول تشطيب الواجهات الخارجية بالحجر الهاشمي (هصم، فرز أول آلي) الذي يمنح الفيلات طابع القصور الكلاسيكية مع عزل حراري طبيعي.</p>
         
         <div class="rich-grid">
             <article class="rich-card">
-                <h3>🏰 توريد وتركيب حجر هاشمي</h3>
+                <h3>🏛️ توريد وتركيب حجر هاشمي</h3>
                 <p>نضمن لك خامات فرز أول خالية من العيوب، مع تركيب هندسي دقيق يضمن ثبات الأحجار ومدى تحملها لعوامل الجو لسنوات.</p>
                 <div class="video-container">
                     <iframe data-src="https://www.youtube.com/embed/L2m468B-96c" class="lazy-video" title="فيديو تركيب حجر هاشمي" allowfullscreen></iframe>
                 </div>
             </article>
             <article class="rich-card">
-                <h3>🏰 ديكورات الحجر الداخلي (مايكا)</h3>
+                <h3>🏛️ ديكورات الحجر الداخلي (مايكا)</h3>
                 <p>تصميمات عصرية باستخدام حجر المايكا والرخام العشوائي لإضافة لمسة فنية دافئة داخل غرف المعيشة والمكاتب.</p>
             </article>
         </div>
     </section>
 
     <section style="margin-top: 100px;">
-        <h2 class="main-title">سابقة أعمال Habib Marble</h2>
+        <h2 class="main-title">معرض الإتقان</h2>
         <div class="gallery-grid">
             <img src="Hashmi-stone-facade.webp.jpg" alt="جلي وتلميع رخام تريستا إيطالي" loading="lazy" class="project-img">
             <img src="hashmi-stone-facade.webp1.jpg" alt="واجهة فيلا حجر هاشمي هيصم" loading="lazy" class="project-img">
@@ -175,20 +176,20 @@
 </main>
 
 <footer>
-    <strong>HABIB MARBLE & CLEAN</strong>
+    <strong>HABIB MARBLE</strong>
     <p>القاهرة الجديدة | الشيخ زايد | المعادي | 6 أكتوبر</p>
-    <p>هاتف مباشر: 01016961497 | إيميل: sseka2187@gmail.com</p>
+    <p>التواصل المباشر: 01016961497 | البريد الإلكتروني: sseka2187@gmail.com</p>
     <div style="margin-top: 30px; font-size: 14px; opacity: 0.6;">
-        © 2026 جميع الحقوق محفوظة | تصميم وتطوير م. سيكا (SEO Expert)
+        © 2026 جميع الحقوق محفوظة | تم التصميم والتطوير بمعايير احترافية
     </div>
 </footer>
 
 <a class="floating-wa" id="wa-float" href="https://habib-clean.com/thankyou-whatsapp.html">
-    <span style="font-size: 24px;">💬</span> استشارة واتساب مجانية
+    المراسلة الخاصة
 </a>
 
 <script>
-    // تتبع الـ GCLID من جوجل أدز
+    // تتبع الـ GCLID من جوجل أدز (لم يتم المساس به)
     const gclid = new URLSearchParams(window.location.search).get('gclid');
     function appendGclid(id, baseUrl) {
         const el = document.getElementById(id);
@@ -201,7 +202,7 @@
     appendGclid("wa-float", "https://habib-clean.com/thankyou-whatsapp.html");
     appendGclid("call-main", "https://habib-clean.com/call-thanks.html");
 
-    // Lazy Loading للـ فيديوهات عشان سرعة الموقع (Pagespeed)
+    // Lazy Loading للـ فيديوهات عشان سرعة الموقع (Pagespeed) (لم يتم المساس به)
     document.addEventListener("DOMContentLoaded", function() {
         var lazyVideos = [].slice.call(document.querySelectorAll("iframe.lazy-video"));
         if ("IntersectionObserver" in window) {
