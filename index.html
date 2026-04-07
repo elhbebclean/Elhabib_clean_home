@@ -17,7 +17,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  // تهيئة الحساب الأساسي (لحل مشكلة الـ Config)
   gtag('config', 'AW-16529004339');
 </script>
 
@@ -73,14 +72,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=optional"></noscript>
 
 <style>
   :root {
     --primary-dark: #1a1a1a;
     --gold-accent: #c5a059;
-    --gold-text: #7a5c24; /* درجة ذهبي داكنة لضمان التباين بنسبة 100% مع الخلفية البيضاء */
+    --gold-text-dark: #5c451a; /* لون داكن جداً لضمان التباين العالي بنسبة 100% */
     --light-bg: #f9f9f9;
     --text-color: #333;
   }
@@ -91,17 +90,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   nav { margin-top:20px; }
   nav a { color:#fff; text-decoration:none; margin:0 12px; font-weight:400; font-size:16px; transition: 0.3s; }
   nav a:hover { color: var(--gold-accent); }
-  .btn { display:inline-block; margin:10px 5px; padding:15px 30px; border-radius:0; color:white; text-decoration:none; font-weight:600; font-size:16px; cursor:pointer; position: relative; z-index: 999; transition: 0.3s; letter-spacing: 1px; }
-  .btn:hover { background: var(--text-color); color: var(--gold-accent); }
-  .btn-call { background: transparent; border: 1px solid var(--gold-accent); color: var(--gold-accent); }
-  .btn-whatsapp { background: var(--gold-accent); color: var(--primary-dark); border: 1px solid var(--gold-accent); }
-  .btn-whatsapp:hover { background: var(--primary-dark); color: var(--gold-accent); }
+  .btn { display:inline-block; margin:10px 5px; padding:15px 30px; border-radius:0; text-decoration:none; font-weight:600; font-size:16px; cursor:pointer; position: relative; z-index: 999; transition: 0.3s; letter-spacing: 1px; }
+  
+  /* علاج تباين زر الاتصال: إطار ذهبي بخط داكن للقراءة الواضحة */
+  .btn-call { background: transparent; border: 2px solid var(--gold-accent); color: var(--primary-dark); }
+  .btn-call:hover { background: var(--primary-dark); color: var(--gold-accent); }
+  
+  .btn-whatsapp { background: var(--primary-dark); color: var(--gold-accent); border: 2px solid var(--primary-dark); }
+  .btn-whatsapp:hover { background: var(--gold-accent); color: var(--primary-dark); }
+  
   .btn-review { background: transparent; color: var(--gold-accent); border: 1px solid var(--gold-accent); font-size: 14px; padding: 10px 20px; }
   main { padding:40px 15px; max-width:900px; margin:auto; text-align:right; }
   .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%); color:#fff; padding:120px 20px; border-radius:0; text-align:center; margin-bottom: 30px; min-height: 350px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-bottom: 3px solid var(--gold-accent); }
   .hero h2 { font-size:38px; margin-bottom:15px; font-weight: 700; color: var(--gold-accent); }
   .hero p { font-size:20px; margin-bottom:20px; font-weight: 300; color: #e0e0e0; }
-  #whatsapp-fixed { position:fixed; bottom:80px; right:20px; background-color: var(--gold-accent); color: var(--primary-dark); padding:12px 25px; border-radius:0; font-weight:600; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:9999; transition: 0.3s; border: 1px solid var(--gold-accent); }
+  #whatsapp-fixed { position:fixed; bottom:80px; right:20px; background-color: var(--gold-accent); color: var(--primary-dark); padding:12px 25px; border-radius:0; font-weight:700; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:9999; transition: 0.3s; border: 1px solid var(--gold-accent); }
   #app-download-fixed { position:fixed; bottom:20px; right:20px; background-color: var(--primary-dark); color: var(--gold-accent); padding:12px 20px; border-radius:0; font-weight:600; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:9999; transition: 0.3s; border: 1px solid var(--gold-accent); }
   section { margin-bottom: 40px; background: #fff; padding: 40px; border-radius: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.03); clear: both; }
   section iframe { width:100%; height:400px; border:none; border-radius:0; margin-bottom:20px; }
@@ -119,7 +122,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .video-wrapper iframe { width: 100%; height: 100%; border: none; }
   .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(197, 160, 89, 0.9); color: #fff; padding: 15px 25px; border-radius: 0; font-size: 20px; font-weight: bold; letter-spacing: 2px; }
   #floating-call-btn { position: fixed; bottom: 20px; left: 20px; z-index: 1000; line-height: 0; animation: quick-pulse 2s infinite ease-in-out; will-change: transform; }
-  /* تم تعديل الأنيميشن ليعتمد على transform فقط ليكون Composited Animation ويمنع اهتزاز الصفحة */
   @keyframes quick-pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
 </style>
 </head>
@@ -147,7 +149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <main>
     <div class="cta-premium" style="margin: 30px 0; border-right: 4px solid var(--gold-accent); padding: 30px; background-color: #fff; border-radius: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
     <h2 style="font-size: 1.8rem; color: var(--primary-dark); font-weight: 700; margin-bottom: 15px; line-height: 1.5; font-family: 'Playfair Display', serif;">
-        <span style="color: var(--gold-text); display: block; font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 2px;">Habib Clean</span>
+        <span style="color: var(--gold-text-dark); display: block; font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 2px;">Habib Clean</span>
         عناية فائقة تليق بمقام مسكنك
     </h2>
     
@@ -174,9 +176,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div style="text-align: right; margin-bottom: 15px;">
         <p style="font-size: 16px; font-weight: 600; color: var(--primary-dark);">
             معرض الإتقان على 
-            <a href="https://maps.google.com/?cid=17784068785319916301&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: var(--gold-text); text-decoration: underline;">خرائط جوجل</a> 
+            <a href="https://maps.google.com/?cid=17784068785319916301&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: var(--primary-dark); text-decoration: underline; text-decoration-color: var(--gold-accent);">خرائط جوجل</a> 
             وقناتنا الرسمية على 
-            <a href="https://youtube.com/@elhbeb" target="_blank" style="color: var(--gold-text); text-decoration: underline;">اليوتيوب</a>.
+            <a href="https://youtube.com/@elhbeb" target="_blank" style="color: var(--primary-dark); text-decoration: underline; text-decoration-color: var(--gold-accent);">اليوتيوب</a>.
         </p>
     </div>
 <div class="video-grid" style="margin-top: 20px;">
@@ -423,16 +425,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <section class="reviews-cta" style="background: #fff; border: 1px solid var(--gold-accent);">
     <h2 style="color: var(--primary-dark);">انطباعات عملائنا المميزين</h2>
-    <p style="font-size:18px; color: var(--gold-text); margin-bottom:25px; font-weight: 700;">تقييم الامتياز: ⭐ 4.7 / 5</p>
+    <p style="font-size:18px; color: var(--primary-dark); margin-bottom:25px; font-weight: 700;">تقييم الامتياز: <span style="color: var(--gold-text-dark);">⭐ 4.7 / 5</span></p>
     <div style="display:flex; flex-direction:column; gap:20px; max-width:700px; margin:auto; text-align:right;">
       <div style="background: var(--light-bg); padding:20px; border-radius:0; border-right: 3px solid var(--gold-accent);">
-        <p style="color: var(--gold-text); font-size: 1.2rem;">⭐ ⭐ ⭐ ⭐ ⭐</p>
-        <p style="font-style: italic; color: #444;">"مستوى راقٍ جداً من الخدمة، الفريق يتمتع بمهنية عالية واحترام للخصوصية. النتيجة كانت استثنائية في تجهيز الفيلا."</p>
+        <p style="color: var(--gold-text-dark); font-size: 1.2rem;">⭐ ⭐ ⭐ ⭐ ⭐</p>
+        <p style="font-style: italic; color: var(--primary-dark); font-weight: 600;">"مستوى راقٍ جداً من الخدمة، الفريق يتمتع بمهنية عالية واحترام للخصوصية. النتيجة كانت استثنائية في تجهيز الفيلا."</p>
         <p style="color: var(--primary-dark);"><strong>- د. مروة، المعادي</strong></p>
       </div>
       <div style="background: var(--light-bg); padding:20px; border-radius:0; border-right: 3px solid var(--gold-accent);">
-        <p style="color: var(--gold-text); font-size: 1.2rem;">⭐ ⭐ ⭐ ⭐ ⭐</p>
-        <p style="font-style: italic; color: #444;">"أفضل تعامل واجهته في هذا المجال. دقة غير عادية في المواعيد وأمانة مطلقة. أنصح بهم بشدة."</p>
+        <p style="color: var(--gold-text-dark); font-size: 1.2rem;">⭐ ⭐ ⭐ ⭐ ⭐</p>
+        <p style="font-style: italic; color: var(--primary-dark); font-weight: 600;">"أفضل تعامل واجهته في هذا المجال. دقة غير عادية في المواعيد وأمانة مطلقة. أنصح بهم بشدة."</p>
         <p style="color: var(--primary-dark);"><strong>- م. أحمد، التجمع الخامس</strong></p>
       </div>
     </div>
