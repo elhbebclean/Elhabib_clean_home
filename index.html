@@ -73,12 +73,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"></noscript>
 
 <style>
   :root {
     --primary-dark: #1a1a1a;
     --gold-accent: #c5a059;
+    --gold-text: #9e7b34; /* تم إضافة اللون ده للنصوص على خلفية بيضاء عشان تنجح في اختبار التباين */
     --light-bg: #f9f9f9;
     --text-color: #333;
   }
@@ -92,13 +94,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .btn { display:inline-block; margin:10px 5px; padding:15px 30px; border-radius:0; color:white; text-decoration:none; font-weight:600; font-size:16px; cursor:pointer; position: relative; z-index: 999; transition: 0.3s; letter-spacing: 1px; }
   .btn:hover { background: var(--text-color); color: var(--gold-accent); }
   .btn-call { background: transparent; border: 1px solid var(--gold-accent); color: var(--gold-accent); }
-  .btn-whatsapp { background: var(--gold-accent); color: #fff; border: 1px solid var(--gold-accent); }
+  /* تم تعديل لون الخط لـ primary-dark عشان يقرأ بوضوح فوق الدهبي (يحل مشكلة Accessibility) */
+  .btn-whatsapp { background: var(--gold-accent); color: var(--primary-dark); border: 1px solid var(--gold-accent); }
+  .btn-whatsapp:hover { background: var(--primary-dark); color: var(--gold-accent); }
   .btn-review { background: transparent; color: var(--gold-accent); border: 1px solid var(--gold-accent); font-size: 14px; padding: 10px 20px; }
   main { padding:40px 15px; max-width:900px; margin:auto; text-align:right; }
   .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%); color:#fff; padding:120px 20px; border-radius:0; text-align:center; margin-bottom: 30px; min-height: 350px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-bottom: 3px solid var(--gold-accent); }
   .hero h2 { font-size:38px; margin-bottom:15px; font-weight: 700; color: var(--gold-accent); }
   .hero p { font-size:20px; margin-bottom:20px; font-weight: 300; color: #e0e0e0; }
-  #whatsapp-fixed { position:fixed; bottom:80px; right:20px; background-color: var(--gold-accent); color:white; padding:12px 25px; border-radius:0; font-weight:600; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:9999; transition: 0.3s; border: 1px solid var(--gold-accent); }
+  /* تم تعديل لون الخط لـ primary-dark لضمان التباين */
+  #whatsapp-fixed { position:fixed; bottom:80px; right:20px; background-color: var(--gold-accent); color: var(--primary-dark); padding:12px 25px; border-radius:0; font-weight:600; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:9999; transition: 0.3s; border: 1px solid var(--gold-accent); }
   #app-download-fixed { position:fixed; bottom:20px; right:20px; background-color: var(--primary-dark); color: var(--gold-accent); padding:12px 20px; border-radius:0; font-weight:600; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:9999; transition: 0.3s; border: 1px solid var(--gold-accent); }
   section { margin-bottom: 40px; background: #fff; padding: 40px; border-radius: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.03); clear: both; }
   section iframe { width:100%; height:400px; border:none; border-radius:0; margin-bottom:20px; }
@@ -115,12 +120,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .video-wrapper:hover img { opacity: 1; transform: scale(1.02); }
   .video-wrapper iframe { width: 100%; height: 100%; border: none; }
   .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(197, 160, 89, 0.9); color: #fff; padding: 15px 25px; border-radius: 0; font-size: 20px; font-weight: bold; letter-spacing: 2px; }
-  #floating-call-btn { position: fixed; bottom: 20px; left: 20px; z-index: 1000; line-height: 0; animation: quick-pulse 2s infinite; }
+  #floating-call-btn { position: fixed; bottom: 20px; left: 20px; z-index: 1000; line-height: 0; animation: quick-pulse 2s infinite; will-change: transform, box-shadow; }
   @keyframes quick-pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.6); } 70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); } }
 </style>
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden" title="GTM Fallback"></iframe></noscript>
 
 <header>
   <h1>HABIB CLEAN</h1>
@@ -143,7 +148,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <main>
     <div class="cta-premium" style="margin: 30px 0; border-right: 4px solid var(--gold-accent); padding: 30px; background-color: #fff; border-radius: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
     <h2 style="font-size: 1.8rem; color: var(--primary-dark); font-weight: 700; margin-bottom: 15px; line-height: 1.5; font-family: 'Playfair Display', serif;">
-        <span style="color: var(--gold-accent); display: block; font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 2px;">Habib Clean</span>
+        <span style="color: var(--gold-text); display: block; font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 2px;">Habib Clean</span>
         عناية فائقة تليق بمقام مسكنك
     </h2>
     
@@ -170,19 +175,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div style="text-align: right; margin-bottom: 15px;">
         <p style="font-size: 16px; font-weight: 600; color: var(--primary-dark);">
             معرض الإتقان على 
-            <a href="https://maps.google.com/?cid=17784068785319916301&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: var(--gold-accent); text-decoration: none; border-bottom: 1px solid var(--gold-accent);">خرائط جوجل</a> 
+            <a href="https://maps.google.com/?cid=17784068785319916301&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: var(--gold-text); text-decoration: underline;">خرائط جوجل</a> 
             وقناتنا الرسمية على 
-            <a href="https://youtube.com/@elhbeb" target="_blank" style="color: var(--gold-accent); text-decoration: none; border-bottom: 1px solid var(--gold-accent);">اليوتيوب</a>.
+            <a href="https://youtube.com/@elhbeb" target="_blank" style="color: var(--gold-text); text-decoration: underline;">اليوتيوب</a>.
         </p>
     </div>
 <div class="video-grid" style="margin-top: 20px;">
-    <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/B7BJOEUEIqw?autoplay=1\' style=\'width:100%;height:100%;border:none;\' allowfullscreen allow=\'autoplay\'></iframe>'">
-        <img src="https://img.youtube.com/vi/B7BJOEUEIqw/hqdefault.jpg" alt="العناية بالمنازل 1" loading="lazy" style="width:100%;">
+    <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/B7BJOEUEIqw?autoplay=1\' style=\'width:100%;height:100%;border:none;\' allowfullscreen allow=\'autoplay\' title=\'فيديو العناية بالمنازل\'></iframe>'">
+        <img src="https://img.youtube.com/vi/B7BJOEUEIqw/hqdefault.jpg" alt="العناية بالمنازل 1" loading="lazy" width="480" height="360" style="width:100%;">
         <div class="play-button">تشغيل</div>
     </div>
     
-    <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/t_lN65LWpqE?autoplay=1\' style=\'width:100%;height:100%;border:none;\' allowfullscreen allow=\'autoplay\'></iframe>'">
-        <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="العناية بالمنازل 2" loading="lazy" style="width:100%;">
+    <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/t_lN65LWpqE?autoplay=1\' style=\'width:100%;height:100%;border:none;\' allowfullscreen allow=\'autoplay\' title=\'فيديو العناية بالمنازل ٢\'></iframe>'">
+        <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="العناية بالمنازل 2" loading="lazy" width="480" height="360" style="width:100%;">
         <div class="play-button">تشغيل</div>
     </div>
 </div>
@@ -381,23 +386,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <section>
     <h2>📹 مكتبة الفيديو لأعمالنا</h2>
     <div class="video-grid">
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/o8OtxpTAJVM?autoplay=1\' allowfullscreen allow=\'autoplay\'></iframe>'">
-            <img src="https://img.youtube.com/vi/o8OtxpTAJVM/hqdefault.jpg" alt="العناية بالمنازل 1" loading="lazy">
+        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/o8OtxpTAJVM?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو أعمال الحبيب كلين ١\'></iframe>'">
+            <img src="https://img.youtube.com/vi/o8OtxpTAJVM/hqdefault.jpg" alt="العناية بالمنازل 1" loading="lazy" width="480" height="360" style="width:100%;">
             <div class="play-button">تشغيل</div>
         </div>
         
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VV4WatGKIeI?autoplay=1\' allowfullscreen allow=\'autoplay\'></iframe>'">
-            <img src="https://img.youtube.com/vi/VV4WatGKIeI/hqdefault.jpg" alt="العناية بالمنازل 2" loading="lazy">
+        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VV4WatGKIeI?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو أعمال الحبيب كلين ٢\'></iframe>'">
+            <img src="https://img.youtube.com/vi/VV4WatGKIeI/hqdefault.jpg" alt="العناية بالمنازل 2" loading="lazy" width="480" height="360" style="width:100%;">
             <div class="play-button">تشغيل</div>
         </div>
 
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/zac0LMpHCGI?autoplay=1\' allowfullscreen allow=\'autoplay\'></iframe>'">
-            <img src="https://img.youtube.com/vi/zac0LMpHCGI/hqdefault.jpg" alt="العناية بالمنازل 3" loading="lazy">
+        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/zac0LMpHCGI?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو أعمال الحبيب كلين ٣\'></iframe>'">
+            <img src="https://img.youtube.com/vi/zac0LMpHCGI/hqdefault.jpg" alt="العناية بالمنازل 3" loading="lazy" width="480" height="360" style="width:100%;">
             <div class="play-button">تشغيل</div>
         </div>
 
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/5-oMyRN1pUI?autoplay=1\' allowfullscreen allow=\'autoplay\'></iframe>'">
-            <img src="https://img.youtube.com/vi/5-oMyRN1pUI/hqdefault.jpg" alt="العناية بالمنازل 4" loading="lazy">
+        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/5-oMyRN1pUI?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو أعمال الحبيب كلين ٤\'></iframe>'">
+            <img src="https://img.youtube.com/vi/5-oMyRN1pUI/hqdefault.jpg" alt="العناية بالمنازل 4" loading="lazy" width="480" height="360" style="width:100%;">
             <div class="play-button">تشغيل</div>
         </div>
     </div>
@@ -407,6 +412,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <h2 style="color: var(--primary-dark);">📍 موقعنا</h2>
   <iframe
     src="https://www.google.com/maps?q=Habib%20clean&z=16&output=embed"
+    title="موقع شركة الحبيب كلين على الخريطة"
     loading="lazy"
     width="100%"
     height="350"
@@ -418,15 +424,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <section class="reviews-cta" style="background: #fff; border: 1px solid var(--gold-accent);">
     <h2 style="color: var(--primary-dark);">انطباعات عملائنا المميزين</h2>
-    <p style="font-size:18px; color: var(--gold-accent); margin-bottom:25px; font-weight: 700;">تقييم الامتياز: ⭐ 4.7 / 5</p>
+    <p style="font-size:18px; color: var(--gold-text); margin-bottom:25px; font-weight: 700;">تقييم الامتياز: ⭐ 4.7 / 5</p>
     <div style="display:flex; flex-direction:column; gap:20px; max-width:700px; margin:auto; text-align:right;">
       <div style="background: var(--light-bg); padding:20px; border-radius:0; border-right: 3px solid var(--gold-accent);">
-        <p style="color: var(--gold-accent); font-size: 1.2rem;">⭐ ⭐ ⭐ ⭐ ⭐</p>
+        <p style="color: var(--gold-text); font-size: 1.2rem;">⭐ ⭐ ⭐ ⭐ ⭐</p>
         <p style="font-style: italic; color: #444;">"مستوى راقٍ جداً من الخدمة، الفريق يتمتع بمهنية عالية واحترام للخصوصية. النتيجة كانت استثنائية في تجهيز الفيلا."</p>
         <p style="color: var(--primary-dark);"><strong>- د. مروة، المعادي</strong></p>
       </div>
       <div style="background: var(--light-bg); padding:20px; border-radius:0; border-right: 3px solid var(--gold-accent);">
-        <p style="color: var(--gold-accent); font-size: 1.2rem;">⭐ ⭐ ⭐ ⭐ ⭐</p>
+        <p style="color: var(--gold-text); font-size: 1.2rem;">⭐ ⭐ ⭐ ⭐ ⭐</p>
         <p style="font-style: italic; color: #444;">"أفضل تعامل واجهته في هذا المجال. دقة غير عادية في المواعيد وأمانة مطلقة. أنصح بهم بشدة."</p>
         <p style="color: var(--primary-dark);"><strong>- م. أحمد، التجمع الخامس</strong></p>
       </div>
@@ -457,14 +463,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span style="font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--gold-accent); letter-spacing: 2px;">HABIB CLEAN</span>
   </div>
   © 2026 جميع الحقوق محفوظة |
-  <a href="privacy.html" style="color: var(--gold-accent); text-decoration:none; margin-right: 10px;">سياسة الخصوصية</a>
+  <a href="privacy.html" style="color: var(--gold-accent); text-decoration: underline; margin-right: 10px;">سياسة الخصوصية</a>
 </footer>
 
 <a id="whatsapp-fixed" href="thankyou-whatsapp.html">المراسلة الخاصة</a>
 <a id="app-download-fixed" href="app/index.html">تطبيقنا الحصري</a>
 
 <div id="floating-call-btn">
-    <a href="call-thanks.html" aria-label="اتصل بنا" 
+    <a href="call-thanks.html" aria-label="زر الاتصال السريع" 
        style="background-color: var(--primary-dark); width: 60px; height: 60px; border-radius: 0; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(0,0,0,0.3); border: 1px solid var(--gold-accent); text-decoration: none; transition: transform 0.3s ease;">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="#c5a059">
             <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
