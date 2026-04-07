@@ -59,13 +59,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"></noscript>
 
     <style>
         :root {
             --primary-dark: #1a1a1a;
             --secondary-dark: #2c2c2c;
             --gold-accent: #c5a059;
+            --gold-text: #9e7b34; /* لون ذهبي أغمق للنصوص على خلفية بيضاء لتخطي اختبار إمكانية الوصول */
             --light-bg: #f9f9f9;
             --white: #ffffff;
             --text-dark: #333333;
@@ -191,11 +193,11 @@
             font-weight: 400;
         }
 
-        /* Video Implementation (Optimized to prevent layout shifts) */
+        /* Video Implementation */
         .video-wrapper {
             position: relative;
             width: 100%;
-            aspect-ratio: 16 / 9; /* Modern CSS property for better speed score */
+            aspect-ratio: 16 / 9; 
             background-color: var(--primary-dark);
             margin: 40px 0;
             border: 2px solid var(--gold-accent);
@@ -233,7 +235,8 @@
             box-shadow: var(--shadow-md);
         }
 
-        .service-info-card h3 { background: none; border: none; padding: 0; margin-top: 0; color: var(--gold-accent); }
+        /* تعديل اللون للذهبي الغامق ليناسب التباين مع الأبيض */
+        .service-info-card h3 { background: none; border: none; padding: 0; margin-top: 0; color: var(--gold-text); }
 
         /* Pricing Table Expanded */
         .pricing-section {
@@ -275,7 +278,7 @@
         .footer-logo { font-family: 'Playfair Display', serif; font-size: 36px; color: var(--gold-accent); margin-bottom: 30px; letter-spacing: 2px; }
         .footer-nav { margin-bottom: 40px; }
         .footer-nav a { color: #ccc; text-decoration: none; margin: 0 15px; font-size: 16px; transition: 0.3s; }
-        .footer-nav a:hover { color: var(--gold-accent); }
+        .footer-nav a:hover { color: var(--gold-accent); text-decoration: underline; }
         
         .copyright { padding-top: 30px; border-top: 1px solid #333; font-size: 14px; opacity: 0.7; }
 
@@ -292,7 +295,7 @@
     </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden" title="GTM Fallback"></iframe></noscript>
 
     <header>
         <h1>HABIB CLEAN | العناية الفائقة بالمساكن</h1>
@@ -314,7 +317,7 @@
             <p>مرحلة ما بعد التشطيب تتطلب دقة متناهية. نقدم رعاية فائقة لإزالة بقايا المواد اللاصقة والدهانات من الأرضيات والحوائط دون المساس بسلامة الأسطح الجديدة. نستخدم أنظمة شفط متطورة لضمان مساحة نقية تماماً.</p>
             
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/B0eld3fTiwA" title="فيديو تنظيف ما بعد التشطيب" allowfullscreen loading="lazy"></iframe>
+                <iframe src="https://www.youtube.com/embed/B0eld3fTiwA" title="فيديو تنظيف ما بعد التشطيب" allowfullscreen loading="lazy" width="800" height="450"></iframe>
             </div>
 
             <div class="services-grid">
@@ -337,7 +340,7 @@
             <p>استعادة الرونق الأصلي للرخام الكلاسيكي بلمسة إيطالية. نظام الجلي المتقدم لدينا يعالج الخدوش العميقة، يليه التلميع بالكريستال ليمنح أرضياتك انعكاساً مرآتياً يحميها من العوامل الخارجية.</p>
             
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/4Wvpi-Vq0FI" title="فيديو جلي وتلميع الرخام" allowfullscreen loading="lazy"></iframe>
+                <iframe src="https://www.youtube.com/embed/4Wvpi-Vq0FI" title="فيديو جلي وتلميع الرخام" allowfullscreen loading="lazy" width="800" height="450"></iframe>
             </div>
 
             <div class="services-grid">
@@ -357,7 +360,7 @@
             <p>عناية فائقة تستهدف أدق التفاصيل في مساحتك الخاصة. نتعامل مع الأركان المخفية، أعلى الخزائن، والزوايا الدقيقة ببروتوكولات تعقيم عالمية لضمان بيئة صحية تماماً.</p>
             
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/o8OtxpTAJVM" title="فيديو التنظيف العميق - الحبيب كلين" allowfullscreen loading="lazy"></iframe>
+                <iframe src="https://www.youtube.com/embed/o8OtxpTAJVM" title="فيديو التنظيف العميق - الحبيب كلين" allowfullscreen loading="lazy" width="800" height="450"></iframe>
             </div>
 
             <div class="services-grid">
@@ -422,7 +425,7 @@
             </div>
 
             <div style="text-align:center; margin-top: 50px;">
-                <a href="https://habib-clean.com/thankyou-whatsapp.html" style="display:inline-block; background:transparent; border: 1px solid var(--gold-accent); color:var(--gold-accent); padding: 18px 45px; font-weight:600; font-size:20px; transition: 0.3s; letter-spacing: 1px;" onmouseover="this.style.background='var(--gold-accent)'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='var(--gold-accent)';">طلب المعاينة الخاصة</a>
+                <a href="https://habib-clean.com/thankyou-whatsapp.html" style="display:inline-block; background:transparent; border: 1px solid var(--gold-accent); color:var(--gold-text); padding: 18px 45px; font-weight:700; font-size:20px; transition: 0.3s; letter-spacing: 1px;" onmouseover="this.style.background='var(--gold-accent)'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='var(--gold-text)';">طلب المعاينة الخاصة</a>
             </div>
         </section>
 
@@ -455,7 +458,7 @@
             <a href="https://habib-clean.com/service.html">حلول العناية</a>
             <a href="https://habib-clean.com/contact.html">التواصل المباشر</a>
         </div>
-        <p>القاهرة، مصر | خط التواصل: <a href="tel:01016961497" style="color:var(--gold-accent); text-decoration:none;">01016961497</a></p>
+        <p>القاهرة، مصر | خط التواصل: <a href="tel:01016961497" style="color:var(--gold-accent); text-decoration:underline;">01016961497</a></p>
         <div class="copyright">
             <p>© 2026 جميع الحقوق محفوظة | تم التصميم بمعايير احترافية</p>
         </div>
