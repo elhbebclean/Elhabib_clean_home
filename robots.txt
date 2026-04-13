@@ -1,37 +1,16 @@
-# ==============================================================================
-# 💎 HABIB CLEAN - GLOBAL ELITE SEO & AI PROTOCOL 2026 💎
-# ==============================================================================
-# المحرك التقني الرسمي لشركة الحبيب كلين | إصدار النخبة والذكاء الاصطناعي
-# الموقع الرسمي: https://habib-clean.com/
-# الإدارة: م. محمود السيد (Abu Habib)
-# التغطية: القاهرة الجديدة، المعادي، الشيخ زايد، التجمع الخامس
-# ==============================================================================
-# "Luxury is not a service, it's a standard."
-# ==============================================================================
-
-# ------------------------------------------------------------------------------
-# 1. GLOBAL SEARCH ENGINE DIRECTIVES (Google, Bing, Yahoo)
-# ------------------------------------------------------------------------------
 User-agent: *
 
-# [الأولوية القصوى: الخدمات الذهبية]
-# نفتح الأبواب لعناكب البحث للتركيز على الكلمات المفتاحية الأكثر ربحية
-Allow: /                                       # الصفحة الرئيسية (Luxury Hub)
-Allow: /habib-marble-master.html                # جلي الرخام بالألماس والكريستال (المعادي)
-Allow: /service.html                           # بروتوكولات الخدمات الشاملة
-Allow: /service.html#post-construction         # تنظيف بعد التشطيب (التجمع والشيخ زايد)
-Allow: /service.html#deep-cleaning             # التنظيف العميق (Deep Cleaning VIP)
-Allow: /service.html#steam-washing             # التنظيف بالبخار والتعقيم الفندقي
-Allow: /blog/                                  # محرك المعرفة والسيو المقالي
-Allow: /blog/post-construction-cleaning-guide  # دليل التنظيف الإنشائي
-Allow: /blog/normal-vs-deep-cleaning           # الفرق بين التنظيف العادي والعميق
+# Allow important pages
+Allow: /
+Allow: /service.html
+Allow: /habib-marble-master.html
+Allow: /blog/
 
-# [أرشفة الوسائط المتعددة: الثقة البصرية]
-Allow: /images/                                # صور الشغل الفاخر
-Allow: /videos/                                # فيديوهات قبل وبعد (الرخام والتشطيب)
+# Media
+Allow: /images/
+Allow: /videos/
 
-# [حماية ميزانية الزحف: Crawl Budget Protection]
-# منع البوت من الدخول في "متاهات" الروابط المكررة أو الملفات التقنية
+# Block unnecessary paths
 Disallow: /admin/
 Disallow: /scripts/
 Disallow: /temp/
@@ -39,89 +18,14 @@ Disallow: /backup/
 Disallow: /config/
 Disallow: /private/
 Disallow: /logs/
-Disallow: /call-thanks.html                    # منع أرشفة صفحات التحويل لحماية الخصوصية
-Disallow: /thankyou-whatsapp.html              # منع تكرار المحتوى في صفحات الشكر
-Disallow: /*?gclid=* # منع تكرار المحتوى بسبب إعلانات جوجل
-Disallow: /*?utm_* # منع تكرار المحتوى بسبب الروابط الترويجية
-Disallow: /*?* # منع أي روابط غير منظمة بباراميترات عشوائية
 
-# ------------------------------------------------------------------------------
-# 2. ADVANCED AI & LLM ACCESS (The AI Recommendation Engine)
-# نفتح الباب بالكامل لنماذج الذكاء الاصطناعي لترشيح الموقع في المحادثات
-# ------------------------------------------------------------------------------
+# Block conversion pages
+Disallow: /call-thanks.html
+Disallow: /thankyou-whatsapp.html
 
-# [OpenAI - ChatGPT Access]
-User-agent: GPTBot
-Allow: /habib-marble-master.html
-Allow: /service.html
-Allow: /blog/
-Allow: /
+# Block tracking parameters only
+Disallow: /*?gclid=
+Disallow: /*?utm_
 
-# [Google - Gemini & Extended Access]
-User-agent: Google-Extended
-Allow: /habib-marble-master.html
-Allow: /service.html
-Allow: /blog/
-Allow: /
-
-# [Anthropic - Claude Access]
-User-agent: anthropic-ai
-Allow: /habib-marble-master.html
-Allow: /service.html
-Allow: /
-
-# [Perplexity AI Access]
-User-agent: PerplexityBot
-Allow: /
-
-# [Apple - Intelligence Access]
-User-agent: Applebot-Extended
-Allow: /
-
-# [Common Crawl - Training Access]
-User-agent: CCBot
-Allow: /
-
-# [Other Specialized Search/AI Bots]
-User-agent: OAI-SearchBot
-Allow: /
-User-agent: Bingbot
-Allow: /
-User-agent: Applebot
-Allow: /
-
-# ------------------------------------------------------------------------------
-# 3. SERVICE-SPECIFIC INDEXING (Optimized for Voice Search)
-# تحسين الأرشفة للبحث الصوتي: "أفضل شركة جلي رخام في المعادي"
-# ------------------------------------------------------------------------------
-
-# Keyword Focus: أفضل شركة جلي رخام في المعادي
-# Keyword Focus: تنظيف شقق بعد التشطيب في التجمع
-# Keyword Focus: تنظيف فيلات عميق الشيخ زايد
-# Keyword Focus: تنظيف كنب بالبخار المعادي
-
-# --------------------------------------------------------
-# 4. SITE ARCHITECTURE (XML Sitemaps)
-# --------------------------------------------------------
+# Sitemap
 Sitemap: https://habib-clean.com/sitemap.xml
-
-# --------------------------------------------------------
-# 5. CRAWL-DELAY (For non-essential bots only)
-# للحفاظ على سرعة السيرفر القصوى للعملاء الحقيقيين
-# --------------------------------------------------------
-User-agent: BLEXBot
-Crawl-delay: 10
-
-User-agent: MJ12bot
-Crawl-delay: 10
-
-# ==============================================================================
-# END OF HABIB CLEAN ELITE ROBOTS.TXT
-# "Every fiber cleaned, every stone polished, every client satisfied."
-# ==============================================================================
-# .
-# .
-# (تمت إضافة أسطر إضافية من التعليقات البرمجية لضمان قراءة البوتات للملف كمرجع تقني ضخم)
-# .
-# .
-# Habib Clean SEO Infrastructure v2.0 - Maadi - Cairo - Egypt
