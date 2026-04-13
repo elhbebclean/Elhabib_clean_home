@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
-    
+    <script>
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تأكيد التواصل | HABIB CLEAN</title>
+    <title>جاري تحويلك إلى واتساب | HABIB CLEAN</title>
     <meta name="robots" content="noindex, nofollow">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap">
+    </noscript>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -17,138 +33,218 @@
       gtag('js', new Date());
       gtag('config', 'AW-16529004339');
 
-      // إرسال حدث الإحالة الخاص بالواتساب لجوجل أدز (البيانات الأصلية محفوظة)
       gtag('event', 'conversion', {
-          'send_to': 'AW-16529004339/RXAHCNLQl9gbELOu0sk9',
-          'value': 150.0,
-          'currency': 'EGP'
+        'send_to': 'AW-16529004339/RXAHCNLQl9gbELOu0sk9',
+        'value': 150.0,
+        'currency': 'EGP'
       });
     </script>
 
     <style>
-        :root { 
-            --primary-dark: #1a1a1a; 
-            --gold-accent: #c5a059; 
-            --white: #ffffff;
+      :root {
+        --primary-dark: #171717;
+        --secondary-dark: #262626;
+        --gold-accent: #c5a059;
+        --white: #ffffff;
+        --muted: #c9c9c9;
+        --soft: #8f8f8f;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        font-family: 'Cairo', sans-serif;
+        background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        direction: rtl;
+        color: var(--white);
+        padding: 24px;
+        text-align: center;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 560px;
+        background: rgba(255,255,255,0.02);
+        padding: 42px 26px;
+        border: 1px solid rgba(197,160,89,0.55);
+        box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 8px 14px;
+        border: 1px solid rgba(197,160,89,0.45);
+        color: var(--gold-accent);
+        font-size: 13px;
+        font-weight: 700;
+        background: rgba(255,255,255,0.03);
+      }
+
+      .icon-circle {
+        width: 72px;
+        height: 72px;
+        border: 1px solid var(--gold-accent);
+        color: var(--gold-accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        margin: 0 auto 22px;
+      }
+
+      .loader {
+        border: 2px solid #333;
+        border-top: 2px solid var(--gold-accent);
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        animation: spin 1s linear infinite;
+        margin: 24px auto 18px;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      h1 {
+        color: var(--gold-accent);
+        font-size: clamp(24px, 4vw, 32px);
+        margin: 12px 0;
+        font-weight: 800;
+        line-height: 1.5;
+      }
+
+      p {
+        color: var(--muted);
+        font-size: 17px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        line-height: 1.9;
+      }
+
+      .sub-note {
+        color: var(--soft);
+        font-size: 15px;
+        margin-top: 8px;
+      }
+
+      .cta-group {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 28px;
+        background: transparent;
+        color: var(--gold-accent);
+        text-decoration: none;
+        border: 1px solid var(--gold-accent);
+        font-weight: 700;
+        transition: 0.3s;
+        min-width: 220px;
+      }
+
+      .btn:hover {
+        background: var(--gold-accent);
+        color: var(--primary-dark);
+      }
+
+      .secondary-link {
+        color: #d7d7d7;
+        font-size: 15px;
+        display: inline-block;
+        margin-top: 16px;
+        border-bottom: 1px solid rgba(197,160,89,0.5);
+        padding-bottom: 3px;
+      }
+
+      footer {
+        margin-top: 30px;
+        font-size: 12px;
+        color: #666;
+        letter-spacing: 1px;
+      }
+
+      @media (max-width: 640px) {
+        .card {
+          padding: 34px 18px;
         }
 
-        body { 
-            font-family: 'Cairo', sans-serif; 
-            background: var(--primary-dark); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            height: 100vh; 
-            margin: 0; 
-            direction: rtl; 
-            color: var(--white);
+        p {
+          font-size: 16px;
         }
 
-        .card { 
-            background: var(--primary-dark); 
-            padding: 50px 40px; 
-            border: 1px solid var(--gold-accent); 
-            text-align: center; 
-            max-width: 450px; 
-            width: 90%; 
-            position: relative; 
+        .btn {
+          width: 100%;
+          min-width: unset;
         }
-
-        .icon-circle { 
-            width: 70px; 
-            height: 70px; 
-            border: 1px solid var(--gold-accent); 
-            color: var(--gold-accent); 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 30px; 
-            margin: 0 auto 25px; 
-        }
-
-        .loader { 
-            border: 2px solid #333; 
-            border-top: 2px solid var(--gold-accent); 
-            border-radius: 50%; 
-            width: 25px; 
-            height: 25px; 
-            animation: spin 1s linear infinite; 
-            margin: 25px auto; 
-        }
-
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
-        h1 { color: var(--gold-accent); font-size: 28px; margin: 15px 0; font-weight: 700; }
-        p { color: #aaa; font-size: 18px; margin-bottom: 25px; font-weight: 300; }
-
-        .btn { 
-            display: inline-block; 
-            padding: 15px 35px; 
-            background: transparent; 
-            color: var(--gold-accent); 
-            text-decoration: none; 
-            border: 1px solid var(--gold-accent); 
-            font-weight: 600; 
-            transition: 0.3s; 
-            letter-spacing: 1px;
-        }
-
-        .btn:hover {
-            background: var(--gold-accent);
-            color: var(--primary-dark);
-        }
-
-        footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-            font-size: 12px;
-            color: #555;
-            letter-spacing: 2px;
-        }
+      }
     </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
     <div class="card">
-        <div class="icon-circle">✨</div>
-        <h1>تم استلام طلبك</h1>
-        <p>جاري تحويلك الآن لبدء محادثة خاصة عبر واتساب لتأكيد التفاصيل...</p>
-        <div class="loader"></div>
-        <a href="https://wa.me/201016961497" class="btn">الانتقال للمحادثة يدوياً</a>
-    </div>
+        <div class="badge">تحويل إلى واتساب</div>
+        <div class="icon-circle">💬</div>
 
-    <footer>HABIB CLEAN | EXCELLENCE IN CARE</footer>
+        <h1>تم تجهيز المحادثة</h1>
+        <p>سيتم الآن تحويلك إلى واتساب لبدء المحادثة مع فريق <strong>Habib Clean</strong>.</p>
+        <p>يمكنك إرسال نوع الخدمة والمنطقة وأي تفاصيل عن العقار لتسريع الرد والمعاينة.</p>
+
+        <div class="loader" aria-hidden="true"></div>
+
+        <p class="sub-note">إذا لم يفتح واتساب تلقائيًا خلال ثوانٍ، استخدم الزر التالي.</p>
+
+        <div class="cta-group">
+            <a href="https://wa.me/201016961497" class="btn">فتح واتساب الآن</a>
+            <a href="https://habib-clean.com/" class="btn">العودة للموقع</a>
+        </div>
+
+        <a href="https://habib-clean.com/contact.html" class="secondary-link">العودة إلى صفحة التواصل</a>
+
+        <footer>HABIB CLEAN</footer>
+    </div>
 
     <script>
       (function() {
-        // 1. استخراج الـ GCLID من الرابط للحفاظ على تتبع الحملات
         var urlParams = new URLSearchParams(window.location.search);
         var gclid = urlParams.get('gclid');
 
-        // 2. إرسال البيانات لـ Make.com (Webhook) - محفوظة كما هي
         if (gclid) {
           var makeUrl = "https://hook.eu1.make.com/eozh2hwrnwdnr9ot9h7itdp41epe05u4";
-          
+
           fetch(makeUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              "gclid": gclid,
-              "source": "WhatsApp Message",
-              "page": window.location.pathname,
-              "date": new Date().toLocaleString('en-US', { timeZone: 'Africa/Cairo' })
+              gclid: gclid,
+              source: "WhatsApp Message",
+              page: window.location.pathname,
+              date: new Date().toLocaleString('en-US', { timeZone: 'Africa/Cairo' })
             })
-          }).catch(function(err) { console.log("Handshake Error"); });
+          }).catch(function() {
+            console.log("Handshake Error");
+          });
         }
 
-        // 3. التحويل التلقائي للواتساب بعد 3.5 ثانية (لضمان نجاح التتبع)
         setTimeout(function() {
-            window.location.href = "https://wa.me/201016961497";
-        }, 3500); 
+          window.location.href = "https://wa.me/201016961497";
+        }, 3500);
       })();
     </script>
 </body>
