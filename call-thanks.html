@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
+    <script>
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+    </script>
 
     <meta charset="UTF-8">
-    <title>جاري تحويل اتصالك | HABIB CLEAN</title>
+    <title>جاري تحويلك للاتصال | HABIB CLEAN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap">
+    </noscript>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
     <script>
@@ -23,82 +35,172 @@
     </script>
 
     <style>
-        :root {
-            --primary-dark: #1a1a1a;
-            --gold-accent: #c5a059;
-            --white: #ffffff;
-        }
+      :root {
+        --primary-dark: #171717;
+        --secondary-dark: #262626;
+        --gold-accent: #c5a059;
+        --white: #ffffff;
+        --muted: #c9c9c9;
+        --soft: #8f8f8f;
+      }
 
-        body { 
-            font-family: 'Cairo', sans-serif; 
-            text-align: center; 
-            padding: 80px 25px; 
-            background: var(--primary-dark); 
-            color: var(--white);
-            line-height: 1.8;
-            margin: 0;
-        }
+      * { box-sizing: border-box; }
 
+      body {
+        font-family: 'Cairo', sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 650px;
+        border: 1px solid rgba(197,160,89,0.55);
+        background: rgba(255,255,255,0.02);
+        padding: 42px 28px;
+        box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 8px 14px;
+        border: 1px solid rgba(197,160,89,0.45);
+        color: var(--gold-accent);
+        font-size: 13px;
+        font-weight: 700;
+        background: rgba(255,255,255,0.03);
+      }
+
+      h1 {
+        color: var(--gold-accent);
+        font-size: clamp(25px, 4vw, 34px);
+        margin: 0 0 14px;
+        font-weight: 800;
+        line-height: 1.5;
+      }
+
+      p {
+        font-size: 18px;
+        color: var(--muted);
+        font-weight: 400;
+        margin: 0 0 12px;
+        line-height: 1.9;
+      }
+
+      .sub-note {
+        color: var(--soft);
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      .loader {
+        width: 54px;
+        height: 54px;
+        border: 3px solid #343434;
+        border-top: 3px solid var(--gold-accent);
+        border-radius: 50%;
+        display: inline-block;
+        animation: spin 1s linear infinite;
+        margin: 28px 0 20px;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .cta-group {
+        margin-top: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 14px 28px;
+        background: transparent;
+        color: var(--gold-accent);
+        text-decoration: none;
+        font-size: 17px;
+        border: 1px solid var(--gold-accent);
+        font-weight: 700;
+        transition: 0.3s;
+        min-width: 220px;
+      }
+
+      .button:hover {
+        background: var(--gold-accent);
+        color: var(--primary-dark);
+      }
+
+      .secondary-link {
+        color: #d7d7d7;
+        font-size: 15px;
+        display: inline-block;
+        margin-top: 16px;
+        border-bottom: 1px solid rgba(197,160,89,0.5);
+        padding-bottom: 3px;
+      }
+
+      footer {
+        margin-top: 34px;
+        font-size: 13px;
+        color: #707070;
+        letter-spacing: 1px;
+      }
+
+      @media (max-width: 640px) {
         .container {
-            max-width: 600px;
-            margin: auto;
-            border: 1px solid var(--gold-accent);
-            padding: 50px 30px;
+          padding: 34px 18px;
         }
 
-        h1 { 
-            color: var(--gold-accent); 
-            font-size: clamp(24px, 5vw, 32px); 
-            margin-bottom: 20px; 
-            font-weight: 700;
+        p {
+          font-size: 16px;
         }
 
-        p { font-size: 18px; color: #ccc; font-weight: 300; }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 3px solid #333;
-            border-top: 3px solid var(--gold-accent);
-            border-radius: 50%;
-            display: inline-block;
-            animation: spin 1s linear infinite;
-            margin: 30px 0;
+        .button {
+          width: 100%;
+          min-width: unset;
         }
-
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
-        .button { 
-            display: inline-block; 
-            margin-top: 25px; 
-            padding: 15px 35px; 
-            background: transparent; 
-            color: var(--gold-accent); 
-            text-decoration: none; 
-            font-size: 18px; 
-            border: 1px solid var(--gold-accent);
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        
-        .button:hover { background: var(--gold-accent); color: var(--primary-dark); }
-
-        footer { margin-top: 60px; font-size: 14px; color: #666; letter-spacing: 1px; }
+      }
     </style>
 </head>
 
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
     <div class="container">
-        <h1>إجراء الاتصال المباشر</h1>
-        <p>نقدر ثقتك في <strong>Habib Clean</strong>.</p>
-        <p>جاري تحويلك الآن للتواصل مع خبير الخدمة المباشر...</p>
+        <div class="badge">طلب اتصال مباشر</div>
 
-        <div class="loader"></div>
+        <h1>جاري تحويلك للاتصال المباشر</h1>
 
-        <br>
-        <a href="tel:01016961497" class="button">الاتصال الآن مباشرة</a>
+        <p>شكرًا لتواصلك مع <strong>Habib Clean</strong>.</p>
+        <p>سيتم الآن فتح الاتصال مع رقم الخدمة لتأكيد التفاصيل وبدء التنسيق سريعًا.</p>
+
+        <div class="loader" aria-hidden="true"></div>
+
+        <p class="sub-note">إذا لم يبدأ الاتصال تلقائيًا خلال ثوانٍ، استخدم الزر التالي.</p>
+
+        <div class="cta-group">
+            <a href="tel:01016961497" class="button">الاتصال الآن مباشرة</a>
+            <a href="https://habib-clean.com/" class="button">العودة للموقع</a>
+        </div>
+
+        <a href="https://habib-clean.com/contact.html" class="secondary-link">العودة إلى صفحة التواصل</a>
+
+        <footer>© 2026 HABIB CLEAN</footer>
     </div>
 
     <script>
@@ -106,38 +208,33 @@
         var urlParams = new URLSearchParams(window.location.search);
         var gclid = urlParams.get('gclid');
 
-        // 1. إرسال التحويل لجوجل أدز (البيانات الأصلية محفوظة بدقة)
         gtag('event', 'conversion', {
-            'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
-            'value': 200.0,
-            'currency': 'EGP'
+          'send_to': 'AW-16529004339/OIQ7COaD0ewaELOu0sk9',
+          'value': 200.0,
+          'currency': 'EGP'
         });
 
-        // 2. إرسال البيانات لـ Make (Webhook) - محفوظة كما هي
         if (gclid) {
           var makeUrl = "https://hook.eu1.make.com/eozh2hwrnwdnr9ot9h7itdp41epe05u4";
-          
+
           fetch(makeUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              "gclid": gclid,
-              "source": "Phone Call",
-              "page": window.location.pathname,
-              "date": new Date().toLocaleString('en-US', { timeZone: 'Africa/Cairo' })
+              gclid: gclid,
+              source: "Phone Call",
+              page: window.location.pathname,
+              date: new Date().toLocaleString('en-US', { timeZone: 'Africa/Cairo' })
             })
-          }).catch(err => console.log('System Handshake Error'));
+          }).catch(function() {
+            console.log('System Handshake Error');
+          });
         }
 
-        // 3. التحويل التلقائي للاتصال بعد 3.5 ثانية لضمان نجاح الـ Tracking
         setTimeout(function () {
-            window.location.href = 'tel:01016961497';
+          window.location.href = 'tel:01016961497';
         }, 3500);
       })();
     </script>
-
-    <footer>
-      <p>© 2026 HABIB CLEAN | EXCELLENCE IN CARE</p>
-    </footer>
 </body>
 </html>
