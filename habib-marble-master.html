@@ -23,10 +23,10 @@
             --whatsapp: #25D366;
             --whatsapp-hover: #1ebd5c;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--dark); color: var(--light); text-align: right; overflow-x: hidden; }
 
-        /* Sticky Header for Immediate Action */
+        /* Sticky Header with Navigation */
         .sticky-header {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -38,8 +38,19 @@
             padding: 15px 5%;
             z-index: 1000;
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            flex-wrap: wrap;
+            gap: 15px;
         }
         .brand-name { font-size: 24px; font-weight: 800; color: var(--gold); letter-spacing: 1px; }
+        
+        .top-nav {
+            display: flex; gap: 20px;
+        }
+        .top-nav a {
+            color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; transition: 0.3s;
+        }
+        .top-nav a:hover { color: var(--gold); }
+
         .header-cta {
             background: transparent; border: 1px solid var(--gold); color: var(--gold);
             padding: 8px 20px; border-radius: 4px; text-decoration: none; font-weight: 700;
@@ -74,7 +85,7 @@
         .btn-call {
             background: var(--gold); color: var(--darker); border: 2px solid var(--gold);
             box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
-            animation: pulse-gold 2s infinite; /* تأثير النبض للفت الانتباه */
+            animation: pulse-gold 2s infinite;
         }
         .btn-call:hover { background: var(--gold-hover); border-color: var(--gold-hover); transform: translateY(-3px); }
         .btn-wa {
@@ -90,7 +101,7 @@
 
         .micro-copy { font-size: 15px; color: var(--gray); font-weight: 700; margin-bottom: 60px; }
 
-        /* The Proof (Videos exactly under buttons) */
+        /* The Proof (Videos) */
         .proof-section { padding: 0 5% 80px; text-align: center; }
         .proof-title { font-size: 28px; font-weight: 800; color: var(--light); margin-bottom: 30px; position: relative; display: inline-block; }
         .proof-title::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: var(--gold); }
@@ -146,8 +157,9 @@
         @media (max-width: 768px) {
             .btn { width: 100%; max-width: 100%; padding: 18px 20px; font-size: 18px; }
             .trust-bar { gap: 20px; flex-direction: column; text-align: center; }
-            .sticky-header { padding: 15px; }
-            .brand-name { font-size: 20px; }
+            .sticky-header { justify-content: center; flex-direction: column; }
+            .top-nav { flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 10px; }
+            .brand-name { font-size: 20px; margin-bottom: 10px; }
             .vip-box { padding: 30px 20px; }
         }
     </style>
@@ -157,6 +169,15 @@
 
 <div class="sticky-header">
     <div class="brand-name">HABIB MARBLE</div>
+    
+    <nav class="top-nav">
+        <a href="https://habib-clean.com/">الرئيسية</a>
+        <a href="https://habib-clean.com/services.html">خدمات النظافة</a>
+        <a href="#marble">جلي الرخام</a>
+        <a href="#stone">الحجر الهاشمي</a>
+        <a href="https://habib-clean.com/blog/">المدونة</a>
+    </nav>
+
     <a href="https://habib-clean.com/call-thanks.html" class="header-cta" id="call-header">01016961497 📞</a>
 </div>
 
@@ -174,19 +195,19 @@
                 💬 تواصل فوراً عبر واتساب
             </a>
         </div>
-        <p class="micro-copy">✓ نرد فوراً &nbsp; ✓ المعاينة الهندسية مجانية داخل القاهرة والجيزة</p>
+        <p class="micro-copy">✓ نرد فوراً &nbsp; ✓ المعاينة الهندسية مجانية للقصور والمساحات الكبيرة</p>
     </section>
 
     <section class="proof-section">
         <h2 class="proof-title">شاهد مستوى الفخامة قبل أن تتصل</h2>
         <div class="video-grid">
-            <div class="video-card">
+            <div class="video-card" id="marble">
                 <h3>جلي وتلميع الرخام الإيطالي</h3>
                 <div class="iframe-container">
                     <iframe data-src="https://www.youtube.com/embed/kYw1kfDoQO4?rel=0&modestbranding=1" class="lazy-video" title="فيديو جلي الرخام" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="video-card">
+            <div class="video-card" id="stone">
                 <h3>توريد وتركيب الحجر الهاشمي</h3>
                 <div class="iframe-container">
                     <iframe data-src="https://www.youtube.com/embed/L2m468B-96c?rel=0&modestbranding=1" class="lazy-video" title="فيديو الحجر الهاشمي" allowfullscreen></iframe>
