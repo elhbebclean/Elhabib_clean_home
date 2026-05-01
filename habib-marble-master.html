@@ -59,6 +59,12 @@
     .nav a{font-weight:700;font-size:14px;color:#eee;transition:.25s}
     .nav a:hover{color:var(--gold)}
 
+    .home-link{
+      border:1px solid rgba(212,175,55,.4);
+      padding:6px 14px;
+      border-radius:30px;
+    }
+
     .header-cta{
       border:1px solid var(--gold);color:var(--gold);padding:9px 18px;border-radius:50px;
       font-weight:900;transition:.25s;white-space:nowrap
@@ -214,6 +220,26 @@
       padding:45px 5%;text-align:center;background:#030303;color:#777;border-top:1px solid #202020;
     }
 
+    .footer-links{
+      margin-top:25px;
+      border-top:1px solid #222;
+      padding-top:15px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:15px;
+      font-size:14px;
+    }
+
+    .footer-links a{
+      color:#aaa;
+      transition:.25s;
+    }
+
+    .footer-links a:hover{
+      color:var(--gold);
+    }
+
     .float-wa{
       position:fixed;bottom:25px;left:25px;z-index:999;
       width:62px;height:62px;border-radius:50%;background:var(--whatsapp);
@@ -269,6 +295,7 @@
   <a class="brand" href="https://habib-clean.com/">HABIB MARBLE</a>
 
   <nav class="nav">
+    <a href="https://habib-clean.com/" class="home-link">الرئيسية</a>
     <a href="#proof">أعمالنا</a>
     <a href="#process">مراحل الجلي</a>
     <a href="#vip">لمن هذه الخدمة؟</a>
@@ -477,6 +504,15 @@
 <footer>
   <p>HABIB MARBLE © 2026 — خدمة فاخرة من El Habib Clean</p>
   <p>القاهرة الجديدة — الشيخ زايد — المعادي — 6 أكتوبر — العاصمة الإدارية</p>
+
+  <div class="footer-links">
+    <a href="https://habib-clean.com/">الرئيسية</a>
+    <a href="https://habib-clean.com/about.html">من نحن</a>
+    <a href="https://habib-clean.com/services.html">خدماتنا</a>
+    <a href="https://habib-clean.com/contact.html">تواصل معنا</a>
+    <a href="https://habib-clean.com/privacy.html">سياسة الخصوصية</a>
+    <a href="https://habib-clean.com/blog.html">المدونة</a>
+  </div>
 </footer>
 
 <a href="https://habib-clean.com/thankyou-whatsapp.html" class="float-wa tracked-link" id="wa-float" aria-label="WhatsApp">
