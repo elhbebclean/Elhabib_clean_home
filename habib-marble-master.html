@@ -5,181 +5,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Habib Marble | جلي رخام إيطالي وتوريد حجر هاشمي - فخامة القصور</title>
-    <meta name="description" content="Habib Marble: رواد جلي وتلميع الرخام بالألماس والكريستال، وتوريد واجهات الحجر الهاشمي الفاخرة. تشطيب فندقي ودقة هندسية للفيلات في القاهرة الجديدة والشيخ زايد.">
-    <meta name="keywords" content="جلي رخام إيطالي، تلميع رخام بالكريستال، حجر هاشمي هيصم، واجهات حجر هاشمي، سعر متر جلي الرخام، شركة تنظيف رخام، الحبيب ماربل، تشطيب فيلات التجمع">
+    <meta name="description" content="Habib Marble: رواد جلي وتلميع الرخام بالألماس والكريستال. تشطيب فندقي ودقة هندسية للفيلات في القاهرة الجديدة والشيخ زايد.">
     <link rel="canonical" href="https://habib-clean.com/marble-grinding-stone.html">
-
-    <meta property="og:title" content="Habib Marble - فن إحياء الرخام وتجميل الواجهات">
-    <meta property="og:description" content="نحول أرضيات منزلك لمرايا تعكس الفخامة. متخصصون في الرخام النادر والحجر الهاشمي.">
-    <meta property="og:image" content="https://habib-clean.com/images/marble-luxury-og.jpg">
-    <meta property="og:url" content="https://habib-clean.com/marble-grinding-stone.html">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');</script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root { 
-            --gold-accent: #d4af37; 
-            --primary-dark: #121212; 
-            --light-bg: #fafafa; 
-            --white: #ffffff; 
-            --text-dark: #222;
+            --gold: #d4af37; 
+            --gold-hover: #b5952f;
+            --dark: #0a0a0a; 
+            --darker: #000000;
+            --light: #ffffff; 
+            --gray: #888888;
+            --whatsapp: #25D366;
+            --whatsapp-hover: #1ebd5c;
         }
-        * { box-sizing: border-box; scroll-behavior: smooth; margin: 0; padding: 0; }
-        body { font-family: 'Cairo', sans-serif; line-height: 1.8; color: var(--text-dark); background: var(--light-bg); text-align: right; overflow-x: hidden; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+        body { background-color: var(--dark); color: var(--light); text-align: right; overflow-x: hidden; }
+
+        /* Sticky Header for Immediate Action */
+        .sticky-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .brand-name { font-size: 24px; font-weight: 800; color: var(--gold); letter-spacing: 1px; }
+        .header-cta {
+            background: transparent; border: 1px solid var(--gold); color: var(--gold);
+            padding: 8px 20px; border-radius: 4px; text-decoration: none; font-weight: 700;
+            transition: 0.3s;
+        }
+        .header-cta:hover { background: var(--gold); color: var(--dark); }
+
+        /* The Hero Funnel (Above the Fold) */
+        .hero {
+            padding: 150px 5% 60px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--darker) 0%, var(--dark) 100%);
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-block; background: rgba(212, 175, 55, 0.1); color: var(--gold);
+            padding: 5px 15px; border-radius: 50px; font-size: 14px; font-weight: 700; margin-bottom: 20px; border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero h1 { font-size: clamp(35px, 6vw, 65px); font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+        .hero h1 span { color: var(--gold); }
+        .hero p { font-size: clamp(18px, 2.5vw, 22px); color: #ccc; max-width: 800px; margin: 0 auto 40px; }
+
+        /* High-Converting Buttons */
+        .action-buttons {
+            display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;
+        }
+        .btn {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 20px 40px; font-size: 20px; font-weight: 800; text-decoration: none; border-radius: 8px;
+            transition: 0.3s; width: 100%; max-width: 350px;
+        }
+        .btn-call {
+            background: var(--gold); color: var(--darker); border: 2px solid var(--gold);
+            box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+            animation: pulse-gold 2s infinite; /* تأثير النبض للفت الانتباه */
+        }
+        .btn-call:hover { background: var(--gold-hover); border-color: var(--gold-hover); transform: translateY(-3px); }
+        .btn-wa {
+            background: transparent; color: var(--whatsapp); border: 2px solid var(--whatsapp);
+        }
+        .btn-wa:hover { background: var(--whatsapp); color: var(--light); transform: translateY(-3px); }
         
-        /* Navigation - Glassmorphism */
-        .top-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(18, 18, 18, 0.85); padding: 20px; display: flex; justify-content: center; gap: 30px; backdrop-filter: blur(15px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
-        .top-nav a { color: #fff; text-decoration: none; font-weight: 300; font-size: 15px; transition: 0.4s; letter-spacing: 1px; text-transform: uppercase; }
-        .top-nav a:hover { color: var(--gold-accent); }
+        @keyframes pulse-gold {
+            0% { transform: scale(0.98); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { transform: scale(0.98); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
 
-        /* Hero Section - Cinematic */
-        header { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--primary-dark); }
-        .hero-slide { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070'); background-size: cover; background-position: center; opacity: 0.3; filter: grayscale(50%); }
-        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--primary-dark) 0%, transparent 100%); }
-        .hero-content { position: relative; z-index: 10; text-align: center; color: #fff; max-width: 900px; padding: 0 20px; }
-        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 6vw, 75px); font-weight: 700; color: var(--gold-accent); letter-spacing: 2px; margin-bottom: 20px; text-shadow: 0 10px 30px rgba(0,0,0,0.8); }
-        .hero-content p { font-size: clamp(18px, 2.5vw, 22px); margin-bottom: 50px; color: #ccc; font-weight: 300; line-height: 1.6; }
+        .micro-copy { font-size: 15px; color: var(--gray); font-weight: 700; margin-bottom: 60px; }
 
-        /* Buttons - High Conversion */
-        .btn-box { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .btn { padding: 16px 40px; font-weight: 600; font-size: 18px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; letter-spacing: 0.5px; border-radius: 4px; }
-        .btn-whatsapp { background: var(--gold-accent); color: var(--primary-dark); border: 1px solid var(--gold-accent); }
-        .btn-whatsapp:hover { background: transparent; color: var(--gold-accent); transform: translateY(-3px); }
-        .btn-call { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
-        .btn-call:hover { border-color: var(--gold-accent); color: var(--gold-accent); }
+        /* The Proof (Videos exactly under buttons) */
+        .proof-section { padding: 0 5% 80px; text-align: center; }
+        .proof-title { font-size: 28px; font-weight: 800; color: var(--light); margin-bottom: 30px; position: relative; display: inline-block; }
+        .proof-title::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: var(--gold); }
+        
+        .video-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto;
+        }
+        .video-card {
+            background: #111; border: 1px solid #222; border-radius: 12px; overflow: hidden; padding: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5); border-bottom: 3px solid var(--gold);
+        }
+        .video-card h3 { font-size: 20px; color: var(--gold); margin-bottom: 15px; }
+        .iframe-container {
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000;
+        }
+        .iframe-container iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+        }
 
-        /* Main Content */
-        .container { max-width: 1250px; margin: auto; padding: 100px 20px; }
-        .main-title { font-size: clamp(30px, 4vw, 45px); font-weight: 700; color: var(--primary-dark); text-align: center; margin-bottom: 15px; }
-        .main-title::after { content: ''; display: block; width: 60px; height: 2px; background: var(--gold-accent); margin: 25px auto; }
-        .section-desc { text-align: center; max-width: 700px; margin: 0 auto 70px; font-size: 18px; color: #666; font-weight: 300; }
+        /* Trust Bar */
+        .trust-bar {
+            background: #151515; padding: 30px 5%; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;
+            border-top: 1px solid #222; border-bottom: 1px solid #222; margin-bottom: 80px;
+        }
+        .trust-item { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; color: #ccc; }
+        .trust-item span { color: var(--gold); font-size: 24px; }
 
-        /* Grid Cards - Minimalist */
-        .rich-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .rich-card { background: var(--white); padding: 40px; border-radius: 8px; transition: 0.4s; position: relative; border: 1px solid #f0f0f0; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
-        .rich-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); border-color: rgba(212, 175, 55, 0.3); }
-        .rich-card h3 { font-size: 22px; margin-bottom: 15px; color: var(--primary-dark); font-weight: 700; display: flex; align-items: center; gap: 10px; }
-        .rich-card h3 span { color: var(--gold-accent); }
-        .rich-card p { font-size: 16px; color: #555; font-weight: 300; margin-bottom: 20px; }
+        /* Authority Section */
+        .authority { max-width: 900px; margin: 0 auto 80px; padding: 0 5%; text-align: center; }
+        .authority h2 { font-size: 35px; color: var(--gold); margin-bottom: 20px; }
+        .authority p { font-size: 20px; color: #aaa; margin-bottom: 30px; line-height: 1.8; }
+        
+        /* VIP Filter Box (Final Push) */
+        .vip-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 1px solid var(--gold); border-radius: 15px; padding: 50px 5%;
+            max-width: 800px; margin: 0 auto 100px; text-align: center; box-shadow: 0 20px 50px rgba(212, 175, 55, 0.05);
+        }
+        .vip-box h3 { font-size: 30px; margin-bottom: 15px; color: var(--light); }
+        .vip-box p { font-size: 18px; color: var(--gray); margin-bottom: 30px; }
 
-        /* YouTube VIP Wrapper */
-        .premium-youtube-wrapper { position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 8px; overflow: hidden; margin-top: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border: 1px solid rgba(212, 175, 55, 0.2); background: #000; transition: 0.3s; }
-        .premium-youtube-wrapper:hover { border-color: var(--gold-accent); transform: translateY(-3px); }
-        .premium-youtube-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-        /* VIP Pricing Section */
-        .price-insight { background: var(--primary-dark); color: #fff; padding: 80px 40px; text-align: center; margin: 100px 0; border-radius: 12px; position: relative; overflow: hidden; }
-        .price-insight::before { content: ''; position: absolute; top: 0; right: 0; width: 4px; height: 100%; background: var(--gold-accent); }
-        .price-insight h3 { font-size: 35px; color: var(--gold-accent); margin-bottom: 20px; font-weight: 700; }
-        .price-insight p { font-size: 18px; color: #ccc; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; font-weight: 300; }
-
-        /* Floating WhatsApp - Elegant */
-        .floating-wa { position: fixed; bottom: 40px; left: 40px; background: #25D366; color: #fff; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; z-index: 1000; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); font-size: 16px; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
-        .floating-wa:hover { transform: translateY(-5px); background: #1ebd5c; }
-        .floating-wa svg { width: 24px; height: 24px; fill: currentColor; }
-
-        footer { background: var(--primary-dark); color: #888; padding: 60px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
-        footer strong { color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 10px; font-family: 'Playfair Display', serif; letter-spacing: 2px; }
+        footer { text-align: center; padding: 40px; background: #050505; border-top: 1px solid #222; color: #666; font-size: 14px; }
+        
+        /* Floating WhatsApp icon */
+        .float-wa {
+            position: fixed; bottom: 30px; left: 30px; background: var(--whatsapp); color: white;
+            width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+            text-decoration: none; font-size: 35px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); z-index: 100; transition: 0.3s;
+        }
+        .float-wa:hover { transform: scale(1.1); }
+        .float-wa svg { width: 35px; height: 35px; fill: currentColor; }
 
         @media (max-width: 768px) {
-            .top-nav { padding: 15px; gap: 15px; justify-content: space-around; }
-            .top-nav a { font-size: 13px; }
-            .floating-wa { left: 20px; bottom: 20px; padding: 12px 20px; }
-            .floating-wa span { display: none; }
-            .price-insight { padding: 50px 20px; }
+            .btn { width: 100%; max-width: 100%; padding: 18px 20px; font-size: 18px; }
+            .trust-bar { gap: 20px; flex-direction: column; text-align: center; }
+            .sticky-header { padding: 15px; }
+            .brand-name { font-size: 20px; }
+            .vip-box { padding: 30px 20px; }
         }
     </style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
-  <nav class="top-nav">
-      <a href="https://habib-clean.com/">الرئيسية</a>
-      <a href="https://habib-clean.com/services.html">خدمات النظافة</a>
-      <a href="#marble">جلي الرخام VIP</a>
-      <a href="#stone">الحجر الهاشمي</a>
-      <a href="https://habib-clean.com/blog/">مدونة الفخامة</a>
-  </nav>
+<div class="sticky-header">
+    <div class="brand-name">HABIB MARBLE</div>
+    <a href="https://habib-clean.com/call-thanks.html" class="header-cta" id="call-header">01016961497 📞</a>
+</div>
 
-  <div class="hero-slide"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-      <h1>HABIB MARBLE</h1>
-      <p>نحن لا نرمم الأسطح، بل نعيد كتابة قصة الفخامة في منزلك. جلي رخام إيطالي بالألماس وتوريد أرقى أنواع الحجر للقصور والفيلات.</p>
-      <div class="btn-box">
-          <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn btn-whatsapp" id="wa-main">حجز استشارة هندسية</a>
-          <a href="https://habib-clean.com/call-thanks.html" class="btn btn-call" id="call-main">طلب معاينة للفيلا</a>
-      </div>
-  </div>
-</header>
-
-<main class="container">
-    
-    <section id="marble">
-        <h2 class="main-title">جلي وتلميع الرخام الإيطالي</h2>
-        <p class="section-desc">هل فقد الرخام بريقه؟ نستخدم المدرسة الإيطالية في الجلي بـ 7 مراحل من أقراص الألماس لإزالة الخدوش، ثم التلميع بمادة الكريستال السائل لضمان لمعة المرآة.</p>
+<main>
+    <section class="hero">
+        <div class="hero-badge">خدمة VIP للقصور والفيلات</div>
+        <h1>هل فقد رخام فيلتك بريقه؟<br><span>نُعيده كالمرايا بالألماس الإيطالي</span></h1>
+        <p>لا نستخدم التنظيف التقليدي. نحن نطبق نظام الـ 7 مراحل لجلي الرخام وتوريد الحجر الهاشمي لضمان مستوى فندقي يعكس فخامة منزلك.</p>
         
-        <div class="rich-grid">
-            <article class="rich-card">
-                <h3><span>✦</span> معالجة الثقوب بالجولي</h3>
-                <p>نستخدم مادة الجولي الإيطالية الملونة بنفس درجة عروق الرخام لسد المسام والكسور تماماً، مما يجعل الأرضية قطعة واحدة متصلة بلا فواصل مرئية.</p>
-                <div class="premium-youtube-wrapper">
-                    <iframe data-src="https://www.youtube.com/embed/kYw1kfDoQO4?rel=0&modestbranding=1" class="lazy-video" title="فيديو جلي الرخام بالألماس" allowfullscreen></iframe>
+        <div class="action-buttons">
+            <a href="https://habib-clean.com/call-thanks.html" class="btn btn-call" id="call-main">
+                📞 اضغط لطلب معاينة المهندس
+            </a>
+            <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn btn-wa" id="wa-main">
+                💬 تواصل فوراً عبر واتساب
+            </a>
+        </div>
+        <p class="micro-copy">✓ نرد فوراً &nbsp; ✓ المعاينة الهندسية مجانية داخل القاهرة والجيزة</p>
+    </section>
+
+    <section class="proof-section">
+        <h2 class="proof-title">شاهد مستوى الفخامة قبل أن تتصل</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <h3>جلي وتلميع الرخام الإيطالي</h3>
+                <div class="iframe-container">
+                    <iframe data-src="https://www.youtube.com/embed/kYw1kfDoQO4?rel=0&modestbranding=1" class="lazy-video" title="فيديو جلي الرخام" allowfullscreen></iframe>
                 </div>
-            </article>
-            <article class="rich-card">
-                <h3><span>✦</span> تلميع الدرج والحوائط</h3>
-                <p>متخصصون في تلميع درج السلم الرخامي والمطابخ باستخدام معدات دقيقة تصل لأصعب الزوايا مع الحفاظ التام على الديكورات المحيطة.</p>
-            </article>
-            <article class="rich-card">
-                <h3><span>✦</span> عزل الرخام "نانو سيلر"</h3>
-                <p>نطبق طبقة حماية متطورة تمنع الرخام من امتصاص السوائل والزيوت، مما يحافظ على بريق الكريستال لسنوات طويلة دون تأثر.</p>
-            </article>
+            </div>
+            <div class="video-card">
+                <h3>توريد وتركيب الحجر الهاشمي</h3>
+                <div class="iframe-container">
+                    <iframe data-src="https://www.youtube.com/embed/L2m468B-96c?rel=0&modestbranding=1" class="lazy-video" title="فيديو الحجر الهاشمي" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="price-insight">
-        <h3>التقييم الهندسي لمشروعك</h3>
-        <p>التشطيب الفندقي يتطلب دقة في التسعير. نعتذر عن قبول طلبات المساحات الصغيرة، ونقدم معاينة هندسية مجانية للقصور والفيلات داخل القاهرة والجيزة.</p>
-        <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn btn-whatsapp" style="display: inline-block;">إرسال تفاصيل المساحة عبر واتساب</a>
+    <div class="trust-bar">
+        <div class="trust-item"><span>✦</span> أقراص ألماس إيطالية</div>
+        <div class="trust-item"><span>✦</span> عزل نانو ضد البقع</div>
+        <div class="trust-item"><span>✦</span> معالجة الثقوب بالجولي</div>
+        <div class="trust-item"><span>✦</span> حجر هاشمي فرز أول</div>
     </div>
 
-    <section id="stone">
-        <h2 class="main-title">واجهات الحجر الهاشمي الملكية</h2>
-        <p class="section-desc">نقدم أرقى حلول تشطيب الواجهات الخارجية بالحجر الهاشمي الذي يمنح الفيلات طابع القصور الكلاسيكية مع عزل حراري طبيعي.</p>
-        
-        <div class="rich-grid">
-            <article class="rich-card">
-                <h3><span>✦</span> توريد وتركيب حجر هاشمي</h3>
-                <p>نضمن لك خامات فرز أول خالية من العيوب، مع تركيب هندسي دقيق يضمن ثبات الأحجار ومدى تحملها لعوامل الجو لسنوات.</p>
-                <div class="premium-youtube-wrapper">
-                    <iframe data-src="https://www.youtube.com/embed/L2m468B-96c?rel=0&modestbranding=1" class="lazy-video" title="فيديو تركيب حجر هاشمي" allowfullscreen></iframe>
-                </div>
-            </article>
-            <article class="rich-card">
-                <h3><span>✦</span> ديكورات الحجر الداخلي</h3>
-                <p>تصميمات عصرية باستخدام حجر المايكا والرخام العشوائي لإضافة لمسة فنية دافئة داخل غرف المعيشة والمكاتب.</p>
-            </article>
+    <section class="authority">
+        <div class="vip-box">
+            <h3>لماذا تختار Habib Marble؟</h3>
+            <p>نحن نعمل بأسلوب هندسي دقيق لضمان عدم وجود أي فواصل أو تموجات في الرخام. نعتذر عن قبول طلبات تنظيف البلاط العادي أو المساحات الصغيرة، حيث أن طواقمنا ومعداتنا مجهزة حصرياً لخدمة المساحات الكبيرة والقصور.</p>
+            <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn btn-call" style="margin: 0 auto; animation: none;" id="wa-bottom">
+                احجز استشارتك الخاصة الآن
+            </a>
         </div>
     </section>
-
 </main>
 
 <footer>
-    <strong>HABIB MARBLE</strong>
-    <p>القاهرة الجديدة | الشيخ زايد | المعادي | 6 أكتوبر</p>
-    <p>التواصل المباشر: 01016961497 | البريد الإلكتروني: sseka2187@gmail.com</p>
-    <div style="margin-top: 20px; font-size: 13px; opacity: 0.5;">
-        © 2026 جميع الحقوق محفوظة | تم التصميم والتطوير بمعايير VIP
-    </div>
+    <p>HABIB MARBLE © 2026 | القاهرة الجديدة - الشيخ زايد - المعادي</p>
 </footer>
 
-<a class="floating-wa" id="wa-float" href="https://habib-clean.com/thankyou-whatsapp.html">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-    <span>تواصل سريع</span>
+<a href="https://habib-clean.com/thankyou-whatsapp.html" class="float-wa" id="wa-float">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
 </a>
 
 <script>
@@ -192,9 +231,12 @@
             el.href = finalUrl;
         }
     }
-    appendGclid("wa-main", "https://habib-clean.com/thankyou-whatsapp.html");
-    appendGclid("wa-float", "https://habib-clean.com/thankyou-whatsapp.html");
+    // تحديث جميع الروابط
+    appendGclid("call-header", "https://habib-clean.com/call-thanks.html");
     appendGclid("call-main", "https://habib-clean.com/call-thanks.html");
+    appendGclid("wa-main", "https://habib-clean.com/thankyou-whatsapp.html");
+    appendGclid("wa-bottom", "https://habib-clean.com/thankyou-whatsapp.html");
+    appendGclid("wa-float", "https://habib-clean.com/thankyou-whatsapp.html");
 
     // Lazy Loading للـ فيديوهات عشان سرعة الموقع
     document.addEventListener("DOMContentLoaded", function() {
