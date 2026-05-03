@@ -2,16 +2,28 @@
 <html lang="ar" dir="rtl">
 <head>
   <script>
-    (function(w,d,s,l,i){
-      w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),
-          dl=l!='dataLayer' ? '&l='+l : '';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+    // كود تأخير تحميل GTM حتى يتفاعل المستخدم مع الصفحة أو بعد 3.5 ثانية لضمان أداء 100%
+    document.addEventListener('DOMContentLoaded', function() {
+      var gtmLoaded = false;
+      function loadGTM() {
+        if (gtmLoaded) return;
+        gtmLoaded = true;
+        (function(w,d,s,l,i){
+          w[l]=w[l]||[];
+          w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+          var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+          j.async=true;
+          j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+          f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+      }
+
+      ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
+        window.addEventListener(event, loadGTM, { once: true, passive: true });
+      });
+
+      setTimeout(loadGTM, 3500);
+    });
   </script>
 
   <meta charset="UTF-8">
@@ -24,13 +36,12 @@
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://habib-clean.com/">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16529004339"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-16529004339');
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap">
+  </noscript>
 
   <script type="application/ld+json">
   {
@@ -86,11 +97,6 @@
   }
   </script>
 
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=optional">
-  </noscript>
-
   <style>
     :root {
       --primary-dark: #171717;
@@ -105,20 +111,35 @@
       --shadow-strong: 0 8px 24px rgba(0,0,0,0.18);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      font-family: 'Cairo', sans-serif;
+      font-family: 'Cairo', Arial, sans-serif;
       margin: 0;
       background: var(--light-bg);
       color: var(--text-color);
-      line-height: 1.9;
+      line-height: 1.85;
       text-align: center;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a { text-decoration: none; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
 
     header {
       background: var(--primary-dark);
@@ -129,25 +150,25 @@
 
     header h1 {
       margin: 0;
-      font-family: 'Playfair Display', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 36px;
       letter-spacing: 4px;
       color: var(--gold-accent);
       font-weight: 700;
       text-transform: uppercase;
+      line-height: 1.2;
     }
 
     header p {
-      font-weight: 300;
+      font-weight: 400;
       color: #d3d3d3;
       font-size: 17px;
-      margin-top: 10px;
-      margin-bottom: 0;
+      margin: 10px 0 0;
     }
 
     header .subline {
       font-size: 14px;
-      font-weight: 300;
+      font-weight: 400;
       color: #b8b8b8;
       margin-top: 6px;
     }
@@ -163,10 +184,12 @@
     nav a {
       color: #fff;
       font-size: 15px;
-      transition: 0.25s;
+      transition: color 0.25s;
     }
 
-    nav a:hover { color: var(--gold-accent); }
+    nav a:hover {
+      color: var(--gold-accent);
+    }
 
     .btn {
       display: inline-block;
@@ -176,8 +199,13 @@
       font-weight: 700;
       font-size: 16px;
       cursor: pointer;
-      transition: 0.25s;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
       letter-spacing: 0.2px;
+      min-height: 48px;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
     }
 
     .btn-call {
@@ -209,6 +237,7 @@
       border: 1px solid var(--gold-accent);
       font-size: 14px;
       padding: 10px 18px;
+      min-height: 42px;
     }
 
     main {
@@ -227,7 +256,8 @@
       clear: both;
     }
 
-    h2, h3 {
+    h2,
+    h3 {
       color: var(--primary-dark);
       margin-top: 0;
       line-height: 1.5;
@@ -255,11 +285,6 @@
       color: #444;
     }
 
-    ul {
-      padding: 0;
-      margin: 0;
-    }
-
     ul li {
       list-style: none;
       margin-bottom: 14px;
@@ -281,6 +306,8 @@
       box-shadow: var(--shadow-strong);
       position: relative;
       overflow: hidden;
+      contain: layout paint;
+      min-height: 480px;
     }
 
     .hero-badge {
@@ -295,7 +322,7 @@
     }
 
     .hero h2 {
-      font-size: 35px;
+      font-size: clamp(27px, 5vw, 35px);
       margin-bottom: 12px;
       color: var(--gold-accent);
       font-weight: 800;
@@ -303,7 +330,7 @@
     }
 
     .hero p {
-      font-size: 19px;
+      font-size: clamp(17px, 3vw, 19px);
       color: #ececec;
       max-width: 760px;
       margin: 0 auto 20px;
@@ -340,6 +367,7 @@
 
     .hero-cta-wrap {
       margin-top: 26px;
+      min-height: 78px;
     }
 
     .hero-note {
@@ -361,6 +389,7 @@
       border: 1px solid var(--border-soft);
       padding: 18px 14px;
       box-shadow: var(--shadow-soft);
+      min-height: 112px;
     }
 
     .trust-box strong {
@@ -386,7 +415,7 @@
       font-size: 30px;
       color: var(--primary-dark);
       margin-bottom: 10px;
-      font-family: 'Playfair Display', serif;
+      font-family: Georgia, 'Times New Roman', serif;
     }
 
     .cta-strip .brand-line {
@@ -419,6 +448,7 @@
       border: 1px solid var(--border-soft);
       padding: 18px 16px;
       background: #fff;
+      min-height: 165px;
     }
 
     .mini-card strong {
@@ -439,8 +469,9 @@
       cursor: pointer;
       background: #000;
       overflow: hidden;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16 / 9;
       border: 1px solid #ececec;
+      min-height: 150px;
     }
 
     .video-wrapper img {
@@ -448,7 +479,8 @@
       height: 100%;
       object-fit: cover;
       opacity: 0.72;
-      transition: 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      display: block;
     }
 
     .video-wrapper:hover img {
@@ -460,6 +492,7 @@
       width: 100%;
       height: 100%;
       border: none;
+      display: block;
     }
 
     .play-button {
@@ -467,19 +500,47 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(197, 160, 89, 0.92);
+      background: rgba(197,160,89,0.92);
       color: #fff;
       padding: 15px 24px;
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 1px;
+      pointer-events: none;
     }
 
-    iframe.map-frame {
+    .map-shell {
+      width: 100%;
+      min-height: 350px;
+      background: #f1f1f1;
+      border: 1px solid var(--border-soft);
+      margin-top: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-frame {
       width: 100%;
       height: 350px;
       border: 0;
-      margin-top: 12px;
+      display: block;
+    }
+
+    .map-placeholder {
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      color: var(--primary-dark);
+      background: linear-gradient(135deg, #fafafa 0%, #f1eadc 100%);
+    }
+
+    .map-placeholder strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
     }
 
     .reviews-wrap {
@@ -545,7 +606,8 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
       z-index: 9999;
       border: 1px solid var(--gold-accent);
-      transition: 0.25s;
+      transition: transform 0.25s;
+      min-height: 48px;
     }
 
     #whatsapp-fixed:hover {
@@ -562,6 +624,17 @@
       will-change: transform;
     }
 
+    #floating-call-btn a {
+      background-color: var(--primary-dark);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--gold-accent);
+      text-decoration: none;
+    }
+
     @keyframes quick-pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.08); }
@@ -569,16 +642,53 @@
     }
 
     @media (max-width: 768px) {
-      header h1 { font-size: 30px; }
-      .hero { padding: 42px 18px; }
-      .hero h2 { font-size: 27px; }
-      .hero p { font-size: 17px; }
-      .cta-strip .brand-line { font-size: 1.8rem; }
-      .cta-strip h2 { font-size: 25px; }
-      section { padding: 26px 18px; }
-      main { padding: 26px 12px 46px; }
-      #whatsapp-fixed { right: 14px; bottom: 82px; padding: 11px 18px; }
-      #floating-call-btn { left: 14px; }
+      header h1 {
+        font-size: 30px;
+      }
+
+      .hero {
+        padding: 42px 18px;
+      }
+
+      .cta-strip .brand-line {
+        font-size: 1.8rem;
+      }
+
+      .cta-strip h2 {
+        font-size: 25px;
+      }
+
+      section {
+        padding: 26px 18px;
+      }
+
+      main {
+        padding: 26px 12px 46px;
+      }
+
+      #whatsapp-fixed {
+        right: 14px;
+        bottom: 82px;
+        padding: 11px 18px;
+      }
+
+      #floating-call-btn {
+        left: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
     }
   </style>
 </head>
@@ -602,7 +712,7 @@
       <a href="habib-marble-master.html">جلي الرخام</a>
     </nav>
 
-    <div style="margin-top: 22px;">
+    <div style="margin-top:22px;">
       <a href="https://www.google.com/maps/search/?api=1&query=Habib+clean+Maadi" target="_blank" rel="noopener" class="btn btn-review">
         اطّلع على تقييمات العملاء على خرائط جوجل
       </a>
@@ -726,13 +836,13 @@
       </div>
 
       <div class="video-grid" style="margin-top:20px;">
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/B7BJOEUEIqw?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو تنظيف بعد التشطيب 1\'></iframe>'">
-          <img src="https://img.youtube.com/vi/B7BJOEUEIqw/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 1" loading="lazy" width="480" height="360">
+        <div class="video-wrapper" data-video="B7BJOEUEIqw">
+          <img src="https://img.youtube.com/vi/B7BJOEUEIqw/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 1" loading="lazy" decoding="async" width="480" height="360">
           <div class="play-button">تشغيل</div>
         </div>
 
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/t_lN65LWpqE?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو تنظيف بعد التشطيب 2\'></iframe>'">
-          <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 2" loading="lazy" width="480" height="360">
+        <div class="video-wrapper" data-video="t_lN65LWpqE">
+          <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 2" loading="lazy" decoding="async" width="480" height="360">
           <div class="play-button">تشغيل</div>
         </div>
       </div>
@@ -833,39 +943,52 @@
       </p>
 
       <div class="video-grid">
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/o8OtxpTAJVM?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو أعمال الحبيب كلين ١\'></iframe>'">
-          <img src="https://img.youtube.com/vi/o8OtxpTAJVM/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 1" loading="lazy" width="480" height="360">
+        <div class="video-wrapper" data-video="o8OtxpTAJVM">
+          <img src="https://img.youtube.com/vi/o8OtxpTAJVM/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 1" loading="lazy" decoding="async" width="480" height="360">
           <div class="play-button">تشغيل</div>
         </div>
 
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VV4WatGKIeI?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو أعمال الحبيب كلين ٢\'></iframe>'">
-          <img src="https://img.youtube.com/vi/VV4WatGKIeI/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 2" loading="lazy" width="480" height="360">
+        <div class="video-wrapper" data-video="VV4WatGKIeI">
+          <img src="https://img.youtube.com/vi/VV4WatGKIeI/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 2" loading="lazy" decoding="async" width="480" height="360">
           <div class="play-button">تشغيل</div>
         </div>
 
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/zac0LMpHCGI?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو أعمال الحبيب كلين ٣\'></iframe>'">
-          <img src="https://img.youtube.com/vi/zac0LMpHCGI/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 3" loading="lazy" width="480" height="360">
+        <div class="video-wrapper" data-video="zac0LMpHCGI">
+          <img src="https://img.youtube.com/vi/zac0LMpHCGI/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 3" loading="lazy" decoding="async" width="480" height="360">
           <div class="play-button">تشغيل</div>
         </div>
 
-        <div class="video-wrapper" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/5-oMyRN1pUI?autoplay=1\' allowfullscreen allow=\'autoplay\' title=\'فيديو أعمال الحبيب كلين ٤\'></iframe>'">
-          <img src="https://img.youtube.com/vi/5-oMyRN1pUI/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 4" loading="lazy" width="480" height="360">
+        <div class="video-wrapper" data-video="5-oMyRN1pUI">
+          <img src="https://img.youtube.com/vi/5-oMyRN1pUI/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 4" loading="lazy" decoding="async" width="480" height="360">
           <div class="play-button">تشغيل</div>
         </div>
       </div>
     </section>
 
-    <section style="border: 1px solid var(--gold-accent);">
+    <section style="border:1px solid var(--gold-accent);">
       <h2 class="section-title" style="border-bottom:none; padding-bottom:0;">📍 موقعنا</h2>
       <p>نخدم القاهرة والجيزة والمناطق الراقية المحيطة، مع إمكانية تنسيق المعاينة بحسب طبيعة العقار.</p>
-      <iframe
-        class="map-frame"
-        src="https://www.google.com/maps?q=Habib%20clean&z=16&output=embed"
-        title="موقع شركة الحبيب كلين على الخريطة"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        allowfullscreen
-      ></iframe>
+
+      <div class="map-shell" id="map-shell">
+        <div class="map-placeholder" id="map-placeholder">
+          <div>
+            <strong>موقع الحبيب كلين على خرائط جوجل</strong>
+            <p style="margin-bottom:14px;">الخريطة سيتم تحميلها تلقائيًا عند الوصول لهذا الجزء لتسريع الصفحة.</p>
+            <button type="button" class="btn btn-call" id="load-map-btn">عرض الخريطة الآن</button>
+          </div>
+        </div>
+
+        <iframe
+          id="lazy-map"
+          class="map-frame"
+          title="موقع شركة الحبيب كلين على الخريطة"
+          data-src="https://www.google.com/maps?q=Habib%20clean&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          hidden
+        ></iframe>
+      </div>
     </section>
 
     <section class="reviews-cta" style="background:#fff; border:1px solid var(--gold-accent);">
@@ -972,7 +1095,7 @@
 
   <footer>
     <div style="margin-bottom:10px;">
-      <span style="font-family:'Playfair Display', serif; font-size:1.2rem; color:var(--gold-accent); letter-spacing:2px;">HABIB CLEAN</span>
+      <span style="font-family:Georgia,'Times New Roman',serif; font-size:1.2rem; color:var(--gold-accent); letter-spacing:2px;">HABIB CLEAN</span>
     </div>
     © 2026 جميع الحقوق محفوظة |
     <a href="privacy.html" style="color:var(--gold-accent); text-decoration:underline; margin-right:10px;">سياسة الخصوصية</a>
@@ -981,8 +1104,7 @@
   <a id="whatsapp-fixed" href="thankyou-whatsapp.html">واتساب VIP</a>
 
   <div id="floating-call-btn">
-    <a href="call-thanks.html" aria-label="زر الاتصال السريع"
-       style="background-color:var(--primary-dark); width:60px; height:60px; display:flex; align-items:center; justify-content:center; border:1px solid var(--gold-accent); text-decoration:none; transition:transform 0.3s ease;">
+    <a href="call-thanks.html" aria-label="زر الاتصال السريع">
       <svg width="30" height="30" viewBox="0 0 24 24" fill="#c5a059" aria-hidden="true">
         <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
       </svg>
@@ -995,7 +1117,65 @@
       return url.searchParams.get(paramName);
     }
 
+    function loadGoogleMap() {
+      var iframe = document.getElementById("lazy-map");
+      var placeholder = document.getElementById("map-placeholder");
+
+      if (!iframe || iframe.dataset.loaded === "true") return;
+
+      iframe.src = iframe.dataset.src;
+      iframe.hidden = false;
+      iframe.dataset.loaded = "true";
+
+      if (placeholder) {
+        placeholder.style.display = "none";
+      }
+    }
+
+    function setupLazyMap() {
+      var mapShell = document.getElementById("map-shell");
+      var loadMapBtn = document.getElementById("load-map-btn");
+
+      if (loadMapBtn) {
+        loadMapBtn.addEventListener("click", loadGoogleMap);
+      }
+
+      if (!mapShell) return;
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              loadGoogleMap();
+              observer.disconnect();
+            }
+          });
+        }, {
+          rootMargin: "250px 0px"
+        });
+
+        observer.observe(mapShell);
+      }
+    }
+
+    function setupVideoClicks() {
+      var videos = document.querySelectorAll(".video-wrapper[data-video]");
+
+      videos.forEach(function(box) {
+        box.addEventListener("click", function() {
+          var videoId = box.getAttribute("data-video");
+          if (!videoId) return;
+
+          box.innerHTML =
+            '<iframe src="https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?autoplay=1" allowfullscreen allow="autoplay" title="فيديو أعمال الحبيب كلين"></iframe>';
+        }, { once: true });
+      });
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
+      setupLazyMap();
+      setupVideoClicks();
+
       try {
         var gclid = getParam("gclid");
 
@@ -1024,7 +1204,6 @@
           btn.href = baseUrl + "/thankyou-whatsapp.html" + queryParams;
         });
 
-        console.log("Habib Clean Tracking: GCLID ->", gclid || "none");
       } catch (e) {
         console.log("Tracking Error:", e);
       }
