@@ -5,7 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Habib Store | مسدس المياه اللاسلكي</title>
 
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '3076333772698182');
+  fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -131,15 +153,22 @@
       color: #fff;
       margin-top: 30px;
     }
+
   </style>
 </head>
 
 <body>
 
   <section class="hero">
-    <h1>حوّل أي جردل مياه<br><span>إلى ماكينة غسيل ضغط قوية</span></h1>
+
+    <h1>
+      حوّل أي جردل مياه<br>
+      <span>إلى ماكينة غسيل ضغط قوية</span>
+    </h1>
+
     <p>
-      مسدس مياه لاسلكي لتنظيف السيارة، الأرضيات، الحديقة، الشبابيك والمكيفات بسهولة.
+      مسدس مياه لاسلكي لتنظيف السيارة، الأرضيات،
+      الحديقة، الشبابيك والمكيفات بسهولة.
     </p>
 
     <img src="product.jpg" alt="مسدس المياه اللاسلكي" class="product-img">
@@ -147,28 +176,61 @@
     <div class="price">149 درهم</div>
 
     <p>الدفع عند الاستلام داخل الإمارات</p>
+
   </section>
 
   <section class="section">
+
     <div class="features">
-      <div class="feature">💦 ضغط مياه قوي لتنظيف الأوساخ بسرعة</div>
-      <div class="feature">🔋 يعمل بالبطارية بدون أسلاك</div>
-      <div class="feature">🚗 مناسب لغسيل السيارات والحدائق</div>
-      <div class="feature">🧼 يأتي مع ملحقات كاملة للاستخدام</div>
+
+      <div class="feature">
+        💦 ضغط مياه قوي لتنظيف الأوساخ بسرعة
+      </div>
+
+      <div class="feature">
+        🔋 يعمل بالبطارية بدون أسلاك
+      </div>
+
+      <div class="feature">
+        🚗 مناسب لغسيل السيارات والحدائق
+      </div>
+
+      <div class="feature">
+        🧼 يأتي مع ملحقات كاملة للاستخدام
+      </div>
+
     </div>
+
   </section>
 
   <section class="section" id="order">
+
     <div class="order-box">
+
       <h2>اطلب الآن</h2>
 
       <form id="orderForm">
-        <input type="text" name="name" placeholder="الاسم الكامل" required>
 
-        <input type="tel" name="phone" placeholder="رقم الجوال" required>
+        <input
+          type="text"
+          name="name"
+          placeholder="الاسم الكامل"
+          required
+        >
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="رقم الجوال"
+          required
+        >
 
         <select name="emirate" required>
-          <option value="">اختر الإمارة</option>
+
+          <option value="">
+            اختر الإمارة
+          </option>
+
           <option>دبي</option>
           <option>أبوظبي</option>
           <option>الشارقة</option>
@@ -176,11 +238,20 @@
           <option>رأس الخيمة</option>
           <option>الفجيرة</option>
           <option>أم القيوين</option>
+
         </select>
 
-        <textarea name="address" rows="4" placeholder="العنوان بالتفصيل" required></textarea>
+        <textarea
+          name="address"
+          rows="4"
+          placeholder="العنوان بالتفصيل"
+          required
+        ></textarea>
 
-        <button type="submit" id="submitBtn">تأكيد الطلب الآن</button>
+        <button type="submit" id="submitBtn">
+          تأكيد الطلب الآن
+        </button>
+
       </form>
 
       <div class="trust">
@@ -188,7 +259,9 @@
         💵 الدفع عند الاستلام<br>
         📞 سيتم التواصل معك لتأكيد الطلب
       </div>
+
     </div>
+
   </section>
 
   <footer>
@@ -196,44 +269,81 @@
   </footer>
 
   <script>
-    const webhookUrl = "https://hook.eu1.make.com/zpchl7x9ruxpyoick8wovoa77ifgmxbl";
 
-    document.getElementById("orderForm").addEventListener("submit", async function(e) {
+    const webhookUrl =
+    "https://hook.eu1.make.com/zpchl7x9ruxpyoick8wovoa77ifgmxbl";
+
+    document.getElementById("orderForm")
+    .addEventListener("submit", async function(e) {
+
       e.preventDefault();
 
-      const submitBtn = document.getElementById("submitBtn");
+      const submitBtn =
+      document.getElementById("submitBtn");
+
       submitBtn.disabled = true;
-      submitBtn.innerText = "جاري إرسال الطلب...";
+
+      submitBtn.innerText =
+      "جاري إرسال الطلب...";
 
       const formData = {
+
         name: this.name.value,
+
         phone: this.phone.value,
+
         emirate: this.emirate.value,
+
         address: this.address.value,
-        product: "Pressure Washer For Car - Double Battery",
+
+        product:
+        "Pressure Washer For Car - Double Battery",
+
         price: "149 AED",
+
         country: "UAE",
-        source: "Habib Store Landing Page",
-        date: new Date().toISOString()
+
+        source:
+        "Habib Store Landing Page",
+
+        date:
+        new Date().toISOString()
       };
 
       try {
+
         await fetch(webhookUrl, {
+
           method: "POST",
+
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type":
+            "application/json"
           },
-          body: JSON.stringify(formData)
+
+          body:
+          JSON.stringify(formData)
+
         });
 
-        window.location.href = "thank-you.html";
+        window.location.href =
+        "thank-you.html";
 
-      } catch (error) {
-        alert("حدث خطأ. حاول مرة أخرى.");
-        submitBtn.disabled = false;
-        submitBtn.innerText = "تأكيد الطلب الآن";
       }
+
+      catch (error) {
+
+        alert("حدث خطأ. حاول مرة أخرى.");
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerText =
+        "تأكيد الطلب الآن";
+
+      }
+
     });
+
   </script>
 
 </body>
