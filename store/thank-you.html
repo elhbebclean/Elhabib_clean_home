@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شكراً لطلبك! | تم التأكيد بنجاح</title>
+    <style>
+        /* إعدادات عامة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f9ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* حاوية الصفحة */
+        .thank-you-container {
+            background: #ffffff;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        /* الأيقونة والعنوان */
+        .icon {
+            font-size: 70px;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+        h1 {
+            color: #0056b3;
+            margin: 0 0 10px;
+            font-size: 26px;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        /* مربع تفاصيل الطلب */
+        .order-summary {
+            background-color: #eef5ff;
+            border: 1px solid #cce0ff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 25px;
+            text-align: right;
+        }
+        .order-summary p {
+            margin: 8px 0;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .order-summary span {
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        /* الخطوات القادمة */
+        .next-steps {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        .next-steps h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .next-steps ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .next-steps li {
+            position: relative;
+            padding-right: 30px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #444;
+        }
+        .next-steps li::before {
+            content: '💧';
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 16px;
+        }
+
+        /* الأزرار */
+        .btn-whatsapp {
+            display: block;
+            width: 100%;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+        }
+        .btn-home {
+            display: block;
+            width: 100%;
+            background-color: transparent;
+            color: #0056b3;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            border: 2px solid #0056b3;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        .btn-home:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thank-you-container">
+        <div class="icon">🎉💦</div>
+        <h1>استعد للمرح!</h1>
+        <p class="subtitle">تم تأكيد طلبك بنجاح. مسدس المياه الخاص بك في طريقه إليك!</p>
+
+        <div class="order-summary">
+            <p>رقم الطلب: <span>#10025</span></p>
+            <p>طريقة الدفع: <span>الدفع عند الاستلام</span></p>
+        </div>
+
+        <div class="next-steps">
+            <h3>إيه اللي هيحصل دلوقتي؟</h3>
+            <ul>
+                <li>سنتواصل معك هاتفياً خلال 24 ساعة لتأكيد بيانات الشحن.</li>
+                <li>سيصلك المندوب لحد باب البيت خلال 2-4 أيام عمل.</li>
+                <li>جهز نفسك واستعد لأقوى معركة مياه!</li>
+            </ul>
+        </div>
+
+        <!-- استبدل رقم الهاتف برقمك الفعلي مع كود الدولة -->
+        <a href="https://wa.me/201xxxxxxxxx" class="btn-whatsapp" target="_blank">
+            💬 تواصل معنا عبر الواتساب
+        </a>
+        <a href="index.html" class="btn-home">
+            العودة للصفحة الرئيسية
+        </a>
+    </div>
+
+</body>
+</html>
