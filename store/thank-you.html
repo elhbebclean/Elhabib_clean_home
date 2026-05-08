@@ -1,169 +1,122 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شكراً لطلبك! | تم التأكيد بنجاح</title>
-    <style>
-        /* إعدادات عامة */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f9ff;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تم استلام طلبك | Habib Store</title>
 
-        /* حاوية الصفحة */
-        .thank-you-container {
-            background: #ffffff;
-            max-width: 500px;
-            width: 100%;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
-            padding: 40px 30px;
-            text-align: center;
-        }
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      background:#f5f5f5;
+      font-family:Arial,sans-serif;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      color:#111;
+    }
 
-        /* الأيقونة والعنوان */
-        .icon {
-            font-size: 70px;
-            margin-bottom: 15px;
-            line-height: 1;
-        }
-        h1 {
-            color: #0056b3;
-            margin: 0 0 10px;
-            font-size: 26px;
-        }
-        .subtitle {
-            color: #555;
-            font-size: 16px;
-            margin-bottom: 25px;
-        }
+    .container{
+      width:90%;
+      max-width:500px;
+      background:#fff;
+      padding:40px 25px;
+      border-radius:20px;
+      box-shadow:0 10px 35px rgba(0,0,0,0.08);
+      text-align:center;
+    }
 
-        /* مربع تفاصيل الطلب */
-        .order-summary {
-            background-color: #eef5ff;
-            border: 1px solid #cce0ff;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 25px;
-            text-align: right;
-        }
-        .order-summary p {
-            margin: 8px 0;
-            font-size: 15px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .order-summary span {
-            font-weight: bold;
-            color: #0056b3;
-        }
+    .icon{
+      font-size:70px;
+      margin-bottom:15px;
+    }
 
-        /* الخطوات القادمة */
-        .next-steps {
-            text-align: right;
-            margin-bottom: 30px;
-        }
-        .next-steps h3 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-        }
-        .next-steps ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .next-steps li {
-            position: relative;
-            padding-right: 30px;
-            margin-bottom: 12px;
-            font-size: 15px;
-            color: #444;
-        }
-        .next-steps li::before {
-            content: '💧';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 16px;
-        }
+    h1{
+      margin:0 0 15px;
+      font-size:32px;
+      color:#111;
+    }
 
-        /* الأزرار */
-        .btn-whatsapp {
-            display: block;
-            width: 100%;
-            background-color: #25D366;
-            color: #fff;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-            box-sizing: border-box;
-            margin-bottom: 15px;
-        }
-        .btn-whatsapp:hover {
-            background-color: #1ebe57;
-        }
-        .btn-home {
-            display: block;
-            width: 100%;
-            background-color: transparent;
-            color: #0056b3;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 16px;
-            border: 2px solid #0056b3;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-        }
-        .btn-home:hover {
-            background-color: #0056b3;
-            color: #fff;
-        }
-    </style>
+    p{
+      font-size:18px;
+      line-height:1.9;
+      color:#555;
+      margin-bottom:25px;
+    }
+
+    .info-box{
+      background:#f7f7f7;
+      padding:18px;
+      border-radius:14px;
+      margin-bottom:25px;
+      text-align:right;
+    }
+
+    .info-box div{
+      margin-bottom:10px;
+      font-size:16px;
+    }
+
+    .btn{
+      display:block;
+      width:100%;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      padding:16px;
+      border-radius:12px;
+      font-size:18px;
+      font-weight:bold;
+      margin-bottom:15px;
+      box-sizing:border-box;
+    }
+
+    .btn-whatsapp{
+      background:#25D366;
+    }
+
+    .small{
+      font-size:14px;
+      color:#888;
+      margin-top:20px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="thank-you-container">
-        <div class="icon">🎉💦</div>
-        <h1>استعد للمرح!</h1>
-        <p class="subtitle">تم تأكيد طلبك بنجاح. مسدس المياه الخاص بك في طريقه إليك!</p>
+  <div class="container">
 
-        <div class="order-summary">
-            <p>رقم الطلب: <span>#10025</span></p>
-            <p>طريقة الدفع: <span>الدفع عند الاستلام</span></p>
-        </div>
+    <div class="icon">🎉</div>
 
-        <div class="next-steps">
-            <h3>إيه اللي هيحصل دلوقتي؟</h3>
-            <ul>
-                <li>سنتواصل معك هاتفياً خلال 24 ساعة لتأكيد بيانات الشحن.</li>
-                <li>سيصلك المندوب لحد باب البيت خلال 2-4 أيام عمل.</li>
-                <li>جهز نفسك واستعد لأقوى معركة مياه!</li>
-            </ul>
-        </div>
+    <h1>تم استلام طلبك بنجاح</h1>
 
-        <!-- استبدل رقم الهاتف برقمك الفعلي مع كود الدولة -->
-        <a href="https://wa.me/201xxxxxxxxx" class="btn-whatsapp" target="_blank">
-            💬 تواصل معنا عبر الواتساب
-        </a>
-        <a href="index.html" class="btn-home">
-            العودة للصفحة الرئيسية
-        </a>
+    <p>
+      شكرًا لطلبك من Habib Store 💙<br>
+      سيتم التواصل معك قريبًا لتأكيد الطلب والشحن.
+    </p>
+
+    <div class="info-box">
+      <div>🚚 شحن سريع داخل الإمارات</div>
+      <div>💵 الدفع عند الاستلام</div>
+      <div>📞 تأكيد الطلب عبر الهاتف</div>
     </div>
+
+    <a href="https://wa.me/201000000000" class="btn btn-whatsapp">
+      تواصل معنا عبر واتساب
+    </a>
+
+    <a href="index.html" class="btn">
+      العودة للمتجر
+    </a>
+
+    <div class="small">
+      Habib Store © 2026
+    </div>
+
+  </div>
 
 </body>
 </html>
