@@ -1,0 +1,252 @@
+export default function HabibStoreLandingPage() { return ( <div className="bg-white text-gray-900 font-sans"> {/* HERO */} <section className="relative overflow-hidden bg-black text-white"> <div className="absolute inset-0 opacity-40"> <img
+src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400&auto=format&fit=crop"
+alt="Luxury Car"
+className="w-full h-full object-cover"
+/> </div>
+
+<div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div className="inline-flex items-center gap-2 bg-yellow-500 text-black px-4 py-2 rounded-full text-sm font-bold mb-6">
+          🇦🇪 شحن سريع داخل الإمارات
+        </div>
+
+        <h1 className="text-4xl lg:text-6xl font-black leading-tight mb-6">
+          حوّل أي جردل مياه
+          <span className="text-yellow-400 block mt-2">
+            إلى ماكينة غسيل ضغط قوية
+          </span>
+        </h1>
+
+        <p className="text-lg text-gray-300 leading-8 mb-8 max-w-xl">
+          مسدس مياه لاسلكي بضغط قوي لتنظيف السيارات، الأرضيات، التكييفات،
+          الحدائق والنوافذ بسهولة واحترافية.
+        </p>
+
+        <div className="flex flex-wrap items-center gap-4 mb-8">
+          <div className="bg-white text-black px-6 py-4 rounded-2xl shadow-2xl">
+            <div className="text-sm text-gray-500">عرض اليوم</div>
+            <div className="text-4xl font-black">149 AED</div>
+          </div>
+
+          <div className="text-gray-300">
+            <div className="line-through text-xl">249 AED</div>
+            <div className="text-green-400 font-bold text-lg">
+              توفير 40%
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-4">
+          <a
+            href="#order"
+            className="bg-yellow-400 hover:bg-yellow-300 text-black px-8 py-4 rounded-2xl font-black text-lg shadow-2xl transition"
+          >
+            اطلب الآن
+          </a>
+
+          <a
+            href="#features"
+            className="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-2xl font-bold transition"
+          >
+            شاهد المميزات
+          </a>
+        </div>
+      </div>
+
+      <div className="relative">
+        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden p-4">
+          <img
+            src="/mnt/data/file_00000000d04071f4bc2600ba16d261b0"
+            alt="Portable Pressure Washer"
+            className="w-full object-contain rounded-2xl"
+          />
+        </div>
+
+        <div className="absolute -bottom-5 -left-5 bg-yellow-400 text-black px-5 py-3 rounded-2xl font-black shadow-xl">
+          🔥 بطاريتان مجانًا
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* TRUST BAR */}
+  <section className="bg-gray-100 border-y border-gray-200">
+    <div className="max-w-7xl mx-auto px-6 py-5 grid md:grid-cols-4 gap-4 text-center">
+      <div className="font-bold">🚚 شحن سريع للإمارات</div>
+      <div className="font-bold">💵 الدفع عند الاستلام</div>
+      <div className="font-bold">🔋 بطاريتان قابلة للشحن</div>
+      <div className="font-bold">⭐ جودة عالية وضغط قوي</div>
+    </div>
+  </section>
+
+  {/* FEATURES */}
+  <section id="features" className="max-w-7xl mx-auto px-6 py-20">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-black mb-4">
+        لماذا يختار الجميع هذا المسدس؟
+      </h2>
+      <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        تنظيف احترافي في أي مكان بدون أسلاك أو معدات ضخمة.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        {
+          title: "ضغط مياه قوي",
+          desc: "يزيل الأوساخ والدهون بسرعة عالية.",
+          icon: "💦",
+        },
+        {
+          title: "لاسلكي بالكامل",
+          desc: "استخدمه في أي مكان بسهولة.",
+          icon: "🔋",
+        },
+        {
+          title: "متعدد الاستخدامات",
+          desc: "للسيارات، الحدائق، الأرضيات والنوافذ.",
+          icon: "🚗",
+        },
+        {
+          title: "خفيف وسهل الحمل",
+          desc: "تصميم عملي ومريح للاستخدام اليومي.",
+          icon: "🧼",
+        },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition"
+        >
+          <div className="text-5xl mb-5">{item.icon}</div>
+          <h3 className="text-2xl font-black mb-3">{item.title}</h3>
+          <p className="text-gray-600 leading-7">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* USE CASES */}
+  <section className="bg-gray-50 py-20">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-black mb-4">
+          مناسب لكل استخدامات المنزل والسيارة
+        </h2>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {[
+          "غسيل السيارات",
+          "تنظيف المكيفات",
+          "تنظيف الحدائق",
+          "تنظيف الأرضيات",
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-3xl overflow-hidden shadow-lg"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1607861716497-e65ab29fc7ac?q=80&w=1200&auto=format&fit=crop"
+              alt={item}
+              className="h-56 w-full object-cover"
+            />
+            <div className="p-6 text-center text-2xl font-black">
+              {item}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* OFFER */}
+  <section className="bg-black text-white py-20 text-center">
+    <div className="max-w-4xl mx-auto px-6">
+      <div className="inline-block bg-red-500 px-5 py-2 rounded-full font-black mb-6">
+        عرض محدود لفترة قصيرة
+      </div>
+
+      <h2 className="text-5xl font-black mb-6 leading-tight">
+        احصل على جهاز الغسيل اللاسلكي
+        <span className="text-yellow-400 block mt-3">
+          مع بطاريتين وملحقات كاملة
+        </span>
+      </h2>
+
+      <div className="text-6xl font-black text-yellow-400 mb-6">
+        149 AED
+      </div>
+
+      <p className="text-gray-300 text-xl mb-10">
+        الدفع عند الاستلام • شحن سريع داخل الإمارات
+      </p>
+
+      <a
+        href="#order"
+        className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black px-10 py-5 rounded-2xl font-black text-xl transition shadow-2xl"
+      >
+        اطلب الآن قبل نفاد الكمية
+      </a>
+    </div>
+  </section>
+
+  {/* ORDER FORM */}
+  <section id="order" className="max-w-4xl mx-auto px-6 py-20">
+    <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 lg:p-12">
+      <div className="text-center mb-10">
+        <h2 className="text-4xl font-black mb-4">تأكيد الطلب</h2>
+        <p className="text-gray-600 text-lg">
+          املأ البيانات وسيتم التواصل معك لتأكيد الطلب.
+        </p>
+      </div>
+
+      <form className="grid gap-6">
+        <input
+          type="text"
+          placeholder="الاسم الكامل"
+          className="w-full border border-gray-300 rounded-2xl px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+
+        <input
+          type="tel"
+          placeholder="رقم الجوال"
+          className="w-full border border-gray-300 rounded-2xl px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+
+        <select className="w-full border border-gray-300 rounded-2xl px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+          <option>اختر الإمارة</option>
+          <option>دبي</option>
+          <option>أبوظبي</option>
+          <option>الشارقة</option>
+          <option>عجمان</option>
+          <option>رأس الخيمة</option>
+          <option>الفجيرة</option>
+          <option>أم القيوين</option>
+        </select>
+
+        <textarea
+          placeholder="العنوان بالتفصيل"
+          rows="4"
+          className="w-full border border-gray-300 rounded-2xl px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        ></textarea>
+
+        <button
+          type="submit"
+          className="bg-yellow-400 hover:bg-yellow-300 text-black py-5 rounded-2xl text-2xl font-black shadow-xl transition"
+        >
+          تأكيد الطلب الآن
+        </button>
+      </form>
+    </div>
+  </section>
+
+  {/* FOOTER */}
+  <footer className="bg-gray-100 py-10 text-center text-gray-600 border-t border-gray-200">
+    <div className="text-2xl font-black text-black mb-3">
+      Habib Store
+    </div>
+    <p>جميع الحقوق محفوظة © 2026</p>
+  </footer>
+</div>
+
+); }
