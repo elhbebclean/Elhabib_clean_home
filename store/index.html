@@ -1,472 +1,240 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Habib Store | مسدس المياه اللاسلكي</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f6f6;
+      color: #111;
+      direction: rtl;
     }
 
-    body{
-      font-family:'Cairo',sans-serif;
-      background:#f5f5f5;
-      color:#111;
-      overflow-x:hidden;
+    .hero {
+      background: #111;
+      color: #fff;
+      padding: 35px 20px;
+      text-align: center;
     }
 
-    a{
-      text-decoration:none;
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      line-height: 1.4;
     }
 
-    .hero{
-      min-height:100vh;
-      background:
-      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-      url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop') center/cover;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:40px 20px;
-      position:relative;
+    .hero span {
+      color: #ffd400;
     }
 
-    .hero-content{
-      max-width:1200px;
-      width:100%;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:60px;
-      align-items:center;
+    .hero p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #ddd;
     }
 
-    .hero-text h1{
-      color:#fff;
-      font-size:65px;
-      line-height:1.2;
-      margin-bottom:25px;
-      font-weight:900;
+    .product-img {
+      width: 100%;
+      max-width: 420px;
+      margin: 25px auto;
+      display: block;
+      border-radius: 18px;
+      background: #fff;
     }
 
-    .hero-text h1 span{
-      color:#ffcc00;
+    .price {
+      background: #ffd400;
+      color: #000;
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 14px;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 15px 0;
     }
 
-    .hero-text p{
-      color:#ddd;
-      font-size:22px;
-      line-height:2;
-      margin-bottom:35px;
+    .section {
+      padding: 30px 20px;
+      max-width: 650px;
+      margin: auto;
     }
 
-    .price-box{
-      display:flex;
-      align-items:center;
-      gap:20px;
-      margin-bottom:35px;
-      flex-wrap:wrap;
+    .features {
+      display: grid;
+      gap: 15px;
     }
 
-    .new-price{
-      background:#ffcc00;
-      color:#000;
-      padding:20px 35px;
-      border-radius:25px;
-      font-size:42px;
-      font-weight:900;
-      box-shadow:0 15px 40px rgba(255,204,0,.3);
+    .feature {
+      background: #fff;
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      font-size: 18px;
+      font-weight: bold;
     }
 
-    .old-price{
-      color:#aaa;
-      text-decoration:line-through;
-      font-size:28px;
-      font-weight:700;
+    .order-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
 
-    .cta-btn{
-      display:inline-block;
-      background:#ffcc00;
-      color:#000;
-      padding:18px 45px;
-      border-radius:18px;
-      font-size:24px;
-      font-weight:900;
-      transition:.3s;
-      box-shadow:0 10px 30px rgba(255,204,0,.35);
+    .order-box h2 {
+      text-align: center;
+      margin-top: 0;
     }
 
-    .cta-btn:hover{
-      transform:translateY(-4px);
-      background:#ffd633;
+    input, select, textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 14px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      font-size: 16px;
+      box-sizing: border-box;
     }
 
-    .hero-image{
-      display:flex;
-      justify-content:center;
-      position:relative;
+    button {
+      width: 100%;
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    .hero-image img{
-      width:100%;
-      max-width:550px;
-      border-radius:35px;
-      background:#fff;
-      padding:20px;
-      box-shadow:0 25px 60px rgba(0,0,0,.5);
+    button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
     }
 
-    .badge{
-      position:absolute;
-      bottom:-10px;
-      left:0;
-      background:#00d26a;
-      color:#fff;
-      padding:14px 25px;
-      border-radius:18px;
-      font-weight:800;
-      font-size:20px;
-      box-shadow:0 10px 25px rgba(0,210,106,.4);
+    .trust {
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      margin-top: 18px;
+      line-height: 1.8;
     }
 
-    .features{
-      padding:90px 20px;
-      background:#fff;
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111;
+      color: #fff;
+      margin-top: 30px;
     }
+  </style>
+</head>
 
-    .section-title{
-      text-align:center;
-      margin-bottom:60px;
-    }
+<body>
 
-    .section-title h2{
-      font-size:48px;
-      margin-bottom:15px;
-      font-weight:900;
-    }
+  <section class="hero">
+    <h1>حوّل أي جردل مياه<br><span>إلى ماكينة غسيل ضغط قوية</span></h1>
+    <p>
+      مسدس مياه لاسلكي لتنظيف السيارة، الأرضيات، الحديقة، الشبابيك والمكيفات بسهولة.
+    </p>
 
-    .section-title p{
-      color:#666;
-      font-size:22px;
-    }
+    <img src="product.jpg" alt="مسدس المياه اللاسلكي" class="product-img">
 
-    .features-grid{
-      max-width:1200px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-    }
+    <div class="price">149 درهم</div>
 
-    .feature-card{
-      background:#f8f8f8;
-      padding:35px;
-      border-radius:30px;
-      transition:.3s;
-      border:1px solid #eee;
-    }
+    <p>الدفع عند الاستلام داخل الإمارات</p>
+  </section>
 
-    .feature-card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 15px 40px rgba(0,0,0,.08);
-    }
+  <section class="section">
+    <div class="features">
+      <div class="feature">💦 ضغط مياه قوي لتنظيف الأوساخ بسرعة</div>
+      <div class="feature">🔋 يعمل بالبطارية بدون أسلاك</div>
+      <div class="feature">🚗 مناسب لغسيل السيارات والحدائق</div>
+      <div class="feature">🧼 يأتي مع ملحقات كاملة للاستخدام</div>
+    </div>
+  </section>
 
-    .feature-card .icon{
-      font-size:55px;
-      margin-bottom:20px;
-    }
+  <section class="section" id="order">
+    <div class="order-box">
+      <h2>اطلب الآن</h2>
 
-    .feature-card h3{
-      font-size:28px;
-      margin-bottom:15px;
-      font-weight:800;
-    }
+      <form id="orderForm">
+        <input type="text" name="name" placeholder="الاسم الكامل" required>
 
-    .feature-card p{
-      color:#666;
-      line-height:2;
-      font-size:18px;
-    }
+        <input type="tel" name="phone" placeholder="رقم الجوال" required>
 
-    .gallery{
-      background:#111;
-      padding:90px 20px;
-    }
+        <select name="emirate" required>
+          <option value="">اختر الإمارة</option>
+          <option>دبي</option>
+          <option>أبوظبي</option>
+          <option>الشارقة</option>
+          <option>عجمان</option>
+          <option>رأس الخيمة</option>
+          <option>الفجيرة</option>
+          <option>أم القيوين</option>
+        </select>
 
-    .gallery-grid{
-      max-width:1200px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:25px;
-    }
+        <textarea name="address" rows="4" placeholder="العنوان بالتفصيل" required></textarea>
 
-    .gallery-item{
-      overflow:hidden;
-      border-radius:25px;
-      position:relative;
-    }
+        <button type="submit" id="submitBtn">تأكيد الطلب الآن</button>
+      </form>
 
-    .gallery-item img{
-      width:100%;
-      height:320px;
-      object-fit:cover;
-      transition:.4s;
-    }
+      <div class="trust">
+        🚚 شحن سريع داخل الإمارات<br>
+        💵 الدفع عند الاستلام<br>
+        📞 سيتم التواصل معك لتأكيد الطلب
+      </div>
+    </div>
+  </section>
 
-    .gallery-item:hover img{
-      transform:scale(1.08);
-    }
+  <footer>
+    Habib Store © 2026
+  </footer>
 
-    .gallery-text{
-      position:absolute;
-      bottom:0;
-      width:100%;
-      background:linear-gradient(transparent,rgba(0,0,0,.9));
-      color:#fff;
-      padding:30px 20px 20px;
-      font-size:24px;
-      font-weight:800;
-    }
+  <script>
+    const webhookUrl = "https://hook.eu1.make.com/zpchl7x9ruxpyoick8wovoa77ifgmxbl";
 
-    .offer{
-      background:#ffcc00;
-      text-align:center;
-      padding:90px 20px;
-    }
+    document.getElementById("orderForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
 
-    .offer h2{
-      font-size:55px;
-      margin-bottom:20px;
-      font-weight:900;
-    }
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true;
+      submitBtn.innerText = "جاري إرسال الطلب...";
 
-    .offer p{
-      font-size:24px;
-      margin-bottom:30px;
-    }
+      const formData = {
+        name: this.name.value,
+        phone: this.phone.value,
+        emirate: this.emirate.value,
+        address: this.address.value,
+        product: "Pressure Washer For Car - Double Battery",
+        price: "149 AED",
+        country: "UAE",
+        source: "Habib Store Landing Page",
+        date: new Date().toISOString()
+      };
 
-    .offer .price{
-      font-size:75px;
-      font-weight:900;
-      margin-bottom:35px;
-    }
+      try {
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
+        });
 
-    .order-section{
-      padding:90px 20px;
-      background:#fff;
-    }
+        window.location.href = "thank-you.html";
 
-    .order-box{
-      max-width:850px;
-      margin:auto;
-      background:#fff;
-      border-radius:35px;
-      padding:50px;
-      box-shadow:0 20px 60px rgba(0,0,0,.08);
-      border:1px solid #eee;
-    }
-
-    .order-box h2{
-      text-align:center;
-      font-size:45px;
-      margin-bottom:15px;
-      font-weight:900;
-    }
-
-    .order-box p{
-      text-align:center;
-      color:#666;
-      margin-bottom:40px;
-      font-size:20px;
-    }
-
-    form{
-      display:grid;
-      gap:20px;
-    }
-
-    input,select,textarea{
-      width:100%;
-      padding:18px 20px;
-      border-radius:18px;
-      border:1px solid #ddd;
-      font-family:'Cairo',sans-serif;
-      font-size:18px;
-      outline:none;
-      transition:.3s;
-    }
-
-    input:focus,select:focus,textarea:focus{
-      border-color:#ffcc00;
-      box-shadow:0 0 0 5px rgba(255,204,0,.15);
-    }
-
-    .submit-btn{
-      background:#111;
-      color:#fff;
-      border:none;
-      padding:22px;
-      border-radius:20px;
-      font-size:26px;
-      font-weight:900;
-      cursor:pointer;
-      transition:.3s;
-    }
-
-    .submit-btn:hover{
-      background:#000;
-      transform:translateY(-3px);
-    }
-
-    footer{
-      background:#111;
-      color:#fff;
-      text-align:center;
-      padding:40px 20px;
-    }
-
-    footer h3{
-      font-size:34px;
-      margin-bottom:10px;
-      color:#ffcc00;
-    }
-
-    @media(max-width:900px){
-      .hero-content{
-        grid-template-columns:1fr;
-        text-align:center;
+      } catch (error) {
+        alert("حدث خطأ. حاول مرة أخرى.");
+        submitBtn.disabled = false;
+        submitBtn.innerText = "تأكيد الطلب الآن";
       }
+    });
+  </script>
 
-      .hero-text h1{
-        font-size:42px;
-      }
-
-      .section-title h2,
-      .offer h2,
-      .order-box h2{
-        font-size:34px;
-      }
-
-      .offer .price{
-        font-size:55px;
-      }
-
-      .new-price{
-        font-size:32px;
-      }
-    }
-  </style></head>
-<body><section class="hero">
-  <div class="hero-content"><div class="hero-text">
-  <h1>
-    حوّل أي جردل مياه
-    <span>إلى ماكينة غسيل ضغط قوية</span>
-  </h1>
-
-  <p>
-    مسدس مياه لاسلكي بضغط قوي لتنظيف السيارات، الأرضيات،
-    الحدائق، الشبابيك والمكيفات بسهولة واحترافية.
-  </p>
-
-  <div class="price-box">
-    <div class="new-price">149 AED</div>
-    <div class="old-price">249 AED</div>
-  </div>
-
-  <a href="#order" class="cta-btn">اطلب الآن</a>
-</div>
-
-<div class="hero-image">
-  <img src="YOUR-PRODUCT-IMAGE.jpg" alt="Water Gun">
-  <div class="badge">🚚 شحن سريع للإمارات</div>
-</div>
-
-  </div>
-</section><section class="features">
-  <div class="section-title">
-    <h2>لماذا الجميع يشتريه؟</h2>
-    <p>تنظيف احترافي في أي مكان بدون أسلاك أو معدات ضخمة.</p>
-  </div>  <div class="features-grid"><div class="feature-card">
-  <div class="icon">💦</div>
-  <h3>ضغط مياه قوي</h3>
-  <p>يزيل الأوساخ والدهون بسرعة مذهلة.</p>
-</div>
-
-<div class="feature-card">
-  <div class="icon">🔋</div>
-  <h3>لاسلكي بالكامل</h3>
-  <p>يعمل بالبطارية بدون أي أسلاك مزعجة.</p>
-</div>
-
-<div class="feature-card">
-  <div class="icon">🚗</div>
-  <h3>متعدد الاستخدامات</h3>
-  <p>للسيارات والحدائق والشبابيك والأرضيات.</p>
-</div>
-
-<div class="feature-card">
-  <div class="icon">🧼</div>
-  <h3>خفيف وسهل الحمل</h3>
-  <p>استخدمه بسهولة في أي مكان.</p>
-</div>
-
-  </div>
-</section><section class="gallery">
-  <div class="section-title">
-    <h2 style="color:#fff">استخدامات لا تنتهي</h2>
-    <p style="color:#bbb">منتج مثالي للبيت والسيارة والحديقة</p>
-  </div>  <div class="gallery-grid"><div class="gallery-item">
-  <img src="https://images.unsplash.com/photo-1607861716497-e65ab29fc7ac?q=80&w=1200&auto=format&fit=crop">
-  <div class="gallery-text">غسيل السيارات</div>
-</div>
-
-<div class="gallery-item">
-  <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop">
-  <div class="gallery-text">تنظيف الحدائق</div>
-</div>
-
-<div class="gallery-item">
-  <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop">
-  <div class="gallery-text">تنظيف الأرضيات</div>
-</div>
-
-  </div>
-</section><section class="offer">
-  <h2>عرض خاص لفترة محدودة 🔥</h2>
-  <p>احصل على الجهاز مع بطاريتين وملحقات كاملة</p>
-  <div class="price">149 AED</div>
-  <a href="#order" class="cta-btn">اطلب الآن</a>
-</section><section class="order-section" id="order">
-  <div class="order-box">
-    <h2>تأكيد الطلب</h2>
-    <p>املأ البيانات وسيتم التواصل معك فورًا.</p><form>
-  <input type="text" placeholder="الاسم الكامل">
-  <input type="tel" placeholder="رقم الجوال">
-
-  <select>
-    <option>اختر الإمارة</option>
-    <option>دبي</option>
-    <option>أبوظبي</option>
-    <option>الشارقة</option>
-    <option>عجمان</option>
-    <option>رأس الخيمة</option>
-    <option>الفجيرة</option>
-  </select>
-
-  <textarea rows="4" placeholder="العنوان بالتفصيل"></textarea>
-
-  <button class="submit-btn">تأكيد الطلب الآن</button>
-</form>
-
-  </div>
-</section><footer>
-  <h3>Habib Store</h3>
-  <p>جميع الحقوق محفوظة © 2026</p>
-</footer></body>
+</body>
 </html>
