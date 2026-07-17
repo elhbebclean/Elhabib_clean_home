@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
@@ -15,7 +14,6 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <video:description>شركة تنظيف منازل وفيلات وجلي رخام بالقاهرة والجيزة.</video:description>
 <video:player_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:player_loc>
 </video:video>
-
 </url>
 
 <url>
@@ -37,7 +35,6 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <video:description>أفضل خدمات جلي الرخام بالألماس وإعادة اللمعان.</video:description>
 <video:player_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:player_loc>
 </video:video>
-
 </url>
 
 <url>
@@ -53,6 +50,7 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <changefreq>monthly</changefreq>
 <priority>0.80</priority>
 </url>
+
 <url>
 <loc>https://habib-clean.com/privacy.html</loc>
 <lastmod>2026-07-17</lastmod>
@@ -65,13 +63,6 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <lastmod>2026-07-17</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.80</priority>
-</url>
-
-<url>
-<loc>https://habib-clean.com/blog/index.html</loc>
-<lastmod>2026-07-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.90</priority>
 </url>
 
 <url>
