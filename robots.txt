@@ -2,7 +2,7 @@ User-agent: *
 
 # Allow important pages
 Allow: /
-Allow: /service.html
+Allow: /services.html
 Allow: /habib-marble-master.html
 Allow: /blog/
 
