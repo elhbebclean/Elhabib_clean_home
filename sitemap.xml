@@ -74,5 +74,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
-
+<url>
+  <loc>https://habib-clean.com/blog/cleaning-marble-after-construction.html</loc>
+  <lastmod>2026-07-17</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
 </urlset>
