@@ -4,7 +4,7 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
 <url>
 <loc>https://habib-clean.com/</loc>
-<lastmod>2026-07-17</lastmod>
+<lastmod>2026-07-26</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 
@@ -18,14 +18,14 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
 <url>
 <loc>https://habib-clean.com/services.html</loc>
-<lastmod>2026-07-17</lastmod>
+<lastmod>2026-07-26</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.95</priority>
 </url>
 
 <url>
 <loc>https://habib-clean.com/habib-marble-master.html</loc>
-<lastmod>2026-07-17</lastmod>
+<lastmod>2026-07-26</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.95</priority>
 
@@ -39,49 +39,49 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
 <url>
 <loc>https://habib-clean.com/about.html</loc>
-<lastmod>2026-07-17</lastmod>
+<lastmod>2026-07-26</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://habib-clean.com/contact.html</loc>
-<lastmod>2026-07-17</lastmod>
+<lastmod>2026-07-26</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://habib-clean.com/privacy.html</loc>
-<lastmod>2026-07-17</lastmod>
+<lastmod>2026-07-26</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.30</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/blog.html</loc>
-<lastmod>2026-07-17</lastmod>
+<loc>https://habib-clean.com/blog/</loc>
+<lastmod>2026-07-26</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/blog/blog1-تنظيف-بعد-التشطيب.html</loc>
-<lastmod>2026-07-17</lastmod>
+<loc>https://habib-clean.com/blog/blog1-%D8%AA%D9%86%D8%B8%D9%8A%D9%81-%D8%A8%D8%B9%D8%AF-%D8%A7%D9%84%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8.html</loc>
+<lastmod>2026-07-26</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.85</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/blog/blog2-الفرق-بين-التنظيف-العادي-والعميق.html</loc>
-<lastmod>2026-07-17</lastmod>
+<loc>https://habib-clean.com/blog/blog2-%D8%A7%D9%84%D9%81%D8%B1%D9%82-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%81-%D8%A7%D9%84%D8%B9%D8%A7%D8%AF%D9%8A-%D9%88%D8%A7%D9%84%D8%B9%D9%85%D9%8A%D9%82.html</loc>
+<lastmod>2026-07-26</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.85</priority>
 </url>
 
 <url>
 <loc>https://habib-clean.com/blog/cleaning-marble-after-construction.html</loc>
-<lastmod>2026-07-17</lastmod>
+<lastmod>2026-07-26</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.90</priority>
 </url>
