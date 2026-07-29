@@ -28,29 +28,74 @@
     <meta property="og:description" content="أضخم مكتبة هندسية لتأسيس وتنظيف القصور وصيانة الرخام والواجهات في الشرق الأوسط.">
     <meta property="og:image" content="https://habib-clean.com/FB_IMG_1737376278247.jpg">
 
-    <!-- Advanced Schema Markup: CollectionPage & ItemList -->
+    <!-- Advanced Combined Schema (LocalBusiness + CollectionPage + VideoObjects) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "أرشيف مدونة Elhabib Clean الهندسي",
-      "description": "دليل الأقسام الشامل لنصائح العناية بالقصور والفيلات والرخام والتعقيم الفندقي",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Elhabib Clean",
-        "logo": "https://habib-clean.com/logo.png"
-      },
-      "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "url": "https://habib-clean.com/blog/blog40-الموسوعة-الشاملة-لإدارة-القصور.html", "name": "الموسوعة الشاملة لإدارة القصور" },
-          { "@type": "ListItem", "position": 2, "url": "https://habib-clean.com/blog/blog41-best-home-cleaning-services-cairo.html", "name": "الدليل الشامل لأفضل شركات تنظيف منازل وفلل بعد التشطيب في القاهرة" },
-          { "@type": "ListItem", "position": 3, "url": "https://habib-clean.com/blog/blog1-تنظيف-بعد-التشطيب.html", "name": "تنظيف بعد التشطيب الشامل" },
-          { "@type": "ListItem", "position": 4, "url": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html", "name": "تقنية جلي وتلميع الرخام بالألماس" },
-          { "@type": "ListItem", "position": 5, "url": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html", "name": "المرجع الشامل لصيانة الواجهات" },
-          { "@type": "ListItem", "position": 6, "url": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html", "name": "إنقاذ واستعادة الشقق المغلقة" }
-        ]
-      }
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://habib-clean.com/#organization",
+          "name": "Elhabib Clean",
+          "image": "https://habib-clean.com/FB_IMG_1737376278247.jpg",
+          "telephone": "01016961497",
+          "url": "https://habib-clean.com",
+          "description": "المرجع الأكبر والكيان الهندسي الأول في الشرق الأوسط لإدارة المرافق، تأسيس القصور، جلي الرخام، وتنظيف الواجهات.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "المعادي",
+            "addressRegion": "القاهرة",
+            "addressCountry": "EG"
+          },
+          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City"],
+          "sameAs": [
+            "https://share.google/umb4679rea0EcsZk0",
+            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
+            "https://www.facebook.com/61559076547205/posts/122178827282302551/",
+            "https://www.youtube.com/@Elhbeb",
+            "https://www.youtube.com/channel/UCw759I1BQq570_v4th-a86w",
+            "https://welpstar.com/biz/habib-clean",
+            "https://infoeg.com/cairo/page/821675"
+          ]
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://habib-clean.com/blog/index.html",
+          "url": "https://habib-clean.com/blog/index.html",
+          "name": "أرشيف مدونة Elhabib Clean الهندسي",
+          "description": "دليل الأقسام الشامل لنصائح العناية بالقصور والفيلات والرخام والتعقيم الفندقي",
+          "publisher": {
+            "@id": "https://habib-clean.com/#organization"
+          },
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "url": "https://habib-clean.com/blog/blog40-الموسوعة-الشاملة-لإدارة-القصور.html", "name": "الموسوعة الشاملة لإدارة القصور" },
+              { "@type": "ListItem", "position": 2, "url": "https://habib-clean.com/blog/blog41-best-home-cleaning-services-cairo.html", "name": "الدليل الشامل لأفضل شركات تنظيف منازل وفلل بعد التشطيب في القاهرة" },
+              { "@type": "ListItem", "position": 3, "url": "https://habib-clean.com/blog/blog1-تنظيف-بعد-التشطيب.html", "name": "تنظيف بعد التشطيب الشامل" },
+              { "@type": "ListItem", "position": 4, "url": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html", "name": "تقنية جلي وتلميع الرخام بالألماس" },
+              { "@type": "ListItem", "position": 5, "url": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html", "name": "المرجع الشامل لصيانة الواجهات" },
+              { "@type": "ListItem", "position": 6, "url": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html", "name": "إنقاذ واستعادة الشقق المغلقة" }
+            ]
+          }
+        },
+        {
+          "@type": "VideoObject",
+          "name": "جودة خدمات التنظيف بعد التشطيب | Elhabib Clean",
+          "description": "شاهد كفاءة واحترافية فريق Elhabib Clean في تأسيس العقارات.",
+          "thumbnailUrl": "https://img.youtube.com/vi/vLGKsoqvcMY/hqdefault.jpg",
+          "uploadDate": "2026-02-01",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/vLGKsoqvcMY"
+        },
+        {
+          "@type": "VideoObject",
+          "name": "الاحترافية في النظافة الفندقية | Elhabib Clean",
+          "description": "المرجع الأول للعناية بالقصور والفيلات الفاخرة.",
+          "thumbnailUrl": "https://img.youtube.com/vi/_6U0VWvv8Xo/hqdefault.jpg",
+          "uploadDate": "2026-01-01",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/_6U0VWvv8Xo"
+        }
+      ]
     }
     </script>
 
@@ -160,10 +205,51 @@
         }
         .master-guide h2 { color: var(--primary-dark); font-size: 32px; font-weight: 900; margin: 0 0 15px; }
         .master-guide p { font-size: 19px; color: #555; max-width: 900px; margin: 0 auto 30px;}
+        
+        /* Video Automator Master CSS */
+        .videos-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+        .video-box {
+            flex: 1 1 300px;
+            max-width: 350px;
+        }
+        .shorts-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 2px solid var(--gold-accent);
+            position: relative;
+            aspect-ratio: 9 / 16;
+            background-color: #000;
+            margin-bottom: 12px;
+        }
+        .shorts-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .video-caption {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #777;
+            font-weight: 600;
+            margin: 0;
+        }
+
         .master-guide .btn-master {
             display: inline-block; background: var(--primary-dark); color: var(--gold-accent);
             padding: 16px 45px; border-radius: 50px; font-weight: 900; font-size: 20px; text-decoration: none;
             transition: all var(--transition-speed); box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            margin-top: 10px;
         }
         .master-guide .btn-master:hover { background: var(--gold-accent); color: var(--primary-dark); transform: translateY(-5px); }
 
@@ -218,7 +304,7 @@
         }
         .trust-section h2 { color: var(--gold-accent); margin: 0 0 15px; font-weight: 900; font-size: 32px;}
         .trust-section p { color: #ccc; font-size: 18px; margin-bottom: 30px;}
-        iframe { width: 100%; aspect-ratio: 21 / 9; border-radius: 12px; border: 0; filter: grayscale(20%); }
+        iframe.map-iframe { width: 100%; aspect-ratio: 21 / 9; border-radius: 12px; border: 0; filter: grayscale(20%); }
 
         .nav-links { text-align: center; margin-top: 60px; }
         .btn-home {
@@ -236,7 +322,7 @@
             .master-guide { padding: 30px 20px; }
             .silo-header h3 { font-size: 24px; }
             .trust-section { padding: 40px 20px; }
-            iframe { aspect-ratio: 16 / 9; }
+            iframe.map-iframe { aspect-ratio: 16 / 9; }
         }
     </style>
 </head>
@@ -253,10 +339,36 @@
 
     <main class="blog-container">
         
-        <!-- التاج الماسي: الموسوعة الشاملة -->
+        <!-- التاج الماسي: الموسوعة الشاملة وملفات الفيديو -->
         <section class="master-guide">
             <h2>👑 الموسوعة الشاملة لإدارة وتأسيس القصور</h2>
             <p>دستور العناية بالعقارات الفاخرة. المرجع الأوحد الذي يجمع لك عصارة 39 دليلاً هندسياً في مقال واحد يشمل النظافة، الرخام، الواجهات، والتدخل البيولوجي.</p>
+            
+            <!-- Video Showcase Grid -->
+            <div class="videos-wrapper">
+                <div class="video-box">
+                    <div class="shorts-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/vLGKsoqvcMY?rel=0&modestbranding=1&playsinline=1" 
+                                title="جودة خدمات التنظيف بعد التشطيب | Elhabib Clean" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="video-caption">🎥 شاهد: جودة خدماتنا في التنظيف بعد التشطيب</p>
+                </div>
+                
+                <div class="video-box">
+                    <div class="shorts-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/_6U0VWvv8Xo?rel=0&modestbranding=1&playsinline=1" 
+                                title="الاحترافية في النظافة الفندقية | Elhabib Clean" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="video-caption">🎥 شاهد: الاحترافية في التنظيف الهندسي المتكامل</p>
+                </div>
+            </div>
+
             <a href="blog40-الموسوعة-الشاملة-لإدارة-القصور.html" class="btn-master" aria-label="اقرأ الموسوعة الشاملة لإدارة القصور">اقرأ المرجع الختامي الأكبر ➔</a>
         </section>
 
@@ -516,7 +628,7 @@
         <section class="trust-section">
             <h2>📍 نطاق عملياتنا الهندسية</h2>
             <p>نخدم كبرى الكيانات والقصور في القاهرة، التجمع الخامس، والشيخ زايد عبر أسطول مجهز بأحدث التكنولوجيا.</p>
-            <iframe src="https://www.google.com/maps?q=Habib%20clean&z=15&output=embed" loading="lazy" title="مقر عمليات Elhabib Clean"></iframe>
+            <iframe class="map-iframe" src="https://www.google.com/maps?q=Elhabib%20clean&z=15&output=embed" loading="lazy" title="مقر عمليات Elhabib Clean"></iframe>
         </section>
 
         <div class="nav-links">
