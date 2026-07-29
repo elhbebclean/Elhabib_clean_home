@@ -1,95 +1,373 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
+<!-- 1. الصفحة الرئيسية (الأولوية القصوى رقم 1) -->
 <url>
-<loc>https://habib-clean.com/</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>daily</changefreq>
-<priority>1.0</priority>
+  <loc>https://habib-clean.com/</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+  <video:video>
+    <video:thumbnail_loc>https://img.youtube.com/vi/B0eld3fTiwA/maxresdefault.jpg</video:thumbnail_loc>
+    <video:title>شركة Habib Clean لخدمات النظافة الفندقية</video:title>
+    <video:description>شركة تنظيف منازل وفيلات وجلي رخام بالقاهرة والجيزة بأعلى معايير الجودة العالمية.</video:description>
+    <video:player_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:player_loc>
+  </video:video>
+</url>
 
-<video:video>
-<video:thumbnail_loc>https://img.youtube.com/vi/B0eld3fTiwA/maxresdefault.jpg</video:thumbnail_loc>
-<video:title>شركة الحبيب كلين لخدمات النظافة</video:title>
-<video:description>شركة تنظيف منازل وفيلات وجلي رخام بالقاهرة والجيزة.</video:description>
-<video:player_loc>https://www.youtube.com/embed/B0eld3fTiwA</video:player_loc>
-</video:video>
+<!-- 2. قسم الزجاج (ثاني أهم صفحة بناءً على طلبك) -->
+<url>
+  <loc>https://habib-clean.com/glass-facade-cleaning.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.98</priority>
+</url>
+
+<!-- 3. صفحة الخدمات العامة -->
+<url>
+  <loc>https://habib-clean.com/services.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.96</priority>
+</url>
+
+<!-- 4. قسم الرخام الرئيسي -->
+<url>
+  <loc>https://habib-clean.com/habib-marble-master.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+  <video:video>
+    <video:thumbnail_loc>https://img.youtube.com/vi/o8OtxpTAJVM/maxresdefault.jpg</video:thumbnail_loc>
+    <video:title>جلي وتلميع الرخام بالألماس - Habib Clean</video:title>
+    <video:description>أفضل خدمات جلي الرخام بالألماس الإيطالي وإعادة اللمعان الملكي.</video:description>
+    <video:player_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:player_loc>
+  </video:video>
+</url>
+
+<!-- 5. أرشيف المدونة وصفحات الجذر الأساسية -->
+<url>
+  <loc>https://habib-clean.com/blog.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.92</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/services.html</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.95</priority>
+  <loc>https://habib-clean.com/blog/</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.90</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/glass-facade-cleaning.html</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.95</priority>
+  <loc>https://habib-clean.com/about.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/habib-marble-master.html</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.95</priority>
-
-<video:video>
-<video:thumbnail_loc>https://img.youtube.com/vi/o8OtxpTAJVM/maxresdefault.jpg</video:thumbnail_loc>
-<video:title>جلي وتلميع الرخام - الحبيب كلين</video:title>
-<video:description>أفضل خدمات جلي الرخام بالألماس وإعادة اللمعان.</video:description>
-<video:player_loc>https://www.youtube.com/embed/o8OtxpTAJVM</video:player_loc>
-</video:video>
+  <loc>https://habib-clean.com/contact.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/about.html</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.80</priority>
+  <loc>https://habib-clean.com/privacy.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+
+<!-- 6. مقالات المدونة بالكامل (مطابقة تماماً للمستودع) -->
+<url>
+  <loc>https://habib-clean.com/blog/cleaning-marble-after-construction.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.93</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/contact.html</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.80</priority>
+  <loc>https://habib-clean.com/blog/blog1-تنظيف-بعد-التشطيب.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/privacy.html</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.30</priority>
+  <loc>https://habib-clean.com/blog/blog2-الفرق-بين-التنظيف-العادي-والعميق.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/blog/</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.80</priority>
+  <loc>https://habib-clean.com/blog/blog4-خطوات-تجهيز-الفيلا-للسكن.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/blog/blog1-%D8%AA%D9%86%D8%B8%D9%8A%D9%81-%D8%A8%D8%B9%D8%Ad-%D8%A7%D9%84%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8.html</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.85</priority>
+  <loc>https://habib-clean.com/blog/blog5-أخطاء-شائعة-بعد-التشطيب.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/blog/blog2-%D8%A7%D9%84%D9%81%D8%B1%D9%82-%D8%A8%D9%8A%D9%86-%D8%A7%D9%8لل%D8%AA%D9%86%D8%B8%D9%8A%D9%81-%D8%A7%D9%84%D8%B9%D8%A7%D8%AF%D9%8A-%D9%88%D8%A7%D9%84%D8%B9%D9%85%D9%8A%D9%82.html</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.85</priority>
+  <loc>https://habib-clean.com/blog/blog6-تنظيف-الأبواب-الخشبية-بعد-التشطيب.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <url>
-<loc>https://habib-clean.com/blog/cleaning-marble-after-construction.html</loc>
-<lastmod>2026-07-27</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.90</priority>
+  <loc>https://habib-clean.com/blog/blog7-تنظيف-الجبس-والتراب-بعد-التشطيب.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog8-تنظيف-فيلات-التجمع-الخامس-للمغتربين.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog9-أسرع-طريقة-لتسليم-الفيلا-نظيفة.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog10-لماذا-تفشل-شركات-التنظيف-العادية.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog11-أسعار-تنظيف-الفيلات-الشيخ-زايد.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog12-نصائح-أصحاب-القصور-الجاهزة-للاستلام.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog14-الفرق-بين-تلميع-الرخام-والجلي-الشامل.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog15-كيف-تحافظ-على-لمعان-الرخام.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog16-إزالة-بقع-الأسمنت-والدهان-من-الرخام.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog17-معالجة-بهتان-رخام-المطابخ-والحمامات.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog18-أنواع-الرخام-وطرق-العناية-به.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog19-معالجة-الخدوش-والتشققات-في-الرخام.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog20-الجدوى-الاقتصادية-لجلي-الرخام.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog21-أهمية-تنظيف-الواجهات-الزجاجية-ل للشركات.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog22-الفرق-بين-تنظيف-الزجاج-والكلادينج.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog27-بروتوكول-الصيانة-الدورية-للتجاري-والسكني.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog28-تنظيف-وصيانة-الواجهات-الحجرية.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog29-أنظمة-الإضاءة-والصيانة-الذكية-للواجهات.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog32-تنظيف-سجاد-القصور.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog35-تعقيم-مطابخ-وحمامات-الشقق-المغلقة.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog36-ترميم-الأخشاب-والباركيه-في-الشقق-المغلقة.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog37-تطهير-مكيفات-الشقق-المغلقة.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog38-مكافحة-مخلفات-الطيور-والآفات-بالشقق-المغلقة.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog39-تعقيم-خزانات-المياه-والسباكة.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog40-الموسوعة-الشاملة-لإدارة-القصور.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.92</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog41-best-home-cleaning-services-cairo.html</loc>
+  <lastmod>2026-07-29</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+
 </urlset>
