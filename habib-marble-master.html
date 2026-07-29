@@ -194,6 +194,24 @@
     .footer-links a{color:#aaa;transition:.25s;}
     .footer-links a:hover{color:var(--gold);}
 
+    /* Omni-Spiderweb Footer Links */
+    .spiderweb-nav {
+      margin: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+    .spiderweb-nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+    .spiderweb-nav a:hover {
+      color: var(--gold);
+    }
+
     .float-wa{
       position:fixed;bottom:25px;left:25px;z-index:999;
       width:62px;height:62px;border-radius:50%;background:var(--whatsapp);
@@ -221,30 +239,92 @@
     }
   </style>
 
-  <!-- Enhanced Schema Markup for SEO -->
+  <!-- Enhanced Schema Markup (@graph with LocalBusiness, Service, VideoObjects, and FAQPage) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Habib Marble - El Habib Clean",
-    "image":"https://habib-clean.com/FB_IMG_1737376278247.jpg",
-    "url":"https://habib-clean.com/marble-grinding-stone.html",
-    "telephone":"+201016961497",
-    "priceRange":"$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1 شارع وادي النيل",
-      "addressLocality": "المعادي",
-      "addressRegion": "القاهرة",
-      "addressCountry": "EG"
-    },
-    "areaServed":["التجمع الخامس", "القاهرة الجديدة", "الشيخ زايد", "6 أكتوبر", "المعادي", "العاصمة الإدارية", "القاهرة", "الجيزة"],
-    "description":"جلي وتلميع رخام بالألماس والكريستال، معالجة فواصل وثقوب، عزل نانو وتشطيب فندقي للفيلات والقصور.",
-    "parentOrganization":{
-      "@type":"Organization",
-      "name":"El Habib Clean",
-      "url":"https://habib-clean.com/"
-    }
+    "@graph":[
+      {
+        "@type":"LocalBusiness",
+        "@id":"https://habib-clean.com/marble-grinding-stone.html#organization",
+        "name":"Habib Marble - El Habib Clean",
+        "image":"https://habib-clean.com/FB_IMG_1737376278247.jpg",
+        "url":"https://habib-clean.com/marble-grinding-stone.html",
+        "telephone":"+201016961497",
+        "priceRange":"$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1 شارع وادي النيل",
+          "addressLocality": "المعادي",
+          "addressRegion": "القاهرة",
+          "addressCountry": "EG"
+        },
+        "areaServed":["التجمع الخامس", "القاهرة الجديدة", "الشيخ زايد", "6 أكتوبر", "المعادي", "العاصمة الإدارية", "القاهرة", "الجيزة"],
+        "description":"جلي وتلميع رخام بالألماس والكريستال، معالجة فواصل وثقوب، عزل نانو وتشطيب فندقي للفيلات والقصور."
+      },
+      {
+        "@type":"Service",
+        "serviceType":"Marble Grinding and Polishing VIP Services",
+        "provider": { "@id": "https://habib-clean.com/marble-grinding-stone.html#organization" },
+        "areaServed":"Egypt",
+        "description":"جلي وتلميع رخام بالألماس والكريستال، معالجة فواصل وثقوب، عزل نانو وضمان لمعان فندقي للقصور والفيلات."
+      },
+      {
+        "@type":"VideoObject",
+        "name":"جلي وتلميع الرخام الإيطالي - Habib Marble",
+        "description":"استعراض احترافي لعمليات جلي وتلميع الرخام بالألماس والكريستال للمساحات الكبيرة والفيلات الفاخرة.",
+        "thumbnailUrl":"https://img.youtube.com/vi/kYw1kfDoQO4/maxresdefault.jpg",
+        "uploadDate":"2026-03-10T08:00:00+02:00",
+        "contentUrl":"https://www.youtube.com/watch?v=kYw1kfDoQO4",
+        "embedUrl":"https://www.youtube.com/embed/kYw1kfDoQO4"
+      },
+      {
+        "@type":"VideoObject",
+        "name":"توريد وتركيب الحجر الهاشمي - Habib Clean",
+        "description":"أعمال تركيب وتوريد الحجر الهاشمي والتشطيبات الخارجية للواجهات والقصور.",
+        "thumbnailUrl":"https://img.youtube.com/vi/L2m468B-96c/maxresdefault.jpg",
+        "uploadDate":"2026-03-10T08:00:00+02:00",
+        "contentUrl":"https://www.youtube.com/watch?v=L2m468B-96c",
+        "embedUrl":"https://www.youtube.com/embed/L2m468B-96c"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"هل السعر رخيص؟",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"لا. هذه خدمة فاخرة تعتمد على معدات، وقت، وفريق متخصص. السعر يتم تحديده بعد معرفة المساحة وحالة الرخام."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"هل يمكن تقييم السعر من الصور؟",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"نعم، يمكن إعطاء تقدير أولي من الصور والفيديو، لكن السعر النهائي يكون بعد المعاينة أو تحديد الحالة بدقة."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"هل الخدمة مناسبة للفيلات بعد التشطيب؟",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"نعم، وهي من أقوى الحالات المناسبة لنا، خصوصًا إذا كان الرخام عليه أسمنت، دهانات، خدوش، أو فقدان لمعان."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"هل تعملون في المساحات الكبيرة فقط؟",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"نحن نعطي أولوية للفيلات والقصور والمساحات الكبيرة لأن المعدات والفريق مجهزون لهذا النوع من الأعمال."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -468,13 +548,18 @@
   <p>HABIB MARBLE © 2026 — خدمة فاخرة من El Habib Clean</p>
   <p>القاهرة الجديدة — الشيخ زايد — المعادي — 6 أكتوبر — العاصمة الإدارية</p>
 
-  <div class="footer-links">
+  <!-- Omni-Spiderweb Internal Links -->
+  <div class="spiderweb-nav">
     <a href="https://habib-clean.com/">الرئيسية</a>
-    <a href="https://habib-clean.com/about.html">من نحن</a>
-    <a href="https://habib-clean.com/services.html">خدماتنا</a>
+    <a href="https://habib-clean.com/glass-facade-cleaning.html">تنظيف الواجهات</a>
+    <a href="https://habib-clean.com/services.html">الخدمات العامة</a>
     <a href="https://habib-clean.com/contact.html">تواصل معنا</a>
+    <a href="https://habib-clean.com/blog.html">المدونة الهندسية</a>
+  </div>
+
+  <div class="footer-links">
+    <a href="https://habib-clean.com/about.html">من نحن</a>
     <a href="https://habib-clean.com/privacy.html">سياسة الخصوصية</a>
-    <a href="https://habib-clean.com/blog.html">المدونة</a>
   </div>
 </footer>
 
