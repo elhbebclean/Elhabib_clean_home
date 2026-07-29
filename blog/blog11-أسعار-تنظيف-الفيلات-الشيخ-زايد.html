@@ -78,6 +78,35 @@
       margin-bottom: 15px;
       line-height: 1.4;
     }
+
+    /* Video Container CSS (Optimized for YouTube Shorts) */
+    .shorts-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 40px auto 10px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        border: 2px solid var(--gold-accent);
+        position: relative;
+        aspect-ratio: 9 / 16;
+        background-color: #000;
+    }
+    .shorts-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .video-caption {
+        text-align: center;
+        font-size: 0.95rem;
+        color: #777;
+        margin-bottom: 40px;
+        font-weight: 600;
+    }
     
     /* Table of Contents */
     .toc {
@@ -182,64 +211,73 @@
     footer a { color: var(--gold-accent); text-decoration: none; }
   </style>
 
-  <!-- Schema 1: LocalBusiness with PriceRange -->
+  <!-- Advanced Combined Schema (LocalBusiness + Article + VideoObject + FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CleaningService",
-    "name": "Elhabib Clean",
-    "image": "https://habib-clean.com/logo.png",
-    "@id": "https://habib-clean.com/",
-    "url": "https://habib-clean.com/",
-    "telephone": "+201xxxxxxxxx",
-    "priceRange": "تتفاوت حسب المساحة",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Sheikh Zayed, 6th of October, Cairo",
-      "addressCountry": "EG"
-    },
-    "description": "أفضل أسعار تنظيف الفيلات وجلي الرخام بعد التشطيب في الشيخ زايد و6 أكتوبر."
-  }
-  </script>
-
-  <!-- Schema 2: Article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "تكلفة وأسعار تنظيف الفيلات بعد التشطيب في الشيخ زايد و6 أكتوبر",
-    "description": "دليل شامل يوضح العوامل المحددة لأسعار وتكلفة تنظيف الفيلات والقصور بعد التشطيب في مدينة الشيخ زايد و6 أكتوبر.",
-    "author": { "@type": "Organization", "name": "Elhabib Clean" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Elhabib Clean",
-      "logo": { "@type": "ImageObject", "url": "https://habib-clean.com/logo.png" }
-    },
-    "datePublished": "2026-07-28",
-    "mainEntityOfPage": "https://habib-clean.com/blog/blog11-أسعار-تنظيف-الفيلات-الشيخ-زايد.html"
-  }
-  </script>
-
-  <!-- Schema 3: FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "هل السعر يشمل جلي الرخام أم التنظيف فقط؟",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "نقدم في Elhabib Clean باقات مرنة؛ يمكنك طلب باقة (التنظيف الشامل) التي تتضمن تلميع البورسلين، أو باقة (التنظيف + جلي الألماس) المخصصة للأرضيات الرخامية لضمان أعلى قيمة مقابل سعر."
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://habib-clean.com/#organization",
+        "name": "Elhabib Clean",
+        "image": "https://habib-clean.com/FB_IMG_1737376278247.jpg",
+        "telephone": "01016961497",
+        "url": "https://habib-clean.com",
+        "description": "المرجع الأكبر والكيان الهندسي الأول في الشرق الأوسط لإدارة المرافق، تأسيس القصور، جلي الرخام، وتنظيف الواجهات.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "المعادي",
+          "addressRegion": "القاهرة",
+          "addressCountry": "EG"
+        },
+        "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City"],
+        "sameAs": [
+          "https://share.google/umb4679rea0EcsZk0",
+          "https://www.facebook.com/p/Habib-Clean-61559076547205/",
+          "https://www.facebook.com/61559076547205/posts/122178827282302551/",
+          "https://www.youtube.com/@Elhbeb",
+          "https://www.youtube.com/channel/UCw759I1BQq570_v4th-a86w",
+          "https://welpstar.com/biz/habib-clean",
+          "https://infoeg.com/cairo/page/821675"
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://habib-clean.com/blog/blog11-أسعار-تنظيف-الفيلات-الشيخ-زايد.html#article",
+        "headline": "تكلفة وأسعار تنظيف الفيلات بعد التشطيب في الشيخ زايد و6 أكتوبر",
+        "description": "دليل شامل يوضح العوامل المحددة لأسعار وتكلفة تنظيف الفيلات والقصور بعد التشطيب في مدينة الشيخ زايد و6 أكتوبر.",
+        "author": { "@id": "https://habib-clean.com/#organization" },
+        "publisher": { "@id": "https://habib-clean.com/#organization" },
+        "datePublished": "2026-07-28",
+        "mainEntityOfPage": "https://habib-clean.com/blog/blog11-أسعار-تنظيف-الفيلات-الشيخ-زايد.html",
+        "video": {
+          "@type": "VideoObject",
+          "name": "أسعار تنظيف الفيلات الشيخ زايد | Elhabib Clean",
+          "description": "نظرة على كفاءة الخدمات الاحترافية لتنظيف الفيلات وتكلفتها في زايد وأكتوبر.",
+          "thumbnailUrl": "https://img.youtube.com/vi/YuL41GWBVRk/hqdefault.jpg",
+          "uploadDate": "2025-12-09",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/YuL41GWBVRk"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "هل السعر يشمل جلي الرخام أم التنظيف فقط؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نقدم في Elhabib Clean باقات مرنة؛ يمكنك طلب باقة (التنظيف الشامل) التي تتضمن تلميع البورسلين، أو باقة (التنظيف + جلي الألماس) المخصصة للأرضيات الرخامية لضمان أعلى قيمة مقابل سعر."
+          }
+        }, {
+          "@type": "Question",
+          "name": "كيف يتم تحديد سعر تنظيف الفيلا؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يتم تحديد السعر بناءً على 3 عوامل: مساحة الفيلا (عدد الطوابق)، حالة التشطيب (كمية الأسمنت والدهانات)، ومساحة الواجهات الزجاجية الخارجية."
+          }
+        }]
       }
-    }, {
-      "@type": "Question",
-      "name": "كيف يتم تحديد سعر تنظيف الفيلا؟",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "يتم تحديد السعر بناءً على 3 عوامل: مساحة الفيلا (عدد الطوابق)، حالة التشطيب (كمية الأسمنت والدهانات)، ومساحة الواجهات الزجاجية الخارجية."
-      }
-    }]
+    ]
   }
   </script>
 
@@ -266,6 +304,16 @@
       <img src="https://via.placeholder.com/800x400.png?text=أسعار+تنظيف+الفيلات+الشيخ+زايد+وأكتوبر" alt="تكلفة وأسعار تنظيف الفيلات بعد التشطيب وجلي الرخام في الشيخ زايد" class="featured-image" loading="lazy">
       
       <p>تُعد مدينتي <strong>الشيخ زايد و 6 أكتوبر</strong> من أهم التجمعات السكنية التي تضم أرقى الفيلات والكمبوندات في مصر. ومع تزايد حركة الاستلامات والتشطيبات، يطرح الملاك والمهندسون سؤالاً متكرراً: <em>"ما هي التكلفة العادلة لتنظيف فيلا بالكامل بعد التشطيب؟"</em></p>
+
+      <!-- Embed Video (YouTube Shorts) - Privacy Enhanced Mode -->
+      <div class="shorts-container">
+          <iframe src="https://www.youtube-nocookie.com/embed/YuL41GWBVRk?rel=0&modestbranding=1&playsinline=1" 
+                  title="أسعار تنظيف الفيلات الشيخ زايد | Elhabib Clean" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+      </div>
+      <p class="video-caption">🎥 شاهد: المعايير الهندسية والاحترافية في تنظيف وتسليم الفيلات بأفضل الأسعار.</p>
       
       <p>في <strong>Elhabib Clean</strong>، نؤمن بالشفافية التامة. في هذا الدليل، نكشف لك الأسرار والعوامل التي تحدد أسعار التنظيف العميق، لكي لا تقع ضحية للمبالغات السعرية أو العروض الرخيصة التي تدمر تشطيباتك.</p>
 
