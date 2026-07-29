@@ -108,6 +108,35 @@
       border-radius: 8px;
       margin-bottom: 25px;
     }
+
+    /* Video Container CSS (Optimized for YouTube Shorts) */
+    .shorts-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 40px auto 10px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        border: 2px solid var(--gold-accent);
+        position: relative;
+        aspect-ratio: 9 / 16;
+        background-color: #000;
+    }
+    .shorts-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .video-caption {
+        text-align: center;
+        font-size: 0.95rem;
+        color: #777;
+        margin-bottom: 40px;
+        font-weight: 600;
+    }
     
     /* Comparison Box */
     .compare-box {
@@ -167,67 +196,91 @@
     footer a { color: var(--gold-accent); text-decoration: none; }
   </style>
 
-  <!-- Schema 1: BreadcrumbList -->
+  <!-- Advanced Combined Schema (LocalBusiness + Article + VideoObject + BreadcrumbList + FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "الرئيسية",
-      "item": "https://habib-clean.com/"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "المدونة",
-      "item": "https://habib-clean.com/blog/"
-    },{
-      "@type": "ListItem",
-      "position": 3,
-      "name": "فشل شركات التنظيف العادية"
-    }]
-  }
-  </script>
-
-  <!-- Schema 2: Article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "لماذا تفشل شركات التنظيف العادية في التعامل مع المساحات الكبيرة؟",
-    "description": "تعرف على الأسباب الكارثية التي تؤدي لفشل شركات التنظيف التقليدية في الفيلات والقصور، وكيف تتجنب إتلاف تشطيباتك مع خبراء Elhabib Clean.",
-    "author": { "@type": "Organization", "name": "Elhabib Clean" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Elhabib Clean",
-      "logo": { "@type": "ImageObject", "url": "https://habib-clean.com/logo.png" }
-    },
-    "datePublished": "2026-07-28",
-    "mainEntityOfPage": "https://habib-clean.com/blog/blog10-لماذا-تفشل-شركات-التنظيف-العادية.html"
-  }
-  </script>
-
-  <!-- Schema 3: FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "ما هو العدد المناسب من العمال لتنظيف فيلا بعد التشطيب؟",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "تنظيف الفيلا يتطلب فريقاً متكاملاً لا يقل عن 5 أفراد وقد يصل إلى 15 فرداً حسب المساحة، مقسمين على مهام الجلي، الواجهات، والشفط الجاف."
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://habib-clean.com/#organization",
+        "name": "Elhabib Clean",
+        "image": "https://habib-clean.com/FB_IMG_1737376278247.jpg",
+        "telephone": "01016961497",
+        "url": "https://habib-clean.com",
+        "description": "المرجع الأكبر والكيان الهندسي الأول في الشرق الأوسط لإدارة المرافق، تأسيس القصور، جلي الرخام، وتنظيف الواجهات.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "المعادي",
+          "addressRegion": "القاهرة",
+          "addressCountry": "EG"
+        },
+        "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City"],
+        "sameAs": [
+          "https://share.google/umb4679rea0EcsZk0",
+          "https://www.facebook.com/p/Habib-Clean-61559076547205/",
+          "https://www.facebook.com/61559076547205/posts/122178827282302551/",
+          "https://www.youtube.com/@Elhbeb",
+          "https://www.youtube.com/channel/UCw759I1BQq570_v4th-a86w",
+          "https://welpstar.com/biz/habib-clean",
+          "https://infoeg.com/cairo/page/821675"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://habib-clean.com/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "المدونة",
+          "item": "https://habib-clean.com/blog/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "فشل شركات التنظيف العادية"
+        }]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://habib-clean.com/blog/blog10-لماذا-تفشل-شركات-التنظيف-العادية.html#article",
+        "headline": "لماذا تفشل شركات التنظيف العادية في التعامل مع المساحات الكبيرة؟",
+        "description": "تعرف على الأسباب الكارثية التي تؤدي لفشل شركات التنظيف التقليدية في الفيلات والقصور، وكيف تتجنب إتلاف تشطيباتك مع خبراء Elhabib Clean.",
+        "author": { "@id": "https://habib-clean.com/#organization" },
+        "publisher": { "@id": "https://habib-clean.com/#organization" },
+        "datePublished": "2026-07-28",
+        "mainEntityOfPage": "https://habib-clean.com/blog/blog10-لماذا-تفشل-شركات-التنظيف-العادية.html",
+        "video": {
+          "@type": "VideoObject",
+          "name": "لماذا تفشل شركات التنظيف العادية | Elhabib Clean",
+          "description": "نظرة عملية على كفاءة الاحتراف في التعامل مع المساحات الكبيرة وتجنب أخطار العمالة العشوائية.",
+          "thumbnailUrl": "https://img.youtube.com/vi/77kZKHPgxhM/hqdefault.jpg",
+          "uploadDate": "2026-03-20",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/77kZKHPgxhM"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "ما هو العدد المناسب من العمال لتنظيف فيلا بعد التشطيب؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "تنظيف الفيلا يتطلب فريقاً متكاملاً لا يقل عن 5 أفراد وقد يصل إلى 15 فرداً حسب المساحة، مقسمين على مهام الجلي، الواجهات، والشفط الجاف."
+          }
+        }, {
+          "@type": "Question",
+          "name": "هل يمكنكم إصلاح الرخام التالف بسبب شركة تنظيف سابقة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، إذا تعرض الرخام للحرق بسبب الأحماض من شركة أخرى، نقوم بعملية جلي بأقراص الألماس (Diamond Polishing) لإزالة الطبقة التالفة وإعادة اللمعان الأصلي."
+          }
+        }]
       }
-    }, {
-      "@type": "Question",
-      "name": "هل يمكنكم إصلاح الرخام التالف بسبب شركة تنظيف سابقة؟",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "نعم، إذا تعرض الرخام للحرق بسبب الأحماض من شركة أخرى، نقوم بعملية جلي بأقراص الألماس (Diamond Polishing) لإزالة الطبقة التالفة وإعادة اللمعان الأصلي."
-      }
-    }]
+    ]
   }
   </script>
 
@@ -254,6 +307,16 @@
       <img src="https://via.placeholder.com/800x400.png?text=شركة+تنظيف+فيلات+احترافية+Elhabib+Clean" alt="فريق عمل كبير من Elhabib Clean يقوم بتنظيف فيلا ضخمة في التجمع الخامس" class="featured-image" loading="lazy">
       
       <p>كثيراً ما نتلقى اتصالات استغاثة من أصحاب فيلات في المعادي والتجمع الخامس، يشكون من استئجارهم لـ "شركة تنظيف عادية" تركت الفيلا في حالة أسوأ مما كانت عليه. إما رخام باهت بسبب استخدام مواد كيميائية خاطئة، أو زجاج مخدوش، أو عمل لم يكتمل بعد أيام من المماطلة.</p>
+
+      <!-- Embed Video (YouTube Shorts) - Privacy Enhanced Mode -->
+      <div class="shorts-container">
+          <iframe src="https://www.youtube-nocookie.com/embed/77kZKHPgxhM?rel=0&modestbranding=1&playsinline=1" 
+                  title="لماذا تفشل شركات التنظيف العادية | Elhabib Clean" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+      </div>
+      <p class="video-caption">🎥 شاهد: الفارق بين الاحترافية الهندسية والعشوائية في تنظيف العقارات الكبرى.</p>
       
       <p>الحقيقة أن تنظيف شقة سكنية يختلف 180 درجة عن تنظيف فيلا أو قصر بعد التشطيب. في <strong>Elhabib Clean</strong>، نوضح لك الأسباب الجذرية وراء هذا الفشل، لتتجنب الوقوع في هذا الفخ.</p>
 
@@ -270,7 +333,7 @@
 
       <h2 id="manpower">1. وهم العمالة القليلة (2 أو 3 عمال لا يكفون!)</h2>
       <p>الخطأ الأكبر للشركات العادية هو إرسال عاملين أو ثلاثة لتنظيف فيلا مكونة من 3 طوابق، روف، وملحق خارجي. النتيجة؟ إرهاق شديد للعمال بعد الساعات الأولى، مما يؤدي إلى "الكروتة" وإهمال التفاصيل الدقيقة.</p>
-      <p><strong>في Elhabib Clean:</strong> نعتمد على استراتيجية "الحشود المنظمة"، حيث نرسل فريقاً يتراوح من <strong>5 إلى 15 فرداً</strong> (حسب المساحة)، مما يضمن توزيع المجهود بدقة وإنهاء العمل بجودة 100% في وقت قياسي.</p>
+      <p><strong>في Elhabib Clean:</strong> نعتمد على استراتيجية "الحشود المنظمة", حيث نرسل فريقاً يتراوح من <strong>5 إلى 15 فرداً</strong> (حسب المساحة), مما يضمن توزيع المجهود بدقة وإنهاء العمل بجودة 100% في وقت قياسي.</p>
 
       <h2 id="tools">2. غياب المعدات الصناعية المتخصصة</h2>
       <p>المكانس المنزلية العادية تحترق فوراً إذا حاولت شفط غبار الجبس بورد. كما أن مسح الرخام بممسحة تقليدية لا يزيل بقايا الأسمنت. الشركات العادية لا تستثمر في المعدات.</p>
@@ -285,7 +348,7 @@
 
       <h2 id="chemicals">3. الجهل الكيميائي وتدمير التشطيبات</h2>
       <p>استخدام "ماء النار" أو الفلاش على رخام مستورد هو جريمة شائعة ترتكبها العمالة غير المدربة للتخلص من بقع الأسمنت بسرعة. هذا الإجراء يحرق طبقة الرخام تماماً ويطفئ لمعانه.</p>
-      <p>نحن نستخدم منظفات ذات درجة حموضة موزونة (pH Balanced)، تذيب البقع دون المساس بسطح الخشب، الألوميتال، أو الرخام.</p>
+      <p>نحن نستخدم منظفات ذات درجة حموضة موزونة (pH Balanced), تذيب البقع دون المساس بسطح الخشب، الألوميتال، أو الرخام.</p>
 
       <h2 id="system">4. انعدام الإدارة وخطة العمل (Systematic Approach)</h2>
       <p>التنظيف العشوائي يجعلك تنظف الأرضية، ثم تنظف السقف فيتساقط الغبار ليتسخ المكان من جديد! العمل في الفيلات الكبيرة يتطلب "مدير مشروع" يوجه الفرق بتسلسل منطقي (من الأعلى للأسفل، ومن الداخل للخارج).</p>
