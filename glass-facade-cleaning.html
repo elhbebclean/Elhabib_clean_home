@@ -53,7 +53,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://habib-clean.com/FB_IMG_1737376278247.jpg">
 
-    <!-- Advanced SEO Schema Markup (@graph) -->
+    <!-- Advanced SEO Schema Markup (@graph with LocalBusiness, Service, FAQ, and VideoObjects) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,6 +65,9 @@
           "telephone": "01016961497",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/FB_IMG_1737376278247.jpg",
+          "sameAs": [
+            "https://www.facebook.com/elhbebclean"
+          ],
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "القاهرة",
@@ -78,6 +81,24 @@
           "provider": { "@id": "https://habib-clean.com/#organization" },
           "areaServed": "Egypt",
           "description": "خدمات تنظيف واجهات زجاجية وكلادينج للأبراج والمباني التجارية والإدارية بأحدث معدات الأمان."
+        },
+        {
+          "@type": "VideoObject",
+          "name": "فيديو أعمال تنظيف الواجهات 1 - Habib Clean",
+          "description": "لقطات حية لاحترافية فريقنا في تنظيف الواجهات الزجاجية على الارتفاعات بالقاهرة.",
+          "thumbnailUrl": "https://img.youtube.com/vi/_6U0VWvv8Xo/maxresdefault.jpg",
+          "uploadDate": "2026-03-10T08:00:00+02:00",
+          "contentUrl": "https://www.youtube.com/watch?v=_6U0VWvv8Xo",
+          "embedUrl": "https://www.youtube.com/embed/_6U0VWvv8Xo"
+        },
+        {
+          "@type": "VideoObject",
+          "name": "فيديو أعمال تنظيف الواجهات 2 - Habib Clean",
+          "description": "لقطات حية إضافية لأعمال غسيل وتلميع الواجهات والكلادينج.",
+          "thumbnailUrl": "https://img.youtube.com/vi/O5CoFuXy2WA/maxresdefault.jpg",
+          "uploadDate": "2026-03-10T08:00:00+02:00",
+          "contentUrl": "https://www.youtube.com/watch?v=O5CoFuXy2WA",
+          "embedUrl": "https://www.youtube.com/embed/O5CoFuXy2WA"
         },
         {
           "@type": "FAQPage",
@@ -358,6 +379,24 @@
 
         .footer-logo { font-family: 'Playfair Display', serif; font-size: 34px; color: var(--gold-accent); margin-bottom: 24px; letter-spacing: 2px; }
 
+        /* Omni-Spiderweb Footer Links */
+        .spiderweb-nav {
+            margin: 25px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+        }
+        .spiderweb-nav a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .spiderweb-nav a:hover {
+            color: var(--gold-accent);
+        }
+
         @media (max-width: 768px) {
             header { padding: 74px 15px 90px; }
             section { padding: 36px 20px; }
@@ -465,6 +504,16 @@
     <footer>
         <div class="footer-logo">HABIB CLEAN</div>
         <p>القاهرة، مصر | خط التواصل المباشر: <a href="tel:01016961497" style="color:var(--gold-accent); text-decoration:underline;">01016961497</a></p>
+        
+        <!-- Omni-Spiderweb Internal Links -->
+        <div class="spiderweb-nav">
+            <a href="https://habib-clean.com/">الرئيسية</a>
+            <a href="https://habib-clean.com/services.html">الخدمات العامة</a>
+            <a href="https://habib-clean.com/habib-marble-master.html">جلي وتلميع الرخام</a>
+            <a href="https://habib-clean.com/blog.html">المدونة الهندسية</a>
+            <a href="https://habib-clean.com/contact.html">اتصل بنا</a>
+        </div>
+
         <div style="margin-top: 20px; font-size: 14px; opacity: 0.75;">
             <p>© 2026 جميع الحقوق محفوظة | الحبيب كلين</p>
         </div>
