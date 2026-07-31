@@ -39,24 +39,31 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0b0e">
     
     <!-- 1. Ultimate SEO Keyword Injection -->
-    <title>تنظيف الشقق الفندقية والمغلقة | Habib Clean افضل شركة تنظيف</title>
-    <meta name="description" content="دليل إنقاذ وتنظيف الشقق الفندقية المغلقة والمهجورة. تقنيات سحب الروائح والتنظيف العميق مع Habib Clean افضل شركة تنظيف بمصر.">
+    <title>التنظيف العميق واستعادة الشقق الفندقية المغلقة | Habib Clean افضل شركة تنظيف</title>
+    <meta name="description" content="الدليل الهندسي لإنقاذ وتنظيف الشقق الفندقية المغلقة والمهجورة. تقنيات سحب الروائح والتنظيف العميق مع Habib Clean افضل شركة تنظيف بمصر.">
     <meta name="keywords" content="تنظيف شقق مغلقة, تنظيف شقق فندقية, تعقيم الشقق المهجورة, افضل شركة تنظيف, شركات تنظيف منازل, شركة تنظيف بعد التشطيب, إزالة رائحة الكمكمة, Habib Clean">
     <meta name="author" content="Habib Clean">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
+    <!-- Local SEO Meta Tags -->
+    <meta name="geo.region" content="EG-C">
+    <meta name="geo.placename" content="Cairo">
+    <meta name="geo.position" content="29.9602;31.2569">
+    <meta name="ICBM" content="29.9602, 31.2569">
+
     <link rel="canonical" href="https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html">
     <link rel="icon" href="https://habib-clean.com/logo.png" type="image/png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
+    <meta property="og:url" content="https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html">
     <meta property="og:title" content="التنظيف العميق واستعادة الشقق الفندقية المغلقة | Habib Clean">
     <meta property="og:description" content="كيف تحول شقة مغلقة تفوح منها رائحة الرطوبة إلى جناح فندقي جاهز للسكن الفوري مع افضل شركة تنظيف؟">
-    <meta property="og:url" content="https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html">
-    <meta property="og:site_name" content="Habib Clean">
     <meta property="og:image" content="https://habib-clean.com/FB_IMG_1737376278247.jpg">
+    <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
     
     <!-- Twitter -->
@@ -67,28 +74,28 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
-    <!-- 2. Fixed Schema Markup (ISO 8601 Timezone Corrected + Breadcrumbs + FAQ + Video) -->
+    <!-- 2. Fixed Schema Markup (ISO 8601 Timezone Corrected + Integrated Graph) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "CleaningService",
+          "@type": "LocalBusiness",
           "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
-          "url": "https://habib-clean.com/",
-          "logo": "https://habib-clean.com/logo.png",
           "image": "https://habib-clean.com/FB_IMG_1737376278247.jpg",
           "telephone": "01016961497",
+          "url": "https://habib-clean.com",
+          "description": "المرجع الأكبر والكيان الهندسي الأول في الشرق الأوسط لإدارة المرافق، تأسيس القصور، جلي الرخام، وتنظيف الواجهات.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "المعادي",
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
           },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
+          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "6th of October"],
           "sameAs": [
             "https://share.google/umb4679rea0EcsZk0",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
@@ -108,11 +115,11 @@
           "@id": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html#article",
           "isPartOf": { "@id": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html" },
           "headline": "التنظيف العميق واستعادة الشقق الفندقية المغلقة والمهجورة",
-          "description": "الدليل الهندسي لإنقاذ وتنظيف الشقق الفندقية المغلقة لفترات طويلة. تقنيات سحب الروائح والتعقيم مع Habib Clean.",
+          "description": "الدليل الهندسي لإنقاذ وتنظيف الشقق الفندقية المغلقة لفترات طويلة. تقنيات سحب الروائح والتعقيم العميق مع Habib Clean.",
           "author": { "@id": "https://habib-clean.com/#organization" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-03-20T12:00:00+02:00",
-          "dateModified": "2026-07-31T14:22:00+02:00",
+          "dateModified": "2026-07-31T15:30:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html"
         },
         {
@@ -204,7 +211,7 @@
             color: var(--gold-accent);
             line-height: 1.3;
         }
-        header.article-header p { font-weight: 300; font-size: 18px; opacity: 0.9; }
+        header.article-header p { font-weight: 300; font-size: 18px; opacity: 0.9; max-width: 800px; margin: 0 auto; }
 
         main {
             max-width: 950px;
@@ -256,11 +263,11 @@
         .yt-facade:hover .play-btn { background: var(--primary-dark); border: 2px solid var(--gold-accent); transform: translate(-50%, -50%) scale(1.1); }
         .video-caption { text-align: center; font-size: 0.95rem; color: #777; margin-top: -30px; margin-bottom: 40px; font-weight: 600; }
 
-        /* OMNI-SPIDERWEB MEGA SITEMAP (Master Template Style) */
+        /* OMNI-SPIDERWEB MEGA SITEMAP */
         .omni-spiderweb { background: var(--light-bg); border: 1px solid #eee; border-radius: 12px; padding: 40px; margin: 60px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); overflow: hidden; }
         .omni-spiderweb::before { content: ""; position: absolute; top: 0; right: 0; width: 100%; height: 6px; background: linear-gradient(90deg, var(--gold-accent), var(--primary-dark)); }
         .omni-header { text-align: center; margin-bottom: 40px; }
-        .omni-header h3 { color: var(--primary-dark); font-size: 28px; font-weight: 900; margin: 0 0 15px 0; }
+        .omni-header h3 { color: var(--primary-dark); font-size: 28px; font-weight: 900; margin: 0 0 15px 0; border: none;}
         .omni-header p { color: #666; font-size: 16px; max-width: 800px; margin: 0 auto; text-align: center; }
         
         .omni-category { margin-bottom: 30px; background: #fff; border-radius: 8px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); border: 1px solid #eee; }
