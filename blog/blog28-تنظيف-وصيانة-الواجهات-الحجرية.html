@@ -17,6 +17,7 @@
   <meta property="og:title" content="كيف تحافظ على بريق واجهات الحجر الطبيعي للقصور والفيلات؟">
   <meta property="og:description" content="أسرار تنظيف الرمل والصنفرة المائية وحماية الحجر الهاشمي والفرعوني من الرطوبة مع Elhabib Clean.">
   <meta property="og:url" content="https://habib-clean.com/blog/blog28-تنظيف-وصيانة-الواجهات-الحجرية.html">
+  <meta property="og:image" content="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png">
   <meta property="og:site_name" content="Elhabib Clean">
   
   <!-- Twitter -->
@@ -36,6 +37,7 @@
       --light-bg: #f8f9fa;
       --text-color: #2c3e50;
       --stone-accent: #d35400;
+      --whatsapp-green: #25D366;
     }
     body {
       font-family: 'Cairo', Arial, sans-serif;
@@ -44,6 +46,7 @@
       color: var(--text-color);
       line-height: 1.9;
       text-align: right;
+      padding-bottom: 80px;
     }
     header {
       background: var(--primary-dark);
@@ -66,6 +69,8 @@
       padding: 50px 40px;
       box-shadow: 0 15px 45px rgba(0,0,0,0.05);
       border-radius: 10px;
+      position: relative;
+      z-index: 10;
     }
     .breadcrumb {
       font-size: 13px;
@@ -112,6 +117,7 @@
       height: auto;
       border-radius: 8px;
       margin-bottom: 35px;
+      border: 1px solid #eee;
     }
     
     /* Stone Card */
@@ -162,6 +168,127 @@
     }
     .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6); }
     
+    /* =========================================
+       🔥 FIXED 3 FLOATING ACTION BUTTONS 🔥
+       Order: Call (Top) ➔ WhatsApp (Middle) ➔ Story Bubble (Bottom)
+       ========================================= */
+    .contact-container { 
+      position: fixed; 
+      bottom: 25px; 
+      left: 25px; 
+      z-index: 1000; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+    }
+    .btn-float { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%; 
+      color: white; 
+      text-decoration: none; 
+      font-size: 22px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25); 
+      transition: 0.3s; 
+      border: 2px solid var(--gold-accent); 
+    }
+    .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
+    .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
+    .btn-float.story-bubble { 
+      background: linear-gradient(135deg, #171717 0%, #333 100%); 
+      color: var(--gold-accent); 
+      position: relative;
+      animation: floatBubble 3s ease-in-out infinite;
+      font-size: 20px;
+    }
+    .btn-float:hover { transform: scale(1.1); }
+
+    .pulse-ring {
+      position: absolute;
+      top: -5px; right: -5px; bottom: -5px; left: -5px;
+      border: 2px solid var(--gold-accent);
+      border-radius: 50%;
+      animation: pulseAnim 2s infinite;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    @keyframes pulseAnim {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 0; }
+      100% { transform: scale(1); opacity: 0; }
+    }
+
+    @keyframes floatBubble {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Compact & Sleek Centered Story Modal */
+    .centered-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(10, 11, 14, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .centered-modal-overlay.active { opacity: 1; visibility: visible; }
+    .modal-story-box {
+      background: #fff;
+      width: 85%;
+      max-width: 440px;
+      padding: 30px 25px;
+      border-radius: 16px;
+      border-top: 6px solid var(--stone-accent);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+      position: relative;
+      text-align: center;
+      transform: scale(0.8) translateY(20px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .centered-modal-overlay.active .modal-story-box { transform: scale(1) translateY(0); }
+    .close-modal-x {
+      position: absolute;
+      top: 12px; left: 18px;
+      background: none;
+      border: none;
+      font-size: 26px;
+      color: #999;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .close-modal-x:hover { color: var(--stone-accent); transform: rotate(90deg); }
+    .story-emoji-header { font-size: 42px; margin-bottom: 8px; line-height: 1; }
+    .modal-story-box h4 { color: var(--primary-dark); font-size: 22px; font-weight: 900; margin: 0 0 12px 0; }
+    .modal-story-box p { color: #555; font-size: 15.5px; line-height: 1.7; margin-bottom: 20px; text-align: right; }
+    
+    .modal-actions { display: flex; gap: 8px; }
+    .modal-btn-action {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14.5px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
+    .modal-btn-action.whatsapp:hover { background: #1ebe57; transform: translateY(-2px); }
+    .modal-btn-action.call { background: var(--primary-dark); color: var(--gold-accent); border: 1px solid var(--gold-accent); }
+    .modal-btn-action.call:hover { background: #262626; transform: translateY(-2px); }
+
     footer {
       background: var(--primary-dark);
       color: #777;
@@ -254,8 +381,8 @@
       
       <h1 class="post-title">تنظيف وصيانة واجهات الحجر الهاشمي والفرعوني للقصور والفيلات الفاخرة</h1>
       
-      <!-- Placeholder Image -->
-      <img src="https://via.placeholder.com/800x400.png?text=تنظيف+وصيانة+الواجهات+الحجرية+Elhabib+Clean" alt="تنظيف وصيانة واجهات الحجر الهاشمي والفرعوني للقصور والفيلات" class="featured-image" loading="lazy">
+      <!-- Logo Main Image -->
+      <img src="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png" alt="تنظيف وصيانة واجهات الحجر الهاشمي والفرعوني للقصور والفيلات" class="featured-image" loading="lazy">
       
       <p>تتمتع الواجهات المصنوعة من الحجر الطبيعي — كالحجر الهاشمي، الفرعوني، والمايكا — بجمال أصيل وفخامة استثنائية تضفي على القصور والفيلات طابعاً ملكياً متميزاً. ولكن نظراً لطبيعة الحجر المسامية، فإنه مع مرور الوقت يتعرض لتراكم الأتربة الدقيقة، ظهور البقع الداكنة، وتفاعل الأملاح والرطوبة مع سطحه الخارجي.</p>
       
@@ -310,9 +437,49 @@
     </article>
   </main>
 
+  <!-- =========================================
+       🔥 FIXED 3 FLOATING ACTION BUTTONS 🔥
+       Order: Call (Top) ➔ WhatsApp (Middle) ➔ Story Bubble (Bottom)
+       ========================================= -->
+  <div class="contact-container">
+      <a href="https://habib-clean.com/call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
+      <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
+      <button id="openStoryBtn" class="btn-float story-bubble" title="قصة كارثة الحجر الهاشمي">
+          <span class="pulse-ring"></span>
+          🤫
+      </button>
+  </div>
+
+  <!-- Compact Centered Story Modal -->
+  <div id="centerStoryModal" class="centered-modal-overlay">
+      <div class="modal-story-box">
+          <button id="closeStoryBtn" class="close-modal-x">&times;</button>
+          <div class="story-emoji-header">🏛️😱</div>
+          <h4>كارثة "الرشح الأبيض" في فيلا التجمع!</h4>
+          <p>في قصر فخم بالتجمع، دفع المالك ثروة طائلة لتشطيب واجهة حجر هاشمي فخمة.. وبعد أول شتاء، ظهرت كارثة: تحولت الواجهة إلى اللون الأبيض تماماً بفعل الأملاح، وبدأت تتساقط كأنها مسحوق سحري! 💔<br><br>استعان بشركة غير مهنية رشت عليها مواد كيماوية دمرت الحجر نهائياً وجعلت مظهرها مرعباً! 😂<br><br>لكن بفضل التدخل الفوري لخبراء <strong>Elhabib Clean</strong> وتقنية الصنفرة بالرمل المضغوط والعزل الشفاف، عادت الواجهة تبرق وكأنها صُשטت اليوم لأول مرة! ✨👑</p>
+          <div class="modal-actions">
+              <a href="https://habib-clean.com/thankyou-whatsapp.html" class="modal-btn-action whatsapp">💬 حجز خدمة الحجر</a>
+              <a href="https://habib-clean.com/call-thanks.html" class="modal-btn-action call">📞 اتصال بالخبير</a>
+          </div>
+      </div>
+  </div>
+
   <footer>
     <p>© 2026 Elhabib Clean جميع الحقوق محفوظة | <a href="https://habib-clean.com/privacy.html">سياسة الخصوصية</a></p>
   </footer>
 
+  <!-- Script for Story Modal Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const openBtn = document.getElementById('openStoryBtn');
+      const closeBtn = document.getElementById('closeStoryBtn');
+      const modal = document.getElementById('centerStoryModal');
+
+      openBtn.addEventListener('click', () => { modal.classList.add('active'); });
+      const closeModal = () => { modal.classList.remove('active'); };
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    });
+  </script>
 </body>
 </html>
