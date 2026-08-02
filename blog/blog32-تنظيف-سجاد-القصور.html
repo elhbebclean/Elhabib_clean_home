@@ -25,6 +25,7 @@
   <meta property="og:title" content="التنظيف الجاف وتعقيم سجاد القصور والموكيت الفاخر">
   <meta property="og:description" content="أسرار العناية بالسجاد الحرير والصوف وحمايته من بهتان الألوان وتلف الأنسجة مع خبراء Elhabib Clean.">
   <meta property="og:url" content="https://habib-clean.com/blog/blog32-تنظيف-سجاد-القصور.html">
+  <meta property="og:image" content="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png">
   <meta property="og:site_name" content="Elhabib Clean">
   <meta property="og:locale" content="ar_EG">
   
@@ -214,7 +215,7 @@
     ul.content-list li { margin-bottom: 14px; font-size: 18px; color: #444; }
     
     figure { margin: 0 0 45px 0; text-align: center; }
-    .featured-image { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.12); }
+    .featured-image { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.12); border: 1px solid #eee; }
     
     .faq-section { background: #fdfdfd; padding: 45px; border-radius: 14px; margin-top: 75px; border: 1px solid #e0e0e0; }
     .faq-item { margin-bottom: 40px; padding-right: 20px; border-right: 4px solid var(--gold-accent); }
@@ -228,14 +229,164 @@
     .btn-whatsapp { display: inline-block; background: #25D366; color: #fff; padding: 24px 60px; font-weight: 900; font-size: 24px; text-decoration: none; border-radius: 50px; transition: all var(--transition-speed) ease; box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5); }
     .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-6px); box-shadow: 0 22px 55px rgba(37, 211, 102, 0.7); }
     
-    footer { background: var(--primary-dark); color: #888; text-align: center; padding: 50px 20px; margin-top: 80px; font-size: 16px; border-top: 3px solid var(--gold-accent); }
+    footer { background: var(--primary-dark); color: #888; text-align: center; padding: 50px 20px; margin-top: 80px; font-size: 16px; border-top: 3px solid var(--gold-accent); padding-bottom: 120px; }
     footer a { color: var(--gold-accent); text-decoration: none; font-weight: 700; }
+
+    /* =========================================
+       🔥 STORY BUBBLE & CENTERED MODAL CSS 🔥
+       ========================================= */
+    .story-bubble-wrapper {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      z-index: 9998;
+    }
+    
+    .story-trigger-btn {
+      background: linear-gradient(135deg, #171717 0%, #2a2a2a 100%);
+      color: #fff;
+      border: 2px solid var(--gold-accent);
+      padding: 12px 25px;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      position: relative;
+      transition: all 0.3s ease;
+      animation: floatBubble 3s ease-in-out infinite;
+    }
+
+    .story-trigger-btn:hover {
+      transform: scale(1.05);
+      background: var(--gold-accent);
+      color: #000;
+    }
+
+    .story-icon { font-size: 22px; }
+
+    .pulse-ring {
+      position: absolute;
+      top: -6px; right: -6px; bottom: -6px; left: -6px;
+      border: 2px solid var(--gold-accent);
+      border-radius: 50px;
+      animation: pulseAnim 2s infinite;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    @keyframes pulseAnim {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 0; }
+      100% { transform: scale(1); opacity: 0; }
+    }
+    
+    @keyframes floatBubble {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Centered Modal Overlay */
+    .centered-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(10, 11, 14, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .centered-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-story-box {
+      background: #fff;
+      width: 90%;
+      max-width: 500px;
+      padding: 40px;
+      border-radius: 20px;
+      border-top: 6px solid var(--carpet-accent);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+      position: relative;
+      text-align: center;
+      transform: scale(0.8) translateY(30px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .centered-modal-overlay.active .modal-story-box {
+      transform: scale(1) translateY(0);
+    }
+
+    .close-modal-x {
+      position: absolute;
+      top: 15px; left: 20px;
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: #999;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .close-modal-x:hover { color: #c0392b; transform: rotate(90deg); }
+
+    .story-emoji-header {
+      font-size: 50px;
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+
+    .modal-story-box h4 {
+      color: var(--primary-dark);
+      font-size: 26px;
+      font-weight: 900;
+      margin: 0 0 15px 0;
+      line-height: 1.4;
+    }
+
+    .modal-story-box p {
+      color: #555;
+      font-size: 17.5px;
+      line-height: 1.9;
+      margin-bottom: 30px;
+      text-align: right;
+    }
+
+    .btn-continue-reading {
+      display: block;
+      width: 100%;
+      background: var(--carpet-accent);
+      color: #fff;
+      padding: 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 10px 20px rgba(192, 57, 43, 0.3);
+    }
+    .btn-continue-reading:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
 
     @media (max-width: 768px) {
       main { padding: 40px 25px; }
-      h1.post-title { font-size: 28px; }
-      .mega-spiderweb { padding: 30px 20px; }
-      .videos-showcase-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+      .story-bubble-wrapper { bottom: 20px; left: 15px; }
+      .modal-story-box { padding: 30px 20px; }
     }
   </style>
 
@@ -382,7 +533,7 @@
       <h1 class="post-title">الدليل الهندسي لتنظيف وتعقيم السجاد الإيراني، الحرير، والصوف في القصور</h1>
       
       <figure>
-        <img src="https://via.placeholder.com/950x500.png?text=تنظيف+سجاد+القصور+Elhabib+Clean" alt="تنظيف السجاد الفاخر والموكيت في القصور" class="featured-image" loading="lazy">
+        <img src="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png" alt="تنظيف السجاد الفاخر والموكيت في القصور" class="featured-image">
       </figure>
       
       <p>السجاد الفاخر ليس مجرد غطاء للأرضيات؛ إنه تحفة فنية منسوجة يدوياً تتوارثها الأجيال. سواء كان سجاداً إيرانياً عريقاً (عقدة يدوية)، أو سجاداً من الحرير الخالص، أو موكيت صوف يغطي أجنحة القصر بالكامل، فإن كل خيط فيه يتطلب دقة جراحية في التعامل.</p>
@@ -495,7 +646,7 @@
       <p>أكثر من 79% من الأوساخ المتراكمة في السجاد هي أتربة جافة ورمل خشن يختبئ في عمق الوبرة ويقوم بتمزيق الألياف بمرور الوقت (مثل شفرات الحلاقة الصغيرة). قبل إضافة أي قطرة ماء أو رغوة، يقوم فريقنا بـ <strong>الشفط العميق (Pile Lifting)</strong> باستخدام مكانس مجهزة بفرش دوارة فائقة القوة ترفع الوبرة وتسحب الرمال من الجذور.</p>
 
       <h2>3. التعقيم بالقوة البخارية ومعالجة البقع (Spot Treatment)</h2>
-      <p>نحن لا نغسل السجاد بشكل عشوائي؛ بل نعالج كل بقعة بشكل منفصل. بقع الشاي والقهوة تحتاج لمحاليل حامضية (Acidic Tannin Removers)، بينما بقع الزيوت تحتاج لمذيبات جافة (Dry Solvents). بعد ذلك، نطبق نظام <strong>الاستخراج بالماء الساخن المغلق (Closed-Loop HWE)</strong>، الذي يضخ بخاراً نقياً بدرجة حرارة تعقم السجاد وتسحب الأوساخ في نفس اللحظة عبر محركات شفط جبارة، ليجف السجاد خلال ساعات قليلة وبدون روائح عفن.</p>
+      <p>نحن لا نغسل السجاد بشكل عشوائي؛ بل نعالج كل بقعة بشكل منفصل. بقع الشاي والقهوة تحتاج لمحاليل حامضية (Acidic Tannin Removers), بينما بقع الزيوت تحتاج لمذيبات جافة (Dry Solvents). بعد ذلك، نطبق نظام <strong>الاستخراج بالماء الساخن المغلق (Closed-Loop HWE)</strong>، الذي يضخ بخاراً نقياً بدرجة حرارة تعقم السجاد وتسحب الأوساخ في نفس اللحظة عبر محركات شفط جبارة، ليجف السجاد خلال ساعات قليلة وبدون روائح عفن.</p>
 
       <section class="faq-section">
         <h2 style="border: none; margin-top: 0; padding-bottom: 20px;">الأسئلة الشائعة حول العناية بالسجاد الفاخر</h2>
@@ -512,22 +663,70 @@
       <aside class="cta-box">
         <h3>هل ترغب في استعادة رونق وألوان سجادك الإيراني أو الحريري؟</h3>
         <p>لا تعرض تحفك الفنية للتلف مع العمالة العشوائية. تواصل مع قسم العناية الفندقية في Elhabib Clean للحصول على تعقيم فائق بأحدث التقنيات الألمانية.</p>
-        <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn-whatsapp">احجز موعد العناية الفندقية عبر الواتساب الآن</a>
+        <a href="../thankyou-whatsapp.html" class="btn-whatsapp">احجز موعد العناية الفندقية عبر الواتساب الآن</a>
       </aside>
-    </div>
+    </article>
   </main>
 
   <footer>
-    <p>© 2026 <strong>Elhabib Clean</strong> - جميع الحقوق محفوظة | <a href="https://habib-clean.com/privacy.html">سياسة الخصوصية</a></p>
+    <p>© 2026 <strong>Elhabib Clean</strong> - جميع الحقوق محفوظة | <a href="../privacy.html">سياسة الخصوصية</a></p>
   </footer>
 
+  <!-- =========================================
+       🔥 STORY BUBBLE & MODAL HTML 🔥
+       ========================================= -->
+  <div class="story-bubble-wrapper">
+    <button id="openStoryBtn" class="story-trigger-btn">
+      <span class="pulse-ring"></span>
+      <span class="story-icon">🤫</span>
+      <span>قصة السجاد الإيراني!</span>
+    </button>
+  </div>
+
+  <div id="centerStoryModal" class="centered-modal-overlay">
+    <div class="modal-story-box">
+      <button id="closeStoryBtn" class="close-modal-x">&times;</button>
+      <div class="story-emoji-header">🧶🔥</div>
+      <h4>كارثة نزيف الألوان في السجادة العجمي!</h4>
+      <p>في قصر فاخر بالتجمع، قامت شركة تنظيف عشوائية بغسل سجادة إيرانية أصلية عمرها 50 عاماً بالماء الغزير.. وكانت الكارثة: تداخلت الألوان ببعضها وتحولت لتحفة تالفة يبكي عليها صاحُبها! 💔<br><br>استعان مالك القصر بـ <strong>Habib Clean</strong> كفرقة إنقاذ أخير.. وبفضل تقنية "المذيبات العضوية الدقيقة والاستخراج بالبخار المغلق"، استطعنا فصل الألوان وإعادة رونق الخيوط الحريرية كأنها خرجت للتو من مصانع أصفهان! ✨👑</p>
+      <button id="continueReadingBtn" class="btn-continue-reading">أكمل قراءة الدليل الممتع 👇</button>
+    </div>
+  </div>
+
+  <!-- JavaScript for Progress Bar and Modal -->
   <script>
-    window.onscroll = function() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    };
+    document.addEventListener("DOMContentLoaded", function() {
+      // 1. Progress Bar
+      window.addEventListener('scroll', function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }, { passive: true });
+
+      // 2. Centered Story Modal Logic
+      const openBtn = document.getElementById('openStoryBtn');
+      const closeBtn = document.getElementById('closeStoryBtn');
+      const continueBtn = document.getElementById('continueReadingBtn');
+      const modal = document.getElementById('centerStoryModal');
+
+      openBtn.addEventListener('click', () => {
+        modal.classList.add('active');
+      });
+
+      const closeModal = () => {
+        modal.classList.remove('active');
+      };
+
+      closeBtn.addEventListener('click', closeModal);
+      continueBtn.addEventListener('click', closeModal);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    });
   </script>
 </body>
 </html>
