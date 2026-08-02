@@ -57,13 +57,14 @@
     <meta property="og:description" content="تبحث عن افضل شركة تنظيف منازل في القاهرة؟ خدمات تنظيف فلل وقصور، تنظيف بعد التشطيب بأعلى جودة فندقية.">
     <meta property="og:image" content="https://habib-clean.com/FB_IMG_1737376278247.jpg">
     <meta property="og:site_name" content="Habib Clean">
+    <meta property="og:locale" content="ar_EG">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
-    <!-- 2. Advanced God-Tier Schema (ISO 8601 Fixed + Integrated Graph) -->
+    <!-- Advanced Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -106,7 +107,7 @@
           "author": { "@id": "https://habib-clean.com/#organization" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-03-20T12:00:00+02:00",
-          "dateModified": "2026-07-31T15:00:00+02:00",
+          "dateModified": "2026-08-03T07:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog41-best-home-cleaning-services-cairo.html"
         },
         {
@@ -127,56 +128,8 @@
                 "@type": "Answer",
                 "text": "تختلف أسعار شركات نظافة في القاهرة باختلاف المساحة ونوع التنظيف (عادي أو بعد التشطيب). نوفر معاينات دقيقة لتحديد السعر الأنسب لضمان جودة استثنائية."
               }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you provide cleaning services cairo for expats?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, Habib Clean provides top-tier cleaning services cairo, including deep cleaning for closed homes and post-construction cleaning for villas and apartments."
-              }
             }
           ]
-        },
-        {
-          "@type": "VideoObject",
-          "name": "تنظيف بعد التشطيب | Habib Clean",
-          "description": "كفاءة واحترافية فريق Habib Clean في تأسيس وتنظيف العقارات بعد التشطيب.",
-          "thumbnailUrl": "https://img.youtube.com/vi/YuL41GWBVRk/hqdefault.jpg",
-          "uploadDate": "2025-12-09T12:00:00+02:00",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/YuL41GWBVRk"
-        },
-        {
-          "@type": "VideoObject",
-          "name": "أفضل خدمات تنظيف للمساحات الكبيرة | Habib Clean",
-          "description": "شاهد الدقة والجودة في التنظيف العميق.",
-          "thumbnailUrl": "https://img.youtube.com/vi/vLGKsoqvcMY/hqdefault.jpg",
-          "uploadDate": "2026-02-01T12:00:00+02:00",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/vLGKsoqvcMY"
-        },
-        {
-          "@type": "VideoObject",
-          "name": "احترافية النظافة الفندقية | Habib Clean",
-          "description": "تعقيم وتنظيف بأعلى المعايير العالمية.",
-          "thumbnailUrl": "https://img.youtube.com/vi/_6U0VWvv8Xo/hqdefault.jpg",
-          "uploadDate": "2026-01-01T12:00:00+02:00",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/_6U0VWvv8Xo"
-        },
-        {
-          "@type": "VideoObject",
-          "name": "تحدي تنظيف شقة مقفولة من 15 سنة! | Habib Clean",
-          "description": "التدخل السريع لاستعادة شقة مهجورة بالكامل.",
-          "thumbnailUrl": "https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg",
-          "uploadDate": "2025-12-27T12:00:00+02:00",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/t_lN65LWpqE"
-        },
-        {
-          "@type": "VideoObject",
-          "name": "أضخم عملية تنظيف عميق لمنزل كامل | Habib Clean",
-          "description": "النتيجة المذهلة قبل وبعد عمليات التنظيف المتكاملة.",
-          "thumbnailUrl": "https://img.youtube.com/vi/9yEXzbuYdXo/hqdefault.jpg",
-          "uploadDate": "2026-05-24T12:00:00+02:00",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/9yEXzbuYdXo"
         }
       ]
     }
@@ -191,6 +144,9 @@
             --white: #ffffff;
             --text-dark: #2c3e50;
             --deep-accent: #16a085;
+            --whatsapp-green: #25D366;
+            --story-bg: #fdfdfd;
+            --story-border: #c5a059;
         }
 
         html { scroll-behavior: smooth; }
@@ -210,7 +166,7 @@
 
         /* Progress Bar */
         .progress-container { width: 100%; height: 4px; background: #ccc; position: fixed; top: 0; z-index: 9999; }
-        .progress-bar { height: 4px; background: var(--gold-accent); width: 0%; }
+        .progress-bar { height: 4px; background: var(--gold-accent); width: 0%; transition: width 0.1s ease-out; }
 
         /* Visual Breadcrumb */
         .visual-breadcrumb { 
@@ -248,6 +204,14 @@
             border: 1px solid #eaeaea;
         }
 
+        /* Human Story Block (Emotional & Keyword Rich) */
+        .story-block { background: var(--story-bg); border-right: 5px solid var(--story-border); padding: 40px; margin: 40px 0; border-radius: 0 12px 12px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.06); position: relative; }
+        .story-block::before { content: "“"; font-family: serif; font-size: 80px; color: rgba(197, 160, 89, 0.2); position: absolute; top: 10px; right: 20px; line-height: 1; }
+        .story-block h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin-top: 0; margin-bottom: 20px; position: relative; z-index: 2;}
+        .story-block p { color: #444; font-size: 18px; line-height: 1.95; text-align: justify; margin-bottom: 20px; position: relative; z-index: 2;}
+        .story-block p strong { color: var(--gold-accent); font-weight: 900; }
+        .story-block p:last-child { margin-bottom: 0; }
+
         h2 { 
             color: var(--primary-dark); 
             font-size: clamp(22px, 4vw, 26px); 
@@ -262,7 +226,7 @@
 
         h3 { color: var(--gold-accent); font-size: 22px; font-weight: 800; margin: 35px 0 15px; }
 
-        p { font-size: 1.05rem; margin-bottom: 22px; color: #444; }
+        p { font-size: 1.05rem; margin-bottom: 22px; color: #444; text-align: justify; }
         ul { padding-right: 20px; font-size: 1.05rem; color: #444; margin-bottom: 25px;}
         li { margin-bottom: 12px; position: relative; list-style: none; padding-right: 25px;}
         li::before { content: "✦"; position: absolute; right: 0; color: var(--gold-accent); font-weight: bold; }
@@ -290,7 +254,7 @@
         
         .yt-facade { position: relative; width: 100%; background: #000; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid var(--gold-accent); box-shadow: 0 8px 25px rgba(0,0,0,0.1); contain: content; }
         .yt-facade.landscape { max-width: 800px; margin: 30px auto; aspect-ratio: 16/9; }
-        .yt-facade.portrait { aspect-ratio: 9/16; }
+        .yt-facade.portrait { aspect-ratio: 9/16; max-width: 240px; margin: 0 auto; }
         
         .yt-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.3s; }
         .yt-facade:hover img { opacity: 1; transform: scale(1.02); }
@@ -368,6 +332,16 @@
         <article>
             <img src="https://habib-clean.com/FB_IMG_1737376278247.jpg" alt="أفضل شركة تنظيف منازل وفلل في القاهرة Habib Clean" class="featured-image" loading="lazy" />
             
+            <!-- Human Story Block (Emotional & Keyword Rich) -->
+            <div class="story-block">
+                <h3>رحلة البحث عن النقاء: كيف أنقذت Habib Clean منزل عروسين في القاهرة؟</h3>
+                <p>مريم وعريسها كانا يعيشان أسعد أيام حياتهما وهما يجهزان شقة الزوجية في قلب القاهرة. وبعد أشهر من الإرهاق في التشطيبات، قررت مريم الاستعانة بواحدة من رخيصات <strong>شركات تنظيف منازل</strong> لتجهيز الشقة قبل العودة من شهر العسل. لكن المفاجأة كانت صادمة ومفجعة: العمالة استخدمت مواد كيميائية رخيصة ومياه غزيرة أدت لتقوس أرضيات الباركيه وإطفاء لمعة الرخام، وتركوا طبقة تراب سميكة تغطي كل زاوية. دخلت مريم الشقة وانهارت عياطاً، حلمها الجميل كاد يتحول لكارثة مالية ونفسية.</p>
+                
+                <p>في تلك اللحظة الحرجة، تواصل شقيقها فوراً مع فريق <strong>Habib Clean</strong>، المصنفة كـ <strong>افضل شركة تنظيف</strong> في مصر. خبراءنا وصلوا بسرعة البرق كفريق طوارئ هندسي، وبدأوا تطبيق بروتوكولات <strong>شركة تنظيف بعد التشطيب</strong> المتقدمة. تم سحب الأتربة الناعمة بالشفط الصناعي الجاف، ومعالجة الأرضيات بأجهزة الجلي والتلميع الاحترافية، وإعادة الروعة للرخام والخشب وكأن شيئاً لم يكن.</p>
+
+                <p>سواء كنت تبحث عن <strong>شركة تنظيف منازل</strong> موثوقة، أو ترغب في الاستعانة بـ <strong>أفضل شركات تنظيف منازل القاهرة</strong> لتنظيف <strong>تنظيف فلل</strong> وقصور فاخرة، فإن حبيب كلين تقدم خدمات <strong>cleaning services cairo</strong> بمستوى فندقي لا يُضاهى. نحن نضمن لك معالجة تامة لأي آثار للمقاولين، مع خدمات <strong>شركة تعقيم منازل</strong> شاملة تضمن لك ولعائلتك بيئة نقية وصحية تماماً.</p>
+            </div>
+
             <p>هل اتخذت قراراً بتجديد منزلك أو الانتقال إلى فيلا جديدة وتبحث عن <strong>شركة تنظيف منازل</strong> قادرة على تحويل العقار إلى تحفة فنية تتلألأ بالنظافة؟ في زحام العاصمة وتعدد الخيارات، يعتبر العثور على <strong>أفضل شركات تنظيف منازل القاهرة</strong> تحدياً كبيراً.</p>
             
             <p>نحن في <code>Habib Clean</code> لا نقدم مجرد خدمات تقليدية، بل نعتبر أنفسنا شركاء في حماية استثماراتك العقارية. إذا كنت تبحث عن <strong>افضل شركة تنظيف</strong> متخصصة تجمع بين الدقة، الأمانة، واستخدام التقنيات العالمية، فأنت في المكان الصحيح. في هذا الدليل، سنستعرض لماذا نتصدر قائمة <strong>شركات تنظيف منازل</strong> في القاهرة والمناطق الراقية، ولماذا نحن الخيار الأول لكل من يبحث عن خدمات <strong>cleaning services cairo</strong>.</p>
@@ -469,7 +443,7 @@
                     <a href="blog1-تنظيف-بعد-التشطيب.html">تنظيف بعد التشطيب</a>
                     <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">جلي الرخام بالألماس</a>
                     <a href="blog34-تنظيف-الشقق-الفندقية-المغلقة.html">تنظيف الشقق المغلقة</a>
-                    <a href="blog21-أهمية-تنظيف-الواجهات-الزجاجية-ل للشركات.html">تنظيف الواجهات الزجاجية</a>
+                    <a href="blog21-أهمية-تنظيف-الواجهات-الزجاجية-للشركات.html">تنظيف الواجهات الزجاجية</a>
                 </div>
             </section>
 
