@@ -25,6 +25,7 @@
   <meta property="og:title" content="المرجع النهائي لصيانة وتأمين واجهات المباني والقصور">
   <meta property="og:description" content="شبكة المقالات والأدلة الهندسية الشاملة لعزل وصيانة الواجهات الزجاجية والكلادينج في مصر.">
   <meta property="og:url" content="https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html">
+  <meta property="og:image" content="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png">
   <meta property="og:site_name" content="Elhabib Clean">
   <meta property="og:locale" content="ar_EG">
   
@@ -46,6 +47,7 @@
       --text-color: #2c3e50;
       --web-accent: #1f618d;
       --highlight-bg: #eaf2f8;
+      --whatsapp-green: #25D366;
       --transition-speed: 0.3s;
     }
     
@@ -59,6 +61,7 @@
       line-height: 2.1;
       text-align: right;
       -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
     }
 
     /* Scroll Progress Bar */
@@ -188,6 +191,7 @@
       height: auto;
       border-radius: 14px;
       box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+      border: 1px solid #eee;
     }
     figcaption {
       margin-top: 15px;
@@ -222,13 +226,6 @@
       position: relative;
       overflow: hidden;
     }
-    .cta-box::after {
-      content: '';
-      position: absolute;
-      top: -50%; left: -50%; width: 200%; height: 200%;
-      background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 60%);
-      pointer-events: none;
-    }
     .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 34px; font-weight: 900; position: relative; z-index: 2;}
     .cta-box p { color: #eee; font-size: 21px; margin-bottom: 45px; max-width: 800px; margin-left: auto; margin-right: auto; position: relative; z-index: 2;}
     .btn-whatsapp {
@@ -247,6 +244,125 @@
     }
     .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-6px); box-shadow: 0 22px 55px rgba(37, 211, 102, 0.7); }
     
+    /* =========================================
+       🔥 3 FLOATING ACTION BUTTONS & MODAL CSS 🔥
+       ========================================= */
+    .contact-container { 
+      position: fixed; 
+      bottom: 25px; 
+      left: 25px; 
+      z-index: 1000; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+    }
+    .btn-float { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      width: 55px; 
+      height: 55px; 
+      border-radius: 50%; 
+      color: white; 
+      text-decoration: none; 
+      font-size: 24px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25); 
+      transition: 0.3s; 
+      border: 2px solid var(--gold-accent); 
+    }
+    .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
+    .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
+    .btn-float.story-bubble { 
+      background: linear-gradient(135deg, #171717 0%, #333 100%); 
+      color: var(--gold-accent); 
+      position: relative;
+      animation: floatBubble 3s ease-in-out infinite;
+    }
+    .btn-float:hover { transform: scale(1.1); }
+
+    .pulse-ring {
+      position: absolute;
+      top: -5px; right: -5px; bottom: -5px; left: -5px;
+      border: 2px solid var(--gold-accent);
+      border-radius: 50%;
+      animation: pulseAnim 2s infinite;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    @keyframes pulseAnim {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 0; }
+      100% { transform: scale(1); opacity: 0; }
+    }
+
+    @keyframes floatBubble {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Centered Story Modal */
+    .centered-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(10, 11, 14, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .centered-modal-overlay.active { opacity: 1; visibility: visible; }
+    .modal-story-box {
+      background: #fff;
+      width: 90%;
+      max-width: 500px;
+      padding: 40px;
+      border-radius: 20px;
+      border-top: 6px solid var(--web-accent);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+      position: relative;
+      text-align: center;
+      transform: scale(0.8) translateY(30px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .centered-modal-overlay.active .modal-story-box { transform: scale(1) translateY(0); }
+    .close-modal-x {
+      position: absolute;
+      top: 15px; left: 20px;
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: #999;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .close-modal-x:hover { color: var(--web-accent); transform: rotate(90deg); }
+    .story-emoji-header { font-size: 50px; margin-bottom: 10px; line-height: 1; }
+    .modal-story-box h4 { color: var(--primary-dark); font-size: 26px; font-weight: 900; margin: 0 0 15px 0; }
+    .modal-story-box p { color: #555; font-size: 17px; line-height: 1.8; margin-bottom: 25px; text-align: right; }
+    
+    .modal-actions { display: flex; gap: 10px; }
+    .modal-btn-action {
+      flex: 1;
+      padding: 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 16px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
+    .modal-btn-action.whatsapp:hover { background: #1ebe57; transform: translateY(-2px); }
+    .modal-btn-action.call { background: var(--primary-dark); color: var(--gold-accent); border: 1px solid var(--gold-accent); }
+    .modal-btn-action.call:hover { background: #262626; transform: translateY(-2px); }
+
     footer {
       background: var(--primary-dark);
       color: #888;
@@ -263,6 +379,9 @@
       main { padding: 40px 25px; }
       h1.post-title { font-size: 28px; }
       .spiderweb-box { padding: 30px 20px; }
+      .contact-container { left: 15px; bottom: 20px; }
+      .modal-story-box { padding: 30px 20px; }
+      .modal-actions { flex-direction: column; }
     }
   </style>
 
@@ -279,7 +398,7 @@
         "url": "https://habib-clean.com/",
         "logo": "https://habib-clean.com/logo.png",
         "image": "https://habib-clean.com/logo.png",
-        "telephone": "+201000000000", 
+        "telephone": "+201016961497",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Maadi",
@@ -378,7 +497,7 @@
       <h1 class="post-title">المرجع النهائي والخلاصة الهندسية لصيانة واجهات الزجاج، الكلادينج، والحجر للشركات والقصور</h1>
       
       <figure>
-        <img src="https://via.placeholder.com/950x500.png?text=المرجع+النهائي+للواجهات+والكلادينج+Elhabib+Clean" alt="تأمين وصيانة واجهات الزجاج والكلادينج والحجر الطبيعي بأعلى معايير الهندسة مع Elhabib Clean" class="featured-image" loading="eager">
+        <img src="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png" alt="تأمين وصيانة واجهات الزجاج والكلادينج والحجر الطبيعي بأعلى معايير الهندسة مع Elhabib Clean" class="featured-image" loading="eager">
         <figcaption>منظومة الإدارة المتكاملة لصيانة وعزل واجهات القصور والأبراج الإدارية</figcaption>
       </figure>
       
@@ -395,7 +514,7 @@
           <a href="blog22-الفرق-بين-تنظيف-الزجاج-والكلادينج.html" title="دليل الفروق التقنية بين الزجاج والكلادينج"><span>🔹 الفرق بين تنظيف الزجاج والكلادينج</span></a>
           <a href="blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html" title="كيف تعمل تقنية الوصول بالحبال بأمان"><span>🔹 تقنية الوصول بالحبال (Rope Access)</span></a>
           <a href="blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html" title="أسرار عزل الواجهات بتقنية النانو"><span>🔹 حماية الواجهات من الأتربة والأمطار</span></a>
-          <a href="blog25-دليل-صيانة-واجهات-القصور-الفيلات.html" title="المرجع الشامل لأصحاب الفيلات والقصور"><span>🔹 الدليل الشامل لصيانة واجهات القصور</span></a>
+          <a href="blog25-دليل-صيانة-واجهات-القصور-الفيلات.html" title="دليل صيانة واجهات القصور الفاخرة"><span>🔹 الدليل الشامل لصيانة واجهات القصور</span></a>
           <a href="blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html" title="حلول المياه منزوعة المعادن DI Water"><span>🔹 معالجة أكسدة وتكلس الواجهات</span></a>
           <a href="blog27-بروتوكول-الصيانة-الدورية-للتجاري-والسكني.html" title="كيف تخطط لعقود الصيانة الدورية"><span>🔹 بروتوكول الصيانة الدورية الاستباقية</span></a>
           <a href="blog28-تنظيف-وصيانة-الواجهات-الحجرية.html" title="طرق ترميم الحجر الهاشمي والفرعوني"><span>🔹 تنظيف وصيانة واجهات الحجر الطبيعي</span></a>
@@ -432,18 +551,57 @@
     </article>
   </main>
 
+  <!-- =========================================
+       🔥 3 FLOATING ACTION BUTTONS & MODAL 🔥
+       ========================================= -->
+  <div class="contact-container">
+      <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
+      <a href="https://habib-clean.com/call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
+      <button id="openStoryBtn" class="btn-float story-bubble" title="اقرأ القصة المشوقة">
+          <span class="pulse-ring"></span>
+          📖
+      </button>
+  </div>
+
+  <!-- Centered Story Modal -->
+  <div id="centerStoryModal" class="centered-modal-overlay">
+      <div class="modal-story-box">
+          <button id="closeStoryBtn" class="close-modal-x">&times;</button>
+          <div class="story-emoji-header">🏗️😱</div>
+          <h4>رعب الطابق الخامس في التجمع الخامس!</h4>
+          <p>في ليلة شتوية عاصفة، استيقظ مالك برج إداري فاخر على كارثة: تسريب مياه هائل حول واجهة الكلادينج والزجاج إلى بركة طينية تهدد بماس كهربائي شامل! ⚡🌊<br><br>استعان بشركة رخيصة.. فجاء عامل مسكين معلق بحبل مهترئ، وبدلاً من حل المشكلة، علق بين الدور الرابع والخامس وأخذ يصرخ طلباً للنجدة وسط عاصفة من الضحك الهستيري للمارة! 😂<br><br>وسط هذا الرعب الكوميدي، ظهرت فرق الطوارئ من <strong>Elhabib Clean</strong> ب معدات الدخول بالحبال العالمية وأنظمة عزل النانو.. وفي ساعتين فقط، تم تأمين البرج بالكامل وعاد البريق للواجهة كأنها قطعة أماس! ✨👑</p>
+          <div class="modal-actions">
+              <a href="https://habib-clean.com/thankyou-whatsapp.html" class="modal-btn-action whatsapp">💬 احجز الخدمة عبر الواتساب</a>
+              <a href="https://habib-clean.com/call-thanks.html" class="modal-btn-action call">📞 اتصال مباشر بالخبراء</a>
+          </div>
+      </div>
+  </div>
+
   <footer>
     <p>© 2026 <strong>Elhabib Clean</strong> - جميع الحقوق محفوظة | <a href="https://habib-clean.com/privacy.html" title="سياسة الخصوصية">سياسة الخصوصية</a></p>
   </footer>
 
-  <!-- Script for Scroll Progress Bar -->
+  <!-- Script for Scroll Progress Bar & Modal -->
   <script>
-    window.onscroll = function() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    };
+    document.addEventListener("DOMContentLoaded", function() {
+      // Scroll Progress Bar
+      window.addEventListener('scroll', function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }, { passive: true });
+
+      // Story Modal Logic
+      const openBtn = document.getElementById('openStoryBtn');
+      const closeBtn = document.getElementById('closeStoryBtn');
+      const modal = document.getElementById('centerStoryModal');
+
+      openBtn.addEventListener('click', () => { modal.classList.add('active'); });
+      const closeModal = () => { modal.classList.remove('active'); });
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    });
   </script>
 </body>
 </html>
