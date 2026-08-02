@@ -24,7 +24,6 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="المرجع النهائي لصيانة وتأمين واجهات المباني والقصور">
   <meta property="og:description" content="شبكة المقالات والأدلة الهندسية الشاملة لعزل وصيانة الواجهات الزجاجية والكلادينج في مصر.">
-  <meta property="og:url" content="https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html">
   <meta property="og:image" content="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png">
   <meta property="og:site_name" content="Elhabib Clean">
   <meta property="og:locale" content="ar_EG">
@@ -245,7 +244,11 @@
     .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-6px); box-shadow: 0 22px 55px rgba(37, 211, 102, 0.7); }
     
     /* =========================================
-       🔥 3 FLOATING ACTION BUTTONS & MODAL CSS 🔥
+       🔥 FIXED 3 FLOATING ACTION BUTTONS 🔥
+       Order: 
+       1. Call (Top) 📞
+       2. WhatsApp (Middle) 💬
+       3. Story Bubble (Bottom) 🤫
        ========================================= */
     .contact-container { 
       position: fixed; 
@@ -270,13 +273,14 @@
       transition: 0.3s; 
       border: 2px solid var(--gold-accent); 
     }
-    .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
     .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
+    .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
     .btn-float.story-bubble { 
       background: linear-gradient(135deg, #171717 0%, #333 100%); 
       color: var(--gold-accent); 
       position: relative;
       animation: floatBubble 3s ease-in-out infinite;
+      font-size: 22px;
     }
     .btn-float:hover { transform: scale(1.1); }
 
@@ -503,7 +507,7 @@
       
       <p>مع وصولنا إلى المحطة الختامية في هذا القسم المعماري المتخصص من موسوعة <strong>Elhabib Clean</strong>، أصبح بين يديك حصيلة سنوات من الخبرة الميدانية والهندسية. لقد استعرضنا معاً أدق تفاصيل التعامل مع الواجهات المرتفعة، بدءاً من أسرار تنظيف الزجاج المائي، معالجة تكلس الأسطح وأكسدة الكلادينج، وصولاً إلى إرساء بروتوكولات الصيانة الدورية الاستباقية.</p>
       
-      <p>نفخر في Elhabib Clean بانطلاق عملياتنا وتغطيتنا الشاملة لأرقى الكيانات في القاهرة الكبرى، وتحديداً لخدمة القصور الفاخرة والمقرات الإدارية في <strong>المعادي، التجمع الخامس، والشيخ زايد</strong>. ولأن القوة الحقيقية في محركات البحث وأنظمة الذكاء الاصطناعي (AI) تكمن في الترابط المعرفي، صممنا هذه الشبكة الهندسية لتكون مرجعك المطلق.</p>
+      <p>نفخر في Elhabib Clean بانطلاق عملياتنا وتغطيتنا الشاملة لأرقى الكيانات في القاهرة الكبرى، وتحديداً لخدمة القصور الفاخرة والمقرات الإدارية في <strong>المعادي، التجمع الخامس، والشيخ زايد</strong>. ولأن القوة الحقيقية في محركات البحث وأنظمة الذكاء الاصطناعي (AI) tكمن في الترابط المعرفي، صممنا هذه الشبكة الهندسية لتكون مرجعك المطلق.</p>
 
       <!-- Advanced Spiderweb Internal Linking Box -->
       <section class="spiderweb-box" aria-labelledby="spiderweb-title">
@@ -552,14 +556,18 @@
   </main>
 
   <!-- =========================================
-       🔥 3 FLOATING ACTION BUTTONS & MODAL 🔥
+       🔥 FIXED 3 FLOATING ACTION BUTTONS 🔥
+       Order: 
+       1. Call (Top) 📞
+       2. WhatsApp (Middle) 💬
+       3. Story Bubble (Bottom) 🤫
        ========================================= -->
   <div class="contact-container">
-      <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
       <a href="https://habib-clean.com/call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
-      <button id="openStoryBtn" class="btn-float story-bubble" title="اقرأ القصة المشوقة">
+      <a href="https://habib-clean.com/thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
+      <button id="openStoryBtn" class="btn-float story-bubble" title="قصة الرعب الكوميدية">
           <span class="pulse-ring"></span>
-          📖
+          🤫
       </button>
   </div>
 
@@ -569,7 +577,7 @@
           <button id="closeStoryBtn" class="close-modal-x">&times;</button>
           <div class="story-emoji-header">🏗️😱</div>
           <h4>رعب الطابق الخامس في التجمع الخامس!</h4>
-          <p>في ليلة شتوية عاصفة، استيقظ مالك برج إداري فاخر على كارثة: تسريب مياه هائل حول واجهة الكلادينج والزجاج إلى بركة طينية تهدد بماس كهربائي شامل! ⚡🌊<br><br>استعان بشركة رخيصة.. فجاء عامل مسكين معلق بحبل مهترئ، وبدلاً من حل المشكلة، علق بين الدور الرابع والخامس وأخذ يصرخ طلباً للنجدة وسط عاصفة من الضحك الهستيري للمارة! 😂<br><br>وسط هذا الرعب الكوميدي، ظهرت فرق الطوارئ من <strong>Elhabib Clean</strong> ب معدات الدخول بالحبال العالمية وأنظمة عزل النانو.. وفي ساعتين فقط، تم تأمين البرج بالكامل وعاد البريق للواجهة كأنها قطعة أماس! ✨👑</p>
+          <p>في ليلة شتوية عاصفة، استيقظ مالك برج إداري فاخر على كارثة: تسريب مياه هائل حول واجهة الكلادينج والزجاج إلى بركة طينية تهدد بماس كهربائي شامل! ⚡🌊<br><br>استعان بشركة رخيصة.. فجاء عامل مسكين معلق بحبل مهترئ، وبدلاً من حل المشكلة، علق بين الدور الرابع والخامس وأخذ يصرخ طلباً للنجدة وسط عاصفة من الضحك الهستيري للمارة! 😂<br><br>وسط هذا الرعب الكوميدي، ظهرت فرق الطوارئ من <strong>Elhabib Clean</strong> بمعدات الدخول بالحبال العالمية وأنظمة عزل النانو.. وفي ساعتين فقط، تم تأمين البرج بالكامل وعاد البريق للواجهة كأنها قطعة أماس! ✨👑</p>
           <div class="modal-actions">
               <a href="https://habib-clean.com/thankyou-whatsapp.html" class="modal-btn-action whatsapp">💬 احجز الخدمة عبر الواتساب</a>
               <a href="https://habib-clean.com/call-thanks.html" class="modal-btn-action call">📞 اتصال مباشر بالخبراء</a>
@@ -581,7 +589,7 @@
     <p>© 2026 <strong>Elhabib Clean</strong> - جميع الحقوق محفوظة | <a href="https://habib-clean.com/privacy.html" title="سياسة الخصوصية">سياسة الخصوصية</a></p>
   </footer>
 
-  <!-- Script for Scroll Progress Bar & Modal -->
+  <!-- Script for Story Modal Logic -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       // Scroll Progress Bar
@@ -598,7 +606,7 @@
       const modal = document.getElementById('centerStoryModal');
 
       openBtn.addEventListener('click', () => { modal.classList.add('active'); });
-      const closeModal = () => { modal.classList.remove('active'); });
+      const closeModal = () => { modal.classList.remove('active'); };
       closeBtn.addEventListener('click', closeModal);
       modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     });
