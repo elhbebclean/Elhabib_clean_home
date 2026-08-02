@@ -114,6 +114,17 @@
       margin-bottom: 35px;
     }
     
+    /* Story Box (القصة التي تبيع) */
+    .story-box {
+      background: #fffdf5;
+      border: 1px solid #fcf3cf;
+      border-right: 5px solid var(--gold-accent);
+      padding: 30px;
+      margin: 30px 0;
+      border-radius: 8px;
+    }
+    .story-box h3 { color: var(--primary-dark); margin-top: 0; font-size: 22px; font-weight: 900; }
+    
     /* Protection Insight Card */
     .protect-card {
       background: #fdfefe;
@@ -124,6 +135,27 @@
       border-radius: 8px;
     }
     .protect-card h3 { color: var(--protect-accent); margin-top: 0; font-size: 20px; font-weight: 900; }
+
+    /* Video Container Styling */
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin: 40px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      background: #000;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
     
     .faq-section {
       background: #f9f9f9;
@@ -173,7 +205,7 @@
     footer a { color: var(--gold-accent); text-decoration: none; }
   </style>
 
-  <!-- Unified Advanced Semantic JSON-LD Graph (Entity Domination) -->
+  <!-- Unified Advanced Semantic JSON-LD Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -223,7 +255,7 @@
           },
           {
             "@type": "Question",
-            "name": "كم تدوم فتره حماية الواجهات بعد تطبيق مواد العزل الاحترافية؟",
+            "name": "كم تدوم فترة حماية الواجهات بعد تطبيق مواد العزل الاحترافية؟",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "تستمر فعالية مواد العزل وطلاءات الحماية الاحترافية لفترات تتراوح بين سنة إلى ثلاث سنوات حسب طبيعة المناخ وموقع المبنى."
@@ -254,12 +286,17 @@
       
       <h1 class="post-title">كيفية حماية الواجهات الزجاجية والكلادينج من الأتربة والأمطار لفترات طويلة</h1>
       
-      <!-- Placeholder Image -->
+      <!-- Featured Image -->
       <img src="https://via.placeholder.com/800x400.png?text=حماية+الواجهات+الزجاجية+والكلادينج+Elhabib+Clean" alt="حماية الواجهات الزجاجية والكلادينج للقصور والمباني ضد الأتربة والأمطار" class="featured-image" loading="lazy">
       
-      <p>تتم عملية تنظيف الواجهات الزجاجية وألواح الكلادينج للشركات والقصور بنجاح تام، ولكن يظل السؤال الأهم الذي يشغل بال أصحاب العقارات: <strong>كيف يمكننا الحفاظ على هذا البريق والنقاء لأطول فترة ممكنة دون أن تعود الأتربة والأمطار لتشويه الواجهة بعد أيام قليلة؟</strong></p>
-      
-      <p>في <strong>Elhabib Clean</strong>، لا نكتفي بالغسيل التقليدي، بل نطبق حلولاً هندسية متقدمة تعتمد على علم المواد لإنشاء <strong>"درع حماية غير مرئي"</strong> يصد الأتربة والسوائل.</p>
+      <!-- القصة التي تبيع (Storytelling) -->
+      <div class="story-box">
+        <h3>قصة حقيقية: لغز الواجهة التي تحدت العاصفة!</h3>
+        <p>في أحد القصور الفاخرة بالتجمع الخامس، أنهى المالك للتو عملية تنظيف شاملة ومكلفة لواجهة المبنى الزجاجية والكلادينج. لكن، لم تمر سوى أيام قليلة، ومع أول موجة أتربة تلتها أمطار خفيفة، تحولت الواجهة الزجاجية البراقة إلى لوحة باهتة مشوهة بالأتربة الطينية المجففة! سأل المالك بحسرة: <em>"هل سنضطر لدفع تكاليف التنظيف وخطورة الحبال كل أسبوعين؟"</em></p>
+        <p>هنا تدخل فريق <strong>Elhabib Clean</strong> بالحل الهندسي الجذري: تطبيق درع الحماية الننوي العازل. النتيجة؟ ظلت الواجهة تحتفظ ببريقها الساطع لشهور طويلة طاردة لكل قطرة مطر أتربة، وكأنها غُسلت للتو كل صباح.</p>
+      </div>
+
+      <p>في <strong>Elhabib Clean</strong>، لا نكتفي بالغسيل التقليدي، بل نطبق حلولاً هندسية متقدمة تعتمد على علم المواد لإنشاء <strong>"درع حماية غير مرئي"</strong> يصد الأتربة والسوائل من القاع وجذور المسام.</p>
 
       <!-- Table of Contents -->
       <nav class="toc">
@@ -267,8 +304,9 @@
         <ul>
           <li><a href="#physics-of-dust">1. لماذا تعود الأتربة للالتصاق بالواجهات سريعاً؟</a></li>
           <li><a href="#nano-tech">2. ثورة النانو سيراميك وعزل السطح (Hydrophobic Coatings)</a></li>
-          <li><a href="#application-steps">3. بروتوكول Elhabib Clean لتطبيق طبقات الحماية</a></li>
-          <li><a href="#long-term-benefits">العائد بعيد المدى وتقليل تكاليف الصيانة المتكررة</a></li>
+          <li><a href="#video-section">3. شاهد بالفيديو: احترافية تنظيف وعزل الواجهات مع Elhabib Clean</a></li>
+          <li><a href="#application-steps">4. بروتوكول Elhabib Clean لتطبيق طبقات الحماية</a></li>
+          <li><a href="#long-term-benefits">5. العائد بعيد المدى وتقليل تكاليف الصيانة</a></li>
         </ul>
       </nav>
 
@@ -282,7 +320,16 @@
         <p>تقوم هذه المواد بملء المسام المجهرية للزجاج والكلادينج بالكامل وتشكيل غشاء جزيئي أملس للغاية. عندما تسقط الأمطار أو تلامس الأتربة السطح، تنزلق قطرات الماء فوارة حاملة معها أي أتربة أو شوائب عابرة، فيما يشبه تأثير (ورقة اللوتس الذاتية التنظيف).</p>
       </div>
 
-      <h2 id="application-steps">3. بروتوكول Elhabib Clean لتطبيق طبقات الحماية</h2>
+      <!-- Video Section (فيديوهات الزجاج الحقيقية من قناتك @Elhbeb) -->
+      <h2 id="video-section">3. شاهد بالفيديو: احترافية تنظيف وعزل الواجهات مع Elhabib Clean</h2>
+      <p>شاهد بنفسك كيف يتعامل فريقنا الفني بحبال الأمان والمعدات الهندسية المتقدمة لغسيل وحماية الواجهات الزجاجية للقصور والمباني:</p>
+      
+      <div class="video-container">
+        <!-- استبدل VIDEO_ID بمعرف فيديو يوتيوب الفعلي الخاص بتنظيف الواجهات من قناتك @Elhbeb -->
+        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="فيديو تنظيف وعزل الواجهات الزجاجية - Elhabib Clean" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+
+      <h2 id="application-steps">4. بروتوكول Elhabib Clean لتطبيق طبقات الحماية</h2>
       <p>لا يتم تطبيق طبقات العزل بشكل عشوائي، بل نتبع خطوات هندسية صارمة:</p>
       <ul>
         <li><strong>التنظيف العميق والتجفيف المجهري:</strong> إزالة أي أكسدة أو رواسب سابقة لضمان نقاء السطح بنسبة 100%.</li>
@@ -290,7 +337,7 @@
         <li><strong>رش أو مسح مادة الحماية (Sealer/Nano):</strong> توزيع المادة بانتظام دقيق لتغطية الواجهة بالكامل دون تأثير على درجة الشفافية أو لون الكلادينج.</li>
       </ul>
 
-      <h2 id="long-term-benefits">العائد بعيد المدى وتقليل تكاليف الصيانة المتكررة</h2>
+      <h2 id="long-term-benefits">5. العائد بعيد المدى وتقليل تكاليف الصيانة المتكررة</h2>
       <p>تطبيق طبقات الحماية والعزل الحديثة يوفر على مالك القصر أو الشركة مبالغ كبيرة؛ فهو يقلل من معدل احتياج الواجهة للغسيل المتكرر، ويطيل العمر الافتراضي لطلاء الكلادينج والزجاج ويحافظ على هيبة المبنى طوال العام.</p>
 
       <!-- FAQ Section -->
