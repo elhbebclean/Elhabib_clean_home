@@ -30,7 +30,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0b0e">
+    <meta name="theme-color" content="#171717">
     
     <!-- DNS Prefetch & Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,11 +62,11 @@
     <meta property="og:url" content="https://habib-clean.com/blog/blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">
     <meta property="og:title" content="تقنيات تنظيف الأثاث الفاخر والمفروشات في القصور | Habib Clean">
     <meta property="og:description" content="أسرار العناية الهندسية بأقمشة الأثاث الباهظة وحمايتها من التلف والبهتان مع افضل شركة تنظيف في القاهرة.">
-    <meta property="og:image" content="https://habib-clean.com/FB_IMG_1737376278247.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png">
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
 
-    <!-- Advanced Combined Schema (ISO 8601 Fixed + Integrated Graph) -->
+    <!-- Advanced Combined Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -111,14 +111,6 @@
           "datePublished": "2026-03-20T12:00:00+02:00",
           "dateModified": "2026-08-01T15:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html"
-        },
-        {
-          "@type": "VideoObject",
-          "name": "تحدي تنظيف شقة مقفولة من 15 سنة! | Habib Clean",
-          "description": "التدخل السريع لاستعادة شقة مهجورة بالكامل بواسطة Habib Clean.",
-          "thumbnailUrl": "https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg",
-          "uploadDate": "2025-12-27T12:00:00+02:00",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/t_lN65LWpqE"
         },
         {
           "@type": "FAQPage",
@@ -286,26 +278,140 @@
         .btn-whatsapp-cta { display: inline-block; background: #25D366; color: #fff; padding: 16px 40px; font-weight: 900; font-size: 19px; text-decoration: none; border-radius: 50px; transition: 0.3s; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);}
         .btn-whatsapp-cta:hover { background: #1ebe57; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);}
 
-        /* Floating Contact & Scroll to Top */
-        .contact-container { position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
-        .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: 0.3s; border: 1px solid var(--gold-accent); }
+        /* =========================================
+           🔥 3 FLOATING ACTION BUTTONS CSS 🔥
+           ========================================= */
+        .contact-container { 
+            position: fixed; 
+            bottom: 25px; 
+            left: 25px; 
+            z-index: 1000; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+        }
+        .btn-float { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 55px; 
+            height: 55px; 
+            border-radius: 50%; 
+            color: white; 
+            text-decoration: none; 
+            font-size: 24px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25); 
+            transition: 0.3s; 
+            border: 2px solid var(--gold-accent); 
+        }
         .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
         .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
-        .btn-float:hover { transform: scale(1.08); }
+        .btn-float.story-bubble { 
+            background: linear-gradient(135deg, #171717 0%, #333 100%); 
+            color: var(--gold-accent); 
+            position: relative;
+            animation: floatBubble 3s ease-in-out infinite;
+        }
+        .btn-float:hover { transform: scale(1.1); }
 
-        #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(212,175,55,0.4); display: flex; justify-content: center; align-items: center;}
+        .pulse-ring {
+            position: absolute;
+            top: -5px; right: -5px; bottom: -5px; left: -5px;
+            border: 2px solid var(--gold-accent);
+            border-radius: 50%;
+            animation: pulseAnim 2s infinite;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        @keyframes pulseAnim {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.15); opacity: 0; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+
+        @keyframes floatBubble {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Centered Story Modal */
+        .centered-modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 11, 14, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .centered-modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-story-box {
+            background: #fff;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 20px;
+            border-top: 6px solid var(--fabric-accent);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            position: relative;
+            text-align: center;
+            transform: scale(0.8) translateY(30px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .centered-modal-overlay.active .modal-story-box { transform: scale(1) translateY(0); }
+        .close-modal-x {
+            position: absolute;
+            top: 15px; left: 20px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: #999;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .close-modal-x:hover { color: var(--fabric-accent); transform: rotate(90deg); }
+        .story-emoji-header { font-size: 50px; margin-bottom: 10px; line-height: 1; }
+        .modal-story-box h4 { color: var(--primary-dark); font-size: 26px; font-weight: 900; margin: 0 0 15px 0; }
+        .modal-story-box p { color: #555; font-size: 17px; line-height: 1.8; margin-bottom: 25px; text-align: right; }
+        
+        .modal-actions { display: flex; gap: 10px; }
+        .modal-btn-action {
+            flex: 1;
+            padding: 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 16px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
+        .modal-btn-action.whatsapp:hover { background: #1ebe57; transform: translateY(-2px); }
+        .modal-btn-action.call { background: var(--primary-dark); color: var(--gold-accent); border: 1px solid var(--gold-accent); }
+        .modal-btn-action.call:hover { background: var(--secondary-dark); transform: translateY(-2px); }
+
+        #scrollTopBtn { position: fixed; bottom: 25px; right: 25px; background: var(--gold-accent); color: var(--primary-dark); width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(212,175,55,0.4); display: flex; justify-content: center; align-items: center;}
         #scrollTopBtn.show { opacity: 1; visibility: visible; }
 
-        footer { background: var(--primary-dark); color: #888; padding: 60px 20px; text-align: center; border-top: 2px solid var(--gold-accent); }
+        footer { background: var(--primary-dark); color: #888; padding: 60px 20px; text-align: center; border-top: 2px solid var(--gold-accent); padding-bottom: 100px; }
 
         @media (max-width: 768px) {
             main { padding: 30px 15px; margin-top: -20px; }
             header.article-header { padding: 50px 15px; }
             .omni-spiderweb { padding: 20px; }
             .videos-showcase-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
-            .contact-container { left: 50%; transform: translateX(-50%); flex-direction: row; width: auto; justify-content: center; bottom: 15px; background: rgba(255,255,255,0.9); padding: 10px 20px; border-radius: 30px; border: 1px solid var(--gold-accent); }
-            .btn-float { width: 45px; height: 45px; font-size: 20px;}
-            #scrollTopBtn { bottom: 80px; right: 15px; width: 45px; height: 45px;}
+            .contact-container { left: 15px; bottom: 20px; }
+            .btn-float { width: 50px; height: 50px; font-size: 22px;}
+            #scrollTopBtn { bottom: 20px; right: 80px; width: 45px; height: 45px;}
+            .modal-story-box { padding: 30px 20px; }
+            .modal-actions { flex-direction: column; }
         }
     </style>
 </head>
@@ -328,7 +434,7 @@
 
     <main>
         <article>
-            <img src="https://habib-clean.com/FB_IMG_1737376278247.jpg" alt="تنظيف وتعقيم الأثاث الفاخر والمفروشات في القصور" class="featured-image" loading="lazy">
+            <img src="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png" alt="تنظيف وتعقيم الأثاث الفاخر والمفروشات في القصور" class="featured-image" loading="lazy">
             <div class="image-caption">الرعاية الهندسية الفائقة للأقمشة الفاخرة والصالونات المذهبة</div>
             
             <!-- GEO Semantic Block -->
@@ -396,7 +502,6 @@
             <p>نطبق تقنية "الحقن والسحب المائي الساخن" للأقمشة القوية، ونعتمد على <strong>تقنية الرغوة الجافة (Dry Foam)</strong> للصالونات الحساسة. هذه الرغوة تتغلغل في النسيج لتفكيك البقع ثم يتم سحبها بمكانس هيدروليكية عملاقة تترك الأثاث جافاً ومعقماً بنسبة 90%.</p>
             <p>نستخدم أيضاً أجهزة <strong>التعقيم بالبخار الجاف</strong> لقتل عث الغبار والبكتيريا، مما يضمن جودة هواء نقي وصحي.</p>
 
-            <!-- RESTORED: SECTION 3 -->
             <div class="insight-box">
                 <h4>3. حماية الأثاث بعد الغسيل (Fabric Protection) 🛡️</h4>
                 <p>لا تقتصر خدمتنا على الغسيل، بل نقدم خدمة تطبيق <strong>واقي الأقمشة (Fabric Protector/Teflon Coating)</strong>. هذا الطلاء الشفاف يغلف ألياف القماش ويمنع السوائل (مثل القهوة أو العصائر) من التغلغل داخل الإسفنج، مما يمنحك وقتاً كافياً لمسحها بمنديل جاف دون أن تترك أي بقعة بفضل تقنيات <strong>Habib Clean</strong> المتقدمة.</p>
@@ -435,9 +540,30 @@
         </article>
     </main>
 
+    <!-- =========================================
+       🔥 3 FLOATING ACTION BUTTONS & MODAL 🔥
+       ========================================= -->
     <div class="contact-container">
         <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
         <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
+        <button id="openStoryBtn" class="btn-float story-bubble" title="اقرأ قصة الصالون الملكي">
+            <span class="pulse-ring"></span>
+            📖
+        </button>
+    </div>
+
+    <!-- Centered Story Modal -->
+    <div id="centerStoryModal" class="centered-modal-overlay">
+        <div class="modal-story-box">
+            <button id="closeStoryBtn" class="close-modal-x">&times;</button>
+            <div class="story-emoji-header">🛋️👑</div>
+            <h4>كارثة صالون قصر الزمالك الحريري!</h4>
+            <p>في أحد القصور العريقة بالزمالك، استعان المالك بشركة تنظيف عشوائية لتنظيف صالون فرنسي مذهب مغطى بالحرير الطبيعي النادر.. فاستخدمت الشركة منظفات كيميائية تجارية سببت <strong>"انكماش الأنسجة وبهتان الألوان تماماً"</strong> وكاد الصالون أن يتحطّم! 💔<br><br>استعان القصر بـ <strong>Habib Clean</strong> كفرقة طوارئ أخيرة.. وبفضل بروتوكول الرغوة الجافة الفندقية وحقن مثبتات الألوان، استعاد الصالون رونقه الملكي وكأنه صُنع بالأمس! ✨</p>
+            <div class="modal-actions">
+                <a href="../thankyou-whatsapp.html" class="modal-btn-action whatsapp">💬 احجز الخدمة عبر الواتساب</a>
+                <a href="../call-thanks.html" class="modal-btn-action call">📞 اتصال مباشر بالخبراء</a>
+            </div>
+        </div>
     </div>
 
     <button id="scrollTopBtn" aria-label="العودة للأعلى" title="العودة لأعلى الصفحة">↑</button>
@@ -448,7 +574,7 @@
         <p>© 2026 جميع الحقوق محفوظة لشركة Habib Clean</p>
     </footer>
 
-    <!-- Scripts: Progress Bar, YouTube Facade, Scroll to Top & GCLID Tracking -->
+    <!-- Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Progress Bar
@@ -478,6 +604,16 @@
                     this.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${vid}?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>`;
                 });
             });
+
+            // Story Modal Logic
+            const openBtn = document.getElementById('openStoryBtn');
+            const closeBtn = document.getElementById('closeStoryBtn');
+            const modal = document.getElementById('centerStoryModal');
+
+            openBtn.addEventListener('click', () => { modal.classList.add('active'); });
+            const closeModal = () => { modal.classList.remove('active'); };
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
             // GCLID Tracking
             const urlParams = new URLSearchParams(window.location.search);
