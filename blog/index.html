@@ -130,9 +130,13 @@
         .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff; margin-left: 5px; }
         .yt-facade:hover .play-btn { background: var(--primary-dark); border: 2px solid var(--gold-accent); transform: translate(-50%, -50%) scale(1.1); }
         .video-caption { margin-top: 10px; font-weight: 700; color: #555; font-size: 0.9rem; text-align: center;}
+        
+        /* Video Grids */
+        .videos-wrapper { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;}
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
 
         /* Video Break Banners */
-        .video-break-container { max-width: 800px; margin: 50px auto; padding: 30px 20px; background: var(--white); border-radius: 15px; border: 2px dashed var(--gold-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .video-break-container { max-width: 1100px; margin: 50px auto; padding: 30px 20px; background: var(--white); border-radius: 15px; border: 2px dashed var(--gold-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .video-break-container h3 { text-align: center; color: var(--primary-dark); font-weight: 900; margin-top: 0; margin-bottom: 20px; font-size: 1.5rem; }
 
         .silo-section { margin-bottom: 60px; scroll-margin-top: 60px; content-visibility: auto; contain-intrinsic-size: 1000px; }
@@ -213,9 +217,9 @@
 
     <main class="blog-container">
 
-        <!-- Master Guide with Zero-CLS YouTube Facades -->
+        <!-- Master Guide (فيديوهين أساسيين في أعلى الصفحة) -->
         <section class="master-guide">
-            <h2>👑 الموسوعة المطلقة لإدارة وتأسيس القصور</h2>
+            <h2 style="text-align: center; color: var(--primary-dark); font-weight: 900;">👑 الموسوعة المطلقة لإدارة وتأسيس القصور</h2>
             <div class="videos-wrapper">
                 <div>
                     <div class="yt-facade" data-vid="vLGKsoqvcMY" aria-label="تشغيل فيديو جودة التنفيذ">
@@ -344,14 +348,32 @@
             </div>
         </section>
 
-        <!-- فاصل فيديو 1 -->
+        <!-- فاصل فيديو رقم 1 (يضم أول 3 فيديوهات من الستة: المعادي، بعد التشطيب، ماكينة الجلي) -->
         <div class="video-break-container">
-            <h3>شاهد جودة التنظيف الفاخر بعد التشطيب 🎥</h3>
-            <div class="yt-facade landscape-vid" data-vid="wJmtYfJFEFk" aria-label="تشغيل الفيديو">
-                <img src="https://img.youtube.com/vi/wJmtYfJFEFk/hqdefault.jpg" alt="التنظيف الفاخر وجلي الرخام" loading="lazy">
-                <div class="play-btn"></div>
+            <h3>مكتبة الأعمال المرئية 🎥</h3>
+            <div class="video-grid">
+                <div>
+                    <div class="yt-facade landscape-vid" data-vid="wJmtYfJFEFk" aria-label="تشغيل الفيديو">
+                        <img src="https://img.youtube.com/vi/wJmtYfJFEFk/hqdefault.jpg" alt="التنظيف الفاخر" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="video-caption">عملياتنا في المعادي والتجمع</p>
+                </div>
+                <div>
+                    <div class="yt-facade landscape-vid" data-vid="YuL41GWBVRk" aria-label="تشغيل الفيديو">
+                        <img src="https://img.youtube.com/vi/YuL41GWBVRk/hqdefault.jpg" alt="التنظيف بعد التشطيب" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="video-caption">الاحترافية بعد التشطيب</p>
+                </div>
+                <div>
+                    <div class="yt-facade landscape-vid" data-vid="Y_vBwczD75o" aria-label="تشغيل الفيديو">
+                        <img src="https://img.youtube.com/vi/Y_vBwczD75o/hqdefault.jpg" alt="جلي وتلميع الأرضيات بماكينة" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="video-caption">جلي وتلميع الأرضيات بماكينة</p>
+                </div>
             </div>
-            <p class="video-caption">عملياتنا في المعادي والتجمع لتسليم الفيلات</p>
         </div>
 
         <!-- قسم الأجانب (Expat) -->
@@ -449,14 +471,32 @@
             </div>
         </section>
 
-        <!-- فاصل فيديو 2 -->
+        <!-- فاصل فيديو رقم 2 (يضم باقي الـ 3 فيديوهات من الستة: التنظيف العميق، الإيبوكسي وفنادق، والشقة المغلقة) -->
         <div class="video-break-container">
-            <h3>أضخم عملية تنظيف عميق لمنزل كامل 🎥</h3>
-            <div class="yt-facade landscape-vid" data-vid="9yEXzbuYdXo" aria-label="تشغيل الفيديو">
-                <img src="https://img.youtube.com/vi/9yEXzbuYdXo/hqdefault.jpg" alt="التنظيف العميق" loading="lazy">
-                <div class="play-btn"></div>
+            <h3>التنظيف العميق وجلي الرخام الفندقي 🎥</h3>
+            <div class="video-grid">
+                <div>
+                    <div class="yt-facade landscape-vid" data-vid="9yEXzbuYdXo" aria-label="تشغيل الفيديو">
+                        <img src="https://img.youtube.com/vi/9yEXzbuYdXo/hqdefault.jpg" alt="التنظيف العميق" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="video-caption">تنظيف عميق لمنزل كامل</p>
+                </div>
+                <div>
+                    <div class="yt-facade landscape-vid" data-vid="L2m468B-96c" aria-label="تشغيل الفيديو">
+                        <img src="https://img.youtube.com/vi/L2m468B-96c/hqdefault.jpg" alt="جلي وتلميع الرخام بجودة فنادق وإيبوكسي" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="video-caption">جلي وتلميع الرخام بجودة ولمعة فنادق وإيبوكسي</p>
+                </div>
+                <div>
+                    <div class="yt-facade landscape-vid" data-vid="t_lN65LWpqE" aria-label="تشغيل الفيديو">
+                        <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="تطهير شقة مغلقة" loading="lazy">
+                        <div class="play-btn"></div>
+                    </div>
+                    <p class="video-caption">تطهير شقة مغلقة من 15 سنة</p>
+                </div>
             </div>
-            <p class="video-caption">شاهد الفرق الصادم قبل وبعد التنفيذ</p>
         </div>
 
         <!-- قسم التشطيب -->
@@ -538,16 +578,6 @@
                 </a>
             </div>
         </section>
-
-        <!-- فاصل فيديو 3 -->
-        <div class="video-break-container">
-            <h3>تحدي إحياء الشقق المغلقة 🎥</h3>
-            <div class="yt-facade landscape-vid" data-vid="t_lN65LWpqE" aria-label="تشغيل الفيديو">
-                <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="تنظيف شقة مغلقة" loading="lazy">
-                <div class="play-btn"></div>
-            </div>
-            <p class="video-caption">التطهير البيولوجي لوحدات مغلقة من 15 سنة</p>
-        </div>
 
         <!-- قسم الرخام -->
         <section class="silo-section" id="section-marble">
@@ -791,7 +821,7 @@
     <footer>
         <strong>HABIB CLEAN</strong>
         <p>الكيان الهندسي الأول لإدارة الأصول، جلي الرخام، والتعقيم في مصر.</p>
-        <p>© 2026 جميع الحقوق محفوظة</p>
+        <p>© 2026 جميع الحقوق محفوظة لشركة Habib Clean</p>
     </footer>
 
     <script>
@@ -853,6 +883,12 @@
                             videos.forEach(vid => {
                                 vid.style.display = (val.length > 0) ? 'none' : 'block';
                             });
+                            
+                            // إخفاء الـ Master Guide وقت البحث
+                            const masterGuide = document.querySelector('.master-guide');
+                            if(masterGuide) {
+                                masterGuide.style.display = (val.length > 0) ? 'none' : 'block';
+                            }
                         });
                     }, 300);
                 });
