@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event:'gtm.js'
-            });
-            var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),
-            dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '3076333772698182');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0b0e">
+    <meta name="theme-color" content="#171717">
     
-    <!-- 1. SEO Keyword Injection -->
+    <!-- DNS Prefetch & Preconnect (المرجع الفتاك V2.0) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+
+    <!-- Preload Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
+
+    <!-- Delayed GTM & Meta Pixel for Lightning Speed -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var trackingLoaded = false;
+        function loadTracking() {
+          if (trackingLoaded) return;
+          trackingLoaded = true;
+          
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');
+
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '3076333772698182'); fbq('track', 'PageView');
+        }
+
+        function scheduleTracking() {
+          if (trackingLoaded) return;
+          if (window.requestIdleCallback) window.requestIdleCallback(loadTracking, { timeout: 2000 });
+          else setTimeout(loadTracking, 200);
+        }
+
+        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
+          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
+        });
+
+        setTimeout(scheduleTracking, 7000);
+      });
+    </script>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
+    </noscript>
+
+    <!-- SEO Meta Tags -->
     <title>البروتوكول الهندسي لتنظيف الفيلات بعد التشطيب | Habib Clean</title>
     <meta name="description" content="دليل Habib Clean، افضل شركة تنظيف لتأسيس القصور والفيلات بعد التشطيب. بروتوكولات حماية الديكورات، تلميع الباركيه، والتعقيم العميق.">
-    <meta name="keywords" content="تنظيف بعد التشطيب, شركة تنظيف بعد التشطيب, افضل شركة تنظيف, شركات تنظيف منازل, تنظيف فيلات التجمع الخامس, تلميع باركيه, تأسيس القصور, Habib Clean">
+    <meta name="keywords" content="تنظيف بعد التشطيب, شركة تنظيف بعد التشطيب, افضل شركة تنظيف, تنظيف فيلات التجمع الخامس, تلميع باركيه, تأسيس القصور, Habib Clean">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
     <link rel="canonical" href="https://habib-clean.com/blog/blog42-post-construction-vip-protocol.html">
     <link rel="icon" href="https://habib-clean.com/logo.png" type="image/png">
 
@@ -53,17 +61,12 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://habib-clean.com/blog/blog42-post-construction-vip-protocol.html">
     <meta property="og:title" content="حماية ديكورات الفيلات الفاخرة بعد التشطيب | Habib Clean">
-    <meta property="og:description" content="المرجع الهندسي لتنظيف العقارات الفاخرة وتلميع الباركيه بعد انتهاء أعمال المقاولات مع افضل شركة تنظيف بمصر.">
-    <meta property="og:image" content="https://habib-clean.com/FB_IMG_1737376278247.jpg">
+    <meta property="og:description" content="المرجع الهندسي لتنظيف العقارات الفاخرة وتلميع الباركيه بعد انتهاء أعمال المقاولات مع Habib Clean.">
+    <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-
-    <!-- Schema Markup -->
+    <!-- God-Tier Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -72,9 +75,9 @@
           "@type": "LocalBusiness",
           "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
-          "image": "https://habib-clean.com/logo.png",
+          "url": "https://habib-clean.com/",
+          "logo": "https://habib-clean.com/logo.png",
           "telephone": "01016961497",
-          "url": "https://habib-clean.com",
           "description": "الكيان الهندسي الأول لإدارة المرافق، تأسيس القصور، والنظافة الفندقية العميقة.",
           "address": {
             "@type": "PostalAddress",
@@ -82,20 +85,7 @@
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
           },
-          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "6th of October"],
-          "sameAs": [
-            "https://share.google/umb4679rea0EcsZk0",
-            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
-            "https://www.youtube.com/@Elhbeb"
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "بروتوكول تنظيف الفيلات بعد التشطيب", "item": "https://habib-clean.com/blog/blog42-post-construction-vip-protocol.html" }
-          ]
+          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "6th of October"]
         },
         {
           "@type": "Article",
@@ -106,7 +96,7 @@
           "author": { "@id": "https://habib-clean.com/#organization" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
-          "dateModified": "2026-08-03T06:30:00+02:00",
+          "dateModified": "2026-08-05T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog42-post-construction-vip-protocol.html"
         },
         {
@@ -144,28 +134,24 @@
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Cairo', Arial, sans-serif;
+            margin: 0;
             background-color: var(--light-bg);
             color: var(--text-dark);
-            line-height: 1.85;
-            margin: 0;
-            padding: 0;
+            line-height: 1.95;
             direction: rtl;
-            -webkit-font-smoothing: antialiased;
             text-align: right;
-            padding-bottom: 70px;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 80px;
         }
 
-        /* Progress Bar */
         .progress-container { width: 100%; height: 4px; background: #222; position: fixed; top: 0; z-index: 9999; }
         .progress-bar { height: 4px; background: var(--gold-accent); width: 0%; transition: width 0.1s ease-out; }
 
-        /* Visual Breadcrumb */
         .visual-breadcrumb { 
             background: var(--white); padding: 12px 20px; font-size: 0.95rem; font-weight: 700; color: #777; text-align: center; border-bottom: 1px solid #eaeaea; position: relative; z-index: 100;
         }
-        .visual-breadcrumb a { color: var(--gold-accent); text-decoration: none; transition: 0.2s;}
-        .visual-breadcrumb a:hover { color: var(--primary-dark); }
+        .visual-breadcrumb a { color: var(--gold-accent); text-decoration: none; }
         .visual-breadcrumb span { margin: 0 8px; color: #ccc; }
 
         header.article-header {
@@ -177,35 +163,33 @@
         }
 
         header.article-header h1 { 
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: clamp(28px, 5vw, 42px); 
             font-weight: 700; 
             margin-bottom: 15px; 
             color: var(--gold-accent);
             line-height: 1.3;
         }
-        header.article-header p { font-weight: 300; font-size: 18px; opacity: 0.9; max-width: 800px; margin: 0 auto;}
+        header.article-header p { font-weight: 300; font-size: 18px; opacity: 0.9; max-width: 800px; margin: 0 auto; }
 
         .article-container {
             max-width: 1000px;
-            margin: -40px auto 80px;
+            margin: -30px auto 40px;
             background: var(--white);
             padding: clamp(30px, 5vw, 60px);
-            border-radius: 0;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            border-radius: 12px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.05);
             border: 1px solid #eaeaea;
+            position: relative;
+            z-index: 10;
         }
 
-        /* GEO Semantic Block */
-        .geo-block { background: rgba(197, 160, 89, 0.08); border-right: 5px solid var(--gold-accent); padding: 25px; border-radius: 8px 0 0 8px; margin-bottom: 40px; font-weight: 700; color: var(--primary-dark); font-size: 1.1rem; line-height: 1.8;}
-
-        /* Human Story Block (Emotional & Keyword Rich) */
-        .story-block { background: var(--story-bg); border-right: 5px solid var(--story-border); padding: 40px; margin: 50px 0; border-radius: 0 12px 12px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.06); position: relative; }
+        .geo-block { background: rgba(197, 160, 89, 0.08); border-right: 5px solid var(--gold-accent); padding: 25px; border-radius: 8px 0 0 8px; margin-bottom: 40px; font-weight: 700; color: var(--primary-dark); }
+        
+        .story-block { background: var(--story-bg); border-right: 5px solid var(--story-border); padding: 40px; margin: 40px 0; border-radius: 0 12px 12px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.06); position: relative; }
         .story-block::before { content: "“"; font-family: serif; font-size: 80px; color: rgba(197, 160, 89, 0.2); position: absolute; top: 10px; right: 20px; line-height: 1; }
-        .story-block h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin-top: 0; margin-bottom: 20px; position: relative; z-index: 2;}
-        .story-block p { color: #444; font-size: 18px; line-height: 1.95; text-align: justify; margin-bottom: 20px; position: relative; z-index: 2;}
-        .story-block p strong { color: var(--gold-accent); font-weight: 900; }
-        .story-block p:last-child { margin-bottom: 0; }
+        .story-block h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin-top: 0; margin-bottom: 20px; }
+        .story-block p { color: #444; font-size: 18px; line-height: 1.95; text-align: justify; margin-bottom: 20px; }
 
         h2 { 
             color: var(--primary-dark); 
@@ -219,59 +203,55 @@
             padding-bottom: 10px;
         }
 
-        h3 { color: var(--gold-accent); font-size: 22px; font-weight: 800; margin: 30px 0 15px; }
         p { font-size: 1.05rem; margin-bottom: 22px; color: #444; text-align: justify; }
         ul { padding-right: 20px; font-size: 1.05rem; color: #444; margin-bottom: 25px;}
         li { margin-bottom: 12px; position: relative; list-style: none; padding-right: 25px;}
         li::before { content: "✦"; position: absolute; right: 0; color: var(--gold-accent); font-weight: bold; }
 
-        /* SPEED OPTIMIZED YOUTUBE FACADES */
-        .video-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 40px 0; }
-        .video-box { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); transition: 0.3s;}
-        .video-box:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.08);}
-        .video-box h4 { font-size: 16px; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-weight: 800; }
+        /* YouTube Facade Matrix */
+        .video-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
+        .video-box { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); }
+        .video-box h4 { font-size: 15px; color: var(--primary-dark); text-align: center; margin-bottom: 12px; font-weight: 800; }
         
-        .yt-facade { position: relative; width: 100%; background: #000; border-radius: 8px; overflow: hidden; cursor: pointer; border: 2px solid var(--gold-accent); contain: content; }
-        .yt-facade.landscape { aspect-ratio: 16/9; }
-        .yt-facade.portrait { aspect-ratio: 9/16; max-width: 260px; margin: 0 auto; }
+        .yt-facade { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 8px; overflow: hidden; cursor: pointer; border: 2px solid var(--gold-accent); contain: content; }
         .yt-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.3s; }
-        .yt-facade:hover img { opacity: 1; transform: scale(1.05); }
-        .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 55px; height: 55px; background: rgba(197, 160, 89, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
-        .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff; margin-left: 6px; }
-        .yt-facade:hover .play-btn { background: var(--primary-dark); border: 2px solid var(--gold-accent); transform: translate(-50%, -50%) scale(1.1); }
+        .yt-facade:hover img { opacity: 1; transform: scale(1.02); }
+        .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(197, 160, 89, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+        .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 10px 0 10px 18px; border-color: transparent transparent transparent #fff; margin-left: 4px; }
 
-        /* CTA Box */
-        .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #222 100%); padding: 45px 30px; margin-top: 50px; text-align: center; border-radius: 12px; color: #fff; border-bottom: 4px solid var(--gold-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.15);}
-        .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 24px; font-weight: 900;}
-        .cta-box p { color: #ccc; font-size: 17px; margin-bottom: 30px;}
-        .btn-whatsapp-cta { display: inline-block; background: #25D366; color: #fff; padding: 16px 40px; font-weight: 900; font-size: 19px; text-decoration: none; border-radius: 50px; transition: 0.3s; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);}
-        .btn-whatsapp-cta:hover { background: #1ebe57; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);}
+        .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #222 100%); padding: 45px 30px; margin-top: 50px; text-align: center; border-radius: 12px; color: #fff; border-bottom: 4px solid var(--gold-accent); }
+        .btn-whatsapp-cta { display: inline-block; background: var(--whatsapp-green); color: #fff; padding: 16px 40px; font-weight: 900; font-size: 19px; text-decoration: none; border-radius: 50px; }
 
-        /* Floating Contact & Scroll to Top */
-        .contact-container { position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
-        .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: 0.3s; border: 1px solid var(--gold-accent); }
-        .btn-float.whatsapp { background-color: #25D366; border-color: #25D366; }
+        /* Floating Contact & Story Bubble */
+        .contact-container { position: fixed; bottom: 25px; left: 25px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
+        .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border: 2px solid var(--gold-accent); cursor: pointer; }
+        .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
         .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
-        .btn-float:hover { transform: scale(1.08); }
+        .btn-float.story-bubble { background: linear-gradient(135deg, #171717 0%, #333 100%); color: var(--gold-accent); position: relative; animation: floatBubble 3s ease-in-out infinite; font-size: 22px; }
+        
+        .pulse-ring { position: absolute; top: -5px; right: -5px; bottom: -5px; left: -5px; border: 2px solid var(--gold-accent); border-radius: 50%; animation: pulseAnim 2s infinite; opacity: 0.8; pointer-events: none; }
+        @keyframes pulseAnim { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.15); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
+        @keyframes floatBubble { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
 
-        #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(212,175,55,0.4); display: flex; justify-content: center; align-items: center;}
+        /* Centered Story Modal */
+        .centered-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 11, 14, 0.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .centered-modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-story-box { background: #fff; width: 90%; max-width: 500px; padding: 40px; border-radius: 20px; border-top: 6px solid var(--gold-accent); box-shadow: 0 30px 60px rgba(0,0,0,0.4); position: relative; text-align: center; transform: scale(0.8) translateY(30px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .centered-modal-overlay.active .modal-story-box { transform: scale(1) translateY(0); }
+        .close-modal-x { position: absolute; top: 15px; left: 20px; background: none; border: none; font-size: 30px; color: #999; cursor: pointer; transition: 0.2s; }
+        .close-modal-x:hover { color: #d32f2f; transform: rotate(90deg); }
+        .story-emoji-header { font-size: 50px; margin-bottom: 10px; }
+        .modal-story-box h4 { color: var(--primary-dark); font-size: 26px; font-weight: 900; margin: 0 0 15px 0; }
+        .modal-story-box p { color: #555; font-size: 17px; line-height: 1.8; margin-bottom: 25px; text-align: right; }
+        .modal-actions { display: flex; gap: 10px; }
+        .modal-btn-action { flex: 1; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: 900; font-size: 16px; text-align: center; }
+        .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
+        .modal-btn-action.call { background: var(--primary-dark); color: var(--gold-accent); border: 1px solid var(--gold-accent); }
+
+        #scrollTopBtn { position: fixed; bottom: 90px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 45px; height: 45px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; display: flex; justify-content: center; align-items: center;}
         #scrollTopBtn.show { opacity: 1; visibility: visible; }
 
-        /* Omni-Spiderweb Footer */
-        footer { background: var(--secondary-dark); color: #ccc; padding: 60px 20px; text-align: center; border-top: 3px solid var(--gold-accent); }
-        .spiderweb-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 25px; }
-        .spiderweb-nav a { color: var(--gold-accent); font-weight: 600; text-decoration: none; padding: 8px 20px; border: 1px solid rgba(197, 160, 89, 0.3); border-radius: 30px; transition: 0.3s; font-size: 0.95rem;}
-        .spiderweb-nav a:hover { background: var(--gold-accent); color: var(--primary-dark); }
-        footer strong { display: block; color: var(--gold-accent); font-size: 26px; margin-bottom: 10px; font-family: 'Playfair Display', serif; letter-spacing: 2px;}
-
-        @media (max-width: 768px) {
-            .article-container { padding: 30px 15px; margin-top: -20px; }
-            header.article-header { padding: 50px 15px; }
-            .video-matrix { grid-template-columns: 1fr; }
-            .contact-container { left: 50%; transform: translateX(-50%); flex-direction: row; width: auto; justify-content: center; bottom: 15px; background: rgba(255,255,255,0.9); padding: 10px 20px; border-radius: 30px; border: 1px solid var(--gold-accent); }
-            .btn-float { width: 45px; height: 45px; font-size: 20px;}
-            #scrollTopBtn { bottom: 80px; right: 15px; width: 45px; height: 45px;}
-        }
+        footer { background: var(--secondary-dark); color: #888; padding: 50px 20px; text-align: center; border-top: 3px solid var(--gold-accent); }
     </style>
 </head>
 
@@ -281,7 +261,6 @@
     
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
-    <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
         <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> بروتوكول تأسيس الفيلات
     </nav>
@@ -293,82 +272,54 @@
 
     <main class="article-container">
         
-        <!-- GEO Semantic Block -->
         <div class="geo-block">
-            "تُنفذ هذه الأعمال وفقاً للبروتوكولات الهندسية المعتمدة لشركة <strong>Habib Clean</strong> في القاهرة الكبرى (المعادي، التجمع الخامس، الشيخ زايد، العاصمة الإدارية)، باستخدام معدات الجلي بالألماس، تقنية الوصول بالحبال (Rope Access)، والمحاليل الفندقية المخصصة لحماية العقارات الفاخرة والقصور ضد عوامل الأكسدة والترسبات الناتجة عن أعمال المقاولات."
+            "تُنفذ هذه الأعمال وفقاً للبروتوكولات الهندسية المعتمدة لشركة <strong>Habib Clean</strong> في القاهرة الكبرى (المعادي، التجمع الخامس، الشيخ زايد، العاصمة الإدارية)، باستخدام معدات الجلي بالألماس والمحاليل الفندقية المخصصة لحماية العقارات الفاخرة."
         </div>
 
-        <!-- Human Story Block (Emotional & Keyword Rich) -->
+        <!-- Human Story Block -->
         <div class="story-block">
-            <h3>كابوس اللحظة الأخيرة: كيف أنقذنا قصراً في التجمع الخامس من كارثة التشطيب؟</h3>
-            <p>يحيى، مهندس مقاولات ناجح، أنفق أكثر من خمس سنوات من عمره ليبني قصر أحلامه في <strong>تنظيف فيلات التجمع الخامس</strong>. وعندما انتهت أعمال الدهانات والرخام، استلم الموقع وكان يتوقع أن يرى لوحة فنية مبهرة. بدلاً من ذلك، وقف مذهولاً من هول الكارثة: عمالة غير مدرّبة تركت بقع أسمنت متحجرة فوق الرخام المستورد، وغطت أتربة السيليكا الدقيقة كل أركان الفيلا، بينما تسببت مياه الغسيل العشوائية في تقوس الأبواب الأرو الخشبية الغالية. كان الإحباط يسيطر عليه تماماً خاصة وأن حفل انتقال عائلته كان مقرر لها بعد أسبوع واحد فقط.</p>
+            <h3>أنقذنا قصر التجمع: عندما التقى العميل الخبير بأفضل مهندسي التنظيف</h3>
+            <p>بعد إنفاق الملايين في الديكورات الفاخرة بقصره في التجمع الخامس، واجه مالك العقار معضلة كبرى: عمالة غير مدرّبة كادت تترك خدوشاً دائمة برخام الاستقبال وتتسبب في تقوس الأخشاب بالمياه. استعان المالك فوراً بالهيئة الهندسية لـ <strong>Habib Clean</strong>.</p>
             
-            <p>في تلك اللحظة الحرجة، تواصل مع فريق <strong>Habib Clean</strong>، المعروفة كـ <strong>افضل شركة تنظيف</strong> في مصر. فريقنا الهندسي تحرك فوراً لمعاينة الموقع، وقام بتطبيق أحدث معايير <strong>تنظيف بعد التشطيب</strong>. بدأنا بـ الشفط الجاف الشامل لحماية الأجهزة ومجاري التكييف، ثم استخدمنا مذيبات أسمنتية بـ pH متوازن لإزالة المخلفات دون خدش، ونفذنا بروتوكول <strong>تلميع باركيه</strong> والأخشاب بالشمع الطبيعي لتغذيتها وحمايتها من التقوس.</p>
-
-            <p>سواء كنت تبحث عن <strong>شركة تنظيف بعد التشطيب</strong> محترفة، أو ترغب في <strong>تأسيس القصور</strong> وخدمات <strong>شركات تنظيف منازل</strong> فاخرة، فإن حبيب كلين تقدم أعلى معايير الجودة الفندقية. نحن نضمن لك عملاً يضاهي كبرى الشركات العالمية في <strong>جلي رخام بالقاهرة</strong>، وإزالة تامة لـ <strong>إزالة بقع الأسمنت والدهانات</strong> بأسعار تنافسية عند مقارنة <strong>أسعار شركات النظافة</strong>، مع توفير خدمات <strong>شركة تعقيم منازل القاهرة</strong> المتكاملة لضمان بيئة صحية نقية لعائلتك.</p>
+            <p>تدخل فريقنا كطوارئ هندسية لتطبيق بروتوكول <strong>تنظيف بعد التشطيب</strong> الحصري: الشفط الجاف لحماية مجاري التكييف، إزالة الأسمنت بمذيبات pH متوازنة، و<strong>تلميع باركيه</strong> بالشمع الطبيعي. النتيجة؟ استعادة اللمعان الملكي للقصر في زمن قياسي.</p>
         </div>
 
-        <h2>الكارثة الخفية: لماذا تتدمر الديكورات بعد التشطيب؟</h2>
-        <p>مرحلة التشطيب هي استثمار بالملايين، ولكن الخطوة التي تليها وهي "التنظيف" قد تكون الكارثة التي تدمر هذا الاستثمار. الاعتماد على العمالة العشوائية، أو <strong>شركات تنظيف منازل</strong> غير معتمدة يؤدي إلى استخدام مياه غزيرة ومواد كيميائية حارقة لإزالة الأسمنت، مما ينتج عنه:</p>
+        <h2>الوقاية الهندسية قبل تسليم العقار</h2>
+        <p>مرحلة ما بعد المقاولات تتطلب حرصاً جباراً وحماية قصوى للاستثمارات. الاعتماد على الشركات العادية يهدد الديكورات بالتلف الحتمي.</p>
         
         <ul>
-            <li>تقوس الأبواب الخشبية والباركيه الطبيعي بسبب تشرب المياه.</li>
-            <li>إطفاء لمعة الرخام الإيطالي والإسباني وحدوث حفر حمضية في سطحه.</li>
-            <li>تأكسد الإطارات الألوميتال والمقابض الذهبية وتغير لونها.</li>
+            <li>منع تقوس الأبواب الخشبية والباركيه باستخدام محاليل شبه جافة.</li>
+            <li>الحفاظ على معايير اللمعان للرخام الإيطالي.</li>
+            <li>حماية الألوميتال والمقابض من الأكسدة والتآكل.</li>
         </ul>
 
-        <!-- Video Matrix 1 (Landscape) -->
+        <!-- Video Matrix: Real Work Showcase -->
         <div class="video-matrix">
             <div class="video-box">
-                <h4>جودة التنظيف الفندقي بعد التشطيب</h4>
-                <div class="yt-facade landscape" data-vid="vLGKsoqvcMY" aria-label="تشغيل فيديو جودة التنظيف الفندقي">
-                    <img src="https://img.youtube.com/vi/vLGKsoqvcMY/hqdefault.jpg" alt="جودة خدمات التنظيف بعد التشطيب" loading="lazy">
+                <h4>معايير التنظيف الفندقي</h4>
+                <div class="yt-facade landscape" data-vid="vLGKsoqvcMY" aria-label="تشغيل فيديو جودة التنظيف">
+                    <img src="https://img.youtube.com/vi/vLGKsoqvcMY/hqdefault.jpg" alt="جودة التنظيف الفندقي" loading="lazy">
                     <div class="play-btn"></div>
                 </div>
             </div>
             <div class="video-box">
-                <h4>التعقيم العميق (Deep Clean)</h4>
-                <div class="yt-facade landscape" data-vid="kAWCydKxB3U" aria-label="تشغيل فيديو التعقيم العميق">
-                    <img src="https://img.youtube.com/vi/kAWCydKxB3U/hqdefault.jpg" alt="التعقيم العميق للفيلات" loading="lazy">
-                    <div class="play-btn"></div>
-                </div>
-            </div>
-        </div>
-
-        <h2>بروتوكول Habib Clean لتأسيس القصور (V.I.P)</h2>
-        <p>بصفتنا <strong>افضل شركة تنظيف</strong>، نحن لا نقدم خدمة تنظيف عادية، بل نقدم خدمة "تأسيس هندسي" للعقار قبل السكن، وتشمل عدة مراحل دقيقة من أهم خدمات <strong>شركة تنظيف بعد التشطيب</strong>:</p>
-        
-        <h3>1. الشفط الصناعي الدقيق</h3>
-        <p>قبل استخدام أي قطرة ماء، نستخدم ماكينات الشفط الصناعي ثلاثية المواتير لسحب الأتربة الدقيقة من مسارات الألوميتال، مجاري التكييف المركزي، وفوق الأسقف المعلقة لحماية مجرى التنفس ومنع تحول التراب إلى طين.</p>
-
-        <h3>2. العناية التخصصية بالأخشاب والباركيه</h3>
-        <p>تتم إزالة آثار الدهانات من الأبواب الأرو والباركيه باستخدام محاليل آمنة لا تؤثر على طبقة (الورنيش) الأصلية. ثم ننتقل لمرحلة التغذية الحيوية.</p>
-
-        <!-- Video Matrix 2 (Landscape / Portrait) -->
-        <div class="video-matrix">
-            <div class="video-box">
-                <h4>تلميع الباركيه والأخشاب بالشمع</h4>
+                <h4>تلميع الأخشاب والباركيه</h4>
                 <div class="yt-facade landscape" data-vid="5B5yFhxZjSM" aria-label="تشغيل فيديو تلميع الباركيه">
-                    <img src="https://img.youtube.com/vi/5B5yFhxZjSM/hqdefault.jpg" alt="تلميع الباركيه والأخشاب" loading="lazy">
-                    <div class="play-btn"></div>
-                </div>
-            </div>
-            <div class="video-box">
-                <h4>تحول الموقع (قبل وبعد التشطيب)</h4>
-                <div class="yt-facade portrait" data-vid="B7BJOEUEIqw" aria-label="تشغيل فيديو تحول الموقع">
-                    <img src="https://img.youtube.com/vi/B7BJOEUEIqw/hqdefault.jpg" alt="تحول الموقع قبل وبعد التنظيف" loading="lazy">
+                    <img src="https://img.youtube.com/vi/5B5yFhxZjSM/hqdefault.jpg" alt="تلميع الباركيه" loading="lazy">
                     <div class="play-btn"></div>
                 </div>
             </div>
         </div>
 
-        <h3>3. إزالة الأسمنت وتأهيل الأرضيات</h3>
-        <p>سواء كانت أرضياتك من البورسلين أو الرخام الفاخر، نستخدم شفرات طبية ومذيبات أسمنتية آمنة (pH متوازن) لتفكيك البقع الصعبة دون خدش السطح، تمهيداً لعمليات التلميع والجلي المتقدمة بالألماس إذا لزم الأمر.</p>
+        <h2>خطوات تطبيق البروتوكول الملكي</h2>
+        <p>بصفتنا <strong>افضل شركة تنظيف</strong>، نعتمد على خطوات متسلسلة تضمن خلو العقار من أي أتربة أو بقايا إنشائية:</p>
+        
+        <h3>1. الشفط الصناعي الجاف</h3>
+        <p>سحب أتربة السيليكا الناعمة من الزوايا ومجاري التكييف لحماية الجهاز التنفسي والأسطح قبل أي تعامل مائي.</p>
 
-        <h2>الخلاصة للعميل الراقي</h2>
-        <p>عقارك ليس حقل تجارب لعمالة غير مدربة. لحماية ديكوراتك وتوفير مئات الآلاف من الجنيهات في صيانات مستقبلية، يجب تسليم العقار لكيان هندسي يعي قيمة الخامات المستخدمة.</p>
+        <h3>2. معالجة الأسمنت والدهانات</h3>
+        <p>استخدام أدوات ومذيبات متوازنة تذيب بقايا البناء دون أي ضرر للأسطح المجاورة.</p>
 
-        <!-- CTA Box -->
         <div class="cta-box">
             <h3>هل فيلتك جاهزة لتطبيق البروتوكول الهندسي؟</h3>
             <p>لا تجازف باستثماراتك. تواصل مع مهندسي Habib Clean اليوم للحصول على استشارة ومعاينة مجانية.</p>
@@ -377,35 +328,39 @@
 
     </main>
 
-    <!-- Floating Action Buttons -->
+    <!-- Floating Action Buttons & Story Modal -->
     <div class="contact-container">
-        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
         <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
+        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
+        <button id="openStoryBtn" class="btn-float story-bubble" title="قصة قصر التجمع">
+            <span class="pulse-ring"></span>
+            🤫
+        </button>
     </div>
 
-    <!-- Scroll to Top Button -->
+    <!-- Centered Story Modal -->
+    <div id="centerStoryModal" class="centered-modal-overlay">
+        <div class="modal-story-box">
+            <button id="closeStoryBtn" class="close-modal-x">&times;</button>
+            <div class="story-emoji-header">🏰💎</div>
+            <h4>إنقاذ قصر التجمع الخامس في اللحظات الأخيرة!</h4>
+            <p>كاد مالك قصر فخم بالتجمع أن يفقد استثمارات ديكورية بالملايين بسبب عمالة غير مدرّبة استخدمت مياه غزيرة دمرت الباركيه.. حتى تدخلت الهيئة الهندسية لـ <strong>Habib Clean</strong> بخبرة تأسيس القصور وجلي الألماس، ليعود القصر لتحفة فنية ناطقة بالفخامة! ✨👑</p>
+            <div class="modal-actions">
+                <a href="../thankyou-whatsapp.html" class="modal-btn-action whatsapp">💬 حجز خدمة تأسيس القصور</a>
+                <a href="../call-thanks.html" class="modal-btn-action call">📞 اتصال بالخبراء</a>
+            </div>
+        </div>
+    </div>
+
     <button id="scrollTopBtn" aria-label="العودة للأعلى" title="العودة لأعلى الصفحة">↑</button>
 
     <footer>
-        <strong>HABIB CLEAN</strong>
-        <p>المكتبة الهندسية الأكبر في الشرق الأوسط لإدارة الأصول والتعقيم الفندقي.</p>
-        
-        <!-- Omni-Spiderweb Links -->
-        <div class="spiderweb-nav">
-            <a href="../index.html">الرئيسية</a>
-            <a href="../habib-marble-master.html">جلي وتلميع الرخام VIP</a>
-            <a href="../glass-facade-cleaning.html">تنظيف الواجهات الزجاجية</a>
-            <a href="../services.html">الخدمات العامة</a>
-            <a href="blog80-cairo-greater-new-cairo-master-hub.html">أرشيف المدونة</a>
-        </div>
-        
-        <p>© 2026 جميع الحقوق محفوظة لشركة Habib Clean</p>
+        <strong style="font-family: 'Playfair Display', serif; color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 10px;">HABIB CLEAN</strong>
+        <p>© 2026 جميع الحقوق محفوظة لشركة Habib Clean | المرجع الهندسي لتنظيف الفيلات</p>
     </footer>
 
-    <!-- Scripts: Progress Bar, YouTube Facade, Scroll to Top & GCLID Tracking -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Progress Bar
             window.addEventListener('scroll', function() {
                 var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -413,7 +368,13 @@
                 document.getElementById("myBar").style.width = scrolled + "%";
             }, { passive: true });
 
-            // YouTube Facade Loader
+            const topBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) topBtn.classList.add('show');
+                else topBtn.classList.remove('show');
+            }, { passive: true });
+            topBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
             const facades = document.querySelectorAll('.yt-facade');
             facades.forEach(facade => {
                 facade.addEventListener('click', function() {
@@ -422,25 +383,22 @@
                 });
             });
 
-            // Scroll To Top Logic
-            const topBtn = document.getElementById('scrollTopBtn');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) topBtn.classList.add('show');
-                else topBtn.classList.remove('show');
-            }, { passive: true });
+            const openBtn = document.getElementById('openStoryBtn');
+            const closeBtn = document.getElementById('closeStoryBtn');
+            const modal = document.getElementById('centerStoryModal');
+            openBtn.addEventListener('click', () => { modal.classList.add('active'); });
+            const closeModal = () => { modal.classList.remove('active'); };
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-            topBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // GCLID Tracking
             const urlParams = new URLSearchParams(window.location.search);
-            const gclid = urlParams.get('gclid');
+            const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
             if (gclid) {
+                sessionStorage.setItem("gclid_val", gclid);
                 document.querySelectorAll('a').forEach(link => {
-                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#')) {
+                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
                         const separator = link.href.includes('?') ? '&' : '?';
-                        link.href += separator + 'gclid=' + gclid;
+                        link.href += separator + 'gclid=' + encodeURIComponent(gclid);
                     }
                 });
             }
