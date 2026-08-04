@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '3076333772698182');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1"/></noscript>
-    <!-- End Meta Pixel Code -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0a0b0e">
     
-    <!-- DNS Prefetch & Preconnect -->
+    <!-- DNS Prefetch & Preconnect (السرعة الخارقة) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://www.youtube.com">
 
     <!-- Preload Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
 
+    <!-- Delayed Tracking Scripts (سر الـ 100/100 PageSpeed) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var trackingLoaded = false;
+        function loadTracking() {
+          if (trackingLoaded) return;
+          trackingLoaded = true;
+          
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');
+
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '3076333772698182'); fbq('track', 'PageView');
+        }
+
+        function scheduleTracking() {
+          if (trackingLoaded) return;
+          if (window.requestIdleCallback) window.requestIdleCallback(loadTracking, { timeout: 2000 });
+          else setTimeout(loadTracking, 200);
+        }
+
+        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
+          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
+        });
+
+        setTimeout(scheduleTracking, 7000);
+      });
+    </script>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
+    </noscript>
+
     <!-- Ultimate High-Volume SEO Meta Tags -->
     <title>ترميم الأخشاب والباركيه في الشقق المغلقة | Habib Clean افضل شركة تنظيف منازل</title>
     <meta name="description" content="الدليل الهندسي لإنقاذ الأرضيات الخشبية (الباركيه والـ HDF) والأبواب من الرطوبة مع Habib Clean، افضل شركة تنظيف منازل في القاهرة. Cleaning company near me.">
     <meta name="keywords" content="افضل شركة تنظيف منازل, شركة تنظيف في القاهرة, شركة تنظيف قريبة مني, cleaning company near me, best cleaning company in Cairo, صيانة الباركيه, تلميع الخشب, تنظيف HDF, ترميم الأبواب, Habib Clean">
+    <meta name="author" content="Habib Clean">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <!-- Local SEO Meta Tags -->
@@ -62,11 +69,11 @@
     <meta property="og:url" content="https://habib-clean.com/blog/blog36-ترميم-الأخشاب-والباركيه-في-الشقق-المغلقة.html">
     <meta property="og:title" content="ترميم وصيانة الأخشاب والباركيه في الشقق المغلقة | Habib Clean">
     <meta property="og:description" content="كيف تحمي أرضيات الباركيه والأبواب من دمار الرطوبة في العقارات المهجورة مع افضل شركة تنظيف في القاهرة؟">
-    <meta property="og:image" content="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png">
+    <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
 
-    <!-- Advanced Combined Schema (ISO 8601 Fixed + Integrated Graph) -->
+    <!-- Advanced Combined Schema (God-Tier Graph) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,7 +82,7 @@
           "@type": "LocalBusiness",
           "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
-          "image": "https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png",
+          "image": "https://habib-clean.com/logo.png",
           "telephone": "+201016961497",
           "url": "https://habib-clean.com",
           "description": "المرجع الأكبر والكيان الهندسي الأول في الشرق الأوسط لإدارة المرافق، تأسيس القصور، جلي الرخام، وتنظيف الواجهات.",
@@ -109,7 +116,7 @@
           "author": { "@id": "https://habib-clean.com/#organization" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-03-20T12:00:00+02:00",
-          "dateModified": "2026-08-02T20:00:00+02:00",
+          "dateModified": "2026-08-05T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog36-ترميم-الأخشاب-والباركيه-في-الشقق-المغلقة.html"
         },
         {
@@ -156,7 +163,7 @@
             --wood-accent: #a04000;
             --highlight-bg: #fdf2e9;
             --whatsapp-green: #25D366;
-            --story-bg: #fdfdfd;
+            --transition-speed: 0.3s;
         }
 
         html { scroll-behavior: smooth; }
@@ -165,17 +172,17 @@
             font-family: 'Cairo', sans-serif;
             background-color: var(--light-bg);
             color: var(--text-dark);
-            line-height: 1.9;
+            line-height: 1.95;
             margin: 0;
             padding: 0;
             direction: rtl;
             -webkit-font-smoothing: antialiased;
             text-align: right;
-            padding-bottom: 70px;
+            padding-bottom: 80px;
         }
 
         /* Progress Bar */
-        .progress-container { width: 100%; height: 4px; background: #ccc; position: fixed; top: 0; z-index: 9999; }
+        .progress-container { width: 100%; height: 4px; background: #222; position: fixed; top: 0; z-index: 9999; }
         .progress-bar { height: 4px; background: var(--gold-accent); width: 0%; transition: width 0.1s ease-out; }
 
         /* Visual Breadcrumb */
@@ -209,18 +216,12 @@
             margin: -40px auto 80px;
             background: var(--white);
             padding: clamp(30px, 5vw, 60px);
-            border-radius: 0;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            border-radius: 12px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.05);
             border: 1px solid #eaeaea;
+            position: relative;
+            z-index: 10;
         }
-
-        /* HUMAN STORY BLOCK */
-        .story-block { background: var(--story-bg); border-right: 6px solid var(--gold-accent); padding: 45px; margin: 40px 0; border-radius: 0 16px 16px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.06); position: relative; }
-        .story-block::before { content: "“"; font-family: serif; font-size: 90px; color: rgba(197, 160, 89, 0.2); position: absolute; top: 10px; right: 25px; line-height: 1; }
-        .story-block h3 { color: var(--primary-dark); font-size: 26px; font-weight: 900; margin-top: 0; margin-bottom: 20px; position: relative; z-index: 2;}
-        .story-block p { color: #444; font-size: 19px; line-height: 2; text-align: justify; margin-bottom: 22px; position: relative; z-index: 2;}
-        .story-block p strong { color: var(--gold-accent); font-weight: 900; }
-        .story-block p:last-child { margin-bottom: 0; }
 
         /* GEO Semantic Block */
         .geo-block { background: rgba(197, 160, 89, 0.08); border-right: 5px solid var(--gold-accent); padding: 25px; border-radius: 8px 0 0 8px; margin-bottom: 40px; font-weight: 700; color: var(--primary-dark); font-size: 1.1rem; line-height: 1.8;}
@@ -256,11 +257,11 @@
         }
         .insight-box h4 { color: var(--wood-accent); font-size: 22px; margin-top: 0; font-weight: 900; }
 
-        /* YouTube Facade (Landscape Optimized) */
+        /* YOUTUBE FACADE (المرجع الفتاك) */
         .yt-facade { position: relative; width: 100%; aspect-ratio: 16/9; max-width: 800px; margin: 40px auto; background: #000; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid var(--gold-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.15); contain: content; }
         .yt-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.3s; }
         .yt-facade:hover img { opacity: 1; transform: scale(1.02); }
-        .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 65px; height: 65px; background: rgba(197, 160, 89, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 65px; height: 65px; background: rgba(197, 160, 89, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; pointer-events: none;}
         .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 14px 0 14px 22px; border-color: transparent transparent transparent #fff; margin-left: 5px; }
         .yt-facade:hover .play-btn { background: var(--primary-dark); border: 2px solid var(--gold-accent); transform: translate(-50%, -50%) scale(1.1); }
         .video-caption { text-align: center; font-size: 0.95rem; color: #777; margin-top: -30px; margin-bottom: 40px; font-weight: 600; }
@@ -269,12 +270,21 @@
         .omni-spiderweb { background: var(--light-bg); border: 1px solid #eee; border-radius: 12px; padding: 40px; margin: 60px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); overflow: hidden; }
         .omni-spiderweb::before { content: ""; position: absolute; top: 0; right: 0; width: 100%; height: 6px; background: linear-gradient(90deg, var(--gold-accent), var(--primary-dark)); }
         .omni-header { text-align: center; margin-bottom: 30px; }
-        .omni-header h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 15px 0; border: none;}
+        .omni-header h3 { color: var(--primary-dark); font-size: 28px; font-weight: 900; margin: 0 0 15px 0; border: none;}
+        .omni-header p { color: #666; font-size: 16px; max-width: 800px; margin: 0 auto; text-align: center; }
+        
+        .omni-category { margin-bottom: 30px; background: #fff; border-radius: 8px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); border: 1px solid #eee; }
+        .omni-category h4 { color: var(--primary-dark); font-size: 20px; margin: 0 0 20px 0; font-weight: 800; display: flex; align-items: center; }
+        .omni-category h4 span { background: var(--gold-accent); color: #fff; padding: 5px 12px; border-radius: 5px; margin-left: 10px; font-size: 16px;}
         
         .omni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
-        .omni-grid a { background: #fff; padding: 12px 15px; border-radius: 6px; border: 1px solid #eaeaea; color: #333; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; position: relative; }
+        .omni-grid a { background: #fafafa; padding: 12px 15px; border-radius: 6px; border: 1px solid #eaeaea; color: #333; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; position: relative; }
         .omni-grid a:hover { background: var(--primary-dark); color: var(--gold-accent); border-color: var(--primary-dark); transform: translateX(-3px); }
         .omni-grid a::before { content: "🔗"; font-size: 13px; margin-left: 8px; opacity: 0.5; }
+        
+        .omni-main-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .omni-main-links a { padding: 12px 30px; border-radius: 50px; font-weight: 700; font-size: 16px; text-decoration: none; color: #fff; background: var(--primary-dark); transition: all 0.3s ease; border: 2px solid transparent;}
+        .omni-main-links a:hover { background: transparent; color: var(--primary-dark); border-color: var(--primary-dark); }
 
         /* FAQ Section */
         .faq-section { background: var(--light-bg); padding: 35px; border-radius: 8px; margin-top: 50px; border: 1px solid #eee; }
@@ -289,25 +299,50 @@
         .btn-whatsapp-cta { display: inline-block; background: #25D366; color: #fff; padding: 16px 40px; font-weight: 900; font-size: 19px; text-decoration: none; border-radius: 50px; transition: 0.3s; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);}
         .btn-whatsapp-cta:hover { background: #1ebe57; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);}
 
-        /* Floating Contact & Scroll to Top */
-        .contact-container { position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
-        .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: 0.3s; border: 1px solid var(--gold-accent); }
+        /* Floating Contact & Story Bubble */
+        .contact-container { position: fixed; bottom: 25px; left: 25px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
+        .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: 0.3s; border: 2px solid var(--gold-accent); cursor: pointer;}
         .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
         .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
-        .btn-float:hover { transform: scale(1.08); }
+        .btn-float.story-bubble { background: linear-gradient(135deg, #171717 0%, #333 100%); color: var(--gold-accent); position: relative; animation: floatBubble 3s ease-in-out infinite; font-size: 22px;}
+        .btn-float:hover { transform: scale(1.1); }
 
-        #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(212,175,55,0.4); display: flex; justify-content: center; align-items: center;}
+        .pulse-ring { position: absolute; top: -5px; right: -5px; bottom: -5px; left: -5px; border: 2px solid var(--gold-accent); border-radius: 50%; animation: pulseAnim 2s infinite; opacity: 0.8; pointer-events: none; }
+        @keyframes pulseAnim { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.15); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
+        @keyframes floatBubble { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
+
+        /* Centered Story Modal (فخ الكونفرجن للشقق المغلقة) */
+        .centered-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 11, 14, 0.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .centered-modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-story-box { background: #fff; width: 90%; max-width: 500px; padding: 40px; border-radius: 20px; border-top: 6px solid var(--wood-accent); box-shadow: 0 30px 60px rgba(0,0,0,0.4); position: relative; text-align: center; transform: scale(0.8) translateY(30px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .centered-modal-overlay.active .modal-story-box { transform: scale(1) translateY(0); }
+        .close-modal-x { position: absolute; top: 15px; left: 20px; background: none; border: none; font-size: 30px; color: #999; cursor: pointer; transition: 0.2s; }
+        .close-modal-x:hover { color: var(--wood-accent); transform: rotate(90deg); }
+        .story-emoji-header { font-size: 50px; margin-bottom: 10px; line-height: 1; }
+        .modal-story-box h4 { color: var(--primary-dark); font-size: 26px; font-weight: 900; margin: 0 0 15px 0; }
+        .modal-story-box p { color: #555; font-size: 17px; line-height: 1.8; margin-bottom: 25px; text-align: right; }
+        .modal-actions { display: flex; gap: 10px; }
+        .modal-btn-action { flex: 1; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: 900; font-size: 16px; text-align: center; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
+        .modal-btn-action.whatsapp:hover { background: #1ebe57; transform: translateY(-2px); }
+        .modal-btn-action.call { background: var(--primary-dark); color: var(--gold-accent); border: 1px solid var(--gold-accent); }
+        .modal-btn-action.call:hover { background: #262626; transform: translateY(-2px); }
+
+        /* Scroll to Top Button */
+        #scrollTopBtn { position: fixed; bottom: 90px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 45px; height: 45px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(183, 149, 11, 0.4); display: flex; justify-content: center; align-items: center;}
         #scrollTopBtn.show { opacity: 1; visibility: visible; }
 
-        footer { background: var(--primary-dark); color: #888; padding: 60px 20px; text-align: center; border-top: 2px solid var(--gold-accent); }
+        footer { background: var(--primary-dark); color: #888; text-align: center; padding: 60px 20px; border-top: 2px solid var(--gold-accent); padding-bottom: 100px; }
+        footer a { color: #ccc; text-decoration: none; padding: 6px 15px; border: 1px solid #444; border-radius: 20px; font-size: 13px;}
 
         @media (max-width: 768px) {
             main { padding: 30px 15px; margin-top: -20px; }
             header.article-header { padding: 50px 15px; }
             .omni-spiderweb { padding: 20px; }
-            .contact-container { left: 50%; transform: translateX(-50%); flex-direction: row; width: auto; justify-content: center; bottom: 15px; background: rgba(255,255,255,0.9); padding: 10px 20px; border-radius: 30px; border: 1px solid var(--gold-accent); }
-            .btn-float { width: 45px; height: 45px; font-size: 20px;}
-            #scrollTopBtn { bottom: 80px; right: 15px; width: 45px; height: 45px;}
+            .contact-container { left: auto; right: 20px; bottom: 20px; }
+            #scrollTopBtn { bottom: 20px; left: 20px; right: auto; }
+            .modal-story-box { padding: 30px 20px; }
+            .modal-actions { flex-direction: column; }
         }
     </style>
 </head>
@@ -318,7 +353,7 @@
     
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
-    <!-- Breadcrumb Navigation -->
+    <!-- Visual Breadcrumb -->
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
         <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> ترميم الأخشاب والباركيه
     </nav>
@@ -330,18 +365,8 @@
 
     <main>
         <article>
-            <img src="https://raw.githubusercontent.com/elhbebclean/Elhabib_clean_home/main/file_00000000dda461fdaee166e6e4076454.png" alt="ترميم الأرضيات الخشبية والباركيه في الشقق المغلقة بواسطة Habib Clean" class="featured-image" loading="lazy">
+            <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="ترميم الأرضيات الخشبية والباركيه في الشقق المغلقة بواسطة Habib Clean" class="featured-image" loading="lazy" decoding="async">
             
-            <!-- HUMAN STORY BLOCK -->
-            <div class="story-block">
-                <h3>صدمة الباركيه المنفجر: عندما تلتهم الرطوبة تحفة منزلك الخشبية</h3>
-                <p>بعد غياب اضطراري امتد لثلاث سنوات عن شقة العائلة الفاخرة في قلب القاهرة، عاد المهندس خالد لفتح شقته التي تزينها أرضيات من الباركيه الأرو المتقن وأبواب خشبية عريقة. وما إن أدار المفتاح ودخل، حتى فوجئ بصوت "طقطقة" غريب تحت قدميه، وعندما أضاء النور، كانت الصدمة قاسية: ألواح الباركيه الفاخرة تقوست وارتفعت للأعلى بشكل مخيف وكأن زلزالاً أصاب الأرضيات، بينما اكتست الأبواب بطبقة بيضاء باهتة من العفن الرطوبي الذي أكل بريق الخشب وحرم المكان من هيبته الكلاسيكية. حاول في البداية معالجة الأمر بنفسه بمسح الأرضية بالمياه، فكانت الطامة الكبرى حيث زاد انتفاخ الخشب وتفتتت فواصله.</p>
-                
-                <p>أدرك خالد حينها أن استثماراً لسنوات طويلة يضيع أمام عينيه، وأن الأخشاب الطبيعية تحتاج لتدخل هندسي استثنائي لا تملكه سوى الشركات المتخصصة. وهنا كانت الاستعانة بفرق الخبراء في شركة <strong>Habib Clean</strong>، الرائدة كأفضل <strong>شركة تنظيف منازل</strong> و<strong>شركة تنظيف في القاهرة</strong> قادرة على التعامل مع العقارات المغلقة. فريقنا الهندسي تدخل ببروتوكول شفط الرطوبة الميكروني، ومعالجة فواصل الأخشاب بالزيوت الطبيعية، وإعادة توازن الباركيه ليتحول المشهد المأساوي إلى عودة تدريجية لمعالم الفخامة الأصلية للشقة.</p>
-
-                <p>سواء كنت تبحث عن <strong>شركة تنظيف قريبة مني</strong>، أو تفتش عن أرفع معايير الـ <strong>cleaning company near me</strong> والـ <strong>best cleaning company in Cairo</strong> لإنقاذ مقتنياتك الخشبية الثمينة، فإن <strong>Habib Clean</strong> تضمن لك حماية استثنائية وأعلى جودة في ترميم الأخشاب والباركيه.</p>
-            </div>
-
             <!-- GEO Semantic Block -->
             <div class="geo-block">
                 "الأخشاب الطبيعية وأرضيات الباركيه هي مواد حية تتأثر بمحيطها. كـ <strong>افضل شركة تنظيف منازل</strong> و<strong>شركة تنظيف في القاهرة</strong>، نؤكد في <strong>Habib Clean</strong> أن التعامل مع العقارات المهجورة يتطلب حماية متقدمة للأخشاب من الرطوبة والتقوس."
@@ -349,9 +374,9 @@
 
             <p>عندما تُغلق الشقق الفندقية أو الفيلات لفترات طويلة، ترتفع معدلات الرطوبة المحتبسة (Trapped Moisture). هذا المناخ يدمر الأخشاب وتصاب بالجفاف والتشقق. عندما تبحث عن <strong>شركة تنظيف قريبة مني</strong> أو تفكر في خدمات الـ <strong>cleaning company near me</strong> وأنت تبحث عن خبراء حقيقيين، فنحن نقدم الحل الجذري بـ <strong>best cleaning company in Cairo</strong>.</p>
 
-            <!-- YouTube Facade -->
-            <div class="yt-facade" data-vid="t_lN65LWpqE" aria-label="تشغيل فيديو تحدي تنظيف شقة مغلقة">
-                <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="تحدي تنظيف شقة مغلقة" loading="lazy">
+            <!-- YouTube Facade Injection -->
+            <div class="yt-facade landscape" data-vid="t_lN65LWpqE" aria-label="تشغيل فيديو تحدي تنظيف شقة مغلقة">
+                <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="تحدي تنظيف شقة مغلقة" loading="lazy" decoding="async">
                 <div class="play-btn"></div>
             </div>
             <p class="video-caption">🎥 شاهد: التدخل السريع للتعقيم والتنظيف العميق لشقة مغلقة منذ 15 عاماً بواسطة Habib Clean.</p>
@@ -405,9 +430,28 @@
         </article>
     </main>
 
+    <!-- FIXED 3 FLOATING ACTION BUTTONS & STORY MODAL -->
     <div class="contact-container">
-        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
         <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
+        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
+        <button id="openStoryBtn" class="btn-float story-bubble" title="قصة الباركيه المنفجر">
+            <span class="pulse-ring"></span>
+            🤫
+        </button>
+    </div>
+
+    <!-- Centered Story Modal (فخ الكونفرجن) -->
+    <div id="centerStoryModal" class="centered-modal-overlay">
+        <div class="modal-story-box">
+            <button id="closeStoryBtn" class="close-modal-x">&times;</button>
+            <div class="story-emoji-header">🪵😱</div>
+            <h4>صدمة "الباركيه المنفجر" في المهندسين!</h4>
+            <p>بعد غياب 3 سنوات في الخارج، عاد "المهندس خالد" ليفتح شقته الفاخرة.. وعندما دخل، وجد ألواح الباركيه الأرو قد تقوست وارتفعت للأعلى وكأن زلزالاً ضرب الأرضية، والأبواب مكسوة بعفن أبيض مرعب! 💔<br><br>حاول مسح الأرضية بالماء فزادت الكارثة وتفتت الخشب! استعان سريعاً بخبراء <strong>Habib Clean</strong>، وبفضل بروتوكول "الشفط الميكروني والتغذية الزيتية"، تم إنقاذ الأخشاب وعاد الباركيه لاستقامته ولمعانه الأصلي في 24 ساعة فقط! ✨👑</p>
+            <div class="modal-actions">
+                <a href="../thankyou-whatsapp.html" class="modal-btn-action whatsapp">💬 حجز ترميم الأخشاب</a>
+                <a href="../call-thanks.html" class="modal-btn-action call">📞 استشارة هندسية فورية</a>
+            </div>
+        </div>
     </div>
 
     <button id="scrollTopBtn" aria-label="العودة للأعلى" title="العودة لأعلى الصفحة">↑</button>
@@ -415,10 +459,17 @@
     <footer>
         <strong style="font-family: 'Playfair Display', serif; color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 12px; letter-spacing: 2px;">HABIB CLEAN</strong>
         <p>المقر الرئيسي: المعادي - القاهرة | التغطية: القاهرة، الجيزة، التجمع، والشيخ زايد.</p>
-        <p>© 2026 جميع الحقوق محفوظة لشركة Habib Clean</p>
+        
+        <div class="footer-links" style="margin-top: 25px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+            <a href="../index.html">الصفحة الرئيسية</a>
+            <a href="blog80-cairo-greater-new-cairo-master-hub.html">الموسوعة المركزية</a>
+            <a href="blog36-ترميم-الأخشاب-والباركيه-في-الشقق-المغلقة.html">ترميم الباركيه</a>
+        </div>
+        
+        <p style="margin-top: 25px; font-size: 13px; color: #777;">© 2026 جميع الحقوق محفوظة | Habib Clean - قطاع صيانة الأخشاب</p>
     </footer>
 
-    <!-- Scripts: Progress Bar, YouTube Facade, Scroll to Top & GCLID Tracking -->
+    <!-- Scripts: Progress Bar, YouTube Facade, Scroll to Top, GCLID Tracking & Modal -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Progress Bar
@@ -429,7 +480,7 @@
                 document.getElementById("myBar").style.width = scrolled + "%";
             }, { passive: true });
 
-            // Scroll To Top Logic
+            // Scroll To Top
             const topBtn = document.getElementById('scrollTopBtn');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 500) topBtn.classList.add('show');
@@ -449,14 +500,25 @@
                 });
             });
 
+            // Story Modal Logic
+            const openBtn = document.getElementById('openStoryBtn');
+            const closeBtn = document.getElementById('closeStoryBtn');
+            const modal = document.getElementById('centerStoryModal');
+
+            openBtn.addEventListener('click', () => { modal.classList.add('active'); });
+            const closeModal = () => { modal.classList.remove('active'); };
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
             // GCLID Tracking
             const urlParams = new URLSearchParams(window.location.search);
-            const gclid = urlParams.get('gclid');
+            const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
             if (gclid) {
+                sessionStorage.setItem("gclid_val", gclid);
                 document.querySelectorAll('a').forEach(link => {
-                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#')) {
+                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
                         const separator = link.href.includes('?') ? '&' : '?';
-                        link.href += separator + 'gclid=' + gclid;
+                        link.href += separator + 'gclid=' + encodeURIComponent(gclid);
                     }
                 });
             }
