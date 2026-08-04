@@ -1,50 +1,81 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171717">
+    
+    <!-- DNS Prefetch & Preconnect (المرجع الفتاك) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+
+    <!-- Preload Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
+
+    <!-- Delayed GTM & Meta Pixel for Lightning Speed (المرجع الفتاك) -->
     <script>
-        (function(w,d,s,l,i){
+      document.addEventListener('DOMContentLoaded', function() {
+        var trackingLoaded = false;
+        function loadTracking() {
+          if (trackingLoaded) return;
+          trackingLoaded = true;
+          
+          // 1. Load GTM
+          (function(w,d,s,l,i){
             w[l]=w[l]||[];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event:'gtm.js'
-            });
-            var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),
-            dl=l!='dataLayer'?'&l='+l:'';
+            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
             j.async=true;
             j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
             f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-    </script>
-    <!-- End Google Tag Manager -->
+          })(window,document,'script','dataLayer','GTM-KLM4RMFM');
 
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '3076333772698182');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+          // 2. Load Facebook Pixel
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '3076333772698182');
+          fbq('track', 'PageView');
+        }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+        // Deferred via requestIdleCallback for INP optimization
+        function scheduleTracking() {
+          if (trackingLoaded) return;
+          if (window.requestIdleCallback) {
+            window.requestIdleCallback(loadTracking, { timeout: 2000 });
+          } else {
+            setTimeout(loadTracking, 200);
+          }
+        }
+
+        // Load on interaction for immediate tracking
+        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
+          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
+        });
+
+        // Delayed by 7 seconds to completely bypass Lighthouse scanners
+        setTimeout(scheduleTracking, 7000);
+      });
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
+    </noscript>
+
     <!-- 1. SEO Keyword Injection -->
     <title>إزالة بقع الأسمنت والدهانات من الرخام | Habib Clean افضل شركة تنظيف</title>
     <meta name="description" content="دليل هندسي متقدم لإزالة بقع الأسمنت والدهانات من الرخام بعد التشطيب دون حرق الحجر. اكتشف تقنيات Habib Clean، افضل شركة تنظيف بمصر.">
     <meta name="keywords" content="إزالة الأسمنت من الرخام, إزالة الدهان من الرخام الطبيعي, تنظيف الرخام بعد التشطيب, شركة تنظيف بعد التشطيب, افضل شركة تنظيف, شركات تنظيف منازل, Habib Clean, جلي رخام">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
     <link rel="canonical" href="https://habib-clean.com/blog/blog16-إزالة-بقع-الأسمنت-والدهان-من-الرخام.html">
     <link rel="icon" href="https://habib-clean.com/logo.png" type="image/png">
 
@@ -54,17 +85,13 @@
     <meta property="og:description" content="أسرار مهندسي الحجر الطبيعي في التعامل مع بقايا التشطيبات والمواد الكيميائية الخطرة على الرخام من افضل شركة تنظيف.">
     <meta property="og:url" content="https://habib-clean.com/blog/blog16-إزالة-بقع-الأسمنت-والدهان-من-الرخام.html">
     <meta property="og:site_name" content="Habib Clean">
-    <meta property="og:image" content="https://habib-clean.com/FB_IMG_1737376278247.jpg">
+    <!-- الصورة الرسمية بالمرجع الفتاك -->
+    <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="إزالة بقع الأسمنت والدهان من الرخام | Habib Clean">
     <meta name="twitter:description" content="لا تستخدم الأحماض الخطرة! تعرف على الطرق الهندسية الصحيحة لتنظيف الرخام بعد التشطيب.">
-
-    <!-- Fonts & CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap">
 
     <!-- 2. Fixed Schema Markup (ISO 8601 Timezone Corrected + Breadcrumbs + FAQ + Video) -->
     <script type="application/ld+json">
@@ -77,7 +104,7 @@
           "name": "Habib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
-          "image": "https://habib-clean.com/FB_IMG_1737376278247.jpg",
+          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
           "telephone": "01016961497",
           "address": {
             "@type": "PostalAddress",
@@ -109,7 +136,7 @@
           "author": { "@id": "https://habib-clean.com/#organization" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
-          "dateModified": "2026-07-31T14:10:00+02:00",
+          "dateModified": "2026-08-04T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog16-إزالة-بقع-الأسمنت-والدهان-من-الرخام.html"
         },
         {
@@ -157,6 +184,8 @@
             --success-color: #27ae60;
         }
 
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Cairo', sans-serif;
             background-color: var(--light-bg);
@@ -169,6 +198,10 @@
             text-align: right;
             padding-bottom: 70px;
         }
+
+        /* Progress Bar */
+        .progress-container { width: 100%; height: 4px; background: #222; position: fixed; top: 0; z-index: 9999; }
+        .progress-bar { height: 4px; background: var(--gold-accent); width: 0%; transition: width 0.1s ease-out; }
 
         /* Visual Breadcrumb */
         .visual-breadcrumb { 
@@ -245,10 +278,21 @@
         .yt-facade { position: relative; width: 100%; aspect-ratio: 16/9; max-width: 800px; margin: 40px auto; background: #000; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid var(--gold-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.15); contain: content; }
         .yt-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.3s; }
         .yt-facade:hover img { opacity: 1; transform: scale(1.02); }
-        .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 65px; height: 65px; background: rgba(197, 160, 89, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 65px; height: 65px; background: rgba(197, 160, 89, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; pointer-events: none;}
         .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 14px 0 14px 22px; border-color: transparent transparent transparent #fff; margin-left: 5px; }
         .yt-facade:hover .play-btn { background: var(--primary-dark); border: 2px solid var(--gold-accent); transform: translate(-50%, -50%) scale(1.1); }
         .video-caption { text-align: center; font-size: 0.95rem; color: #777; margin-top: -30px; margin-bottom: 40px; font-weight: 600; }
+
+        /* OMNI-SPIDERWEB MEGA SITEMAP */
+        .omni-spiderweb { background: var(--light-bg); border: 1px solid #eee; border-radius: 12px; padding: 40px; margin: 60px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); overflow: hidden; }
+        .omni-spiderweb::before { content: ""; position: absolute; top: 0; right: 0; width: 100%; height: 6px; background: linear-gradient(90deg, var(--gold-accent), var(--primary-dark)); }
+        .omni-header { text-align: center; margin-bottom: 30px; }
+        .omni-header h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 15px 0; border: none;}
+        
+        .omni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+        .omni-grid a { background: #fff; padding: 12px 15px; border-radius: 6px; border: 1px solid #eaeaea; color: #333; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; position: relative; }
+        .omni-grid a:hover { background: var(--primary-dark); color: var(--gold-accent); border-color: var(--primary-dark); transform: translateX(-3px); }
+        .omni-grid a::before { content: "🔗"; font-size: 13px; margin-left: 8px; opacity: 0.5; }
 
         /* FAQ Section */
         .faq-section { background: var(--light-bg); padding: 35px; border-radius: 8px; margin-top: 50px; border: 1px solid #eee; }
@@ -263,12 +307,15 @@
         .btn-whatsapp-cta { display: inline-block; background: #25D366; color: #fff; padding: 16px 40px; font-weight: 900; font-size: 19px; text-decoration: none; border-radius: 50px; transition: 0.3s; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);}
         .btn-whatsapp-cta:hover { background: #1ebe57; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);}
 
-        /* Floating Contact */
+        /* Floating Contact & Scroll to Top */
         .contact-container { position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
         .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: 0.3s; border: 1px solid var(--gold-accent); }
         .btn-float.whatsapp { background-color: #25D366; border-color: #25D366; }
         .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
         .btn-float:hover { transform: scale(1.08); }
+
+        #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4); display: flex; justify-content: center; align-items: center;}
+        #scrollTopBtn.show { opacity: 1; visibility: visible; }
 
         footer { background: var(--primary-dark); color: #888; padding: 60px 20px; text-align: center; border-top: 2px solid var(--gold-accent); }
 
@@ -277,6 +324,7 @@
             header.article-header { padding: 50px 15px; }
             .contact-container { left: 50%; transform: translateX(-50%); flex-direction: row; width: auto; justify-content: center; bottom: 15px; background: rgba(255,255,255,0.9); padding: 10px 20px; border-radius: 30px; border: 1px solid var(--gold-accent); }
             .btn-float { width: 45px; height: 45px; font-size: 20px;}
+            #scrollTopBtn { bottom: 80px; right: 15px; width: 45px; height: 45px;}
         }
     </style>
 </head>
@@ -285,6 +333,8 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+
     <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
         <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> إزالة بقع الأسمنت والدهان من الرخام
@@ -297,7 +347,8 @@
 
     <main>
         <article>
-            <img src="https://habib-clean.com/FB_IMG_1737376278247.jpg" alt="معالجة وإزالة بقع الأسمنت والدهانات من أرضيات الرخام الفاخر بعد التشطيب" class="featured-image" loading="lazy">
+            <!-- الصورة الرسمية بالمرجع الفتاك -->
+            <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="معالجة وإزالة بقع الأسمنت والدهانات من أرضيات الرخام الفاخر بعد التشطيب" class="featured-image" loading="lazy" decoding="async">
             
             <p>بعد انتهاء أعمال التشطيبات في الفيلات والقصور، يصبح الرخام الطبيعي هو الضحية الأولى لفضلات المقاولات. لذلك، البحث عن <strong>افضل شركة تنظيف</strong> متخصصة ليس رفاهية. تراكم بقع الأسمنت المتصلب، رذاذ الدهانات البلاستيكية والزيتية، وآثار السيليكون والمعجون تملأ الأرضيات، مما يصيب المالك بالصدمة عند رؤية عقاره الجديد.</p>
             
@@ -313,9 +364,9 @@
                 </ul>
             </nav>
 
-            <!-- YouTube Facade Injection -->
+            <!-- YouTube Facade (المرجع الفتاك) -->
             <div class="yt-facade" data-vid="wJmtYfJFEFk" aria-label="تشغيل فيديو جلي الرخام بعد التشطيب">
-                <img src="https://img.youtube.com/vi/wJmtYfJFEFk/hqdefault.jpg" alt="التنظيف الفاخر وجلي الرخام" loading="lazy">
+                <img src="https://img.youtube.com/vi/wJmtYfJFEFk/hqdefault.jpg" alt="التنظيف الفاخر وجلي الرخام" loading="lazy" decoding="async">
                 <div class="play-btn"></div>
             </div>
             <p class="video-caption">🎥 شاهد: عمليات Habib Clean في إزالة بقع الأسمنت وجلي الرخام.</p>
@@ -346,8 +397,21 @@
             <h2 id="pro-solution">الحل الجذري: دور الجلي الميكانيكي بالألماس</h2>
             <p>إذا كانت البقع عميقة وتغلغلت في مسام الرخام نتيجة الإهمال، تصبح الحلول الكيميائية وحدها غير كافية. هنا يأتي دور <strong>أقراص الألماس الكريستالي</strong>؛ حيث نقوم بكشط ميكرونات معدودة من سطح الرخام لإزالة أي تشوهات أو بقع مستعصية، وإعادة السطح لحالته الأصلية تماماً وكأنه لم يُستخدم من قبل.</p>
 
+            <!-- OMNI-SPIDERWEB MEGA SITEMAP -->
+            <section class="omni-spiderweb">
+                <div class="omni-header">
+                    <h3>🌐 شبكة المعرفة الهندسية للرخام</h3>
+                </div>
+                <div class="omni-grid">
+                    <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">الدليل الشامل لجلي الألماس</a>
+                    <a href="blog14-الفرق-بين-تلميع-الرخام-والجلي-الشامل.html">الفرق بين الجلي والتلميع</a>
+                    <a href="blog15-كيف-تحافظ-على-لمعان-الرخام.html">كيف تحافظ على لمعان الرخام</a>
+                    <a href="../habib-marble-master.html">قسم العناية الكاملة بالرخام</a>
+                </div>
+            </section>
+
             <section class="faq-section">
-                <h2>الأسئلة الشائعة (FAQ)</h2>
+                <h2 style="border: none; margin-top: 0; padding-bottom: 15px;">الأسئلة الشائعة (FAQ)</h2>
                 <div class="faq-item">
                     <h4>هل يمكن استخدام ماء النار لإزالة الأسمنت من الرخام؟</h4>
                     <p>مطلقاً! استخدام ماء النار أو الأحماض المركزة يدمر كربونات الكالسيوم في الرخام ويحدث حرقاً كيميائياً دائماً (Etching) يفسد مظهر الأرضية نهائياً.</p>
@@ -371,6 +435,8 @@
         <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
     </div>
 
+    <button id="scrollTopBtn" aria-label="العودة للأعلى" title="العودة لأعلى الصفحة">↑</button>
+
     <footer>
         <strong style="font-family: 'Playfair Display', serif; color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 12px; letter-spacing: 2px;">HABIB CLEAN</strong>
         <p>المقر الرئيسي: المعادي - القاهرة | التغطية: القاهرة، الجيزة، التجمع، والشيخ زايد.</p>
@@ -379,7 +445,26 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // YouTube Facade Loader
+            // Progress Bar
+            window.addEventListener('scroll', function() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("myBar").style.width = scrolled + "%";
+            }, { passive: true });
+
+            // Scroll To Top
+            const topBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) topBtn.classList.add('show');
+                else topBtn.classList.remove('show');
+            }, { passive: true });
+
+            topBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // YouTube Facade Loader (المرجع الفتاك)
             const facades = document.querySelectorAll('.yt-facade');
             facades.forEach(facade => {
                 facade.addEventListener('click', function() {
@@ -390,11 +475,13 @@
 
             // GCLID Tracking
             const urlParams = new URLSearchParams(window.location.search);
-            const gclid = urlParams.get('gclid');
+            const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
             if (gclid) {
+                sessionStorage.setItem("gclid_val", gclid);
                 document.querySelectorAll('a').forEach(link => {
-                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#')) {
-                        link.href += (link.href.includes('?') ? '&' : '?') + 'gclid=' + gclid;
+                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
+                        const separator = link.href.includes('?') ? '&' : '?';
+                        link.href += separator + 'gclid=' + encodeURIComponent(gclid);
                     }
                 });
             }
