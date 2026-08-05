@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '3076333772698182');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1"/></noscript>
-    <!-- End Meta Pixel Code -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0b0e">
+    <meta name="theme-color" content="#171717">
     
-    <!-- DNS Prefetch & Preconnect -->
+    <!-- DNS Prefetch & Preconnect (المرجع الفتاك V2.0) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://www.youtube.com">
 
     <!-- Preload Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
+
+    <!-- Delayed GTM & Meta Pixel for Lightning Speed -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var trackingLoaded = false;
+        function loadTracking() {
+          if (trackingLoaded) return;
+          trackingLoaded = true;
+          
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');
+
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '3076333772698182'); fbq('track', 'PageView');
+        }
+
+        function scheduleTracking() {
+          if (trackingLoaded) return;
+          if (window.requestIdleCallback) window.requestIdleCallback(loadTracking, { timeout: 2000 });
+          else setTimeout(loadTracking, 200);
+        }
+
+        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
+          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
+        });
+
+        setTimeout(scheduleTracking, 7000);
+      });
+    </script>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
+    </noscript>
 
     <!-- Ultimate High-Volume SEO Meta Tags -->
     <title>أسرع طريقة لتسليم الفيلا نظيفة | Habib Clean افضل شركة تنظيف منازل</title>
@@ -66,19 +72,31 @@
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
 
-    <!-- Advanced Combined Schema (ISO 8601 Fixed + Integrated Graph) -->
+    <!-- God-Tier Entity & SGE Optimized JSON-LD Graph V2.0 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://habib-clean.com/#organization",
+          "@type": "Organization",
+          "@id": "https://habib-clean.com/#identity",
           "name": "Habib Clean",
+          "url": "https://habib-clean.com/",
+          "logo": "https://habib-clean.com/logo.png",
+          "sameAs": [
+            "https://share.google/umb4679rea0EcsZk0",
+            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
+            "https://www.youtube.com/@Elhbeb"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://habib-clean.com/#localbusiness",
+          "name": "Habib Clean - تسليم الفيلات بعد التشطيب",
+          "url": "https://habib-clean.com/",
           "image": "https://habib-clean.com/logo.png",
           "telephone": "+201016961497",
-          "url": "https://habib-clean.com",
-          "description": "المرجع الأكبر والكيان الهندسي الأول في الشرق الأوسط لإدارة المرافق، تأسيس القصور، جلي الرخام، وتنظيف الواجهات.",
+          "description": "المرجع الأكبر والكيان الهندسي الأول في الشرق الأوسط لإدارة المرافق وتسليم الفيلات بعد التشطيب.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "المعادي",
@@ -86,11 +104,7 @@
             "addressCountry": "EG"
           },
           "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "6th of October"],
-          "sameAs": [
-            "https://share.google/umb4679rea0EcsZk0",
-            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
-            "https://www.youtube.com/@Elhbeb"
-          ]
+          "priceRange": "$$$"
         },
         {
           "@type": "BreadcrumbList",
@@ -103,22 +117,14 @@
         {
           "@type": "Article",
           "@id": "https://habib-clean.com/blog/blog9-أسرع-طريقة-لتسليم-الفيلا-نظيفة.html#article",
-          "isPartOf": { "@id": "https://habib-clean.com/blog/blog9-أسرع-طريقة-لتسليم-الفيلا-نظيفة.html" },
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog9-أسرع-طريقة-لتسليم-الفيلا-نظيفة.html#webpage" },
           "headline": "أسرع طريقة لتسليم الفيلا للعميل نظيفة وخالية من عيوب التشطيب",
-          "description": "نصائح للمهندسين والمقاولين لتسريع عملية التنظيف النهائي للفيلات بعد التشطيب وتجنب أخطاء التسليم مع خدمات Habib Clean.",
-          "author": { "@id": "https://habib-clean.com/#organization" },
-          "publisher": { "@id": "https://habib-clean.com/#organization" },
+          "description": "نصائح للمهندسين والمقاولين لتسريع التنظيف النهائي للفيلات بعد التشطيب وتجنب أخطاء التسليم مع خدمات Habib Clean.",
+          "author": { "@id": "https://habib-clean.com/#identity" },
+          "publisher": { "@id": "https://habib-clean.com/#identity" },
           "datePublished": "2026-03-20T12:00:00+02:00",
-          "dateModified": "2026-08-01T12:30:00+02:00",
+          "dateModified": "2026-08-05T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog9-أسرع-طريقة-لتسليم-الفيلا-نظيفة.html"
-        },
-        {
-          "@type": "VideoObject",
-          "name": "تنظيف بعد التشطيب | Habib Clean",
-          "description": "كفاءة واحترافية فريق Habib Clean في تأسيس وتنظيف العقارات بعد التشطيب.",
-          "thumbnailUrl": "https://img.youtube.com/vi/YuL41GWBVRk/hqdefault.jpg",
-          "uploadDate": "2025-12-09T12:00:00+02:00",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/YuL41GWBVRk"
         },
         {
           "@type": "FAQPage",
@@ -160,28 +166,24 @@
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Cairo', Arial, sans-serif;
+            margin: 0;
             background-color: var(--light-bg);
             color: var(--text-dark);
-            line-height: 1.9;
-            margin: 0;
-            padding: 0;
+            line-height: 1.95;
             direction: rtl;
-            -webkit-font-smoothing: antialiased;
             text-align: right;
-            padding-bottom: 70px;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 80px;
         }
 
-        /* Progress Bar */
-        .progress-container { width: 100%; height: 4px; background: #ccc; position: fixed; top: 0; z-index: 9999; }
+        .progress-container { width: 100%; height: 4px; background: #222; position: fixed; top: 0; z-index: 9999; }
         .progress-bar { height: 4px; background: var(--gold-accent); width: 0%; transition: width 0.1s ease-out; }
 
-        /* Visual Breadcrumb */
         .visual-breadcrumb { 
             background: var(--white); padding: 12px 20px; font-size: 0.95rem; font-weight: 700; color: #777; text-align: center; border-bottom: 1px solid #eaeaea; position: relative; z-index: 100;
         }
-        .visual-breadcrumb a { color: var(--gold-accent); text-decoration: none; transition: 0.2s;}
-        .visual-breadcrumb a:hover { color: var(--primary-dark); }
+        .visual-breadcrumb a { color: var(--gold-accent); text-decoration: none; }
         .visual-breadcrumb span { margin: 0 8px; color: #ccc; }
 
         header.article-header {
@@ -193,7 +195,7 @@
         }
 
         header.article-header h1 { 
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: clamp(28px, 5vw, 42px); 
             font-weight: 700; 
             margin-bottom: 15px; 
@@ -204,15 +206,16 @@
 
         main {
             max-width: 950px;
-            margin: -40px auto 80px;
+            margin: -30px auto 40px;
             background: var(--white);
             padding: clamp(30px, 5vw, 60px);
-            border-radius: 0;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            border-radius: 12px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.05);
             border: 1px solid #eaeaea;
+            position: relative;
+            z-index: 10;
         }
 
-        /* GEO Semantic Block */
         .geo-block { background: rgba(197, 160, 89, 0.08); border-right: 5px solid var(--gold-accent); padding: 25px; border-radius: 8px 0 0 8px; margin-bottom: 40px; font-weight: 700; color: var(--primary-dark); font-size: 1.1rem; line-height: 1.8;}
 
         h2 { 
@@ -222,31 +225,29 @@
             padding-right: 15px; 
             margin-top: 45px;
             margin-bottom: 20px;
-            font-weight: 700;
+            font-weight: 800;
             border-bottom: 2px solid var(--light-bg);
             padding-bottom: 10px;
         }
 
-        h3 { color: var(--b2b-color); font-size: 20px; font-weight: 800; margin: 30px 0 15px; }
+        h3 { color: var(--b2b-color); font-size: 22px; font-weight: 800; margin: 30px 0 15px; }
 
-        p { font-size: 1.05rem; margin-bottom: 22px; color: #444; }
+        p { font-size: 1.05rem; margin-bottom: 22px; color: #444; text-align: justify; }
         ul.content-list { padding-right: 20px; font-size: 1.05rem; color: #444; margin-bottom: 25px;}
-        ul.content-list li { margin-bottom: 12px; list-style: disc;}
+        ul.content-list li { margin-bottom: 14px; position: relative; list-style: none; padding-right: 25px;}
+        ul.content-list li::before { content: "✦"; position: absolute; right: 0; color: var(--gold-accent); font-weight: bold; }
 
-        .featured-image { width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 1px solid #eee;}
+        .featured-image { width: 100%; height: auto; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 1px solid #eee;}
 
-        /* B2B Highlight Box */
         .b2b-box {
             background: #e8f0f8;
             border-right: 6px solid var(--b2b-color);
-            padding: 30px;
-            border-radius: 8px;
-            margin: 35px 0;
-            border-top: 1px solid #d5e3f3;
-            border-left: 1px solid #d5e3f3;
-            border-bottom: 1px solid #d5e3f3;
+            padding: 35px;
+            border-radius: 10px;
+            margin: 45px 0;
+            border: 1px solid #d5e3f3;
         }
-        .b2b-box h3 { color: var(--b2b-color); margin-top: 0; font-size: 22px; font-weight: 900; }
+        .b2b-box h3 { color: var(--b2b-color); margin-top: 0; font-size: 23px; font-weight: 900; }
 
         /* YouTube Facade Gallery Styles */
         .video-gallery-title { text-align: center; border: none; margin-top: 50px; margin-bottom: 20px; font-size: 26px; color: var(--primary-dark); border-bottom: 2px dashed var(--gold-accent); padding-bottom: 10px; font-weight: 900;}
@@ -257,57 +258,68 @@
         
         .yt-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.3s; }
         .yt-facade:hover img { opacity: 1; transform: scale(1.02); }
-        .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(197, 160, 89, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(197, 160, 89, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; }
         .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff; margin-left: 5px; }
-        .yt-facade:hover .play-btn { background: var(--primary-dark); border: 2px solid var(--gold-accent); transform: translate(-50%, -50%) scale(1.1); }
-        .video-caption { text-align: center; font-size: 0.95rem; color: #777; margin-top: 10px; font-weight: 600; }
+        .video-caption { text-align: center; font-size: 0.95rem; color: #777; margin-top: 10px; font-weight: 700; }
 
         .videos-showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
 
         /* OMNI-SPIDERWEB MEGA SITEMAP */
-        .omni-spiderweb { background: var(--light-bg); border: 1px solid #eee; border-radius: 12px; padding: 40px; margin: 60px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); overflow: hidden; }
+        .omni-spiderweb { background: var(--light-bg); border: 1px solid #eee; border-radius: 12px; padding: 40px; margin: 60px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
         .omni-spiderweb::before { content: ""; position: absolute; top: 0; right: 0; width: 100%; height: 6px; background: linear-gradient(90deg, var(--gold-accent), var(--primary-dark)); }
         .omni-header { text-align: center; margin-bottom: 30px; }
-        .omni-header h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 15px 0; border: none;}
-        
+        .omni-header h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 15px 0; }
         .omni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
-        .omni-grid a { background: #fff; padding: 12px 15px; border-radius: 6px; border: 1px solid #eaeaea; color: #333; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; position: relative; }
-        .omni-grid a:hover { background: var(--primary-dark); color: var(--gold-accent); border-color: var(--primary-dark); transform: translateX(-3px); }
-        .omni-grid a::before { content: "🔗"; font-size: 13px; margin-left: 8px; opacity: 0.5; }
+        .omni-grid a { background: #fff; padding: 12px 15px; border-radius: 6px; border: 1px solid #eaeaea; color: #333; text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; transition: 0.2s; }
+        .omni-grid a:hover { background: var(--primary-dark); color: var(--gold-accent); }
 
         /* FAQ Section */
-        .faq-section { background: var(--light-bg); padding: 35px; border-radius: 8px; margin-top: 50px; border: 1px solid #eee; }
-        .faq-item { margin-bottom: 25px; }
-        .faq-item:last-child { margin-bottom: 0; }
-        .faq-item h4 { margin: 0 0 10px 0; color: var(--primary-dark); font-size: 19px; font-weight: 800;}
+        .faq-section { background: var(--light-bg); padding: 40px; border-radius: 12px; margin-top: 60px; border: 1px solid #e0e0e0; }
+        .faq-item { margin-bottom: 30px; padding-right: 20px; border-right: 4px solid var(--gold-accent); }
+        .faq-item h4 { margin: 0 0 12px 0; color: var(--primary-dark); font-size: 20px; font-weight: 900; }
 
         /* CTA Box */
-        .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #222 100%); padding: 45px 30px; margin-top: 50px; text-align: center; border-radius: 12px; color: #fff; border-bottom: 4px solid var(--gold-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.15);}
-        .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 24px; font-weight: 900;}
-        .cta-box p { color: #ccc; font-size: 17px; margin-bottom: 30px;}
-        .btn-whatsapp-cta { display: inline-block; background: #25D366; color: #fff; padding: 16px 40px; font-weight: 900; font-size: 19px; text-decoration: none; border-radius: 50px; transition: 0.3s; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);}
-        .btn-whatsapp-cta:hover { background: #1ebe57; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);}
+        .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #222 100%); padding: 60px 40px; margin-top: 60px; text-align: center; border-radius: 16px; color: #fff; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 30px; font-weight: 900; font-family: 'Playfair Display', serif;}
+        .btn-whatsapp-cta { display: inline-block; background: var(--whatsapp-green); color: #fff; padding: 18px 50px; font-weight: 900; font-size: 20px; text-decoration: none; border-radius: 50px; }
 
-        /* Floating Contact & Scroll to Top */
-        .contact-container { position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
-        .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: 0.3s; border: 1px solid var(--gold-accent); }
+        /* Floating Contact & Story Bubble */
+        .contact-container { position: fixed; bottom: 25px; left: 25px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
+        .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border: 2px solid var(--gold-accent); cursor: pointer; }
         .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
         .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
-        .btn-float:hover { transform: scale(1.08); }
+        .btn-float.story-bubble { background: linear-gradient(135deg, #171717 0%, #333 100%); color: var(--gold-accent); position: relative; animation: floatBubble 3s ease-in-out infinite; font-size: 22px; }
 
-        #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(212,175,55,0.4); display: flex; justify-content: center; align-items: center;}
+        .pulse-ring { position: absolute; top: -5px; right: -5px; bottom: -5px; left: -5px; border: 2px solid var(--gold-accent); border-radius: 50%; animation: pulseAnim 2s infinite; opacity: 0.8; pointer-events: none; }
+        @keyframes pulseAnim { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.15); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
+        @keyframes floatBubble { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
+
+        .centered-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 11, 14, 0.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .centered-modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-story-box { background: #fff; width: 90%; max-width: 500px; padding: 40px; border-radius: 20px; border-top: 6px solid var(--gold-accent); box-shadow: 0 30px 60px rgba(0,0,0,0.4); position: relative; text-align: center; transform: scale(0.8) translateY(30px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .centered-modal-overlay.active .modal-story-box { transform: scale(1) translateY(0); }
+        .close-modal-x { position: absolute; top: 15px; left: 20px; background: none; border: none; font-size: 30px; color: #999; cursor: pointer; transition: 0.2s; }
+        .close-modal-x:hover { color: #d32f2f; transform: rotate(90deg); }
+        .modal-actions { display: flex; gap: 10px; }
+        .modal-btn-action { flex: 1; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: 900; font-size: 16px; text-align: center; }
+        .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
+        .modal-btn-action.call { background: var(--primary-dark); color: var(--gold-accent); border: 1px solid var(--gold-accent); }
+
+        #scrollTopBtn { position: fixed; bottom: 90px; right: 25px; background: var(--gold-accent); color: var(--primary-dark); width: 45px; height: 45px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; display: flex; justify-content: center; align-items: center; }
         #scrollTopBtn.show { opacity: 1; visibility: visible; }
 
-        footer { background: var(--primary-dark); color: #888; padding: 60px 20px; text-align: center; border-top: 2px solid var(--gold-accent); }
+        footer { background: var(--primary-dark); color: #888; text-align: center; padding: 50px 20px; border-top: 3px solid var(--gold-accent); padding-bottom: 100px; }
+        footer a { color: #ccc; text-decoration: none; padding: 6px 15px; border: 1px solid #444; border-radius: 20px; font-size: 13px;}
 
         @media (max-width: 768px) {
             main { padding: 30px 15px; margin-top: -20px; }
             header.article-header { padding: 50px 15px; }
-            .omni-spiderweb { padding: 20px; }
+            .omni-spiderweb { padding: 30px 20px; }
             .videos-showcase-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
-            .contact-container { left: 50%; transform: translateX(-50%); flex-direction: row; width: auto; justify-content: center; bottom: 15px; background: rgba(255,255,255,0.9); padding: 10px 20px; border-radius: 30px; border: 1px solid var(--gold-accent); }
-            .btn-float { width: 45px; height: 45px; font-size: 20px;}
-            #scrollTopBtn { bottom: 80px; right: 15px; width: 45px; height: 45px;}
+            .contact-container { left: auto; right: 20px; bottom: 20px; }
+            #scrollTopBtn { right: auto; left: 20px; bottom: 20px; }
+            .modal-story-box { padding: 30px 20px; }
+            .modal-actions { flex-direction: column; }
         }
     </style>
 </head>
@@ -318,7 +330,6 @@
     
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
-    <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
         <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> أسرع طريقة لتسليم الفيلا نظيفة
     </nav>
@@ -330,9 +341,8 @@
 
     <main>
         <article>
-            <img src="https://habib-clean.com/FB_IMG_1737376278247.jpg" alt="تسليم الفيلا بعد التشطيب بواسطة Habib Clean" class="featured-image" loading="lazy">
+            <img src="https://habib-clean.com/FB_IMG_1737376278247.jpg" alt="تسليم الفيلا بعد التشطيب بواسطة Habib Clean" class="featured-image" loading="eager" decoding="async">
             
-            <!-- GEO Semantic Block -->
             <div class="geo-block">
                 "لحظة تسليم الفيلا أو المشروع للعميل هي اللحظة الحاسمة. بصفتنا <strong>افضل شركة تنظيف منازل</strong> و<strong>شركة تنظيف في القاهرة</strong>، نؤكد في <strong>Habib Clean</strong> أن العمل كشركاء لمهندسي الديكور والمقاولين يضمن تحويل موقع البناء إلى تحفة فنية جاهزة في وقت قياسي."
             </div>
@@ -345,39 +355,39 @@
                 
                 <!-- Landscape Video -->
                 <div>
-                   <div class="yt-facade landscape" data-vid="t_lN65LWpqE" aria-label="تشغيل فيديو تحدي تنظيف شقة مغلقة">
-                      <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="تحدي تنظيف شقة مغلقة" loading="lazy">
+                   <div class="yt-facade landscape" data-vid="YuL41GWBVRk" aria-label="تشغيل فيديو التنظيف بعد التشطيب">
+                      <img src="https://img.youtube.com/vi/YuL41GWBVRk/hqdefault.jpg" alt="تنظيف بعد التشطيب" loading="lazy" decoding="async">
                       <div class="play-btn"></div>
                    </div>
-                   <p class="video-caption">🎥 التدخل السريع لاستعادة شقة مغلقة منذ 15 عاماً بواسطة Habib Clean.</p>
+                   <p class="video-caption">🎥 كفاءة فريق Habib Clean في تأسيس وتنظيف العقارات بعد التشطيب.</p>
                 </div>
 
                 <!-- Shorts Grid -->
                 <div class="videos-showcase-grid">
                   <div>
-                     <div class="yt-facade portrait" data-vid="YuL41GWBVRk" aria-label="تشغيل فيديو تنظيف بعد التشطيب">
-                        <img src="https://img.youtube.com/vi/YuL41GWBVRk/hqdefault.jpg" alt="شركة تنظيف بعد التشطيب" loading="lazy">
-                        <div class="play-btn"></div>
-                     </div>
-                  </div>
-                  
-                  <div>
                      <div class="yt-facade portrait" data-vid="vLGKsoqvcMY" aria-label="تشغيل فيديو خدمات التنظيف بعد التشطيب">
-                        <img src="https://img.youtube.com/vi/vLGKsoqvcMY/hqdefault.jpg" alt="خدمات التنظيف بعد التشطيب" loading="lazy">
+                        <img src="https://img.youtube.com/vi/vLGKsoqvcMY/hqdefault.jpg" alt="خدمات التنظيف بعد التشطيب" loading="lazy" decoding="async">
                         <div class="play-btn"></div>
                      </div>
                   </div>
                   
                   <div>
                      <div class="yt-facade portrait" data-vid="_6U0VWvv8Xo" aria-label="تشغيل فيديو الاحترافية في النظافة الفندقية">
-                        <img src="https://img.youtube.com/vi/_6U0VWvv8Xo/hqdefault.jpg" alt="الاحترافية في النظافة الفندقية" loading="lazy">
+                        <img src="https://img.youtube.com/vi/_6U0VWvv8Xo/hqdefault.jpg" alt="الاحترافية في النظافة الفندقية" loading="lazy" decoding="async">
+                        <div class="play-btn"></div>
+                     </div>
+                  </div>
+                  
+                  <div>
+                     <div class="yt-facade portrait" data-vid="9yEXzbuYdXo" aria-label="تشغيل فيديو أضخم عملية تنظيف عميق">
+                        <img src="https://img.youtube.com/vi/9yEXzbuYdXo/hqdefault.jpg" alt="أضخم عملية تنظيف عميق" loading="lazy" decoding="async">
                         <div class="play-btn"></div>
                      </div>
                   </div>
 
                   <div>
-                     <div class="yt-facade portrait" data-vid="9yEXzbuYdXo" aria-label="تشغيل فيديو أضخم عملية تنظيف عميق">
-                        <img src="https://img.youtube.com/vi/9yEXzbuYdXo/hqdefault.jpg" alt="أضخم عملية تنظيف عميق" loading="lazy">
+                     <div class="yt-facade portrait" data-vid="t_lN65LWpqE" aria-label="تشغيل فيديو تحدي تنظيف شقة مغلقة">
+                        <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="تحدي تنظيف شقة مغلقة" loading="lazy" decoding="async">
                         <div class="play-btn"></div>
                      </div>
                   </div>
@@ -391,9 +401,6 @@
             <h2>استراتيجية "الفرق المتخصصة" لضغط وقت التنظيف</h2>
             <p>السر وراء السرعة التي نقدمها يكمن في تقسيم العمل (Division of Labor). نرسل جيشاً منظماً من 5 إلى 15 فرداً مقسمين إلى فرق متخصصة للأرضيات، الواجهات المرتفعة، والتفاصيل الدقيقة، مما ينهي العمل خلال <strong>24 إلى 48 ساعة فقط</strong>.</p>
 
-            <h2>التفرقة بين "بقع التشطيب" و "عيوب الصناعة"</h2>
-            <p>التنظيف الاحترافي العميق يزيل الشوائب ويبرز جودة التشطيب الحقيقية، مما يمنع أي سوء تفاهم بين المهندس والعميل أثناء الاستلام.</p>
-
             <!-- B2B Highlight Box -->
             <div class="b2b-box" id="b2b">
                 <h3>هل أنت مهندس ديكور أو صاحب شركة مقاولات؟</h3>
@@ -401,17 +408,17 @@
             </div>
 
             <!-- OMNI-SPIDERWEB MEGA SITEMAP -->
-            <section class="omni-spiderweb">
+            <nav class="omni-spiderweb" aria-label="خريطة الموقع لخدمات Habib Clean">
                 <div class="omni-header">
                     <h3>🌐 شبكة خدمات Habib Clean الهندسية</h3>
                 </div>
                 <div class="omni-grid">
-                    <a href="blog1-تنظيف-بعد-التشطيب.html">تنظيف الفيلا بعد التشطيب</a>
-                    <a href="blog10-لماذا-تفشل-شركات-التنظيف-العادية.html">لماذا تفشل الشركات العادية</a>
-                    <a href="blog42-post-construction-vip-protocol.html">بروتوكول الـ VIP للفيلات</a>
-                    <a href="cleaning-marble-after-construction.html">جلي الرخام بعد التشطيب</a>
+                    <a href="blog1-تنظيف-بعد-التشطيب.html"><span>تنظيف الفيلا بعد التشطيب</span></a>
+                    <a href="blog10-لماذا-تفشل-شركات-التنظيف-العادية.html"><span>لماذا تفشل الشركات العادية</span></a>
+                    <a href="blog42-post-construction-vip-protocol.html"><span>بروتوكول الـ VIP للفيلات</span></a>
+                    <a href="cleaning-marble-after-construction.html"><span>جلي الرخام بعد التشطيب</span></a>
                 </div>
-            </section>
+            </nav>
 
             <section class="faq-section">
                 <h2 style="border: none; margin-top: 0; padding-bottom: 20px;">الأسئلة الشائعة (FAQ)</h2>
@@ -433,9 +440,28 @@
         </article>
     </main>
 
+    <!-- Floating Action Buttons & Story Modal -->
     <div class="contact-container">
-        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
         <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
+        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
+        <button id="openStoryBtn" class="btn-float story-bubble" title="قصة سرعة التسليم">
+            <span class="pulse-ring"></span>
+            🤫
+        </button>
+    </div>
+
+    <!-- Centered Story Modal -->
+    <div id="centered-modal-overlay" class="centered-modal-overlay">
+        <div class="modal-story-box">
+            <button id="closeStoryBtn" class="close-modal-x">&times;</button>
+            <div class="story-emoji-header">⏱️⚡</div>
+            <h4>معجزة تسليم قصر التجمع في 24 ساعة!</h4>
+            <p>تفاجأ مهندس ديكور بقرار العميل استلام فيلته قبل الموعد بـ 3 أيام، وكانت الفيلا مليئة ببقايا الدهانات والأسمنت! 💀<br><br>استعان بفريق الطوارئ لـ <strong>Habib Clean</strong>.. بفضل استراتيجية "الفرق المتخصصة"، تم تسليم الفيلا بمعايير 5 نجوم في أقل من 24 ساعة، وأنقذ المهندس من شروط جزائية ضخمة! ✨👑</p>
+            <div class="modal-actions">
+                <a href="../thankyou-whatsapp.html" class="modal-btn-action whatsapp">💬 حجز تسليم فوري</a>
+                <a href="../call-thanks.html" class="modal-btn-action call">📞 استشارة طوارئ هندسية</a>
+            </div>
+        </div>
     </div>
 
     <button id="scrollTopBtn" aria-label="العودة للأعلى" title="العودة لأعلى الصفحة">↑</button>
@@ -443,13 +469,11 @@
     <footer>
         <strong style="font-family: 'Playfair Display', serif; color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 12px; letter-spacing: 2px;">HABIB CLEAN</strong>
         <p>المقر الرئيسي: المعادي - القاهرة | التغطية: القاهرة، الجيزة، التجمع، والشيخ زايد.</p>
-        <p>© 2026 جميع الحقوق محفوظة لشركة Habib Clean</p>
+        <p style="margin-top: 20px; font-size: 13px; color: #777;">© 2026 جميع الحقوق محفوظة لشركة Habib Clean | قطاع تسليم المشروعات الهندسية</p>
     </footer>
 
-    <!-- Scripts: Progress Bar, YouTube Facade, Scroll to Top & GCLID Tracking -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Progress Bar
             window.addEventListener('scroll', function() {
                 var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -457,18 +481,13 @@
                 document.getElementById("myBar").style.width = scrolled + "%";
             }, { passive: true });
 
-            // Scroll To Top Logic
             const topBtn = document.getElementById('scrollTopBtn');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 500) topBtn.classList.add('show');
                 else topBtn.classList.remove('show');
             }, { passive: true });
+            topBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-            topBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // YouTube Facade Loader
             const facades = document.querySelectorAll('.yt-facade');
             facades.forEach(facade => {
                 facade.addEventListener('click', function() {
@@ -477,14 +496,22 @@
                 });
             });
 
-            // GCLID Tracking
+            const openBtn = document.getElementById('openStoryBtn');
+            const closeBtn = document.getElementById('closeStoryBtn');
+            const modal = document.getElementById('centered-modal-overlay');
+            openBtn.addEventListener('click', () => { modal.classList.add('active'); });
+            const closeModal = () => { modal.classList.remove('active'); };
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
             const urlParams = new URLSearchParams(window.location.search);
-            const gclid = urlParams.get('gclid');
+            const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
             if (gclid) {
+                sessionStorage.setItem("gclid_val", gclid);
                 document.querySelectorAll('a').forEach(link => {
-                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#')) {
+                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
                         const separator = link.href.includes('?') ? '&' : '?';
-                        link.href += separator + 'gclid=' + gclid;
+                        link.href += separator + 'gclid=' + encodeURIComponent(gclid);
                     }
                 });
             }
