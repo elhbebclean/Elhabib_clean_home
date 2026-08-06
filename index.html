@@ -92,7 +92,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap">
   </noscript>
 
-  <!-- Schema Markup 2026 Ready (Updated with ImageObject Logo for Google Favicon Indexing) -->
+  <!-- Schema Markup 2026 Ready (Cleaned & Error-Free + VideoObjects) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -116,11 +116,6 @@
         "url": "https://habib-clean.com/",
         "telephone": "+201016961497",
         "priceRange": "$$$",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "120"
-        },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1 شارع وادي النيل",
@@ -173,6 +168,16 @@
         "@id": "https://habib-clean.com/#website",
         "url": "https://habib-clean.com/",
         "name": "الحبيب كلين",
+        "publisher": { "@id": "https://habib-clean.com/#organization" }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "تنظيف بعد التشطيب - حبيب كلين",
+        "description": "فيديو توضيحي لمعايير تنظيف الفيلات والشقق بعد التشطيب مع حبيب كلين.",
+        "thumbnailUrl": "https://img.youtube.com/vi/3sWUMJKXtuQ/hqdefault.jpg",
+        "uploadDate": "2026-08-04T12:00:00+02:00",
+        "contentUrl": "https://www.youtube.com/watch?v=3sWUMJKXtuQ",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/3sWUMJKXtuQ",
         "publisher": { "@id": "https://habib-clean.com/#organization" }
       }
     ]
@@ -867,6 +872,11 @@
           <img src="https://img.youtube.com/vi/t_lN65LWpqE/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 2" loading="lazy" decoding="async" width="480" height="360" style="width:100%; height:100%; object-fit:cover;">
           <div class="play-button">تشغيل</div>
         </div>
+
+        <div class="video-wrapper" data-video="3sWUMJKXtuQ">
+          <img src="https://img.youtube.com/vi/3sWUMJKXtuQ/hqdefault.jpg" alt="فيديو أعمال الحبيب كلين 3" loading="lazy" decoding="async" width="480" height="360" style="width:100%; height:100%; object-fit:cover;">
+          <div class="play-button">تشغيل</div>
+        </div>
       </div>
     </section>
 
@@ -1221,7 +1231,7 @@
           btn.href = baseUrl + "/call-thanks.html" + queryParams;
         });
 
-        var whatsappButtons = document.querySelectorAll('a[href*="thankyou-whatsapp.html"]});
+        var whatsappButtons = document.querySelectorAll('a[href*="thankyou-whatsapp.html"]');
         whatsappButtons.forEach(function (btn) {
           btn.href = baseUrl + "/thankyou-whatsapp.html" + queryParams;
         });
