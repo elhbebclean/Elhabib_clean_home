@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head> 
-  <!-- Favicon -->
+  <!-- Favicon & Apple Touch Icons (Critical for Google Favicon Indexing) -->
   <link rel="icon" href="https://habib-clean.com/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="https://habib-clean.com/logo.png">
 
@@ -73,6 +73,7 @@
   <meta property="og:description" content="الحبيب كلين متخصصة في تنظيف بعد التشطيب للفيلات والقصور والمساحات الكبيرة فقط. فرق تنفيذ من 5 إلى 15 فرد.">
   <meta property="og:image" content="https://habib-clean.com/File_00000000dda461fdaee166e6e4076454.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://habib-clean.com/logo.png">
 
   <meta name="description" content="الحبيب كلين متخصصة في تنظيف بعد التشطيب للفيلات والقصور والمساحات الكبيرة فقط. فرق تنفيذ من 5 إلى 15 فرد، إزالة دهان وأسمنت وأتربة التشطيب، وتجهيز العقار للسكن أو الاستلام.">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -91,7 +92,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap">
   </noscript>
 
-  <!-- Schema Markup 2026 Ready -->
+  <!-- Schema Markup 2026 Ready (Updated with ImageObject Logo for Google Favicon Indexing) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -106,7 +107,12 @@
           "name": "محمود السيد"
         },
         "image": "https://habib-clean.com/File_00000000dda461fdaee166e6e4076454.png",
-        "logo": "https://habib-clean.com/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://habib-clean.com/logo.png",
+          "width": 512,
+          "height": 512
+        },
         "url": "https://habib-clean.com/",
         "telephone": "+201016961497",
         "priceRange": "$$$",
@@ -1215,7 +1221,7 @@
           btn.href = baseUrl + "/call-thanks.html" + queryParams;
         });
 
-        var whatsappButtons = document.querySelectorAll('a[href*="thankyou-whatsapp.html"]');
+        var whatsappButtons = document.querySelectorAll('a[href*="thankyou-whatsapp.html"]});
         whatsappButtons.forEach(function (btn) {
           btn.href = baseUrl + "/thankyou-whatsapp.html" + queryParams;
         });
