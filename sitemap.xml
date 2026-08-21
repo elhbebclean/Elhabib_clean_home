@@ -5,7 +5,7 @@
 <!-- 1. الصفحة الرئيسية (الأولوية القصوى رقم 1) -->
 <url>
   <loc>https://habib-clean.com/</loc>
-  <lastmod>2026-08-02</lastmod>
+  <lastmod>2026-08-21</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.0</priority>
   <video:video>
@@ -16,26 +16,34 @@
   </video:video>
 </url>
 
-<!-- 2. قسم الزجاج (ثاني أهم صفحة) -->
+<!-- 2. قسم تنظيف الشقق الفندقية و Airbnb (جديد - أولوية عالية جداً) -->
 <url>
-  <loc>https://habib-clean.com/glass-facade-cleaning.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://habib-clean.com/property-management-egypt.html</loc>
+  <lastmod>2026-08-21</lastmod>
+  <changefreq>daily</changefreq>
   <priority>0.98</priority>
 </url>
 
-<!-- 3. صفحة الخدمات العامة -->
+<!-- 3. قسم الزجاج (ثالث أهم صفحة) -->
+<url>
+  <loc>https://habib-clean.com/glass-facade-cleaning.html</loc>
+  <lastmod>2026-08-21</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.97</priority>
+</url>
+
+<!-- 4. صفحة الخدمات العامة -->
 <url>
   <loc>https://habib-clean.com/services.html</loc>
-  <lastmod>2026-08-02</lastmod>
+  <lastmod>2026-08-21</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.96</priority>
 </url>
 
-<!-- 4. قسم الرخام الرئيسي -->
+<!-- 5. قسم الرخام الرئيسي -->
 <url>
   <loc>https://habib-clean.com/habib-marble-master.html</loc>
-  <lastmod>2026-08-02</lastmod>
+  <lastmod>2026-08-21</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.95</priority>
   <video:video>
@@ -46,7 +54,7 @@
   </video:video>
 </url>
 
-<!-- 5. أرشيف المدونة وصفحات الجذر الأساسية -->
+<!-- 6. أرشيف المدونة وصفحات الجذر الأساسية -->
 <url>
   <loc>https://habib-clean.com/blog.html</loc>
   <lastmod>2026-08-02</lastmod>
@@ -89,7 +97,7 @@
   <priority>0.30</priority>
 </url>
 
-<!-- 6. Hub & Master Encyclopedia (أولوية قصوى داخل المدونة) -->
+<!-- 7. Hub & Master Encyclopedia (أولوية قصوى داخل المدونة) -->
 <url>
   <loc>https://habib-clean.com/blog/blog80-cairo-greater-new-cairo-master-hub.html</loc>
   <lastmod>2026-08-02</lastmod>
@@ -118,7 +126,7 @@
   <priority>0.85</priority>
 </url>
 
-<!-- 7. بقية المقالات من 1 إلى 88 بالترتيب الكامل والدقيق -->
+<!-- 8. بقية المقالات من 1 إلى 88 بالترتيب الكامل والدقيق -->
 <url>
   <loc>https://habib-clean.com/blog/blog1-تنظيف-بعد-التشطيب.html</loc>
   <lastmod>2026-08-02</lastmod>
@@ -629,7 +637,7 @@
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
-<!-- 8. تطبيق PWA -->
+<!-- 9. تطبيق PWA -->
 <url>
   <loc>https://habib-clean.com/app/index.html</loc>
   <lastmod>2026-08-02</lastmod>
