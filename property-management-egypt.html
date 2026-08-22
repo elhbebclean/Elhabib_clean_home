@@ -104,7 +104,10 @@
             { "@type": "City", "name": "Cairo" },
             { "@type": "City", "name": "Maadi" },
             { "@type": "City", "name": "New Cairo" },
-            { "@type": "City", "name": "Nasr City" }
+            { "@type": "City", "name": "Nasr City" },
+            { "@type": "City", "name": "Katameya" },
+            { "@type": "AdministrativeArea", "name": "Fifth Settlement" },
+            { "@type": "AdministrativeArea", "name": "Zahraa El Maadi" }
           ],
           "audience": {
             "@type": "Audience",
@@ -318,9 +321,9 @@
     <!-- Header Navigation -->
     <header class="site-header">
         <div class="nav-container">
-            <a href="https://habib-landscape-boutique.com/" class="brand-text">ELHABIB MGT</a>
+            <a href="https://habib-landscape-boutique.com/" class="brand-text" aria-label="Elhabib Management Home">ELHABIB MGT</a>
             
-            <button class="mobile-menu-btn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="main-nav">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="main-nav">
                 <span></span><span></span><span></span>
             </button>
 
@@ -345,13 +348,12 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <!-- Physical img tag for improved Largest Contentful Paint (LCP) -->
-            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1920&q=80" alt="Premium apartment interior in Cairo" class="hero-bg" fetchpriority="high" loading="eager">
+        <section class="hero" aria-labelledby="hero-title">
+            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1920&q=80" alt="" aria-hidden="true" class="hero-bg" fetchpriority="high" loading="eager">
             
             <div class="container">
                 <div class="hero-content">
-                    <h1>Property Management in Cairo for Overseas Owners</h1>
+                    <h1 id="hero-title">Property Management in Cairo for Overseas Owners</h1>
                     <p>Your dedicated on-ground operational partner. We handle short-term rental coordination, guest communication, and hotel-grade turnovers for international property investors.</p>
                     <div class="hero-actions">
                         <a href="#assessment" class="btn btn-accent tracking-link" data-event="management_assessment_start">Request a Property Audit</a>
@@ -370,28 +372,28 @@
         </div>
 
         <!-- Services Section -->
-        <section id="services" class="section section-white">
+        <section id="services" class="section section-white" aria-labelledby="services-title">
             <div class="container">
                 <header class="section-header">
-                    <h2>Precision On-Ground Operations</h2>
-                    <p>We handle the physical, logistical, and hygiene requirements of operating a short-term rental asset across Cairo, Maadi, and New Cairo.</p>
+                    <h2 id="services-title">Precision On-Ground Operations</h2>
+                    <p>We handle the physical, logistical, and hygiene requirements of operating a short-term rental asset across Cairo, Maadi, New Cairo, and surrounding districts.</p>
                 </header>
                 
                 <div class="grid-3">
                     <article class="card">
-                        <svg class="svg-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14l2 2 4-4"></path></svg>
+                        <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14l2 2 4-4"></path></svg>
                         <h3>Guest Operations & Check-ins</h3>
                         <p>We manage local booking communications, coordinate guest check-ins, verify property condition post-stay, and act as the local contact for any inquiries.</p>
                     </article>
 
                     <article class="card">
-                        <svg class="svg-icon" viewBox="0 0 24 24"><path d="M2.5 12a5 5 0 0 1 4.3-4.9l2.4-.4a2 2 0 0 0 1.6-1.5l.5-2.2a5 5 0 0 1 9.4 0l.5 2.2a2 2 0 0 0 1.6 1.5l2.4.4a5 5 0 0 1 4.3 4.9v2.6a5 5 0 0 1-4.3 4.9l-2.4.4a2 2 0 0 0-1.6 1.5l-.5 2.2a5 5 0 0 1-9.4 0l-.5-2.2a2 2 0 0 0-1.6-1.5l-2.4-.4A5 5 0 0 1 2.5 14.6v-2.6z"></path></svg>
+                        <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12a5 5 0 0 1 4.3-4.9l2.4-.4a2 2 0 0 0 1.6-1.5l.5-2.2a5 5 0 0 1 9.4 0l.5 2.2a2 2 0 0 0 1.6 1.5l2.4.4a5 5 0 0 1 4.3 4.9v2.6a5 5 0 0 1-4.3 4.9l-2.4.4a2 2 0 0 0-1.6 1.5l-.5 2.2a5 5 0 0 1-9.4 0l-.5-2.2a2 2 0 0 0-1.6-1.5l-2.4-.4A5 5 0 0 1 2.5 14.6v-2.6z"></path></svg>
                         <h3>Integrated Housekeeping</h3>
                         <p>All deep cleaning, inventory restocking, and linen rotation are executed by our in-house division, <strong>Elhabib Clean</strong>, ensuring consistent standards.</p>
                     </article>
 
                     <article class="card">
-                        <svg class="svg-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
                         <h3>Asset Protection & Maintenance</h3>
                         <p>Immediate response protocols for property issues. We coordinate trusted maintenance services to safeguard the physical value of your investment.</p>
                     </article>
@@ -400,10 +402,10 @@
         </section>
 
         <!-- Operational Proof Section -->
-        <section class="section" style="background-color: var(--color-light); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+        <section class="section" style="background-color: var(--color-light); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" aria-labelledby="transparency-title">
             <div class="container">
                 <header class="section-header" style="margin-bottom: 30px;">
-                    <h2>Operational Transparency</h2>
+                    <h2 id="transparency-title">Operational Transparency</h2>
                     <p>See our operations in action. We provide verified staffing and transparent financial reporting to keep overseas owners fully informed.</p>
                 </header>
 
@@ -432,7 +434,7 @@
         </section>
 
         <!-- Founder Section (E-E-A-T) -->
-        <section class="section">
+        <section class="section" aria-label="Founder Information">
             <div class="container">
                 <article class="founder-box">
                     <img src="https://res.cloudinary.com/dwa0e5sup/image/upload/c_fill,g_face,w_400,h_400,f_auto,q_auto/v1787321715/FB_IMG_1787321715144_kj6jxy.jpg" alt="Mahmoud Elsayed - Director of Operations" class="founder-img" loading="lazy" width="220" height="220">
@@ -470,10 +472,10 @@
         </section>
 
         <!-- Qualification Lead Form -->
-        <section id="assessment" class="section section-white">
+        <section id="assessment" class="section section-white" aria-labelledby="audit-title">
             <div class="container">
                 <header class="section-header">
-                    <h2>Request an Operational Audit</h2>
+                    <h2 id="audit-title">Request an Operational Audit</h2>
                     <p>Provide details about your asset in Egypt to receive a customized operational strategy and management proposal.</p>
                 </header>
                 
@@ -529,17 +531,17 @@
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq" class="section">
+        <section id="faq" class="section" aria-labelledby="faq-title">
             <div class="container">
                 <header class="section-header">
-                    <h2>Operational FAQ</h2>
+                    <h2 id="faq-title">Operational FAQ</h2>
                 </header>
                 <div style="max-width: 800px; margin: 0 auto;">
                     
                     <details class="faq-item">
                         <summary>Can you manage my Cairo property if I live abroad?</summary>
                         <div class="faq-content">
-                            <p>Yes. Our property management infrastructure is designed for overseas property owners, expats, and international investors. We act as your local operational partner in Egypt, handling guest communication, maintenance, and check-ins transparently.</p>
+                            <p>Yes. Our property management infrastructure is expressly designed for overseas property owners, expats, and international investors. We act as your local operational partner in Egypt, handling guest communication, maintenance, and check-ins transparently.</p>
                         </div>
                     </details>
                     
@@ -629,14 +631,27 @@
                 }
             } catch (e) { console.warn("Tracking Error:", e); }
 
-            // 3. Centralized WhatsApp Redirect Function
-            function openWhatsApp(message) {
-                const baseUrl = "https://wa.me/201505543649";
-                const fullUrl = message ? `${baseUrl}?text=${message}` : baseUrl;
-                window.open(fullUrl, '_blank');
+            // 3. Centralized WhatsApp Tracking Function
+            function trackAndRedirect(eventName, eventData, targetUrl) {
+                // Ensure target has GCLID if available
+                if (gclid && targetUrl.indexOf('wa.me') !== -1) {
+                    targetUrl += (targetUrl.indexOf('?') === -1 ? '?' : '&') + 'gclid=' + encodeURIComponent(gclid);
+                }
+
+                if(window.dataLayer) {
+                    var data = eventData || {};
+                    data.event = eventName;
+                    data.eventCallback = function() {
+                        window.location.href = targetUrl;
+                    };
+                    data.eventTimeout = 1000;
+                    window.dataLayer.push(data);
+                } else {
+                    window.location.href = targetUrl;
+                }
             }
 
-            // 4. Form Submit Logic with Tracking Intercept
+            // 4. Form Submit Logic with Secure Tracking
             const submitBtn = document.getElementById('submitAssessmentBtn');
             if (submitBtn) {
                 submitBtn.addEventListener('click', function(e) {
@@ -657,21 +672,13 @@
 
                     errorMsg.style.display = 'none';
 
-                    // Ensure dataLayer push happens
-                    if(window.dataLayer) {
-                        window.dataLayer.push({
-                            'event': 'management_assessment_submit',
-                            'property_type': type,
-                            'required_service': service
-                        });
-                    }
-
                     const message = `Hello Elhabib Management,%0A%0A*New Property Audit Request:*%0A- Name: ${encodeURIComponent(name)}%0A- Country: ${encodeURIComponent(country)}%0A- Asset Location: ${encodeURIComponent(location)}%0A- Asset Type: ${encodeURIComponent(type)}%0A- Required Operation: ${encodeURIComponent(service)}%0A%0AWe look forward to discussing the operational strategy.`;
-                    
-                    // Delay slightly to ensure GTM fires the event before opening the new tab
-                    setTimeout(function() {
-                        openWhatsApp(message);
-                    }, 250);
+                    const whatsappUrl = `https://wa.me/201505543649?text=${message}`;
+
+                    trackAndRedirect('management_assessment_submit', {
+                        'property_type': type,
+                        'required_service': service
+                    }, whatsappUrl);
                 });
             }
 
@@ -680,27 +687,23 @@
             waButtons.forEach(function(btn) {
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
-                    if(window.dataLayer) {
-                        window.dataLayer.push({ 'event': 'management_whatsapp_click' });
-                    }
-                    setTimeout(function() {
-                        openWhatsApp("Hello Elhabib Management, I own a property in Cairo and require high-end operational support.");
-                    }, 250);
+                    var defaultMessage = "Hello Elhabib Management, I own a property in Cairo and require high-end operational support.";
+                    var whatsappUrl = `https://wa.me/201505543649?text=${defaultMessage}`;
+                    var eventName = this.getAttribute('data-event') || 'management_whatsapp_click';
+                    
+                    trackAndRedirect(eventName, {}, whatsappUrl);
                 });
             });
 
-            // 6. Generic Tracking Links
-            const trackingLinks = document.querySelectorAll('.tracking-link[data-event]');
+            // 6. Non-Redirect Tracking Links (If any)
+            const trackingLinks = document.querySelectorAll('.tracking-link[data-event]:not(#submitAssessmentBtn):not(.btn-whatsapp-direct)');
             trackingLinks.forEach(function(link) {
-                // Only attach if it's not the submit button (which is handled above)
-                if (link.id !== 'submitAssessmentBtn') {
-                    link.addEventListener('click', function() {
-                        var eventName = this.getAttribute('data-event');
-                        if(window.dataLayer && eventName) {
-                            window.dataLayer.push({ 'event': eventName });
-                        }
-                    });
-                }
+                link.addEventListener('click', function() {
+                    var eventName = this.getAttribute('data-event');
+                    if(window.dataLayer && eventName) {
+                        window.dataLayer.push({ 'event': eventName });
+                    }
+                });
             });
         });
     </script>
