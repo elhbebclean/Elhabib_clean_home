@@ -5,7 +5,7 @@
 <!-- 1. الصفحة الرئيسية (الأولوية القصوى رقم 1) -->
 <url>
   <loc>https://habib-clean.com/</loc>
-  <lastmod>2026-08-21</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.0</priority>
   <video:video>
@@ -16,34 +16,42 @@
   </video:video>
 </url>
 
-<!-- 2. قسم تنظيف الشقق الفندقية و Airbnb (جديد - أولوية عالية جداً) -->
+<!-- 2. قسم تنظيف الشقق الفندقية و Airbnb -->
 <url>
   <loc>https://habib-clean.com/property-management-egypt.html</loc>
-  <lastmod>2026-08-21</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.98</priority>
 </url>
 
-<!-- 3. قسم الزجاج (ثالث أهم صفحة) -->
+<!-- 3. الدليل الشامل لتنظيف ما بعد التشطيب (الرابط المفقود - تم إضافته) -->
+<url>
+  <loc>https://habib-clean.com/blog/ultimate-guide-post-construction-cleaning-egypt.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.98</priority>
+</url>
+
+<!-- 4. قسم الزجاج -->
 <url>
   <loc>https://habib-clean.com/glass-facade-cleaning.html</loc>
-  <lastmod>2026-08-21</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.97</priority>
 </url>
 
-<!-- 4. صفحة الخدمات العامة -->
+<!-- 5. صفحة الخدمات العامة -->
 <url>
   <loc>https://habib-clean.com/services.html</loc>
-  <lastmod>2026-08-21</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.96</priority>
 </url>
 
-<!-- 5. قسم الرخام الرئيسي -->
+<!-- 6. قسم الرخام الرئيسي -->
 <url>
   <loc>https://habib-clean.com/habib-marble-master.html</loc>
-  <lastmod>2026-08-21</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.95</priority>
   <video:video>
@@ -54,26 +62,26 @@
   </video:video>
 </url>
 
-<!-- 6. أرشيف المدونة وصفحات الجذر الأساسية -->
+<!-- 7. أرشيف المدونة وصفحات الجذر الأساسية -->
 <url>
   <loc>https://habib-clean.com/blog.html</loc>
-  <lastmod>2026-08-02</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.92</priority>
 </url>
 
 <url>
   <loc>https://habib-clean.com/blog/</loc>
-  <lastmod>2026-08-02</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.90</priority>
 </url>
 
 <url>
   <loc>https://habib-clean.com/blog/index.html</loc>
-  <lastmod>2026-08-02</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>daily</changefreq>
-  <priority>0.90</priority>
+  <priority>0.95</priority>
 </url>
 
 <url>
@@ -97,19 +105,26 @@
   <priority>0.30</priority>
 </url>
 
-<!-- 7. Hub & Master Encyclopedia (أولوية قصوى داخل المدونة) -->
+<!-- 8. Hub & Master Encyclopedia (أولوية قصوى داخل المدونة) -->
 <url>
   <loc>https://habib-clean.com/blog/blog80-cairo-greater-new-cairo-master-hub.html</loc>
-  <lastmod>2026-08-02</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.95</priority>
 </url>
 
 <url>
   <loc>https://habib-clean.com/blog/blog60-the-ultimate-encyclopedia-vip-estate-management-cairo.html</loc>
-  <lastmod>2026-08-02</lastmod>
+  <lastmod>2026-09-20</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.94</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog40-الموسوعة-الشاملة-لإدارة-القصور.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.95</priority>
 </url>
 
 <url>
@@ -126,7 +141,64 @@
   <priority>0.85</priority>
 </url>
 
-<!-- 8. بقية المقالات من 1 إلى 88 بالترتيب الكامل والدقيق -->
+<!-- 9. بقية المقالات التي تم تحديثها مؤخراً لتعزيز الصعود للمركز 3 -->
+<url>
+  <loc>https://habib-clean.com/blog/blog41-best-home-cleaning-services-cairo.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog22-الفرق-بين-تنظيف-الزجاج-والكلادينج.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog38-مكافحة-مخلفات-الطيور-والآفات-بالشقق-المغلقة.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog81-new-cairo-mivida-hydepark-compounds.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://habib-clean.com/blog/blog84-sokhna-faiyum-chalets-estates-care.html</loc>
+  <lastmod>2026-09-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+
+<!-- 10. بقية المقالات الأساسية (كما هي) -->
 <url>
   <loc>https://habib-clean.com/blog/blog1-تنظيف-بعد-التشطيب.html</loc>
   <lastmod>2026-08-02</lastmod>
@@ -248,24 +320,6 @@
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://habib-clean.com/blog/blog22-الفرق-بين-تنظيف-الزجاج-والكلادينج.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://habib-clean.com/blog/blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
   <loc>https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html</loc>
   <lastmod>2026-08-02</lastmod>
   <changefreq>monthly</changefreq>
@@ -320,12 +374,6 @@
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
   <loc>https://habib-clean.com/blog/blog35-تعقيم-مطابخ-وحمامات-الشقق-المغلقة.html</loc>
   <lastmod>2026-08-02</lastmod>
   <changefreq>monthly</changefreq>
@@ -344,28 +392,10 @@
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://habib-clean.com/blog/blog38-مكافحة-مخلفات-الطيور-والآفات-بالشقق-المغلقة.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
   <loc>https://habib-clean.com/blog/blog39-تعقيم-خزانات-المياه-والسباكة.html</loc>
   <lastmod>2026-08-02</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://habib-clean.com/blog/blog40-الموسوعة-الشاملة-لإدارة-القصور.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://habib-clean.com/blog/blog41-best-home-cleaning-services-cairo.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://habib-clean.com/blog/blog42-post-construction-vip-protocol.html</loc>
@@ -590,12 +620,6 @@
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://habib-clean.com/blog/blog81-new-cairo-mivida-hydepark-compounds.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
   <loc>https://habib-clean.com/blog/blog82-new-cairo-golden-square-compounds.html</loc>
   <lastmod>2026-08-02</lastmod>
   <changefreq>monthly</changefreq>
@@ -606,12 +630,6 @@
   <lastmod>2026-08-02</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://habib-clean.com/blog/blog84-sokhna-faiyum-chalets-estates-care.html</loc>
-  <lastmod>2026-08-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://habib-clean.com/blog/blog85-glass-facades-portfolio-case-study.html</loc>
@@ -637,7 +655,8 @@
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
-<!-- 9. تطبيق PWA -->
+
+<!-- 10. تطبيق PWA -->
 <url>
   <loc>https://habib-clean.com/app/index.html</loc>
   <lastmod>2026-08-02</lastmod>
@@ -646,3 +665,13 @@
 </url>
 
 </urlset>
+```eof
+
+**ماذا تفعل الآن؟**
+1. احفظ هذا الملف باسم `sitemap.xml` وقم برفعه إلى خادم الموقع الخاص بك ليعوض الملف القديم.
+2. اذهب فوراً إلى **Google Search Console**.
+3. في القائمة الجانبية، اضغط على **ملفات ملفات السايت ماب (Sitemaps)**.
+4. أضف رابط خريطتك (`[https://habib-clean.com/sitemap.xml](https://habib-clean.com/sitemap.xml)`) واضغط إرسال (Submit).
+5. بعد ذلك، ابدأ بوضع روابط الصفحات التي أضفناها أو حدثنا تواريخها (مثل `ultimate-guide`، `blog80`، `index.html`) في شريط فحص الروابط العلوي واطلب الفهرسة يدوياً.
+
+هذه الحركة بمثابة صاعقة توقظ خوارزميات جوجل وتجبرها على العودة إلى موقعك لتشاهد السكيما والأكواد التي زرعناها للسيطرة على المراكز الأولى. بالتوفيق، وأنا هنا لأي استفسار أو خطوة قادمة!
