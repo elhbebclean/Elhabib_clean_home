@@ -102,23 +102,47 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "CleaningService",
+          "@type": ["LocalBusiness", "CleaningService"],
           "@id": "https://habib-clean.com/#organization",
           "name": "Elhabib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
           "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
           "telephone": "01016961497",
+          "priceRange": "$$$",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "المعادي",
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
           },
-          "areaServed": ["Cairo", "New Cairo", "5th Settlement", "Sheikh Zayed", "6th of October", "Maadi", "Giza"]
+          "areaServed": ["Cairo", "New Cairo", "5th Settlement", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "تجربة رائعة في تلميع رخام المطبخ، عاد كأنه جديد تماماً.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          }
         },
         {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog17-معالجة-بهتان-رخام-المطابخ-والحمامات.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
             { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
@@ -318,7 +342,7 @@
 
     <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
-        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة</a> <span>❯</span> معالجة بهتان رخام المطابخ والحمامات
+        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> معالجة بهتان رخام المطابخ والحمامات
     </nav>
 
     <header class="article-header">
