@@ -102,11 +102,51 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://habib-clean.com/#identity",
+          "@type": ["LocalBusiness", "CleaningService"],
+          "@id": "https://habib-clean.com/#organization",
           "name": "Elhabib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
+          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
+          "telephone": "01016961497",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Maadi",
+            "addressRegion": "Cairo",
+            "addressCountry": "EG"
+          },
+          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "تقنية عزل وحماية الواجهات ممتازة جداً وحافظت على نظافة المبنى لفترات طويلة.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          ],
           "sameAs": [
             "https://share.google/umb4679rea0EcsZk0",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
@@ -114,51 +154,22 @@
           ]
         },
         {
-          "@type": "LocalBusiness",
-          "@id": "https://habib-clean.com/#localbusiness",
-          "name": "Elhabib Clean - شركة حماية وتنظيف واجهات",
-          "url": "https://habib-clean.com/",
-          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
-          "telephone": "01016961497",
-          "priceRange": "$$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "المعادي",
-            "addressRegion": "القاهرة",
-            "addressCountry": "EG"
-          },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"]
-        },
-        {
-          "@type": "CleaningService",
-          "@id": "https://habib-clean.com/#service",
-          "name": "خدمات حماية وعزل الواجهات الزجاجية والكلادينج بالنانو",
-          "provider": { "@id": "https://habib-clean.com/#identity" },
-          "areaServed": ["القاهرة الكبرى", "التجمع الخامس", "الشيخ زايد"]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html#webpage",
-          "url": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html",
-          "name": "كيفية حماية الواجهات الزجاجية والكلادينج من الأتربة | Elhabib Clean",
-          "isPartOf": { "@id": "https://habib-clean.com/#identity" }
-        },
-        {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/index.html" },
             { "@type": "ListItem", "position": 3, "name": "حماية الواجهات من الأتربة والأمطار", "item": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html" }
           ]
         },
         {
           "@type": "Article",
           "@id": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html#article",
-          "isPartOf": { "@id": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html#webpage" },
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html" },
           "headline": "كيفية حماية الواجهات الزجاجية والكلادينج من الأتربة والأمطار لفترات طويلة",
           "description": "دليل هندسي شامل حول تقنيات العزل الحديثة وطلاءات النانو لحماية واجهات القصور والشركات مع Elhabib Clean.",
-          "author": { "@id": "https://habib-clean.com/#identity" },
-          "publisher": { "@id": "https://habib-clean.com/#identity" },
+          "author": { "@id": "https://habib-clean.com/#organization" },
+          "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
           "dateModified": "2026-08-04T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html",
@@ -168,31 +179,9 @@
           }
         },
         {
-          "@type": "ItemList",
-          "name": "مصفوفة فيديوهات حماية وتلميع الواجهات",
-          "itemListElement": [
-            {
-              "@type": "VideoObject",
-              "position": 1,
-              "name": "تلميع الواجهات والكلادينج",
-              "description": "استعادة بريق الواجهات الزجاجية والكلادينج.",
-              "thumbnailUrl": "https://img.youtube.com/vi/JMAMZV0BhZk/hqdefault.jpg",
-              "uploadDate": "2026-08-04T12:00:00+02:00",
-              "embedUrl": "https://www.youtube-nocookie.com/embed/JMAMZV0BhZk"
-            },
-            {
-              "@type": "VideoObject",
-              "position": 2,
-              "name": "تنظيف الواجهات الزجاجية في القاهرة",
-              "description": "احترافية التنظيف الميداني للواجهات المرتفعة.",
-              "thumbnailUrl": "https://img.youtube.com/vi/O5CoFuXy2WA/hqdefault.jpg",
-              "uploadDate": "2026-07-26T12:00:00+02:00",
-              "embedUrl": "https://www.youtube-nocookie.com/embed/O5CoFuXy2WA"
-            }
-          ]
-        },
-        {
           "@type": "FAQPage",
+          "@id": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html#faq",
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html" },
           "mainEntity": [
             {
               "@type": "Question",
@@ -395,7 +384,7 @@
             <div class="story-box">
                 <h3>قصة حقيقية: لغز الواجهة التي تحدت العاصفة!</h3>
                 <p>في أحد القصور الفاخرة بالتجمع الخامس، أنهى المالك للتو عملية تنظيف شاملة ومكلفة لواجهة المبنى الزجاجية والكلادينج. لكن، لم تمر سوى أيام قليلة، ومع أول موجة أتربة تلتها أمطار خفيفة، تحولت الواجهة الزجاجية البراقة إلى لوحة باهتة مشوهة بالأتربة الطينية المجففة! سأل المالك بحسرة: <em>"هل سنضطر لدفع تكاليف التنظيف وخطورة الحبال كل أسبوعين؟"</em></p>
-                <p>هنا تدخل فريق <strong>Elhabib Clean</strong> بالحل الهندسي الجذري: تطبيق درع الحماية الننوي العازل. النتيجة؟ ظلت الواجهة تحتفظ ببريقها الساطع لشهور طويلة طاردة لكل قطرة مطر أتربة، وكأنها غُسلت للتو كل صباح.</p>
+                <p>هنا تدخل فريق <strong>Elhabib Clean</strong> بالحل الهندسي الجذري: تطبيق درع الحماية الننوي العازل. النتيجة؟ ظلت الواجهة تحتفظ بريقها الساطع لشهور طويلة طاردة لكل قطرة مطر أو أتربة، وكأنها غُسلت للتو كل صباح.</p>
             </div>
 
             <p>في <strong>Elhabib Clean</strong>، لا نكتفي بالغسيل التقليدي، بل نطبق حلولاً هندسية متقدمة تعتمد على علم المواد لإنشاء <strong>"درع حماية غير مرئي"</strong> يصد الأتربة والسوائل من القاع وجذور المسام.</p>
