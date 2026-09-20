@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event:'gtm.js'
+            });
+            var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3076333772698182');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <!-- Favicon -->
     <link rel="icon" href="https://habib-clean.com/favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="https://habib-clean.com/favicon.png">
@@ -101,21 +137,51 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
+          "@type": ["LocalBusiness", "CleaningService"],
           "@id": "https://habib-clean.com/#organization",
-          "name": "Elhabib Clean",
+          "name": "Habib Clean",
           "image": "https://habib-clean.com/logo.png",
           "telephone": "01016961497",
           "url": "https://habib-clean.com",
+          "priceRange": "$$$",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "المعادي",
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
+          },
+          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "6th of October"],
+          "sameAs": [
+            "https://share.google/umb4679rea0EcsZk0",
+            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
+            "https://www.youtube.com/@Elhbeb"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "أفضل جلي وتلميع رخام استخدمته، الرخام رجع كأنه مراية بدون فواصل.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
           }
         },
         {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
             { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
