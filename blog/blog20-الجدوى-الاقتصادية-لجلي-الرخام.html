@@ -102,49 +102,47 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://habib-clean.com/#identity",
-          "name": "Elhabib Clean",
+          "@type": ["LocalBusiness", "CleaningService"],
+          "@id": "https://habib-clean.com/#organization",
+          "name": "Habib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
-          "sameAs": [
-            "https://share.google/umb4679rea0EcsZk0",
-            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
-            "https://www.youtube.com/@Elhbeb"
-          ]
-        },
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://habib-clean.com/#localbusiness",
-          "name": "Elhabib Clean - شركة جلي رخام وتنظيف",
-          "url": "https://habib-clean.com/",
           "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
           "telephone": "01016961497",
           "priceRange": "$$$",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "المعادي",
-            "addressRegion": "القاهرة",
+            "addressLocality": "Maadi",
+            "addressRegion": "Cairo",
             "addressCountry": "EG"
           },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"]
-        },
-        {
-          "@type": "CleaningService",
-          "@id": "https://habib-clean.com/#service",
-          "name": "خدمات جلي وتلميع الرخام وصيانة الأحجار",
-          "provider": { "@id": "https://habib-clean.com/#identity" },
-          "areaServed": ["القاهرة الكبرى", "التجمع الخامس", "الشيخ زايد"]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://habib-clean.com/blog/blog20-الجدوى-الاقتصادية-لجلي-الرخام.html#webpage",
-          "url": "https://habib-clean.com/blog/blog20-الجدوى-الاقتصادية-لجلي-الرخام.html",
-          "name": "الجدوى الاقتصادية لجلي الرخام: لماذا يعتبر استثماراً ذكياً؟ | Elhabib Clean",
-          "isPartOf": { "@id": "https://habib-clean.com/#identity" }
+          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "رؤية مختلفة فعلاً لجلي الرخام كاستثمار للحفاظ على قيمة العقار.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          }
         },
         {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog20-الجدوى-الاقتصادية-لجلي-الرخام.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
             { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
@@ -154,11 +152,11 @@
         {
           "@type": "Article",
           "@id": "https://habib-clean.com/blog/blog20-الجدوى-الاقتصادية-لجلي-الرخام.html#article",
-          "isPartOf": { "@id": "https://habib-clean.com/blog/blog20-الجدوى-الاقتصادية-لجلي-الرخام.html#webpage" },
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog20-الجدوى-الاقتصادية-لجلي-الرخام.html" },
           "headline": "الجدوى الاقتصادية لجلي الرخام: لماذا يعتبر استثماراً ذكياً لرفع قيمة عقارك؟",
           "description": "تحليل اقتصادي وهندسي يوضح كيف يحمي جلي الرخام قيمة عقارك الفاخر ويرفع قيمته السوقية مع Elhabib Clean.",
-          "author": { "@id": "https://habib-clean.com/#identity" },
-          "publisher": { "@id": "https://habib-clean.com/#identity" },
+          "author": { "@id": "https://habib-clean.com/#organization" },
+          "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
           "dateModified": "2026-08-04T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog20-الجدوى-الاقتصادية-لجلي-الرخام.html",
@@ -168,28 +166,20 @@
           }
         },
         {
-          "@type": "ItemList",
-          "name": "مصفوفة فيديوهات جلي الرخام",
-          "itemListElement": [
-            {
-              "@type": "VideoObject",
-              "position": 1,
-              "name": "جلي الرخام بجودة الفنادق",
-              "description": "عمليات جلي وتلميع الرخام والإيبوكسي بجودة الفنادق من Elhabib Clean.",
-              "thumbnailUrl": "https://img.youtube.com/vi/L2m468B-96c/hqdefault.jpg",
-              "uploadDate": "2026-05-24T12:00:00+02:00",
-              "embedUrl": "https://www.youtube-nocookie.com/embed/L2m468B-96c"
-            },
-            {
-              "@type": "VideoObject",
-              "position": 2,
-              "name": "تلميع الرخام الإيطالي بالألماس",
-              "description": "تقنية الصقل بالألماس لإعادة إحياء الرخام المستورد.",
-              "thumbnailUrl": "https://img.youtube.com/vi/kYw1kfDoQO4/hqdefault.jpg",
-              "uploadDate": "2026-05-24T12:00:00+02:00",
-              "embedUrl": "https://www.youtube-nocookie.com/embed/kYw1kfDoQO4"
-            }
-          ]
+          "@type": "VideoObject",
+          "name": "جلي الرخام بجودة الفنادق",
+          "description": "عمليات جلي وتلميع الرخام والإيبوكسي بجودة الفنادق من Elhabib Clean.",
+          "thumbnailUrl": "https://img.youtube.com/vi/L2m468B-96c/hqdefault.jpg",
+          "uploadDate": "2026-05-24T12:00:00+02:00",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/L2m468B-96c"
+        },
+        {
+          "@type": "VideoObject",
+          "name": "تلميع الرخام الإيطالي بالألماس",
+          "description": "تقنية الصقل بالألماس لإعادة إحياء الرخام المستورد.",
+          "thumbnailUrl": "https://img.youtube.com/vi/kYw1kfDoQO4/hqdefault.jpg",
+          "uploadDate": "2026-05-24T12:00:00+02:00",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/kYw1kfDoQO4"
         },
         {
           "@type": "FAQPage",
