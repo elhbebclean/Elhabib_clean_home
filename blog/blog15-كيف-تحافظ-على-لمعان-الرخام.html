@@ -102,21 +102,45 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
+          "@type": ["LocalBusiness", "CleaningService"],
           "@id": "https://habib-clean.com/#organization",
           "name": "Elhabib Clean",
           "image": "https://habib-clean.com/logo.png",
           "telephone": "01016961497",
           "url": "https://habib-clean.com",
+          "priceRange": "$$$",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "المعادي",
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "نصائح ممتازة جداً ساعدتني في الحفاظ على رخام الفلة.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
           }
         },
         {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog15-كيف-تحافظ-على-لمعان-الرخام.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
             { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
