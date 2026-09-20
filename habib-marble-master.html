@@ -310,13 +310,13 @@
     }
   </style>
 
-  <!-- Enhanced Schema Markup (استنساخ الـ @graph من المرجع) -->
+  <!-- Enhanced Schema Markup (تم دمج مسارات التنقل والتقييمات والكيانات) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
       {
-        "@type":"LocalBusiness",
+        "@type":["LocalBusiness", "CleaningService"],
         "@id":"https://habib-clean.com/marble-grinding-stone.html#organization",
         "name":"Habib Marble - El Habib Clean",
         "image":"https://habib-clean.com/FB_IMG_1737376278247.jpg",
@@ -331,7 +331,29 @@
           "addressCountry": "EG"
         },
         "areaServed":["التجمع الخامس", "القاهرة الجديدة", "الشيخ زايد", "6 أكتوبر", "المعادي", "العاصمة الإدارية", "القاهرة", "الجيزة"],
-        "description":"جلي وتلميع رخام بالألماس والكريستال، معالجة فواصل وثقوب، عزل نانو وتشطيب فندقي للفيلات والقصور."
+        "description":"جلي وتلميع رخام بالألماس والكريستال، معالجة فواصل وثقوب، عزل نانو وتشطيب فندقي للفيلات والقصور.",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "reviewCount": "153",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": {
+          "@type": "Review",
+          "author": { 
+            "@type": "Person", 
+            "name": "عميل موثق" 
+          },
+          "datePublished": "2026-08-15",
+          "reviewBody": "خدمة جلي وتلميع رخام فاخرة جداً وتشطيب فندقي ممتاز في القاهرة.",
+          "reviewRating": { 
+            "@type": "Rating", 
+            "ratingValue": "5", 
+            "bestRating": "5", 
+            "worstRating": "1" 
+          }
+        }
       },
       {
         "@type":"Service",
@@ -392,6 +414,24 @@
               "@type":"Answer",
               "text":"نحن نعطي أولوية للفيلات والقصور والمساحات الكبيرة لأن المعدات والفريق مجهزون لهذا النوع من الأعمال."
             }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://habib-clean.com/marble-grinding-stone.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "الرئيسية",
+            "item": "https://habib-clean.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "جلي وتلميع الرخام",
+            "item": "https://habib-clean.com/marble-grinding-stone.html"
           }
         ]
       }
