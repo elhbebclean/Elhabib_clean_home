@@ -72,12 +72,13 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
+          "@type": ["LocalBusiness", "CleaningService"],
           "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
           "image": "https://habib-clean.com/FB_IMG_1737376278247.jpg",
           "telephone": "01016961497",
           "url": "https://habib-clean.com",
+          "priceRange": "$$$",
           "description": "المرجع الأكبر والكيان الهندسي الأول لإدارة المرافق، تأسيس القصور، جلي الرخام، وتنظيف الواجهات.",
           "address": {
             "@type": "PostalAddress",
@@ -90,14 +91,37 @@
             "https://share.google/umb4679rea0EcsZk0",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
             "https://www.youtube.com/@Elhbeb"
-          ]
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "خدمة ممتازة لحماية التشطيبات في الفيلات الكبيرة بالقاهرة.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          }
         },
         {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog10-لماذا-تفشل-شركات-التنظيف-العادية.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
             { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "فشل شركات التنظيف العادية", "item": "https://habib-clean.com/blog/blog10-لماذا-تفشل-شركات-التنظيف-العادية.html" }
+            { "@type": "ListItem", "position": 3, "name": "أخطاء شركات التنظيف", "item": "https://habib-clean.com/blog/blog10-لماذا-تفشل-شركات-التنظيف-العادية.html" }
           ]
         },
         {
