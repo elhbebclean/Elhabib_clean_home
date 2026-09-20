@@ -29,8 +29,13 @@
           // 1. Load GTM
           (function(w,d,s,l,i){
             w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event:'gtm.js'
+            });
+            var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
             j.async=true;
             j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
             f.parentNode.insertBefore(j,f);
@@ -102,11 +107,51 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://habib-clean.com/#identity",
+          "@type": ["LocalBusiness", "CleaningService"],
+          "@id": "https://habib-clean.com/#organization",
           "name": "Elhabib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
+          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
+          "telephone": "01016961497",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Maadi",
+            "addressRegion": "Cairo",
+            "addressCountry": "EG"
+          },
+          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "الدليل الشامل لصيانة الواجهات غني بالمعلومات واحترافي للغاية.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          ],
           "sameAs": [
             "https://share.google/umb4679rea0EcsZk0",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
@@ -114,51 +159,22 @@
           ]
         },
         {
-          "@type": "LocalBusiness",
-          "@id": "https://habib-clean.com/#localbusiness",
-          "name": "Elhabib Clean - شركة صيانة وتنظيف واجهات",
-          "url": "https://habib-clean.com/",
-          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
-          "telephone": "01016961497",
-          "priceRange": "$$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "المعادي",
-            "addressRegion": "القاهرة",
-            "addressCountry": "EG"
-          },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"]
-        },
-        {
-          "@type": "CleaningService",
-          "@id": "https://habib-clean.com/#service",
-          "name": "خدمات صيانة وعزل واجهات القصور والفيلات المرتفعة",
-          "provider": { "@id": "https://habib-clean.com/#identity" },
-          "areaServed": ["القاهرة الكبرى", "التجمع الخامس", "الشيخ زايد"]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html#webpage",
-          "url": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html",
-          "name": "الدليل الشامل لصيانة واجهات القصور الفاخرة | Elhabib Clean",
-          "isPartOf": { "@id": "https://habib-clean.com/#identity" }
-        },
-        {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/index.html" },
             { "@type": "ListItem", "position": 3, "name": "الدليل الشامل لصيانة واجهات القصور", "item": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html" }
           ]
         },
         {
           "@type": "Article",
           "@id": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html#article",
-          "isPartOf": { "@id": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html#webpage" },
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html" },
           "headline": "الدليل الشامل والمرجع الهندسي لصيانة وتنظيف واجهات القصور والفيلات الفاخرة",
           "description": "مرجع شامل ومعتمد من Elhabib Clean لتنظيف، صيانة، وعزل الواجهات الخارجية للقصور والفيلات في مصر.",
-          "author": { "@id": "https://habib-clean.com/#identity" },
-          "publisher": { "@id": "https://habib-clean.com/#identity" },
+          "author": { "@id": "https://habib-clean.com/#organization" },
+          "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
           "dateModified": "2026-08-04T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html",
@@ -168,40 +184,9 @@
           }
         },
         {
-          "@type": "ItemList",
-          "name": "مصفوفة فيديوهات صيانة الواجهات",
-          "itemListElement": [
-            {
-              "@type": "VideoObject",
-              "position": 1,
-              "name": "تلميع الواجهات والكلادينج للقصور",
-              "description": "كيف نعيد للزجاج والواجهات بريقها وتنظيفها بأعلى جودة.",
-              "thumbnailUrl": "https://img.youtube.com/vi/JMAMZV0BhZk/hqdefault.jpg",
-              "uploadDate": "2026-08-04T12:00:00+02:00",
-              "embedUrl": "https://www.youtube-nocookie.com/embed/JMAMZV0BhZk"
-            },
-            {
-              "@type": "VideoObject",
-              "position": 2,
-              "name": "تنظيف الواجهات الزجاجية المرتفعة",
-              "description": "استعراض عمليات التنظيف המيدانية للواجهات.",
-              "thumbnailUrl": "https://img.youtube.com/vi/O5CoFuXy2WA/hqdefault.jpg",
-              "uploadDate": "2026-07-26T12:00:00+02:00",
-              "embedUrl": "https://www.youtube-nocookie.com/embed/O5CoFuXy2WA"
-            },
-            {
-              "@type": "VideoObject",
-              "position": 3,
-              "name": "أمان وتعليق المرتفعات والحبال",
-              "description": "معايير الأمان والسلامة المهنية في تنظيف الواجهات المرتفعة.",
-              "thumbnailUrl": "https://img.youtube.com/vi/_6U0VWvv8Xo/hqdefault.jpg",
-              "uploadDate": "2026-05-24T12:00:00+02:00",
-              "embedUrl": "https://www.youtube-nocookie.com/embed/_6U0VWvv8Xo"
-            }
-          ]
-        },
-        {
           "@type": "FAQPage",
+          "@id": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html#faq",
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html" },
           "mainEntity": [
             {
               "@type": "Question",
@@ -391,7 +376,7 @@
         @media (max-width: 768px) {
             main { padding: 30px 20px; margin-top: -20px; }
             header.article-header { padding: 50px 15px 70px; }
-            .contact-container { left: auto; right: 20px; bottom: 20px; } /* نقلناهم لليمين في الموبايل لسهولة الوصول */
+            .contact-container { left: auto; right: 20px; bottom: 20px; }
         }
     </style>
 </head>
@@ -607,4 +592,3 @@
     </script>
 </body>
 </html>
-
