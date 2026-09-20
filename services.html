@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -95,7 +94,7 @@
           }
         },
         {
-          "@type": "CleaningService",
+          "@type": ["LocalBusiness", "CleaningService"],
           "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean - الحبيب كلين",
           "alternateName": "شركة الحبيب كلين لتنظيف الفيلات والقصور",
@@ -128,7 +127,29 @@
             { "@type": "AdministrativeArea", "name": "المعادي" },
             { "@type": "AdministrativeArea", "name": "التجمع الخامس" },
             { "@type": "AdministrativeArea", "name": "الشيخ زايد" }
-          ]
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "خدمة تنظيف فندقية ممتازة وإدارة محترفة للعقارات في المعادي والقاهرة.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          }
         },
         {
           "@type": "Service",
@@ -157,6 +178,24 @@
                 "@type": "Answer",
                 "text": "نوفر فرق عمل هادئة ومنظمة لإعادة تأهيل الفيلات المغلقة وتنظيفها بعمق مع الحفاظ على الخصوصية والمقتنيات."
               }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/services.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "الرئيسية",
+              "item": "https://habib-clean.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "الخدمات المركزية",
+              "item": "https://habib-clean.com/services.html"
             }
           ]
         }
@@ -907,4 +946,3 @@
     </script>
 </body>
 </html>
-```
