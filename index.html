@@ -130,11 +130,12 @@
         ]
       },
       {
-        "@type": "CleaningService",
+        "@type": ["LocalBusiness", "CleaningService"],
         "@id": "https://habib-clean.com/#service",
         "name": "أفضل شركة تنظيف منازل بعد التشطيب للفيلات",
         "provider": { "@id": "https://habib-clean.com/#organization" },
         "priceRange": "$$$",
+        "telephone": "+201016961497",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1 شارع وادي النيل",
@@ -173,6 +174,28 @@
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "جلي وتلميع الرخام للعقارات الراقية" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "تنظيف الواجهات الزجاجية" } }
           ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "reviewCount": "153",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": {
+          "@type": "Review",
+          "author": { 
+            "@type": "Person", 
+            "name": "عميل موثق" 
+          },
+          "datePublished": "2026-08-15",
+          "reviewBody": "خدمة تنظيف فندقية ممتازة وإدارة محترفة للعقارات في المعادي والقاهرة.",
+          "reviewRating": { 
+            "@type": "Rating", 
+            "ratingValue": "5", 
+            "bestRating": "5", 
+            "worstRating": "1" 
+          }
         }
       },
       {
@@ -210,6 +233,18 @@
               "@type": "Answer",
               "text": "نعم، نوفّر فرق تنفيذ مدربة هندسياً تبدأ من 5 أفراد وتصل إلى 15 فرداً بحسب مساحة العقار وطبيعة الأعمال لسحب السيليكا وتلميع الأسطح."
             }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://habib-clean.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "الرئيسية",
+            "item": "https://habib-clean.com/"
           }
         ]
       }
