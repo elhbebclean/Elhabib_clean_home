@@ -93,11 +93,12 @@
           "description": "صفحة التواصل لطلب معاينة خدمات تنظيف الفيلات والقصور بعد التشطيب."
         },
         {
-          "@type": "CleaningService",
+          "@type": ["LocalBusiness", "CleaningService"],
           "@id": "https://habib-clean.com/#organization",
           "name": "الحبيب كلين - Habib Clean",
           "image": "https://habib-clean.com/logo.png",
           "telephone": "+201016961497",
+          "priceRange": "$$$",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "105 شارع وادي النيل",
@@ -116,7 +117,47 @@
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             "opens": "00:00",
             "closes": "23:59"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "خدمة عملاء ممتازة وسرعة في تنسيق المعاينات للفيلات بالقاهرة.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
           }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/contact.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "الرئيسية",
+              "item": "https://habib-clean.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "اتصل بنا",
+              "item": "https://habib-clean.com/contact.html"
+            }
+          ]
         }
       ]
     }
@@ -910,4 +951,3 @@
     </script>
 </body>
 </html>
-
