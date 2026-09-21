@@ -7,48 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#171717">
     
-    <!-- DNS Prefetch & Preconnect (المرجع الفتاك V2.0) -->
+    <!-- DNS Prefetch & Preconnect (السرعة الخارقة - Zero Tracking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://www.youtube.com">
 
     <!-- Preload Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
-
-    <!-- Delayed GTM & Meta Pixel for Lightning Speed -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var trackingLoaded = false;
-        function loadTracking() {
-          if (trackingLoaded) return;
-          trackingLoaded = true;
-          
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');
-
-          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3076333772698182'); fbq('track', 'PageView');
-        }
-
-        function scheduleTracking() {
-          if (trackingLoaded) return;
-          if (window.requestIdleCallback) window.requestIdleCallback(loadTracking, { timeout: 2000 });
-          else setTimeout(loadTracking, 200);
-        }
-
-        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
-          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
-        });
-
-        setTimeout(scheduleTracking, 7000);
-      });
-    </script>
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
-    </noscript>
 
     <!-- SEO Meta Tags -->
     <title>خطوات تجهيز الفيلا الجديدة للسكن بعد أعمال المقاولات | Habib Clean</title>
@@ -58,7 +24,6 @@
     
     <link rel="canonical" href="https://habib-clean.com/blog/blog4-خطوات-تجهيز-الفيلا-للسكن.html">
     
-
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://habib-clean.com/blog/blog4-خطوات-تجهيز-الفيلا-للسكن.html">
@@ -68,7 +33,7 @@
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
 
-    <!-- God-Tier Schema -->
+    <!-- God-Tier Schema (White-Hat Local SEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -79,8 +44,13 @@
           "name": "Habib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
+          "founder": {
+            "@type": "Person",
+            "name": "محمود السيد",
+            "jobTitle": "المؤسس ومدير العمليات"
+          },
           "sameAs": [
-            "https://share.google/umb4679rea0EcsZk0",
+            "https://share.google/jN7kuor7QzJVDD6RZ",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
             "https://www.youtube.com/@Elhbeb"
           ]
@@ -99,6 +69,7 @@
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
           },
+          "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
           "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"]
         },
         {
@@ -120,6 +91,14 @@
           "thumbnailUrl": "https://img.youtube.com/vi/vLGKsoqvcMY/hqdefault.jpg",
           "uploadDate": "2026-02-01T12:00:00+02:00",
           "embedUrl": "https://www.youtube-nocookie.com/embed/vLGKsoqvcMY"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
+            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "تجهيز الفيلا للسكن", "item": "https://habib-clean.com/blog/blog4-خطوات-تجهيز-الفيلا-للسكن.html" }
+          ]
         }
       ]
     }
@@ -221,13 +200,51 @@
         .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff; margin-left: 5px; }
         .video-caption { text-align: center; font-size: 0.95rem; color: #777; margin-top: -25px; margin-bottom: 40px; font-weight: 600; }
 
-        /* Omni Spiderweb */
-        .omni-spiderweb { background: var(--light-bg); border: 1px solid #eee; border-radius: 12px; padding: 40px; margin: 60px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-        .omni-spiderweb::before { content: ""; position: absolute; top: 0; right: 0; width: 100%; height: 6px; background: linear-gradient(90deg, var(--gold-accent), var(--primary-dark)); }
-        .omni-header h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 15px 0; text-align: center; }
-        .omni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
-        .omni-grid a { background: #fff; padding: 12px 15px; border-radius: 6px; border: 1px solid #eaeaea; color: #333; text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; transition: 0.2s; }
-        .omni-grid a:hover { background: var(--primary-dark); color: var(--gold-accent); }
+        /* ================= CONTEXTUAL SEMANTIC PROSE HUB (THE SEO BOMB) ================= */
+        .contextual-prose-hub {
+            background: #11141a;
+            border-radius: 16px;
+            padding: 45px 30px;
+            margin: 50px 0;
+            color: #e0e0e0;
+            border-top: 4px solid var(--gold-accent);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            text-align: right;
+            line-height: 2.2;
+        }
+
+        .contextual-prose-hub h2 {
+            color: var(--gold-accent);
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            margin-top: 0;
+            border: none;
+            text-align: center;
+        }
+
+        .contextual-prose-hub p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #d8d8d8;
+        }
+
+        .contextual-prose-hub a {
+            color: var(--gold-accent);
+            font-weight: 800;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .contextual-prose-hub a:hover {
+            color: #fff;
+            background: var(--gold-accent);
+            text-decoration: none;
+        }
 
         .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #222 100%); padding: 45px 30px; margin-top: 50px; text-align: center; border-radius: 12px; color: #fff; border-bottom: 4px solid var(--gold-accent); }
         .btn-whatsapp-cta { display: inline-block; background: var(--whatsapp-green); color: #fff; padding: 16px 40px; font-weight: 900; font-size: 19px; text-decoration: none; border-radius: 50px; }
@@ -263,6 +280,7 @@
         @media (max-width: 768px) {
             .article-container { padding: 30px 15px; margin-top: -20px; }
             header.article-header { padding: 50px 15px; }
+            .contextual-prose-hub { padding: 30px 20px; }
             .contact-container { left: auto; right: 20px; bottom: 20px; }
             #scrollTopBtn { right: auto; left: 20px; bottom: 20px; }
             .modal-story-box { padding: 30px 20px; }
@@ -272,13 +290,10 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
-        <a href="https://habib-clean.com/">الرئيسية</a> <span>❯</span> <a href="https://habib-clean.com/blog/">المدونة الهندسية</a> <span>❯</span> خطوات تجهيز الفيلا للسكن
+        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> خطوات تجهيز الفيلا للسكن
     </nav>
 
     <header class="article-header">
@@ -314,18 +329,26 @@
         <h2>3. معالجة وإزالة آثار الدهانات والأسمنت بحذر</h2>
         <p>بقايا مواد البناء والأسمنت الخفيف على الأرضيات والزجاج تتطلب تعاملًا حذرًا بمواد مخصصة تذيب البقايا دون تعريض الأسطح الحديثة لأي خدوش أو تلف.</p>
 
-        <!-- OMNI-SPIDERWEB SITEMAP -->
-        <nav class="omni-spiderweb" aria-label="خريطة الموقع لخدمات Habib Clean">
-            <div class="omni-header">
-                <h3>🌐 شبكة خدمات Habib Clean الهندسية</h3>
-            </div>
-            <div class="omni-grid">
-                <a href="blog1-تنظيف-بعد-التشطيب.html"><span>التنظيف الشامل بعد التشطيب</span></a>
-                <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html"><span>جلي وتلميع الرخام بالألماس</span></a>
-                <a href="blog34-تنظيف-الشقق-الفندقية-المغلقة.html"><span>إنقاذ وتعقيم الشقق المغلقة</span></a>
-                <a href="blog21-أهمية-تنظيف-الواجهات-الزجاجية-للشركات.html"><span>تنظيف الواجهات الزجاجية</span></a>
-            </div>
-        </nav>
+        <!-- ================= THE SEMANTIC SEO BOMB (CONTEXTUAL INTERLINKING HUB) ================= -->
+        <section class="contextual-prose-hub" aria-label="الموسوعة الهندسية والدلالية">
+            <h2>🌐 المرجع الهندسي الشامل لخدمات الإدارة والتأسيس في مصر</h2>
+            
+            <p>
+              إذا كنت تبحث عن <a href="blog41-best-home-cleaning-services-cairo.html">أفضل شركة تنظيف منازل</a> أو تتساءل عن كيفية اختيار <a href="blog41-best-home-cleaning-services-cairo.html">شركات تنظيف منازل</a> موثوقة للتعامل مع العقارات الفاخرة، فإن <a href="../index.html">الحبيب كلين</a> تقدم المعيار الأقوى في مصر. نحن لسنا مجرد <a href="blog10-لماذا-تفشل-شركات-التنظيف-العادية.html">شركة نظافة منازل</a> عادية، بل نحن كيان هندسي متخصص. نعتمد على بروتوكولات صارمة تبدأ من تنفيذ مهام <a href="blog1-تنظيف-بعد-التشطيب.html">تنظيف بعد التشطيب</a> بدقة، حيث نعد أفضل <a href="blog1-تنظيف-بعد-التشطيب.html">شركة تنظيف بعد التشطيب</a> قادرة على إزالة غبار السيليكا والأسمنت بأمان تام دون إتلاف الديكورات، مروراً بتطبيق معايير <a href="blog40-الموسوعة-الشاملة-لإدارة-القصور.html">الموسوعة الشاملة لإدارة القصور</a> وتجهيز الوحدات الفندقية قبل السكن.
+            </p>
+
+            <p>
+              تغطي عملياتنا التشغيلية أرقى التجمعات السكنية؛ فنحن نصنف كأهم <a href="blog68-5th-settlement-beit-el-watan-cleaning.html">شركات تنظيف منازل في التجمع الخامس</a>، وندير بامتياز مشاريع <a href="blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">تنظيف منازل 6 اكتوبر</a> و <a href="blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">شركة تنظيف منازل في الشيخ زايد</a>. تواجدنا الدائم لتقديم <a href="blog65-maadi-degla-sarayat-vip-cleaning.html">شركة تنظيف منازل المعادي</a>، بالإضافة إلى تغطيتنا كمزود رئيسي لخدمات <a href="blog62-new-capital-madinaty-villa-cleaning-cairo.html">شركة تنظيف منازل في مدينتي</a>، يضمن حصولك على خدمة <a href="blog41-best-home-cleaning-services-cairo.html">تنظيف منزلي</a> متكاملة بأعلى جودة أينما كان عقارك في القاهرة الكبرى.
+            </p>
+
+            <p>
+              لا تقتصر خبراتنا على المساحات الفارغة، بل نمتلك تخصصات فريدة تشمل <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">جلي وتلميع الرخام بالألماس</a> لاستعادة اللمعان الزجاجي للبورسلين والأرضيات، وإجراءات <a href="blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html">تقنية الوصول بالحبال (Rope Access) لتنظيف الواجهات</a> الزجاجية المرتفعة. وإلى جانب الدليل الحالي لـ <strong>تجهيز الفيلا للسكن</strong>، نوفر خدمات <a href="blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">تنظيف الانتريه</a> و <a href="blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">تنظيف كنب</a> بأحدث تقنيات الـ <a href="blog44-expat-move-in-deep-cleaning-cairo.html">deep cleaning</a> التي يبحث عنها صفوة المجتمع.
+            </p>
+
+            <p>
+              لكل عملائنا من الأجانب والمستثمرين الباحثين عن <a href="blog44-expat-move-in-deep-cleaning-cairo.html">cleaning services cairo</a> والمعايير العالمية في <a href="blog44-expat-move-in-deep-cleaning-cairo.html">house cleaning services egypt</a> وخدمات الـ <a href="blog56-vip-post-construction-marble-glass-cleaning-cairo.html">deep cleaning services</a>، نحن نوفر فرق تنفيذ مدربة هندسياً للتعامل مع الفيلات الكبرى، مدعومين بـ <a href="blog3-الشبكة-الهندسية-لتأسيس-القصور.html">الشبكة الهندسية لتأسيس القصور</a>. اختيارك لـ <a href="blog41-best-home-cleaning-services-cairo.html">أفضل شركات النظافة في مصر</a> يعني تسليم عقارك في أيدٍ أمينة، لنتيجة لا تقبل المنافسة وتليق باستثماراتك الضخمة.
+            </p>
+        </section>
 
         <div class="cta-box">
             <h3 style="margin-top:0;">هل انتهيت من تشطيب فيلتك وتحتاج لخدمة احترافية؟</h3>
@@ -398,17 +421,7 @@
             closeBtn.addEventListener('click', closeModal);
             modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
-            if (gclid) {
-                sessionStorage.setItem("gclid_val", gclid);
-                document.querySelectorAll('a').forEach(link => {
-                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
-                        const separator = link.href.includes('?') ? '&' : '?';
-                        link.href += separator + 'gclid=' + encodeURIComponent(gclid);
-                    }
-                });
-            }
+            // Zero-Tracking fallback (Just raw speed)
         });
     </script>
 </body>
