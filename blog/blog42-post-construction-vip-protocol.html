@@ -7,48 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#171717">
     
-    <!-- DNS Prefetch & Preconnect (المرجع الفتاك V2.0) -->
+    <!-- DNS Prefetch & Preconnect (Zero-Tracking Speed) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://www.youtube.com">
 
     <!-- Preload Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
-
-    <!-- Delayed GTM & Meta Pixel for Lightning Speed -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var trackingLoaded = false;
-        function loadTracking() {
-          if (trackingLoaded) return;
-          trackingLoaded = true;
-          
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');
-
-          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3076333772698182'); fbq('track', 'PageView');
-        }
-
-        function scheduleTracking() {
-          if (trackingLoaded) return;
-          if (window.requestIdleCallback) window.requestIdleCallback(loadTracking, { timeout: 2000 });
-          else setTimeout(loadTracking, 200);
-        }
-
-        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
-          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
-        });
-
-        setTimeout(scheduleTracking, 7000);
-      });
-    </script>
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
-    </noscript>
 
     <!-- SEO Meta Tags -->
     <title>البروتوكول الهندسي لتنظيف الفيلات بعد التشطيب | Habib Clean</title>
@@ -57,7 +23,6 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <link rel="canonical" href="https://habib-clean.com/blog/blog42-post-construction-vip-protocol.html">
-    
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
@@ -68,25 +33,43 @@
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
 
-    <!-- God-Tier Schema -->
+    <!-- God-Tier Schema with BreadcrumbList & LocalBusiness Map -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://habib-clean.com/#organization",
+          "@type": "Organization",
+          "@id": "https://habib-clean.com/#identity",
           "name": "Habib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
+          "founder": {
+            "@type": "Person",
+            "name": "محمود السيد",
+            "jobTitle": "المؤسس ومدير العمليات"
+          },
+          "sameAs": [
+            "https://share.google/jN7kuor7QzJVDD6RZ",
+            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
+            "https://www.youtube.com/@Elhbeb"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://habib-clean.com/#localbusiness",
+          "name": "Habib Clean - بروتوكول تأسيس الفيلات",
+          "url": "https://habib-clean.com/",
+          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
           "telephone": "01016961497",
-          "description": "الكيان الهندسي الأول لإدارة المرافق، تأسيس القصور، والنظافة الفندقية العميقة.",
+          "priceRange": "$$$",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "المعادي",
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
           },
+          "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
           "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "6th of October"]
         },
         {
@@ -95,8 +78,8 @@
           "isPartOf": { "@id": "https://habib-clean.com/blog/blog42-post-construction-vip-protocol.html" },
           "headline": "البروتوكول الهندسي لتنظيف وتأسيس الفيلات بعد التشطيب",
           "description": "دليل Habib Clean، افضل شركة تنظيف لتأسيس القصور والفيلات بعد التشطيب وبروتوكولات حماية الديكورات.",
-          "author": { "@id": "https://habib-clean.com/#organization" },
-          "publisher": { "@id": "https://habib-clean.com/#organization" },
+          "author": { "@id": "https://habib-clean.com/#identity" },
+          "publisher": { "@id": "https://habib-clean.com/#identity" },
           "datePublished": "2026-07-28T12:00:00+02:00",
           "dateModified": "2026-08-05T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog42-post-construction-vip-protocol.html"
@@ -114,6 +97,14 @@
               "name": "كيف يتم التعامل مع الباركيه والأرضيات الخشبية؟",
               "acceptedAnswer": { "@type": "Answer", "text": "نستخدم تقنيات التلميع بالشمع ومواد خالية من المياه لحماية الباركيه من التقوس والتشققات وتغذيته بعمق." }
             }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
+            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "بروتوكول تأسيس الفيلات", "item": "https://habib-clean.com/blog/blog42-post-construction-vip-protocol.html" }
           ]
         }
       ]
@@ -204,6 +195,7 @@
             border-bottom: 2px solid var(--light-bg);
             padding-bottom: 10px;
         }
+        h3 { color: var(--gold-accent); font-size: 20px; font-weight: 800; margin: 30px 0 12px; }
 
         p { font-size: 1.05rem; margin-bottom: 22px; color: #444; text-align: justify; }
         ul { padding-right: 20px; font-size: 1.05rem; color: #444; margin-bottom: 25px;}
@@ -221,6 +213,52 @@
         .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(197, 160, 89, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; }
         .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 10px 0 10px 18px; border-color: transparent transparent transparent #fff; margin-left: 4px; }
 
+        /* ================= CONTEXTUAL SEMANTIC PROSE HUB (THE SEO BOMB) ================= */
+        .contextual-prose-hub {
+            background: #11141a;
+            border-radius: 16px;
+            padding: 45px 30px;
+            margin: 50px 0;
+            color: #e0e0e0;
+            border-top: 4px solid var(--gold-accent);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            text-align: right;
+            line-height: 2.2;
+        }
+
+        .contextual-prose-hub h2 {
+            color: var(--gold-accent);
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            margin-top: 0;
+            border: none;
+            text-align: center;
+        }
+
+        .contextual-prose-hub p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #d8d8d8;
+        }
+
+        .contextual-prose-hub a {
+            color: var(--gold-accent);
+            font-weight: 800;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .contextual-prose-hub a:hover {
+            color: #fff;
+            background: var(--gold-accent);
+            text-decoration: none;
+        }
+
         .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #222 100%); padding: 45px 30px; margin-top: 50px; text-align: center; border-radius: 12px; color: #fff; border-bottom: 4px solid var(--gold-accent); }
         .btn-whatsapp-cta { display: inline-block; background: var(--whatsapp-green); color: #fff; padding: 16px 40px; font-weight: 900; font-size: 19px; text-decoration: none; border-radius: 50px; }
 
@@ -230,21 +268,17 @@
         .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
         .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
         .btn-float.story-bubble { background: linear-gradient(135deg, #171717 0%, #333 100%); color: var(--gold-accent); position: relative; animation: floatBubble 3s ease-in-out infinite; font-size: 22px; }
-        
+
         .pulse-ring { position: absolute; top: -5px; right: -5px; bottom: -5px; left: -5px; border: 2px solid var(--gold-accent); border-radius: 50%; animation: pulseAnim 2s infinite; opacity: 0.8; pointer-events: none; }
         @keyframes pulseAnim { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.15); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
         @keyframes floatBubble { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
 
-        /* Centered Story Modal */
         .centered-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 11, 14, 0.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .centered-modal-overlay.active { opacity: 1; visibility: visible; }
         .modal-story-box { background: #fff; width: 90%; max-width: 500px; padding: 40px; border-radius: 20px; border-top: 6px solid var(--gold-accent); box-shadow: 0 30px 60px rgba(0,0,0,0.4); position: relative; text-align: center; transform: scale(0.8) translateY(30px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .centered-modal-overlay.active .modal-story-box { transform: scale(1) translateY(0); }
         .close-modal-x { position: absolute; top: 15px; left: 20px; background: none; border: none; font-size: 30px; color: #999; cursor: pointer; transition: 0.2s; }
         .close-modal-x:hover { color: #d32f2f; transform: rotate(90deg); }
-        .story-emoji-header { font-size: 50px; margin-bottom: 10px; }
-        .modal-story-box h4 { color: var(--primary-dark); font-size: 26px; font-weight: 900; margin: 0 0 15px 0; }
-        .modal-story-box p { color: #555; font-size: 17px; line-height: 1.8; margin-bottom: 25px; text-align: right; }
         .modal-actions { display: flex; gap: 10px; }
         .modal-btn-action { flex: 1; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: 900; font-size: 16px; text-align: center; }
         .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
@@ -253,14 +287,22 @@
         #scrollTopBtn { position: fixed; bottom: 90px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 45px; height: 45px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; display: flex; justify-content: center; align-items: center;}
         #scrollTopBtn.show { opacity: 1; visibility: visible; }
 
-        footer { background: var(--secondary-dark); color: #888; padding: 50px 20px; text-align: center; border-top: 3px solid var(--gold-accent); }
+        footer { background: var(--secondary-dark); color: #888; padding: 50px 20px; text-align: center; border-top: 3px solid var(--gold-accent); padding-bottom: 100px; }
+        footer a { color: #ccc; text-decoration: none; padding: 6px 15px; border: 1px solid #444; border-radius: 20px; font-size: 13px;}
+
+        @media (max-width: 768px) {
+            .article-container { padding: 30px 15px; margin-top: -20px; }
+            header.article-header { padding: 50px 15px; }
+            .contextual-prose-hub { padding: 30px 20px; }
+            .contact-container { left: auto; right: 20px; bottom: 20px; }
+            #scrollTopBtn { right: auto; left: 20px; bottom: 20px; }
+            .modal-story-box { padding: 30px 20px; }
+            .modal-actions { flex-direction: column; }
+        }
     </style>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
@@ -281,9 +323,9 @@
         <!-- Human Story Block -->
         <div class="story-block">
             <h3>أنقذنا قصر التجمع: عندما التقى العميل الخبير بأفضل مهندسي التنظيف</h3>
-            <p>بعد إنفاق الملايين في الديكورات الفاخرة بقصره في التجمع الخامس، واجه مالك العقار معضلة كبرى: عمالة غير مدرّبة كادت تترك خدوشاً دائمة برخام الاستقبال وتتسبب في تقوس الأخشاب بالمياه. استعان المالك فوراً بالهيئة الهندسية لـ <strong>Habib Clean</strong>.</p>
+            <p>بعد إنفاق الملايين في الديكورات الفاخرة بقصره في التجمع الخامس، واجه مالك العقار معضلة كبرى: عمالة غير مدرّبة كادت تترك خدوشاً دائمة برخام الاستقبال وتتسبب في تقوس الأخشاب بالمياه. الاستعانة بعمالة عشوائية كادت أن تترك أضراراً بالغة لولا التدخل الهندسي السريع.</p>
             
-            <p>تدخل فريقنا كطوارئ هندسية لتطبيق بروتوكول <strong>تنظيف بعد التشطيب</strong> الحصري: الشفط الجاف لحماية مجاري التكييف، إزالة الأسمنت بمذيبات pH متوازنة، و<strong>تلميع باركيه</strong> بالشمع الطبيعي. النتيجة؟ استعادة اللمعان الملكي للقصر في زمن قياسي.</p>
+            <p>في تلك اللحظة الحرجة، تواصل العميل مع خبراء <strong>Habib Clean</strong>، المرجع الأول كأفضل <strong>شركة تنظيف بعد التشطيب</strong>. فريقنا المتخصص تدخل بمعايير <strong>تأسيس القصور</strong> وبروتوكولات هندسية دقيقة، بدءاً من الشفط الجاف للغبار، مروراً بإزالة الأسمنت بمذيبات متوازنة pH، وصولاً إلى تلميع الأخشاب للحفاظ على العقار كتحفة فنية جاهزة للفرش.</p>
         </div>
 
         <h2>الوقاية الهندسية قبل تسليم العقار</h2>
@@ -321,6 +363,27 @@
 
         <h3>2. معالجة الأسمنت والدهانات</h3>
         <p>استخدام أدوات ومذيبات متوازنة تذيب بقايا البناء دون أي ضرر للأسطح المجاورة.</p>
+
+        <!-- ================= THE SEMANTIC SEO BOMB (CONTEXTUAL INTERLINKING HUB) ================= -->
+        <section class="contextual-prose-hub" aria-label="الموسوعة الهندسية والدلالية">
+            <h2>🌐 المرجع الهندسي الشامل لخدمات الإدارة والتأسيس في مصر</h2>
+            
+            <p>
+              إذا كنت تبحث عن <a href="blog41-best-home-cleaning-services-cairo.html">أفضل شركة تنظيف منازل</a> أو تتساءل عن كيفية اختيار <a href="blog41-best-home-cleaning-services-cairo.html">شركات تنظيف منازل</a> موثوقة للتعامل مع العقارات الفاخرة، فإن <a href="../index.html">الحبيب كلين</a> تقدم المعيار الأقوى في مصر. نعتمد على بروتوكولات صارمة تبدأ من تنفيذ مهام <a href="blog1-تنظيف-بعد-التشطيب.html">تنظيف بعد التشطيب</a> بدقة، حيث نعد أفضل <a href="blog1-تنظيف-بعد-التشطيب.html">شركة تنظيف بعد التشطيب</a> قادرة على إزالة غبار السيليكا والأسمنت بأمان تام دون إتلاف الديكورات، مروراً بتطبيق معايير <a href="blog40-الموسوعة-الشاملة-لإدارة-القصور.html">الموسوعة الشاملة لإدارة القصور</a> وتجهيز الوحدات الفندقية قبل السكن.
+            </p>
+
+            <p>
+              تغطي عملياتنا التشغيلية أرقى التجمعات السكنية؛ فنحن نصنف كأهم <a href="blog68-5th-settlement-beit-el-watan-cleaning.html">شركات تنظيف منازل في التجمع الخامس</a>، وندير بامتياز مشاريع <a href="blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">تنظيف منازل 6 اكتوبر</a> و <a href="blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">شركة تنظيف منازل في الشيخ زايد</a>. تواجدنا الدائم لتقديم <a href="blog65-maadi-degla-sarayat-vip-cleaning.html">شركة تنظيف منازل المعادي</a>، بالإضافة إلى تغطيتنا كمزود رئيسي لخدمات <a href="blog62-new-capital-madinaty-villa-cleaning-cairo.html">شركة تنظيف منازل في مدينتي</a>، يضمن حصولك على خدمة <a href="blog41-best-home-cleaning-services-cairo.html">تنظيف منزلي</a> متكاملة بأعلى جودة أينما كان عقارك.
+            </p>
+
+            <p>
+              لا تقتصر خبراتنا على المساحات الفارغة، بل نمتلك تخصصات فريدة تشمل <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">جلي وتلميع الرخام بالألماس</a> لاستعادة اللمعان الزجاجي، وإجراءات <a href="blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html">تقنية الوصول بالحبال (Rope Access) لتنظيف الواجهات</a> الزجاجية المرتفعة. وإلى جانب الدليل الحالي لـ <strong>تأسيس الفيلات بعد التشطيب</strong>، نوفر خدمات <a href="blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">تنظيف الانتريه</a> و <a href="blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">تنظيف كنب</a> بأحدث تقنيات الـ <a href="blog44-expat-move-in-deep-cleaning-cairo.html">deep cleaning</a> التي يبحث عنها صفوة المجتمع.
+            </p>
+
+            <p>
+              لكل عملائنا من الأجانب والمستثمرين الباحثين عن <a href="blog44-expat-move-in-deep-cleaning-cairo.html">cleaning services cairo</a> والمعايير العالمية في <a href="blog44-expat-move-in-deep-cleaning-cairo.html">house cleaning services egypt</a>، نحن نوفر فرق تنفيذ مدربة هندسياً للتعامل مع الفيلات الكبرى، مدعومين بـ <a href="blog3-الشبكة-الهندسية-لتأسيس-القصور.html">الشبكة الهندسية لتأسيس القصور</a>. اختيارك لـ <a href="blog41-best-home-cleaning-services-cairo.html">أفضل شركات النظافة في مصر</a> يعني تسليم عقارك في أيدٍ أمينة وتليق باستثماراتك الضخمة.
+            </p>
+        </section>
 
         <div class="cta-box">
             <h3>هل فيلتك جاهزة لتطبيق البروتوكول الهندسي؟</h3>
@@ -393,17 +456,7 @@
             closeBtn.addEventListener('click', closeModal);
             modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
-            if (gclid) {
-                sessionStorage.setItem("gclid_val", gclid);
-                document.querySelectorAll('a').forEach(link => {
-                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
-                        const separator = link.href.includes('?') ? '&' : '?';
-                        link.href += separator + 'gclid=' + encodeURIComponent(gclid);
-                    }
-                });
-            }
+            // Zero-Tracking fallback (Pure Speed)
         });
     </script>
 </body>
