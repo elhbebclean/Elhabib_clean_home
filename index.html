@@ -14,27 +14,29 @@
         if (trackingLoaded) return;
         trackingLoaded = true;
         
-        // 1. Load GTM
-        (function(w,d,s,l,i){
-          w[l]=w[l]||[];
-          w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-          var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-          j.async=true;
-          j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-          f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+        try {
+          // 1. Load GTM
+          (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-KLM4RMFM');
 
-        // 2. Load Facebook Pixel
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '3076333772698182');
-        fbq('track', 'PageView');
+          // 2. Load Facebook Pixel
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '3076333772698182');
+          fbq('track', 'PageView');
+        } catch(e) { console.log('Tracking Load Prevented'); }
       }
 
       // Deferred via requestIdleCallback for INP optimization
@@ -63,11 +65,11 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- AI-Optimized Title & Keywords -->
+  <!-- AI-Optimized Title & Keywords based on Ads Data -->
   <title>أفضل شركة تنظيف منازل | تنظيف بعد التشطيب للفيلات | حبيب كلين</title>
-  <meta name="description" content="الحبيب كلين أفضل شركة تنظيف منازل متخصصة في تنظيف بعد التشطيب للفيلات والقصور والمساحات الكبيرة. فرق تنفيذ هندسية، إزالة دهان وأسمنت وتجهيز فندقي.">
-  <meta name="keywords" content="أفضل شركة تنظيف منازل, شركة تنظيف بعد التشطيب, شركة تنظيف في القاهرة, شركة تنظيف البيت, شركة نظافة للمنازل, جلي رخام, تنظيف فلل, Habib Clean, محمود السيد">
-  <meta name="author" content="محمود السيد - Habib Clean">
+  <meta name="description" content="الحبيب كلين أفضل شركة تنظيف منازل متخصصة في تنظيف بعد التشطيب للفيلات والقصور والمساحات الكبيرة في التجمع والشيخ زايد والقاهرة. إشراف م. محمود السيد.">
+  <meta name="keywords" content="أفضل شركة تنظيف منازل, شركة تنظيف بعد التشطيب, شركات تنظيف منازل في التجمع الخامس, شركة تنظيف في القاهرة, شركة تنظيف البيت, شركة نظافة للمنازل, جلي رخام, تنظيف فلل, cleaning services cairo, Habib Clean">
+  <meta name="author" content="محمود السيد - Habib Clean Operations">
 
   <!-- Open Graph & Twitter Cards -->
   <meta property="og:type" content="website">
@@ -95,7 +97,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap">
   </noscript>
 
-  <!-- ================== AI KNOWLEDGE GRAPH (@GRAPH) ================== -->
+  <!-- ================== AI KNOWLEDGE GRAPH (@GRAPH) - WHITE HAT PURIFIED ================== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -124,7 +126,9 @@
         },
         "url": "https://habib-clean.com/",
         "telephone": "+201016961497",
+        "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
         "sameAs": [
+          "https://share.google/jN7kuor7QzJVDD6RZ",
           "https://www.youtube.com/@Elhbeb",
           "https://www.facebook.com/p/Habib-Clean-61559076547205/"
         ]
@@ -149,6 +153,7 @@
           "latitude": "29.9602",
           "longitude": "31.2569"
         },
+        "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
         "areaServed": [
           { "@type": "City", "name": "القاهرة" },
           { "@type": "City", "name": "الجيزة" },
@@ -174,28 +179,6 @@
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "جلي وتلميع الرخام للعقارات الراقية" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "تنظيف الواجهات الزجاجية" } }
           ]
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.6",
-          "reviewCount": "153",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "review": {
-          "@type": "Review",
-          "author": { 
-            "@type": "Person", 
-            "name": "عميل موثق" 
-          },
-          "datePublished": "2026-08-15",
-          "reviewBody": "خدمة تنظيف فندقية ممتازة وإدارة محترفة للعقارات في المعادي والقاهرة.",
-          "reviewRating": { 
-            "@type": "Rating", 
-            "ratingValue": "5", 
-            "bestRating": "5", 
-            "worstRating": "1" 
-          }
         }
       },
       {
@@ -545,6 +528,51 @@
 
     .trust-box span { color: var(--muted); font-size: 15px; font-weight: 600;}
 
+    /* ================= CONTEXTUAL SEMANTIC PROSE HUB (THE SEO BOMB) ================= */
+    .contextual-prose-hub {
+      background: #11141a;
+      border-radius: 16px;
+      padding: 45px 30px;
+      margin: 35px 0;
+      color: #e0e0e0;
+      border-top: 4px solid var(--gold-accent);
+      box-shadow: var(--shadow-strong);
+      text-align: right;
+      line-height: 2.2;
+    }
+
+    .contextual-prose-hub h2 {
+      color: var(--gold-accent);
+      font-size: 26px;
+      font-weight: 900;
+      margin-bottom: 25px;
+      border: none;
+      text-align: center;
+    }
+
+    .contextual-prose-hub p {
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+      text-align: justify;
+      color: #d8d8d8;
+    }
+
+    .contextual-prose-hub a {
+      color: var(--gold-accent);
+      font-weight: 800;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+      background: rgba(197, 160, 89, 0.05);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .contextual-prose-hub a:hover {
+      color: #fff;
+      background: var(--gold-accent);
+      text-decoration: none;
+    }
+
     .cta-strip {
       border-right: 4px solid var(--gold-accent);
       padding: 30px;
@@ -732,28 +760,6 @@
       font-weight: 900;
     }
 
-    /* OMNI-SPIDERWEB HUB LINKS */
-    .omni-hub-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 25px;
-    }
-    .omni-hub-links a {
-      background: var(--primary-dark);
-      color: var(--gold-accent);
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-weight: 700;
-      transition: 0.3s;
-      border: 1px solid var(--gold-accent);
-    }
-    .omni-hub-links a:hover {
-      background: var(--gold-accent);
-      color: var(--primary-dark);
-    }
-
     footer {
       background: var(--primary-dark);
       color: #bcbcbc;
@@ -859,8 +865,8 @@
     </nav>
 
     <div style="margin-top:22px;">
-      <a href="https://www.google.com/maps/search/?api=1&query=Habib+clean+Maadi" target="_blank" rel="noopener" class="btn btn-review">
-        اطّلع على تقييمات العملاء الموثقة على خرائط جوجل
+      <a href="https://share.google/jN7kuor7QzJVDD6RZ" target="_blank" rel="noopener" class="btn btn-review">
+        ⭐ اطّلع على تقييمات العملاء الموثقة على خرائط جوجل الرسمية
       </a>
     </div>
   </header>
@@ -879,7 +885,7 @@
       </p>
 
       <div style="font-size: 1.1rem; color: #f4d68d; font-weight: 800; margin-bottom: 20px;">
-        ⭐ أكثر من 120 مشروع تنظيف بعد التشطيب للقصور والفيلات تم تسليمه بنجاح في القاهرة
+        ⭐ أكثر من 150 مشروع تنظيف بعد التشطيب للقصور والفيلات تم تسليمه بنجاح في القاهرة
       </div>
 
       <div class="vip-warning">
@@ -922,14 +928,28 @@
       </div>
     </div>
 
-    <!-- OMNI-SPIDERWEB HUB LINKS -->
-    <div class="omni-hub-links">
-      <a href="blog/blog80-cairo-greater-new-cairo-master-hub.html">دليل القاهرة والتجمع الخامس</a>
-      <a href="blog/ultimate-guide-post-construction-cleaning-egypt.html">الموسوعة الشاملة لتنظيف بعد التشطيب</a>
-      <a href="blog/blog40-الموسوعة-الشاملة-لإدارة-القصور.html">دليل إدارة القصور</a>
-    </div>
+    <!-- ================= THE SEMANTIC SEO BOMB (CONTEXTUAL INTERLINKING HUB) ================= -->
+    <section class="contextual-prose-hub" aria-label="الموسوعة الهندسية والدلالية">
+      <h2>🌐 المرجع الهندسي الشامل لخدمات الإدارة والتأسيس في مصر</h2>
+      
+      <p>
+        إذا كنت تبحث عن <a href="blog/blog41-best-home-cleaning-services-cairo.html">أفضل شركة تنظيف منازل</a> أو تتساءل عن كيفية اختيار <a href="blog/blog41-best-home-cleaning-services-cairo.html">شركات تنظيف منازل</a> موثوقة للتعامل مع العقارات الفاخرة، فإن <a href="/">الحبيب كلين</a> تقدم المعيار الأقوى في مصر. نحن لسنا مجرد <a href="blog/blog10-لماذا-تفشل-شركات-التنظيف-العادية.html">شركة نظافة منازل</a> عادية، بل نحن كيان هندسي متخصص. نعتمد على بروتوكولات صارمة تبدأ من تنفيذ مهام <a href="blog/blog1-تنظيف-بعد-التشطيب.html">تنظيف بعد التشطيب</a> بدقة، حيث نعد أفضل <a href="blog/blog1-تنظيف-بعد-التشطيب.html">شركة تنظيف بعد التشطيب</a> قادرة على إزالة غبار السيليكا والأسمنت بأمان تام دون إتلاف الديكورات، مروراً بتطبيق معايير <a href="blog/blog40-الموسوعة-الشاملة-لإدارة-القصور.html">الموسوعة الشاملة لإدارة القصور</a> وتجهيز الوحدات الفندقية قبل السكن.
+      </p>
 
-    <section class="cta-strip" style="margin-top: 25px;">
+      <p>
+        تغطي عملياتنا التشغيلية أرقى التجمعات السكنية؛ فنحن نصنف كأهم <a href="blog/blog68-5th-settlement-beit-el-watan-cleaning.html">شركات تنظيف منازل في التجمع الخامس</a>، وندير بامتياز مشاريع <a href="blog/blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">تنظيف منازل 6 اكتوبر</a> و <a href="blog/blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">شركة تنظيف منازل في الشيخ زايد</a>. تواجدنا الدائم لتقديم <a href="blog/blog65-maadi-degla-sarayat-vip-cleaning.html">شركة تنظيف منازل المعادي</a>، بالإضافة إلى تغطيتنا كمزود رئيسي لخدمات <a href="blog/blog62-new-capital-madinaty-villa-cleaning-cairo.html">شركة تنظيف منازل في مدينتي</a>، يضمن حصولك على خدمة <a href="blog/blog41-best-home-cleaning-services-cairo.html">تنظيف منزلي</a> متكاملة بأعلى جودة أينما كان عقارك في القاهرة الكبرى.
+      </p>
+
+      <p>
+        لا تقتصر خبراتنا على المساحات الفارغة، بل نمتلك تخصصات فريدة تشمل <a href="blog/blog13-جلي-وتلميع-الرخام-بالألماس.html">جلي وتلميع الرخام بالألماس</a> لاستعادة اللمعان الزجاجي للبورسلين والأرضيات، وإجراءات <a href="blog/blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html">تقنية الوصول بالحبال (Rope Access) لتنظيف الواجهات</a> الزجاجية المرتفعة، بجانب <a href="blog/blog37-تطهير-مكيفات-الشقق-المغلقة.html">تطهير وتعقيم مكيفات الشقق المغلقة</a>. كما نوفر خدمات <a href="blog/blog45-luxury-upholstery-rug-cleaning-cairo.html">تنظيف الانتريه</a> و <a href="blog/blog45-luxury-upholstery-rug-cleaning-cairo.html">تنظيف كنب</a> بأحدث تقنيات الـ <a href="blog/blog45-luxury-upholstery-rug-cleaning-cairo.html">deep cleaning</a> التي يبحث عنها صفوة المجتمع.
+      </p>
+
+      <p>
+        لكل عملائنا من الأجانب والمستثمرين الباحثين عن <a href="blog/blog44-expat-move-in-deep-cleaning-cairo.html">cleaning services cairo</a> و المعايير العالمية في <a href="blog/blog44-expat-move-in-deep-cleaning-cairo.html">house cleaning services egypt</a> وخدمات الـ <a href="blog/blog56-vip-post-construction-marble-glass-cleaning-cairo.html">deep cleaning services</a>، نحن نوفر فرق تنفيذ مدربة هندسياً للتعامل مع الفيلات الكبرى، مدعومين بـ <a href="blog/blog3-الشبكة-الهندسية-لتأسيس-القصور.html">الشبكة الهندسية لتأسيس القصور</a>. اختيارك لـ <a href="blog/blog41-best-home-cleaning-services-cairo.html">أفضل شركات النظافة في مصر</a> يعني تسليم عقارك في أيدٍ أمينة، لنتيجة لا تقبل المنافسة وتليق باستثماراتك الضخمة.
+      </p>
+    </section>
+
+    <section class="cta-strip">
       <h2>
         <span class="brand-line">Habib Clean</span>
         تجهيز احترافي للعقار قبل السكن أو التسليم
