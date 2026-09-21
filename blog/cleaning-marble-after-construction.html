@@ -7,75 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#171717">
     
-    <!-- DNS Prefetch & Preconnect (المرجع الفتاك) -->
+    <!-- DNS Prefetch & Preconnect (Zero-Tracking Speed 100/100) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://www.youtube.com">
 
     <!-- Preload Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
 
-    <!-- Delayed GTM & Meta Pixel for Lightning Speed (المرجع الفتاك) -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var trackingLoaded = false;
-        function loadTracking() {
-          if (trackingLoaded) return;
-          trackingLoaded = true;
-          
-          // 1. Load GTM
-          (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-
-          // 2. Load Facebook Pixel
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3076333772698182');
-          fbq('track', 'PageView');
-        }
-
-        // Deferred via requestIdleCallback for INP optimization
-        function scheduleTracking() {
-          if (trackingLoaded) return;
-          if (window.requestIdleCallback) {
-            window.requestIdleCallback(loadTracking, { timeout: 2000 });
-          } else {
-            setTimeout(loadTracking, 200);
-          }
-        }
-
-        // Load on interaction for immediate tracking
-        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
-          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
-        });
-
-        // Delayed by 7 seconds to completely bypass Lighthouse scanners
-        setTimeout(scheduleTracking, 7000);
-      });
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
-    </noscript>
-
     <!-- Ultimate High-Volume SEO Meta Tags -->
     <title>تنظيف الرخام بعد التشطيب للأرضيات | Habib Clean افضل شركة تنظيف</title>
-    <meta name="description" content="دليل تنظيف الرخام بعد التشطيب للأرضيات والعقارات مع Habib Clean، افضل شركة تنظيف منازل في القاهرة. تعرف على أخطاء تدمير الرخام. Best cleaning company.">
-    <meta name="keywords" content="افضل شركة تنظيف منازل, شركة تنظيف في القاهرة, شركة تنظيف بعد التشطيب, شركة نظافة بعد التجديد, شركة تنظيف قريبة مني, cleaning company near me, best cleaning company in Cairo, تنظيف الرخام بعد التشطيب, إزالة الأسمنت من الرخام, جلي الرخام, Habib Clean">
+    <meta name="description" content="دليل تنظيف الرخام بعد التشطيب للأرضيات والعقارات في ميفيدا، هايد بارك، قطامية هايتس، بالم هيلز وأب تاون كايرو مع Habib Clean، افضل شركة تنظيف منازل في مصر بإشراف محمود السيد. جلي الرخام وإزالة الأسمنت بأمان.">
+    <meta name="keywords" content="افضل شركة تنظيف منازل, شركة تنظيف في القاهرة, شركة تنظيف بعد التشطيب, شركة نظافة بعد التجديد, تنظيف الرخام بعد التشطيب, إزالة الأسمنت من الرخام, جلي الرخام, قطامية هايتس, ميفيدا, هايد بارك, بالم هيلز, محمود السيد, Habib Clean">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <!-- Local SEO Meta Tags -->
@@ -85,49 +29,68 @@
     <meta name="ICBM" content="29.9602, 31.2569">
 
     <link rel="canonical" href="https://habib-clean.com/blog/cleaning-marble-after-construction.html">
-    
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://habib-clean.com/blog/cleaning-marble-after-construction.html">
     <meta property="og:title" content="دليل تنظيف الرخام بعد التشطيب | Habib Clean">
-    <meta property="og:description" content="تعرف على الطريقة الاحترافية لتنظيف الرخام بعد التشطيب والأخطاء المدمرة مع افضل شركة تنظيف في مصر.">
-    <!-- الصورة الرسمية الجديدة بالمرجع الفتاك -->
+    <meta property="og:description" content="تعرف على الطريقة الاحترافية لتنظيف الرخام بعد التشطيب والأخطاء المدمرة مع افضل شركة تنظيف في مصر بقيادة محمود السيد.">
     <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
 
-    <!-- Advanced Combined God-Tier Schema (Console Error Free & Validated) -->
+    <!-- Advanced Combined God-Tier Schema with Mega-Geography, Compounds & Founder -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
+          "@type": "Organization",
           "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
-          "image": "https://habib-clean.com/logo.png",
-          "telephone": "01016961497",
-          "url": "https://habib-clean.com",
-          "description": "المرجع الأكبر والكيان الهندسي الأول لإدارة المرافق، تأسيس القصور، جلي الرخام، والتنظيف بعد التشطيب في مصر.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "المعادي",
-            "addressRegion": "القاهرة",
-            "addressCountry": "EG"
+          "url": "https://habib-clean.com/",
+          "logo": "https://habib-clean.com/logo.png",
+          "founder": {
+            "@type": "Person",
+            "name": "محمود السيد",
+            "jobTitle": "المؤسس ومدير العمليات"
           },
-          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "6th of October", "Giza"],
           "sameAs": [
-            "https://share.google/umb4679rea0EcsZk0",
+            "https://share.google/jN7kuor7QzJVDD6RZ",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
             "https://www.youtube.com/@Elhbeb"
+          ]
+        },
+        {
+          "@type": ["LocalBusiness", "CleaningService"],
+          "@id": "https://habib-clean.com/#localbusiness",
+          "name": "Habib Clean - جلي وتنظيف الرخام بعد التشطيب",
+          "url": "https://habib-clean.com/",
+          "image": "https://habib-clean.com/logo.png",
+          "telephone": "+201016961497",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "105 شارع وادي النيل",
+            "addressLocality": "المعادي",
+            "addressRegion": "القاهرة",
+            "postalCode": "11728",
+            "addressCountry": "EG"
+          },
+          "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
+          "areaServed": [
+            "Katameya Heights", "Katameya Dunes", "Mivida", "Uptown Cairo", 
+            "Palm Hills", "New Giza", "Sheikh Zayed", "6th of October", 
+            "New Cairo", "Fifth Settlement", "Madinaty", "El Shorouk", 
+            "New Administrative Capital", "Hyde Park", "Swan Lake", "Villette SODIC", 
+            "Cairo", "Giza", "Alexandria Desert Road", "European Countryside", "Maadi", "Zamalek"
           ]
         },
         {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 2, "name": "الموسوعة المركزية", "item": "https://habib-clean.com/blog/blog80-cairo-greater-new-cairo-master-hub.html" },
             { "@type": "ListItem", "position": 3, "name": "تنظيف الرخام بعد التشطيب", "item": "https://habib-clean.com/blog/cleaning-marble-after-construction.html" }
           ]
         },
@@ -136,11 +99,11 @@
           "@id": "https://habib-clean.com/blog/cleaning-marble-after-construction.html#article",
           "isPartOf": { "@id": "https://habib-clean.com/blog/cleaning-marble-after-construction.html" },
           "headline": "تجهيز وتنظيف الرخام بعد التشطيب: الأصول الفنية والأخطاء القاتلة",
-          "description": "الدليل الشامل لتنظيف الرخام وإزالة الأسمنت بأمان بعد التشطيب مع Habib Clean افضل شركة تنظيف منازل.",
+          "description": "الدليل الشامل لتنظيف الرخام وإزالة الأسمنت بأمان بعد التشطيب مع Habib Clean بقيادة محمود السيد.",
           "author": { "@id": "https://habib-clean.com/#organization" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-03-20T12:00:00+02:00",
-          "dateModified": "2026-08-04T12:00:00+02:00",
+          "dateModified": "2026-08-05T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/cleaning-marble-after-construction.html"
         },
         {
@@ -149,26 +112,17 @@
             {
               "@type": "Question",
               "name": "هل يمكن إزالة الأسمنت من الرخام بدون خدشه؟",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "نعم، باستخدام أدوات ومنظفات مخصصة للرخام دون استخدام الأحماض أو الأدوات المعدنية التي تدمر لمعان السطح."
-              }
+              "acceptedAnswer": { "@type": "Answer", "text": "نعم، باستخدام أدوات ومنظفات مخصصة للرخام في كمبوندات مثل ميفيدا وقطامية هايتس دون استخدام الأحماض أو الأدوات المعدنية." }
             },
             {
               "@type": "Question",
               "name": "هل الخل أو ماء النار مناسب لتنظيف الرخام؟",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "لا. الخل والمواد الحمضية مثل ماء النار تتفاعل مع الرخام الطبيعي وتسبب حرقاً كيميائياً وتغيراً في اللون يصعب إصلاحه."
-              }
+              "acceptedAnswer": { "@type": "Answer", "text": "لا. الخل والمواد الحمضية مثل ماء النار تتفاعل مع الرخام الطبيعي وتسبب حرقاً كيميائياً وتغيراً في اللون يصعب إصلاحه." }
             },
             {
               "@type": "Question",
               "name": "هل يحتاج الرخام إلى تلميع بعد التنظيف؟",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "إذا فقد الرخام جزءًا من لمعانه نتيجة أعمال التشطيب، فنحن في Habib Clean نقوم بجلي وتلميع الرخام بالألماس لاستعادة لمعانه الزجاجي."
-              }
+              "acceptedAnswer": { "@type": "Answer", "text": "إذا فقد الرخام جزءًا من لمعانه نتيجة أعمال التشطيب، فنحن في Habib Clean نقوم بجلي وتلميع الرخام بالألماس لاستعادة لمعانه الزجاجي." }
             }
           ]
         }
@@ -184,7 +138,7 @@
             --light-bg: #f8f9fa;
             --white: #ffffff;
             --text-dark: #2c3e50;
-            --deep-accent: #16a085;
+            --text-muted: #555555;
             --danger-color: #c0392b;
             --whatsapp-green: #25D366;
         }
@@ -225,7 +179,7 @@
         }
 
         header.article-header h1 { 
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: clamp(28px, 5vw, 42px); 
             font-weight: 700; 
             margin-bottom: 15px; 
@@ -245,7 +199,26 @@
         }
 
         /* GEO Semantic Block */
-        .geo-block { background: rgba(197, 160, 89, 0.08); border-right: 5px solid var(--gold-accent); padding: 25px; border-radius: 8px 0 0 8px; margin-bottom: 40px; font-weight: 700; color: var(--primary-dark); font-size: 1.1rem; line-height: 1.8;}
+        .geo-block { background: rgba(197, 160, 89, 0.08); border-right: 5px solid var(--gold-accent); padding: 25px; border-radius: 8px 0 0 8px; margin-bottom: 35px; font-weight: 700; color: var(--primary-dark); font-size: 1.1rem; line-height: 1.8;}
+
+        /* Engineering Quick Navigation Trail */
+        .eng-nav-trail {
+            background: #11141a;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+        .eng-nav-trail span { color: var(--gold-accent); font-weight: 900; }
+        .eng-nav-trail div { display: flex; gap: 10px; flex-wrap: wrap; }
+        .eng-nav-trail a { color: #fff; background: rgba(255,255,255,0.08); padding: 5px 12px; border-radius: 4px; text-decoration: none; font-weight: 700; transition: 0.2s; }
+        .eng-nav-trail a:hover { background: var(--gold-accent); color: var(--primary-dark); }
 
         h2 { 
             color: var(--primary-dark); 
@@ -257,11 +230,12 @@
             font-weight: 700;
             border-bottom: 2px solid var(--light-bg);
             padding-bottom: 10px;
+            font-family: 'Playfair Display', Georgia, serif;
         }
 
         h3 { color: var(--gold-accent); font-size: 20px; font-weight: 800; margin: 30px 0 15px; }
 
-        p { font-size: 1.05rem; margin-bottom: 22px; color: #444; }
+        p { font-size: 1.05rem; margin-bottom: 22px; color: #444; text-align: justify; }
         ul.content-list { padding-right: 20px; font-size: 1.05rem; color: #444; margin-bottom: 25px;}
         ul.content-list li { margin-bottom: 12px; list-style: disc;}
 
@@ -292,11 +266,58 @@
         .yt-facade:hover .play-btn { background: var(--primary-dark); border: 2px solid var(--gold-accent); transform: translate(-50%, -50%) scale(1.1); }
         .video-caption { text-align: center; font-size: 0.95rem; color: #777; margin-top: 10px; font-weight: 600; }
 
+        /* ================= CONTEXTUAL SEMANTIC PROSE HUB (THE MIX BOMB) ================= */
+        .contextual-prose-hub {
+            background: #11141a;
+            border-radius: 16px;
+            padding: 45px 30px;
+            margin: 50px 0;
+            color: #e0e0e0;
+            border-top: 4px solid var(--gold-accent);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            text-align: right;
+            line-height: 2.2;
+        }
+
+        .contextual-prose-hub h2 {
+            color: var(--gold-accent);
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            margin-top: 0;
+            border: none;
+            text-align: center;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .contextual-prose-hub p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #d8d8d8;
+        }
+
+        .contextual-prose-hub a {
+            color: var(--gold-accent);
+            font-weight: 800;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .contextual-prose-hub a:hover {
+            color: #fff;
+            background: var(--gold-accent);
+            text-decoration: none;
+        }
+
         /* OMNI-SPIDERWEB MEGA SITEMAP */
         .omni-spiderweb { background: var(--light-bg); border: 1px solid #eee; border-radius: 12px; padding: 40px; margin: 60px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); overflow: hidden; }
         .omni-spiderweb::before { content: ""; position: absolute; top: 0; right: 0; width: 100%; height: 6px; background: linear-gradient(90deg, var(--gold-accent), var(--primary-dark)); }
         .omni-header { text-align: center; margin-bottom: 30px; }
-        .omni-header h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 15px 0; border: none;}
+        .omni-header h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 15px 0; border: none; font-family: 'Playfair Display', Georgia, serif;}
         
         .omni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
         .omni-grid a { background: #fff; padding: 12px 15px; border-radius: 6px; border: 1px solid #eaeaea; color: #333; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; position: relative; }
@@ -311,7 +332,7 @@
 
         /* CTA Box */
         .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #222 100%); padding: 45px 30px; margin-top: 50px; text-align: center; border-radius: 12px; color: #fff; border-bottom: 4px solid var(--gold-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.15);}
-        .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 24px; font-weight: 900;}
+        .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 24px; font-weight: 900; font-family: 'Playfair Display', Georgia, serif;}
         .cta-box p { color: #ccc; font-size: 17px; margin-bottom: 30px;}
         .btn-whatsapp-cta { display: inline-block; background: #25D366; color: #fff; padding: 16px 40px; font-weight: 900; font-size: 19px; text-decoration: none; border-radius: 50px; transition: 0.3s; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);}
         .btn-whatsapp-cta:hover { background: #1ebe57; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);}
@@ -341,34 +362,43 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
     <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
-        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> تنظيف الرخام بعد التشطيب
+        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">الموسوعة المركزية</a> <span>❯</span> تنظيف الرخام بعد التشطيب
     </nav>
 
     <header class="article-header">
         <h1>تجهيز وتنظيف الرخام بعد التشطيب: الأصول الفنية والأخطاء القاتلة</h1>
-        <p>الدليل الشامل لإزالة الأسمنت بأمان واستعادة اللمعان الزجاجي للأرضيات مع Habib Clean، <strong>افضل شركة تنظيف منازل</strong> في مصر.</p>
+        <p>الدليل الشامل لإزالة الأسمنت بأمان واستعادة اللمعان الزجاجي للأرضيات في أرقى الكمبوندات مع Habib Clean، <strong>افضل شركة تنظيف منازل</strong> في مصر بقيادة محمود السيد.</p>
     </header>
 
     <main>
         <article>
-            <!-- الصورة الرسمية بالمرجع الفتاك -->
-            <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="تنظيف وتلميع الرخام بعد التشطيب" class="featured-image" loading="lazy" decoding="async">
             
-            <!-- GEO Semantic Block -->
+            <!-- GEO Semantic Block with Mega-Geography & Named Compounds -->
             <div class="geo-block">
-                "يعتبر تنظيف الرخام بعد التشطيب من أكثر المراحل حساسية في أي مشروع. بصفتنا <strong>افضل شركة تنظيف منازل</strong> و<strong>شركة تنظيف في القاهرة</strong>، نؤكد في <strong>Habib Clean</strong> أن أي خطأ أثناء إزالة الأسمنت قد يسبب حروقاً كيميائية للرخام. نعتمد على الكشط الآمن والجلي بالألماس."
+                "نقدم خدمات جلي وتلميع وتنظيف الرخام بعد التشطيب في ميفيدا، هايد بارك، قطامية هايتس، قطامية ديونز، بالم هيلز، نيو جيزة، أبتاون كايرو، وغيرها من أرقى الكومبوندات عبر القاهرة، الجيزة، طريق مصر إسكندرية الصحراوي، والريف الأوروبي (Mivida, Hyde Park, Katameya Heights, Palm Hills, New Giza, Uptown Cairo, Cairo, Giza, Alexandria Desert Road, European Countryside). تحت إشراف المؤسس ومدير العمليات محمود السيد، تلتزم Habib Clean ببروتوكولات دقيقة لحماية الرخام المستورد والأرضيات الفاخرة."
             </div>
 
-            <p>بعد انتهاء أعمال المقاولات، تبقى على الأرضيات الرخامية طبقات من الأسمنت الأبيض والأسود، بقايا الدهانات، والسيليكون. هذه المخلفات إذا تمت إزالتها بطريقة خاطئة بواسطة عمالة غير مدربة أو <strong>شركات تنظيف منازل</strong> غير معتمدة، ستؤدي إلى خدش سطح الرخام وفقدان لمعانه. عندما تبحث عن <strong>شركة تنظيف قريبة مني</strong> أو تفكر في خدمات الـ <strong>cleaning company near me</strong>، فنحن الخيار الأول بـ <strong>best cleaning company in Cairo</strong>.</p>
+            <!-- Engineering Quick Navigation Trail -->
+            <div class="eng-nav-trail">
+                <span>📍 مسار التنقل الهندسي السريع:</span>
+                <div>
+                    <a href="blog80-cairo-greater-new-cairo-master-hub.html">الموسوعة المركزية</a>
+                    <a href="blog1-تنظيف-بعد-التشطيب.html">بروتوكول ما بعد التشطيب</a>
+                    <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">هندسة جلي الرخام</a>
+                </div>
+            </div>
 
-            <!-- YouTube Facade Injection (مضاف إليه فيديو جلي الرخام الإيطالي) -->
+            <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="تنظيف وتلميع الرخام بعد التشطيب في الفيلات والقصور" class="featured-image" loading="lazy" decoding="async">
+            
+            <p>بعد انتهاء أعمال المقاولات في الفيلات والقصور بمجتمعات مثل ميفيدا (Mivida)، هايد بارك (Hyde Park)، وقطامية هايتس (Katameya Heights)، تبقى على الأرضيات الرخامية طبقات من الأسمنت الأبيض والأسود، بقايا الدهانات، والسيليكون. هذه المخلفات إذا تمت إزالتها بطريقة خاطئة بواسطة عمالة غير مدربة أو <strong>شركات تنظيف منازل</strong> غير معتمدة، ستؤدي إلى خدش سطح الرخام الإيطالي وفقدان لمعانه الزجاجي.</p>
+
+            <p>في <strong>Habib Clean</strong> (أبرز <strong>افضل شركة تنظيف منازل</strong> و<strong>شركة تنظيف في القاهرة</strong>) بقيادة المؤسس محمود السيد، نتعامل مع الرخام كـ "أصل عقاري" فاخر يجب حمايته. عندما تبحث عن <strong>شركة تنظيف قريبة مني</strong> أو تفكر في خدمات الـ <strong>cleaning company near me</strong>، فنحن الخيار الأول بـ <strong>best cleaning company in Cairo</strong>.</p>
+
+            <!-- YouTube Facade Matrix -->
             <div class="video-matrix">
                 <div>
                    <div class="yt-facade landscape" data-vid="kYw1kfDoQO4" aria-label="تشغيل فيديو تلميع الرخام الإيطالي">
@@ -395,28 +425,49 @@
 
             <div class="warning-box">
                 <h4>⚠️ أشهر الأخطاء التي تدمر الرخام بعد التشطيب</h4>
-                <p>يرتكب الكثيرون أخطاء كارثية توفر الوقت ولكنها تكلف مبالغ طائلة لإصلاحها، من أبرزها:</p>
+                <p>يرتكب الكثيرون أخطاء كارثية في كمبوندات مثل بالم هيلز وأبتاون كايرو توفر الوقت ولكنها تكلف مبالغ طائلة لإصلاحها، من أبرزها:</p>
                 <ul class="content-list">
                     <li>استخدام "ماء النار" أو المنظفات الحمضية لإزالة الأسمنت، مما يحرق كربونات الكالسيوم كأقوى <strong>شركة تنظيف بعد التشطيب</strong>.</li>
-                    <li>كشط الرخام بأدوات معدنية حادة.</li>
-                    <li>استخدام سلك التنظيف المعدني الذي يترك خدوشاً واضحة.</li>
+                    <li>كشط الرخام بأدوات معدنية حادة تترك ندوباً لا تُعوض.</li>
+                    <li>استخدام سلك التنظيف المعدني الذي يترك خدوشاً دائرية واضحة.</li>
                     <li>غسل الأرضية بالماء قبل إزالة الرمال الدقيقة، مما يحولها إلى طين يسد الفواصل كأبرز <strong>شركة نظافة بعد التجديد</strong>.</li>
                 </ul>
             </div>
 
             <h2>خطوات Habib Clean لتنظيف الرخام</h2>
-            <p>نتبع نظام عمل احترافي يضمن إزالة المخلفات مع الحفاظ الكامل على الرخام الطبيعي:</p>
+            <p>نتبع نظام عمل هندسي يضمن إزالة المخلفات مع الحفاظ الكامل على الرخام الطبيعي في القصور والفيلات:</p>
             
             <ul class="content-list">
                 <li><strong>إزالة الأتربة والغبار:</strong> استخدام مكانس صناعية مزودة بفلاتر HEPA لشفط الرمال الدقيقة لتجنب الخدش.</li>
                 <li><strong>تفكيك الأسمنت والجبس:</strong> الاعتماد على كاشطات بلاستيكية ومذيبات أسمنتية آمنة (pH متوازن).</li>
-                <li><strong>تنظيف الدهانات:</strong> إزالة البقع باستخدام مواد مخصصة للأسطح الحجرية لا تغير من لونها.</li>
+                <li><strong>تنظيف الدهانات:</strong> إزالة البقع باستخدام مواد مخصصة للأسطح الحجرية لا تغير من لونها أو بريقها.</li>
                 <li><strong>الغسيل النهائي:</strong> التطهير بمنظفات متعادلة الحموضة وتجفيف الرخام فوراً.</li>
-                <li><strong>الجلي الكريستالي:</strong> إذا لزم الأمر، نقوم بتلميع الرخام باستخدام وسائد الألماس المخصصة.</li>
+                <li><strong>الجلي الكريستالي:</strong> إذا لزم الأمر، نقوم بتلميع الرخام باستخدام وسائد الألماس المخصصة لاستعادة اللمعان الزجاجي.</li>
             </ul>
 
             <h2>متى تحتاج إلى افضل شركة تنظيف متخصصة؟</h2>
-            <p>يمكن تنظيف البقع البسيطة منزلياً، لكن بعد أعمال التشطيب يصبح الوضع معقداً. ينصح بالاستعانة بنا في المساحات الكبيرة، أو إذا كان الرخام من الأنواع الثمينة (كالكرارة والإمبرادور). نمتلك في Habib Clean المعدات الاحترافية للحفاظ على استثمارك.</p>
+            <p>يمكن تنظيف البقع البسيطة منزلياً، لكن بعد أعمال التشطيب في العقارات الكبرى يصبح الوضع معقداً. ينصح بالاستعانة بنا في المساحات الواسعة، أو إذا كان الرخام من الأنواع المستوردة الثمينة (كالكرارة والإمبرادور). نمتلك في Habib Clean المعدات الاحترافية للحفاظ على استثمارك.</p>
+
+            <!-- ================= THE SEMANTIC SEO BOMB (BILINGUAL MIX HUB) ================= -->
+            <section class="contextual-prose-hub" aria-label="Engineering Encyclopedia & Semantic Hub">
+                <h2>🌐 Comprehensive Engineering Master Guide for Facility Management in Egypt (الموسوعة الهندسية الشاملة)</h2>
+                
+                <p>
+                  If you are looking for the <a href="blog41-best-home-cleaning-services-cairo.html">best home cleaning company in Cairo and Giza</a> (أفضل شركة تنظيف منازل في مصر) or reliable <a href="blog41-best-home-cleaning-services-cairo.html">house cleaning services</a> across Cairo, New Cairo, Zayed, and October, <a href="../index.html">Habib Clean</a> delivers the highest standard in Egypt under the leadership of Mahmoud Elsayed. We operate as an elite engineering entity, mastering <a href="blog1-تنظيف-بعد-التشطيب.html">post-construction cleaning</a> protocols (خدمات التنظيف بعد التشطيب) to eliminate silica dust and cement without harming delicate surfaces, guided by our <a href="blog40-الموسوعة-الشاملة-لإدارة-القصور.html">Comprehensive Palace Management Encyclopedia</a>.
+                </p>
+
+                <p>
+                  Our operations cover all residential enclaves across Egypt, including specialized <a href="blog68-5th-settlement-beit-el-watan-cleaning.html">New Cairo and 5th Settlement villa cleaning</a> (تنظيف فيلات التجمع الخامس)، مدينتي، والشروق, as well as elite execution for <a href="blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">Sheikh Zayed and 6th of October luxury compounds</a> (تنظيف منازل الشيخ زايد وأكتوبر) and estates along <a href="../services.html">Alexandria Desert Road and European Countryside</a>. From <a href="blog65-maadi-degla-sarayat-vip-cleaning.html">Maadi and Zamalek VIP estates</a> (شركة تنظيف منازل المعادي والزمالك) to Nasr City, Heliopolis, the New Administrative Capital, Banha, and Fayoum, we guarantee pristine results.
+                </p>
+
+                <p>
+                  Beyond standard cleaning, we specialize in <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">diamond marble grinding and restoration</a> (جلي وتلميع الرخام بالألماس), <a href="blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html">Rope Access high-rise window cleaning</a> (تنظيف الواجهات بالحبال), <a href="blog37-تطهير-مكيفات-الشقق-المغلقة.html">HVAC and AC duct disinfection</a>, and <a href="blog39-تعقيم-خزانات-المياه-والسباكة.html">water tank sanitization and plumbing disinfection</a> (تعقيم خزانات المياه وشبكات السباكة). We also offer expert <a href="blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">luxury upholstery and rug deep cleaning</a> (تنظيف الكنب والمفروشات).
+                </p>
+
+                <p>
+                  For international expats and investors seeking <a href="blog44-expat-move-in-deep-cleaning-cairo.html">expat move-in deep cleaning in Cairo</a> and <a href="blog56-vip-post-construction-marble-glass-cleaning-cairo.html">VIP post-construction marble and glass maintenance</a>, Habib Clean remains the definitive authority. Trust your high-value assets to the premier <a href="blog41-best-home-cleaning-services-cairo.html">cleaning company in Egypt</a>.
+                </p>
+            </section>
 
             <!-- OMNI-SPIDERWEB MEGA SITEMAP -->
             <section class="omni-spiderweb">
@@ -431,11 +482,12 @@
                 </div>
             </section>
 
+            <!-- FAQ Section -->
             <section class="faq-section">
                 <h2 style="border: none; margin-top: 0; padding-bottom: 20px;">الأسئلة الشائعة حول تنظيف الرخام</h2>
                 <div class="faq-item">
                     <h4>هل يمكن إزالة الأسمنت من الرخام بدون خدشه؟</h4>
-                    <p>نعم، باستخدام أدوات ومنظفات مخصصة للرخام توفرها كبرى <strong>شركات تنظيف منازل</strong> دون استخدام الأحماض أو الأدوات المعدنية التي تدمر لمعان السطح كـ <strong>افضل شركة تنظيف منازل</strong>.</p>
+                    <p>نعم، باستخدام أدوات ومنظفات مخصصة للرخام توفرها كبرى <strong>شركات تنظيف منازل</strong> في ميفيدا وقطامية هايتس دون استخدام الأحماض أو الأدوات المعدنية كـ <strong>افضل شركة تنظيف منازل</strong>.</p>
                 </div>
                 <div class="faq-item">
                     <h4>هل الخل أو ماء النار مناسب لتنظيف الرخام؟</h4>
@@ -449,33 +501,33 @@
 
             <div class="cta-box">
                 <h3>هل تواجه بقع أسمنت مستعصية على الرخام؟</h3>
-                <p>لا تخاطر بجمال أرضياتك الثمينة. تواصل مع خبراء Habib Clean اليوم للحصول على استشارة ومعاينة للرخام الخاص بك.</p>
+                <p>لا تخاطر بجمال أرضياتك الثمينة. تواصل مع خبراء Habib Clean بقيادة محمود السيد اليوم للحصول على استشارة ومعاينة للرخام الخاص بك.</p>
                 <a href="../thankyou-whatsapp.html" class="btn-whatsapp-cta">💬 تواصل معنا فوراً عبر واتساب</a>
             </div>
         </article>
     </main>
 
     <div class="contact-container">
-        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
-        <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
+        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب" aria-label="تواصل واتساب">💬</a>
+        <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا" aria-label="اتصل بنا">📞</a>
     </div>
 
     <button id="scrollTopBtn" aria-label="العودة للأعلى" title="العودة لأعلى الصفحة">↑</button>
 
     <footer>
-        <strong style="font-family: 'Playfair Display', serif; color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 12px; letter-spacing: 2px;">HABIB CLEAN</strong>
-        <p>المقر الرئيسي: المعادي - القاهرة | التغطية: القاهرة، الجيزة، التجمع، والشيخ زايد.</p>
+        <strong style="font-family: 'Playfair Display', Georgia, serif; color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 12px; letter-spacing: 2px;">HABIB CLEAN</strong>
+        <p>المقر الرئيسي: المعادي - القاهرة | التغطية: القاهرة، الجيزة، طريق إسكندرية الصحراوي، التجمع، والشيخ زايد.</p>
         
         <div class="footer-links" style="margin-top: 25px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
-            <a href="../index.html" style="color: #ccc; text-decoration: none; padding: 6px 15px; border: 1px solid #444; border-radius: 20px; font-size: 13px;">الصفحة الرئيسية</a>
-            <a href="blog80-cairo-greater-new-cairo-master-hub.html" style="color: #ccc; text-decoration: none; padding: 6px 15px; border: 1px solid #444; border-radius: 20px; font-size: 13px;">الموسوعة المركزية</a>
-            <a href="cleaning-marble-after-construction.html" style="color: #ccc; text-decoration: none; padding: 6px 15px; border: 1px solid #444; border-radius: 20px; font-size: 13px;">تنظيف الرخام</a>
+            <a href="../index.html">الصفحة الرئيسية</a>
+            <a href="blog80-cairo-greater-new-cairo-master-hub.html">الموسوعة المركزية</a>
+            <a href="cleaning-marble-after-construction.html">تنظيف الرخام</a>
         </div>
         
         <p style="margin-top: 25px; font-size: 13px; color: #777;">© 2026 جميع الحقوق محفوظة لشركة Habib Clean</p>
     </footer>
 
-    <!-- Scripts: Progress Bar, YouTube Facade, Scroll to Top & GCLID Tracking -->
+    <!-- Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Progress Bar
@@ -497,7 +549,7 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // YouTube Facade Loader (المرجع الفتاك)
+            // YouTube Facade Loader
             const facades = document.querySelectorAll('.yt-facade');
             facades.forEach(facade => {
                 facade.addEventListener('click', function() {
@@ -508,9 +560,15 @@
 
             // GCLID Tracking
             const urlParams = new URLSearchParams(window.location.search);
-            const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
-            if (gclid) {
+            let gclid = urlParams.get('gclid');
+            
+            if (!gclid) {
+                gclid = sessionStorage.getItem("gclid_val");
+            } else {
                 sessionStorage.setItem("gclid_val", gclid);
+            }
+
+            if (gclid) {
                 document.querySelectorAll('a').forEach(link => {
                     if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
                         const separator = link.href.includes('?') ? '&' : '?';
