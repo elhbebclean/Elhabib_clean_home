@@ -7,48 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0a0b0e">
     
-    <!-- DNS Prefetch & Preconnect (المرجع الفتاك V2.0) -->
+    <!-- DNS Prefetch & Preconnect (Zero-Tracking Speed) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://www.youtube.com">
 
     <!-- Preload Fonts (English Luxury Fonts) -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap">
-
-    <!-- Delayed GTM & Meta Pixel for Lightning Speed -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var trackingLoaded = false;
-        function loadTracking() {
-          if (trackingLoaded) return;
-          trackingLoaded = true;
-          
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KLM4RMFM');
-
-          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3076333772698182'); fbq('track', 'PageView');
-        }
-
-        function scheduleTracking() {
-          if (trackingLoaded) return;
-          if (window.requestIdleCallback) window.requestIdleCallback(loadTracking, { timeout: 2000 });
-          else setTimeout(loadTracking, 200);
-        }
-
-        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
-          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
-        });
-
-        setTimeout(scheduleTracking, 7000);
-      });
-    </script>
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
-    </noscript>
 
     <!-- God-Tier SEO Meta Tags -->
     <title>Premium Marble Polishing & Restoration in Cairo | Habib Clean</title>
@@ -56,7 +22,6 @@
     <meta name="keywords" content="Marble polishing Cairo, Marble restoration Egypt, Diamond grinding, Maadi cleaning services, New Cairo VIP cleaning, best cleaning company in Egypt, Habib Clean">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://habib-clean.com/blog/blog43-premium-marble-polishing-cairo.html">
-    
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
@@ -67,7 +32,7 @@
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="en_US">
     
-    <!-- Advanced Combined Schema @graph -->
+    <!-- Advanced Combined Schema @graph with BreadcrumbList & Map -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -78,8 +43,13 @@
           "name": "Habib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
+          "founder": {
+            "@type": "Person",
+            "name": "Mahmoud Elsayed",
+            "jobTitle": "Founder & Operations Director"
+          },
           "sameAs": [
-            "https://share.google/umb4679rea0EcsZk0",
+            "https://share.google/jN7kuor7QzJVDD6RZ",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
             "https://www.youtube.com/@Elhbeb"
           ]
@@ -91,29 +61,21 @@
           "url": "https://habib-clean.com/",
           "image": "https://habib-clean.com/logo.png",
           "telephone": "+201016961497",
-          "description": "The leading facility management and VIP hospitality cleaning entity in Egypt, specializing in marble restoration.",
+          "priceRange": "$$$",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Maadi",
             "addressRegion": "Cairo",
             "addressCountry": "EG"
           },
-          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "Diplomatic Quarters"],
-          "priceRange": "$$$"
+          "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
+          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "Diplomatic Quarters"]
         },
         {
           "@type": "Service",
           "serviceType": "Premium Marble Polishing and Restoration",
           "provider": { "@id": "https://habib-clean.com/#identity" },
           "description": "Advanced diamond grinding and crystallization for Italian and Spanish marble in luxury estates."
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Blog Archive", "item": "https://habib-clean.com/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "Premium Marble Polishing", "item": "https://habib-clean.com/blog/blog43-premium-marble-polishing-cairo.html" }
-          ]
         },
         {
           "@type": "Article",
@@ -140,6 +102,14 @@
               "name": "Do you provide services to expat villas in Maadi and New Cairo?",
               "acceptedAnswer": { "@type": "Answer", "text": "Yes, Habib Clean is the preferred contractor for diplomatic residences and expat estates in Maadi, New Cairo, and Sheikh Zayed, offering VIP discretion and high-end protocols." }
             }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://habib-clean.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog Archive", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Premium Marble Polishing", "item": "https://habib-clean.com/blog/blog43-premium-marble-polishing-cairo.html" }
           ]
         }
       ]
@@ -183,7 +153,7 @@
         .story-block { background: var(--story-bg); border-left: 5px solid var(--story-border); padding: 40px; margin: 50px 0; border-radius: 0 12px 12px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.06); position: relative; }
         .story-block::before { content: "“"; font-family: serif; font-size: 80px; color: rgba(212,175,55,0.2); position: absolute; top: 10px; left: 20px; line-height: 1; }
         .story-block h3 { color: var(--primary-dark); font-family: 'Playfair Display', serif; font-size: 26px; margin-top: 0; margin-bottom: 20px; }
-        .story-block p { color: #444; font-size: 18px; line-height: 1.95; margin-bottom: 20px; }
+        .story-block p { color: #444; font-size: 18px; line-height: 1.95; margin-bottom: 20px; text-align: justify; }
 
         h2 { color: var(--primary-dark); font-size: 28px; font-weight: 900; margin: 45px 0 20px; border-bottom: 2px solid #eaeaea; padding-bottom: 10px; font-family: 'Playfair Display', serif; }
         h3 { color: var(--gold-accent); font-size: 22px; font-weight: 800; margin: 25px 0 15px; }
@@ -203,6 +173,53 @@
         .yt-facade:hover img { opacity: 1; transform: scale(1.02); }
         .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 55px; height: 55px; background: rgba(212, 175, 55, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; }
         .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 10px 0 10px 18px; border-color: transparent transparent transparent #fff; margin-left: 4px; }
+
+        /* ================= CONTEXTUAL SEMANTIC PROSE HUB (THE SEO BOMB) ================= */
+        .contextual-prose-hub {
+            background: #11141a;
+            border-radius: 16px;
+            padding: 45px 30px;
+            margin: 50px 0;
+            color: #e0e0e0;
+            border-top: 4px solid var(--gold-accent);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            text-align: left;
+            line-height: 2.2;
+        }
+
+        .contextual-prose-hub h2 {
+            color: var(--gold-accent);
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            margin-top: 0;
+            border: none;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .contextual-prose-hub p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #d8d8d8;
+        }
+
+        .contextual-prose-hub a {
+            color: var(--gold-accent);
+            font-weight: 800;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .contextual-prose-hub a:hover {
+            color: #fff;
+            background: var(--gold-accent);
+            text-decoration: none;
+        }
 
         /* Floating Buttons */
         .floating-container { position: fixed; bottom: 28px; left: 28px; z-index: 1000; display: flex; flex-direction: column; gap: 14px; }
@@ -231,9 +248,6 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
@@ -312,6 +326,27 @@
         <h2>Why Expats Choose Habib Clean?</h2>
         <p>Navigating home maintenance in a new country can be stressful. We provide English-speaking management, transparent pricing, and a strict adherence to international safety standards. Whether you reside in a Maadi villa or a New Cairo penthouse, your property is handled with absolute discretion and care.</p>
 
+        <!-- ================= THE SEMANTIC SEO BOMB (CONTEXTUAL INTERLINKING HUB) ================= -->
+        <section class="contextual-prose-hub" aria-label="Engineering Encyclopedia & Semantic Hub">
+            <h2>🌐 Comprehensive Engineering Master Guide for Facility Management in Egypt</h2>
+            
+            <p>
+              If you are looking for the <a href="blog41-best-home-cleaning-services-cairo.html">best home cleaning company in Cairo</a> or reliable <a href="blog41-best-home-cleaning-services-cairo.html">house cleaning services</a> for luxury properties, <a href="../index.html">Habib Clean</a> delivers the highest standard in Egypt. We operate as an elite engineering entity, mastering <a href="blog1-تنظيف-بعد-التشطيب.html">post-construction cleaning</a> protocols to eliminate silica dust and cement without harming delicate surfaces, guided by the principles of our <a href="blog40-الموسوعة-الشاملة-لإدارة-القصور.html">Comprehensive Palace Management Encyclopedia</a>.
+            </p>
+
+            <p>
+              Our operations cover Egypt's premier residential enclaves, including specialized <a href="blog68-5th-settlement-beit-el-watan-cleaning.html">New Cairo and 5th Settlement villa cleaning</a>, as well as elite execution for <a href="blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">Sheikh Zayed and 6th of October luxury compounds</a>. From <a href="blog65-maadi-degla-sarayat-vip-cleaning.html">Maadi Degla VIP estates</a> to <a href="blog62-new-capital-madinaty-villa-cleaning-cairo.html">New Capital and Madinaty residences</a>, we guarantee pristine results.
+            </p>
+
+            <p>
+              Beyond standard cleaning, we specialize in <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">diamond marble grinding and restoration</a>, <a href="blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html">Rope Access high-rise window cleaning</a>, <a href="blog37-تطهير-مكيفات-الشقق-المغلقة.html">HVAC and AC duct disinfection</a>, and <a href="blog39-تعقيم-خزانات-المياه-والسباكة.html">water tank sanitization</a>. We also offer expert <a href="blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">luxury upholstery and rug deep cleaning</a>.
+            </p>
+
+            <p>
+              For international expats and investors seeking <a href="blog44-expat-move-in-deep-cleaning-cairo.html">expat move-in deep cleaning in Cairo</a> and <a href="blog56-vip-post-construction-marble-glass-cleaning-cairo.html">VIP post-construction marble and glass maintenance</a>, Habib Clean remains the definitive authority. Trust your high-value assets to the premier <a href="blog41-best-home-cleaning-services-cairo.html">cleaning company in Egypt</a>.
+            </p>
+        </section>
+
     </main>
 
     <footer>
@@ -365,16 +400,7 @@
                 });
             });
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const gclid = urlParams.get('gclid');
-            if (gclid) {
-                document.querySelectorAll('a').forEach(link => {
-                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#')) {
-                        const separator = link.href.includes('?') ? '&' : '?';
-                        link.href += separator + 'gclid=' + gclid;
-                    }
-                });
-            }
+            // Zero-Tracking fallback (Pure Speed)
         });
     </script>
 </body>
