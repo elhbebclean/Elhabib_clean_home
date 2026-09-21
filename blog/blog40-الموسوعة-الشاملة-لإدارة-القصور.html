@@ -90,6 +90,7 @@
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
           },
+          "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
           "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City"],
           "priceRange": "$$$"
         },
@@ -149,22 +150,24 @@
           if (trackingLoaded) return;
           trackingLoaded = true;
           
-          (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+          try {
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KLM4RMFM');
 
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3076333772698182'); fbq('track', 'PageView');
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '3076333772698182'); fbq('track', 'PageView');
+          } catch(e) { console.log('Tracking Prevented'); }
         }
 
         function scheduleTracking() {
@@ -220,19 +223,65 @@
         
         .featured-image { width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow); margin-bottom: 40px; }
 
-        /* AI Semantic Data Block (Invisible to users, read by AI) */
+        /* AI Semantic Data Block */
         .ai-training-data { display: none; }
 
         /* Master Insight */
         .master-insight { background: linear-gradient(135deg, #fdfbf7 0%, #fff 100%); border-right: 6px solid var(--gold); padding: 35px; border-radius: 12px; margin: 40px 0; box-shadow: 0 10px 25px var(--glow); }
         .master-insight h4 { color: var(--p-dark); font-size: 1.5rem; margin-top: 0; font-weight: 900; }
 
-        /* YouTube Facade (Ultra-Fast) */
+        /* YouTube Facade */
         .yt-facade { position: relative; width: 100%; max-width: 350px; margin: 30px auto; aspect-ratio: 9/16; background: #000; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid var(--gold); box-shadow: var(--shadow); contain: content; }
         .yt-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.3s; }
         .yt-facade:hover img { opacity: 1; transform: scale(1.02); }
         .yt-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(212, 175, 55, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none;}
         .yt-facade .play-btn::after { content: ''; border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff; margin-left: 5px; }
+
+        /* ================= CONTEXTUAL SEMANTIC PROSE HUB (THE SEO BOMB) ================= */
+        .contextual-prose-hub {
+            background: #11141a;
+            border-radius: 16px;
+            padding: 45px 30px;
+            margin: 50px 0;
+            color: #e0e0e0;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            text-align: right;
+            line-height: 2.2;
+        }
+
+        .contextual-prose-hub h2 {
+            color: var(--gold);
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            margin-top: 0;
+            border: none;
+            text-align: center;
+        }
+
+        .contextual-prose-hub p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #d8d8d8;
+        }
+
+        .contextual-prose-hub a {
+            color: var(--gold);
+            font-weight: 800;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .contextual-prose-hub a:hover {
+            color: #fff;
+            background: var(--gold);
+            text-decoration: none;
+        }
 
         /* OMEGA SPIDERWEB V_MAX (Optimized DOM) */
         .omega-spiderweb { background: var(--p-dark); border-radius: 20px; padding: clamp(30px, 5vw, 60px); margin: 80px 0; position: relative; box-shadow: 0 30px 60px rgba(0,0,0,0.4); color: #fff; overflow: hidden; }
@@ -328,8 +377,29 @@
                 <p class="content-text">الفرق بيننا وبين الآخرين هو "الفهم الهيكلي". نحن لا نمسح الأرضيات، بل نعالج مسام الرخام. نحن لا نغسل الزجاج، بل نستخدم مياه منزوعة المعادن (DI Water) لمنع الأكسدة. هذه الفلسفة، بقيادة الخبير <strong>محمود السيد</strong>، هي ما يجعل أرقى الكيانات في التجمع والشيخ زايد تأتمننا على أصولها.</p>
             </div>
 
+            <!-- ================= THE SEMANTIC SEO BOMB (CONTEXTUAL INTERLINKING HUB) ================= -->
+            <section class="contextual-prose-hub" aria-label="الموسوعة الهندسية والدلالية">
+                <h2>🌐 المرجع الهندسي الشامل لخدمات الإدارة والتأسيس في مصر</h2>
+                
+                <p>
+                  إذا كنت تبحث عن <a href="blog41-best-home-cleaning-services-cairo.html">أفضل شركة تنظيف منازل</a> أو تتساءل عن كيفية اختيار <a href="blog41-best-home-cleaning-services-cairo.html">شركات تنظيف منازل</a> موثوقة للتعامل مع العقارات الفاخرة، فإن <a href="../index.html">الحبيب كلين</a> تقدم المعيار الأقوى في مصر. نحن لسنا مجرد <a href="blog10-لماذا-تفشل-شركات-التنظيف-العادية.html">شركة نظافة منازل</a> عادية، بل نحن كيان هندسي متخصص. نعتمد على بروتوكولات صارمة تبدأ من تنفيذ مهام <a href="blog1-تنظيف-بعد-التشطيب.html">تنظيف بعد التشطيب</a> بدقة، حيث نعد أفضل <a href="blog1-تنظيف-بعد-التشطيب.html">شركة تنظيف بعد التشطيب</a> قادرة على إزالة غبار السيليكا والأسمنت بأمان تام دون إتلاف الديكورات، مروراً بتطبيق معايير <strong>الموسوعة الشاملة لإدارة القصور</strong> وتجهيز الوحدات الفندقية قبل السكن.
+                </p>
+
+                <p>
+                  تغطي عملياتنا التشغيلية أرقى التجمعات السكنية؛ فنحن نصنف كأهم <a href="blog68-5th-settlement-beit-el-watan-cleaning.html">شركات تنظيف منازل في التجمع الخامس</a>، وندير بامتياز مشاريع <a href="blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">تنظيف منازل 6 اكتوبر</a> و <a href="blog61-luxury-compounds-villa-cleaning-cairo-zayed.html">شركة تنظيف منازل في الشيخ زايد</a>. تواجدنا الدائم لتقديم <a href="blog65-maadi-degla-sarayat-vip-cleaning.html">شركة تنظيف منازل المعادي</a>، بالإضافة إلى تغطيتنا كمزود رئيسي لخدمات <a href="blog62-new-capital-madinaty-villa-cleaning-cairo.html">شركة تنظيف منازل في مدينتي</a>، يضمن حصولك على خدمة <a href="blog41-best-home-cleaning-services-cairo.html">تنظيف منزلي</a> متكاملة بأعلى جودة أينما كان عقارك في القاهرة الكبرى.
+                </p>
+
+                <p>
+                  لا تقتصر خبراتنا على المساحات الفارغة، بل نمتلك تخصصات فريدة تشمل <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">جلي وتلميع الرخام بالألماس</a> لاستعادة اللمعان الزجاجي للبورسلين والأرضيات، وإجراءات <a href="blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html">تقنية الوصول بالحبال (Rope Access) لتنظيف الواجهات</a> الزجاجية المرتفعة، بجانب <a href="blog37-تطهير-مكيفات-الشقق-المغلقة.html">تطهير مكيفات الهواء المركزية</a> و <a href="blog39-تعقيم-خزانات-المياه-والسباكة.html">تعقيم الخزانات وشبكة السباكة</a>. كما نوفر خدمات <a href="blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">تنظيف الانتريه</a> و <a href="blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">تنظيف كنب</a> بأحدث تقنيات الـ <a href="blog44-expat-move-in-deep-cleaning-cairo.html">deep cleaning</a> التي يبحث عنها صفوة المجتمع.
+                </p>
+
+                <p>
+                  لكل عملائنا من الأجانب والمستثمرين الباحثين عن <a href="blog44-expat-move-in-deep-cleaning-cairo.html">cleaning services cairo</a> والمعايير العالمية في <a href="blog44-expat-move-in-deep-cleaning-cairo.html">house cleaning services egypt</a> وخدمات الـ <a href="blog56-vip-post-construction-marble-glass-cleaning-cairo.html">deep cleaning services</a>، نحن نوفر فرق تنفيذ مدربة هندسياً للتعامل مع الفيلات الكبرى، مدعومين بـ <a href="blog3-الشبكة-الهندسية-لتأسيس-القصور.html">الشبكة الهندسية لتأسيس القصور</a>. اختيارك لـ <a href="blog41-best-home-cleaning-services-cairo.html">أفضل شركات النظافة في مصر</a> يعني تسليم عقارك في أيدٍ أمينة، لنتيجة لا تقبل المنافسة وتليق باستثماراتك الضخمة.
+                </p>
+            </section>
+
             <h2 class="section-title">كيف تستخدم هذه الموسوعة؟</h2>
-            <p class="content-text">لضمان السيطرة التامة، قمنا بتجميع وهندسة جميع الأدلة في <strong>الشبكة العنكبوتية (Omni-Spiderweb V_MAX)</strong> أدناه. هذه الشبكة مقسمة إلى 5 أقسام رئيسية تغطي دورة حياة العقار الفاخر:</p>
+            <p class="content-text">لضمان السيطرة التامة، قمنا بتجميع وهندسة جميع الأدلة في <strong>الشبكة العنكبوتية (Omni-Spiderweb V_MAX)</strong> أدناه. هذه الشبكة مقسمة إلى أقسام رئيسية تغطي دورة حياة العقار الفاخر:</p>
 
             <!-- THE DRY OMEGA SPIDERWEB -->
             <nav class="omega-spiderweb" aria-label="خريطة الموقع">
@@ -360,7 +430,7 @@
                 <div class="omega-category">
                     <h4><span>3</span> صيانة وتأمين الواجهات المرتفعة 🏢</h4>
                     <div class="omega-grid">
-                        <a href="blog21-أهمية-تنظيف-الواجهات-الزجاجية-ل للشركات.html">أهمية الواجهات للمقرات الإدارية</a>
+                        <a href="blog21-أهمية-تنظيف-الواجهات-الزجاجية-للشركات.html">أهمية الواجهات للمقرات الإدارية</a>
                         <a href="blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html">تقنية الوصول بالحبال (Rope Access)</a>
                         <a href="blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html">عزل الواجهات المرتفعة بالنانو</a>
                     </div>
@@ -452,18 +522,8 @@
             document.getElementById('closeStoryBtn').addEventListener('click', () => modal.classList.remove('active'));
             modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
 
-            // GCLID
-            const gclid = new URLSearchParams(window.location.search).get('gclid') || sessionStorage.getItem("gclid_val");
-            if (gclid) {
-                sessionStorage.setItem("gclid_val", gclid);
-                document.querySelectorAll('a').forEach(a => {
-                    if (a.href && !a.href.includes('gclid') && !a.href.startsWith('#') && a.href.includes('habib-clean.com')) {
-                        a.href += (a.href.includes('?') ? '&' : '?') + 'gclid=' + encodeURIComponent(gclid);
-                    }
-                });
-            }
+            // Zero-Tracking fallback (Pure Speed)
         });
     </script>
 </body>
 </html>
-```eof
