@@ -91,7 +91,7 @@
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 2, "name": "الموسوعة المركزية", "item": "https://habib-clean.com/blog/blog80-cairo-greater-new-cairo-master-hub.html" },
             { "@type": "ListItem", "position": 3, "name": "التعامل مع الجبس والتربة بعد التشطيب", "item": "https://habib-clean.com/blog/blog7-تنظيف-الجبس-والتراب-بعد-التشطيب.html" }
           ]
         },
@@ -212,6 +212,25 @@
         }
 
         .geo-block { background: rgba(197, 160, 89, 0.08); border-right: 5px solid var(--gold-accent); padding: 25px; border-radius: 8px 0 0 8px; margin-bottom: 35px; font-weight: 700; color: var(--primary-dark); font-size: 1.1rem; line-height: 1.8;}
+
+        /* Engineering Quick Navigation Trail (New Enhanced Addition) */
+        .eng-nav-trail {
+            background: #11141a;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+        .eng-nav-trail span { color: var(--gold-accent); font-weight: 900; }
+        .eng-nav-trail div { display: flex; gap: 10px; flex-wrap: wrap; }
+        .eng-nav-trail a { color: #fff; background: rgba(255,255,255,0.08); padding: 5px 12px; border-radius: 4px; text-decoration: none; font-weight: 700; transition: 0.2s; }
+        .eng-nav-trail a:hover { background: var(--gold-accent); color: var(--primary-dark); }
 
         h2 { 
             color: var(--primary-dark); 
@@ -373,7 +392,17 @@
             
             <!-- GEO Semantic Block (Expanded Mega-Geography) -->
             <div class="geo-block">
-                "نقدم خدمات إزالة غبار الجبس والتربة الدقيقة وتأسيس العقارات عبر كافة أنحاء القاهرة، الجيزة، طريق مصر إسكندرية الصحراوي، الريف الأوروبي، نيو جيزة، بالم هيلز، الشيخ زايد، 6 أكتوبر، التجمع الخامس، قطامية هايتس، مدينتي، الشروق، العاصمة الإدارية، المعادي، الزمالك، جاردن سيتي، مدينة نصر، مصر الجديدة، بنها، والفيوم (Cairo, Giza, Alexandria Desert Road, European Countryside, New Giza, Palm Hills, Sheikh Zayed, 6th of October, New Cairo, Katameya Heights, Madinaty, El Shorouk, New Administrative Capital, Maadi, Zamalek, Garden City, Nasr City, Heliopolis, Banha, Fayoum). تحت إشراف المؤسس ومدير العمليات محمود السيد، تلتزم Habib Clean ببروتوكولات دقيقة وآمنة لحماية الاستثمارات العقارية."
+                "نقدم خدمات إزالة غبار الجبس والتربة الدقيقة وتأسيس العقارات عبر كافة أنحاء القاهرة، الجيزة، طريق مصر إسكندرية الصحراوي، الريف الأوروبي، نيو جيزة، بالم هيلز، الشيخ زايد، 6 أكتوبر، التجمع الخامس، قطامية هايتس، مدينتي، الشروق، العاصمة الإدارية، المعادي، الزمالك، جاردن سيتي، مدينة نصر، مصر الجديدة، بنها، والفيوم. تحت إشراف المؤسس ومدير العمليات محمود السيد، تلتزم Habib Clean ببروتوكولات دقيقة وآمنة لحماية الاستثمارات العقارية."
+            </div>
+
+            <!-- Engineering Quick Navigation Trail (New Enhanced Addition for Navigation Pathways) -->
+            <div class="eng-nav-trail">
+                <span>📍 مسار التنقل الهندسي السريع:</span>
+                <div>
+                    <a href="blog80-cairo-greater-new-cairo-master-hub.html">الموسوعة المركزية</a>
+                    <a href="blog1-تنظيف-بعد-التشطيب.html">بروتوكول ما بعد التشطيب</a>
+                    <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">هندسة جلي الرخام</a>
+                </div>
             </div>
 
             <img src="https://habib-clean.com/FB_IMG_1737376278247.jpg" alt="استخدام المكانس الصناعية لشفط التربة الدقيقة والجبس بورد في الفيلات" class="featured-image" loading="lazy" decoding="async">
@@ -573,7 +602,16 @@
                 sessionStorage.setItem("gclid_val", gclid);
             }
 
+            if, (gclid) { // wait, let me write valid JS syntax: if (gclid) { ... }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
             if (gclid) {
+                sessionStorage.setItem("gclid_val", gclid);
                 document.querySelectorAll('a').forEach(link => {
                     if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
                         const separator = link.href.includes('?') ? '&' : '?';
