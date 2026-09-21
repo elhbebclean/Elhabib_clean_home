@@ -108,11 +108,52 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://habib-clean.com/#identity",
+          "@type": ["LocalBusiness", "CleaningService"],
+          "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
+          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
+          "description": "شركة رائدة متخصصة في صيانة الأثاث الجلدي، تنظيف المفروشات، والتعقيم الفندقي في مصر.",
+          "telephone": "01016961497",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Maadi",
+            "addressRegion": "Cairo",
+            "addressCountry": "EG"
+          },
+          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "أعادوا صالوني الجلدي كالجديد تماماً، خدمة هندسية فائقة الدقة.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          ],
           "sameAs": [
             "https://share.google/umb4679rea0EcsZk0",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
@@ -120,51 +161,22 @@
           ]
         },
         {
-          "@type": "LocalBusiness",
-          "@id": "https://habib-clean.com/#localbusiness",
-          "name": "Habib Clean - صيانة الأثاث الفاخر والجلود",
-          "url": "https://habib-clean.com/",
-          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
-          "telephone": "01016961497",
-          "priceRange": "$$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "المعادي",
-            "addressRegion": "القاهرة",
-            "addressCountry": "EG"
-          },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"]
-        },
-        {
-          "@type": "CleaningService",
-          "@id": "https://habib-clean.com/#service",
-          "name": "خدمات التنظيف والترميم الهندسي للأثاث الجلدي والفاخر",
-          "provider": { "@id": "https://habib-clean.com/#identity" },
-          "areaServed": ["القاهرة الكبرى", "التجمع الخامس", "الشيخ زايد"]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html#webpage",
-          "url": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html",
-          "name": "التنظيف والترميم الهندسي للأثاث الجلدي الفاخر | Habib Clean",
-          "isPartOf": { "@id": "https://habib-clean.com/#identity" }
-        },
-        {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/index.html" },
             { "@type": "ListItem", "position": 3, "name": "تنظيف وصيانة الأثاث الجلدي الفاخر", "item": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html" }
           ]
         },
         {
           "@type": "Article",
           "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html#article",
-          "isPartOf": { "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html#webpage" },
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html" },
           "headline": "الدليل الهندسي لتنظيف، ترطيب، وصيانة الأثاث الجلدي الفاخر في القصور",
           "description": "كيف تعتني بالصالونات الجلدية الطبيعية في قصرك؟ الدليل الشامل لتنظيف، ترطيب، وحماية الأثاث الجلدي من التشققات مع Habib Clean.",
-          "author": { "@id": "https://habib-clean.com/#identity" },
-          "publisher": { "@id": "https://habib-clean.com/#identity" },
+          "author": { "@id": "https://habib-clean.com/#organization" },
+          "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
           "dateModified": "2026-08-05T01:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html",
@@ -175,6 +187,8 @@
         },
         {
           "@type": "FAQPage",
+          "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html#faq",
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html" },
           "mainEntity": [
             {
               "@type": "Question",
@@ -317,6 +331,7 @@
         .faq-item h4 { margin: 0 0 16px 0; color: var(--primary-dark); font-size: 22px; font-weight: 900; }
         .faq-item p { margin-bottom: 0; font-size: 18.5px; color: #555;}
         
+        /* Ultimate VIP Conversion CTA */
         .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #111 100%); padding: 70px 50px; margin-top: 80px; text-align: center; border-radius: 20px; color: #fff; box-shadow: 0 25px 60px rgba(0,0,0,0.3); }
         .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 34px; font-weight: 900; }
         .cta-box p { color: #eee; font-size: 21px; margin-bottom: 45px; max-width: 800px; margin-left: auto; margin-right: auto;}
@@ -355,7 +370,7 @@
         .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
         .modal-btn-action.whatsapp:hover { background: #1ebe57; transform: translateY(-2px); }
         .modal-btn-action.call { background: var(--primary-dark); color: var(--gold-accent); border: 1px solid var(--gold-accent); }
-        .modal-btn-action.call:hover { background: #262626; transform: translateY(-2px); }
+        .modal-btn-action.call:hover { background: var(--secondary-dark); transform: translateY(-2px); }
         .btn-continue-reading { background: var(--leather-accent); color: #fff; }
         .btn-continue-reading:hover { background: var(--primary-dark); transform: translateY(-3px); }
 
@@ -364,7 +379,7 @@
 
         @media (max-width: 768px) {
             main { padding: 40px 25px; margin-top: -20px;}
-            .story-bubble-wrapper { bottom: 20px; right: auto; left: 20px; }
+            .story-bubble-wrapper { bottom: 20px; right: auto; left: 20px; } /* نقلنا زر القصة لليسار بجانب أزرار الاتصال في الموبايل */
             .contact-container { bottom: 80px; left: 20px; }
             .modal-story-box { padding: 30px 20px; }
         }
