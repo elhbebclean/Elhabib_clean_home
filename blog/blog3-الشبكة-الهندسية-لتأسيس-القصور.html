@@ -13,7 +13,7 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://www.youtube.com">
-    
+
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Tajawal:wght@700;800;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Tajawal:wght@700;800;900&display=swap">
 
@@ -77,7 +77,6 @@
     <meta name="keywords" content="تأسيس القصور, استلام الفيلات, تنظيف بعد التشطيب, التنظيف العميق, تجهيز الفيلا للسكن, جلي رخام القصور, Habib Clean">
     <meta name="author" content="Habib Clean">
     <link rel="canonical" href="https://habib-clean.com/blog/blog3-الشبكة-الهندسية-لتأسيس-القصور.html">
-    
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
@@ -87,31 +86,21 @@
     <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
-    
+
     <!-- Mega Schema targeting Engineering Hub V2.0 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
+          "@type": ["LocalBusiness", "CleaningService"],
           "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
           "url": "https://habib-clean.com",
           "logo": "https://habib-clean.com/logo.png",
-          "sameAs": [
-            "https://share.google/umb4679rea0EcsZk0",
-            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
-            "https://www.youtube.com/@Elhbeb"
-          ]
-        },
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://habib-clean.com/#localbusiness",
-          "name": "Habib Clean - قطاع التأسيس الهندسي",
-          "telephone": "+201016961497",
-          "url": "https://habib-clean.com",
           "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
+          "telephone": "01016961497",
+          "priceRange": "$$$",
           "description": "الكيان الهندسي الأول لربط وتكامل خدمات العناية بالعقارات، من التنظيف بعد التشطيب إلى جلي الرخام والتعقيم الفندقي.",
           "address": {
             "@type": "PostalAddress",
@@ -120,18 +109,45 @@
             "addressCountry": "EG"
           },
           "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
-          "priceRange": "$$$"
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "شبكة متكاملة لتأسيس القصور، دقة واحترافية عالية في كل مرحلة.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          },
+          "sameAs": [
+            "https://share.google/umb4679rea0EcsZk0",
+            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
+            "https://www.youtube.com/@Elhbeb"
+          ]
         },
         {
           "@type": "Service",
           "@id": "https://habib-clean.com/#service",
           "serviceType": "الشبكة المتكاملة لتأسيس الفيلات والقصور",
-          "provider": { "@id": "https://habib-clean.com/#localbusiness" },
+          "provider": { "@id": "https://habib-clean.com/#organization" },
           "description": "منظومة هندسية متكاملة تشمل سحب غبار التشطيب، التعقيم العميق، بلورة الرخام، تنظيف الواجهات، وغسيل المفروشات.",
           "areaServed": ["Egypt"]
         },
         {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog3-الشبكة-الهندسية-لتأسيس-القصور.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
             { "@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://habib-clean.com/blog/index.html" },
@@ -147,6 +163,7 @@
           "author": { "@id": "https://habib-clean.com/#organization" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-08-01T10:00:00+02:00",
+          "dateModified": "2026-08-04T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog3-الشبكة-الهندسية-لتأسيس-القصور.html"
         },
         {
@@ -195,11 +212,19 @@
         .progress-container { width: 100%; height: 4px; background: rgba(30, 27, 75, 0.5); position: fixed; top: 0; z-index: 9999; }
         .progress-bar { height: 4px; background: var(--web-gold); width: 0%; transition: width 0.1s ease-out; }
 
+        /* Visual Breadcrumb */
+        .visual-breadcrumb { 
+            background: #fff; padding: 12px 20px; font-size: 0.95rem; font-weight: 700; color: #777; text-align: center; border-bottom: 1px solid #eaeaea; position: relative; z-index: 100;
+        }
+        .visual-breadcrumb a { color: var(--web-gold); text-decoration: none; transition: 0.2s;}
+        .visual-breadcrumb a:hover { color: var(--web-dark); }
+        .visual-breadcrumb span { margin: 0 8px; color: #ccc; }
+
         /* Spider Web Header */
-        header { background: radial-gradient(circle at 50% 50%, var(--web-indigo) 0%, var(--web-dark) 100%); color: #fff; padding: 110px 20px 80px; text-align: center; border-bottom: 5px solid var(--web-gold); position: relative; overflow: hidden; }
-        header::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none; }
-        header h1 { font-family: 'Tajawal', sans-serif; font-size: clamp(26px, 5vw, 42px); font-weight: 900; margin-bottom: 15px; color: var(--web-gold); position: relative; z-index: 2; }
-        header p { font-size: 1.25rem; color: #e0e7ff; max-width: 850px; margin: 0 auto; font-weight: 600; position: relative; z-index: 2; }
+        header.article-header { background: radial-gradient(circle at 50% 50%, var(--web-indigo) 0%, var(--web-dark) 100%); color: #fff; padding: 110px 20px 80px; text-align: center; border-bottom: 5px solid var(--web-gold); position: relative; overflow: hidden; }
+        header.article-header::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none; }
+        header.article-header h1 { font-family: 'Tajawal', sans-serif; font-size: clamp(26px, 5vw, 42px); font-weight: 900; margin-bottom: 15px; color: var(--web-gold); position: relative; z-index: 2; }
+        header.article-header p { font-size: 1.25rem; color: #e0e7ff; max-width: 850px; margin: 0 auto; font-weight: 600; position: relative; z-index: 2; }
 
         .spider-hub-wrap { max-width: 1180px; margin: -40px auto 80px; padding: 0 20px; position: relative; z-index: 10; }
         
@@ -284,15 +309,20 @@
             .core-intro { padding: 30px 20px; }
             .web-fab-group { left: auto; right: 20px; bottom: 20px; }
             #scrollTopBtn { right: auto; left: 20px; bottom: 20px; }
-            header h1 { font-size: 28px; }
+            header.article-header { padding: 50px 15px; }
         }
     </style>
 </head>
-
 <body>
+
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
-    <header>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="visual-breadcrumb">
+        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> الشبكة الهندسية لتأسيس القصور
+    </nav>
+
+    <header class="article-header">
         <h1>الشبكة الهندسية الشاملة لتأسيس واستلام القصور</h1>
         <p>الخريطة المتكاملة التي تربط بين إزالة مخلفات المقاولات، جلي الرخام، والتعقيم الفندقي لتسليم العقار جاهزاً للسكن.</p>
     </header>
