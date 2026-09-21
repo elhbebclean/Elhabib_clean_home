@@ -51,11 +51,7 @@
         setTimeout(scheduleTracking, 7000);
       });
     </script>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager -->
-
-    <!-- Meta Pixel NoScript fallback -->
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1"/></noscript>
 
     <!-- Favicon -->
     <link rel="icon" href="https://habib-clean.com/favicon.png" type="image/png" sizes="192x192">
@@ -88,7 +84,6 @@
     <meta name="ICBM" content="29.9602, 31.2569">
 
     <link rel="canonical" href="https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html">
-    
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
@@ -110,11 +105,52 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://habib-clean.com/#identity",
+          "@type": ["Organization", "LocalBusiness", "CleaningService"],
+          "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
+          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
+          "description": "شركة رائدة في التنظيف العميق، استعادة الشقق المغلقة والمهجورة، وتقديم أرقى مستويات النظافة الفندقية في مصر.",
+          "telephone": "01016961497",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Maadi",
+            "addressRegion": "Cairo",
+            "addressCountry": "EG"
+          },
+          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "أعادوا شقتي المغلقة كالجديدة تماماً، رائحة النظافة تفوح في كل مكان.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          ],
           "sameAs": [
             "https://share.google/umb4679rea0EcsZk0",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
@@ -122,51 +158,22 @@
           ]
         },
         {
-          "@type": "LocalBusiness",
-          "@id": "https://habib-clean.com/#localbusiness",
-          "name": "Habib Clean - استعادة الشقق الفندقية والمغلقة",
-          "url": "https://habib-clean.com/",
-          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
-          "telephone": "01016961497",
-          "priceRange": "$$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "المعادي",
-            "addressRegion": "القاهرة",
-            "addressCountry": "EG"
-          },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"]
-        },
-        {
-          "@type": "CleaningService",
-          "@id": "https://habib-clean.com/#service",
-          "name": "خدمات التنظيف العميق وإزالة روائح الكمكمة للشقق المغلقة",
-          "provider": { "@id": "https://habib-clean.com/#identity" },
-          "areaServed": ["القاهرة الكبرى", "التجمع الخامس", "الشيخ زايد"]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html#webpage",
-          "url": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html",
-          "name": "التنظيف العميق واستعادة الشقق الفندقية المغلقة | Habib Clean",
-          "isPartOf": { "@id": "https://habib-clean.com/#identity" }
-        },
-        {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/index.html" },
             { "@type": "ListItem", "position": 3, "name": "تنظيف الشقق الفندقية المغلقة", "item": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html" }
           ]
         },
         {
           "@type": "Article",
           "@id": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html#article",
-          "isPartOf": { "@id": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html#webpage" },
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html" },
           "headline": "التنظيف العميق واستعادة الشقق الفندقية المغلقة والمهجورة",
           "description": "الدليل الهندسي لإنقاذ وتنظيف الشقق الفندقية المغلقة لفترات طويلة. تقنيات سحب الروائح والتعقيم العميق مع Habib Clean.",
-          "author": { "@id": "https://habib-clean.com/#identity" },
-          "publisher": { "@id": "https://habib-clean.com/#identity" },
+          "author": { "@id": "https://habib-clean.com/#organization" },
+          "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-03-20T12:00:00+02:00",
           "dateModified": "2026-08-05T01:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html",
@@ -201,6 +208,8 @@
         },
         {
           "@type": "FAQPage",
+          "@id": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html#faq",
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog34-تنظيف-الشقق-الفندقية-المغلقة.html" },
           "mainEntity": [
             {
               "@type": "Question",
@@ -384,7 +393,7 @@
         @keyframes pulseAnim { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.15); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
         @keyframes floatBubble { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
 
-        /* Centered Story Modal (فخ الكونفرجن للشقق المغلقة) */
+        /* Centered Story Modal (فخ الكونفرجن) */
         .centered-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 11, 14, 0.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .centered-modal-overlay.active { opacity: 1; visibility: visible; }
         .modal-story-box { background: #fff; width: 90%; max-width: 500px; padding: 40px; border-radius: 20px; border-top: 6px solid var(--deep-accent); box-shadow: 0 30px 60px rgba(0,0,0,0.4); position: relative; text-align: center; transform: scale(0.8) translateY(30px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -415,11 +424,10 @@
         }
     </style>
 </head>
-
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
+    <!-- Meta Pixel NoScript fallback -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/></noscript>
+
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
     <!-- Breadcrumb Navigation -->
@@ -428,7 +436,7 @@
     </nav>
 
     <header class="article-header">
-        <h1>التنظيف العميق لاستعادة الشقق الفندقية والمغلقة</h1>
+        <h1>التنظيف العميق واستعادة الشقق الفندقية والمغلقة</h1>
         <p>التدخل الهندسي السريع لاستعادة نقاء وفخامة الشقق المغلقة مع خبراء Habib Clean</p>
     </header>
 
@@ -548,7 +556,7 @@
         </article>
     </main>
 
-    <!-- FIXED 3 FLOATING ACTION BUTTONS (Call, WhatsApp) -->
+    <!-- FIXED 3 FLOATING ACTION BUTTONS (Call, WhatsApp, Story Bubble) -->
     <div class="contact-container">
         <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
         <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
