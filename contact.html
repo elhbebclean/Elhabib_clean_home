@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Favicon Logo -->
-    <!-- Favicon (أيقونة الموقع للبحث والمتصفح) -->
-
+    <!-- Favicon -->
+    <link rel="icon" href="https://habib-clean.com/favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="https://habib-clean.com/favicon.png">
-
+    
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -31,16 +30,18 @@
             function loadGTM() {
                 if (gtmLoaded) return;
                 gtmLoaded = true;
-                (function(w,d,s,l,i){
-                    w[l]=w[l]||[];
-                    w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-                    var f=d.getElementsByTagName(s)[0],
-                        j=d.createElement(s),
-                        dl=l!='dataLayer'?'&l='+l:'';
-                    j.async=true;
-                    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                    f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+                try {
+                    (function(w,d,s,l,i){
+                        w[l]=w[l]||[];
+                        w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+                        var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),
+                            dl=l!='dataLayer'?'&l='+l:'';
+                        j.async=true;
+                        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                        f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-KLM4RMFM');
+                } catch(e) { console.log('GTM Prevented'); }
             }
             ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
                 window.addEventListener(event, loadGTM, { once: true, passive: true });
@@ -49,15 +50,13 @@
         });
     </script>
 
-    
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- AI & GEO Optimized Title for Contact Page -->
     <title>تواصل مع الحبيب كلين | حجز معاينة لتنظيف الفيلات والقصور بعد التشطيب</title>
     
     <meta name="description" content="تواصل مع الحبيب كلين لحجز معاينة سريعة لخدمات تنظيف بعد التشطيب، تنظيف الفيلات المغلقة، والتنظيف العميق في القاهرة والجيزة. فرق متخصصة من 5 إلى 15 فرد.">
-    <meta name="keywords" content="تواصل الحبيب كلين, رقم شركة تنظيف, تنظيف بعد التشطيب, تنظيف فيلات مغلقة, طلب معاينة, شركة تنظيف بالقاهرة, واتساب شركة تنظيف">
+    <meta name="keywords" content="تواصل الحبيب كلين, رقم شركة تنظيف, تنظيف بعد التشطيب, تنظيف فيلات مغلقة, طلب معاينة, شركة تنظيف بالقاهرة, واتساب شركة تنظيف, محمود السيد">
     <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
     <link rel="canonical" href="https://habib-clean.com/contact.html">
 
@@ -80,7 +79,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap">
     </noscript>
 
-    <!-- Advanced Schema Markup for Contact Page (GEO 2026) -->
+    <!-- Advanced Combined Schema Markup for Contact Page (Rank #1 Optimization) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -99,6 +98,11 @@
           "image": "https://habib-clean.com/logo.png",
           "telephone": "+201016961497",
           "priceRange": "$$$",
+          "founder": {
+            "@type": "Person",
+            "name": "محمود السيد",
+            "jobTitle": "المؤسس ومدير العمليات"
+          },
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "105 شارع وادي النيل",
@@ -112,6 +116,7 @@
             "latitude": 29.9602,
             "longitude": 31.2569
           },
+          "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
           "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -139,7 +144,12 @@
               "bestRating": "5", 
               "worstRating": "1" 
             }
-          }
+          },
+          "sameAs": [
+            "https://share.google/jN7kuor7QzJVDD6RZ",
+            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
+            "https://www.youtube.com/@Elhbeb"
+          ]
         },
         {
           "@type": "BreadcrumbList",
@@ -263,7 +273,6 @@
             color: var(--primary-dark);
         }
 
-        /* Page specific Hero */
         .page-hero {
             background: linear-gradient(135deg, #141414 0%, #262626 100%);
             color: var(--white);
@@ -443,22 +452,6 @@
             font-size: 16px;
         }
 
-        .mini-points {
-            margin-top: 18px;
-            padding-top: 18px;
-            border-top: 1px solid #eee;
-        }
-
-        .mini-points div {
-            margin-bottom: 10px;
-            color: var(--text-muted);
-            font-size: 15px;
-        }
-
-        .mini-points div:last-child {
-            margin-bottom: 0;
-        }
-
         .form-group {
             margin-bottom: 20px;
             text-align: right;
@@ -516,12 +509,6 @@
             text-align: right;
         }
 
-        .map-section p, .faq-section p {
-            color: var(--text-muted);
-            font-size: 16px;
-        }
-
-        /* Lazy Map Styles */
         .map-shell {
             width: 100%;
             min-height: 430px;
@@ -661,7 +648,6 @@
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
 
-    <!-- Unified Main Header to match Homepage -->
     <header class="main-header">
         <h1>HABIB CLEAN</h1>
         <p>تنفيذ منظم للعقارات الكبيرة فقط، بخصوصية كاملة ونتيجة تليق بالفيلات والقصور.</p>
@@ -699,7 +685,8 @@
             <div class="hero-point">✔ واتساب واتصال مباشر طوال اليوم</div>
         </div>
     </section>
-        <main>
+
+    <main>
         <section class="top-cta-box">
             <h3>اختر أسرع طريقة للتواصل</h3>
             <p>
@@ -789,7 +776,7 @@
             </section>
         </div>
 
-        <!-- Lazy Load Map Section for 100% Speed -->
+        <!-- Lazy Load Map Section -->
         <section class="map-section">
             <h2>📍 موقعنا</h2>
             <p>
@@ -860,13 +847,11 @@
     </div>
 
     <script>
-        // دالة للحصول على معلمات الرابط
         function getParam(paramName) {
             var url = new URL(window.location.href);
             return url.searchParams.get(paramName);
         }
 
-        // دالة تحميل خريطة جوجل الكسولة
         function loadGoogleMap() {
             var iframe = document.getElementById("lazy-map");
             var placeholder = document.getElementById("map-placeholder");
@@ -882,7 +867,6 @@
             }
         }
 
-        // إعداد مراقب التمرير (Intersection Observer) للخريطة
         function setupLazyMap() {
             var mapShell = document.getElementById("map-shell");
             var loadMapBtn = document.getElementById("load-map-btn");
@@ -909,14 +893,12 @@
             }
         }
 
-        // تطبيق الأكواد عند اكتمال تحميل DOM
         document.addEventListener("DOMContentLoaded", function () {
             setupLazyMap();
 
             try {
                 var gclid = getParam("gclid");
 
-                // الاحتفاظ بـ gclid في sessionStorage
                 if (gclid) {
                     sessionStorage.setItem("gclid_val", gclid);
                 } else {
@@ -932,13 +914,11 @@
                 var queryParams = gclid ? "?gclid=" + encodeURIComponent(gclid) : "";
                 var baseUrl = window.location.origin;
 
-                // تمرير المعلمة لأزرار الاتصال
                 var callButtons = document.querySelectorAll('a[href*="call-thanks.html"]');
                 callButtons.forEach(function (btn) {
                     btn.href = baseUrl + "/call-thanks.html" + queryParams;
                 });
 
-                // تمرير المعلمة لأزرار الواتساب
                 var whatsappButtons = document.querySelectorAll('a[href*="thankyou-whatsapp.html"]');
                 whatsappButtons.forEach(function (btn) {
                     btn.href = baseUrl + "/thankyou-whatsapp.html" + queryParams;
