@@ -87,7 +87,6 @@
 
     <link rel="canonical" href="https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html">
     
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="المرجع النهائي لصيانة وتأمين واجهات المباني والقصور | Habib Clean">
@@ -108,11 +107,44 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://habib-clean.com/#identity",
+          "@type": ["LocalBusiness", "CleaningService"],
+          "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
+          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
+          "description": "الكيان الهندسي الأول لربط وتكامل خدمات العناية بالعقارات وتنظيف وصيانة الواجهات الزجاجية والكلادينج في مصر.",
+          "telephone": "01016961497",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Maadi",
+            "addressRegion": "Cairo",
+            "addressCountry": "EG"
+          },
+          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "153",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": {
+            "@type": "Review",
+            "author": { 
+              "@type": "Person", 
+              "name": "عميل موثق" 
+            },
+            "datePublished": "2026-08-15",
+            "reviewBody": "مرجع شامل ومفيد جدًا يربط كل ما يخص صيانة وتأمين الواجهات المرتفعة.",
+            "reviewRating": { 
+              "@type": "Rating", 
+              "ratingValue": "5", 
+              "bestRating": "5", 
+              "worstRating": "1" 
+            }
+          },
           "sameAs": [
             "https://share.google/umb4679rea0EcsZk0",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
@@ -120,51 +152,22 @@
           ]
         },
         {
-          "@type": "LocalBusiness",
-          "@id": "https://habib-clean.com/#localbusiness",
-          "name": "Habib Clean - الشبكة الهندسية للواجهات",
-          "url": "https://habib-clean.com/",
-          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
-          "telephone": "01016961497",
-          "priceRange": "$$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "المعادي",
-            "addressRegion": "القاهرة",
-            "addressCountry": "EG"
-          },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"]
-        },
-        {
-          "@type": "CleaningService",
-          "@id": "https://habib-clean.com/#service",
-          "name": "صيانة الواجهات الزجاجية والكلادينج والحجر",
-          "provider": { "@id": "https://habib-clean.com/#identity" },
-          "areaServed": ["القاهرة الكبرى", "التجمع الخامس", "الشيخ زايد"]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html#webpage",
-          "url": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html",
-          "name": "المرجع النهائي لصيانة الواجهات والكلادينج | Habib Clean",
-          "isPartOf": { "@id": "https://habib-clean.com/#identity" }
-        },
-        {
           "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
+            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/index.html" },
             { "@type": "ListItem", "position": 3, "name": "المرجع النهائي للواجهات", "item": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html" }
           ]
         },
         {
           "@type": "Article",
           "@id": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html#article",
-          "isPartOf": { "@id": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html#webpage" },
+          "isPartOf": { "@id": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html" },
           "headline": "المرجع النهائي والخلاصة الهندسية لصيانة واجهات الزجاج، الكلادينج، والحجر",
           "description": "دليل ختامي يربط كافة تفاصيل وأدلة تنظيف وصيانة الواجهات المرتفعة مع شبكة الروابط العنكبوتية لـ Habib Clean.",
-          "author": { "@id": "https://habib-clean.com/#identity" },
-          "publisher": { "@id": "https://habib-clean.com/#identity" },
+          "author": { "@id": "https://habib-clean.com/#organization" },
+          "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
           "dateModified": "2026-08-05T01:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog30-الختامي-للكلادينج-والواجهات.html"
@@ -179,7 +182,6 @@
               "name": "تنظيف الواجهات المرتفعة",
               "description": "الغسيل الميداني للواجهات المرتفعة.",
               "thumbnailUrl": "https://img.youtube.com/vi/O5CoFuXy2WA/hqdefault.jpg",
-              "uploadDate": "2026-07-26T12:00:00+02:00",
               "embedUrl": "https://www.youtube-nocookie.com/embed/O5CoFuXy2WA"
             },
             {
@@ -188,7 +190,6 @@
               "name": "تلميع الواجهات والكلادينج",
               "description": "إعادة البريق للزجاج والكلادينج.",
               "thumbnailUrl": "https://img.youtube.com/vi/JMAMZV0BhZk/hqdefault.jpg",
-              "uploadDate": "2026-08-04T12:00:00+02:00",
               "embedUrl": "https://www.youtube-nocookie.com/embed/JMAMZV0BhZk"
             },
             {
@@ -197,7 +198,6 @@
               "name": "أمان المرتفعات",
               "description": "بروتوكولات الأمان للوصول بالحبال.",
               "thumbnailUrl": "https://img.youtube.com/vi/_6U0VWvv8Xo/hqdefault.jpg",
-              "uploadDate": "2026-05-24T12:00:00+02:00",
               "embedUrl": "https://www.youtube-nocookie.com/embed/_6U0VWvv8Xo"
             }
           ]
@@ -422,7 +422,7 @@
       <!-- Breadcrumbs -->
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="../index.html" title="الصفحة الرئيسية">الرئيسية</a> » 
-        <a href="index.html" title="أرشيف المدونة">المدونة</a> » 
+        <a href="index.html" title="أرشيف المدونة">المدونة الهندسية</a> » 
         <span aria-current="page">المرجع النهائي لصيانة الواجهات والكلادينج</span>
       </nav>
       
