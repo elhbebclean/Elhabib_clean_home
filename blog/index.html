@@ -96,28 +96,6 @@
             "contactType": "VIP Customer Support",
             "areaServed": "EG",
             "availableLanguage": ["Arabic", "English"]
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "reviewCount": "153",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": {
-            "@type": "Review",
-            "author": { 
-              "@type": "Person", 
-              "name": "عميل موثق" 
-            },
-            "datePublished": "2026-08-15",
-            "reviewBody": "موسوعة قيمة جداً وخبرة هندسية واضحة في مجال التنظيف وإدارة العقارات.",
-            "reviewRating": { 
-              "@type": "Rating", 
-              "ratingValue": "5", 
-              "bestRating": "5", 
-              "worstRating": "1" 
-            }
           }
         },
         {
@@ -200,6 +178,7 @@
         },
         {
           "@type": "VideoObject",
+          "@id": "https://habib-clean.com/blog/index.html#vid1",
           "name": "جودة التنفيذ والتسليم | Habib Clean",
           "description": "معايير الجودة الفندقية في تسليم الفيلات والقصور.",
           "thumbnailUrl": "https://img.youtube.com/vi/vLGKsoqvcMY/hqdefault.jpg",
@@ -208,6 +187,7 @@
         },
         {
           "@type": "VideoObject",
+          "@id": "https://habib-clean.com/blog/index.html#vid2",
           "name": "العناية المعمارية الفندقية",
           "description": "النظافة الشاملة والتعقيم بأعلى المعايير العالمية.",
           "thumbnailUrl": "https://img.youtube.com/vi/_6U0VWvv8Xo/hqdefault.jpg",
@@ -252,11 +232,18 @@
         .header-money-nav a:hover { background: var(--gold-accent); color: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 5px 15px var(--gold-glow);}
 
         /* Live AI Search */
-        .search-container { max-width: 750px; margin: -30px auto 40px; position: relative; z-index: 10; padding: 0 20px; }
+        .search-container { max-width: 750px; margin: -30px auto 25px; position: relative; z-index: 10; padding: 0 20px; }
         .search-container input { width: 100%; padding: 20px 55px 20px 25px; font-size: 1.1rem; font-family: 'Cairo', sans-serif; border: 2px solid var(--gold-accent); border-radius: 50px; outline: none; box-shadow: 0 15px 40px rgba(0,0,0,0.15); background-color: var(--white); transition: box-shadow 0.3s, transform 0.3s;}
         .search-container input:focus { box-shadow: 0 20px 50px rgba(212,175,55,0.25); transform: translateY(-2px);}
         .search-icon { position: absolute; right: 45px; top: 50%; transform: translateY(-50%); font-size: 1.4rem; pointer-events: none;}
         
+        /* Intent-Based Keyword Gateway (بوابة البحث السريع والكلمات الشائعة) */
+        .intent-gateway { max-width: 1000px; margin: 0 auto 35px; padding: 0 20px; text-align: center; }
+        .intent-gateway p { font-size: 0.9rem; font-weight: 800; color: var(--text-muted); margin-bottom: 10px; }
+        .intent-tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .intent-tag { background: var(--white); color: var(--primary-dark); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-decoration: none; border: 1px solid #cbd5e1; transition: 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .intent-tag:hover { background: var(--gold-accent); color: var(--primary-dark); border-color: var(--gold-accent); transform: translateY(-2px); }
+
         /* Quick Nav Tags */
         .quick-nav { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 50px; padding: 0 20px; }
         .quick-nav a { background: var(--white); color: var(--text-dark); padding: 8px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 800; text-decoration: none; border: 1px solid #e2e8f0; transition: 0.2s; white-space: nowrap; box-shadow: 0 2px 5px rgba(0,0,0,0.02);}
@@ -370,6 +357,26 @@
     <div class="search-container">
         <input type="text" id="liveSearch" placeholder="اسأل الذكاء الخاص بنا (مثال: التجمع، زايد، ميفيدا، هايد بارك، رخام)..." aria-label="بحث تفاعلي في المقالات">
         <span class="search-icon">🔍</span>
+    </div>
+
+    <!-- Intent-Based Keyword Gateway (بوابة البحث السريع والكلمات الشائعة المستخرجة من الإعلانات) -->
+    <div class="intent-gateway">
+        <p>الكلمات والعبارات الأكثر طلباً للبحث السريع:</p>
+        <div class="intent-tags">
+            <a href="blog1-تنظيف-بعد-التشطيب.html" class="intent-tag">شركة تنظيف بعد التشطيب</a>
+            <a href="blog41-best-home-cleaning-services-cairo.html" class="intent-tag">أفضل شركات تنظيف منازل بالقاهرة</a>
+            <a href="blog68-5th-settlement-beit-el-watan-cleaning.html" class="intent-tag">شركات تنظيف منازل بالتجمع الخامس</a>
+            <a href="blog66-october-zayed-vip-cleaning-services.html" class="intent-tag">شركة تنظيف منازل بالشيخ زايد</a>
+            <a href="blog65-maadi-degla-sarayat-vip-cleaning.html" class="intent-tag">إدارة عقارات المعادي</a>
+            <a href="blog45-luxury-upholstery-rug-cleaning-cairo.html" class="intent-tag">تنظيف السجاد على الناشف</a>
+            <a href="blog2-الفرق-بين-التنظيف-العادي-والعميق.html" class="intent-tag">تنظيف الشقق والمنازل</a>
+            <a href="blog44-expat-move-in-deep-cleaning-cairo.html" class="intent-tag">Cleaning Services Cairo</a>
+            <a href="../habib-marble-master.html" class="intent-tag">جلي وتلميع الرخام VIP</a>
+            <a href="../glass-facade-cleaning.html" class="intent-tag">تنظيف الواجهات الزجاجية</a>
+            <a href="../property-management-egypt.html" class="intent-tag">إدارة الشقق الفندقية Airbnb</a>
+            <a href="blog74-madinaty-smart-compound-cleaning.html" class="intent-tag">شركة تنظيف منازل بمدينتي</a>
+            <a href="blog72-nasr-city-makram-ebeid-fast-cleaning.html" class="intent-tag">شركات تنظيف منازل بمدينة نصر</a>
+        </div>
     </div>
 
     <!-- Rapid Navigation -->
