@@ -5,7 +5,7 @@
 <!-- 1. الصفحة الرئيسية (الأولوية القصوى رقم 1) -->
 <url>
   <loc>https://habib-clean.com/</loc>
-  <lastmod>2026-09-20</lastmod>
+  <lastmod>2026-09-25</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.0</priority>
   <video:video>
@@ -27,7 +27,7 @@
 <!-- 3. الدليل الشامل لتنظيف ما بعد التشطيب (الرابط المفقود - تم إضافته) -->
 <url>
   <loc>https://habib-clean.com/blog/ultimate-guide-post-construction-cleaning-egypt.html</loc>
-  <lastmod>2026-09-20</lastmod>
+  <lastmod>2026-09-25</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.98</priority>
 </url>
@@ -79,7 +79,7 @@
 
 <url>
   <loc>https://habib-clean.com/blog/index.html</loc>
-  <lastmod>2026-09-20</lastmod>
+  <lastmod>2026-09-25</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.95</priority>
 </url>
@@ -142,6 +142,13 @@
 </url>
 
 <!-- 9. بقية المقالات التي تم تحديثها مؤخراً لتعزيز الصعود للمركز 3 -->
+<url>
+  <loc>https://habib-clean.com/blog/normal-vs-deep-cleaning.html</loc>
+  <lastmod>2026-09-25</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
 <url>
   <loc>https://habib-clean.com/blog/blog41-best-home-cleaning-services-cairo.html</loc>
   <lastmod>2026-09-20</lastmod>
