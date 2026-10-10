@@ -1,137 +1,45 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event:'gtm.js'
-            });
-            var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),
-            dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '3076333772698182');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
-    <!-- Favicon -->
+    <!-- ================== CORE META & IDENTITY ================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#111111">
     <link rel="icon" href="https://habib-clean.com/favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="https://habib-clean.com/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#111111">
     
-    <!-- DNS Prefetch & Preconnect (المرجع الفتاك) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- ================== GOD-TIER RESOURCE HINTS (V-MAX Speed) ================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
-    <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://img.youtube.com">
 
-    <!-- Preload Fonts -->
+    <!-- Asynchronous Font Loading -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap">
 
-    <!-- Delayed GTM & Meta Pixel for Lightning Speed (المرجع الفتاك) -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var trackingLoaded = false;
-        function loadTracking() {
-          if (trackingLoaded) return;
-          trackingLoaded = true;
-          
-          // 1. Load GTM
-          (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-
-          // 2. Load Facebook Pixel
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3076333772698182');
-          fbq('track', 'PageView');
-        }
-
-        // Deferred via requestIdleCallback for INP optimization
-        function scheduleTracking() {
-          if (trackingLoaded) return;
-          if (window.requestIdleCallback) {
-            window.requestIdleCallback(loadTracking, { timeout: 2000 });
-          } else {
-            setTimeout(loadTracking, 200);
-          }
-        }
-
-        // Load on interaction for immediate tracking
-        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
-          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
-        });
-
-        // Delayed by 7 seconds to completely bypass Lighthouse scanners
-        setTimeout(scheduleTracking, 7000);
-      });
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
-    </noscript>
-
-    <!-- SEO Title & Meta Description -->
-    <title>الطريقة الاحترافية لجلي وتلميع الرخام بالألماس | Elhabib Clean</title>
-    <meta name="description" content="اكتشف سر تحويل الرخام الباهت إلى مرآة زجاجية خالية من الفواصل. دليلك الشامل لخطوات جلي وتلميع الرخام بأقراص الألماس الكريستالي مع خبراء Elhabib Clean.">
-    <meta name="keywords" content="جلي الرخام, تلميع الرخام بالألماس, تلميع كريستال, تسوية الرخام, تنظيف بعد التشطيب, Elhabib Clean, شركة جلي رخام, القاهرة, التجمع الخامس">
+    <!-- ================== AI & SEO DOMINATION META TAGS ================== -->
+    <title>الطريقة الاحترافية لجلي وتلميع الرخام بالألماس | Habib Clean</title>
+    <meta name="description" content="دليلك الشامل لخطوات جلي وتلميع الرخام بالألماس والكريستال. إزالة بقع الأسمنت، تسوية الفواصل، واستعادة اللمعان الفندقي مع أفضل شركة جلي رخام في مصر.">
+    <meta name="keywords" content="جلي الرخام, تلميع الرخام بالألماس, تلميع كريستال, تسوية الرخام, شركة جلي رخام, اسعار جلي الرخام, تنظيف بعد التشطيب, افضل شركة تنظيف منازل, التجمع الخامس, الشيخ زايد, Habib Clean">
+    <meta name="author" content="محمود السيد - Habib Clean">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html">
     
+    <meta name="geo.region" content="EG-C">
+    <meta name="geo.placename" content="Cairo">
+    <meta name="geo.position" content="29.9602;31.2769">
 
-    <!-- Open Graph / Facebook -->
+    <link rel="canonical" href="https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html">
+
+    <!-- Open Graph / Social -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="كيف تحول رخام فيلتك إلى مرآة زجاجية؟">
-    <meta property="og:description" content="أسرار جلي الرخام بأقراص الألماس والتلميع الكريستالي لإخفاء الفواصل والخدوش تماماً.">
-    <!-- الصورة الرسمية بالمرجع الفتاك -->
-    <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
     <meta property="og:url" content="https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html">
-    <meta property="og:site_name" content="Elhabib Clean">
+    <meta property="og:title" content="الطريقة الهندسية لجلي الرخام وتحويله لمرآة | Habib Clean">
+    <meta property="og:description" content="أسرار جلي الرخام بأقراص الألماس والتلميع الكريستالي لإخفاء الفواصل والخدوش تماماً.">
+    <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
+    <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="الطريقة الاحترافية لجلي الرخام بالألماس">
-    <meta name="twitter:description" content="لا تستخدم الشمع لتلميع الرخام! تعرف على الطريقة الميكانيكية الصحيحة لحماية أرضياتك.">
-
-    <!-- Advanced Combined God-Tier Schema (CLEANED FROM SELF-SERVING REVIEWS) -->
+    <!-- Advanced Combined God-Tier Schema (CLEANED FROM TRACKING & ENHANCED WITH HOW-TO / VIDEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -150,33 +58,46 @@
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
           },
-          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "6th of October"],
-          "sameAs": [
-            "https://share.google/umb4679rea0EcsZk0",
-            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
-            "https://www.youtube.com/@Elhbeb"
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html#breadcrumb",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "جلي وتلميع الرخام بالألماس", "item": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html" }
-          ]
+          "areaServed": ["Cairo", "Maadi", "New Cairo", "Sheikh Zayed City", "6th of October"]
         },
         {
           "@type": "Article",
           "@id": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html#article",
           "isPartOf": { "@id": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html" },
-          "headline": "الطريقة الاحترافية لجلي وتلميع الرخام بالألماس بعد التشطيب",
-          "description": "دليلك الهندسي الشامل لخطوات تحويل الرخام الباهت إلى مرآة لامعة خالية من الفواصل باستخدام أقراص الألماس مع Elhabib Clean.",
-          "author": { "@id": "https://habib-clean.com/#organization" },
+          "headline": "الطريقة الهندسية لجلي وتلميع الرخام بالألماس بعد التشطيب",
+          "description": "دليلك الهندسي الشامل لخطوات تحويل الرخام الباهت إلى مرآة لامعة خالية من الفواصل باستخدام أقراص الألماس.",
+          "author": { "@type": "Person", "name": "محمود السيد" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
-          "dateModified": "2026-08-04T12:00:00+02:00",
+          "dateModified": "2026-10-10T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html"
+        },
+        {
+          "@type": "HowTo",
+          "name": "كيفية جلي وتلميع الرخام بالألماس للحصول على تأثير المرآة",
+          "description": "نظام من 4 مراحل هندسية لمعالجة الرخام وإزالة الخدوش وتلميعه بالكريستال.",
+          "step": [
+            { "@type": "HowToStep", "name": "التسوية وإزالة الفوارق", "text": "استخدام أقراص ألماس خشنة لتسوية ألواح الرخام وجعلها بمستوى واحد تماماً." },
+            { "@type": "HowToStep", "name": "التنعيم التدريجي", "text": "الصنفرة باستخدام أقراص ألماس متدرجة النعومة لإزالة الخدوش وغلق مسام الحجر." },
+            { "@type": "HowToStep", "name": "التلميع الكريستالي", "text": "التفاعل الحراري والميكانيكي باستخدام مسحوق التلميع الإيطالي لتشكيل طبقة زجاجية صلبة." },
+            { "@type": "HowToStep", "name": "العزل الحراري والمائي", "text": "تطبيق مادة عازلة (Sealer) لمنع تشرب السوائل وحماية اللمعان لسنوات." }
+          ]
+        },
+        {
+          "@type": "VideoObject",
+          "name": "جودة الفنادق: جلي وتلميع الرخام الإيبوكسي",
+          "description": "عملية جلي وتلميع الرخام بأقراص الألماس ومعالجة الفواصل.",
+          "thumbnailUrl": "https://img.youtube.com/vi/L2m468B-96c/hqdefault.jpg",
+          "uploadDate": "2026-03-10T08:00:00+02:00",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/L2m468B-96c"
+        },
+        {
+          "@type": "VideoObject",
+          "name": "الاحترافية: تلميع إيطالي بالألماس",
+          "description": "كيفية استعادة بريق الرخام الطبيعي باستخدام مساحيق التلميع الإيطالية.",
+          "thumbnailUrl": "https://img.youtube.com/vi/kYw1kfDoQO4/hqdefault.jpg",
+          "uploadDate": "2026-03-10T08:00:00+02:00",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/kYw1kfDoQO4"
         },
         {
           "@type": "FAQPage",
@@ -184,19 +105,22 @@
             {
               "@type": "Question",
               "name": "ما هو الفرق بين التلميع بالشمع وجلي الألماس؟",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "التلميع بالشمع هو طبقة سطحية مؤقتة تصفرّ مع الوقت وتلتقط الأتربة. أما جلي الألماس فهو عملية ميكانيكية تزيل الطبقة التالفة من الرخام نفسه وتصقله ليعكس الضوء طبيعياً كأنه زجاج."
-              }
+              "acceptedAnswer": { "@type": "Answer", "text": "التلميع بالشمع هو طبقة سطحية مؤقتة تصفرّ مع الوقت، أما جلي الألماس فهو عملية ميكانيكية تزيل الطبقة التالفة من الرخام وتصقله ليعكس الضوء كأنه زجاج." }
             },
             {
               "@type": "Question",
-              "name": "هل يختفي شكل فواصل الرخام بعد الجلي؟",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "نعم، في مرحلة التسوية (Lippage Removal) نقوم بمساواة ألواح الرخام ببعضها لتصبح بمستوى واحد تماماً، مما يخفي الشعور بالفواصل ويجعل الأرضية تبدو كقطعة واحدة متصلة."
-              }
+              "name": "كيف يتم تحديد أسعار جلي الرخام في مصر؟",
+              "acceptedAnswer": { "@type": "Answer", "text": "يحدد السعر بناءً على مساحة الأرضية، نوع الرخام وحالته من حيث الخدوش، وما إذا كان يحتاج إلى تعبئة فواصل (جولي) أو تسوية كاملة." }
             }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
+            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/blog80-cairo-greater-new-cairo-master-hub.html" },
+            { "@type": "ListItem", "position": 3, "name": "جلي وتلميع الرخام بالألماس", "item": "https://habib-clean.com/blog/blog13-جلي-وتلميع-الرخام-بالألماس.html" }
           ]
         }
       ]
@@ -277,6 +201,14 @@
         
         .featured-image { width: 100%; height: auto; border-radius: 10px; margin-bottom: 30px; border: 1px solid #eee; box-shadow: 0 5px 20px rgba(0,0,0,0.05);}
         
+        /* Snippet Bait (SEO Optimized) */
+        .snippet-bait { background: #f4f8fb; border-right: 4px solid var(--diamond-blue); padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .snippet-bait strong { color: var(--diamond-blue); display: block; font-size: 1.15rem; margin-bottom: 8px; }
+
+        /* Links inside Main */
+        main a.seo-link { color: var(--gold-accent); font-weight: bold; text-decoration: none; border-bottom: 1px dashed var(--gold-accent); transition: 0.3s; }
+        main a.seo-link:hover { color: var(--diamond-blue); border-bottom-color: var(--diamond-blue); }
+
         /* Table of Contents */
         .toc { background: #f9f9f9; border: 1px solid #eee; border-right: 4px solid var(--gold-accent); padding: 20px; border-radius: 8px; margin: 30px 0; }
         .toc h3 { margin-top: 0; color: var(--primary-dark); font-size: 19px; font-weight: 800;}
@@ -356,34 +288,36 @@
     </style>
 </head>
 <body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
     <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
-        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة</a> <span>❯</span> جلي وتلميع الرخام بالألماس
+        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> جلي وتلميع الرخام بالألماس
     </nav>
 
     <header class="article-header">
-        <h1>Elhabib Clean</h1>
+        <h1>Habib Clean</h1>
         <p>خبراء معالجة وجلي الأرضيات الرخامية في مصر</p>
     </header>
 
     <main>
         <article>
-            <h1 class="post-title">الطريقة الاحترافية لجلي وتلميع الرخام بالألماس بعد التشطيب: ليعود كالمرآة</h1>
+            <h1 class="post-title">الطريقة الهندسية لجلي وتلميع الرخام بالألماس بعد التشطيب: ليعود كالمرآة</h1>
             
-            <!-- الصورة الرسمية بالمرجع الفتاك -->
-            <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="جلي وتلميع الرخام بالألماس Elhabib Clean" class="featured-image" loading="lazy" decoding="async">
+            <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="جلي وتلميع الرخام بالألماس Habib Clean" class="featured-image" loading="lazy" decoding="async">
             
-            <p>بعد انتهاء أعمال التشطيبات، غالباً ما يفقد الرخام الطبيعي بريقه المذهل. الخدوش الناتجة عن سحب المعدات، بقع الأسمنت، والتربة الجيرية، جميعها تطمس جمال الحجر. محاولة تنظيف هذا الرخام بالماء والمنظفات التقليدية لن تجدي نفعاً، بل قد تزيد الطين بلة.</p>
-            
-            <p>الحل الجذري والهندسي الوحيد هو <strong>"جلي الرخام بالألماس"</strong>. في <strong>Elhabib Clean</strong>، نكشف لك خطوة بخطوة كيف نحول أرضيات فيلتك الباهتة إلى لوحة فنية لامعة كالمرآة تعكس أضواء المكان.</p>
+            <!-- Snippet Bait (Featured Snippet Catcher) -->
+            <div class="snippet-bait">
+                <strong>ما هو جلي الرخام بالألماس؟</strong>
+                هو عملية هندسية وميكانيكية تعتمد على كشط الطبقة العلوية التالفة من الرخام باستخدام أقراص الألماس المتدرجة النعومة، بهدف إزالة بقع الأسمنت، الخدوش، وتسوية الفواصل (Lippage Removal). تنتهي العملية بالتلميع الكريستالي الذي يسد مسام الحجر ويعيد لمعانه الزجاجي الطبيعي ليدوم لسنوات.
+            </div>
 
-            <!-- YouTube Facade Matrix (الفيديوهات المخصصة للرخام) -->
+            <p>بعد انتهاء أعمال المقاولات، غالباً ما يفقد الرخام الطبيعي بريقه المذهل. الخدوش الناتجة عن سحب المعدات، بقع الأسمنت، والتربة الجيرية، جميعها تطمس جمال الحجر. محاولة تنظيف هذا الرخام بالماء أو بالاستعانة بعمالة غير مؤهلة قد تزيد الطين بلة. لضمان حماية استثمارك، يجب الاعتماد على <a href="../index.html" class="seo-link">أفضل شركة تنظيف منازل بعد التشطيب</a> تمتلك معدات متخصصة.</p>
+            
+            <p>الحل الجذري والهندسي الوحيد هو <strong>"جلي وتلميع الرخام بالألماس"</strong>. في صفحة <a href="../habib-marble-master.html" class="seo-link">خدمات الرخام VIP</a> الخاصة بنا، نكشف لك خطوة بخطوة كيف نحول أرضيات فيلتك في التجمع الخامس أو الشيخ زايد إلى لوحة فنية لامعة كالمرآة تعكس أضواء المكان.</p>
+
+            <!-- YouTube Facade Matrix -->
             <div class="video-matrix">
                 <div>
                    <div class="yt-facade portrait" data-vid="L2m468B-96c" aria-label="تشغيل فيديو جلي الرخام والإيبوكسي">
@@ -401,158 +335,4 @@
                 </div>
                 <div>
                    <div class="yt-facade portrait" data-vid="kSs2-YXvTlE" aria-label="تشغيل فيديو إبداع الرخام">
-                      <img src="https://img.youtube.com/vi/kSs2-YXvTlE/hqdefault.jpg" alt="إبداع تنفيذ الرخام" loading="lazy" decoding="async">
-                      <div class="play-btn"></div>
-                   </div>
-                   <p class="video-caption">🎥 التنفيذ: إبداع وهندسة الرخام</p>
-                </div>
-            </div>
-
-            <!-- Expert Secret Box -->
-            <div class="expert-secret">
-                <h3>الفرق بين "التلميع السطحي" و "الجلي الميكانيكي"</h3>
-                <p>الشركات غير المحترفة تستخدم <strong>(الشمع - Wax)</strong> ليعطي لمعة وهمية تختفي بعد أسبوع وتتحول للون الأصفر الجاذب للأتربة. بينما في Elhabib Clean، نستخدم <strong>أقراص الألماس الصناعي</strong> لكشط الميكرونات التالفة من الرخام نفسه، وصقله ليعكس الضوء طبيعياً بدون أي مواد كيميائية مغطية.</p>
-            </div>
-
-            <!-- Table of Contents -->
-            <nav class="toc">
-                <h3>مراحل تحويل الرخام إلى مرآة (تأثير المرآة):</h3>
-                <ul>
-                    <li><a href="#step1">المرحلة الأولى: التسوية وإزالة الفوارق (Lippage)</a></li>
-                    <li><a href="#step2">المرحلة الثانية: التنعيم التدريجي (Honing)</a></li>
-                    <li><a href="#step3">المرحلة الثالثة: التلميع الكريستالي (Crystallization)</a></li>
-                    <li><a href="#step4">المرحلة الرابعة: العزل الحراري والمائي (Sealing)</a></li>
-                </ul>
-            </nav>
-
-            <h2 id="step1">المرحلة الأولى: التسوية وإزالة الفوارق</h2>
-            <div class="step-box">
-                <div class="step-number">1</div>
-                <p>بعد تركيب الرخام، يكون هناك فوارق ملليمترية بين الألواح (Lippage). باستخدام ماكينات الجلي الثقيلة المزودة بأقراص ألماس خشنة (Grits 30-50)، نقوم بتسوية السطح بالكامل. <strong>النتيجة؟</strong> الأرضية تصبح مستوى واحداً تماماً، وتختفي البروزات التي تتراكم فيها الأوساخ، لتبدو الأرضية كقطعة واحدة متصلة.</p>
-            </div>
-
-            <h2 id="step2">المرحلة الثانية: التنعيم التدريجي لإزالة الخدوش</h2>
-            <div class="step-box">
-                <div class="step-number">2</div>
-                <p>بعد التسوية، يكون الرخام خشناً. نبدأ هنا عملية "الصنفرة الناعمة" باستخدام أقراص ألماس متدرجة النعومة (تبدأ من 100 وتصل إلى 3000). هذه الخطوة أشبه بسحر يمحو كافة الخدوش العميقة والسطحية، ويغلق مسام الحجر تماماً استعداداً للتلميع.</p>
-            </div>
-
-            <h2 id="step3">المرحلة الثالثة: التلميع الكريستالي الفاخر</h2>
-            <div class="step-box">
-                <div class="step-number">3</div>
-                <p>هنا يحدث التفاعل الحقيقي. باستخدام مسحوق التلميع الإيطالي الفاخر (Polishing Powder) الذي يتفاعل حرارياً وميكانيكياً مع الكالسيوم الموجود في الرخام، تتشكل طبقة زجاجية صلبة ولامعة جداً. هذا ما نطلق عليه في Elhabib Clean <strong>(تأثير المرآة)</strong>.</p>
-            </div>
-
-            <h2 id="step4">المرحلة الرابعة: العزل لحماية تدوم طويلاً</h2>
-            <div class="step-box">
-                <div class="step-number">4</div>
-                <p>الرخام مادة مسامية يمكن أن تمتص السوائل الملونة (كالقهوة أو العصائر). الخطوة الأخيرة والأهم هي وضع طبقة "عازل - Sealer" غير مرئية تخترق مسام الرخام وتمنع تشربه لأي سوائل مستقبلية، مما يحافظ على اللمعان لسنوات.</p>
-            </div>
-
-            <!-- OMNI-SPIDERWEB MEGA SITEMAP (الشبكة العنكبوتية للكلمات الرئيسية المضافة حديثاً) -->
-            <section class="omni-spiderweb">
-                <div class="omni-header">
-                    <h3>🌐 شبكة خدمات Habib Clean الهندسية</h3>
-                    <p style="font-size: 15px; color: #666; margin: 0;">أبرز خدماتنا وتغطيتنا الجغرافية التي يبحث عنها عملاؤنا المميزون</p>
-                </div>
-                <div class="omni-grid">
-                    <a href="blog1-تنظيف-بعد-التشطيب.html">شركة تنظيف بعد التشطيب</a>
-                    <a href="blog41-best-home-cleaning-services-cairo.html">أفضل شركات تنظيف منازل بالقاهرة</a>
-                    <a href="blog68-5th-settlement-beit-el-watan-cleaning.html">شركات تنظيف منازل في التجمع الخامس</a>
-                    <a href="blog66-october-zayed-vip-cleaning-services.html">شركة تنظيف منازل في الشيخ زايد</a>
-                    <a href="blog65-maadi-degla-sarayat-vip-cleaning.html">إدارة عقارات المعادي (Habib Clean)</a>
-                    <a href="blog45-luxury-upholstery-rug-cleaning-cairo.html">تنظيف السجاد على الناشف</a>
-                    <a href="blog2-الفرق-بين-التنظيف-العادي-والعميق.html">تنظيف شقق ومنازل (التنظيف العميق)</a>
-                    <a href="blog44-expat-move-in-deep-cleaning-cairo.html">Cleaning Services Cairo</a>
-                    <a href="../glass-facade-cleaning.html">تنظيف الواجهات الزجاجية والكلادينج</a>
-                    <a href="../property-management-egypt.html">إدارة الشقق الفندقية (Airbnb)</a>
-                    <a href="blog74-madinaty-smart-compound-cleaning.html">شركة تنظيف منازل في مدينتي</a>
-                    <a href="blog72-nasr-city-makram-ebeid-fast-cleaning.html">شركات تنظيف منازل بمدينة نصر</a>
-                    <a href="blog40-الموسوعة-الشاملة-لإدارة-القصور.html">الموسوعة الشاملة لإدارة القصور</a>
-                    <a href="blog80-cairo-greater-new-cairo-master-hub.html">المرجع الجغرافي للقاهرة الكبرى</a>
-                </div>
-            </section>
-
-            <!-- FAQ Section -->
-            <section class="faq-section">
-                <h2 style="border: none; margin-top: 0; padding-bottom: 15px;">الأسئلة الشائعة حول جلي الرخام</h2>
-                <div class="faq-item">
-                    <h4>متى يجب جلي الرخام بعد التشطيب؟</h4>
-                    <p>يجب جليه مباشرة بعد انتهاء كافة أعمال المقاولات والدهانات والشفط الجاف للأتربة، ليكون آخر خطوة تسبق فرش الأثاث.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>هل هذه العملية تنتج غباراً في المكان؟</h4>
-                    <p>مطلقاً! نحن في Elhabib Clean نستخدم تقنية <strong>(الجلي المائي - Wet Polishing)</strong>؛ حيث تقوم الماكينات بضخ الماء أثناء الكشط لمنع تطاير أي ذرة غبار، ثم يتم شفط المياه فوراً بماكينات الشفط المخصصة.</p>
-                </div>
-            </section>
-
-            <!-- High-Converting CTA Box -->
-            <div class="cta-box">
-                <h3>هل أنت مستعد لرؤية انعكاس صورتك على أرضية فيلتك؟</h3>
-                <p>لا تخاطر برخامك الثمين مع هواة. احصل على تقنية جلي الألماس الإيطالية الآن مع خبراء Elhabib Clean.</p>
-                <a href="../thankyou-whatsapp.html" class="btn-whatsapp">تواصل معنا لمعاينة الرخام مجاناً</a>
-            </div>
-        </article>
-    </main>
-
-    <!-- Floating Contacts -->
-    <div class="contact-container">
-        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
-        <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
-    </div>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" aria-label="العودة للأعلى" title="العودة لأعلى الصفحة">↑</button>
-
-    <footer>
-        <strong style="font-family: 'Playfair Display', serif; color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 12px; letter-spacing: 2px;">ELHABIB CLEAN</strong>
-        <p>© 2026 جميع الحقوق محفوظة لشركة Elhabib Clean | <a href="../privacy.html">سياسة الخصوصية</a></p>
-    </footer>
-
-    <!-- Scripts: Progress Bar, YouTube Facade, Scroll to Top & GCLID Tracking -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Progress Bar
-            window.addEventListener('scroll', function() {
-                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                var scrolled = (winScroll / height) * 100;
-                document.getElementById("myBar").style.width = scrolled + "%";
-            }, { passive: true });
-
-            // Scroll To Top
-            const topBtn = document.getElementById('scrollTopBtn');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) topBtn.classList.add('show');
-                else topBtn.classList.remove('show');
-            }, { passive: true });
-
-            topBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // YouTube Facade Loader (المرجع الفتاك)
-            const facades = document.querySelectorAll('.yt-facade');
-            facades.forEach(facade => {
-                facade.addEventListener('click', function() {
-                    const vid = this.getAttribute('data-vid');
-                    this.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${vid}?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>`;
-                });
-            });
-
-            // GCLID Tracking
-            const urlParams = new URLSearchParams(window.location.search);
-            const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
-            if (gclid) {
-                sessionStorage.setItem("gclid_val", gclid);
-                document.querySelectorAll('a').forEach(link => {
-                    if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
-                        const separator = link.href.includes('?') ? '&' : '?';
-                        link.href += separator + 'gclid=' + encodeURIComponent(gclid);
-                    }
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+                      <img src="https://img.youtube.com/vi/kSs2-YXvTlE/hqdefault.jpg" alt="إبداع تنفيذ الر
