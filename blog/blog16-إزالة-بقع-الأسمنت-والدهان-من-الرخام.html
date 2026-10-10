@@ -10,92 +10,40 @@
     <!-- DNS Prefetch & Preconnect (المرجع الفتاك) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
-    <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://img.youtube.com">
 
     <!-- Preload Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
 
-    <!-- Delayed GTM & Meta Pixel for Lightning Speed (المرجع الفتاك) -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var trackingLoaded = false;
-        function loadTracking() {
-          if (trackingLoaded) return;
-          trackingLoaded = true;
-          
-          // 1. Load GTM
-          (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-
-          // 2. Load Facebook Pixel
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3076333772698182');
-          fbq('track', 'PageView');
-        }
-
-        // Deferred via requestIdleCallback for INP optimization
-        function scheduleTracking() {
-          if (trackingLoaded) return;
-          if (window.requestIdleCallback) {
-            window.requestIdleCallback(loadTracking, { timeout: 2000 });
-          } else {
-            setTimeout(loadTracking, 200);
-          }
-        }
-
-        // Load on interaction for immediate tracking
-        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
-          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
-        });
-
-        // Delayed by 7 seconds to completely bypass Lighthouse scanners
-        setTimeout(scheduleTracking, 7000);
-      });
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
-    </noscript>
-
-    <!-- 1. SEO Keyword Injection -->
+    <!-- 1. SEO Keyword Injection & DOMINATION TAGS -->
     <title>إزالة بقع الأسمنت والدهانات من الرخام | Habib Clean افضل شركة تنظيف</title>
     <meta name="description" content="دليل هندسي متقدم لإزالة بقع الأسمنت والدهانات من الرخام بعد التشطيب دون حرق الحجر. اكتشف تقنيات Habib Clean، افضل شركة تنظيف بمصر.">
-    <meta name="keywords" content="إزالة الأسمنت من الرخام, إزالة الدهان من الرخام الطبيعي, تنظيف الرخام بعد التشطيب, شركة تنظيف بعد التشطيب, افضل شركة تنظيف, شركات تنظيف منازل, Habib Clean, جلي رخام">
+    <meta name="keywords" content="إزالة الأسمنت من الرخام, إزالة الدهان من الرخام الطبيعي, تنظيف الرخام بعد التشطيب, شركة تنظيف بعد التشطيب, افضل شركة تنظيف منازل, شركات تنظيف منازل, Habib Clean, جلي رخام">
+    <meta name="author" content="محمود السيد - Habib Clean">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
+    <meta name="geo.region" content="EG-C">
+    <meta name="geo.placename" content="Cairo">
+    <meta name="geo.position" content="29.9602;31.2769">
+
     <link rel="canonical" href="https://habib-clean.com/blog/blog16-إزالة-بقع-الأسمنت-والدهان-من-الرخام.html">
     
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="كيف تزيل بقع الأسمنت والدهان من الرخام دون إتلافه؟ | Habib Clean">
-    <meta property="og:description" content="أسرار مهندسي الحجر الطبيعي في التعامل مع بقايا التشطيبات والمواد الكيميائية الخطرة على الرخام من افضل شركة تنظيف.">
+    <meta property="og:description" content="أسرار مهندسي الحجر الطبيعي في التعامل مع بقايا التشطيبات والمواد الكيميائية الخطرة على الرخام.">
     <meta property="og:url" content="https://habib-clean.com/blog/blog16-إزالة-بقع-الأسمنت-والدهان-من-الرخام.html">
     <meta property="og:site_name" content="Habib Clean">
-    <!-- الصورة الرسمية بالمرجع الفتاك -->
     <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
-    
+    <meta property="og:locale" content="ar_EG">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="إزالة بقع الأسمنت والدهان من الرخام | Habib Clean">
     <meta name="twitter:description" content="لا تستخدم الأحماض الخطرة! تعرف على الطرق الهندسية الصحيحة لتنظيف الرخام بعد التشطيب.">
 
-    <!-- 2. Fixed Schema Markup (ISO 8601 Timezone Corrected + Breadcrumbs + FAQ + Video) -->
+    <!-- 2. ADVANCED AI KNOWLEDGE GRAPH (@GRAPH) WITH HOW-TO & VIDEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -115,34 +63,7 @@
             "addressRegion": "القاهرة",
             "addressCountry": "EG"
           },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi"],
-          "sameAs": [
-            "https://share.google/umb4679rea0EcsZk0",
-            "https://www.facebook.com/p/Habib-Clean-61559076547205/",
-            "https://www.youtube.com/@Elhbeb"
-          ],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "reviewCount": "153",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": {
-            "@type": "Review",
-            "author": { 
-              "@type": "Person", 
-              "name": "عميل موثق" 
-            },
-            "datePublished": "2026-08-15",
-            "reviewBody": "تم إزالة بقع الأسمنت الصعبة دون ترك أي أثر على الرخام، شكراً حبيب كلين.",
-            "reviewRating": { 
-              "@type": "Rating", 
-              "ratingValue": "5", 
-              "bestRating": "5", 
-              "worstRating": "1" 
-            }
-          }
+          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi"]
         },
         {
           "@type": "BreadcrumbList",
@@ -159,11 +80,22 @@
           "isPartOf": { "@id": "https://habib-clean.com/blog/blog16-إزالة-بقع-الأسمنت-والدهان-من-الرخام.html" },
           "headline": "كيفية إزالة بقع الأسمنت والدهانات المستعصية من الرخام الطبيعي بأمان",
           "description": "دليل هندسي متقدم لإزالة بقع الأسمنت والدهانات والسيليكون من الأرضيات الرخامية دون إتلافها مع Habib Clean افضل شركة تنظيف.",
-          "author": { "@id": "https://habib-clean.com/#organization" },
+          "author": { "@type": "Person", "name": "محمود السيد" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
-          "dateModified": "2026-08-04T12:00:00+02:00",
+          "dateModified": "2026-10-10T12:00:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog16-إزالة-بقع-الأسمنت-والدهان-من-الرخام.html"
+        },
+        {
+          "@type": "HowTo",
+          "name": "الخطوات الهندسية لإزالة الأسمنت من الرخام بأمان",
+          "description": "بروتوكول التعامل الآمن مع بقع الأسمنت دون حرق كربونات الكالسيوم.",
+          "step": [
+            { "@type": "HowToStep", "name": "الترطيب المسبق", "text": "ترطيب البقعة بمذيبات محايدة لإضعاف التماسك الأسمنتي دون تفاعل حمضي." },
+            { "@type": "HowToStep", "name": "الكشط اليدوي", "text": "استخدام شفرات بلاستيكية أو نحاسية لإزالة الكتلة الصلبة برفق." },
+            { "@type": "HowToStep", "name": "التنظيف المجهري", "text": "رفع البقايا المسحوقية بفرش ناعمة ومحاليل متعادلة." },
+            { "@type": "HowToStep", "name": "الجلي الميكانيكي", "text": "كشط الميكرونات التالفة باستخدام أقراص الألماس الكريستالي لاستعادة اللمعان." }
+          ]
         },
         {
           "@type": "VideoObject",
@@ -178,18 +110,18 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "هل يمكن استخدام ماء النار لإزالة الأسمنت من الرخام؟",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "مطلقاً! استخدام ماء النار أو الأحماض المركزة يدمر كربونات الكالسيوم في الرخام ويحدث حرقاً كيميائياً دائماً (Etching)."
-              }
-            },
-            {
-              "@type": "Question",
               "name": "كيف يتم التخلص من بقع السيليكون والمعجون على الرخام؟",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "تتم إزالة السيليكون والمعجون باستخدام مذيبات كيميائية مخصصة للأحجار الطبيعية وكاشطات بلاستيكية مرنة تمنع خدش سطح الرخام نهائياً."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "هل يمكن استخدام ماء النار لإزالة الأسمنت من الرخام؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "مطلقاً! استخدام ماء النار أو الأحماض المركزة يدمر كربونات الكالسيوم في الرخام ويحدث حرقاً كيميائياً دائماً (Etching) يفسد اللمعان كلياً."
               }
             }
           ]
@@ -265,6 +197,16 @@
             border: 1px solid #eaeaea;
         }
 
+        /* SEO Anchor Links */
+        article a.seo-anchor {
+            color: var(--gold-accent);
+            font-weight: 800;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: 0.3s;
+        }
+        article a.seo-anchor:hover { color: var(--primary-dark); background: rgba(197, 160, 89, 0.1); }
+
         h2 { 
             color: var(--primary-dark); 
             font-size: clamp(22px, 4vw, 26px); 
@@ -282,6 +224,10 @@
         li { margin-bottom: 12px; list-style: disc;}
 
         .featured-image { width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 1px solid #eee;}
+
+        /* Snippet Bait */
+        .snippet-bait { background: #fdfbf7; border-right: 5px solid var(--gold-accent); padding: 25px; margin-bottom: 35px; border-radius: 8px; font-size: 1.1rem;}
+        .snippet-bait strong { color: var(--primary-dark); font-size: 1.2rem; display: block; margin-bottom: 10px; }
 
         /* Table of Contents */
         .toc { background: #fbf8f2; border: 1px solid #eaddc5; padding: 25px; border-radius: 8px; margin: 35px 0; border-right: 4px solid var(--gold-accent);}
@@ -356,14 +302,12 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
     <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
-        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> إزالة بقع الأسمنت والدهان من الرخام
+        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> إزالة بقع الأسمنت والدهان
     </nav>
 
     <header class="article-header">
@@ -373,12 +317,17 @@
 
     <main>
         <article>
-            <!-- الصورة الرسمية بالمرجع الفتاك -->
             <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="معالجة وإزالة بقع الأسمنت والدهانات من أرضيات الرخام الفاخر بعد التشطيب" class="featured-image" loading="lazy" decoding="async">
             
-            <p>بعد انتهاء أعمال التشطيبات في الفيلات والقصور، يصبح الرخام الطبيعي هو الضحية الأولى لفضلات المقاولات. لذلك، البحث عن <strong>افضل شركة تنظيف</strong> متخصصة ليس رفاهية. تراكم بقع الأسمنت المتصلب، رذاذ الدهانات البلاستيكية والزيتية، وآثار السيليكون والمعجون تملأ الأرضيات، مما يصيب المالك بالصدمة عند رؤية عقاره الجديد.</p>
+            <!-- Snippet Bait (Featured Snippet Catcher) -->
+            <div class="snippet-bait">
+                <strong>كيف يمكن إزالة الأسمنت من الرخام؟</strong>
+                أفضل طريقة لإزالة الأسمنت من الرخام دون إتلافه هي ترطيب البقعة بمذيبات محايدة لإضعاف تماسكها، ثم الكشط اللطيف بشفرات بلاستيكية مرنة، وتجنب استخدام الأحماض تماماً (مثل ماء النار). إذا كانت البقع عميقة، يُنصح باللجوء لعملية الجلي الميكانيكي بالألماس.
+            </div>
+
+            <p>بعد انتهاء أعمال التشطيبات في الفيلات والقصور، يصبح الرخام الطبيعي هو الضحية الأولى لفضلات المقاولات. تراكم بقع الأسمنت المتصلب، رذاذ الدهانات، وآثار السيليكون تملأ الأرضيات، مما يصيب المالك بالصدمة عند رؤية عقاره الجديد.</p>
             
-            <p>الخطأ الشائع هو محاولة تنظيف هذه البقع بطرق عشوائية تهدد بدمار الحجر كلياً. في <strong>Habib Clean</strong> (أهم <strong>شركة تنظيف بعد التشطيب</strong>)، نكشف لك المعيار الهندسي السليم للتعامل مع هذه المخلفات واستعادة نقاء الرخام دون خدش أو حرق.</p>
+            <p>لضمان حماية استثمارك وتجنب دمار الحجر كلياً، يجب الاعتماد على <a href="../index.html" class="seo-anchor">أفضل شركة تنظيف منازل بعد التشطيب</a> ذات خبرة هندسية. في <strong>Habib Clean</strong>، نكشف لك المعيار السليم للتعامل مع هذه المخلفات واستعادة نقاء الرخام دون خدش أو حرق.</p>
 
             <nav class="toc">
                 <h3>محتويات الدليل التقني:</h3>
@@ -390,7 +339,7 @@
                 </ul>
             </nav>
 
-            <!-- YouTube Facade (المرجع الفتاك) -->
+            <!-- YouTube Facade -->
             <div class="yt-facade" data-vid="wJmtYfJFEFk" aria-label="تشغيل فيديو جلي الرخام بعد التشطيب">
                 <img src="https://img.youtube.com/vi/wJmtYfJFEFk/hqdefault.jpg" alt="التنظيف الفاخر وجلي الرخام" loading="lazy" decoding="async">
                 <div class="play-btn"></div>
@@ -421,18 +370,19 @@
             </div>
 
             <h2 id="pro-solution">الحل الجذري: دور الجلي الميكانيكي بالألماس</h2>
-            <p>إذا كانت البقع عميقة وتغلغلت في مسام الرخام نتيجة الإهمال، تصبح الحلول الكيميائية وحدها غير كافية. هنا يأتي دور <strong>أقراص الألماس الكريستالي</strong>؛ حيث نقوم بكشط ميكرونات معدودة من سطح الرخام لإزالة أي تشوهات أو بقع مستعصية، وإعادة السطح لحالته الأصلية تماماً وكأنه لم يُستخدم من قبل.</p>
+            <p>إذا كانت البقع عميقة وتغلغلت في مسام الرخام نتيجة الإهمال، تصبح الحلول الكيميائية وحدها غير كافية. هنا يأتي دور تقنية <a href="../habib-marble-master.html" class="seo-anchor">جلي وتلميع الرخام بالألماس</a>؛ حيث نقوم بكشط ميكرونات معدودة من سطح الرخام لإزالة أي تشوهات أو بقع مستعصية، وإعادة السطح لحالته الأصلية تماماً وكأنه لم يُستخدم من قبل.</p>
 
             <!-- OMNI-SPIDERWEB MEGA SITEMAP -->
             <section class="omni-spiderweb">
                 <div class="omni-header">
-                    <h3>🌐 شبكة المعرفة الهندسية للرخام</h3>
+                    <h3>🌐 شبكة المعرفة الهندسية للرخام والتشطيبات</h3>
                 </div>
                 <div class="omni-grid">
+                    <a href="../index.html">الصفحة الرئيسية (حجز الخدمات)</a>
                     <a href="blog13-جلي-وتلميع-الرخام-بالألماس.html">الدليل الشامل لجلي الألماس</a>
                     <a href="blog14-الفرق-بين-تلميع-الرخام-والجلي-الشامل.html">الفرق بين الجلي والتلميع</a>
                     <a href="blog15-كيف-تحافظ-على-لمعان-الرخام.html">كيف تحافظ على لمعان الرخام</a>
-                    <a href="../habib-marble-master.html">قسم العناية الكاملة بالرخام</a>
+                    <a href="../habib-marble-master.html">قسم العناية الكاملة بالرخام VIP</a>
                 </div>
             </section>
 
@@ -490,7 +440,7 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // YouTube Facade Loader (المرجع الفتاك)
+            // YouTube Facade Loader 
             const facades = document.querySelectorAll('.yt-facade');
             facades.forEach(facade => {
                 facade.addEventListener('click', function() {
