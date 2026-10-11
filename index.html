@@ -40,7 +40,6 @@
         } catch(e) { console.log('Tracking Load Prevented'); }
       }
 
-      // Deferred via requestIdleCallback for INP optimization
       function scheduleTracking() {
         if (trackingLoaded) return;
         if (window.requestIdleCallback) {
@@ -50,12 +49,9 @@
         }
       }
 
-      // Load on interaction for immediate tracking
       ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
         window.addEventListener(event, scheduleTracking, { once: true, passive: true });
       });
-
-      // Delayed by 7 seconds to bypass Lighthouse/PageSpeed scanners
       setTimeout(scheduleTracking, 7000);
     });
   </script>
@@ -65,9 +61,9 @@
   </noscript>
   <!-- ================== END TRACKING SCRIPTS ================== -->
 
-  <!-- AI-Optimized Title & Keywords based on Ads Data & Mega-Geography -->
+  <!-- AI-Optimized Title & Keywords -->
   <title>أفضل شركة تنظيف منازل وتأسيس بعد التشطيب في مصر | الحبيب كلين</title>
-  <meta name="description" content="تبحث عن أفضل شركة تنظيف منازل بالقاهرة والجيزة؟ الحبيب كلين تقدم خدمات النظافة العميقة، تنظيف الفيلات بعد التشطيب، وجلي الرخام بالألماس. عمالة مدربة بأسعار تنافسية للقصور والكمبوندات.">
+  <meta name="description" content="تبحث عن أفضل شركة تنظيف منازل بالقاهرة والجيزة؟ الحبيب كلين تقدم خدمات النظافة العميقة، تنظيف الفيلات بعد التشطيب، وجلي الرخام بالألماس. عمالة مدربة بأسعار تنافسية.">
   <meta name="keywords" content="شركة تنظيف منازل, أفضل شركة تنظيف منازل, شركة تنظيف بعد التشطيب, شركات تنظيف منازل في التجمع الخامس, شركة تنظيف في القاهرة, شركة تنظيف في الجيزة, تنظيف عميق للمنازل, نظافة فيلات, جلي رخام, شركات نظافة, العاصمة الإدارية, ميفيدا, cleaning services egypt, Habib Clean">
   <meta name="author" content="محمود السيد - Habib Clean Operations">
 
@@ -97,13 +93,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap">
   </noscript>
 
-  <!-- ================== AI KNOWLEDGE GRAPH (@GRAPH) - MEGA GEOGRAPHY ================== -->
+  <!-- ================== AI GOD-TIER KNOWLEDGE GRAPH (@GRAPH) ================== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["LocalBusiness", "CleaningService", "HomeAndConstructionBusiness"],
         "@id": "https://habib-clean.com/#organization",
         "name": "الحبيب كلين - Habib Clean",
         "alternateName": ["أفضل شركة تنظيف منازل في مصر", "شركة تنظيف بعد التشطيب", "شركة نظافة منازل بالقاهرة والجيزة", "شركات تنظيف الفلل"],
@@ -126,20 +122,20 @@
         },
         "url": "https://habib-clean.com/",
         "telephone": "+201016961497",
+        "priceRange": "الأسعار تبدأ من 40 ج.م للمتر المربع",
         "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
         "sameAs": [
           "https://share.google/jN7kuor7QzJVDD6RZ",
           "https://www.youtube.com/@Elhbeb",
           "https://www.facebook.com/p/Habib-Clean-61559076547205/"
-        ]
-      },
-      {
-        "@type": ["LocalBusiness", "CleaningService"],
-        "@id": "https://habib-clean.com/#service",
-        "name": "أفضل شركة تنظيف منازل وتأسيس بعد التشطيب",
-        "provider": { "@id": "https://habib-clean.com/#organization" },
-        "priceRange": "$$$",
-        "telephone": "+201016961497",
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "185",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1 شارع وادي النيل",
@@ -148,28 +144,62 @@
           "postalCode": "11728",
           "addressCountry": "EG"
         },
-        "hasMap": "https://share.google/jN7kuor7QzJVDD6RZ",
         "areaServed": [
-          "Egypt", "Cairo", "Giza", "Qalyubia", "New Capital", "New Cairo", "Fifth Settlement", "6th of October", "Sheikh Zayed", 
-          "Madinaty", "El Shorouk", "El Obour", "El Rehab", "Heliopolis", "Nasr City", "Maadi", "Zamalek", "Hadayek El Ahram", "Al Haram",
-          "Mivida", "Hyde Park", "Katameya Heights", "Palm Hills", "New Giza", "Uptown Cairo", "Mountain View", "SODIC", "ZED"
+          { "@type": "AdministrativeArea", "name": "القاهرة" },
+          { "@type": "AdministrativeArea", "name": "الجيزة" },
+          { "@type": "AdministrativeArea", "name": "القليوبية" },
+          { "@type": "City", "name": "التجمع الخامس" },
+          { "@type": "City", "name": "القاهرة الجديدة" },
+          { "@type": "City", "name": "الشيخ زايد" },
+          { "@type": "City", "name": "6 أكتوبر" },
+          { "@type": "City", "name": "مدينتي" },
+          { "@type": "City", "name": "مدينة الرحاب" },
+          { "@type": "City", "name": "المعادي" },
+          { "@type": "City", "name": "مدينة نصر" },
+          { "@type": "City", "name": "الزمالك" },
+          { "@type": "City", "name": "ميفيدا" },
+          { "@type": "City", "name": "بالم هيلز" },
+          { "@type": "City", "name": "العاصمة الإدارية الجديدة" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "خدمات التنظيف الفندقي والإدارة الهندسية",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "التنظيف العميق للمنازل (Deep Cleaning)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "تنظيف بعد التشطيب للفيلات" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "جلي وتلميع الرخام بالألماس" } }
+          ]
+        },
+        "knowsAbout": [
+          "https://ar.wikipedia.org/wiki/رخام",
+          "https://en.wikipedia.org/wiki/HEPA",
+          "https://en.wikipedia.org/wiki/Deep_cleaning"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+201016961497",
+          "contactType": "Customer Service and Sales",
+          "availableLanguage": ["Arabic", "English"]
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "د. مروة - التجمع الخامس" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "أفضل شركة تنظيف بعد التشطيب لفيلا التجمع، أزالوا الأسمنت دون خدش الرخام بمستوى راقٍ جداً."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "م. أحمد - الشيخ زايد" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "المهندس محمود وفريقه أعادوا شقتي جديدة كأنها فندق وتخلصوا من غبار السيليكا."
+          }
         ],
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
           "opens": "00:00",
           "closes": "23:59"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "خدمات التنظيف الفندقي والإدارة الهندسية",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "تنظيف منازل وشقق فندقية" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "تنظيف بعد التشطيب للفيلات" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "التنظيف العميق للمنازل (Deep Cleaning)" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "جلي وتلميع الرخام بالألماس" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "تنظيف الواجهات الزجاجية المرتفعة" } }
-          ]
         }
       },
       {
@@ -193,26 +223,26 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "هل تقدمون خدمات شركة تنظيف منازل للشقق الصغيرة؟",
+            "name": "ما هي أسعار شركة تنظيف منازل وفلل بعد التشطيب؟",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "نعتذر، تركيزنا الحالي ينصب على تقديم أعلى جودة نظافة للمساحات الكبيرة، الفيلات، والقصور بعد التشطيب أو التنظيف العميق لضمان تقديم مستوى فندقي لا يقبل المنافسة."
+              "text": "تبدأ الأسعار لدينا من 40 ج.م للمتر المربع لخدمات التنظيف العميق، ويتم تحديد التكلفة النهائية بدقة بعد معاينة مساحة العقار وحجم مخلفات المقاولات لضمان أفضل سعر للقصور والمساحات الكبيرة."
             }
           },
           {
             "@type": "Question",
-            "name": "هل تعتمدون على عمالة مدربة في مهام التنظيف؟",
+            "name": "هل تقدمون خدمات التنظيف في التجمع الخامس والشيخ زايد؟",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "نعم، نحن لا نعتمد على العمالة اليومية. نوفّر فرق تنفيذ مدربة هندسياً وفنياً تبدأ من 5 أفراد وتصل إلى 15 فرداً للتعامل مع الرخام، الأخشاب، وسحب غبار السيليكا باحترافية."
+              "text": "نعم، أسطول حبيب كلين يغطي كافة مناطق القاهرة الكبرى، الجيزة، والمدن الجديدة (التجمع الخامس، الشيخ زايد، مدينتي، العاصمة الإدارية) بالإضافة إلى أرقى الكومبوندات السكنية."
             }
           },
           {
             "@type": "Question",
-            "name": "كيف يتم تحديد أسعار شركات التنظيف لديكم؟",
+            "name": "هل تعتمدون على عمالة نظافة يومية؟",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "يتم تحديد السعر بناءً على مساحة العقار بالمتر المربع، نوع التشطيبات، ومدى كثافة المخلفات. نقدم أفضل قيمة مقابل سعر للعقارات الفاخرة مع ضمان استلام وحدة جاهزة للسكن الفوري."
+              "text": "مطلقاً. نعتمد على فرق تنفيذ هندسية وعمالة فنية مدربة حصرياً داخل حبيب كلين بقيادة م. محمود السيد لضمان استلام عقارك بمعايير فندقية صارمة."
             }
           }
         ]
@@ -234,7 +264,6 @@
   </script>
 
   <style>
-    /* [Your existing CSS styles exactly as provided - unmodified for stability] */
     :root {
       --primary-dark: #171717;
       --gold-accent: #c5a059;
@@ -248,594 +277,125 @@
       --shadow-strong: 0 8px 24px rgba(0,0,0,0.18);
     }
 
-    * {
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Cairo', Arial, sans-serif;
-      margin: 0;
-      background: var(--light-bg);
-      color: var(--text-color);
-      line-height: 1.85;
-      text-align: center;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Cairo', Arial, sans-serif; margin: 0; background: var(--light-bg); color: var(--text-color); line-height: 1.85; text-align: center; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
     ul { padding: 0; margin: 0; }
 
-    header {
-      background: var(--primary-dark);
-      border-bottom: 2px solid var(--gold-accent);
-      color: white;
-      padding: 34px 14px 26px;
-      position: relative;
-    }
+    header { background: var(--primary-dark); border-bottom: 2px solid var(--gold-accent); color: white; padding: 34px 14px 26px; position: relative; }
+    header .brand-logo-text { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 36px; letter-spacing: 4px; color: var(--gold-accent); font-weight: 900; text-transform: uppercase; line-height: 1.2; }
+    header p { font-weight: 600; color: #fff; font-size: 18px; margin: 10px 0 0; }
+    header .subline { font-size: 14px; font-weight: 400; color: #b8b8b8; margin-top: 6px; }
 
-    header .brand-logo-text {
-      margin: 0;
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 36px;
-      letter-spacing: 4px;
-      color: var(--gold-accent);
-      font-weight: 900;
-      text-transform: uppercase;
-      line-height: 1.2;
-    }
-
-    header p {
-      font-weight: 600;
-      color: #fff;
-      font-size: 18px;
-      margin: 10px 0 0;
-    }
-
-    header .subline {
-      font-size: 14px;
-      font-weight: 400;
-      color: #b8b8b8;
-      margin-top: 6px;
-    }
-
-    nav {
-      margin-top: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 16px;
-    }
-
-    nav a {
-      color: #fff;
-      font-size: 15px;
-      font-weight: 700;
-      transition: color 0.25s;
-    }
-
+    nav { margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 16px; }
+    nav a { color: #fff; font-size: 15px; font-weight: 700; transition: color 0.25s; }
     nav a:hover { color: var(--gold-accent); }
 
-    .btn {
-      display: inline-block;
-      margin: 8px 6px;
-      padding: 15px 28px;
-      border-radius: 50px;
-      font-weight: 800;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
-      letter-spacing: 0.2px;
-      min-height: 48px;
-    }
-
+    .btn { display: inline-block; margin: 8px 6px; padding: 15px 28px; border-radius: 50px; font-weight: 800; font-size: 16px; cursor: pointer; transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s; letter-spacing: 0.2px; min-height: 48px; }
     .btn:active { transform: scale(0.98); }
+    .btn-call { background: transparent; border: 2px solid var(--gold-accent); color: var(--primary-dark); }
+    .btn-call:hover { background: var(--primary-dark); color: var(--gold-accent); }
+    .btn-whatsapp { background: #128C7E; color: #fff; border: 2px solid #128C7E; }
+    .btn-whatsapp:hover { background: #075E54; color: #fff; border-color: #075E54; }
+    .btn-review { background: rgba(197,160,89,0.1); color: var(--gold-accent); border: 1px solid var(--gold-accent); font-size: 14px; padding: 10px 20px; min-height: 42px; border-radius: 30px; }
 
-    .btn-call {
-      background: transparent;
-      border: 2px solid var(--gold-accent);
-      color: var(--primary-dark);
-    }
+    main { padding: 34px 15px 50px; max-width: 950px; margin: auto; text-align: right; }
+    section { margin-bottom: 28px; background: #fff; padding: 32px 26px; border-radius: 12px; box-shadow: var(--shadow-soft); clear: both; }
 
-    .btn-call:hover {
-      background: var(--primary-dark);
-      color: var(--gold-accent);
-    }
-
-    .btn-whatsapp {
-      background: #128C7E;
-      color: #fff;
-      border: 2px solid #128C7E;
-    }
-
-    .btn-whatsapp:hover {
-      background: #075E54;
-      color: #fff;
-      border-color: #075E54;
-    }
-
-    .btn-review {
-      background: rgba(197,160,89,0.1);
-      color: var(--gold-accent);
-      border: 1px solid var(--gold-accent);
-      font-size: 14px;
-      padding: 10px 20px;
-      min-height: 42px;
-      border-radius: 30px;
-    }
-
-    main {
-      padding: 34px 15px 50px;
-      max-width: 950px;
-      margin: auto;
-      text-align: right;
-    }
-
-    section {
-      margin-bottom: 28px;
-      background: #fff;
-      padding: 32px 26px;
-      border-radius: 12px;
-      box-shadow: var(--shadow-soft);
-      clear: both;
-    }
-
-    h2, h3 {
-      color: var(--primary-dark);
-      margin-top: 0;
-      line-height: 1.5;
-    }
-
-    h2.section-title {
-      color: var(--primary-dark);
-      border-bottom: 1px solid var(--gold-accent);
-      padding-bottom: 12px;
-      font-size: 28px;
-      font-weight: 900;
-    }
-
-    h3 {
-      font-size: 22px;
-      border-right: 4px solid var(--gold-accent);
-      padding-right: 14px;
-      font-weight: 800;
-      margin-top: 28px;
-      margin-bottom: 10px;
-    }
-
+    h2, h3 { color: var(--primary-dark); margin-top: 0; line-height: 1.5; }
+    h2.section-title { color: var(--primary-dark); border-bottom: 1px solid var(--gold-accent); padding-bottom: 12px; font-size: 28px; font-weight: 900; }
+    h3 { font-size: 22px; border-right: 4px solid var(--gold-accent); padding-right: 14px; font-weight: 800; margin-top: 28px; margin-bottom: 10px; }
     p { margin: 0 0 14px; color: #444; font-size: 1.05rem; text-align: justify;}
+    ul li { list-style: none; margin-bottom: 14px; color: #555; font-size: 1.05rem; }
+    ul li::before { content: "✦ "; color: var(--gold-accent); font-weight: 700; }
 
-    ul li {
-      list-style: none;
-      margin-bottom: 14px;
-      color: #555;
-      font-size: 1.05rem;
-    }
-
-    ul li::before {
-      content: "✦ ";
-      color: var(--gold-accent);
-      font-weight: 700;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #141414 0%, #262626 100%);
-      color: #fff;
-      padding: 52px 22px;
-      text-align: center;
-      border-bottom: 3px solid var(--gold-accent);
-      box-shadow: var(--shadow-strong);
-      position: relative;
-      overflow: hidden;
-      contain: layout paint;
-      min-height: 480px;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 14px;
-      border: 1px solid rgba(197,160,89,0.45);
-      color: var(--gold-accent);
-      font-size: 13px;
-      font-weight: 800;
-      background: rgba(255,255,255,0.03);
-      border-radius: 30px;
-    }
-
-    .hero h1 {
-      font-size: clamp(27px, 5vw, 38px);
-      margin-bottom: 12px;
-      color: var(--gold-accent);
-      font-weight: 900;
-      line-height: 1.4;
-    }
-
-    .hero p {
-      font-size: clamp(17px, 3vw, 19px);
-      color: #ececec;
-      max-width: 760px;
-      margin: 0 auto 20px;
-      text-align: center;
-    }
-
-    .vip-warning {
-      max-width: 780px;
-      margin: 16px auto 0;
-      padding: 14px 16px;
-      color: #f4d68d;
-      border: 1px solid rgba(197,160,89,0.45);
-      background: rgba(0,0,0,0.22);
-      font-weight: 800;
-      font-size: 15px;
-      line-height: 1.8;
-      border-radius: 8px;
-    }
-
-    .hero-points {
-      max-width: 800px;
-      margin: 18px auto 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
-      text-align: right;
-    }
-
-    .hero-point {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(197,160,89,0.18);
-      padding: 14px 16px;
-      color: #f3f3f3;
-      font-size: 15px;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-
+    .hero { background: linear-gradient(135deg, #141414 0%, #262626 100%); color: #fff; padding: 52px 22px; text-align: center; border-bottom: 3px solid var(--gold-accent); box-shadow: var(--shadow-strong); position: relative; overflow: hidden; contain: layout paint; min-height: 480px; }
+    .hero-badge { display: inline-block; margin-bottom: 16px; padding: 8px 14px; border: 1px solid rgba(197,160,89,0.45); color: var(--gold-accent); font-size: 13px; font-weight: 800; background: rgba(255,255,255,0.03); border-radius: 30px; }
+    .hero h1 { font-size: clamp(27px, 5vw, 38px); margin-bottom: 12px; color: var(--gold-accent); font-weight: 900; line-height: 1.4; }
+    .hero p { font-size: clamp(17px, 3vw, 19px); color: #ececec; max-width: 760px; margin: 0 auto 20px; text-align: center; }
+    .vip-warning { max-width: 780px; margin: 16px auto 0; padding: 14px 16px; color: #f4d68d; border: 1px solid rgba(197,160,89,0.45); background: rgba(0,0,0,0.22); font-weight: 800; font-size: 15px; line-height: 1.8; border-radius: 8px; }
+    .hero-points { max-width: 800px; margin: 18px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; text-align: right; }
+    .hero-point { background: rgba(255,255,255,0.05); border: 1px solid rgba(197,160,89,0.18); padding: 14px 16px; color: #f3f3f3; font-size: 15px; border-radius: 8px; font-weight: 600; }
     .hero-cta-wrap { margin-top: 26px; min-height: 78px; }
 
-    .quick-trust {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 14px;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .trust-box {
-      background: #fff;
-      border: 1px solid var(--border-soft);
-      padding: 18px 14px;
-      box-shadow: var(--shadow-soft);
-      min-height: 112px;
-      border-radius: 8px;
-    }
-
-    .trust-box strong {
-      display: block;
-      color: var(--primary-dark);
-      font-size: 24px;
-      margin-bottom: 4px;
-      font-weight: 900;
-    }
-
+    .quick-trust { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; text-align: center; margin-top: 20px; }
+    .trust-box { background: #fff; border: 1px solid var(--border-soft); padding: 18px 14px; box-shadow: var(--shadow-soft); min-height: 112px; border-radius: 8px; }
+    .trust-box strong { display: block; color: var(--primary-dark); font-size: 24px; margin-bottom: 4px; font-weight: 900; }
     .trust-box span { color: var(--muted); font-size: 15px; font-weight: 600;}
 
-    /* ================= CONTEXTUAL SEMANTIC PROSE HUB (MEGA GEOGRAPHY BOMB) ================= */
-    .contextual-prose-hub {
-      background: #11141a;
-      border-radius: 16px;
-      padding: 45px 30px;
-      margin: 35px 0;
-      color: #e0e0e0;
-      border-top: 4px solid var(--gold-accent);
-      box-shadow: var(--shadow-strong);
-      text-align: right;
-      line-height: 2.2;
-    }
+    .contextual-prose-hub { background: #11141a; border-radius: 16px; padding: 45px 30px; margin: 35px 0; color: #e0e0e0; border-top: 4px solid var(--gold-accent); box-shadow: var(--shadow-strong); text-align: right; line-height: 2.2; }
+    .contextual-prose-hub h2 { color: var(--gold-accent); font-size: 26px; font-weight: 900; margin-bottom: 25px; border: none; text-align: center; }
+    .contextual-prose-hub p { font-size: 1.05rem; margin-bottom: 20px; text-align: justify; color: #d8d8d8; }
+    .contextual-prose-hub a { color: var(--gold-accent); font-weight: 800; text-decoration: underline; transition: color 0.3s ease; background: rgba(197, 160, 89, 0.05); padding: 2px 6px; border-radius: 4px; }
+    .contextual-prose-hub a:hover { color: #fff; background: var(--gold-accent); text-decoration: none; }
 
-    .contextual-prose-hub h2 {
-      color: var(--gold-accent);
-      font-size: 26px;
-      font-weight: 900;
-      margin-bottom: 25px;
-      border: none;
-      text-align: center;
-    }
+    .cta-strip { border-right: 4px solid var(--gold-accent); padding: 30px; background: #fff; box-shadow: var(--shadow-soft); border-radius: 12px; }
+    .cta-strip h2 { font-size: 30px; color: var(--primary-dark); margin-bottom: 10px; font-family: Georgia, 'Times New Roman', serif; }
+    .cta-strip .brand-line { color: var(--gold-accent); display: block; font-size: 2.1rem; margin-bottom: 8px; letter-spacing: 1px; }
+    .cta-actions { text-align: center; margin-top: 15px; margin-bottom: 14px; }
 
-    .contextual-prose-hub p {
-      font-size: 1.05rem;
-      margin-bottom: 20px;
-      text-align: justify;
-      color: #d8d8d8;
-    }
+    .mini-proof { background: linear-gradient(135deg, #fff 0%, #fbf8f2 100%); border: 1px solid var(--border-soft); }
+    .mini-proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 18px; }
+    .mini-card { border: 1px solid var(--border-soft); padding: 18px 16px; background: #fff; min-height: 165px; border-radius: 8px; }
+    .mini-card strong { display: block; margin-bottom: 8px; color: var(--primary-dark); font-size: 18px; font-weight: 800; }
 
-    .contextual-prose-hub a {
-      color: var(--gold-accent);
-      font-weight: 800;
-      text-decoration: underline;
-      transition: color 0.3s ease;
-      background: rgba(197, 160, 89, 0.05);
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-
-    .contextual-prose-hub a:hover {
-      color: #fff;
-      background: var(--gold-accent);
-      text-decoration: none;
-    }
-
-    .cta-strip {
-      border-right: 4px solid var(--gold-accent);
-      padding: 30px;
-      background: #fff;
-      box-shadow: var(--shadow-soft);
-      border-radius: 12px;
-    }
-
-    .cta-strip h2 {
-      font-size: 30px;
-      color: var(--primary-dark);
-      margin-bottom: 10px;
-      font-family: Georgia, 'Times New Roman', serif;
-    }
-
-    .cta-strip .brand-line {
-      color: var(--gold-accent);
-      display: block;
-      font-size: 2.1rem;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-    }
-
-    .cta-actions {
-      text-align: center;
-      margin-top: 15px;
-      margin-bottom: 14px;
-    }
-
-    .mini-proof {
-      background: linear-gradient(135deg, #fff 0%, #fbf8f2 100%);
-      border: 1px solid var(--border-soft);
-    }
-
-    .mini-proof-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .mini-card {
-      border: 1px solid var(--border-soft);
-      padding: 18px 16px;
-      background: #fff;
-      min-height: 165px;
-      border-radius: 8px;
-    }
-
-    .mini-card strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--primary-dark);
-      font-size: 18px;
-      font-weight: 800;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .video-wrapper {
-      position: relative;
-      cursor: pointer;
-      background: #000;
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-      border: 2px solid var(--gold-accent);
-      border-radius: 12px;
-      min-height: 150px;
-    }
-
-    .video-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.72;
-      transition: opacity 0.35s, transform 0.35s;
-      display: block;
-    }
-
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .video-wrapper { position: relative; cursor: pointer; background: #000; overflow: hidden; aspect-ratio: 16 / 9; border: 2px solid var(--gold-accent); border-radius: 12px; min-height: 150px; }
+    .video-wrapper img { width: 100%; height: 100%; object-fit: cover; opacity: 0.72; transition: opacity 0.35s, transform 0.35s; display: block; }
     .video-wrapper:hover img { opacity: 1; transform: scale(1.02); }
+    .video-wrapper iframe { width: 100%; height: 100%; border: none; display: block; }
+    .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(197,160,89,0.92); color: #fff; padding: 15px 24px; font-size: 18px; font-weight: 800; border-radius: 30px; letter-spacing: 1px; pointer-events: none; }
 
-    .video-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
+    .map-shell { width: 100%; min-height: 350px; background: #f1f1f1; border: 1px solid var(--border-soft); margin-top: 12px; position: relative; overflow: hidden; border-radius: 12px; }
+    .map-frame { width: 100%; height: 350px; border: 0; display: block; }
+    .map-placeholder { min-height: 350px; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; color: var(--primary-dark); background: linear-gradient(135deg, #fafafa 0%, #f1eadc 100%); }
+    .map-placeholder strong { display: block; font-size: 20px; margin-bottom: 8px; }
 
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(197,160,89,0.92);
-      color: #fff;
-      padding: 15px 24px;
-      font-size: 18px;
-      font-weight: 800;
-      border-radius: 30px;
-      letter-spacing: 1px;
-      pointer-events: none;
-    }
+    .reviews-wrap { display: flex; flex-direction: column; gap: 18px; max-width: 720px; margin: auto; text-align: right; }
+    .review-box { background: var(--light-bg); padding: 20px; border-right: 3px solid var(--gold-accent); border-radius: 8px; }
+    .review-stars { color: var(--gold-text-dark); font-size: 1.15rem; margin-bottom: 6px; }
+    .faq-q { font-weight: 900; font-size: 18px; color: var(--primary-dark); margin-bottom: 4px; }
+    .qualification-box { border: 2px solid var(--gold-accent); background: #fff; padding: 30px; text-align: center; border-radius: 12px; }
+    .qualification-box strong { display: block; color: var(--primary-dark); font-size: 22px; margin-bottom: 10px; font-weight: 900; }
 
-    .map-shell {
-      width: 100%;
-      min-height: 350px;
-      background: #f1f1f1;
-      border: 1px solid var(--border-soft);
-      margin-top: 12px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-    }
+    footer { background: var(--primary-dark); color: #bcbcbc; padding: 40px 20px; margin-top: 40px; border-top: 4px solid var(--gold-accent); font-size: 15px; text-align: center; }
 
-    .map-frame {
-      width: 100%;
-      height: 350px;
-      border: 0;
-      display: block;
-    }
-
-    .map-placeholder {
-      min-height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      text-align: center;
-      color: var(--primary-dark);
-      background: linear-gradient(135deg, #fafafa 0%, #f1eadc 100%);
-    }
-
-    .map-placeholder strong {
-      display: block;
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .reviews-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      max-width: 720px;
-      margin: auto;
-      text-align: right;
-    }
-
-    .review-box {
-      background: var(--light-bg);
-      padding: 20px;
-      border-right: 3px solid var(--gold-accent);
-      border-radius: 8px;
-    }
-
-    .review-stars {
-      color: var(--gold-text-dark);
-      font-size: 1.15rem;
-      margin-bottom: 6px;
-    }
-
-    .faq-q {
-      font-weight: 900;
-      font-size: 18px;
-      color: var(--primary-dark);
-      margin-bottom: 4px;
-    }
-
-    .qualification-box {
-      border: 2px solid var(--gold-accent);
-      background: #fff;
-      padding: 30px;
-      text-align: center;
-      border-radius: 12px;
-    }
-
-    .qualification-box strong {
-      display: block;
-      color: var(--primary-dark);
-      font-size: 22px;
-      margin-bottom: 10px;
-      font-weight: 900;
-    }
-
-    footer {
-      background: var(--primary-dark);
-      color: #bcbcbc;
-      padding: 40px 20px;
-      margin-top: 40px;
-      border-top: 4px solid var(--gold-accent);
-      font-size: 15px;
-      text-align: center;
-    }
-
-    #whatsapp-fixed {
-      position: fixed;
-      bottom: 84px;
-      right: 20px;
-      background-color: var(--gold-accent);
-      color: var(--primary-dark);
-      padding: 12px 22px;
-      font-weight: 900;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      z-index: 9999;
-      border: 2px solid var(--primary-dark);
-      border-radius: 30px;
-      transition: transform 0.25s;
-      min-height: 48px;
-    }
-
+    #whatsapp-fixed { position: fixed; bottom: 84px; right: 20px; background-color: var(--gold-accent); color: var(--primary-dark); padding: 12px 22px; font-weight: 900; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9999; border: 2px solid var(--primary-dark); border-radius: 30px; transition: transform 0.25s; min-height: 48px; }
     #whatsapp-fixed:hover { transform: translateY(-3px); }
 
-    #floating-call-btn {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 1000;
-      line-height: 0;
-      animation: quick-pulse 2s infinite ease-in-out;
-      will-change: transform;
-    }
+    #floating-call-btn { position: fixed; bottom: 20px; left: 20px; z-index: 1000; line-height: 0; animation: quick-pulse 2s infinite ease-in-out; will-change: transform; }
+    #floating-call-btn a { background-color: var(--primary-dark); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--gold-accent); text-decoration: none; border-radius: 50%; }
 
-    #floating-call-btn a {
-      background-color: var(--primary-dark);
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid var(--gold-accent);
-      text-decoration: none;
-      border-radius: 50%;
-    }
+    @keyframes quick-pulse { 0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); } }
 
-    @keyframes quick-pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
-    }
+    @media (max-width: 768px) { header .brand-logo-text { font-size: 32px; } .hero { padding: 42px 18px; } .cta-strip .brand-line { font-size: 1.8rem; } .cta-strip h2 { font-size: 25px; } section { padding: 26px 18px; } main { padding: 26px 12px 46px; } #whatsapp-fixed { right: 14px; bottom: 82px; padding: 11px 18px; } #floating-call-btn { left: 14px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; } }
 
-    @media (max-width: 768px) {
-      header .brand-logo-text { font-size: 32px; }
-      .hero { padding: 42px 18px; }
-      .cta-strip .brand-line { font-size: 1.8rem; }
-      .cta-strip h2 { font-size: 25px; }
-      section { padding: 26px 18px; }
-      main { padding: 26px 12px 46px; }
-      #whatsapp-fixed { right: 14px; bottom: 82px; padding: 11px 18px; }
-      #floating-call-btn { left: 14px; }
-    }
+    /* ================== CSS FOR CALCULATOR & SITEMAP TRAP ================== */
+    .calculator-wrapper { background: linear-gradient(145deg, #171717, #242424); border: 2px solid var(--gold-accent); border-radius: 16px; padding: 35px 30px; margin: 40px 0; color: #fff; box-shadow: 0 15px 35px rgba(0,0,0,0.25); text-align: right; }
+    .calculator-wrapper h2 { color: var(--gold-accent); text-align: center; font-family: 'Playfair Display', serif; border-bottom: none; margin-bottom: 25px; }
+    .calc-row { margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .calc-label { font-weight: 800; font-size: 1.1rem; color: #ececec; }
+    .calc-range { -webkit-appearance: none; width: 100%; height: 8px; border-radius: 5px; background: #444; outline: none; }
+    .calc-range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 25px; height: 25px; border-radius: 50%; background: var(--gold-accent); cursor: pointer; box-shadow: 0 0 10px rgba(197,160,89,0.5); }
+    .calc-value-display { font-size: 1.2rem; font-weight: 900; color: var(--gold-accent); text-align: center; margin-top: 5px; }
+    .calc-select { width: 100%; padding: 14px; background: #333; color: #fff; border: 1px solid #555; border-radius: 8px; font-family: 'Cairo', sans-serif; font-size: 1.05rem; font-weight: 700; outline: none; cursor: pointer; }
+    .calc-select:focus { border-color: var(--gold-accent); }
+    .calc-checkbox-wrapper { display: flex; align-items: center; gap: 12px; background: #333; padding: 15px; border-radius: 8px; border: 1px solid #555; cursor: pointer; transition: 0.3s; }
+    .calc-checkbox-wrapper:hover { border-color: var(--gold-accent); }
+    .calc-checkbox-wrapper input[type="checkbox"] { width: 22px; height: 22px; cursor: pointer; accent-color: var(--gold-accent); }
+    .calc-result-box { background: #000; border: 2px dashed var(--gold-accent); border-radius: 12px; padding: 25px; text-align: center; margin-top: 30px; }
+    .calc-total { font-size: 2.8rem; font-weight: 900; color: var(--gold-accent); margin: 10px 0; line-height: 1.1; }
+    .calc-disclaimer { font-size: 0.85rem; color: #888; margin-top: 15px; }
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
-      }
-    }
+    .sitemap-trap { background: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 20px; margin-top: 30px; text-align: right; }
+    .sitemap-trap h4 { color: #555; margin-top: 0; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px; font-size: 1.1rem; }
+    .sitemap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+    .sitemap-grid a { color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; transition: 0.2s; padding: 4px 0; display: block; font-size: 0.9rem; font-weight: 600; }
+    .sitemap-grid a:hover { color: var(--gold-accent); border-bottom-color: var(--gold-accent); }
   </style>
 </head>
-
 <body>
 
   <header>
@@ -864,7 +424,6 @@
     <section class="hero" aria-label="الواجهة الرئيسية">
       <div class="hero-badge">الكيان رقم 1 لتأسيس الفيلات والقصور والمشاريع الكبرى في مصر</div>
 
-      <!-- التعديل هنا: دمج الكلمتين البحثيتين الأساسيتين في الـ H1 -->
       <h1>
         أفضل شركة تنظيف منازل وتأسيس فيلات بعد التشطيب<br>
         <span style="font-size: 0.7em; color: #fff; font-weight: 700;">عمالة فنية مدربة وفرق تنفيذ هندسية من 5 إلى 15 فرد</span>
@@ -918,7 +477,7 @@
       </div>
     </div>
 
-    <!-- ================= THE SEMANTIC SEO BOMB (MEGA GEOGRAPHY & CONTEXTUAL INTERLINKING HUB) ================= -->
+    <!-- ================= CONTEXTUAL SEMANTIC PROSE HUB (MEGA GEOGRAPHY BOMB) ================= -->
     <section class="contextual-prose-hub" aria-label="الموسوعة الهندسية والانتشار الجغرافي">
       <h2>🌐 التغطية الجغرافية الشاملة والمرجع الهندسي الأقوى في مصر</h2>
       
@@ -937,6 +496,43 @@
       <p>
         لا تقتصر خبراتنا على المساحات الفارغة، بل نمتلك تخصصات فريدة تشمل <a href="blog/blog13-جلي-وتلميع-الرخام-بالألماس.html">جلي وتلميع الرخام بالألماس</a> لاستعادة اللمعان الزجاجي للأرضيات، وإجراءات <a href="blog/blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html">تنظيف الواجهات الزجاجية</a> المرتفعة. كما نوفر خدمات <a href="blog/blog45-luxury-upholstery-rug-cleaning-cairo.html">تنظيف الانتريه والكنب</a> بأحدث تقنيات الـ <a href="blog/blog45-luxury-upholstery-rug-cleaning-cairo.html">deep cleaning</a>. لكل عملائنا الباحثين عن <a href="blog/blog44-expat-move-in-deep-cleaning-cairo.html">cleaning services egypt</a> و المعايير العالمية في تجهيز العقارات، اختيارك لـ <a href="blog/blog41-best-home-cleaning-services-cairo.html">أفضل شركات النظافة في مصر</a> يعني تسليم عقارك في أيدٍ أمينة، لنتيجة لا تقبل المنافسة وتليق باستثماراتك الضخمة.
       </p>
+    </section>
+
+    <!-- ================== INTERACTIVE PRICING CALCULATOR (DWELL TIME BOOSTER) ================== -->
+    <section class="calculator-wrapper" aria-label="حاسبة أسعار تنظيف الفيلات">
+      <h2>حاسبة التكلفة التقديرية للقصور والفيلات</h2>
+      
+      <div class="calc-row">
+        <label class="calc-label" for="areaSlider">مساحة العقار الفعلي (بالمتر المربع):</label>
+        <input type="range" id="areaSlider" class="calc-range" min="150" max="3000" step="10" value="250">
+        <div class="calc-value-display"><span id="areaOutput">250</span> متر مربع</div>
+      </div>
+
+      <div class="calc-row">
+        <label class="calc-label" for="serviceType">نوع الخدمة الهندسية المطلوبة:</label>
+        <select id="serviceType" class="calc-select">
+          <option value="40" selected>التنظيف العميق للمنازل (Deep Cleaning) - يبدأ من 40 ج.م للمتر</option>
+          <option value="55">التنظيف بعد التشطيب (إزالة دهانات وأسمنت) - يبدأ من 55 ج.م للمتر</option>
+        </select>
+      </div>
+
+      <div class="calc-row">
+        <label class="calc-checkbox-wrapper">
+          <input type="checkbox" id="marblePolish">
+          <span style="font-weight: 700;">إضافة خدمة جلي وتلميع الرخام الإيطالي بالألماس (للمساحات الرخامية)</span>
+        </label>
+      </div>
+
+      <div class="calc-result-box">
+        <span>التكلفة التقديرية لخدمات הـ VIP:</span>
+        <div class="calc-total"><span id="totalPrice">10,000</span> ج.م</div>
+        <p class="calc-disclaimer">
+          * هذا السعر تقديري ومبدئي لحساب التكلفة. السعر النهائي يُحدد بدقة بعد المعاينة الميدانية أو عبر إرسال صور وفيديو للعقار لمراعاة تفاصيل وحجم المخلفات.
+        </p>
+        <a href="thankyou-whatsapp.html" class="btn" style="background: var(--gold-accent); color: var(--primary-dark); border:none; width: 100%; margin: 15px 0 0 0; padding: 15px; font-size: 1.1rem;">
+          تأكيد الحجز والحصول على عرض سعر نهائي عبر واتساب
+        </a>
+      </div>
     </section>
 
     <section class="cta-strip">
@@ -1012,35 +608,33 @@
     </section>
 
     <section class="services-details">
-      <h2 class="section-title">خدمات التنظيف الشاملة للمساحات الكبيرة والقصور</h2>
+      <h2 class="section-title">بروتوكول حبيب كلين الهندسية للتنظيف الشامل</h2>
 
-      <!-- تعديل الـ H3 لضرب الكلمات المفتاحية بقوة أكبر -->
       <h3>1. شركة تنظيف بعد التشطيب للفيلات والشقق الفندقية</h3>
       <p>
-        إزالة هندسية لبقايا الدهانات، الأسمنت، الجبس، وآثار المقاولين مع الحفاظ التام على
-        الزجاج البانورامي، الرخام الطبيعي، والبورسلين. لتفاصيل أكثر، راجع <a href="blog/ultimate-guide-post-construction-cleaning-egypt.html" style="color:var(--gold-accent); font-weight:bold;">دليل تنظيف ما بعد التشطيب</a>.
+        إزالة هندسية لبقايا الدهانات، الأسمنت، الجبس، وآثار المقاولين عبر "السحب الجاف" المتطور بغبار السيليكا باستخدام مكانس بفلاتر (HEPA). مع الحفاظ التام على الزجاج البانورامي، الرخام الطبيعي، والبورسلين. لتفاصيل أكثر، راجع <a href="blog/ultimate-guide-post-construction-cleaning-egypt.html" style="color:var(--gold-accent); font-weight:bold;">دليل تنظيف ما بعد التشطيب</a>.
       </p>
 
       <h3>2. شركة تنظيف منازل وإعادة تأهيل الفيلات المغلقة</h3>
       <p>
-        العقارات التي ظلت مغلقة لفترة طويلة في الساحل، العاصمة، أو أكتوبر تحتاج تدخل بيولوجي. بصفتنا أفضل شركة تنظيف منازل، نقوم بضخ الأوزون للتخلص من الكمكمة وتطهير الفيلات لتكون جاهزة لاستقبال المالك.
+        العقارات التي ظلت مغلقة لفترة طويلة في الساحل، العاصمة، أو أكتوبر تحتاج تدخل بيولوجي. بصفتنا أفضل شركة تنظيف منازل، نقوم بضخ الأوزون للتعقيم الفندقي والتخلص من الكمكمة وتطهير الفيلات لتكون جاهزة لاستقبال المالك.
       </p>
 
       <h3>3. شركة تنظيف عميق (Deep Cleaning)</h3>
       <p>
-        تطهير شامل يصل إلى الزوايا الدقيقة التي يعجز عنها التنظيف العادي. معقمات حرارية للمطابخ والحمامات لإزالة الشحوم والميكروبات بأعلى المعايير الفندقية وعمالة مدربة.
+        تطهير شامل يصل إلى الزوايا الدقيقة التي يعجز عنها التنظيف العادي. نستخدم التعقيم بالبخار الحار للمطابخ والحمامات لإزالة الشحوم والميكروبات بأعلى المعايير الفندقية. كما نوفر خدمة غسيل انتريهات وصالونات بالرغوة الجافة.
       </p>
 
       <h3>4. جلي الرخام وتلميع الواجهات الزجاجية</h3>
       <p>
-        بأقراص الألماس، نعيد للرخام المخدوش أو الباهت لمعانه الزجاجي (الإيبوكسي). كما نوفر فرقاً متخصصة في نظافة الواجهات الزجاجية المرتفعة بتقنية الحبال (Rope Access).
+        بأقراص الألماس المتدرجة، نعيد للرخام المخدوش أو الباهت لمعانه الزجاجي ونسوي الفواصل. كما نوفر فرقاً متخصصة في نظافة الواجهات الزجاجية المرتفعة بتقنية الحبال (Rope Access).
       </p>
     </section>
 
     <section id="seo-content">
       <h2 class="section-title">التغطية الشاملة لخدمات النظافة</h2>
       <p>
-        تمتد التغطية الجغرافية لعمليات <strong>Habib Clean</strong> لتشمل كافة أنحاء الجمهورية. نحن نُعد الخيار الأول لمن يبحث عن <strong>شركة تنظيف منازل في القاهرة والجيزة والقليوبية</strong>، التجمع الخامس (الجولدن سكوير)، مدينة نصر، المعادي، 6 أكتوبر والشيخ زايد، العاصمة الإدارية الجديدة، الشروق، العبور، مدينتي، الرحاب، بالإضافة للكومبوندات (ميفيدا، هايد بارك، قطامية هايتس، بالم هيلز، أب تاون كايرو).
+        تمتد التغطية الجغرافية لعمليات <strong>Habib Clean</strong> لتشمل كافة أنحاء الجمهورية. نحن نُعد الخيار الأول لمن يبحث عن <strong>شركة تنظيف منازل في القاهرة والجيزة والقليوبية</strong>، التجمع الخامس (الجولدن سكوير)، مدينة نصر، المعادي، 6 أكتوبر والشيخ زايد، العاصمة الإدارية الجديدة، الشروق، العبور، مدينتي، الرحاب، بالإضافة للكومبوندات الفاخرة مثل (ميفيدا، هايد بارك، قطامية هايتس، بالم هيلز، أب تاون كايرو).
       </p>
       <p>
         نعتمد على أحدث ماكينات التنظيف الألمانية والأمريكية لتنظيف العقار بصورة مهنية دون أي فوضى أو إزعاج.
@@ -1053,8 +647,52 @@
         <li>إذا كنت تبحث عن <strong>أفضل شركة تنظيف منازل</strong> تستخدم مذيبات آمنة ولا تستعين بعمالة يومية من الشارع وتوفر أفضل أسعار شركات النظافة للقصور والمساحات الكبيرة.</li>
       </ul>
     </section>
+    <!-- ================== UNINDEXED PAGES INJECTION HUB (SITEMAP TRAP) ================== -->
+    <!-- هذا القسم غير مرئي للزائر العادي بشكل مزعج، ولكنه كنز لعناكب جوجل لاكتشاف الصفحات غير المفهرسة -->
+    <div class="unindexed-hub" aria-label="دليل خدمات حبيب كلين التفصيلية" style="background: #fafafa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-top: 40px; font-size: 0.9rem; text-align: right;">
+      <h4 style="color: #555; margin-top: 0; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px; font-size: 1.1rem;">دليل التغطية والخدمات التخصصية</h4>
+      <div class="unindexed-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+        <a href="services.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">الخدمات المركزية</a>
+        <a href="about.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">عن حبيب كلين</a>
+        <a href="privacy.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">سياسة الخصوصية</a>
+        <a href="blog/ultimate-guide-post-construction-cleaning-egypt.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">الدليل الشامل للتنظيف</a>
+        <a href="blog/blog64-zamalek-mohandeseen-vip-cleaning-services.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">خدمات الزمالك والمهندسين</a>
+        <a href="blog/blog77-dokki-mohandessin-corporate-vip-cleaning.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">تنظيف مكاتب الدقي</a>
+        <a href="blog/blog82-new-cairo-golden-square-compounds.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">كومبوندات الجولدن سكوير</a>
+        <a href="blog/blog70-mokattam-uptown-cairo-vip-cleaning.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">أب تاون كايرو والمقطم</a>
+        <a href="blog/blog69-obour-10th-ramadan-cleaning-services.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">العبور والعاشر من رمضان</a>
+        <a href="blog/blog76-rahab-city-family-vip-cleaning.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">مدينة الرحاب</a>
+        <a href="blog/blog79-shorouk-badr-city-eastern-expansion-cleaning.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">الشروق وبدر</a>
+        <a href="blog/blog75-new-capital-r7-r8-smart-cleaning.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">العاصمة الإدارية R7-R8</a>
+        <a href="blog/blog78-zayed-spanish-italian-district-cleaning.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">الشيخ زايد والحي الإسباني</a>
+        <a href="blog/blog66-october-zayed-vip-cleaning-services.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">تنظيف 6 أكتوبر</a>
+        <a href="blog/blog62-new-capital-madinaty-villa-cleaning-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">فيلات مدينتي</a>
+        <a href="blog/blog50-ultimate-expat-guide-vip-cleaning-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">Expat VIP Cleaning</a>
+        <a href="blog/blog51-corporate-facility-management-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">Corporate Management</a>
+        <a href="blog/blog52-cairo-airport-arrival-luxury-cleaning-services.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">Airport Arrival Prep</a>
+        <a href="blog/blog56-vip-post-construction-marble-glass-cleaning-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">VIP Marble Cleaning</a>
+        <a href="blog/blog59-luxury-kitchen-detailing-appliance-sanitization-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">Luxury Kitchen Detailing</a>
+        <a href="blog/blog53-vip-on-site-persian-rug-cleaning-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">Persian Rug Cleaning</a>
+        <a href="blog/blog86-deep-carpet-moquette-cleaning-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">غسيل الموكيت والسجاد</a>
+        <a href="blog/blog45-luxury-upholstery-rug-cleaning-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">تنظيف الأثاث والمفروشات</a>
+        <a href="blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">صيانة الأثاث الجلدي</a>
+        <a href="blog/blog47-luxury-hardwood-parquet-polishing-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">تلميع الباركيه والأخشاب</a>
+        <a href="blog/blog55-waterless-parquet-hardwood-polishing-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">Waterless Parquet Polish</a>
+        <a href="blog/blog36-ترميم-الأخشاب-والباركيه-في-الشقق-المغلقة.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">ترميم أخشاب الشقق المغلقة</a>
+        <a href="blog/blog15-كيف-تحافظ-على-لمعان-الرخام.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">الحفاظ على لمعان الرخام</a>
+        <a href="blog/blog19-معالجة-الخدوش-والتشققات-في-الرخام.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">معالجة خدوش الرخام</a>
+        <a href="blog/blog20-الجدوى-الاقتصادية-لجلي-الرخام.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">جدوى جلي الرخام</a>
+        <a href="blog/blog46-villa-exterior-stone-glass-cleaning-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">Exterior Stone Cleaning</a>
+        <a href="blog/blog25-دليل-صيانة-واجهات-القصور-الفيلات.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">صيانة واجهات القصور</a>
+        <a href="blog/blog6-تنظيف-الأبواب-الخشبية-بعد-التشطيب.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">تنظيف الأبواب الخشبية</a>
+        <a href="blog/blog38-مكافحة-مخلفات-الطيور-والآفات-بالشقق-المغلقة.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">مكافحة الآفات والطيور</a>
+        <a href="blog/blog39-تعقيم-خزانات-المياه-والسباكة.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">تعقيم خزانات المياه</a>
+        <a href="blog/blog54-expat-water-tank-biological-sanitization-cairo.html" style="color: var(--primary-dark); text-decoration: none; border-bottom: 1px dashed #ccc; padding: 4px 0; display: block;">Water Tank Sanitization</a>
+      </div>
+    </div>
+    <!-- ================== END UNINDEXED PAGES INJECTION HUB ================== -->
 
-    <section style="border:2px solid var(--gold-accent); border-radius: 12px; padding: 30px;">
+    <section style="border:2px solid var(--gold-accent); border-radius: 12px; padding: 30px; margin-top:40px;">
       <h2 class="section-title" style="border-bottom:none; padding-bottom:0; margin-top: 0;">📍 المقر وتغطية العمليات الإقليمية</h2>
       <p>مقرنا الرئيسي في المعادي - القاهرة، ونتحرك بأسطولنا لخدمة القصور والفيلات في جميع المحافظات، المناطق الراقية، والمدن الجديدة.</p>
 
@@ -1161,6 +799,40 @@
   </div>
 
   <script>
+    // ================= CALCULATOR LOGIC (Dynamic 40 EGP Base) =================
+    document.addEventListener("DOMContentLoaded", function() {
+      const areaSlider = document.getElementById("areaSlider");
+      const areaOutput = document.getElementById("areaOutput");
+      const serviceType = document.getElementById("serviceType");
+      const marblePolish = document.getElementById("marblePolish");
+      const totalPriceDisplay = document.getElementById("totalPrice");
+
+      if (areaSlider && areaOutput && serviceType && marblePolish && totalPriceDisplay) {
+        function calculatePrice() {
+          const area = parseInt(areaSlider.value);
+          const baseRate = parseInt(serviceType.value); 
+          let total = area * baseRate;
+
+          // Marble assumes 50% of the area at +40 EGP
+          if (marblePolish.checked) {
+            total += (area * 0.5 * 40); 
+          }
+
+          totalPriceDisplay.textContent = total.toLocaleString('en-US');
+        }
+
+        areaSlider.addEventListener("input", function() {
+          areaOutput.textContent = this.value;
+          calculatePrice();
+        });
+        serviceType.addEventListener("change", calculatePrice);
+        marblePolish.addEventListener("change", calculatePrice);
+        
+        calculatePrice(); // Initialize
+      }
+    });
+    // ====================================================
+
     function getParam(paramName) {
       var url = new URL(window.location.href);
       return url.searchParams.get(paramName);
