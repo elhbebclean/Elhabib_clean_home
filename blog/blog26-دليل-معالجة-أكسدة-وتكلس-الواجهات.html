@@ -1,161 +1,96 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Favicon -->
+    <!-- ================== CORE META & IDENTITY ================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0f1115">
     <link rel="icon" href="https://habib-clean.com/favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="https://habib-clean.com/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0f1115">
     
-    <!-- DNS Prefetch & Preconnect (المرجع الفتاك V2.0) -->
+    <!-- Resource Hints (Zero Tracking Speed) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
-    <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://img.youtube.com">
 
     <!-- Preload Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap"></noscript>
 
-    <!-- Delayed GTM & Meta Pixel for Lightning Speed (المرجع الفتاك) -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var trackingLoaded = false;
-        function loadTracking() {
-          if (trackingLoaded) return;
-          trackingLoaded = true;
-          
-          // 1. Load GTM
-          (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event:'gtm.js'
-            });
-            var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),
-            dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-
-          // 2. Load Facebook Pixel
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3076333772698182');
-          fbq('track', 'PageView');
-        }
-
-        // Deferred via requestIdleCallback for INP optimization
-        function scheduleTracking() {
-          if (trackingLoaded) return;
-          if (window.requestIdleCallback) {
-            window.requestIdleCallback(loadTracking, { timeout: 2000 });
-          } else {
-            setTimeout(loadTracking, 200);
-          }
-        }
-
-        // Load on interaction for immediate tracking
-        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
-          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
-        });
-
-        // Delayed by 7 seconds to completely bypass Lighthouse scanners
-        setTimeout(scheduleTracking, 7000);
-      });
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
-    </noscript>
-
-    <!-- Advanced AI & Semantic Search SEO Title & Meta Description -->
-    <title>الدليل الهندسي لمعالجة أكسدة وتكلس الواجهات الزجاجية والكلادينج | Habib Clean</title>
-    <meta name="description" content="كيف تتخلص من بقع المياه العسرة، التكلس، وأكسدة الزجاج في الواجهات المرتفعة؟ دليل حصري شامل لتقنيات المياه منزوعة المعادن (DI/RO) وعلاج الكلادينج مع Habib Clean.">
-    <meta name="keywords" content="أكسدة الزجاج, تكلس الواجهات, بقع المياه العسرة, تنظيف زجاج الأبراج, غسيل الكلادينج, تقنية DI Water, Habib Clean, القاهرة, التجمع الخامس">
-    <meta name="author" content="Habib Clean">
+    <!-- SEO Domination Meta Tags (High CTR & Exact Intent Alignment) -->
+    <title>إزالة تكلس وأكسدة الواجهات الزجاجية والكلادينج 2026 | حلول وأسعار Habib Clean</title>
+    <meta name="description" content="تخلص نهائياً من بقع المياه العسرة، التكلس الكلسي، وأكسدة الكلادينج في واجهات الفيلات والشركات. تقنية المياه منزوعة الأملاح (DI Water) وعزل النانو بإشراف م. محمود السيد.">
+    <meta name="author" content="محمود السيد - Habib Clean">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <link rel="canonical" href="https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html">
-    
+    <meta name="geo.region" content="EG-C">
+    <meta name="geo.placename" content="Cairo, New Cairo, Sheikh Zayed">
+    <meta name="geo.position" content="29.9602;31.2769">
+    <meta name="ICBM" content="29.9602, 31.2769">
 
-    <!-- Open Graph / Facebook -->
+    <link rel="canonical" href="https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html">
+
+    <!-- Open Graph / Social -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="كيف تعالج أكسدة وتكلس الواجهات الزجاجية كالمحترفين؟ | Habib Clean">
-    <meta property="og:description" content="أسرار التخلص من البقع الكلسية البيضاء التي تدمر واجهات القصور والشركات باستخدام أحدث تقنيات الفلترة الهندسية.">
+    <meta property="og:title" content="معالجة تكلس وأكسدة الواجهات الزجاجية والكلادينج بدون خدش | Habib Clean">
+    <meta property="og:description" content="أسرار التخلص من البقع الكلسية البيضاء التي تشوه واجهات القصور والشركات باستخدام تقنية المياه منزوعة المعادن وعوازل النانو.">
     <meta property="og:url" content="https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html">
     <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
     <meta property="og:site_name" content="Habib Clean">
     <meta property="og:locale" content="ar_EG">
     
-    <!-- Twitter -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="معالجة أكسدة الواجهات الزجاجية والكلادينج | Habib Clean">
-    <meta name="twitter:description" content="المرجع التقني الأول في مصر لإزالة بقع المياه العسرة وتكلس الواجهات الفاخرة.">
+    <meta name="twitter:title" content="إزالة تكلس وأكسدة الواجهات الزجاجية والكلادينج | Habib Clean">
+    <meta name="twitter:description" content="المرجع التقني في مصر لإزالة بقع المياه العسرة وتكلس الواجهات الفاخرة.">
+    <meta name="twitter:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
 
-    <!-- God-Tier Entity & SGE Optimized JSON-LD Graph V2.0 -->
+    <!-- Clean & Verified JSON-LD Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": ["LocalBusiness", "CleaningService"],
+          "@type": ["Organization", "LocalBusiness", "CleaningService"],
           "@id": "https://habib-clean.com/#organization",
-          "name": "Elhabib Clean",
+          "name": "Habib Clean",
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
           "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
-          "telephone": "01016961497",
+          "telephone": "+201016961497",
           "priceRange": "$$$",
+          "founder": {
+            "@type": "Person",
+            "@id": "https://habib-clean.com/#founder",
+            "name": "محمود السيد",
+            "jobTitle": "المؤسس واستشاري الإدارة الهندسية للعقارات",
+            "sameAs": [
+              "https://www.facebook.com/share/17vs84YwMF/",
+              "https://www.youtube.com/@Elhbeb"
+            ]
+          },
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Maadi",
-            "addressRegion": "Cairo",
+            "streetAddress": "105 شارع وادي النيل",
+            "addressLocality": "المعادي",
+            "addressRegion": "القاهرة",
+            "postalCode": "11728",
             "addressCountry": "EG"
           },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "reviewCount": "153",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": {
-            "@type": "Review",
-            "author": { 
-              "@type": "Person", 
-              "name": "عميل موثق" 
-            },
-            "datePublished": "2026-08-15",
-            "reviewBody": "شرح احترافي لطرق معالجة أكسدة وتكلس الواجهات، وايت جودة.",
-            "reviewRating": { 
-              "@type": "Rating", 
-              "ratingValue": "5", 
-              "bestRating": "5", 
-              "worstRating": "1" 
-            }
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "00:00",
-              "closes": "23:59"
-            }
+          "hasMap": "https://share.google/umb4679rea0EcsZk0",
+          "areaServed": [
+            "Cairo", "New Cairo", "Fifth Settlement", "Sheikh Zayed", "6th of October", 
+            "Maadi", "Katameya Heights", "Madinaty", "El Shorouk", "Giza"
           ],
           "sameAs": [
             "https://share.google/umb4679rea0EcsZk0",
             "https://www.facebook.com/p/Habib-Clean-61559076547205/",
-            "https://www.youtube.com/@Elhbeb"
+            "https://www.facebook.com/61559076547205/posts/122178827282302551/",
+            "https://www.youtube.com/@Elhbeb",
+            "https://www.youtube.com/channel/UCw759I1BQq570_v4th-a86w",
+            "https://welpstar.com/biz/habib-clean",
+            "https://infoeg.com/cairo/page/821675"
           ]
         },
         {
@@ -163,37 +98,60 @@
           "@id": "https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://habib-clean.com/" },
-            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/index.html" },
+            { "@type": "ListItem", "position": 2, "name": "المدونة الهندسية", "item": "https://habib-clean.com/blog/blog80-cairo-greater-new-cairo-master-hub.html" },
             { "@type": "ListItem", "position": 3, "name": "معالجة أكسدة وتكلس الواجهات", "item": "https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html" }
           ]
         },
         {
-          "@type": "Article",
+          "@type": "TechArticle",
           "@id": "https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html#article",
           "isPartOf": { "@id": "https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html" },
           "headline": "الدليل الهندسي الشامل لمعالجة أكسدة وتكلس الواجهات الزجاجية والكلادينج",
-          "description": "الموسوعة التقنية الأكبر لعلاج بقع المياه العسرة، التكلس الكيميائي، وأكسدة الزجاج للقصور والشركات باستخدام المياه منزوعة المعادن مع Habib Clean.",
-          "author": { "@id": "https://habib-clean.com/#organization" },
+          "description": "المرجع التقني لعلاج بقع المياه العسرة، التكلس الكيميائي، وأكسدة الزجاج للقصور والشركات باستخدام المياه منزوعة المعادن مع Habib Clean.",
+          "author": { "@id": "https://habib-clean.com/#founder" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
-          "dateModified": "2026-08-04T12:00:00+02:00",
-          "mainEntityOfPage": "https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html",
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "xpath": ["/html/head/title", "//h1", "//article/p[2]"]
-          }
+          "dateModified": "2026-10-14T10:55:00+02:00",
+          "mainEntityOfPage": "https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html"
+        },
+        {
+          "@type": "HowTo",
+          "name": "البروتوكول الهندسي الخماسي لعلاج تكلس وأكسدة الواجهات",
+          "description": "خطوات إزالة ترسبات الكالسيوم والأملاح عن الزجاج والكلادينج دون خدش.",
+          "step": [
+            { "@type": "HowToStep", "name": "الفحص وتحديد عمق التكلس", "text": "تقييم حالة السطح لمعرفة ما إذا كانت الترسبات سطحية أم متغلغلة في مسام الزجاج." },
+            { "@type": "HowToStep", "name": "التليين الكيميائي المتعادل", "text": "استخدام مزيلات ترسبات مخصصة (Descalers) تفكك الروابط الأيونية للكالسيوم دون حرق الزجاج." },
+            { "@type": "HowToStep", "name": "الرفع الميكانيكي بوسادات ناعمة", "text": "استخدام وسادات تلميع ميكروفايبر مخصصة لرفع الأملاح المفتتة دون إحداث خدوش." },
+            { "@type": "HowToStep", "name": "الشطف بالمياه منزوعة المعادن (DI Water)", "text": "غسيل الواجهة بمياه مفلترة بنسبة أملاح (0 PPM) تمنع تكون أي بقع جديدة بعد الجفاف." },
+            { "@type": "HowToStep", "name": "العزل النانوي الواقي", "text": "تطبيق طبقة نانو سيراميك طاردة للمياه والأتربة لحماية السطح لفترات طويلة." }
+          ]
+        },
+        {
+          "@type": "VideoObject",
+          "name": "إزالة الأكسدة وإعادة بريق الواجهات والكلادينج | Habib Clean",
+          "description": "شاهد بالفيديو كيفية استعادة لمعان الواجهات الزجاجية والكلادينج المتأكسد بأحدث التقنيات مع م. محمود السيد.",
+          "thumbnailUrl": "https://img.youtube.com/vi/JMAMZV0BhZk/hqdefault.jpg",
+          "uploadDate": "2026-07-28T12:00:00+02:00",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/JMAMZV0BhZk"
         },
         {
           "@type": "FAQPage",
           "@id": "https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html#faq",
-          "isPartOf": { "@id": "https://habib-clean.com/blog/blog26-دليل-معالجة-أكسدة-وتكلس-الواجهات.html" },
           "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "كيف تزيل تكلس وأكسدة الواجهات الزجاجية والكلادينج دون خدش؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "تتم إزالة التكلس عبر تفكيك أملاح الكالسيوم بمحاليل إزالة ترسبات متوازنة (Descalers) ووسادات تلميع غير خادشة، ثم الشطف بالمياه منزوعة المعادن (DI Water) بنسبة أملاح صفرية، وتطبيق عازل النانو لمنع تكرار البقع."
+              }
+            },
             {
               "@type": "Question",
               "name": "ما هي بقع المياه العسرة (Hard Water Stains) على الزجاج؟",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "هي بقع بيضاء طباشيرية تتكون عندما تتبخر مياه محملة بالمعادن (مثل الكالسيوم والمغنيسيوم) على سطح الزجاج، وتلتصق بقوة مكونة طبقة كلسية يصعب إزالتها بالتنظيف العادي."
+                "text": "هي بقع بيضاء طباشيرية تتكون عندما تتبخر مياه الرشاشات أو الأمطار المحملة بالمعادن (الكالسيوم والمغنيسيوم) تحت حرارة الشمس، فتلتصق بالمسام المجهرية للزجاج وتقاوم الغسيل التقليدي."
               }
             },
             {
@@ -201,7 +159,15 @@
               "name": "كيف تقوم تقنية (DI Water) بحل مشكلة أكسدة الواجهات؟",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "تقنية المياه منزوعة المعادن تعتمد على تنقية المياه من أي شوائب أيونية لتصل نسبة الأملاح بها إلى الصفر. عند استخدامها لغسيل الواجهة، تذيب الأوساخ وتتبخر دون ترك أي بقعة."
+                "text": "تقنية المياه منزوعة المعادن تعتمد على فلاتر تنقية تزيل الشوائب الأيونية لتصل نسبة الأملاح إلى (0 PPM). عند غسيل الواجهة بها، تجذب الأوساخ وتتبخر كلياً دون ترك أي أثر كلسي."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "هل يمكن تنظيف الكلادينج المتأكسد وإعادته لحالته الأصلية؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "نعم، يتم علاج الكلادينج المتأكسد بمحاليل قلوية خفيفة ومواد تلميع مخصصة تزيل طبقة الأكسدة الباهتة دون حرق الطلاء الحراري، مع إضافة طبقة حماية تعيد للون عمقه ولمعانه."
               }
             }
           ]
@@ -220,6 +186,7 @@
             --tech-accent: #8e44ad;
             --danger-color: #e74c3c;
             --whatsapp-green: #25D366;
+            --shadow-soft: 0 15px 45px rgba(0,0,0,0.05);
         }
 
         html { scroll-behavior: smooth; }
@@ -229,10 +196,11 @@
             margin: 0;
             background: var(--light-bg);
             color: var(--text-color);
-            line-height: 1.95;
+            line-height: 1.9;
             text-align: right;
             direction: rtl;
             padding-bottom: 80px;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* Progress Bar */
@@ -249,62 +217,79 @@
 
         header.article-header {
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
-            border-bottom: 3px solid var(--gold-accent);
+            border-bottom: 4px solid var(--gold-accent);
             color: white;
-            padding: 60px 15px 80px;
+            padding: 75px 15px 70px;
             text-align: center;
         }
 
+        .eeat-badge { display: inline-block; background: rgba(197,160,89,0.15); border: 1px solid var(--gold-accent); color: var(--gold-accent); padding: 6px 20px; border-radius: 30px; font-size: 0.95rem; font-weight: 800; margin-bottom: 15px; }
         header.article-header h1 {
             font-family: 'Playfair Display', Georgia, serif;
             color: var(--gold-accent);
-            font-size: clamp(30px, 5vw, 42px);
-            margin: 0;
-            letter-spacing: 1px;
+            font-size: clamp(26px, 5vw, 40px);
+            margin: 0 0 12px;
             font-weight: 900;
+            line-height: 1.3;
         }
 
-        header.article-header p { margin: 15px auto 0; color: #ddd; font-size: 18px; max-width: 800px; font-weight: 300;}
+        header.article-header p { margin: 0 auto; color: #ddd; font-size: 1.15rem; max-width: 800px; font-weight: 300;}
 
         main {
-            max-width: 900px;
-            margin: -40px auto 80px;
+            max-width: 950px;
+            margin: -35px auto 80px;
             background: #fff;
-            padding: clamp(30px, 5vw, 50px);
-            box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+            padding: clamp(25px, 5vw, 55px);
+            box-shadow: var(--shadow-soft);
             border-radius: 12px;
             border: 1px solid #eaeaea;
             position: relative;
             z-index: 10;
         }
 
-        h1.post-title {
-            color: var(--primary-dark);
-            font-size: clamp(26px, 4vw, 32px);
-            margin-bottom: 25px;
-            line-height: 1.4;
-            font-weight: 900;
-        }
+        /* HIGH-CONVERTING HERO ACTION CARD */
+        .hero-action-card { background: linear-gradient(135deg, var(--primary-dark) 0%, #1f242d 100%); color: #fff; border-radius: 12px; padding: 30px; margin-bottom: 35px; border: 2px solid var(--gold-accent); box-shadow: 0 15px 35px rgba(0,0,0,0.15); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+        .hero-action-info { flex: 1 1 320px; }
+        .hero-action-info h3 { color: var(--gold-accent); font-size: 22px; font-weight: 900; margin: 0 0 10px; }
+        .hero-action-info p { color: #cbd5e1; margin: 0; font-size: 1rem; line-height: 1.7; }
+        .hero-action-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+        .hero-badge-tag { background: rgba(255,255,255,0.08); padding: 5px 12px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(197,160,89,0.4); color: #fff; }
+        .btn-instant-quote { display: inline-flex; align-items: center; gap: 10px; background: var(--whatsapp-green); color: #fff; padding: 15px 30px; font-size: 1.1rem; font-weight: 900; border-radius: 50px; text-decoration: none; transition: 0.3s; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); }
+        .btn-instant-quote:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6); }
 
-        .featured-image { width: 100%; height: auto; border-radius: 10px; margin-bottom: 35px; border: 1px solid #eee; box-shadow: 0 5px 20px rgba(0,0,0,0.05);}
+        /* Snippet Bait */
+        .snippet-bait { background: #fcf9fe; border-right: 5px solid var(--tech-accent); padding: 22px; border-radius: 8px; margin-bottom: 30px; font-size: 1.05rem; line-height: 1.8; }
+        .snippet-bait strong { color: var(--primary-dark); display: block; font-size: 1.2rem; margin-bottom: 8px; }
+
+        /* PRICING & TREATMENT TABLE (SNIPPET DOMINATOR) */
+        .table-responsive { width: 100%; overflow-x: auto; margin: 30px 0; border-radius: 10px; box-shadow: 0 5px 25px rgba(0,0,0,0.05); border: 1px solid #eaeaea; }
+        .oxidation-table { width: 100%; border-collapse: collapse; text-align: right; background: #fff; }
+        .oxidation-table th { background: var(--primary-dark); color: var(--gold-accent); padding: 16px 20px; font-size: 1.05rem; font-weight: 900; border-bottom: 2px solid var(--gold-accent); }
+        .oxidation-table td { padding: 15px 20px; border-bottom: 1px solid #eee; font-size: 1rem; vertical-align: middle; }
+        .oxidation-table tr:hover { background: #fdfbf7; }
+        .price-highlight { color: #b7950b; font-weight: 900; font-size: 1.15rem; }
+        .btn-table-order { display: inline-block; background: var(--primary-dark); color: var(--gold-accent); padding: 7px 15px; border-radius: 20px; text-decoration: none; font-weight: 800; font-size: 0.85rem; border: 1px solid var(--gold-accent); transition: 0.2s; white-space: nowrap; }
+        .btn-table-order:hover { background: var(--whatsapp-green); color: #fff; border-color: var(--whatsapp-green); }
+
+        .featured-image { width: 100%; height: auto; border-radius: 10px; margin-bottom: 30px; border: 1px solid #eee; box-shadow: 0 5px 20px rgba(0,0,0,0.05);}
         
-        /* Advanced Table of Contents */
-        .toc { background: #fcf9fe; border: 1px solid #ebdcf5; border-right: 5px solid var(--tech-accent); padding: 30px; border-radius: 10px; margin: 40px 0; }
-        .toc h3 { margin-top: 0; color: var(--tech-accent); font-size: 22px; font-weight: 900; }
+        /* Table of Contents */
+        .toc { background: #fcf9fe; border: 1px solid #ebdcf5; border-right: 5px solid var(--tech-accent); padding: 25px; border-radius: 10px; margin: 35px 0; }
+        .toc h3 { margin-top: 0; color: var(--tech-accent); font-size: 20px; font-weight: 900; }
         .toc ul { list-style: none; padding-right: 15px; margin-bottom: 0; }
-        .toc ul li { margin-bottom: 14px; position: relative; font-size: 17px;}
-        .toc ul li::before { content: "⚙️"; position: absolute; right: -28px; font-size: 14px;}
+        .toc ul li { margin-bottom: 12px; position: relative; font-size: 16.5px;}
+        .toc ul li::before { content: "⚙️"; position: absolute; right: -28px; font-size: 13px;}
         .toc ul li a { color: #34495e; text-decoration: none; transition: 0.3s; font-weight: 700;}
         .toc ul li a:hover { color: var(--tech-accent); }
         
-        h2 { color: var(--primary-dark); font-size: 28px; margin-top: 55px; border-bottom: 3px solid var(--tech-accent); display: inline-block; padding-bottom: 8px; font-weight: 900; }
-        h3.sub-heading { color: #2c3e50; font-size: 22px; margin-top: 30px; font-weight: 800; }
-        p { margin-bottom: 22px; color: #444; font-size: 18px; text-align: justify; }
+        h2 { color: var(--primary-dark); font-size: clamp(22px, 3.5vw, 26px); margin-top: 50px; border-right: 5px solid var(--gold-accent); padding-right: 15px; font-weight: 900; border-bottom: 2px solid var(--light-bg); padding-bottom: 10px; }
+        h3.sub-heading { color: #2c3e50; font-size: 20px; margin-top: 25px; font-weight: 800; }
+        p { margin-bottom: 20px; color: #444; font-size: 1.05rem; text-align: justify; }
         ul.content-list { margin-bottom: 25px; padding-right: 25px; }
-        ul.content-list li { margin-bottom: 10px; font-size: 17px; color: #444; }
+        ul.content-list li { margin-bottom: 10px; font-size: 1.05rem; color: #444; }
 
-        /* YouTube Facade Gallery Styles (المرجع الفتاك) */
-        .video-gallery-title { text-align: center; border: none; margin-top: 55px; margin-bottom: 20px; font-size: 26px; color: var(--primary-dark); border-bottom: 2px dashed var(--gold-accent); padding-bottom: 10px; font-weight: 900;}
+        /* YouTube Facade Gallery Styles */
+        .video-gallery-title { text-align: center; border: none; margin-top: 50px; margin-bottom: 20px; font-size: 26px; color: var(--primary-dark); border-bottom: 2px dashed var(--gold-accent); padding-bottom: 10px; font-weight: 900;}
         .yt-facade { position: relative; width: 100%; background: #000; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid var(--gold-accent); box-shadow: 0 8px 25px rgba(0,0,0,0.1); contain: content; }
         .yt-facade.portrait { aspect-ratio: 9/16; max-width: 250px; margin: 0 auto;}
         .yt-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.3s; }
@@ -317,36 +302,36 @@
         
         /* Tech & Warning Boxes */
         .tech-box { background: #fafafa; border-right: 5px solid var(--tech-accent); padding: 25px 30px; margin: 35px 0; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-        .tech-box h4 { color: var(--tech-accent); margin-top: 0; font-size: 21px; font-weight: 900; }
+        .tech-box h4 { color: var(--tech-accent); margin-top: 0; font-size: 20px; font-weight: 900; }
         
         .warning-box { background: #fdf5f5; border-right: 5px solid var(--danger-color); padding: 25px 30px; margin: 35px 0; border-radius: 8px; }
-        .warning-box h4 { color: var(--danger-color); margin-top: 0; font-size: 21px; font-weight: 900; }
+        .warning-box h4 { color: var(--danger-color); margin-top: 0; font-size: 20px; font-weight: 900; }
         
         /* OMNI-SPIDERWEB MEGA SITEMAP */
-        .omni-spiderweb { background: var(--light-bg); border: 1px solid #eee; border-radius: 12px; padding: 40px; margin: 60px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); overflow: hidden; }
+        .omni-spiderweb { background: var(--light-bg); border: 1px solid #eee; border-radius: 12px; padding: 35px; margin: 50px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); overflow: hidden; }
         .omni-spiderweb::before { content: ""; position: absolute; top: 0; right: 0; width: 100%; height: 6px; background: linear-gradient(90deg, var(--gold-accent), var(--primary-dark)); }
-        .omni-header { text-align: center; margin-bottom: 30px; }
-        .omni-header h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 15px 0; border: none;}
+        .omni-header { text-align: center; margin-bottom: 25px; }
+        .omni-header h3 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 10px 0; border: none;}
         
-        .omni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
-        .omni-grid a { background: #fff; padding: 12px 15px; border-radius: 6px; border: 1px solid #eaeaea; color: #333; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; position: relative; }
+        .omni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+        .omni-grid a { background: #fff; padding: 12px 15px; border-radius: 6px; border: 1px solid #eaeaea; color: #333; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; }
         .omni-grid a:hover { background: var(--primary-dark); color: var(--gold-accent); border-color: var(--primary-dark); transform: translateX(-3px); }
         .omni-grid a::before { content: "🔗"; font-size: 13px; margin-left: 8px; opacity: 0.5; }
 
-        .faq-section { background: #f9f9f9; padding: 35px 30px; border-radius: 10px; margin-top: 60px; border: 1px solid #eaeaea; }
-        .faq-item { margin-bottom: 30px; }
+        .faq-section { background: #f9f9f9; padding: 35px 30px; border-radius: 10px; margin-top: 50px; border: 1px solid #eaeaea; }
+        .faq-item { margin-bottom: 25px; padding-right: 15px; border-right: 4px solid var(--gold-accent); }
         .faq-item:last-child { margin-bottom: 0;}
-        .faq-item h4 { margin: 0 0 12px 0; color: var(--primary-dark); font-size: 20px; font-weight: 900; }
-        .faq-item p { margin-bottom: 0; font-size: 17px;}
+        .faq-item h4 { margin: 0 0 10px 0; color: var(--primary-dark); font-size: 19px; font-weight: 900; }
+        .faq-item p { margin-bottom: 0; font-size: 1rem;}
         
         /* Ultimate VIP Conversion CTA */
-        .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #1a1c23 100%); padding: 55px 40px; margin-top: 60px; text-align: center; border-radius: 15px; color: #fff; box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
-        .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 28px; font-weight: 900;}
-        .cta-box p { color: #ddd; font-size: 19px; margin-bottom: 35px; max-width: 700px; margin-left: auto; margin-right: auto;}
-        .btn-whatsapp { display: inline-block; background: #25D366; color: #fff; padding: 20px 50px; font-weight: 900; font-size: 22px; text-decoration: none; border-radius: 50px; transition: 0.3s ease; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);}
+        .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #1a1c23 100%); padding: 50px 30px; margin-top: 50px; text-align: center; border-radius: 15px; color: #fff; box-shadow: 0 15px 40px rgba(0,0,0,0.2); border-bottom: 4px solid var(--gold-accent); }
+        .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 26px; font-weight: 900;}
+        .cta-box p { color: #ddd; font-size: 18px; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;}
+        .btn-whatsapp { display: inline-block; background: var(--whatsapp-green); color: #fff; padding: 18px 45px; font-weight: 900; font-size: 20px; text-decoration: none; border-radius: 50px; transition: 0.3s ease; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);}
         .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-4px); box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6); }
         
-        /* FIXED 3 FLOATING ACTION BUTTONS (Call, WhatsApp, Story Bubble) */
+        /* Floating Action Buttons */
         .contact-container { position: fixed; bottom: 25px; left: 25px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
         .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: 0.3s; border: 2px solid var(--gold-accent); cursor: pointer; }
         .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
@@ -358,7 +343,7 @@
         @keyframes pulseAnim { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.15); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
         @keyframes floatBubble { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
 
-        /* Compact Centered Story Modal (فخ الكونفرجن) */
+        /* Story Modal */
         .centered-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 11, 14, 0.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .centered-modal-overlay.active { opacity: 1; visibility: visible; }
         .modal-story-box { background: #fff; width: 85%; max-width: 440px; padding: 30px 25px; border-radius: 16px; border-top: 6px solid var(--tech-accent); box-shadow: 0 25px 50px rgba(0,0,0,0.35); position: relative; text-align: center; transform: scale(0.8) translateY(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -369,55 +354,124 @@
         .modal-story-box h4 { color: var(--primary-dark); font-size: 22px; font-weight: 900; margin: 0 0 12px 0; }
         .modal-story-box p { color: #555; font-size: 15.5px; line-height: 1.7; margin-bottom: 25px; text-align: right; }
         .modal-actions { display: flex; gap: 8px; }
-        .modal-btn-action { flex: 1; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 900; font-size: 15px; text-align: center; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .modal-btn-action { flex: 1; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 900; font-size: 15px; text-align: center; transition: 0.3s; }
         .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
-        .modal-btn-action.whatsapp:hover { background: #1ebe57; transform: translateY(-2px); }
         .modal-btn-action.call { background: var(--primary-dark); color: var(--gold-accent); border: 1px solid var(--gold-accent); }
-        .modal-btn-action.call:hover { background: #262626; transform: translateY(-2px); }
 
-        /* Scroll to Top Button */
-        #scrollTopBtn { position: fixed; bottom: 90px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 45px; height: 45px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4); display: flex; justify-content: center; align-items: center; }
+        #scrollTopBtn { position: fixed; bottom: 25px; right: 25px; background: var(--gold-accent); color: var(--primary-dark); width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4); display: flex; justify-content: center; align-items: center; }
 
         footer { background: var(--primary-dark); color: #888; text-align: center; padding: 60px 20px; margin-top: 60px; font-size: 15px; border-top: 2px solid var(--gold-accent);}
         footer a { color: var(--gold-accent); text-decoration: none; }
 
         @media (max-width: 768px) {
-            main { padding: 30px 20px; margin-top: -20px; }
-            header.article-header { padding: 50px 15px 70px; }
-            .contact-container { left: auto; right: 20px; bottom: 20px; }
-            #scrollTopBtn { bottom: 20px; left: 20px; right: auto; }
+            main { padding: 25px 15px; margin-top: -20px; }
+            header.article-header { padding: 50px 15px 65px; }
+            .hero-action-card { padding: 20px; }
+            .btn-instant-quote { width: 100%; justify-content: center; }
+            .contact-container { left: 50%; transform: translateX(-50%); flex-direction: row; width: auto; justify-content: center; bottom: 15px; background: rgba(255,255,255,0.95); padding: 10px 20px; border-radius: 40px; border: 1px solid var(--gold-accent); }
+            .btn-float { width: 45px; height: 45px; font-size: 20px;}
+            #scrollTopBtn { bottom: 85px; right: 15px; width: 45px; height: 45px;}
         }
     </style>
 </head>
 <body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLM4RMFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
     <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="visual-breadcrumb">
-        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة</a> <span>❯</span> معالجة أكسدة وتكلس الواجهات
+        <a href="../index.html">الرئيسية</a> <span>❯</span> <a href="blog80-cairo-greater-new-cairo-master-hub.html">المدونة الهندسية</a> <span>❯</span> معالجة أكسدة وتكلس الواجهات
     </nav>
 
     <header class="article-header">
-        <h1>Habib Clean</h1>
-        <p>موسوعة الحلول الهندسية المتقدمة لإنقاذ وترميم الواجهات الفاخرة</p>
+        <div class="eeat-badge">💎 إشراف هندسي معتمد | م. محمود السيد</div>
+        <h1>الدليل الهندسي الشامل لمعالجة أكسدة وتكلس الواجهات الزجاجية والكلادينج</h1>
+        <p>الحلول المبتكرة لإزالة بقع المياه العسرة والأملاح الكلسية بتقنية المياه منزوعة المعادن (DI Water)</p>
     </header>
 
     <main>
         <article>
-            <h1 class="post-title">الدليل الهندسي الشامل لمعالجة أكسدة وتكلس الواجهات الزجاجية والكلادينج</h1>
+
+            <!-- HIGH-CONVERTING HERO ACTION CARD (LEAD MAGNET) -->
+            <div class="hero-action-card">
+                <div class="hero-action-info">
+                    <h3>📸 صوّر تكلس الزجاج أو الكلادينج وابعته واتساب الآن!</h3>
+                    <p>أرسل صورة أو فيديو لبقع التكلس والأكسدة على واجهة فيلتك أو مقر شركتك، وسيقوم مهندس الواجهات بتشخيص درجة التكلس وتحديد تكلفة إزالته في دقائق.</p>
+                    <div class="hero-action-badges">
+                        <span class="hero-badge-tag">💧 مياه منزوعة الأملاح (0 PPM)</span>
+                        <span class="hero-badge-tag">🚫 بدون أحماض أو خدوش</span>
+                        <span class="hero-badge-tag">🛡️ عزل نانو طارد للمياه</span>
+                    </div>
+                </div>
+                <div class="hero-action-btn-box">
+                    <a href="https://wa.me/201016961497?text=مرحباً،%20عندي%20تكلس/أكسدة%20على%20واجهة%20الزجاج%20أو%20الكلادينج%20وأريد%20معاينتها" class="btn-instant-quote" target="_blank" rel="noopener">
+                        💬 إرسال صورة الواجهة واتساب
+                    </a>
+                </div>
+            </div>
+
+            <!-- Snippet Bait (Featured Snippet Catcher) -->
+            <div class="snippet-bait">
+                <strong>كيف تزيل تكلس وأكسدة الواجهات الزجاجية والكلادينج دون خدش؟</strong>
+                تتم إزالة التكلس الكلسي وبقع المياه العسرة عبر تفكيك الروابط الأيونية للكالسيوم بمحاليل إزالة ترسبات متوازنة (Descalers) وفركها بوسادات تلميع ميكروفايبر غير خادشة، ثم شطف الواجهة بالمياه منزوعة المعادن (DI Water) ذات نسبة أملاح صفرية، وتُختتم بتطبيق طبقة <strong>نانو سيراميك</strong> لمنع التصاق الأملاح مستقبلاً.
+            </div>
+
+            <!-- PRICING & TREATMENT TABLE (SNIPPET DOMINATOR) -->
+            <h2 id="pricing-table" style="margin-top: 0;">جدول معالجة تكلس وأكسدة الواجهات وتكلفتها التقديرية (2026)</h2>
+            <p>تحدد التكلفة بناءً على درجة تغلغل التكلس وارتفاع المبنى. يوضح الجدول التالي البروتوكول والأسعار الاسترشادية المعتمدة لدى <strong><a href="../glass-facade-cleaning.html" style="color:inherit; text-decoration:underline;">Habib Clean</a></strong>:</p>
+
+            <div class="table-responsive">
+                <table class="oxidation-table">
+                    <thead>
+                        <tr>
+                            <th>نوع المشكلة والخامة</th>
+                            <th>التقنية الهندسية المستخدمة</th>
+                            <th>الممارسات الخاطئة الممنوعة</th>
+                            <th>متوسط التكلفة الاسترشادية</th>
+                            <th>طلب المعالجة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>تكلس الزجاج البانورامي (بقع المياه العسرة)</strong></td>
+                            <td>مذيبات كلسية متعادلة + وسادات تلميع + شطف بـ DI Water</td>
+                            <td>ماء النار والأمواس الحديدية الجارحة</td>
+                            <td><span class="price-highlight">3,500 - 7,500 ج.م للفيلا</span></td>
+                            <td><a href="https://wa.me/201016961497?text=أريد%20علاج%20تكلس%20الزجاج%20البانورامي" class="btn-table-order">احجز المعالجة 💬</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>أكسدة وبهتان ألواح الكلادينج</strong></td>
+                            <td>محاليل قلوية لطيفة تعكس الأكسدة + كريمات تلميع وحماية</td>
+                            <td>الأحماض الكاوية وسلك الصنفرة الخشن</td>
+                            <td><span class="price-highlight">40 - 70 ج.م / م²</span></td>
+                            <td><a href="https://wa.me/201016961497?text=أريد%20معالجة%20أكسدة%20الكلادينج" class="btn-table-order">طلب تسعير 💬</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>تزهير وأملاح الواجهات الحجرية والرخام</strong></td>
+                            <td>غسيل هيدروليكي متدرج + معالجة الأملاح وعزل السيلر</td>
+                            <td>تجاهل العزل المائي بعد إزالة التمليح</td>
+                            <td><span class="price-highlight">45 - 85 ج.م / م²</span></td>
+                            <td><a href="https://wa.me/201016961497?text=أريد%20إزالة%20أملاح%20وتكلس%20واجهة%20حجرية" class="btn-table-order">طلب تسعير 💬</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>عزل الزجاج بالنانو سيراميك (Nano Shield)</strong></td>
+                            <td>سد المسام المجهرية للزجاج بطبقة طاردة للمياه والغبار</td>
+                            <td>ترك الزجاج عرضة لمياه رشاشات الحدائق</td>
+                            <td><span class="price-highlight">حسب مساحة الزجاج</span></td>
+                            <td><a href="https://wa.me/201016961497?text=أريد%20عزل%20الواجهة%20الزجاجية%20بالنانو" class="btn-table-order">طلب العزل 💬</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             
             <!-- Logo Main Image -->
             <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="أكسدة وتكلس الواجهات الزجاجية Habib Clean" class="featured-image" loading="lazy" decoding="async">
             
-            <p>تخيل أنك تنفق ملايين الجنيهات لتصميم واجهة زجاجية بانورامية لشركتك الكبرى أو قصرك الفاخر، فقط لتستيقظ بعد عدة أشهر وتجدها مغطاة ببقع بيضاء باهتة لا تزول بالغسيل العادي، أو تجد ألواح الكلادينج اللامعة قد انطفأت وأصبحت خشنة الملمس. هذه الظاهرة لا علاقة لها بالأتربة العادية، بل هي عدو أشرس بكثير يُعرف هندسياً بـ <strong>التكلس الكيميائي وأكسدة الأسطح (Oxidation & Calcification)</strong>.</p>
+            <p>تخيل أن تنفق ملايين الجنيهات لتصميم واجهة زجاجية بانورامية لشركتك أو فيلتك الفاخرة، ثم تجدها بعد عدة أشهر مغطاة ببقع بيضاء باهتة لا تزول بالغسيل العادي، أو تجد ألواح الكلادينج اللامعة قد انطفأت وأصبحت خشنة الملمس. هذه الظاهرة لا علاقة لها بالأتربة السطحية، بل هي تفاعل كيميائي يُعرف هندسياً بـ <strong>التكلس الكيميائي وأكسدة الأسطح (Oxidation & Calcification)</strong>.</p>
             
-            <p>التعامل مع هذه المشكلة بالمنظفات التقليدية أو الاعتماد على العمالة العشوائية سيؤدي حتماً إلى تدمير الواجهة للأبد. في <strong>Habib Clean</strong>، وباعتبارنا المرجع الأوحد في مصر للعناية الهندسية بالمساكن والواجهات الفاخرة، نضع بين يديك هذا الدليل الموسوعي الشامل الذي يشرح فيزياء المشكلة، ويستعرض أحدث التقنيات العالمية لمعالجتها وإنقاذ استثماراتك.</p>
+            <p>التعامل مع هذه المشكلة بالمنظفات التقليدية أو الاعتماد على العمالة غير المؤهلة قد يؤدي إلى تلف الألواح. في <strong>Habib Clean</strong> بإشراف <strong>م. محمود السيد</strong>، وضمن منظومة <a href="../glass-facade-cleaning.html" style="color:var(--primary-dark); font-weight:800; text-decoration:underline;">خدمات تنظيف وصيانة الواجهات الزجاجية</a>، نضع بين يديك هذا الدليل الهندسي الذي يشرح أسباب المشكلة والحلول التقنية المعتمدة لمعالجتها بأمان.</p>
 
-            <!-- OMEGA VIDEO GALLERY (Real YouTube Facades) -->
+            <!-- OMEGA VIDEO GALLERY -->
             <section>
                 <h2 class="video-gallery-title">🎥 شاهد على أرض الواقع: معالجة وإعادة بريق الواجهات</h2>
                 
@@ -447,141 +501,148 @@
                     </div>
                 </div>
             </section>
-            <!-- END OF VIDEO GALLERY -->
 
             <!-- Extended Table of Contents -->
             <nav class="toc">
                 <h3>فهرس الموسوعة التقنية:</h3>
                 <ul>
+                    <li><a href="#pricing-table">جدول معالجة تكلس وأكسدة الواجهات وتكلفتها</a></li>
                     <li><a href="#what-is-oxidation">1. ما هي أكسدة الزجاج وبقع المياه العسرة؟</a></li>
-                    <li><a href="#the-danger">2. الخطر الصامت: تدمير هيكل الزجاج</a></li>
-                    <li><a href="#common-mistakes">3. فخ الأحماض الحارقة للشركات العشوائية</a></li>
-                    <li><a href="#habib-protocol">4. بروتوكول Habib Clean لعلاج التكلس</a></li>
-                    <li><a href="#di-water">5. التكنولوجيا المطلقة: المياه منزوعة المعادن (DI)</a></li>
-                    <li><a href="#cladding-oxidation">6. الإنقاذ الخاص: معالجة أكسدة الكلادينج</a></li>
+                    <li><a href="#the-danger">2. الخطر الصامت: تأثير الإهمال على هيكل الزجاج</a></li>
+                    <li><a href="#common-mistakes">3. مخاطر الأحماض الحارقة والكاشطات المعدنية</a></li>
+                    <li><a href="#habib-protocol">4. بروتوكول Habib Clean الخماسي لعلاج التكلس</a></li>
+                    <li><a href="#di-water">5. تكنولوجيا المياه منزوعة المعادن (DI Water)</a></li>
+                    <li><a href="#cladding-oxidation">6. معالجة أكسدة ألواح الكلادينج</a></li>
                 </ul>
             </nav>
 
             <h2 id="what-is-oxidation">1. الفهم العلمي: ما هي أكسدة الزجاج وبقع المياه العسرة؟</h2>
-            <p>الزجاج تحت المجهر ليس سطحاً أملس تماماً كما تراه العين، بل يحتوي على قمم وقيعان ميكرونيه. عندما تتعرض الواجهة لمياه الأمطار المحملة بالملوثات، أو لمياه رشاشات الحدائق (والتي تكون في الغالب مياه جوفية عسرة مليئة بالكالسيوم والمغنيسيوم)، تحدث عملية كيميائية معقدة.</p>
+            <p>الزجاج تحت المجهر ليس سطحاً أملس تماماً كما تراه العين، بل يحتوي على مسام وقمم وقيعان ميكرونية. عندما تتعرض الواجهة لمياه الأمطار المحملة بالملوثات، أو لمياه رشاشات الحدائق (والتي تكون غالباً مياه غنية بأملاح الكالسيوم والمغنيسيوم)، تبدأ عملية الترسيب الكيميائي.</p>
             
-            <p>تتبخر جزيئات الماء بفعل حرارة الشمس، وتترك وراءها المعادن والأملاح لتترسب داخل تلك القيعان المجهرية. تُخبز هذه المعادن حرفياً على السطح بفعل الأشعة فوق البنفسجية (UV Rays)، مكونة <strong>"بقع المياه العسرة"</strong>، والتي تتفاعل بمرور الوقت مع السيليكا مكونة <strong>"أكسدة الزجاج"</strong>.</p>
+            <p>تتبخر جزيئات الماء بفعل حرارة الشمس، وتترك وراءها المعادن والأملاح لتترسب داخل المسام المجهرية للزجاج. ومع تعرضها المستمر للأشعة فوق البنفسجية، تتصلب هذه المعادن مكونة <strong>"بقع المياه العسرة"</strong>، والتي تتفاعل تدريجياً مع السيليكا مكونة <strong>"أكسدة الزجاج"</strong>.</p>
 
-            <h2 id="the-danger">2. الخطر الصامت: لماذا يدمر الإهمال هيكل الزجاج كلياً؟</h2>
-            <p>يعتقد بعض أصحاب المباني أن المشكلة جمالية فقط. التكلس إذا تُرك لفترات طويلة يتسبب في تآكل الطبقة الخارجية للزجاج، ولن ينفع معه أي منظف كيميائي، وسيكون الحل الوحيد والمكلف هو تغيير الألواح بالكامل.</p>
+            <h2 id="the-danger">2. الخطر الصامت: لماذا يضر الإهمال بهيكل الزجاج؟</h2>
+            <p>يعتقد البعض أن المشكلة مظهرية فقط، ولكن ترك التكلس لفترات طويلة يسبب تآكلاً في الطبقة السطحية للزجاج، مما يجعل إزالته بالغسيل العادي أمراً مستحيلاً ويتطلب تدخلاً ميكانيكياً وكيميائياً متخصصاً.</p>
 
             <div class="warning-box">
-                <h4>تحذير تقني خطير ⚠️</h4>
-                <p>ترك بقع المياه العسرة والتكلسات دون معالجة لأكثر من 6 أشهر على الواجهات المعرضة للشمس يؤدي إلى دمج المعادن في الشبكة البلورية للزجاج، مما يسبب ضرراً هيكلياً لا يُعالج بالغسيل العادي.</p>
+                <h4>تحذير تقني موثق ⚠️</h4>
+                <p>ترك بقع المياه العسرة والتكلسات دون معالجة لأشهر طويلة على الواجهات المعرضة لأشعة الشمس المباشرة يؤدي إلى اندماج الأملاح في مسام السطح، لذا يُنصح دائماً بضبط اتجاه رشاشات الحدائق بعيداً عن الزجاج البانورامي.</p>
             </div>
 
-            <h2 id="common-mistakes">3. كوارث الشركات العادية: فخ الأحماض الحارقة (Acid Etching)</h2>
-            <p>عندما تواجه الشركات غير المتخصصة هذا التكلس، يلجأ العمال للحل الأسهل والأخطر: <strong>استخدام أحماض قوية والكاشطات المعدنية الحادة.</strong></p>
+            <h2 id="common-mistakes">3. أخطاء شائعة: مخاطر الأحماض الحارقة (Acid Etching)</h2>
+            <p>عندما تواجه العمالة غير المدربة هذا التكلس، تلجأ أحياناً إلى استخدام أحماض كاوية أو شفرات حادة غير مخصصة:</p>
             <ul class="content-list">
-                <li><strong>التأثير على الزجاج:</strong> الحمض يحرق الزجاج ويسبب ضبابية دائمة (Etching)، والكاشط يحدث خدوشاً تظهر بوضوح تحت الشمس.</li>
-                <li><strong>التأثير على الكلادينج:</strong> الأحماض تدمر فواصل السيليكون وتحرق طلاء الكلادينج محولة لونه إلى الأبيض الباهت.</li>
+                <li><strong>التأثير على الزجاج:</strong> الأحماض القوية تسبب حرقاً كيميائياً وضبابية دائمة (Etching)، والأدوات الخشنة تحدث خدوشاً دائرية تظهر بوضوح مع ضوء الشمس.</li>
+                <li><strong>التأثير على الكلادينج:</strong> المواد الحارقة تتلف فواصل السيليكون وتؤدي لبهتان وتقشر الطلاء الحراري لألواح الألومنيوم.</li>
             </ul>
 
             <h2 id="habib-protocol">4. بروتوكول Habib Clean الخماسي لعلاج التكلس</h2>
-            <p>لقد قمنا بتطوير بروتوكول هندسي من 5 مراحل لضمان إزالة الأكسدة بأمان مطلق:</p>
+            <p>نعتمد منهجية هندسية من 5 مراحل متتالية لإزالة الأكسدة واستعادة نقاء الواجهة بأمان:</p>
             
-            <h3 class="sub-heading">المرحلة 1: الفحص الدقيق وتحديد نوع التكلس</h3>
-            <p>تحديد ما إذا كان التكلس سطحياً أم متغلغلاً، لاختيار التركيبة الكيميائية المناسبة.</p>
+            <h3 class="sub-heading">المرحلة 1: الفحص الميداني وتحديد درجة التكلس</h3>
+            <p>معاينة الواجهة لتحديد ما إذا كانت الرواسب سطحية أم متغلغلة، واختيار تركيز المحلول المناسب لنوع الزجاج.</p>
             
-            <h3 class="sub-heading">المرحلة 2: التليين الكيميائي المتعادل</h3>
-            <p>استخدام مركبات إزالة ترسبات (Descalers) لتفكيك الروابط الأيونية للكالسيوم دون المساس بسطح السيليكا.</p>
+            <h3 class="sub-heading">المرحلة 2: التليين الكيميائي المتوازن</h3>
+            <p>استخدام مركبات إزالة ترسبات معتمدة (Descalers) تعمل على تفكيك الروابط الأيونية للأملاح دون المساس بطبقة الزجاج.</p>
             
-            <h3 class="sub-heading">المرحلة 3: الرفع الميكانيكي الآمن</h3>
-            <p>استخدام وسادات تلميع (Polishing Pads) ناعمة لفرك السطح برفق، مما يرفع المعادن دون خدوش.</p>
+            <h3 class="sub-heading">المرحلة 3: الصقل الميكانيكي الآمن</h3>
+            <p>استخدام وسادات تلميع دقيقة (Micro-Polishing Pads) لرفع الرواسب المفككة بلطف دون إحداث أي تجريح.</p>
             
-            <h3 class="sub-heading">المرحلة 4: التعادل الكيميائي</h3>
-            <p>غسل الواجهة بمواد ذات معامل قلوية خفيف لإيقاف أي تفاعل وإعادة السطح لحالته الحيادية.</p>
+            <h3 class="sub-heading">المرحلة 4: الشطف بالمياه النقية</h3>
+            <p>غسل الواجهة بالكامل لإيقاف أي تفاعل كيميائي وإعادة السطح لدرجة الحموضة المتعادلة.</p>
             
-            <h3 class="sub-heading">المرحلة 5: العزل النانوي (Nano-Sealing)</h3>
-            <p>تطبيق طبقة نانو سيراميك شفافة تملأ مسام الزجاج، لتمنع المياه المستقبلية من الالتصاق.</p>
+            <h3 class="sub-heading">المرحلة 5: العزل الوقائي بالنانو (Nano-Sealing)</h3>
+            <p>تطبيق طبقة حماية شفافة بتقنية <a href="blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html" style="color:var(--primary-dark); font-weight:800; text-decoration:underline;">حماية الواجهات بالنانو سيراميك</a>، لغلق المسام المجهرية ومنع التصاق قطرات المياه مستقبلاً.</p>
 
-            <h2 id="di-water">5. التكنولوجيا المطلقة: المياه منزوعة المعادن (DI Water)</h2>
-            <p>استثمرت <strong>Habib Clean</strong> في أحدث أنظمة تنقية المياه المزدوجة (Reverse Osmosis & Deionization).</p>
+            <h2 id="di-water">5. التكنولوجيا المتقدمة: المياه منزوعة المعادن (DI Water)</h2>
+            <p>تعتمد <strong>Habib Clean</strong> على أنظمة فلترة وتنقية المياه المزدوجة (Deionization Systems) في غسيل الواجهات الزجاجية المرتفعة.</p>
             
             <div class="tech-box">
-                <h4>سر تقنية المياه فائقة النقاء 💧</h4>
-                <p>معداتنا تقوم بسحب المياه وتمريرها عبر فلاتر لتخرج مياه بنسبة أملاح (0 PPM). هذه المياه "الجائعة" عند ضخها عبر أعمدة الكربون الفايبر، تمتص الأوساخ كالمغناطيس، وتتبخر دون ترك أي أثر كلسي.</p>
+                <h4>كيف تعمل تقنية المياه منزوعة الأملاح؟ 💧</h4>
+                <p>تمر المياه عبر فلاتر راتنجية تزيل الأملاح والمعادن الذائبة لتصل درجة النقاء إلى (0 PPM). عند ضخ هذه المياه على الزجاج، تقوم بامتصاص الشوائب وتجف تلقائياً دون ترك أي بقع أو خطوط جيرية.</p>
             </div>
 
-            <h2 id="cladding-oxidation">6. الإنقاذ الخاص: معالجة أكسدة ألواح الكلادينج</h2>
-            <p>علاج الكلادينج المتاكسد يتطلب محاليل (Alkaline-based) تزيل الأكسدة بلطف لكي لا نزيل طبقة الحماية الأصلية للطلاء، يليها تطبيق كريمات حماية تعيد للون عمقه وبريقه.</p>
+            <h2 id="cladding-oxidation">6. معالجة أكسدة ألواح الكلادينج</h2>
+            <p>يتطلب علاج الكلادينج المتأكسد استخدام منظفات متعادلة ومواد تلميع غير كاشطة تزيل طبقة الأكسدة السطحية بلطف، مع الحفاظ على طبقة الطلاء الأصلي، متبوعة بمواد حماية تعيد للواجهة رونقها؛ ويمكنك مراجعة <a href="blog25-دليل-صيانة-واجهات-القصور-الفيلات.html" style="color:var(--primary-dark); font-weight:800; text-decoration:underline;">الدليل الشامل لصيانة واجهات القصور والفيلات</a> لمزيد من التفاصيل.</p>
 
             <!-- OMNI-SPIDERWEB MEGA SITEMAP -->
             <section class="omni-spiderweb">
                 <div class="omni-header">
-                    <h3>🌐 منظومة العناية المتكاملة بالواجهات</h3>
+                    <h3>🌐 منظومة العناية المتكاملة بالواجهات والقصور</h3>
                 </div>
                 <div class="omni-grid">
+                    <a href="../index.html">الصفحة الرئيسية للموقع</a>
+                    <a href="../glass-facade-cleaning.html">قسم تنظيف الواجهات الزجاجية</a>
+                    <a href="blog23-تقنية-الوصول-بالحبال-لتنظيف-الواجهات.html">تقنية الوصول بالحبال (سبايدر)</a>
                     <a href="blog24-حماية-الواجهات-الزجاجية-والكلادينج-من-الأتربة.html">تكنولوجيا حماية الواجهات بالنانو</a>
-                    <a href="blog25-دليل-صيانة-واجهات-القصور-الفيلات.html">الدليل الشامل لصيانة واجهات القصور</a>
-                    <a href="blog80-cairo-greater-new-cairo-master-hub.html">خدماتنا المعتمدة في التجمع والقاهرة الكبرى</a>
+                    <a href="blog25-دليل-صيانة-واجهات-القصور-الفيلات.html">دليل صيانة واجهات القصور</a>
+                    <a href="blog80-cairo-greater-new-cairo-master-hub.html">خدماتنا في القاهرة الجديدة</a>
                 </div>
             </section>
 
-            <!-- Comprehensive FAQ Section -->
-            <section class="faq-section">
-                <h2 style="border: none; margin-top: 0; padding-bottom: 15px;">الأسئلة الشائعة حول علاج التكلس (FAQ)</h2>
+            <!-- Comprehensive FAQ Section (100% Synced with JSON-LD) -->
+            <section class="faq-section" id="faq">
+                <h2 style="border: none; margin-top: 0; padding-bottom: 15px;">الأسئلة الشائعة حول علاج تكلس الواجهات (FAQ)</h2>
                 <div class="faq-item">
-                    <h4>ما هي بقع المياه العسرة (Hard Water Stains) على الزجاج؟</h4>
-                    <p>هي بقع بيضاء تتكون عندما تتبخر مياه محملة بالمعادن وتلتصق بقوة تحت تأثير الشمس، مكونة طبقة كلسية يصعب إزالتها بالتنظيف العادي.</p>
+                    <h4>كيف تزيل تكلس وأكسدة الواجهات الزجاجية والكلادينج دون خدش؟</h4>
+                    <p>تتم إزالة التكلس عبر تفكيك أملاح الكالسيوم بمحاليل إزالة ترسبات متوازنة (Descalers) ووسادات تلميع غير خادشة، ثم الشطف بالمياه منزوعة المعادن (DI Water) بنسبة أملاح صفرية، وتطبيق عازل النانو لمنع تكرار البقع.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>كيف تقوم تقنية (DI Water) بحل مشكلة أكسدة الواجهات كلياً؟</h4>
-                    <p>المياه منزوعة المعادن تعتمد على تنقية المياه من الشوائب الأيونية لتصل نسبة الأملاح إلى الصفر المطلق. عند استخدامها لغسيل الواجهة، تذيب الأوساخ ثم تتبخر دون ترك أي أثر.</p>
+                    <h4>ما هي بقع المياه العسرة (Hard Water Stains) على الزجاج؟</h4>
+                    <p>هي بقع بيضاء طباشيرية تتكون عندما تتبخر مياه الرشاشات أو الأمطار المحملة بالمعادن (الكالسيوم والمغنيسيوم) تحت حرارة الشمس، فتلتصق بالمسام المجهرية للزجاج وتقاوم الغسيل التقليدي.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>كيف تقوم تقنية (DI Water) بحل مشكلة أكسدة الواجهات؟</h4>
+                    <p>تقنية المياه منزوعة المعادن تعتمد على فلاتر تنقية تزيل الشوائب الأيونية لتصل نسبة الأملاح إلى (0 PPM). عند غسيل الواجهة بها، تجذب الأوساخ وتتبخر كلياً دون ترك أي أثر كلسي.</p>
                 </div>
                 <div class="faq-item">
                     <h4>هل يمكن تنظيف الكلادينج المتأكسد وإعادته لحالته الأصلية؟</h4>
-                    <p>نعم، باستخدام محاليل كيميائية تعكس عملية الأكسدة دون حرق الطلاء، يليها تلميع واقٍ لإعادة اللمعان الأصلي.</p>
+                    <p>نعم، يتم علاج الكلادينج المتأكسد بمحاليل قلوية خفيفة ومواد تلميع مخصصة تزيل طبقة الأكسدة الباهتة دون حرق الطلاء الحراري، مع إضافة طبقة حماية تعيد للون عمقه ولمعانه.</p>
                 </div>
             </section>
 
             <!-- Ultimate VIP Conversion CTA -->
             <div class="cta-box">
-                <h3>لا تترك واجهة قصرك فريسة للتآكل الكيميائي</h3>
-                <p>التدخل الهندسي السريع ينقذ استثماراتك الملايينية. اعتمد على تكنولوجيا المياه منزوعة المعادن من Habib Clean لاستعادة بريق الواجهات الفاخرة.</p>
-                <a href="../thankyou-whatsapp.html" class="btn-whatsapp">تواصل مع الإدارة الهندسية لطلب معاينة عاجلة</a>
+                <h3>استعد نقاء وبريق واجهة فيلتك أو مقر شركتك اليوم</h3>
+                <p>تواصل مع م. محمود السيد وفريق Habib Clean لتنسيق معاينة فنية لواجهتك واختيار البروتوكول الآمن لإزالة التكلس والأكسدة.</p>
+                <a href="https://wa.me/201016961497?text=مرحباً،%20أريد%20معاينة%20وعرض%20سعر%20لعلاج%20تكلس%20وأكسدة%20واجهة" class="btn-whatsapp" target="_blank" rel="noopener">💬 تواصل مع الإدارة الهندسية عبر واتساب</a>
             </div>
         </article>
     </main>
 
-    <!-- FIXED 3 FLOATING ACTION BUTTONS (Call, WhatsApp, Story Bubble) -->
+    <!-- FIXED 3 FLOATING ACTION BUTTONS -->
     <div class="contact-container">
-        <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
-        <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
-        <button id="openStoryBtn" class="btn-float story-bubble" title="قصة كارثة الزجاج">
+        <a href="tel:+201016961497" class="btn-float call" title="اتصل بنا">📞</a>
+        <a href="https://wa.me/201016961497?text=مرحباً،%20أريد%20معاينة%20وعرض%20سعر%20لعلاج%20تكلس%20وأكسدة%20واجهة" class="btn-float whatsapp" title="تواصل واتساب" target="_blank" rel="noopener">💬</a>
+        <button id="openStoryBtn" class="btn-float story-bubble" title="قصة معالجة الزجاج">
             <span class="pulse-ring"></span>
             🤫
         </button>
     </div>
 
-    <!-- Compact Centered Story Modal (فخ الكونفرجن) -->
+    <!-- Compact Centered Story Modal -->
     <div id="centerStoryModal" class="centered-modal-overlay">
         <div class="modal-story-box">
             <button id="closeStoryBtn" class="close-modal-x">&times;</button>
-            <div class="story-emoji-header">🪟😱</div>
-            <h4>كارثة "الزجاج المعتم" في قصر المنسي!</h4>
-            <p>في قصر ملكي، استيقظ رجل الأعمال الشهير ليجد واجهة القصر الزجاجية البانورامية قد تحولت إلى اللون الأبيض الغائم تماماً بفعل تكلس مياه الرشاشات.. لدرجة أنه حاول الخروج فصدمته الزجاجة لأنه ظنها مفتوحة من شدة العتامة! 🤕<br><br>استعان بشركة هواة رشت أحماضاً حارقة دمرت فواصل السيليكون وغرقت صالة الاستقبال بالماء! 🌊<br><br>لكن بفضل وحدة المياه منزوعة المعادن (DI Water) وبروتوكول <strong>Habib Clean</strong> الخماسي، عادت الواجهة تلمع كألماس خالص في ساعتين! ✨👑</p>
+            <div class="story-emoji-header">🪟✨</div>
+            <h4>إنقاذ واجهة بانورامية من التكلس الشديد!</h4>
+            <p>واجه أحد ملاك الفيلات في التجمع الخامس مشكلة تعتيم كامل للواجهة الزجاجية المطلة على الحديقة بسبب مياه الرشاشات الجوفية، وبعد فشل محاولات التنظيف التقليدي، كاد يقرر استبدال ألواح الزجاج بتكلفة باهظة.<br><br>تدخل فريق <strong>Habib Clean</strong> باستخدام محاليل تفكيك الكلس الآمنة ووحدة المياه منزوعة الأملاح (DI Water)، لتعود الواجهة شفافة ونقية تماماً مع تطبيق عازل النانو لحمايتها مستقبلاً!</p>
             <div class="modal-actions">
-                <a href="../thankyou-whatsapp.html" class="modal-btn-action whatsapp">💬 علاج تكلس الزجاج</a>
-                <a href="../call-thanks.html" class="modal-btn-action call">📞 اتصال بالخبير</a>
+                <a href="https://wa.me/201016961497?text=أريد%20حجز%20معاينة%20لعلاج%20تكلس%20الزجاج" class="modal-btn-action whatsapp" target="_blank" rel="noopener">💬 علاج تكلس الزجاج</a>
+                <a href="tel:+201016961497" class="modal-btn-action call">📞 اتصال بالخبير</a>
             </div>
         </div>
     </div>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" style="position: fixed; bottom: 90px; right: 20px; background: var(--gold-accent); color: var(--primary-dark); width: 45px; height: 45px; border-radius: 50%; border: none; font-size: 1.5rem; font-weight: 900; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; box-shadow: 0 5px 15px rgba(183, 149, 11, 0.4); display: flex; justify-content: center; align-items: center;" aria-label="العودة للأعلى" title="العودة لأعلى الصفحة">↑</button>
+    <button id="scrollTopBtn" aria-label="العودة للأعلى" title="العودة لأعلى الصفحة">↑</button>
 
     <footer>
-        <strong style="font-family: 'Playfair Display', serif; color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 12px; letter-spacing: 2px;">ELHABIB CLEAN</strong>
-        <p>© 2026 Elhabib Clean جميع الحقوق محفوظة | <a href="../privacy.html">سياسة الخصوصية</a></p>
+        <strong style="font-family: 'Playfair Display', serif; color: var(--gold-accent); font-size: 24px; display: block; margin-bottom: 12px; letter-spacing: 2px;">HABIB CLEAN</strong>
+        <p>© 2026 Habib Clean جميع الحقوق محفوظة | المقر: المعادي - القاهرة | التغطية: التجمع الخامس، الشيخ زايد، وأكتوبر</p>
     </footer>
 
-    <!-- Script for Progress Bar, YouTube Facades, Scroll to Top, GCLID & Story Modal -->
+    <!-- Pure Zero-Tracking Vanilla Scripts -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         // Progress Bar
@@ -618,19 +679,6 @@
         const closeModal = () => { modal.classList.remove('active'); };
         closeBtn.addEventListener('click', closeModal);
         modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-
-        // GCLID Tracking
-        const urlParams = new URLSearchParams(window.location.search);
-        const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
-        if (gclid) {
-            sessionStorage.setItem("gclid_val", gclid);
-            document.querySelectorAll('a').forEach(link => {
-                if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
-                    const separator = link.href.includes('?') ? '&' : '?';
-                    link.href += separator + 'gclid=' + encodeURIComponent(gclid);
-                }
-            });
-        }
       });
     </script>
 </body>
