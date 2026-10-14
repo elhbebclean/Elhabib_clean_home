@@ -1,82 +1,27 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <meta charset="UTF-8">
     <!-- Favicon -->
     <link rel="icon" href="https://habib-clean.com/favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="https://habib-clean.com/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#0a0b0e">
     
-    <!-- DNS Prefetch & Preconnect (المرجع الفتاك V2.0) -->
+    <!-- DNS Prefetch & Preconnect (Zero-Tracking Speed 100/100) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://www.youtube.com">
 
     <!-- Preload Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
 
-    <!-- Delayed GTM & Meta Pixel for Lightning Speed (المرجع الفتاك) -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var trackingLoaded = false;
-        function loadTracking() {
-          if (trackingLoaded) return;
-          trackingLoaded = true;
-          
-          // 1. Load GTM
-          (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-KLM4RMFM');
-
-          // 2. Load Facebook Pixel
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3076333772698182');
-          fbq('track', 'PageView');
-        }
-
-        // Deferred via requestIdleCallback for INP optimization
-        function scheduleTracking() {
-          if (trackingLoaded) return;
-          if (window.requestIdleCallback) {
-            window.requestIdleCallback(loadTracking, { timeout: 2000 });
-          } else {
-            setTimeout(loadTracking, 200);
-          }
-        }
-
-        // Load on interaction for immediate tracking
-        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
-          window.addEventListener(event, scheduleTracking, { once: true, passive: true });
-        });
-
-        // Delayed by 7 seconds to completely bypass Lighthouse scanners
-        setTimeout(scheduleTracking, 7000);
-      });
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3076333772698182&ev=PageView&noscript=1" alt=""/>
-    </noscript>
-
-    <!-- Ultimate Galactic Semantic SEO Meta Tags -->
-    <title>التنظيف والترميم الهندسي للأثاث الجلدي الفاخر | Habib Clean</title>
-    <meta name="description" content="كيف تعتني بالصالونات الجلدية الطبيعية في قصرك؟ الدليل الشامل لتنظيف، ترطيب، وحماية الأثاث الجلدي من التشققات، مع خريطة موسوعة Habib Clean الشاملة.">
-    <meta name="keywords" content="تنظيف الأثاث الجلدي, صيانة الصالونات الجلد, تلميع الجلد الطبيعي, حماية كنب الجلد من التشقق, Habib Clean, المعادي, القاهرة, التجمع الخامس, الشيخ زايد">
-    <meta name="author" content="Habib Clean">
+    <!-- Ultimate High-Converting SEO Meta Tags -->
+    <title>تنظيف وترطيب الأثاث الجلدي الفاخر في القصور 2026 | Habib Clean أفضل شركة تنظيف منازل بالقاهرة</title>
+    <meta name="description" content="كيف تحمي الصالونات الجلدية الطبيعية من التشقق والبهتان؟ دليلك الهندسي لتنظيف وترطيب الأثاث الجلدي بزيوت المينك وشمع النحل مع جدول الأسعار من Habib Clean (Cleaning Services Cairo & Deep Cleaning Egypt).">
+    <meta name="keywords" content="تنظيف الأثاث الجلدي, صيانة الصالونات الجلد, تلميع الجلد الطبيعي, حماية كنب الجلد من التشقق, أفضل شركات تنظيف منازل بالقاهرة, شركة تنظيف منازل, خدمة تنظيف منازل, شركة نظافة بعد التشطيب, تنظيف منازل, deep cleaning egypt, cleaning services cairo, cleaning company egypt, house cleaning services near me, Habib Clean, المعادي, التجمع الخامس, الشيخ زايد">
+    <meta name="author" content="م. محمود السيد - Habib Clean">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <!-- Local SEO Meta Tags -->
@@ -86,12 +31,11 @@
     <meta name="ICBM" content="29.9602, 31.2569">
 
     <link rel="canonical" href="https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html">
-    
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="التنظيف والترميم الهندسي للأثاث الجلدي الفاخر | Habib Clean">
-    <meta property="og:description" content="أسرار العناية بالجلود الطبيعية في القصور والفيلات. كيف تمنع الجفاف والتشققات؟">
+    <meta property="og:title" content="تنظيف وترطيب الأثاث الجلدي الفاخر في القصور 2026 | Habib Clean">
+    <meta property="og:description" content="أسرار العناية بالجلود الطبيعية في القصور والفيلات بزيوت المينك وشمع النحل الطبيعي دون نقل الأثاث.">
     <meta property="og:url" content="https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html">
     <meta property="og:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
     <meta property="og:site_name" content="Habib Clean">
@@ -100,9 +44,10 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="تنظيف الأثاث الجلدي الفاخر | Habib Clean">
-    <meta name="twitter:description" content="المرجع التقني الأول للعناية بالصالونات الجلدية الطبيعية وحمايتها من التلف.">
+    <meta name="twitter:description" content="المرجع التقني الأول للعناية بالصالونات الجلدية الطبيعية وحمايتها من الجفاف والتشقق في مصر.">
+    <meta name="twitter:image" content="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png">
 
-    <!-- God-Tier Entity & SGE Optimized JSON-LD Graph V2.0 -->
+    <!-- Clean & Penalty-Free JSON-LD Graph (100% Synced with Visible Content) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -111,41 +56,26 @@
           "@type": ["LocalBusiness", "CleaningService"],
           "@id": "https://habib-clean.com/#organization",
           "name": "Habib Clean",
+          "alternateName": ["حبيب كلين", "Habib Clean Cleaning Services Cairo"],
           "url": "https://habib-clean.com/",
           "logo": "https://habib-clean.com/logo.png",
           "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
-          "description": "شركة رائدة متخصصة في صيانة الأثاث الجلدي، تنظيف المفروشات، والتعقيم الفندقي في مصر.",
-          "telephone": "01016961497",
+          "description": "أفضل شركة تنظيف منازل وقصور بالقاهرة متخصصة في صيانة وترطيب الأثاث الجلدي الفاخر، تنظيف ما بعد التشطيب (Deep Cleaning Egypt)، وجلي الرخام بالألماس.",
+          "telephone": "+201016961497",
           "priceRange": "$$$",
+          "founder": {
+            "@type": "Person",
+            "@id": "https://habib-clean.com/#founder",
+            "name": "محمود السيد",
+            "jobTitle": "المدير التنفيذي ومؤسس Habib Clean"
+          },
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Maadi",
             "addressRegion": "Cairo",
             "addressCountry": "EG"
           },
-          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Giza"],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "reviewCount": "153",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": {
-            "@type": "Review",
-            "author": { 
-              "@type": "Person", 
-              "name": "عميل موثق" 
-            },
-            "datePublished": "2026-08-15",
-            "reviewBody": "أعادوا صالوني الجلدي كالجديد تماماً، خدمة هندسية فائقة الدقة.",
-            "reviewRating": { 
-              "@type": "Rating", 
-              "ratingValue": "5", 
-              "bestRating": "5", 
-              "worstRating": "1" 
-            }
-          },
+          "areaServed": ["Cairo", "New Cairo", "Sheikh Zayed", "6th of October", "Maadi", "Madinaty", "Giza"],
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",
@@ -170,20 +100,29 @@
           ]
         },
         {
-          "@type": "Article",
+          "@type": "TechArticle",
           "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html#article",
           "isPartOf": { "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html" },
-          "headline": "الدليل الهندسي لتنظيف، ترطيب، وصيانة الأثاث الجلدي الفاخر في القصور",
-          "description": "كيف تعتني بالصالونات الجلدية الطبيعية في قصرك؟ الدليل الشامل لتنظيف، ترطيب، وحماية الأثاث الجلدي من التشققات مع Habib Clean.",
-          "author": { "@id": "https://habib-clean.com/#organization" },
+          "headline": "الدليل الهندسي لتنظيف، ترطيب، وصيانة الأثاث الجلدي الفاخر في القصور (2026)",
+          "description": "كيف تعتني بالصالونات الجلدية الطبيعية في قصرك؟ الدليل الشامل لتنظيف، ترطيب، وحماية الأثاث الجلدي من التشققات مع جدول الأسعار من Habib Clean.",
+          "image": "https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png",
+          "author": { "@id": "https://habib-clean.com/#founder" },
           "publisher": { "@id": "https://habib-clean.com/#organization" },
           "datePublished": "2026-07-28T12:00:00+02:00",
-          "dateModified": "2026-08-05T01:00:00+02:00",
+          "dateModified": "2026-10-14T19:10:00+02:00",
           "mainEntityOfPage": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html",
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "xpath": ["/html/head/title", "//h1", "//article/p[2]"]
-          }
+          "inLanguage": "ar-EG"
+        },
+        {
+          "@type": "VideoObject",
+          "@id": "https://habib-clean.com/blog/blog33-تنظيف-وصيانة-الأثاث-الجلدي.html#video",
+          "name": "بروتوكول تنظيف وترطيب الأثاث الجلدي الفاخر والتنظيف العميق للقصور | Habib Clean",
+          "description": "شاهد كيف يعيد فريق Habib Clean بقيادة م. محمود السيد الصالونات الجلدية الإيطالية والمفروشات الفاخرة لحالتها الأصلية باستخدام رغوة متعادلة الـ pH وزيوت المينك وشمع النحل.",
+          "thumbnailUrl": "https://img.youtube.com/vi/SZ3a10_1aSM/maxresdefault.jpg",
+          "uploadDate": "2026-07-28T12:00:00+02:00",
+          "embedUrl": "https://www.youtube.com/embed/SZ3a10_1aSM",
+          "contentUrl": "https://www.youtube.com/watch?v=SZ3a10_1aSM",
+          "publisher": { "@id": "https://habib-clean.com/#organization" }
         },
         {
           "@type": "FAQPage",
@@ -192,18 +131,34 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "لماذا يتشقق الجلد الطبيعي في الصالونات؟",
+              "name": "كيف يتم تنظيف وترطيب الأثاث الجلدي الطبيعي في القصور دون تشقق؟",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "يتشقق الجلد نتيجة فقدانه للزيوت الطبيعية بسبب التعرض لأشعة الشمس، درجات الحرارة العالية، أو استخدام منظفات منزلية قاسية تسحب الرطوبة من أليافه."
+                "text": "يتم تنظيف الأثاث الجلدي الطبيعي عبر 3 مراحل هندسية: الشفط المجهري الجاف للأتربة من المسام، ثم التفكيك الرغوي المتعادل (pH-Balanced Leather Foam) الخالي من الأمونيا والماء، وأخيراً التغذية البيولوجية اليدوية بزيوت المينك (Mink Oil) وشمع النحل الطبيعي لاستعادة المرونة ومنع التشقق."
               }
             },
             {
               "@type": "Question",
-              "name": "هل تقدمون خدمات صيانة وتغذية الجلود في موقع العميل؟",
+              "name": "لماذا يتشقق الجلد الطبيعي في الصالونات الفاخرة؟",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "نعم، جميع بروتوكولات التنظيف والترطيب للأثاث الجلدي الفاخر تتم داخل قصرك أو شركتك بواسطة فريق متخصص، دون الحاجة لنقل الأثاث."
+                "text": "يتشقق الجلد الطبيعي نتيجة فقدانه للزيوت الطبيعية بسبب التعرض لأشعة الشمس أو هواء التكييف الجاف، أو نتيجة خطأ شائع باستخدام المنظفات المنزلية القلوية والماء والصابون التي تسحب الرطوبة وتكسر طبقة الحماية الشمعية."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "هل تقدمون خدمات صيانة وتغذية الجلود في موقع العميل ضمن خدمة تنظيف المنازل؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "نعم، جميع بروتوكولات تنظيف وترطيب الأثاث الجلدي الفاخر تتم داخل قصرك أو فيلتك أو مقرك الإداري في القاهرة الكبرى والتجمع الخامس والشيخ زايد والمعادي دون الحاجة لنقل الأثاث، سواء كخدمة مستقلة أو ضمن باقات التنظيف العميق (Deep Cleaning Egypt)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "كم تستغرق جلسة ترميم وترطيب الصالون الجلدي ومتى يمكن استخدامه؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "تستغرق الجلسة ما بين ساعتين إلى 4 ساعات حسب عدد القطع وحالة المسام، ويمكن استخدام الصالون الجلدي فور انتهاء الجلسة بـ 30 دقيقة بعد تشرب الألياف لطبقة زيوت المينك وشمع النحل بالكامل دون أي أثر دهني."
               }
             }
           ]
@@ -231,7 +186,7 @@
             margin: 0;
             background: var(--light-bg);
             color: var(--text-color);
-            line-height: 2.1;
+            line-height: 2.05;
             text-align: right;
             direction: rtl;
             -webkit-font-smoothing: antialiased;
@@ -246,12 +201,12 @@
             background: linear-gradient(135deg, var(--primary-dark) 0%, #1a1c24 100%);
             border-bottom: 4px solid var(--gold-accent);
             color: white;
-            padding: 60px 20px;
+            padding: 55px 20px;
             text-align: center;
             position: relative;
         }
         header h1 {
-            font-family: Georgia, serif;
+            font-family: 'Playfair Display', Georgia, serif;
             color: var(--gold-accent);
             font-size: clamp(28px, 5vw, 42px);
             margin: 0;
@@ -262,7 +217,7 @@
             max-width: 1050px;
             margin: -30px auto 40px;
             background: #fff;
-            padding: 60px 55px;
+            padding: 55px 50px;
             box-shadow: 0 25px 70px rgba(0,0,0,0.08);
             border-radius: 16px;
             position: relative;
@@ -272,32 +227,183 @@
         .breadcrumb {
             font-size: 15px;
             color: #7f8c8d;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
             background: #fcfcfc;
             padding: 12px 20px;
             border-radius: 8px;
             border: 1px solid #eee;
         }
-        .breadcrumb a { color: var(--gold-accent); text-decoration: none; font-weight: 800; transition: color var(--transition-speed); }
-        .breadcrumb a:hover { color: var(--leather-accent); }
+        .breadcrumb a { color: var(--leather-accent); text-decoration: none; font-weight: 800; transition: color var(--transition-speed); }
+        .breadcrumb a:hover { color: var(--primary-dark); }
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #555;
+            background: var(--highlight-bg);
+            border: 1px solid #f0e3cc;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
         
-        h1.post-title { color: var(--primary-dark); font-size: 38px; margin-bottom: 35px; line-height: 1.5; font-weight: 900; }
+        h1.post-title { color: var(--primary-dark); font-size: clamp(26px, 4vw, 38px); margin-bottom: 25px; line-height: 1.45; font-weight: 900; }
         
-        h2 { color: var(--primary-dark); font-size: 32px; margin-top: 65px; border-bottom: 4px solid var(--leather-accent); display: inline-block; padding-bottom: 12px; font-weight: 900; }
-        p { margin-bottom: 26px; color: #333; font-size: 19px; text-align: justify; }
-        ul.content-list { margin-bottom: 30px; padding-right: 30px; }
-        ul.content-list li { margin-bottom: 14px; font-size: 18px; color: #444; }
+        /* Position Zero Featured Snippet Box */
+        .snippet-bait {
+            background: linear-gradient(135deg, #fdfaf4 0%, #fff9eb 100%);
+            border-right: 6px solid var(--leather-accent);
+            border-top: 1px solid #f0e3cc;
+            border-left: 1px solid #f0e3cc;
+            border-bottom: 1px solid #f0e3cc;
+            padding: 25px 28px;
+            border-radius: 14px;
+            margin: 25px 0 35px;
+            box-shadow: 0 10px 25px rgba(185, 119, 14, 0.08);
+        }
+        .snippet-bait strong {
+            display: block;
+            color: var(--primary-dark);
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        .snippet-bait p {
+            margin: 0;
+            font-size: 18px;
+            color: #2c3e50;
+            line-height: 1.9;
+        }
+
+        h2 { color: var(--primary-dark); font-size: clamp(23px, 3vw, 30px); margin-top: 55px; border-bottom: 4px solid var(--leather-accent); display: inline-block; padding-bottom: 10px; font-weight: 900; }
+        h3 { color: var(--leather-accent); font-size: 22px; font-weight: 800; margin-top: 30px; }
+        p { margin-bottom: 24px; color: #333; font-size: 18.5px; text-align: justify; }
+        ul.content-list { margin-bottom: 30px; padding-right: 25px; }
+        ul.content-list li { margin-bottom: 14px; font-size: 18px; color: #333; font-weight: 600; }
         
-        figure { margin: 0 0 45px 0; text-align: center; }
-        .featured-image { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.12); border: 1px solid #eee;}
+        figure { margin: 0 0 35px 0; text-align: center; }
+        .featured-image { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.12); border: 1px solid #eee; }
+
+        /* Pricing & Comparison Tables */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 25px 0 40px;
+            border-radius: 14px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+            border: 1px solid #e1e5eb;
+        }
+        .luxury-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 680px;
+            background: #fff;
+            text-align: right;
+        }
+        .luxury-table th {
+            background: var(--primary-dark);
+            color: var(--gold-accent);
+            padding: 16px 20px;
+            font-size: 16.5px;
+            font-weight: 900;
+            border-bottom: 3px solid var(--gold-accent);
+        }
+        .luxury-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c3e50;
+            vertical-align: middle;
+        }
+        .luxury-table tr:hover { background: #fdfaf4; }
+        .price-badge {
+            background: #fff8e6;
+            color: var(--leather-accent);
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--gold-accent);
+            font-weight: 900;
+            white-space: nowrap;
+        }
+        .btn-table-cta {
+            display: inline-block;
+            background: var(--whatsapp-green);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 14.5px;
+            transition: 0.25s;
+            white-space: nowrap;
+        }
+        .btn-table-cta:hover { background: #1ebe57; transform: translateY(-2px); }
+
+        /* TOC Box */
+        .toc-box {
+            background: #fafafa;
+            border: 2px solid #e6e6e6;
+            border-right: 6px solid var(--primary-dark);
+            border-radius: 14px;
+            padding: 25px 30px;
+            margin: 30px 0 40px;
+        }
+        .toc-box h3 { margin-top: 0; color: var(--primary-dark); font-size: 21px; }
+        .toc-box ul { margin: 0; padding-right: 20px; }
+        .toc-box li { margin-bottom: 10px; font-weight: 800; font-size: 16.5px; }
+        .toc-box a { color: var(--leather-accent); text-decoration: none; }
+        .toc-box a:hover { color: var(--primary-dark); text-decoration: underline; }
+
+        /* YouTube Video Facade */
+        .video-facade-wrapper {
+            margin: 45px 0;
+            background: var(--primary-dark);
+            border-radius: 18px;
+            padding: 25px;
+            border: 2px solid var(--gold-accent);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+            text-align: center;
+        }
+        .video-facade-wrapper h3 { color: var(--gold-accent); margin-top: 0; font-size: 23px; }
+        .video-facade {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+        }
+        .video-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: 0.35s; }
+        .video-facade:hover img { opacity: 1; transform: scale(1.02); }
+        .play-button-overlay {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 78px; height: 78px;
+            background: #ff0000;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            border: 3px solid #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
         
         /* THE GOD-TIER MEGA SITEMAP COMPONENT (OMNI-SPIDERWEB) */
         .omni-spiderweb {
             background: #f4f6f9;
             border: 2px solid #e1e5eb;
             border-radius: 20px;
-            padding: 50px;
-            margin: 80px 0;
+            padding: 45px 35px;
+            margin: 65px 0;
             position: relative;
             box-shadow: 0 20px 50px rgba(0,0,0,0.05);
             overflow: hidden;
@@ -308,48 +414,51 @@
             top: 0; right: 0; width: 100%; height: 8px;
             background: linear-gradient(90deg, var(--gold-accent), var(--leather-accent), var(--primary-dark));
         }
-        .omni-header { text-align: center; margin-bottom: 40px; }
-        .omni-header h3 { color: var(--primary-dark); font-size: 34px; font-weight: 900; margin: 0 0 15px 0; }
-        .omni-header p { color: #666; font-size: 18px; max-width: 800px; margin: 0 auto; text-align: center; }
+        .omni-header { text-align: center; margin-bottom: 35px; }
+        .omni-header h3 { color: var(--primary-dark); font-size: 30px; font-weight: 900; margin: 0 0 12px 0; }
+        .omni-header p { color: #555; font-size: 17.5px; max-width: 800px; margin: 0 auto; text-align: center; }
         
-        .omni-category { margin-bottom: 40px; background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); border: 1px solid #eee; }
-        .omni-category h4 { color: var(--leather-accent); font-size: 24px; margin: 0 0 20px 0; font-weight: 900; display: flex; align-items: center; }
-        .omni-category h4 span { background: #fdfaf4; padding: 8px 15px; border-radius: 8px; border: 1px solid #f2e6d9; margin-left: 15px; }
+        .omni-category { margin-bottom: 30px; background: #fff; border-radius: 12px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); border: 1px solid #eee; }
+        .omni-category h4 { color: var(--leather-accent); font-size: 21px; margin: 0 0 18px 0; font-weight: 900; display: flex; align-items: center; }
+        .omni-category h4 span { background: #fdfaf4; padding: 6px 14px; border-radius: 8px; border: 1px solid #f2e6d9; margin-left: 12px; }
         
-        .omni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
-        .omni-grid a { background: #fafafa; padding: 14px 20px; border-radius: 8px; border: 1px solid #eaeaea; color: #34495e; text-decoration: none; font-weight: 700; font-size: 15.5px; transition: all 0.2s ease-in-out; position: relative; }
+        .omni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+        .omni-grid a { background: #fafafa; padding: 13px 18px; border-radius: 8px; border: 1px solid #eaeaea; color: #34495e; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; position: relative; }
         .omni-grid a:hover { background: var(--gold-accent); color: #000; border-color: var(--gold-accent); transform: translateX(-5px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
-        .omni-grid a::before { content: "🔗"; font-size: 14px; margin-left: 8px; opacity: 0.5; }
+        .omni-grid a::before { content: "🔗"; font-size: 14px; margin-left: 8px; opacity: 0.6; }
         
-        .omni-main-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
-        .omni-main-links a { padding: 18px 40px; border-radius: 50px; font-weight: 900; font-size: 18px; text-decoration: none; color: #fff; background: var(--primary-dark); transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-        .omni-main-links a:hover { background: var(--gold-accent); transform: translateY(-3px); }
+        .omni-main-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 20px; }
+        .omni-main-links a { padding: 15px 32px; border-radius: 50px; font-weight: 900; font-size: 17px; text-decoration: none; color: #fff; background: var(--primary-dark); transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .omni-main-links a:hover { background: var(--gold-accent); color: #000; transform: translateY(-3px); }
 
-        .faq-section { background: #fdfdfd; padding: 45px; border-radius: 14px; margin-top: 75px; border: 1px solid #e0e0e0; }
-        .faq-item { margin-bottom: 40px; padding-right: 20px; border-right: 4px solid var(--gold-accent); }
+        .faq-section { background: #fdfdfd; padding: 40px 35px; border-radius: 14px; margin-top: 60px; border: 1px solid #e0e0e0; }
+        .faq-item { margin-bottom: 30px; padding-right: 20px; border-right: 4px solid var(--gold-accent); }
         .faq-item:last-child { margin-bottom: 0; }
-        .faq-item h4 { margin: 0 0 16px 0; color: var(--primary-dark); font-size: 22px; font-weight: 900; }
-        .faq-item p { margin-bottom: 0; font-size: 18.5px; color: #555;}
+        .faq-item h4 { margin: 0 0 12px 0; color: var(--primary-dark); font-size: 20px; font-weight: 900; }
+        .faq-item p { margin-bottom: 0; font-size: 17.5px; color: #444; }
         
         /* Ultimate VIP Conversion CTA */
-        .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #111 100%); padding: 70px 50px; margin-top: 80px; text-align: center; border-radius: 20px; color: #fff; box-shadow: 0 25px 60px rgba(0,0,0,0.3); }
-        .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: 34px; font-weight: 900; }
-        .cta-box p { color: #eee; font-size: 21px; margin-bottom: 45px; max-width: 800px; margin-left: auto; margin-right: auto;}
-        .btn-whatsapp { display: inline-block; background: #25D366; color: #fff; padding: 24px 60px; font-weight: 900; font-size: 24px; text-decoration: none; border-radius: 50px; transition: all var(--transition-speed) ease; box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5); }
-        .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-6px); box-shadow: 0 22px 55px rgba(37, 211, 102, 0.7); }
+        .cta-box { background: linear-gradient(135deg, var(--primary-dark) 0%, #161820 100%); padding: 55px 35px; margin-top: 60px; text-align: center; border-radius: 20px; color: #fff; border: 2px solid var(--gold-accent); box-shadow: 0 25px 60px rgba(0,0,0,0.25); }
+        .cta-box h3 { color: var(--gold-accent); margin-top: 0; font-size: clamp(24px, 3.5vw, 32px); font-weight: 900; }
+        .cta-box p { color: #eee; font-size: 19px; margin-bottom: 35px; max-width: 780px; margin-left: auto; margin-right: auto; text-align: center; }
+        .cta-buttons-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        .btn-whatsapp { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #fff; padding: 18px 40px; font-weight: 900; font-size: 20px; text-decoration: none; border-radius: 50px; transition: all var(--transition-speed) ease; box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4); }
+        .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-4px); }
+        .btn-call-direct { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--gold-accent); border: 2px solid var(--gold-accent); padding: 18px 36px; font-weight: 900; font-size: 20px; text-decoration: none; border-radius: 50px; transition: 0.3s; }
+        .btn-call-direct:hover { background: var(--gold-accent); color: #000; }
         
-        /* FIXED 3 FLOATING ACTION BUTTONS (Call, WhatsApp) */
+        /* FIXED FLOATING ACTION BUTTONS */
         .contact-container { position: fixed; bottom: 25px; left: 25px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
-        .btn-float { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: 0.3s; border: 2px solid var(--gold-accent); cursor: pointer; }
+        .btn-float { display: flex; align-items: center; justify-content: center; width: 58px; height: 58px; border-radius: 50%; color: white; text-decoration: none; font-size: 26px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: 0.3s; border: 2px solid var(--gold-accent); cursor: pointer; }
         .btn-float.call { background-color: var(--primary-dark); color: var(--gold-accent); }
-        .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: var(--whatsapp-green); }
+        .btn-float.whatsapp { background-color: var(--whatsapp-green); border-color: #fff; }
         .btn-float:hover { transform: scale(1.1); }
 
         /* STORY BUBBLE & MODAL CSS */
         .story-bubble-wrapper { position: fixed; bottom: 25px; right: 25px; z-index: 9998; }
-        .story-trigger-btn { background: linear-gradient(135deg, #171717 0%, #2a2a2a 100%); color: #fff; border: 2px solid var(--gold-accent); padding: 15px 30px; border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 12px; font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; transition: all 0.3s ease; animation: floatBubble 3s ease-in-out infinite; }
+        .story-trigger-btn { background: linear-gradient(135deg, #171717 0%, #2a2a2a 100%); color: #fff; border: 2px solid var(--gold-accent); padding: 14px 26px; border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 12px; font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 15.5px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; transition: all 0.3s ease; animation: floatBubble 3s ease-in-out infinite; }
         .story-trigger-btn:hover { transform: scale(1.05); background: var(--gold-accent); color: #000; }
-        .story-icon { font-size: 24px; }
+        .story-icon { font-size: 22px; }
         .pulse-ring { position: absolute; top: -6px; right: -6px; bottom: -6px; left: -6px; border: 2px solid var(--gold-accent); border-radius: 50px; animation: pulseAnim 2s infinite; opacity: 0.8; pointer-events: none; }
         @keyframes pulseAnim { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
         @keyframes floatBubble { 0% { transform: translateY(0); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0); } }
@@ -357,31 +466,30 @@
         /* Centered Modal Overlay */
         .centered-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 11, 14, 0.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .centered-modal-overlay.active { opacity: 1; visibility: visible; }
-        .modal-story-box { background: #fff; width: 90%; max-width: 500px; padding: 40px; border-radius: 20px; border-top: 6px solid var(--leather-accent); box-shadow: 0 30px 60px rgba(0,0,0,0.4); position: relative; text-align: center; transform: scale(0.8) translateY(30px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .modal-story-box { background: #fff; width: 90%; max-width: 500px; padding: 35px; border-radius: 20px; border-top: 6px solid var(--leather-accent); box-shadow: 0 30px 60px rgba(0,0,0,0.4); position: relative; text-align: center; transform: scale(0.8) translateY(30px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .centered-modal-overlay.active .modal-story-box { transform: scale(1) translateY(0); }
         .close-modal-x { position: absolute; top: 15px; left: 20px; background: none; border: none; font-size: 30px; color: #999; cursor: pointer; transition: 0.2s; }
         .close-modal-x:hover { color: #d32f2f; transform: rotate(90deg); }
-        .story-emoji-header { font-size: 50px; margin-bottom: 10px; line-height: 1; }
-        .modal-story-box h4 { color: var(--primary-dark); font-size: 26px; font-weight: 900; margin: 0 0 15px 0; line-height: 1.4; }
-        .modal-story-box p { color: #555; font-size: 17.5px; line-height: 1.9; margin-bottom: 30px; text-align: right; }
+        .story-emoji-header { font-size: 46px; margin-bottom: 10px; line-height: 1; }
+        .modal-story-box h4 { color: var(--primary-dark); font-size: 24px; font-weight: 900; margin: 0 0 15px 0; line-height: 1.4; }
+        .modal-story-box p { color: #555; font-size: 17px; line-height: 1.9; margin-bottom: 25px; text-align: right; }
         
-        .modal-actions { display: flex; gap: 10px; flex-direction: column;}
-        .modal-btn-action { display: block; width: 100%; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 900; font-size: 16px; text-align: center; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: none; cursor: pointer;}
+        .modal-actions { display: flex; gap: 10px; flex-direction: column; }
+        .modal-btn-action { display: block; width: 100%; box-sizing: border-box; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 900; font-size: 16px; text-align: center; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: none; cursor: pointer; }
         .modal-btn-action.whatsapp { background: var(--whatsapp-green); color: #fff; }
         .modal-btn-action.whatsapp:hover { background: #1ebe57; transform: translateY(-2px); }
         .modal-btn-action.call { background: var(--primary-dark); color: var(--gold-accent); border: 1px solid var(--gold-accent); }
-        .modal-btn-action.call:hover { background: var(--secondary-dark); transform: translateY(-2px); }
         .btn-continue-reading { background: var(--leather-accent); color: #fff; }
-        .btn-continue-reading:hover { background: var(--primary-dark); transform: translateY(-3px); }
 
         footer { background: var(--primary-dark); color: #888; text-align: center; padding: 50px 20px; margin-top: 80px; font-size: 16px; border-top: 3px solid var(--gold-accent); padding-bottom: 120px; }
         footer a { color: var(--gold-accent); text-decoration: none; font-weight: 700; }
 
         @media (max-width: 768px) {
-            main { padding: 40px 25px; margin-top: -20px;}
-            .story-bubble-wrapper { bottom: 20px; right: auto; left: 20px; } /* نقلنا زر القصة لليسار بجانب أزرار الاتصال في الموبايل */
-            .contact-container { bottom: 80px; left: 20px; }
-            .modal-story-box { padding: 30px 20px; }
+            main { padding: 35px 20px; margin-top: -20px; }
+            .story-bubble-wrapper { bottom: 20px; right: auto; left: 20px; }
+            .contact-container { bottom: 85px; left: 20px; }
+            .modal-story-box { padding: 28px 18px; }
+            .omni-spiderweb { padding: 30px 18px; }
         }
     </style>
 </head>
@@ -392,7 +500,7 @@
 
   <header>
     <h1>Habib Clean</h1>
-    <p style="margin:12px 0 0; color:#ddd; font-size:18px; font-weight: 300;">الهندسة المتقدمة لحماية الجلود الطبيعية والأثاث الفاخر</p>
+    <p style="margin:12px 0 0; color:#ddd; font-size:18px; font-weight: 600;">الهندسة المتقدمة لحماية الجلود الطبيعية والأثاث الفاخر | أفضل شركة تنظيف منازل بالقاهرة</p>
   </header>
 
   <main>
@@ -400,37 +508,156 @@
       <!-- Breadcrumbs -->
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="../index.html">الرئيسية</a> » 
-        <a href="index.html">المدونة</a> » 
+        <a href="index.html">المدونة الهندسية</a> » 
         <span>تنظيف وصيانة الأثاث الجلدي الفاخر</span>
       </nav>
+
+      <div class="article-meta">
+        <span>✍️ إشراف هندسي: <strong>م. محمود السيد</strong></span>
+        <span>📍 نطاق الخدمة: <strong>القاهرة، التجمع الخامس، الشيخ زايد، المعادي</strong></span>
+        <span>📞 طوارئ وحجز فوري: <a href="tel:01016961497" style="color:var(--leather-accent); text-decoration:none;">01016961497</a></span>
+      </div>
       
-      <h1 class="post-title">الدليل الهندسي لتنظيف، ترطيب، وصيانة الأثاث الجلدي الفاخر في القصور</h1>
+      <h1 class="post-title">الدليل الهندسي لتنظيف، ترطيب، وصيانة الأثاث الجلدي الفاخر في القصور (2026)</h1>
+
+      <!-- Position Zero Snippet Bait -->
+      <div class="snippet-bait">
+        <strong>كيف يتم تنظيف وترطيب الأثاث الجلدي الطبيعي في القصور دون تشقق؟</strong>
+        <p>يتم تنظيف الأثاث الجلدي الطبيعي (Natural Leather) عبر 3 مراحل هندسية دقيقة: الشفط الجاف المجهري للأتربة من المسام، ثم التفكيك الرغوي المتعادل (<strong>pH-Balanced Leather Foam</strong>) الخالي تماماً من الأمونيا والماء، وأخيراً التغذية البيولوجية اليدوية بزيوت المينك (<strong>Mink Oil</strong>) وشمع النحل الطبيعي لاستعادة مرونة الألياف وحمايتها من الجفاف والتشقق.</p>
+      </div>
       
       <figure>
-        <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="تنظيف وصيانة الأثاث الجلدي الطبيعي للقصور" class="featured-image" loading="eager" decoding="async">
+        <img src="https://habib-clean.com/file_00000000dda461fdaee166e6e4076454.png" alt="تنظيف وصيانة الأثاث الجلدي الطبيعي للقصور مع Habib Clean أفضل شركة تنظيف منازل بالقاهرة" class="featured-image" loading="eager" decoding="async">
       </figure>
-      
-      <p>الصالونات الجلدية وأطقم المكاتب الكلاسيكية تمثل قمة الرقي والفخامة في ديكورات القصور والمقرات الإدارية الكبرى. الجلد الطبيعي (Natural Leather) هو مادة عضوية تتنفس وتتفاعل مع البيئة المحيطة بها. وإذا لم يتم التعامل معها هندسياً وكيميائياً بالشكل الصحيح، فإنها تفقد زيوتها الطبيعية وتتعرض للجفاف، التشقق، والتقشر.</p>
-      
-      <p>استخدام الماء والصابون العادي أو الكيماويات التجارية في تنظيف الجلد هو أسوأ خطأ يمكن ارتكابه، حيث يزيل طبقة الحماية الشمعية ويترك مسام الجلد مفتوحة وعرضة للتشقق السريع. في <strong>Habib Clean</strong>، نطبق بروتوكولاً يعتمد على استعادة التوازن الكيميائي (PH Balance) للجلود الطبيعية وتغذيتها من الأعماق.</p>
 
-      <h2>1. التنظيف الجاف وإزالة الزيوت المتأكسدة</h2>
-      <p>يبدأ فريقنا المتخصص بعملية <strong>الشفط الدقيق</strong> لمسام الجلد لإزالة الأتربة الناعمة التي تعمل كشفرات مجهرية تخدش السطح عند الاحتكاك. بعد ذلك، نستخدم <strong>منظفات رغوية متخصصة (Leather Shampoos)</strong> ذات تركيبة متعادلة خالية من الأمونيا، تقوم بتفكيك زيوت الجسم المتأكسدة والبقع الداكنة بلطف شديد، ليتم مسحها بأقمشة مايكروفايبر طبية دون ترك أي أثر للبلل.</p>
+      <!-- Table of Contents -->
+      <div class="toc-box">
+        <h3>📋 فهرس الدليل الهندسي للعناية بالجلود الفاخرة</h3>
+        <ul>
+          <li><a href="#pricing-packages">جدول أسعار وباقات تنظيف وترطيب الأثاث الجلدي والنظافة الشاملة (2026)</a></li>
+          <li><a href="#dry-extraction">1. التنظيف الجاف وإزالة الزيوت المتأكسدة من مسام الجلد</a></li>
+          <li><a href="#leather-conditioning">2. تغذية وترطيب الجلد الطبيعي بزيوت المينك وشمع النحل</a></li>
+          <li><a href="#comparison-protocol">3. مقارنة بين البروتوكول البيولوجي والمنظفات التجارية</a></li>
+          <li><a href="#video-showcase">4. فيديو تطبيقي لبروتوكولات Habib Clean الفندقية</a></li>
+          <li><a href="#faq-title">5. الأسئلة الشائعة حول إنقاذ وصيانة الصالونات الجلدية</a></li>
+        </ul>
+      </div>
+      
+      <p>الصالونات الجلدية الإيطالية وأطقم المكاتب الكلاسيكية تمثل قمة الرقي والفخامة في ديكورات القصور والفيلات والمقرات الإدارية الكبرى. الجلد الطبيعي (<strong>Natural & Aniline Leather</strong>) هو مادة عضوية تتنفس وتتفاعل مع الحرارة والرطوبة المحيطة بها. وعندما تبحث عن <strong>أفضل شركات تنظيف منازل بالقاهرة</strong> أو تطلب <strong>خدمة تنظيف منازل</strong> شاملة بعد التجديد (<strong>New House Deep Cleaning Services</strong>)، فإن التعامل مع الصالونات الجلدية يتطلب معمل عناية متخصصاً وليس مجرد مسح تقليدي.</p>
+      
+      <p>استخدام الماء والصابون العادي أو الكيماويات القلوية التجارية في تنظيف الجلد هو أخطر خطأ يدمر الأثاث الفاخر؛ إذ يزيل طبقة الحماية الشمعية ويترك مسام الجلد مفتوحة وعرضة للتشقق السريع والبهتان. في <strong>Habib Clean</strong> (المصنفة كأقوى <strong>Cleaning Company Egypt</strong> للقصور والفيلات)، نطبق بروتوكولاً يعتمد على استعادة التوازن الكيميائي (<strong>pH Balance 5.0 - 5.5</strong>) للجلود الطبيعية وتغذيتها من الأعماق في موقعك دون نقل قطعة واحدة.</p>
 
-      <h2>2. تغذية وترطيب الجلد (Leather Conditioning)</h2>
-      <p>التنظيف وحده لا يكفي. لكي يحافظ الجلد على مرونته وملمسه الناعم لسنوات، يجب إعادته لحالته البيولوجية الطبيعية. نقوم بتدليك الأثاث يدوياً باستخدام <strong>كريمات الترطيب الغنية بزيوت المينك (Mink Oil) وشمع النحل الطبيعي</strong>. هذا الطلاء الحيوي يتغلغل داخل ألياف الجلد ليمنع الجفاف، ويشكل درعاً واقياً ضد الانسكابات العرضية والأشعة فوق البنفسجية (UV) التي تسبب بهتان اللون.</p>
+      <!-- Interactive Pricing & Packages Table -->
+      <h2 id="pricing-packages">جدول أسعار وباقات تنظيف وترطيب الأثاث الجلدي والنظافة الفندقية (2026)</h2>
+      <p>صممنا لك باقات مرنة تغطي العناية المنفردة بالصالونات الجلدية أو دمجها ضمن خدمات <strong>تنظيف منازل</strong> و<strong>تنظيف ما بعد التشطيب</strong> (<strong>Deep Cleaning Egypt</strong>):</p>
+
+      <div class="table-responsive">
+        <table class="luxury-table">
+          <thead>
+            <tr>
+              <th>الباقة الهندسية</th>
+              <th>نطاق الخدمة والمواد المستخدمة</th>
+              <th>التكلفة التقديرية</th>
+              <th>الحجز الفوري عبر واتساب</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>باقة إنعاش وترطيب طقم صالون جلدي (أنتريه / ركنة)</strong></td>
+              <td>شفط مجهري + رغوة pH متعادلة + تغذية بزيوت المينك وشمع النحل</td>
+              <td><span class="price-badge">تبدأ من 1,500 ج.م</span></td>
+              <td><a href="https://wa.me/201016961497?text=مرحباً%20Habib%20Clean،%20أريد%20حجز%20باقة%20تنظيف%20وترطيب%20صالون%20جلد%20طبيعي" target="_blank" rel="noopener" class="btn-table-cta">احجز الباقة 💬</a></td>
+            </tr>
+            <tr>
+              <td><strong>باقة القصور والمجالس الجلدية الكاملة (VIP Leather Care)</strong></td>
+              <td>تنظيف وترطيب أطقم الجلد + الكراسي الجلدية + المكاتب + طبقة عزل UV</td>
+              <td><span class="price-badge">تبدأ من 3,200 ج.م</span></td>
+              <td><a href="https://wa.me/201016961497?text=مرحباً%20Habib%20Clean،%20أريد%20حجز%20باقة%20القصور%20للعناية%20بالأثاث%20الجلدي" target="_blank" rel="noopener" class="btn-table-cta">احجز الباقة 💬</a></td>
+            </tr>
+            <tr>
+              <td><strong>باقة تنظيف منازل عميق + صيانة المفروشات والجلود</strong></td>
+              <td>Deep Cleaning شامل للفيلا + غسيل السجاد والكنب + ترطيب الأثاث الجلدي</td>
+              <td><span class="price-badge">معاينة وتسعير فوري</span></td>
+              <td><a href="https://wa.me/201016961497?text=مرحباً%20Habib%20Clean،%20أريد%20عرض%20سعر%20تنظيف%20عميق%20شامل%20مع%20صيانة%20الأثاث%20الجلدي" target="_blank" rel="noopener" class="btn-table-cta">اطلب تسعيرة 💬</a></td>
+            </tr>
+            <tr>
+              <td><strong>باقة شركة نظافة بعد التشطيب + حماية الأثاث والرخام</strong></td>
+              <td>إزالة غبار الجبس والدهانات + جلي الرخام بالألماس + تعقيم وتجهيز الأثاث</td>
+              <td><span class="price-badge">حسب المساحة</span></td>
+              <td><a href="https://wa.me/201016961497?text=مرحباً%20Habib%20Clean،%20أريد%20حجز%20تنظيف%20ما%20بعد%20التشطيب%20لفيلا" target="_blank" rel="noopener" class="btn-table-cta">احجز معاينة 💬</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="dry-extraction">1. التنظيف الجاف وإزالة الزيوت المتأكسدة (Dry Micro-Extraction)</h2>
+      <p>عند تعرض الفيلا لأعمال تجديد أو البحث عن <strong>شركة نظافة بعد التشطيب</strong>، تتسلل ذرات الغبار الناعم وغبار الجبس إلى ثنايا وخياطة الصالونات الجلدية. يبدأ فريقنا المتخصص بعملية <strong>الشفط الدقيق بفوهات ناعمة</strong> لمسام الجلد لإزالة الأتربة الدقيقة التي تعمل كشفرات مجهرية تخدش السطح عند الجلوس أو الاحتكاك.</p>
+      <p>بعد ذلك، نستخدم <strong>منظفات رغوية متخصصة (Leather Shampoos)</strong> ذات تركيبة متعادلة الحموضة خالية من الأمونيا والمذيبات الكحولية، تقوم بتفكيك زيوت الجسم المتأكسدة والبقع الداكنة بلطف شديد، ليتم مسحها بأقمشة مايكروفايبر طبية دون ترك أي أثر للبلل داخل المسام.</p>
+
+      <h2 id="leather-conditioning">2. تغذية وترطيب الجلد (Biological Leather Conditioning)</h2>
+      <p>التنظيف وحده لا يكفي؛ لكي يحافظ الجلد على مرونته وملمسه الحريري لسنوات طويلة في مناخ القاهرة الجاف، يجب إعادته لحالته البيولوجية الطبيعية. نقوم بتدليك الأثاث يدوياً باستخدام <strong>كريمات الترطيب الغنية بزيوت المينك (Mink Oil) وشمع النحل الطبيعي (Beeswax)</strong>.</p>
+      <ul class="content-list">
+        <li><strong>تغلغل عميق في الألياف:</strong> يعوض الزيوت الطبيعية المفقودة ويمنع تيبّس الجلد أو تشققه عند الثنيات.</li>
+        <li><strong>درع وقاية ضد الأشعة (UV Shield):</strong> يحمي الصالونات القريبة من الواجهات الزجاجية من بهتان اللون.</li>
+        <li><strong>عزل ضد الانسكابات:</strong> يغلق المسام بطبقة تتنفس ولكنها تطرد السوائل والقهوة وتمنع تبقع الجلد.</li>
+      </ul>
+
+      <!-- Comparison Table -->
+      <h2 id="comparison-protocol">3. مقارنة هندسية: بروتوكول Habib Clean مقابل الطرق التقليدية</h2>
+      <div class="table-responsive">
+        <table class="luxury-table">
+          <thead>
+            <tr>
+              <th>وجه المقارنة</th>
+              <th>بروتوكول Habib Clean (العناية البيولوجية)</th>
+              <th>شركات التنظيف العادية / المنظفات المنزلية</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>المواد المستخدمة</strong></td>
+              <td>رغوة جلد متعادلة (pH 5.5) + زيت المينك وشمع النحل</td>
+              <td>ماء وصابون أو ملمعات سيليكون تجارية رخيصة</td>
+            </tr>
+            <tr>
+              <td><strong>التأثير على المسام</strong></td>
+              <td>تغذية الألياف وفتح المسام للتنفس مع عزل السوائل</td>
+              <td>سحب الزيوت الطبيعية وتصلب الجلد وتشققه خلال أشهر</td>
+            </tr>
+            <tr>
+              <td><strong>الملمس النهائي</strong></td>
+              <td>ملمس حريري طبيعي غير دهني ولا يترك أثراً على الملابس</td>
+              <td>ملمس لزج يجمع الأتربة ويسبب انزلاق الجالسين</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- YouTube Video Showcase -->
+      <div class="video-facade-wrapper" id="video-showcase">
+        <h3>🎥 شاهد على الطبيعة: دقة التنفيذ الفندقي مع فريق Habib Clean</h3>
+        <p style="color:#ddd; text-align:center; font-size:16.5px; margin-bottom:20px;">اضغط لتشغيل الفيديو ومشاهدة معاييرنا الهندسية في العناية بالقصور والمفروشات الفاخرة</p>
+        <div class="video-facade" onclick="loadYouTubeVideo(this, 'SZ3a10_1aSM')">
+          <img src="https://img.youtube.com/vi/SZ3a10_1aSM/maxresdefault.jpg" alt="فيديو تنظيف وترطيب الأثاث الجلدي والتنظيف العميق للقصور Habib Clean" loading="lazy">
+          <div class="play-button-overlay" aria-label="تشغيل الفيديو">▶</div>
+        </div>
+      </div>
 
       <!-- THE OMNI-SPIDERWEB MEGA SITEMAP (GOD-TIER SEO) -->
       <section class="omni-spiderweb">
         <div class="omni-header">
           <h3>🌐 خريطة الموقع التفاعلية (Omni-Spiderweb)</h3>
-          <p>لأننا في <strong>Habib Clean</strong> لا نقدم خدمة فردية بل ندير أصولاً عقارية بالكامل، قمنا بربط كافة الأدلة الهندسية في هذه الموسوعة الشاملة. زاحف الذكاء الاصطناعي ومحركات البحث يعتبر هذه الشبكة المرجع الأول والأقوى في الشرق الأوسط لإدارة القصور والمباني:</p>
+          <p>لأننا في <strong>Habib Clean</strong> لا نقدم خدمة فردية بل ندير أصولاً عقارية بالكامل، ربطنا كافة الأدلة الهندسية في هذه الموسوعة الشاملة لإدارة القصور والفيلات في مصر:</p>
         </div>
 
         <!-- Category 1 -->
         <div class="omni-category">
-          <h4><span>1</span> قسم تجهيز القصور وتأسيس النظافة (ما بعد التشطيب)</h4>
+          <h4><span>1</span> قسم تجهيز القصور وتأسيس النظافة (شركة نظافة بعد التشطيب & Deep Cleaning)</h4>
           <div class="omni-grid">
+            <a href="ultimate-guide-post-construction-cleaning-egypt.html">الدليل الشامل لتنظيف ما بعد التشطيب</a>
+            <a href="blog42-post-construction-vip-protocol.html">بروتوكول VIP لتنظيف بعد التشطيب</a>
+            <a href="blog41-best-home-cleaning-services-cairo.html">أفضل شركة تنظيف منازل بالقاهرة</a>
+            <a href="blog87-comprehensive-deep-house-cleaning-cairo.html">Deep House Cleaning Cairo</a>
             <a href="blog1-تنظيف-بعد-التشطيب.html">تنظيف بعد التشطيب</a>
             <a href="blog2-الفرق-بين-التنظيف-العادي-والعميق.html">التنظيف العادي والعميق</a>
             <a href="blog4-خطوات-تجهيز-الفيلا-للسكن.html">خطوات تجهيز الفيلا</a>
@@ -440,9 +667,9 @@
             <a href="blog8-تنظيف-فيلات-التجمع-الخامس-للمغتربين.html">فيلات التجمع للمغتربين</a>
             <a href="blog9-أسرع-طريقة-لتسليم-الفيلا-نظيفة.html">أسرع تسليم للفيلا</a>
             <a href="blog10-لماذا-تفشل-شركات-التنظيف-العادية.html">فشل شركات التنظيف العادية</a>
-            <a href="blog11-أسعار-تنظيف-الفيلات-الشيخ-زايد.html">أسعار تنظيف الفيلات</a>
-            <a href="blog12-نصائح-أصحاب-القصور-الجاهزة-للاستلاستلام.html">نصائح أصحاب القصور</a>
-            <a href="cleaning-marble-after-construction.html">جلي الرخام بعد التشطيب</a>
+            <a href="blog11-أسعار-تنظيف-الفيلات-الشيخ-زايد.html">أسعار تنظيف الفيلات بالشيخ زايد</a>
+            <a href="blog12-نصائح-أصحاب-القصور-الجاهزة-للاستلام.html">نصائح أصحاب القصور</a>
+            <a href="cleaning-marble-after-construction.html">تنظيف الرخام بعد التشطيب</a>
           </div>
         </div>
 
@@ -480,11 +707,12 @@
 
         <!-- Category 4 -->
         <div class="omni-category" style="border-color: var(--leather-accent);">
-          <h4><span style="background: var(--primary-dark); color: var(--leather-accent);">4</span> قسم العناية بالأثاث الفاخر والمفروشات</h4>
+          <h4><span style="background: var(--primary-dark); color: var(--gold-accent);">4</span> قسم العناية بالأثاث الفاخر والمفروشات وإدارة القصور</h4>
           <div class="omni-grid">
+            <a href="blog40-الموسوعة-الشاملة-لإدارة-القصور.html">الموسوعة الشاملة لإدارة القصور</a>
             <a href="blog31-تنظيف-الأثاث-الفاخر-والمفروشات.html">غسيل الأثاث والحرير</a>
             <a href="blog32-تنظيف-سجاد-القصور.html">تعقيم سجاد القصور</a>
-            <a href="blog33-تنظيف-وصيانة-الأثاث-الجلدي.html">الدليل الحالي: صيانة الجلد</a>
+            <a href="blog33-تنظيف-وصيانة-الأثاث-الجلدي.html">الدليل الحالي: صيانة الجلد الطبيعي</a>
           </div>
         </div>
 
@@ -494,36 +722,47 @@
         </div>
       </section>
 
-      <!-- Semantic FAQ Section -->
+      <!-- Semantic FAQ Section (100% Synced with JSON-LD) -->
       <section class="faq-section" aria-labelledby="faq-title">
-        <h2 id="faq-title" style="border: none; margin-top: 0; padding-bottom: 20px;">الأسئلة الشائعة حول العناية بالأثاث الجلدي</h2>
+        <h2 id="faq-title" style="border: none; margin-top: 0; padding-bottom: 10px;">الأسئلة الشائعة حول العناية بالأثاث الجلدي الفاخر</h2>
         <div class="faq-item">
-          <h4>لماذا يتشقق الجلد الطبيعي في الصالونات؟</h4>
-          <p>يتشقق الجلد نتيجة فقدانه للزيوت الطبيعية بسبب التعرض لأشعة الشمس، درجات الحرارة العالية، أو استخدام منظفات منزلية قاسية تسحب الرطوبة من أليافه.</p>
+          <h4>كيف يتم تنظيف وترطيب الأثاث الجلدي الطبيعي في القصور دون تشقق؟</h4>
+          <p>يتم تنظيف الأثاث الجلدي الطبيعي عبر 3 مراحل هندسية: الشفط المجهري الجاف للأتربة من المسام، ثم التفكيك الرغوي المتعادل (pH-Balanced Leather Foam) الخالي من الأمونيا والماء، وأخيراً التغذية البيولوجية اليدوية بزيوت المينك (Mink Oil) وشمع النحل الطبيعي لاستعادة المرونة ومنع التشقق.</p>
         </div>
         <div class="faq-item">
-          <h4>هل تقدمون خدمات صيانة وتغذية الجلود في موقع العميل؟</h4>
-          <p>نعم، جميع بروتوكولات التنظيف والترطيب للأثاث الجلدي الفاخر تتم داخل قصرك أو شركتك بواسطة فريق متخصص، دون الحاجة لنقل الأثاث.</p>
+          <h4>لماذا يتشقق الجلد الطبيعي في الصالونات الفاخرة؟</h4>
+          <p>يتشقق الجلد الطبيعي نتيجة فقدانه للزيوت الطبيعية بسبب التعرض لأشعة الشمس أو هواء التكييف الجاف، أو نتيجة خطأ شائع باستخدام المنظفات المنزلية القلوية والماء والصابون التي تسحب الرطوبة وتكسر طبقة الحماية الشمعية.</p>
+        </div>
+        <div class="faq-item">
+          <h4>هل تقدمون خدمات صيانة وتغذية الجلود في موقع العميل ضمن خدمة تنظيف المنازل؟</h4>
+          <p>نعم، جميع بروتوكولات تنظيف وترطيب الأثاث الجلدي الفاخر تتم داخل قصرك أو فيلتك أو مقرك الإداري في القاهرة الكبرى والتجمع الخامس والشيخ زايد والمعادي دون الحاجة لنقل الأثاث، سواء كخدمة مستقلة أو ضمن باقات التنظيف العميق (Deep Cleaning Egypt).</p>
+        </div>
+        <div class="faq-item">
+          <h4>كم تستغرق جلسة ترميم وترطيب الصالون الجلدي ومتى يمكن استخدامه؟</h4>
+          <p>تستغرق الجلسة ما بين ساعتين إلى 4 ساعات حسب عدد القطع وحالة المسام، ويمكن استخدام الصالون الجلدي فور انتهاء الجلسة بـ 30 دقيقة بعد تشرب الألياف لطبقة زيوت المينك وشمع النحل بالكامل دون أي أثر دهني.</p>
         </div>
       </section>
 
       <!-- Ultimate VIP Conversion CTA -->
       <aside class="cta-box" aria-label="Call to Action">
-        <h3>لا تدع التشققات تدمر فخامة صالونك الجلدي</h3>
-        <p>تدخل فوراً واستعد نعومة ولمعان أثاثك الكلاسيكي. تواصل مع خبراء العناية الفندقية في Habib Clean لتطبيق بروتوكول الحماية وتغذية الجلود.</p>
-        <a href="../thankyou-whatsapp.html" class="btn-whatsapp" title="تواصل عبر الواتساب لحجز الموعد">احجز موعد العناية الفندقية عبر الواتساب الآن</a>
+        <h3>لا تدع الجفاف والتشققات تدمر فخامة صالونك الجلدي 👑</h3>
+        <p>تدخل فوراً واستعد نعومة ولمعان أثاثك الإيطالي والكلاسيكي في موقعك. تواصل مباشرة مع م. محمود السيد وفريق <strong>Habib Clean</strong> لحجز جلسة التنظيف والترطيب البيولوجي.</p>
+        <div class="cta-buttons-group">
+          <a href="https://wa.me/201016961497?text=مرحباً%20Habib%20Clean،%20أريد%20حجز%20موعد%20لتنظيف%20وترطيب%20الأثاث%20الجلدي" target="_blank" rel="noopener" class="btn-whatsapp" title="تواصل عبر الواتساب لحجز الموعد">💬 احجز عبر واتساب الآن</a>
+          <a href="tel:01016961497" class="btn-call-direct" title="اتصال مباشر">📞 اتصل مباشرة: 01016961497</a>
+        </div>
       </aside>
     </article>
   </main>
 
   <footer>
-    <p>© 2026 <strong>Habib Clean</strong> - جميع الحقوق محفوظة | <a href="../privacy.html" title="سياسة الخصوصية">سياسة الخصوصية</a></p>
+    <p>© 2026 <strong>Habib Clean</strong> - جميع الحقوق محفوظة | بإشراف <strong>م. محمود السيد</strong> | <a href="tel:01016961497">01016961497</a> | <a href="../privacy.html" title="سياسة الخصوصية">سياسة الخصوصية</a></p>
   </footer>
 
-  <!-- FIXED 3 FLOATING ACTION BUTTONS -->
+  <!-- FIXED FLOATING ACTION BUTTONS (DIRECT CALL & WHATSAPP) -->
   <div class="contact-container">
-      <a href="../call-thanks.html" class="btn-float call" title="اتصل بنا">📞</a>
-      <a href="../thankyou-whatsapp.html" class="btn-float whatsapp" title="تواصل واتساب">💬</a>
+      <a href="tel:01016961497" class="btn-float call" title="اتصل بنا مباشرة" aria-label="اتصال هاتفي مباشر">📞</a>
+      <a href="https://wa.me/201016961497?text=مرحباً%20Habib%20Clean،%20أريد%20الاستفسار%20عن%20تنظيف%20وصيانة%20الأثاث%20الجلدي%20والتنظيف%20الفندقي" target="_blank" rel="noopener" class="btn-float whatsapp" title="تواصل واتساب مباشر" aria-label="تواصل عبر واتساب">💬</a>
   </div>
 
   <!-- STORY BUBBLE (CONVERSION TRAP) -->
@@ -538,53 +777,47 @@
   <!-- Centered Story Modal -->
   <div id="centerStoryModal" class="centered-modal-overlay">
     <div class="modal-story-box">
-      <button id="closeStoryBtn" class="close-modal-x">&times;</button>
+      <button id="closeStoryBtn" class="close-modal-x" aria-label="إغلاق">&times;</button>
       <div class="story-emoji-header">🛋️😱</div>
       <h4>مأساة صالون الباشا الموروث!</h4>
-      <p>ورث "عمر" صالوناً جلدياً إيطالياً نادراً من جده، لكن خطأ كارثي من عاملة النظافة باستخدام <strong>"منظف كيميائي قاسي"</strong> جعل الجلد الطبيعي يتشقق ويبهت لونه كأنه يحتضر! 💔<br><br>كاد أن يتخلص منه للأبد، حتى تدخل فريق التدخل السريع من <strong>Habib Clean</strong>... وببروتوكول "الإنعاش البيولوجي" وخلاصة شمع النحل وزيوت المينك الطبيعية، عاد الصالون ينبض بالحياة والفخامة في 3 ساعات فقط، وكأنه صُنع بالأمس! ✨👑</p>
+      <p>ورث "عمر" صالوناً جلدياً إيطالياً نادراً من جده، لكن خطأ كارثياً من عاملة النظافة باستخدام <strong>"منظف كيميائي قاسي"</strong> جعل الجلد الطبيعي يتشقق ويبهت لونه كأنه يحتضر! 💔<br><br>كاد أن يتخلص منه للأبد، حتى تدخل فريق التدخل السريع من <strong>Habib Clean</strong>... وببروتوكول "الإنعاش البيولوجي" وخلاصة شمع النحل وزيوت المينك الطبيعية، عاد الصالون ينبض بالحياة والفخامة في 3 ساعات فقط، وكأنه صُنع بالأمس! ✨👑</p>
       
       <div class="modal-actions">
-        <a href="../thankyou-whatsapp.html" class="modal-btn-action whatsapp">💬 إنقاذ وعلاج الجلود</a>
-        <a href="../call-thanks.html" class="modal-btn-action call">📞 اتصال بخبراء الأثاث</a>
+        <a href="https://wa.me/201016961497?text=مرحباً%20Habib%20Clean،%20أريد%20إنقاذ%20وترطيب%20صالوني%20الجلدي" target="_blank" rel="noopener" class="modal-btn-action whatsapp">💬 إنقاذ وعلاج الجلود عبر واتساب</a>
+        <a href="tel:01016961497" class="modal-btn-action call">📞 اتصال مباشر: 01016961497</a>
         <button id="continueReadingBtn" class="modal-btn-action btn-continue-reading">👇 أكمل قراءة الدليل</button>
       </div>
     </div>
   </div>
 
-  <!-- Scripts: Progress Bar, GCLID & Modal -->
+  <!-- Pure Zero-Tracking Vanilla Scripts -->
   <script>
+    function loadYouTubeVideo(wrapper, videoId) {
+      wrapper.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>';
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
       // 1. Progress Bar
       window.addEventListener('scroll', function() {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
+        var bar = document.getElementById("myBar");
+        if (bar) bar.style.width = scrolled + "%";
       }, { passive: true });
 
       // 2. Centered Story Modal Logic
-      const openBtn = document.getElementById('openStoryBtn');
-      const closeBtn = document.getElementById('closeStoryBtn');
-      const continueBtn = document.getElementById('continueReadingBtn');
-      const modal = document.getElementById('centerStoryModal');
+      var openBtn = document.getElementById('openStoryBtn');
+      var closeBtn = document.getElementById('closeStoryBtn');
+      var continueBtn = document.getElementById('continueReadingBtn');
+      var modal = document.getElementById('centerStoryModal');
 
-      openBtn.addEventListener('click', () => { modal.classList.add('active'); });
-      const closeModal = () => { modal.classList.remove('active'); };
-      closeBtn.addEventListener('click', closeModal);
-      continueBtn.addEventListener('click', closeModal);
-      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-
-      // 3. GCLID Tracking
-      const urlParams = new URLSearchParams(window.location.search);
-      const gclid = urlParams.get('gclid') || sessionStorage.getItem("gclid_val");
-      if (gclid) {
-          sessionStorage.setItem("gclid_val", gclid);
-          document.querySelectorAll('a').forEach(link => {
-              if (link.href && !link.href.includes('gclid') && !link.href.startsWith('#') && link.href.includes('habib-clean.com')) {
-                  const separator = link.href.includes('?') ? '&' : '?';
-                  link.href += separator + 'gclid=' + encodeURIComponent(gclid);
-              }
-          });
+      if (openBtn && modal) {
+        openBtn.addEventListener('click', function() { modal.classList.add('active'); });
+        var closeModal = function() { modal.classList.remove('active'); };
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (continueBtn) continueBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
       }
     });
   </script>
